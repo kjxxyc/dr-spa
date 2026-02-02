@@ -1,7 +1,52 @@
 {
-  "Starter": "Analítica",
-  "Menu Level": "Nível do menu",
-  "Menu 1": "Menu 1",
-  "Menu 2": "Menu 2",
-  "Disabled": "Desabilitada"
+  "header": {
+    "phone": "(305)204-7816",
+    "nav": {
+      "shop": "TIENDA",
+      "services": "SERVICIOS",
+      "protocols": "PROTOCOLOS",
+      "videos": "VIDEOS Y MÁS",
+      "contact": "CONTACTO"
+    },
+    "cta": "HAGA UNA CITA",
+    "language": "ENGLISH"
+  },
+  "hero": {
+    "eyebrow": "Adonis Maiquez, MD",
+    "title": "Líder Experto En Medicina Funcional En Miami",
+    "subtitle": "La Medicina Funcional aborda la enfermedad desde su raíz. La mayoría de las enfermedades degenerativas crónicas, como el Alzheimer, las enfermedades cardiovasculares y autoinmunes, el aumento de peso, el desequilibrio hormonal y la fatiga crónica, tienen múltiples causas identificables que deben abordarse simultáneamente.",
+    "btnBook": "LEE MI LIBRO",
+    "btnSubscribe": "SUSCRIBIRSE AL BOLETÍN"
+  },
+  "newsletter": {
+    "title": "Suscríbase a Nuestro Boletín",
+    "subtitle": "Manténgase informado sobre su salud",
+    "emailPlaceholder": "Ingrese su correo electrónico",
+    "consent": "Acepto recibir información de salud y actualizaciones de la clínica del Dr. Adonis",
+    "btnSubmit": "Suscribirse",
+    "btnCancel": "Cancelar",
+    "successMessage": "¡Gracias por suscribirse!",
+    "errorMessage": "Por favor ingrese un correo electrónico válido"
+  },
+  "bookSection": {
+    "title": "Tiempos de Medicina Moderna",
+    "subtitle": "Descubre los principios de la Medicina Funcional",
+    "btnBuy": "COMPRAR EN AMAZON"
+  },
+  "vagustim": {
+    "title": "ESTIMULADOR TRANSCUTÁNEO DEL NERVIO VAGO",
+    "description1": "Estimulación no invasiva del nervio vago en el lóbulo de la oreja.",
+    "description2": "Uso en casa: 2 veces al día por 15 min para apoyar calma, sueño, estado de ánimo y salud intestinal.",
+    "description3": "Respaldado por estudios científicos.",
+    "code": "Use el código",
+    "discount": "y obtén 10% de DESCUENTO.",
+    "btnBuy": "COMPRAR"
+  },
+  "shop": {
+    "title": "Productos de Salud",
+    "filterAll": "🛒 Todos",
+    "filterGeneral": "🌿 Bienestar General",
+    "filterAntiaging": "🧬 Antienvejecimiento",
+    "filterGut": "🦠 Salud Digestiva"
+  }
 }

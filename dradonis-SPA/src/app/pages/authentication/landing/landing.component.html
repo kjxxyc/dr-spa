@@ -1,0 +1,299 @@
+<div class="landing-container">
+  <!-- Header / Navigation -->
+  <header class="landing-header">
+    <div class="header-content">
+      <!-- Phone Number -->
+      <div class="phone-number">
+        <a href="tel:+13052047816">{{ 'header.phone' | translate }}</a>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="assets/images/logos/Logo_720x192.jpg" alt="Dr. Adonis - Functional & Regenerative Medicine"
+          class="logo">
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="navigation">
+        <a href="#shop" class="nav-link">{{ 'header.nav.shop' | translate }}</a>
+        <a href="#services" class="nav-link">{{ 'header.nav.services' | translate }}</a>
+        <a href="#protocols" class="nav-link">{{ 'header.nav.protocols' | translate }}</a>
+        <a href="#videos" class="nav-link">{{ 'header.nav.videos' | translate }}</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <button mat-raised-button color="primary" class="cta-button">
+        {{ 'header.cta' | translate }}
+      </button>
+
+      <!-- Language Toggle -->
+      <button mat-button class="language-toggle" (click)="toggleLanguage()">
+        {{ 'header.language' | translate }}
+      </button>
+    </div>
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-background">
+      <img src="assets/images/backgrounds/home-main-img.jpg" alt="Dr. Adonis Maiquez" class="hero-image">
+    </div>
+
+    <div class="hero-content">
+      <!-- Eyebrow Text -->
+      <p class="hero-eyebrow">{{ 'hero.eyebrow' | translate }}</p>
+
+      <!-- Main Headline -->
+      <h1 class="hero-title">
+        {{ 'hero.title' | translate }}
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero-subtitle">
+        {{ 'hero.subtitle' | translate }}
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-buttons">
+        <a href="https://www.amazon.com/gp/product/B0146UK2FM/ref=dbs_a_def_rwt_bibl_vppi_i0" target="_blank"
+          rel="noopener noreferrer" mat-raised-button color="primary" class="primary-btn">
+          <mat-icon>menu_book</mat-icon>
+          {{ 'hero.btnBook' | translate }}
+        </a>
+        <button mat-stroked-button class="secondary-btn" (click)="openNewsletterDialog()">
+          <mat-icon>email</mat-icon>
+          {{ 'hero.btnSubscribe' | translate }}
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Book Section -->
+  <section class="book-section" id="book">
+    <div class="book-container">
+      <div class="book-image">
+        <img src="assets/images/book-dradonis.png" alt="{{ 'bookSection.title' | translate }}">
+      </div>
+      <div class="book-content">
+        <h2>{{ 'bookSection.title' | translate }}</h2>
+        <p>{{ 'bookSection.subtitle' | translate }}</p>
+        <a href="https://www.amazon.com/gp/product/B0146UK2FM/ref=dbs_a_def_rwt_bibl_vppi_i0" target="_blank"
+          rel="noopener noreferrer" mat-raised-button color="primary" class="book-btn">
+          <mat-icon>shopping_cart</mat-icon>
+          {{ 'bookSection.btnBuy' | translate }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fullscript Products Carousel -->
+  <section class="products-carousel-section">
+    <h2 class="carousel-section-title">{{ 'shop.title' | translate }}</h2>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <!-- Product 1: PectaSol -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"62134","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">PectaSol: Longevidad, bienestar general. Apoya una inflamación equilibrada.</div>
+        </div>
+
+        <!-- Product 2: Mitochondrial NRG -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"72479","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">Mitochondrial NRG: Optimiza la energía celular y función mitocondrial.</div>
+        </div>
+
+        <!-- Product 3: Uric Acid Formula -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"71334","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">Fórmula de ácido úrico: favorece el metabolismo y enzimas hepáticas.</div>
+        </div>
+
+        <!-- Product 4: OmegAvail -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"72491","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">OmegAvail Hi-Po: Mejora absorción de EPA/DHA. Sostenible y puro.</div>
+        </div>
+
+        <!-- Product 5: Broccoli Seed Extract -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"76696","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">Extracto de Brócoli: Activa antioxidantes naturales.</div>
+        </div>
+
+        <!-- Product 6: Complete Mineral Complex -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"72276","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">Complete Mineral Complex: Repone minerales esenciales.</div>
+        </div>
+
+        <!-- Product 7: Telomere Pro -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"89800","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">Telomere Pro: Favorece envejecimiento saludable.</div>
+        </div>
+
+        <!-- Product 8: Iron Liquid -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"71597","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">Iron Liquid: Hierro altamente biodisponible para transporte de oxígeno.</div>
+        </div>
+
+        <!-- Product 9: ProbioMax -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"105060","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">ProbioMax® Sb DF: Equilibrio intestinal e inmunidad.</div>
+        </div>
+
+        <!-- Duplicate cards for seamless loop -->
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"62134","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">PectaSol: Longevidad, bienestar general. Apoya una inflamación equilibrada.</div>
+        </div>
+
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"72479","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">Mitochondrial NRG: Optimiza la energía celular y función mitocondrial.</div>
+        </div>
+
+        <div class="carousel-card product-card">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"71334","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="product-desc">Fórmula de ácido úrico: favorece el metabolismo y enzimas hepáticas.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vagustim Banner -->
+  <section class="vagus-banner" id="vagustim">
+    <div class="vagus-banner-inner">
+      <div class="vagus-images">
+        <div class="vagus-device-image"
+          style="background-image:url('https://dradonis.com/wp-content/uploads/2026/01/vagutism.png?_t=1769392187');"
+          aria-label="Vagustim device"></div>
+      </div>
+
+      <div class="vagus-content">
+        <h2>{{ 'vagustim.title' | translate }}</h2>
+        <p>{{ 'vagustim.description1' | translate }}</p>
+        <p>{{ 'vagustim.description2' | translate }}</p>
+        <p>{{ 'vagustim.description3' | translate }}</p>
+
+        <p class="vagus-code">
+          {{ 'vagustim.code' | translate }} <strong>DRADONIS10</strong> {{ 'vagustim.discount' | translate }}
+        </p>
+        <a class="vagus-btn" href="https://vagustim.io/" target="_blank" rel="noopener noreferrer" mat-raised-button
+          color="primary">
+          {{ 'vagustim.btnBuy' | translate }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fullscript Product Shop -->
+  <section class="fs-shop-section" id="shop">
+    <h2 class="shop-title">{{ 'shop.title' | translate }}</h2>
+
+    <div class="fs-shop">
+      <input class="fs-cat" type="radio" name="fs-cat" id="cat-all" checked>
+      <input class="fs-cat" type="radio" name="fs-cat" id="cat-general">
+      <input class="fs-cat" type="radio" name="fs-cat" id="cat-antiaging">
+      <input class="fs-cat" type="radio" name="fs-cat" id="cat-gut">
+
+      <div class="fs-filterbar">
+        <label for="cat-all">{{ 'shop.filterAll' | translate }}</label>
+        <label for="cat-general">{{ 'shop.filterGeneral' | translate }}</label>
+        <label for="cat-antiaging">{{ 'shop.filterAntiaging' | translate }}</label>
+        <label for="cat-gut">{{ 'shop.filterGut' | translate }}</label>
+      </div>
+
+      <div class="fs-catalog-container">
+        <!-- PectaSol 90 Capsules -->
+        <div class="fs-item" data-cat="general">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"62134","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="fs-desc">PectaSol: Longevidad, bienestar general. Apoya una inflamación equilibrada, salud
+            cardiovascular y sistema inmune fuerte.</div>
+        </div>
+
+        <!-- Mitochondrial NRG 120 Capsules -->
+        <div class="fs-item" data-cat="general">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"72479","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="fs-desc">Mitochondrial NRG: Optimiza la energía celular y la función mitocondrial para vitalidad y
+            energías máximas.</div>
+        </div>
+
+        <!-- Uric Acid Formula 120 capsules -->
+        <div class="fs-item" data-cat="general">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"71334","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="fs-desc">Fórmula de ácido úrico: favorece el metabolismo, las enzimas hepáticas y la defensa
+            antioxidante al limitar el ácido úrico excesivo.</div>
+        </div>
+
+        <!-- OmegAvail Hi-Po Fish Oil 60 Softgels -->
+        <div class="fs-item" data-cat="general">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"72491","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="fs-desc">OmegAvail Hi-Po Fish Oil: Mejora la absorción de EPA/DHA. Sostenible, puro y sin regusto
+            a pescado.</div>
+        </div>
+
+        <!-- Broccoli Seed Extract 60 capsules -->
+        <div class="fs-item" data-cat="antiaging">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"76696","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="fs-desc">Extracto de Brócoli Thorne: Activa antioxidantes naturales. Protege del estrés oxidativo,
+            dura varios días.</div>
+        </div>
+
+        <!-- Complete Mineral Complex 90 capsules -->
+        <div class="fs-item" data-cat="general">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"72276","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="fs-desc">Complete Mineral Complex: Repone minerales esenciales para apoyar la salud ósea, nerviosa
+            y celular.</div>
+        </div>
+
+        <!-- Telomere Pro 30 capsules -->
+        <div class="fs-item" data-cat="antiaging">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"89800","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="fs-desc">Telomere Pro: Favorece envejecimiento saludable. Ayuda a mantener la longitud telomérica
+            contra el estrés y toxinas.</div>
+        </div>
+
+        <!-- Iron Liquid 120 Milliliters -->
+        <div class="fs-item" data-cat="general">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"71597","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="fs-desc">Iron Liquid 120 Milliliters: Hierro líquido altamente biodisponible para el transporte de
+            oxígeno. Fórmula vegetariana e hipoalergénica, de fácil dosificación y gran sabor.</div>
+        </div>
+
+        <!-- ProbioMax Sb DF 30 capsules -->
+        <div class="fs-item" data-cat="gut">
+          <script src="https://us.fullscript.com/oembed/embed.js"
+            data-fs='{"product_id":"105060","store_slug":"dradonis","return":"product_card"}' data-ot-ignore></script>
+          <div class="fs-desc">ProbioMax® Sb DF: Equilibrio intestinal, inmunidad y regularidad. Con 4 cepas probióticas
+            y S. boulardii.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

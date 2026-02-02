@@ -5,13 +5,20 @@ import { FullComponent } from './layouts/full/full.component';
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: '/landing',
+    pathMatch: 'full',
+  },
+  {
+    path: 'landing',
+    loadChildren: () =>
+      import('./pages/authentication/authentication.routes').then(
+        (m) => m.AuthenticationRoutes
+      ),
+  },
+  {
+    path: '',
     component: FullComponent,
     children: [
-      {
-        path: '',
-        redirectTo: '/starter',
-        pathMatch: 'full',
-      },
       {
         path: 'starter',
         loadChildren: () =>
