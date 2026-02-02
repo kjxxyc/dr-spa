@@ -1,7 +1,52 @@
 {
-  "Starter": "Starter",
-  "Menu Level": "Menu Level",
-  "Menu 1": "Menu 1",
-  "Menu 2": "Menu 2",
-  "Disabled": "Disabled"
+  "header": {
+    "phone": "(305)204-7816",
+    "nav": {
+      "shop": "SHOP",
+      "services": "SERVICES",
+      "protocols": "PROTOCOLS",
+      "videos": "VIDEOS & MORE",
+      "contact": "CONTACT"
+    },
+    "cta": "MAKE AN APPOINTMENT",
+    "language": "ESPAÑOL"
+  },
+  "hero": {
+    "eyebrow": "Adonis Maiquez, MD",
+    "title": "Miami's Leading Functional Medicine Expert",
+    "subtitle": "Functional Medicine addresses disease at the root cause. Most chronic degenerative diseases, like Alzheimer's disease, Cardiovascular and Auto-immune diseases, weight gain, hormone imbalance, chronic fatigue, have multiple identifiable causes that need to be addressed at the same time.",
+    "btnBook": "READ MY BOOK",
+    "btnSubscribe": "SUBSCRIBE TO NEWSLETTER"
+  },
+  "newsletter": {
+    "title": "Subscribe to Our Newsletter",
+    "subtitle": "Stay informed about your health",
+    "emailPlaceholder": "Enter your email address",
+    "consent": "I consent to receive health information and clinic updates from Dr. Adonis",
+    "btnSubmit": "Subscribe",
+    "btnCancel": "Cancel",
+    "successMessage": "Thank you for subscribing!",
+    "errorMessage": "Please enter a valid email address"
+  },
+  "bookSection": {
+    "title": "Modern Medicine Times",
+    "subtitle": "Discover the principles of Functional Medicine",
+    "btnBuy": "BUY ON AMAZON"
+  },
+  "vagustim": {
+    "title": "TRANSCUTANEOUS VAGUS NERVE STIMULATOR",
+    "description1": "Non-invasive vagus nerve stimulation in the earlobe.",
+    "description2": "Home use: 2 times a day for 15 min to support calm, sleep, mood and gut health.",
+    "description3": "Backed by scientific studies.",
+    "code": "Use code",
+    "discount": "and get 10% OFF.",
+    "btnBuy": "BUY NOW"
+  },
+  "shop": {
+    "title": "Health Products",
+    "filterAll": "🛒 All Products",
+    "filterGeneral": "🌿 General Wellness",
+    "filterAntiaging": "🧬 Anti-Aging",
+    "filterGut": "🦠 Digestive Health"
+  }
 }

@@ -3,11 +3,20 @@ import { Routes } from '@angular/router';
 import { AppErrorComponent } from './error/error.component';
 import { AppSideLoginComponent } from './side-login/side-login.component';
 import { AppSideRegisterComponent } from './side-register/side-register.component';
+import { LandingComponent } from './landing/landing.component';
 
 export const AuthenticationRoutes: Routes = [
   {
     path: '',
     children: [
+      {
+        path: '',
+        component: LandingComponent,
+      },
+      {
+        path: 'landing',
+        component: LandingComponent,
+      },
       {
         path: 'error',
         component: AppErrorComponent,
@@ -24,3 +33,4 @@ export const AuthenticationRoutes: Routes = [
     ],
   },
 ];
+
