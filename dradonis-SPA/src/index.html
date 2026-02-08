@@ -1,16 +1,160 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Spike Angular 20 Admin Template</title>
+  <title>Dr. Adonis | Functional & Regenerative Medicine in Miami</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Dr. Adonis Maiquez - Functional & Regenerative Medicine specialist in Miami, FL. Premium supplements, Vagustim therapy, personalized health protocols for longevity and optimal wellness.">
+  <meta name="keywords"
+    content="functional medicine, regenerative medicine, Dr. Adonis, Miami, supplements, Vagustim, longevity, anti-aging, wellness, health protocols">
+  <meta name="author" content="Dr. Adonis Maiquez">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dradonis.com/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dradonis.com/">
+  <meta property="og:title" content="Dr. Adonis | Functional & Regenerative Medicine">
+  <meta property="og:description"
+    content="Functional & Regenerative Medicine specialist in Miami. Discover premium supplements, Vagustim therapy, and personalized health protocols for optimal wellness.">
+  <meta property="og:image" content="https://dradonis.com/assets/images/logos/Logo_720x192.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Dr. Adonis">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://dradonis.com/">
+  <meta name="twitter:title" content="Dr. Adonis | Functional & Regenerative Medicine">
+  <meta name="twitter:description"
+    content="Functional & Regenerative Medicine specialist in Miami. Premium supplements & personalized health protocols.">
+  <meta name="twitter:image" content="https://dradonis.com/assets/images/logos/Logo_720x192.jpg">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#1976d2">
+  <meta name="geo.region" content="US-FL">
+  <meta name="geo.placename" content="Miami">
+
+  <!-- Schema.org JSON-LD - Multiple Types -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://dradonis.com/#website",
+        "url": "https://dradonis.com",
+        "name": "Dr. Adonis - Functional & Regenerative Medicine",
+        "description": "Premium supplements, Vagustim therapy, and personalized health protocols",
+        "inLanguage": ["en-US", "es"],
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://dradonis.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Physician",
+        "@id": "https://dradonis.com/#physician",
+        "name": "Dr. Adonis Maiquez",
+        "url": "https://dradonis.com",
+        "logo": "https://dradonis.com/assets/images/logos/Logo_720x192.jpg",
+        "image": "https://dradonis.com/assets/images/backgrounds/home-main-img.jpg",
+        "telephone": "+1-305-204-7816",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Miami",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "medicalSpecialty": ["Functional Medicine", "Regenerative Medicine"],
+        "description": "Functional & Regenerative Medicine specialist in Miami, FL",
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://dradonis.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Functional Medicine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Functional Medicine is a personalized, systems-oriented approach that addresses the underlying causes of disease rather than just treating symptoms. It focuses on the whole person, not just isolated symptoms."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Vagustim therapy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vagustim is a non-invasive vagus nerve stimulation device that helps activate the parasympathetic nervous system, promoting relaxation, better sleep, and overall wellness. Use code DRADONIS10 for 10% off."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer supplements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Dr. Adonis offers a curated selection of premium supplements through Fullscript, including PectaSol, Mitochondrial NRG, and other high-quality products for longevity and optimal health."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Product",
+        "@id": "https://dradonis.com/#vagustim",
+        "name": "Vagustim - Vagus Nerve Stimulator",
+        "description": "Non-invasive vagus nerve stimulation device for wellness and relaxation",
+        "brand": {
+          "@type": "Brand",
+          "name": "Vagustim"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://vagustim.io/",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "Vagustim"
+          }
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://dradonis.com/#book",
+        "name": "Dr. Adonis Book",
+        "author": {
+          "@type": "Person",
+          "name": "Dr. Adonis Maiquez"
+        },
+        "url": "https://www.amazon.com/gp/product/B0146UK2FM"
+      }
+    ]
+  }
+  </script>
+
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body class="mat-typography">
   <app-root></app-root>
 </body>
+
 </html>
