@@ -30,6 +30,13 @@ export const AuthenticationRoutes: Routes = [
         path: 'register',
         component: AppSideRegisterComponent,
       },
+      {
+        path: 'vitamins-prescription',
+        loadComponent: () =>
+          import('./vitamins-prescription/vitamins-prescription.component').then(
+            (m) => m.VitaminsPrescriptionComponent
+          ),
+      },
     ],
   },
 ];

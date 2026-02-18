@@ -16,6 +16,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'vitamins-prescription',
+    loadComponent: () =>
+      import('./pages/authentication/vitamins-prescription/vitamins-prescription.component').then(
+        (m) => m.VitaminsPrescriptionComponent
+      ),
+  },
+  {
     path: '',
     component: FullComponent,
     children: [

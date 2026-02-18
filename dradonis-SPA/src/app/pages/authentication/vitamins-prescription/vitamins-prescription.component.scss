@@ -1,0 +1,27 @@
+// Only custom styles needed beyond Spike utilities
+$primary-green: #81af5a;
+$primary-green-dark: #6a964a;
+
+.gap-8 {
+  gap: 8px;
+}
+
+.symptom-chip,
+.allergy-chip {
+  font-size: 13px !important;
+  border-radius: 6px !important;
+  padding: 4px 12px !important;
+  min-height: 36px !important;
+  transition: all 0.2s ease;
+}
+
+.symptom-selected,
+.allergy-selected {
+  background-color: $primary-green !important;
+  color: #fff !important;
+  border-color: $primary-green !important;
+}
+
+.text-success {
+  color: #10b981;
+}

@@ -1,0 +1,167 @@
+<div class="blank-layout-container justify-content-center">
+  <div class="position-relative w-100" style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
+
+    <!-- Header -->
+    <div class="text-center m-b-24">
+      <h2 class="f-w-600 f-s-24 m-b-8" style="font-family: 'Playfair Display', serif; font-style: italic;">
+        Vitamins Prescription
+      </h2>
+      <p class="mat-body-1 f-s-14">
+        Please fill out the information below and Dr. Adonis will email you a protocol and vitamin recommendations.
+        <br>
+        <strong>(SHIPPING ONLY IN THE UNITED STATES)</strong>
+      </p>
+    </div>
+
+    <!-- Card -->
+    <mat-card class="cardWithShadow">
+      <mat-card-content class="p-24">
+
+        @if (submitted) {
+        <div class="text-center p-24">
+          <mat-icon class="text-success" style="font-size: 48px; width: 48px; height: 48px;">check_circle</mat-icon>
+          <h3 class="f-w-600 m-t-16">Request Submitted Successfully!</h3>
+          <p class="mat-body-1 m-t-8">Dr. Adonis will review your information and email you a protocol.</p>
+        </div>
+        } @else {
+
+        <form [formGroup]="prescriptionForm" (ngSubmit)="onSubmit()">
+          <p class="mat-body-2 f-s-12 m-b-16" style="color: #6b7280;">
+            Fields marked with <span class="text-error">*</span> are required
+          </p>
+
+          <!-- Full Name -->
+          <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Full Name <span class="text-error">*</span></mat-label>
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput formControlName="fullName" placeholder="John Smith" />
+            @if (prescriptionForm.get('fullName')?.touched && prescriptionForm.get('fullName')?.hasError('required')) {
+            <mat-hint class="m-b-16 error-msg">
+              <div class="text-error">Full Name is required.</div>
+            </mat-hint>
+            }
+          </mat-form-field>
+
+          <!-- Sex & Email Row -->
+          <div class="row">
+            <div class="col-lg-6">
+              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Sex <span class="text-error">*</span></mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <mat-select formControlName="sex">
+                  <mat-option value="Female">Female</mat-option>
+                  <mat-option value="Male">Male</mat-option>
+                </mat-select>
+                @if (prescriptionForm.get('sex')?.touched && prescriptionForm.get('sex')?.hasError('required')) {
+                <mat-hint class="m-b-16 error-msg">
+                  <div class="text-error">Sex is required.</div>
+                </mat-hint>
+                }
+              </mat-form-field>
+            </div>
+            <div class="col-lg-6">
+              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Email <span class="text-error">*</span></mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <input matInput type="email" formControlName="email" placeholder="mail@example.com" />
+                @if (prescriptionForm.get('email')?.touched && prescriptionForm.get('email')?.hasError('required')) {
+                <mat-hint class="m-b-16 error-msg">
+                  <div class="text-error">Email is required.</div>
+                </mat-hint>
+                }
+                @if (prescriptionForm.get('email')?.touched && prescriptionForm.get('email')?.hasError('email')) {
+                <mat-hint class="m-b-16 error-msg">
+                  <div class="text-error">Please enter a valid email.</div>
+                </mat-hint>
+                }
+              </mat-form-field>
+            </div>
+          </div>
+
+          <!-- Country & State Row -->
+          <div class="row">
+            <div class="col-lg-6">
+              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Country <span class="text-error">*</span></mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <mat-select formControlName="country">
+                  @for (c of countries; track c) {
+                  <mat-option [value]="c">{{ c }}</mat-option>
+                  }
+                </mat-select>
+                @if (prescriptionForm.get('country')?.touched && prescriptionForm.get('country')?.hasError('required'))
+                {
+                <mat-hint class="m-b-16 error-msg">
+                  <div class="text-error">Country is required.</div>
+                </mat-hint>
+                }
+              </mat-form-field>
+            </div>
+            @if (isUS) {
+            <div class="col-lg-6">
+              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">State <span class="text-error">*</span></mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <mat-select formControlName="state">
+                  @for (s of usStates; track s) {
+                  <mat-option [value]="s">{{ s }}</mat-option>
+                  }
+                </mat-select>
+                @if (prescriptionForm.get('state')?.touched && prescriptionForm.get('state')?.hasError('required')) {
+                <mat-hint class="m-b-16 error-msg">
+                  <div class="text-error">State is required for US.</div>
+                </mat-hint>
+                }
+              </mat-form-field>
+            </div>
+            }
+          </div>
+
+          <!-- Symptoms -->
+          <mat-label class="f-s-14 f-w-600 m-b-8 d-block m-t-16">Select symptoms <span
+              class="text-error">*</span></mat-label>
+          <div class="d-flex flex-wrap gap-8 m-b-16">
+            @for (symptom of symptomsList; track symptom) {
+            <button type="button" mat-stroked-button [class.symptom-selected]="isSymptomSelected(symptom)"
+              (click)="toggleSymptom(symptom)" class="symptom-chip">
+              {{ symptom }}
+            </button>
+            }
+          </div>
+
+          <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Other (explain)</mat-label>
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <textarea matInput formControlName="otherSymptoms" rows="3"></textarea>
+          </mat-form-field>
+
+          <!-- Allergies -->
+          <mat-label class="f-s-14 f-w-600 m-b-8 d-block m-t-16">Select allergies</mat-label>
+          <div class="d-flex flex-wrap gap-8 m-b-16">
+            @for (allergy of allergiesList; track allergy) {
+            <button type="button" mat-stroked-button [class.allergy-selected]="isAllergySelected(allergy)"
+              (click)="toggleAllergy(allergy)" class="allergy-chip">
+              {{ allergy }}
+            </button>
+            }
+          </div>
+
+          <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Other (explain)</mat-label>
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <textarea matInput formControlName="otherAllergies" rows="3"></textarea>
+          </mat-form-field>
+
+          <!-- Submit -->
+          <div class="m-t-24">
+            <button mat-flat-button color="primary" class="w-100" type="submit" [disabled]="isSubmitting">
+              @if (isSubmitting) {
+              Sending...
+              } @else {
+              Submit Request
+              }
+            </button>
+          </div>
+
+        </form>
+
+        }
+
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>
