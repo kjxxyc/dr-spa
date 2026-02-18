@@ -15,7 +15,7 @@ import {
   withInMemoryScrolling,
 } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideClientHydration } from '@angular/platform-browser';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -61,6 +61,6 @@ export const appConfig: ApplicationConfig = {
           deps: [HttpClient],
         },
       })
-    ),
+    ), provideClientHydration(withEventReplay()),
   ],
 };
