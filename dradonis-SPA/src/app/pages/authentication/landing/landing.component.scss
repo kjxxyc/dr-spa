@@ -71,6 +71,9 @@ $background-light: #F7FAFC;
     justify-content: center;
 
     .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
       text-decoration: none;
       color: $text-dark;
       font-size: 13px;
@@ -79,8 +82,20 @@ $background-light: #F7FAFC;
       letter-spacing: 0.5px;
       transition: color 0.3s ease;
 
+      mat-icon {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+        color: $primary-green;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
       &:hover {
         color: $primary-green;
+
+        mat-icon {
+          transform: scale(1.1);
+        }
       }
     }
   }
