@@ -40,7 +40,12 @@
 
       <!-- Language Toggle -->
       <button mat-button class="language-toggle" (click)="toggleLanguage()">
-        {{ 'header.language' | translate }}
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <img
+            [src]="currentLang === 'en' ? '/assets/images/flag/icon-flag-es.svg' : '/assets/images/flag/icon-flag-en.svg'"
+            width="22" height="16" alt="flag" style="border-radius: 2px;" />
+          {{ 'header.language' | translate }}
+        </div>
       </button>
     </div>
   </header>

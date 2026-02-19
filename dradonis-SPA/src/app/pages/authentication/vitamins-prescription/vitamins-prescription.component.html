@@ -1,15 +1,27 @@
 <div class="blank-layout-container justify-content-center">
-  <div class="position-relative w-100" style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
+  <div class="position-relative w-100" style="max-width: 860px; margin: 0 auto; padding: 2rem 1rem;">
 
-    <!-- Header -->
-    <div class="text-center m-b-24">
-      <h2 class="f-w-600 f-s-24 m-b-8" style="font-family: 'Playfair Display', serif; font-style: italic;">
-        Vitamins Prescription
+    <!-- Header: top bar (logo + language) -->
+    <div class="d-flex align-items-center justify-content-between m-b-16">
+      <img src="/assets/images/logos/Logo_500x133.png" alt="Dr. Adonis" class="form-logo" />
+      <button mat-icon-button (click)="toggleLanguage()" class="lang-toggle-btn"
+        style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 4px 12px; width: auto; height: 36px;">
+        <div class="d-flex align-items-center" style="gap: 6px;">
+          <img [src]="otherFlagIcon" width="22" height="16" alt="flag" style="border-radius: 2px;" />
+          <span class="f-s-12 f-w-600">{{ t('langToggle') }}</span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Header: title + description -->
+    <div class="m-b-16">
+      <h2 class="f-w-600 f-s-24 m-b-4" style="font-family: 'Playfair Display', serif; font-style: italic;">
+        {{ t('title') }}
       </h2>
-      <p class="mat-body-1 f-s-14">
-        Please fill out the information below and Dr. Adonis will email you a protocol and vitamin recommendations.
+      <p class="mat-body-1 f-s-14 m-0">
+        {{ t('subtitle') }}
         <br>
-        <strong>(SHIPPING ONLY IN THE UNITED STATES)</strong>
+        <strong>{{ t('shippingNote') }}</strong>
       </p>
     </div>
 
@@ -19,144 +31,247 @@
 
         @if (submitted) {
         <div class="text-center p-24">
-          <mat-icon class="text-success" style="font-size: 48px; width: 48px; height: 48px;">check_circle</mat-icon>
-          <h3 class="f-w-600 m-t-16">Request Submitted Successfully!</h3>
-          <p class="mat-body-1 m-t-8">Dr. Adonis will review your information and email you a protocol.</p>
+          <mat-icon class="text-success" style="font-size: 56px; width: 56px; height: 56px;">check_circle</mat-icon>
+          <h3 class="f-w-600 m-t-16 f-s-20">{{ t('successTitle') }}</h3>
+          <p class="mat-body-1 m-t-8">{{ t('successMsg') }}</p>
+          <button mat-flat-button color="primary" class="m-t-16" (click)="resetForm()">
+            {{ t('submitAnother') }}
+          </button>
         </div>
         } @else {
 
-        <form [formGroup]="prescriptionForm" (ngSubmit)="onSubmit()">
-          <p class="mat-body-2 f-s-12 m-b-16" style="color: #6b7280;">
-            Fields marked with <span class="text-error">*</span> are required
-          </p>
+        <p class="mat-body-2 f-s-12 m-b-16" style="color: #6b7280;">
+          {{ t('fieldsRequired') }}
+        </p>
 
-          <!-- Full Name -->
-          <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Full Name <span class="text-error">*</span></mat-label>
-          <mat-form-field appearance="outline" class="w-100" color="primary">
-            <input matInput formControlName="fullName" placeholder="John Smith" />
-            @if (prescriptionForm.get('fullName')?.touched && prescriptionForm.get('fullName')?.hasError('required')) {
-            <mat-hint class="m-b-16 error-msg">
-              <div class="text-error">Full Name is required.</div>
-            </mat-hint>
-            }
-          </mat-form-field>
+        <mat-stepper orientation="vertical" #stepper>
 
-          <!-- Sex & Email Row -->
-          <div class="row">
-            <div class="col-lg-6">
-              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Sex <span class="text-error">*</span></mat-label>
+          <!-- STEP 1: Personal Information -->
+          <mat-step [stepControl]="personalForm">
+            <form class="m-t-16" [formGroup]="personalForm">
+              <ng-template matStepLabel>{{ t('stepPersonal') }}</ng-template>
+
+              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">{{ t('fullName') }} <span
+                  class="text-error">*</span></mat-label>
               <mat-form-field appearance="outline" class="w-100" color="primary">
-                <mat-select formControlName="sex">
-                  <mat-option value="Female">Female</mat-option>
-                  <mat-option value="Male">Male</mat-option>
-                </mat-select>
-                @if (prescriptionForm.get('sex')?.touched && prescriptionForm.get('sex')?.hasError('required')) {
+                <input matInput formControlName="fullName" [placeholder]="t('fullNamePlaceholder')" />
+                @if (personalForm.get('fullName')?.touched && personalForm.get('fullName')?.hasError('required')) {
                 <mat-hint class="m-b-16 error-msg">
-                  <div class="text-error">Sex is required.</div>
+                  <div class="text-error">{{ t('fullNameRequired') }}</div>
                 </mat-hint>
                 }
               </mat-form-field>
-            </div>
-            <div class="col-lg-6">
-              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Email <span class="text-error">*</span></mat-label>
-              <mat-form-field appearance="outline" class="w-100" color="primary">
-                <input matInput type="email" formControlName="email" placeholder="mail@example.com" />
-                @if (prescriptionForm.get('email')?.touched && prescriptionForm.get('email')?.hasError('required')) {
-                <mat-hint class="m-b-16 error-msg">
-                  <div class="text-error">Email is required.</div>
-                </mat-hint>
-                }
-                @if (prescriptionForm.get('email')?.touched && prescriptionForm.get('email')?.hasError('email')) {
-                <mat-hint class="m-b-16 error-msg">
-                  <div class="text-error">Please enter a valid email.</div>
-                </mat-hint>
-                }
-              </mat-form-field>
-            </div>
-          </div>
 
-          <!-- Country & State Row -->
-          <div class="row">
-            <div class="col-lg-6">
-              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Country <span class="text-error">*</span></mat-label>
+              <div class="row">
+                <div class="col-lg-6">
+                  <mat-label class="f-s-14 f-w-600 m-b-8 d-block">{{ t('sex') }} <span
+                      class="text-error">*</span></mat-label>
+                  <mat-form-field appearance="outline" class="w-100" color="primary">
+                    <mat-select formControlName="sex">
+                      <mat-option value="Female">{{ t('female') }}</mat-option>
+                      <mat-option value="Male">{{ t('male') }}</mat-option>
+                    </mat-select>
+                    @if (personalForm.get('sex')?.touched && personalForm.get('sex')?.hasError('required')) {
+                    <mat-hint class="m-b-16 error-msg">
+                      <div class="text-error">{{ t('sexRequired') }}</div>
+                    </mat-hint>
+                    }
+                  </mat-form-field>
+                </div>
+                <div class="col-lg-6">
+                  <mat-label class="f-s-14 f-w-600 m-b-8 d-block">{{ t('email') }} <span
+                      class="text-error">*</span></mat-label>
+                  <mat-form-field appearance="outline" class="w-100" color="primary">
+                    <input matInput type="email" formControlName="email" [placeholder]="t('emailPlaceholder')" />
+                    @if (personalForm.get('email')?.touched && personalForm.get('email')?.hasError('required')) {
+                    <mat-hint class="m-b-16 error-msg">
+                      <div class="text-error">{{ t('emailRequired') }}</div>
+                    </mat-hint>
+                    }
+                    @if (personalForm.get('email')?.touched && personalForm.get('email')?.hasError('email')) {
+                    <mat-hint class="m-b-16 error-msg">
+                      <div class="text-error">{{ t('emailInvalid') }}</div>
+                    </mat-hint>
+                    }
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button matStepperNext>{{ t('next') }}</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <!-- STEP 2: Location -->
+          <mat-step [stepControl]="locationForm">
+            <form class="m-t-16" [formGroup]="locationForm">
+              <ng-template matStepLabel>{{ t('stepLocation') }}</ng-template>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <mat-label class="f-s-14 f-w-600 m-b-8 d-block">{{ t('country') }} <span
+                      class="text-error">*</span></mat-label>
+                  <mat-form-field appearance="outline" class="w-100" color="primary">
+                    <mat-select formControlName="country">
+                      @for (c of countries; track c) {
+                      <mat-option [value]="c">{{ c }}</mat-option>
+                      }
+                    </mat-select>
+                    @if (locationForm.get('country')?.touched && locationForm.get('country')?.hasError('required')) {
+                    <mat-hint class="m-b-16 error-msg">
+                      <div class="text-error">{{ t('countryRequired') }}</div>
+                    </mat-hint>
+                    }
+                  </mat-form-field>
+                </div>
+                @if (isUS) {
+                <div class="col-lg-6">
+                  <mat-label class="f-s-14 f-w-600 m-b-8 d-block">{{ t('state') }} <span
+                      class="text-error">*</span></mat-label>
+                  <mat-form-field appearance="outline" class="w-100" color="primary">
+                    <mat-select formControlName="state">
+                      @for (s of usStates; track s) {
+                      <mat-option [value]="s">{{ s }}</mat-option>
+                      }
+                    </mat-select>
+                    @if (locationForm.get('state')?.touched && locationForm.get('state')?.hasError('required')) {
+                    <mat-hint class="m-b-16 error-msg">
+                      <div class="text-error">{{ t('stateRequired') }}</div>
+                    </mat-hint>
+                    }
+                  </mat-form-field>
+                </div>
+                }
+              </div>
+
+              <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button class="bg-error text-white!" matStepperPrevious>{{ t('back') }}</button>
+                <button mat-flat-button matStepperNext>{{ t('next') }}</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <!-- STEP 3: Symptoms -->
+          <mat-step [stepControl]="symptomsForm">
+            <form class="m-t-16" [formGroup]="symptomsForm">
+              <ng-template matStepLabel>{{ t('stepSymptoms') }}</ng-template>
+
+              <mat-label class="f-s-14 f-w-600 m-b-12 d-block">{{ t('selectSymptoms') }}</mat-label>
+              <div class="d-flex flex-wrap gap-8 m-b-16">
+                @for (symptom of symptomsList; track symptom) {
+                <button type="button" mat-stroked-button [class.chip-selected]="isSymptomSelected(symptom)"
+                  (click)="toggleSymptom(symptom)" class="toggle-chip">
+                  {{ symptom }}
+                </button>
+                }
+              </div>
+
+              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">{{ t('otherExplain') }}</mat-label>
               <mat-form-field appearance="outline" class="w-100" color="primary">
-                <mat-select formControlName="country">
-                  @for (c of countries; track c) {
-                  <mat-option [value]="c">{{ c }}</mat-option>
+                <textarea matInput formControlName="otherSymptoms" rows="3"></textarea>
+              </mat-form-field>
+
+              <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button class="bg-error text-white!" matStepperPrevious>{{ t('back') }}</button>
+                <button mat-flat-button matStepperNext>{{ t('next') }}</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <!-- STEP 4: Allergies -->
+          <mat-step [stepControl]="allergiesForm">
+            <form class="m-t-16" [formGroup]="allergiesForm">
+              <ng-template matStepLabel>{{ t('stepAllergies') }}</ng-template>
+
+              <mat-label class="f-s-14 f-w-600 m-b-12 d-block">{{ t('selectAllergies') }}</mat-label>
+              <div class="d-flex flex-wrap gap-8 m-b-16">
+                @for (allergy of allergiesList; track allergy) {
+                <button type="button" mat-stroked-button [class.chip-selected]="isAllergySelected(allergy)"
+                  (click)="toggleAllergy(allergy)" class="toggle-chip">
+                  {{ allergy }}
+                </button>
+                }
+              </div>
+
+              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">{{ t('otherExplain') }}</mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <textarea matInput formControlName="otherAllergies" rows="3"></textarea>
+              </mat-form-field>
+
+              <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button class="bg-error text-white!" matStepperPrevious>{{ t('back') }}</button>
+                <button mat-flat-button matStepperNext>{{ t('next') }}</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <!-- STEP 5: Review & Submit -->
+          <mat-step>
+            <ng-template matStepLabel>{{ t('stepReview') }}</ng-template>
+
+            <div class="m-t-16">
+              <h4 class="f-w-600 f-s-16 m-b-16">{{ t('reviewTitle') }}</h4>
+
+              <div class="review-grid m-b-24">
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('name') }}:</strong>
+                  <span class="f-s-14">{{ personalForm.get('fullName')?.value }}</span>
+                </div>
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('sex') }}:</strong>
+                  <span class="f-s-14">{{ personalForm.get('sex')?.value }}</span>
+                </div>
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('email') }}:</strong>
+                  <span class="f-s-14">{{ personalForm.get('email')?.value }}</span>
+                </div>
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('country') }}:</strong>
+                  <span class="f-s-14">{{ locationForm.get('country')?.value }}</span>
+                </div>
+                @if (isUS) {
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('state') }}:</strong>
+                  <span class="f-s-14">{{ locationForm.get('state')?.value }}</span>
+                </div>
+                }
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('symptoms') }}:</strong>
+                  <span class="f-s-14">{{ summarySymptoms }}</span>
+                </div>
+                @if (symptomsForm.get('otherSymptoms')?.value) {
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('otherSymptoms') }}:</strong>
+                  <span class="f-s-14">{{ symptomsForm.get('otherSymptoms')?.value }}</span>
+                </div>
+                }
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('allergies') }}:</strong>
+                  <span class="f-s-14">{{ summaryAllergies }}</span>
+                </div>
+                @if (allergiesForm.get('otherAllergies')?.value) {
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('otherAllergies') }}:</strong>
+                  <span class="f-s-14">{{ allergiesForm.get('otherAllergies')?.value }}</span>
+                </div>
+                }
+              </div>
+
+              <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button class="bg-error text-white!" matStepperPrevious>{{ t('back') }}</button>
+                <button mat-flat-button color="primary" (click)="onSubmit()" [disabled]="isSubmitting">
+                  @if (isSubmitting) {
+                  {{ t('sending') }}
+                  } @else {
+                  {{ t('submit') }}
                   }
-                </mat-select>
-                @if (prescriptionForm.get('country')?.touched && prescriptionForm.get('country')?.hasError('required'))
-                {
-                <mat-hint class="m-b-16 error-msg">
-                  <div class="text-error">Country is required.</div>
-                </mat-hint>
-                }
-              </mat-form-field>
+                </button>
+              </div>
             </div>
-            @if (isUS) {
-            <div class="col-lg-6">
-              <mat-label class="f-s-14 f-w-600 m-b-8 d-block">State <span class="text-error">*</span></mat-label>
-              <mat-form-field appearance="outline" class="w-100" color="primary">
-                <mat-select formControlName="state">
-                  @for (s of usStates; track s) {
-                  <mat-option [value]="s">{{ s }}</mat-option>
-                  }
-                </mat-select>
-                @if (prescriptionForm.get('state')?.touched && prescriptionForm.get('state')?.hasError('required')) {
-                <mat-hint class="m-b-16 error-msg">
-                  <div class="text-error">State is required for US.</div>
-                </mat-hint>
-                }
-              </mat-form-field>
-            </div>
-            }
-          </div>
+          </mat-step>
 
-          <!-- Symptoms -->
-          <mat-label class="f-s-14 f-w-600 m-b-8 d-block m-t-16">Select symptoms <span
-              class="text-error">*</span></mat-label>
-          <div class="d-flex flex-wrap gap-8 m-b-16">
-            @for (symptom of symptomsList; track symptom) {
-            <button type="button" mat-stroked-button [class.symptom-selected]="isSymptomSelected(symptom)"
-              (click)="toggleSymptom(symptom)" class="symptom-chip">
-              {{ symptom }}
-            </button>
-            }
-          </div>
-
-          <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Other (explain)</mat-label>
-          <mat-form-field appearance="outline" class="w-100" color="primary">
-            <textarea matInput formControlName="otherSymptoms" rows="3"></textarea>
-          </mat-form-field>
-
-          <!-- Allergies -->
-          <mat-label class="f-s-14 f-w-600 m-b-8 d-block m-t-16">Select allergies</mat-label>
-          <div class="d-flex flex-wrap gap-8 m-b-16">
-            @for (allergy of allergiesList; track allergy) {
-            <button type="button" mat-stroked-button [class.allergy-selected]="isAllergySelected(allergy)"
-              (click)="toggleAllergy(allergy)" class="allergy-chip">
-              {{ allergy }}
-            </button>
-            }
-          </div>
-
-          <mat-label class="f-s-14 f-w-600 m-b-8 d-block">Other (explain)</mat-label>
-          <mat-form-field appearance="outline" class="w-100" color="primary">
-            <textarea matInput formControlName="otherAllergies" rows="3"></textarea>
-          </mat-form-field>
-
-          <!-- Submit -->
-          <div class="m-t-24">
-            <button mat-flat-button color="primary" class="w-100" type="submit" [disabled]="isSubmitting">
-              @if (isSubmitting) {
-              Sending...
-              } @else {
-              Submit Request
-              }
-            </button>
-          </div>
-
-        </form>
+        </mat-stepper>
 
         }
 
