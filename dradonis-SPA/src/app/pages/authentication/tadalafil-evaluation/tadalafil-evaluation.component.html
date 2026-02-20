@@ -1,0 +1,276 @@
+<div class="blank-layout-container justify-content-center">
+  <div class="position-relative w-100" style="max-width: 860px; margin: 0 auto; padding: 2rem 1rem;">
+
+    <!-- Header: top bar (language + logo) -->
+    <div class="d-flex align-items-center justify-content-between m-b-16">
+      <button mat-icon-button (click)="toggleLanguage()" class="lang-toggle-btn"
+        style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 4px 12px; width: auto; height: 36px;">
+        <div class="d-flex align-items-center" style="gap: 6px;">
+          <img [src]="otherFlagIcon" width="22" height="16" alt="flag" style="border-radius: 2px;" />
+          <span class="f-s-12 f-w-600">{{ t('langToggle') }}</span>
+        </div>
+      </button>
+      <img src="/assets/images/logos/Logo_500x133.png" alt="Dr. Adonis" class="form-logo" />
+    </div>
+
+    <!-- Banner Image -->
+    <div class="m-b-16">
+      <img [src]="bannerImage" [alt]="t('title')" class="banner-img" />
+    </div>
+
+    <!-- Card -->
+    <mat-card class="cardWithShadow">
+      <mat-card-content class="p-24">
+
+        @if (submitted) {
+        <div class="text-center p-24">
+          <mat-icon class="text-success" style="font-size: 56px; width: 56px; height: 56px;">check_circle</mat-icon>
+          <h3 class="f-w-600 m-t-16 f-s-20">{{ t('successTitle') }}</h3>
+          <p class="mat-body-1 m-t-8">{{ t('successMsg') }}</p>
+
+          <div class="payment-buttons m-t-24">
+            <p class="mat-body-1 f-w-600 f-s-16 m-b-16">{{ t('paymentTitle') }}</p>
+            <div class="d-flex justify-content-center flex-wrap" style="gap: 16px;">
+              <button class="payment-btn clover-btn" (click)="onClover()">
+                <span>{{ t('payWithClover') }}</span>
+              </button>
+              <button class="payment-btn paypal-btn" (click)="onPayPal()">
+                <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" alt="PayPal"
+                  height="28" />
+                <span>{{ t('payWithPaypal') }}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        } @else {
+
+        <!-- Disqualification Banner -->
+        @if (isDisqualified) {
+        <div class="disqualified-banner m-b-16">
+          <mat-icon>warning</mat-icon>
+          <div>
+            <strong>{{ t('disqualifiedTitle') }}</strong>
+            <p class="m-0 m-t-4">{{ t('disqualifiedMsg') }}</p>
+          </div>
+        </div>
+        }
+
+        <h2 class="f-w-600 f-s-24 m-b-4" style="font-family: 'Playfair Display', serif; font-style: italic;">
+          {{ t('title') }}
+        </h2>
+        <p class="mat-body-1 f-s-14 m-b-8">{{ t('subtitle') }}</p>
+        <p class="mat-body-2 f-s-12 m-b-16" style="color: #6b7280;">
+          {{ t('fieldsRequired') }}
+        </p>
+
+        <mat-stepper orientation="vertical" #stepper>
+
+          <!-- STEP 1: Questions 1–4 -->
+          <mat-step [stepControl]="questionsForm1">
+            <form class="m-t-16" [formGroup]="questionsForm1">
+              <ng-template matStepLabel>{{ t('stepQuestions1') }}</ng-template>
+
+              <!-- Q1 -->
+              <div class="question-block">
+                <mat-label class="question-label">{{ t('q1') }} <span class="text-error">*</span></mat-label>
+                <p class="question-note">{{ t('q1Note') }}</p>
+                <mat-radio-group formControlName="q1" class="radio-group">
+                  <mat-radio-button value="yes">{{ t('yes') }}</mat-radio-button>
+                  <mat-radio-button value="no">{{ t('no') }}</mat-radio-button>
+                </mat-radio-group>
+                @if (questionsForm1.get('q1')?.touched && questionsForm1.get('q1')?.hasError('required')) {
+                <div class="text-error f-s-12 m-t-4">{{ t('snackInvalid') }}</div>
+                }
+              </div>
+
+              <!-- Q2 -->
+              <div class="question-block">
+                <mat-label class="question-label">{{ t('q2') }} <span class="text-error">*</span></mat-label>
+                <mat-radio-group formControlName="q2" class="radio-group">
+                  <mat-radio-button value="yes">{{ t('yes') }}</mat-radio-button>
+                  <mat-radio-button value="no">{{ t('no') }}</mat-radio-button>
+                </mat-radio-group>
+                @if (questionsForm1.get('q2')?.touched && questionsForm1.get('q2')?.hasError('required')) {
+                <div class="text-error f-s-12 m-t-4">{{ t('snackInvalid') }}</div>
+                }
+              </div>
+
+              <!-- Q3 -->
+              <div class="question-block">
+                <mat-label class="question-label">{{ t('q3') }} <span class="text-error">*</span></mat-label>
+                <mat-radio-group formControlName="q3" class="radio-group">
+                  <mat-radio-button value="yes">{{ t('yes') }}</mat-radio-button>
+                  <mat-radio-button value="no">{{ t('no') }}</mat-radio-button>
+                </mat-radio-group>
+                @if (questionsForm1.get('q3')?.touched && questionsForm1.get('q3')?.hasError('required')) {
+                <div class="text-error f-s-12 m-t-4">{{ t('snackInvalid') }}</div>
+                }
+              </div>
+
+              <!-- Q4 (multiple choice) -->
+              <div class="question-block">
+                <mat-label class="question-label">{{ t('q4') }} <span class="text-error">*</span></mat-label>
+                <mat-radio-group formControlName="q4" class="radio-group">
+                  <mat-radio-button value="opt1">{{ t('q4Opt1') }}</mat-radio-button>
+                  <mat-radio-button value="opt2">{{ t('q4Opt2') }}</mat-radio-button>
+                  <mat-radio-button value="opt3">{{ t('q4Opt3') }}</mat-radio-button>
+                </mat-radio-group>
+                @if (questionsForm1.get('q4')?.touched && questionsForm1.get('q4')?.hasError('required')) {
+                <div class="text-error f-s-12 m-t-4">{{ t('snackInvalid') }}</div>
+                }
+              </div>
+
+              <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button matStepperNext>{{ t('next') }}</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <!-- STEP 2: Questions 5–8 -->
+          <mat-step [stepControl]="questionsForm2">
+            <form class="m-t-16" [formGroup]="questionsForm2">
+              <ng-template matStepLabel>{{ t('stepQuestions2') }}</ng-template>
+
+              <!-- Q5 -->
+              <div class="question-block">
+                <mat-label class="question-label">{{ t('q5') }} <span class="text-error">*</span></mat-label>
+                <mat-radio-group formControlName="q5" class="radio-group">
+                  <mat-radio-button value="yes">{{ t('yes') }}</mat-radio-button>
+                  <mat-radio-button value="no">{{ t('no') }}</mat-radio-button>
+                </mat-radio-group>
+                @if (questionsForm2.get('q5')?.touched && questionsForm2.get('q5')?.hasError('required')) {
+                <div class="text-error f-s-12 m-t-4">{{ t('snackInvalid') }}</div>
+                }
+              </div>
+
+              <!-- Q6 -->
+              <div class="question-block">
+                <mat-label class="question-label">{{ t('q6') }} <span class="text-error">*</span></mat-label>
+                <mat-radio-group formControlName="q6" class="radio-group">
+                  <mat-radio-button value="yes">{{ t('yes') }}</mat-radio-button>
+                  <mat-radio-button value="no">{{ t('no') }}</mat-radio-button>
+                </mat-radio-group>
+                @if (questionsForm2.get('q6')?.touched && questionsForm2.get('q6')?.hasError('required')) {
+                <div class="text-error f-s-12 m-t-4">{{ t('snackInvalid') }}</div>
+                }
+              </div>
+
+              <!-- Q7 -->
+              <div class="question-block">
+                <mat-label class="question-label">{{ t('q7') }} <span class="text-error">*</span></mat-label>
+                <mat-radio-group formControlName="q7" class="radio-group">
+                  <mat-radio-button value="yes">{{ t('yes') }}</mat-radio-button>
+                  <mat-radio-button value="no">{{ t('no') }}</mat-radio-button>
+                </mat-radio-group>
+                @if (questionsForm2.get('q7')?.touched && questionsForm2.get('q7')?.hasError('required')) {
+                <div class="text-error f-s-12 m-t-4">{{ t('snackInvalid') }}</div>
+                }
+              </div>
+
+              <!-- Q8 -->
+              <div class="question-block">
+                <mat-label class="question-label">{{ t('q8') }} <span class="text-error">*</span></mat-label>
+                <mat-radio-group formControlName="q8" class="radio-group">
+                  <mat-radio-button value="yes">{{ t('yes') }}</mat-radio-button>
+                  <mat-radio-button value="no">{{ t('no') }}</mat-radio-button>
+                </mat-radio-group>
+                @if (questionsForm2.get('q8')?.touched && questionsForm2.get('q8')?.hasError('required')) {
+                <div class="text-error f-s-12 m-t-4">{{ t('snackInvalid') }}</div>
+                }
+              </div>
+
+              <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button class="bg-error text-white!" matStepperPrevious>{{ t('back') }}</button>
+                <button mat-flat-button matStepperNext>{{ t('next') }}</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <!-- STEP 3: Review & Submit -->
+          <mat-step>
+            <ng-template matStepLabel>{{ t('stepReview') }}</ng-template>
+
+            <div class="m-t-16">
+
+              <!-- Prominent Eligibility Result -->
+              @if (isDisqualified) {
+              <div class="disqualified-result m-b-24">
+                <mat-icon>block</mat-icon>
+                <h3>{{ t('disqualifiedTitle') }}</h3>
+                <p>{{ t('disqualifiedMsg') }}</p>
+              </div>
+              } @else {
+              <div class="qualified-result m-b-24">
+                <mat-icon>verified</mat-icon>
+                <h3>{{ t('qualifiedTitle') }}</h3>
+                <p>{{ t('qualifiedMsg') }}</p>
+              </div>
+              }
+
+              <!-- Collapsible Review -->
+              <mat-expansion-panel class="review-panel m-b-24">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="f-w-600 f-s-14">
+                    {{ t('viewAnswers') }}
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <div class="review-grid">
+                  <div class="review-row">
+                    <strong class="f-s-14">{{ t('q1') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(questionsForm1.get('q1')?.value) }}</span>
+                  </div>
+                  <div class="review-row">
+                    <strong class="f-s-14">{{ t('q2') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(questionsForm1.get('q2')?.value) }}</span>
+                  </div>
+                  <div class="review-row">
+                    <strong class="f-s-14">{{ t('q3') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(questionsForm1.get('q3')?.value) }}</span>
+                  </div>
+                  <div class="review-row">
+                    <strong class="f-s-14">{{ t('q4') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(questionsForm1.get('q4')?.value, 'q4') }}</span>
+                  </div>
+                  <div class="review-row">
+                    <strong class="f-s-14">{{ t('q5') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(questionsForm2.get('q5')?.value) }}</span>
+                  </div>
+                  <div class="review-row">
+                    <strong class="f-s-14">{{ t('q6') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(questionsForm2.get('q6')?.value) }}</span>
+                  </div>
+                  <div class="review-row">
+                    <strong class="f-s-14">{{ t('q7') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(questionsForm2.get('q7')?.value) }}</span>
+                  </div>
+                  <div class="review-row">
+                    <strong class="f-s-14">{{ t('q8') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(questionsForm2.get('q8')?.value) }}</span>
+                  </div>
+                </div>
+              </mat-expansion-panel>
+
+              <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button class="bg-error text-white!" matStepperPrevious>{{ t('back') }}</button>
+                <button mat-flat-button color="primary" (click)="onSubmit()"
+                  [disabled]="isSubmitting || isDisqualified">
+                  @if (isSubmitting) {
+                  {{ t('sending') }}
+                  } @else {
+                  {{ t('submit') }}
+                  }
+                </button>
+              </div>
+            </div>
+          </mat-step>
+
+        </mat-stepper>
+
+        }
+
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>

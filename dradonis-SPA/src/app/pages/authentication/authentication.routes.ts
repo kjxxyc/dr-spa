@@ -37,6 +37,13 @@ export const AuthenticationRoutes: Routes = [
             (m) => m.VitaminsPrescriptionComponent
           ),
       },
+      {
+        path: 'tadalafil-evaluation',
+        loadComponent: () =>
+          import('./tadalafil-evaluation/tadalafil-evaluation.component').then(
+            (m) => m.TadalafilEvaluationComponent
+          ),
+      },
     ],
   },
 ];
