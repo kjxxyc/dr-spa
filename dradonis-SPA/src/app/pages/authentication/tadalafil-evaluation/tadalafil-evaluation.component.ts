@@ -45,6 +45,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         viewAnswers: 'View my answers',
         qualifiedTitle: 'You are eligible!',
         qualifiedMsg: 'Based on your answers, you can proceed to purchase Tadalafil (Cialis).',
+        confirmLabel: 'I confirm that all the information provided is correct. I am aware that this data is the basis for determining my suitability for the use of Tadalafil and I assume responsibility for any omissions or inaccuracies therein.',
         // Buttons
         next: 'Next',
         back: 'Back',
@@ -89,6 +90,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         viewAnswers: 'Ver mis respuestas',
         qualifiedTitle: '¡Usted es elegible!',
         qualifiedMsg: 'Según sus respuestas, puede proceder a la compra de Tadalafil (Cialis).',
+        confirmLabel: 'Confirmo que toda la información suministrada es correcta. Soy consciente de que estos datos son la base para determinar mi aptitud para el uso de Tadalafil y asumo la responsabilidad derivada de cualquier omisión o inexactitud en la misma.',
         next: 'Siguiente',
         back: 'Atrás',
         submit: 'Enviar Evaluación',
@@ -116,12 +118,12 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         ReactiveFormsModule,
     ],
     templateUrl: './tadalafil-evaluation.component.html',
-    styleUrls: ['./tadalafil-evaluation.component.scss'],
 })
 export class TadalafilEvaluationComponent implements OnInit {
     lang: 'en' | 'es' = 'en';
     isSubmitting = false;
     submitted = false;
+    confirmCheck = false;
 
     questionsForm1!: FormGroup;
     questionsForm2!: FormGroup;
