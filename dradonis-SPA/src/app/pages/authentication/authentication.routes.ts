@@ -18,6 +18,13 @@ export const AuthenticationRoutes: Routes = [
         component: LandingComponent,
       },
       {
+        path: 'shop',
+        loadComponent: () =>
+          import('./shop/shop.component').then(
+            (m) => m.ShopComponent
+          ),
+      },
+      {
         path: 'error',
         component: AppErrorComponent,
       },

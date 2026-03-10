@@ -47,6 +47,19 @@
     "filterAll": "🛒 Todos",
     "filterGeneral": "🌿 Bienestar General",
     "filterAntiaging": "🧬 Antienvejecimiento",
-    "filterGut": "🦠 Salud Digestiva"
+    "filterGut": "🦠 Salud Digestiva",
+    "viewProduct": "Ver producto",
+    "poweredBy": "Powered by Fullscript",
+    "products": {
+      "pectasol": "PectaSol: Longevidad y bienestar general. Apoya una inflamación equilibrada, salud cardiovascular y sistema inmune fuerte.",
+      "mitochondrial": "Mitochondrial NRG: Optimiza la energía celular y la función mitocondrial para vitalidad y energías máximas.",
+      "uricAcid": "Fórmula de Ácido Úrico: Favorece el metabolismo, las enzimas hepáticas y la defensa antioxidante al limitar el ácido úrico excesivo.",
+      "omegavail": "OmegAvail Hi-Po Fish Oil: Mejora la absorción de EPA/DHA. Sostenible, puro y sin regusto a pescado.",
+      "broccoli": "Extracto de Semilla de Brócoli: Activa antioxidantes naturales. Protege del estrés oxidativo, dura varios días.",
+      "mineral": "Complete Mineral Complex: Repone minerales esenciales para apoyar la salud ósea, nerviosa y celular.",
+      "telomere": "Telomere Pro: Favorece envejecimiento saludable. Ayuda a mantener la longitud telomérica contra el estrés y toxinas.",
+      "iron": "Iron Liquid: Hierro líquido altamente biodisponible para el transporte de oxígeno. Fórmula vegetariana e hipoalergénica, de gran sabor.",
+      "probiomax": "ProbioMax® Sb DF: Equilibrio intestinal, inmunidad y regularidad. Con 4 cepas probióticas y S. boulardii."
+    }
   }
 }

@@ -1,0 +1,139 @@
+<div class="shop-page">
+    <!-- Header / Navigation -->
+    <header class="landing-header">
+        <div class="header-content">
+            <!-- Phone Number -->
+            <div class="phone-number">
+                <a href="tel:+13052047816">{{ 'header.phone' | translate }}</a>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo-container">
+                <a routerLink="/landing">
+                    <img src="assets/images/logos/Logo_720x192.jpg"
+                        alt="Dr. Adonis - Functional & Regenerative Medicine" class="logo">
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navigation">
+                <a routerLink="/landing/shop" class="nav-link active-link">
+                    <mat-icon>shopping_bag</mat-icon>
+                    {{ 'header.nav.shop' | translate }}
+                </a>
+                <a routerLink="/landing" fragment="services" class="nav-link">
+                    <mat-icon>medical_services</mat-icon>
+                    {{ 'header.nav.services' | translate }}
+                </a>
+                <a routerLink="/landing" fragment="protocols" class="nav-link">
+                    <mat-icon>assignment</mat-icon>
+                    {{ 'header.nav.protocols' | translate }}
+                </a>
+                <a routerLink="/landing" fragment="videos" class="nav-link">
+                    <mat-icon>play_circle</mat-icon>
+                    {{ 'header.nav.videos' | translate }}
+                </a>
+            </nav>
+
+            <!-- CTA Button -->
+            <button mat-raised-button color="primary" class="cta-button">
+                {{ 'header.cta' | translate }}
+            </button>
+
+            <!-- Language Toggle -->
+            <button mat-button class="language-toggle" (click)="toggleLanguage()">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                    <img [src]="currentLang === 'en' ? '/assets/images/flag/icon-flag-es.svg' : '/assets/images/flag/icon-flag-en.svg'"
+                        width="22" height="16" alt="flag" style="border-radius: 2px;" />
+                    {{ 'header.language' | translate }}
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Shop Content -->
+    <section class="fs-shop-section">
+        <h1 class="shop-title">{{ 'shop.title' | translate }}</h1>
+
+        <!-- Featured Products -->
+        <div class="featured-products">
+            <!-- Featured: Amazon Book -->
+            <div class="featured-card featured-book">
+                <div class="featured-image">
+                    <img src="assets/images/book-dradonis.png" alt="{{ 'bookSection.title' | translate }}">
+                </div>
+                <div class="featured-content">
+                    <h3>{{ 'bookSection.title' | translate }}</h3>
+                    <p>{{ 'bookSection.subtitle' | translate }}</p>
+                    <a href="https://www.amazon.com/gp/product/B0146UK2FM/ref=dbs_a_def_rwt_bibl_vppi_i0"
+                        target="_blank" rel="noopener noreferrer" class="featured-btn">
+                        <mat-icon>shopping_cart</mat-icon>
+                        {{ 'bookSection.btnBuy' | translate }}
+                    </a>
+                </div>
+            </div>
+
+            <!-- Featured: Vagustim -->
+            <div class="featured-card featured-vagustim">
+                <div class="featured-image">
+                    <img src="https://dradonis.com/wp-content/uploads/2026/01/vagutism.png?_t=1769392187"
+                        alt="{{ 'vagustim.title' | translate }}">
+                </div>
+                <div class="featured-content">
+                    <h3>{{ 'vagustim.title' | translate }}</h3>
+                    <p>{{ 'vagustim.description1' | translate }}</p>
+                    <p>{{ 'vagustim.description2' | translate }}</p>
+                    <p>{{ 'vagustim.description3' | translate }}</p>
+                    <p class="discount-code">
+                        {{ 'vagustim.code' | translate }} <strong>DRADONIS10</strong> {{ 'vagustim.discount' | translate
+                        }}
+                    </p>
+                    <a href="https://vagustim.io/" target="_blank" rel="noopener noreferrer" class="featured-btn">
+                        {{ 'vagustim.btnBuy' | translate }}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="fs-filterbar">
+            <button class="filter-pill" [class.active]="selectedCategory === 'all'" (click)="selectCategory('all')">
+                {{ 'shop.filterAll' | translate }}
+            </button>
+            <button class="filter-pill" [class.active]="selectedCategory === 'general'"
+                (click)="selectCategory('general')">
+                {{ 'shop.filterGeneral' | translate }}
+            </button>
+            <button class="filter-pill" [class.active]="selectedCategory === 'antiaging'"
+                (click)="selectCategory('antiaging')">
+                {{ 'shop.filterAntiaging' | translate }}
+            </button>
+            <button class="filter-pill" [class.active]="selectedCategory === 'gut'" (click)="selectCategory('gut')">
+                {{ 'shop.filterGut' | translate }}
+            </button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="fs-catalog-container">
+            <div class="fs-product-card" *ngFor="let product of filteredProducts">
+                <div class="fs-product-image">
+                    <img [src]="product.image" [alt]="product.name"
+                        onerror="this.src='assets/images/drug-bag-dradonis.png'">
+                </div>
+                <div class="fs-product-info">
+                    <p class="fs-product-desc">{{ product.descriptionKey | translate }}</p>
+                </div>
+                <div class="fs-product-footer">
+                    <h4 class="fs-product-name">{{ product.name }}</h4>
+                    <span class="fs-product-subtitle">{{ product.subtitle }}</span>
+                    <a [href]="product.storeUrl" target="_blank" rel="noopener noreferrer" class="fs-view-btn">
+                        {{ 'shop.viewProduct' | translate }}
+                    </a>
+                    <div class="fs-powered-by">
+                        <span>💚 {{ 'shop.poweredBy' | translate }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
