@@ -143,9 +143,9 @@ export class VitaminsPrescriptionComponent implements OnInit {
   allergiesForm!: FormGroup;
 
   // EmailJS
-  private serviceId = 'YOUR_SERVICE_ID';
-  private templateId = 'YOUR_TEMPLATE_ID';
-  private publicKey = 'YOUR_PUBLIC_KEY';
+  private serviceId = 'service_ldtmz6n';
+  private templateId = 'template_zbd3j1b';
+  private publicKey = 'vsVqtrledUCs4qrDT';
 
   symptomsList: string[] = [
     'Fatigue / tiredness', 'Brain fog', 'Memory loss',
