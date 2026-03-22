@@ -44,7 +44,7 @@
           {{ t('fieldsRequired') }}
         </p>
 
-        <mat-stepper orientation="vertical" #stepper>
+        <mat-stepper orientation="vertical" [linear]="true" #stepper>
 
           <!-- STEP 1: Personal Information -->
           <mat-step [stepControl]="personalForm">
@@ -91,6 +91,20 @@
                     @if (personalForm.get('email')?.touched && personalForm.get('email')?.hasError('email')) {
                     <mat-hint class="m-b-16 error-msg">
                       <div class="text-error">{{ t('emailInvalid') }}</div>
+                    </mat-hint>
+                    }
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <mat-label class="f-s-14 f-w-600 m-b-8 d-block">{{ t('phone') }} <span class="text-error">*</span></mat-label>
+                  <mat-form-field appearance="outline" class="w-100" color="primary">
+                    <input matInput type="tel" formControlName="phone" [placeholder]="t('phonePlaceholder')" maxlength="15" (keypress)="allowOnlyNumbers($event)" />
+                    @if (personalForm.get('phone')?.touched && personalForm.get('phone')?.hasError('required')) {
+                    <mat-hint class="m-b-16 error-msg">
+                      <div class="text-error">{{ t('phoneRequired') }}</div>
                     </mat-hint>
                     }
                   </mat-form-field>
@@ -225,6 +239,10 @@
                 <div class="review-row">
                   <strong class="f-s-14">{{ t('email') }}:</strong>
                   <span class="f-s-14">{{ personalForm.get('email')?.value }}</span>
+                </div>
+                <div class="review-row">
+                  <strong class="f-s-14">{{ t('phone') }}:</strong>
+                  <span class="f-s-14">{{ personalForm.get('phone')?.value }}</span>
                 </div>
                 <div class="review-row">
                   <strong class="f-s-14">{{ t('country') }}:</strong>

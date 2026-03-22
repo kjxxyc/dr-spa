@@ -7,6 +7,7 @@ import {
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MaterialModule } from '../../../material.module';
 import { MatStepper } from '@angular/material/stepper';
@@ -37,6 +38,10 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     emailPlaceholder: 'mail@example.com',
     emailRequired: 'Email is required.',
     emailInvalid: 'Please enter a valid email.',
+    phone: 'Phone Number',
+    phonePlaceholder: '000 000 0000',
+    phoneRequired: 'Phone is required.',
+    phoneCode: 'Code',
     // Location
     country: 'Country',
     countryRequired: 'Country is required.',
@@ -90,6 +95,10 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     emailPlaceholder: 'correo@ejemplo.com',
     emailRequired: 'El correo es obligatorio.',
     emailInvalid: 'Ingrese un correo válido.',
+    phone: 'Número de Teléfono',
+    phonePlaceholder: '000 000 0000',
+    phoneRequired: 'El teléfono es obligatorio.',
+    phoneCode: 'Cód.',
     country: 'País',
     countryRequired: 'El país es obligatorio.',
     state: 'Estado',
@@ -166,14 +175,7 @@ export class VitaminsPrescriptionComponent implements OnInit {
     'Nuts', 'Seafood', 'Fish', 'Sesame',
   ];
 
-  countries: string[] = [
-    'Argentina', 'Australia', 'Brazil', 'Canada', 'Chile',
-    'Colombia', 'Costa Rica', 'Cuba', 'Dominican Republic',
-    'Ecuador', 'El Salvador', 'France', 'Germany', 'Guatemala',
-    'Honduras', 'Italy', 'Mexico', 'Nicaragua', 'Panama',
-    'Peru', 'Puerto Rico', 'Spain', 'United Kingdom',
-    'United States', 'Venezuela',
-  ];
+  countries: string[] = [];
 
   usStates: string[] = [
     'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado',
@@ -195,13 +197,42 @@ export class VitaminsPrescriptionComponent implements OnInit {
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
     private ngZone: NgZone,
+    private http: HttpClient
   ) { }
 
   ngOnInit(): void {
+    this.http.get<any[]>('https://restcountries.com/v3.1/all?fields=name,idd').subscribe({
+      next: (data) => {
+        let allCountries = data
+          .filter(c => c.name?.common)
+          .map(c => c.name.common as string);
+
+        // 1. Extraer Estados Unidos para forzarlo arriba
+        const usIndex = allCountries.indexOf('United States');
+        let us = null;
+        if (usIndex > -1) {
+          us = allCountries.splice(usIndex, 1)[0];
+        }
+
+        // 2. Ordenar alfabéticamente
+        allCountries.sort((a, b) => a.localeCompare(b));
+
+        // 3. Volver a meter Estados Unidos al principio del arreglo
+        if (us) {
+          allCountries.unshift(us);
+        }
+
+        this.countries = allCountries;
+      },
+      error: (err) => {
+        console.error('Failed to load countries API', err);
+      }
+    });
     this.personalForm = this.fb.group({
       fullName: ['', Validators.required],
       sex: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
     });
 
     this.locationForm = this.fb.group({
@@ -292,6 +323,16 @@ export class VitaminsPrescriptionComponent implements OnInit {
       : this.t('none');
   }
 
+  allowOnlyNumbers(event: KeyboardEvent): boolean {
+    const charCode = event.which ? event.which : event.keyCode;
+    // Allow only numeric characters (0-9)
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      event.preventDefault();
+      return false;
+    }
+    return true;
+  }
+
   onSubmit(): void {
     // Validate all required forms before submitting
     this.personalForm.markAllAsTouched();
@@ -313,6 +354,7 @@ export class VitaminsPrescriptionComponent implements OnInit {
       to_email: 'kevin@dradonis.com,solangie@dradonis.com',
       from_name: personal.fullName,
       from_email: personal.email,
+      phone: personal.phone,
       sex: personal.sex,
       country: location.country,
       state: location.state || 'N/A',
