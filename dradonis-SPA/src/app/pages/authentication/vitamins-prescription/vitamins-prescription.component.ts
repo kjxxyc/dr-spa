@@ -321,6 +321,15 @@ export class VitaminsPrescriptionComponent implements OnInit {
       allergies: this.selectedAllergies.join(', ') || 'None',
       other_allergies: allergies.otherAllergies || 'None',
       reply_to: personal.email,
+
+      // --- Variables para el Auto-Responder (Correo al Cliente) ---
+      client_email: personal.email,
+      client_subject: this.lang === 'en' 
+        ? 'Your Request for a Vitamins Prescription Has Been Received'
+        : 'Su Solicitud de Receta de Vitaminas ha sido Recibida',
+      client_message: this.lang === 'en'
+        ? `Hi ${personal.fullName},\n\nThank you for submitting a vitamins prescription request. You should be receiving a call from our office soon to complete the process.\n\nPlease feel free to contact us at 305-204-7816 if you have any questions.\n\nBest regards,\nDr. Adonis Clinic`
+        : `Hola ${personal.fullName},\n\nGracias por enviar una solicitud de prescripción de vitaminas. Pronto recibirá una llamada de nuestra oficina para completar el proceso.\n\nPor favor, no dude en contactarnos al 305-204-7816 si tiene alguna pregunta.\n\nAtentamente,\nClínica Dr. Adonis`
     };
 
     if (this.serviceId === 'YOUR_SERVICE_ID') {
