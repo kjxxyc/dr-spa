@@ -99,7 +99,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         successMsg: 'El Dr. Adonis revisará su evaluación y se comunicará con usted pronto.',
         paymentTitle: 'Proceder al Pago',
         payWithPaypal: 'Pagar con PayPal',
-        payWithClover: 'Pagar con Clover',
+        payWithClover: 'Pagar con CLOVER',
         snackSuccess: '✅ ¡Evaluación enviada exitosamente!',
         snackSuccessSim: '✅ ¡Evaluación enviada! (EmailJS no configurado aún)',
         snackError: '❌ Error al enviar. Intente de nuevo.',
@@ -271,6 +271,6 @@ export class TadalafilEvaluationComponent implements OnInit {
     onClover(): void {
         // TODO: Redirect to Clover payment link
         console.log('Redirecting to Clover...');
-        window.open('https://www.clover.com', '_blank');
+        window.open('https://link.clover.com/urlshortener/4wbzLj', '_blank');
     }
 }

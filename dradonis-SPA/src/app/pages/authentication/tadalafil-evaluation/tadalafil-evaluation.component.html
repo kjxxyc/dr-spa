@@ -33,12 +33,15 @@
             <div class="d-flex justify-content-center flex-wrap" style="gap: 16px;">
               <button class="payment-btn clover-btn" (click)="onClover()">
                 <span>{{ t('payWithClover') }}</span>
+                <img src="/assets/images/logos/clover-logo.svg" alt="Clover" height="32" />
               </button>
+              <!-- PayPal button hidden until link is ready
               <button class="payment-btn paypal-btn" (click)="onPayPal()">
                 <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" alt="PayPal"
                   height="28" />
                 <span>{{ t('payWithPaypal') }}</span>
               </button>
+              -->
             </div>
           </div>
         </div>
