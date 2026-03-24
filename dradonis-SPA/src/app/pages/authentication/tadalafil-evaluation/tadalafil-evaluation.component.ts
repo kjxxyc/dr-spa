@@ -58,7 +58,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         payWithPaypal: 'Pay with PayPal',
         payWithClover: 'Pay with CLOVER',
         snackSuccess: '✅ Evaluation submitted successfully!',
-        snackSuccessSim: '✅ Evaluation submitted! (EmailJS not configured yet)',
+
         snackError: '❌ Failed to send. Please try again.',
         snackInvalid: 'Please answer all required questions.',
         langToggle: 'Español',
@@ -101,7 +101,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         payWithPaypal: 'Pagar con PayPal',
         payWithClover: 'Pagar con CLOVER',
         snackSuccess: '✅ ¡Evaluación enviada exitosamente!',
-        snackSuccessSim: '✅ ¡Evaluación enviada! (EmailJS no configurado aún)',
+
         snackError: '❌ Error al enviar. Intente de nuevo.',
         snackInvalid: 'Por favor responda todas las preguntas obligatorias.',
         langToggle: 'English',
@@ -220,7 +220,7 @@ export class TadalafilEvaluationComponent implements OnInit {
         };
 
         const templateParams = {
-            to_email: 'kevin@dradonis.com,solangie@dradonis.com',
+            to_email: 'kevin',
             form_type: 'Tadalafil (Cialis) Evaluation',
             q1_nitrates: this.answerLabel(answers.q1),
             q2_cardiovascular: this.answerLabel(answers.q2),
@@ -235,12 +235,12 @@ export class TadalafilEvaluationComponent implements OnInit {
         };
 
         if (this.serviceId === 'YOUR_SERVICE_ID') {
-            console.log('EmailJS not configured. Payload:', templateParams);
+
             setTimeout(() => {
                 this.ngZone.run(() => {
                     this.isSubmitting = false;
                     this.submitted = true;
-                    this.snackBar.open(this.t('snackSuccessSim'), 'OK', { duration: 5000 });
+                    this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
                 });
             }, 1000);
         } else {

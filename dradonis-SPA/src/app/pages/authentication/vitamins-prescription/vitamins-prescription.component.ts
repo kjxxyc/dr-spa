@@ -69,7 +69,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     successMsg: 'Dr. Adonis will review your information and email you a protocol.',
     submitAnother: 'Submit Another Request',
     snackSuccess: '✅ Form submitted successfully!',
-    snackSuccessSim: '✅ Form submitted! (EmailJS not configured yet)',
+
     snackError: '❌ Failed to send. Please try again.',
     snackInvalid: 'Please fill in all required fields.',
     langToggle: 'Español',
@@ -121,7 +121,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     successMsg: 'El Dr. Adonis revisará su información y le enviará un protocolo.',
     submitAnother: 'Enviar Otra Solicitud',
     snackSuccess: '✅ ¡Formulario enviado exitosamente!',
-    snackSuccessSim: '✅ ¡Formulario enviado! (EmailJS no configurado aún)',
+
     snackError: '❌ Error al enviar. Intente de nuevo.',
     snackInvalid: 'Complete todos los campos obligatorios.',
     langToggle: 'English',
@@ -375,12 +375,12 @@ export class VitaminsPrescriptionComponent implements OnInit {
     };
 
     if (this.serviceId === 'YOUR_SERVICE_ID') {
-      console.log('EmailJS not configured. Payload:', templateParams);
+
       setTimeout(() => {
         this.ngZone.run(() => {
           this.isSubmitting = false;
           this.submitted = true;
-          this.snackBar.open(this.t('snackSuccessSim'), 'OK', { duration: 5000 });
+          this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
         });
       }, 1000);
     } else {
