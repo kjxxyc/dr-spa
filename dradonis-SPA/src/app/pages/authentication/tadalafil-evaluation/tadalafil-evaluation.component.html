@@ -10,7 +10,7 @@
           <span class="f-s-12 f-w-600">{{ t('langToggle') }}</span>
         </div>
       </button>
-      <img src="/assets/images/logos/Logo_500x133.png" alt="Dr. Adonis" class="form-logo" />
+      <a href="https://dradonis.com" target="_blank"><img src="/assets/images/logos/Logo_500x133.png" alt="Dr. Adonis" class="form-logo" /></a>
     </div>
 
     <!-- Banner Image -->
@@ -28,12 +28,96 @@
           <h3 class="f-w-600 m-t-16 f-s-20">{{ t('successTitle') }}</h3>
           <p class="mat-body-1 m-t-8">{{ t('successMsg') }}</p>
 
-          <div class="payment-buttons m-t-24">
-            <p class="mat-body-1 f-w-600 f-s-16 m-b-16">{{ t('paymentTitle') }}</p>
+          <div class="payment-section m-t-24">
+
+            @if (!isPaymentEligible) {
+            <!-- Ineligibility banners -->
+            @if (!isAgeEligible) {
+            <div class="disqualified-result m-b-16">
+              <mat-icon>block</mat-icon>
+              <h3>{{ t('ageIneligibleTitle') }}</h3>
+              <p>{{ t('ageIneligibleMsg') }} <a [attr.href]="scheduleUrl" target="_blank" class="schedule-link">{{ t('ageIneligibleLink') }}</a></p>
+            </div>
+            }
+            @if (!isSexEligible) {
+            <div class="disqualified-result m-b-16">
+              <mat-icon>block</mat-icon>
+              <h3>{{ t('sexIneligibleTitle') }}</h3>
+              <p>{{ t('sexIneligibleMsg') }} <a [attr.href]="scheduleUrl" target="_blank" class="schedule-link">{{ t('sexIneligibleLink') }}</a></p>
+            </div>
+            }
+            @if (!isEdEligible) {
+            <div class="disqualified-result m-b-16">
+              <mat-icon>info</mat-icon>
+              <h3>{{ t('edIneligibleTitle') }}</h3>
+              <p>{{ t('edIneligibleMsg') }} <a [attr.href]="scheduleUrl" target="_blank" class="schedule-link">{{ t('edIneligibleLink') }}</a></p>
+            </div>
+            }
+            @if (isDisqualified) {
+            <div class="disqualified-result m-b-16">
+              <mat-icon>block</mat-icon>
+              <h3>{{ t('disqualifiedTitle') }}</h3>
+              <p>{{ t('disqualifiedMsg') }} <a [attr.href]="scheduleUrl" target="_blank" class="schedule-link">{{ t('disqualifiedLink') }}</a></p>
+            </div>
+            }
+            } @else {
+            <!-- Eligible: show contact form + payment buttons -->
+            <p class="mat-body-1 f-w-600 f-s-16 m-b-4">{{ t('paymentTitle') }}</p>
+            <p class="mat-body-2 f-s-13 m-b-16" style="color: #6b7280;">{{ t('paymentSubtitle') }}</p>
+
+            <!-- Contact Info Form -->
+            <form [formGroup]="paymentContactForm" class="payment-contact-form m-b-24">
+              <div class="contact-fields-grid">
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>{{ t('contactName') }}</mat-label>
+                  <input matInput formControlName="contactName" />
+                  @if (paymentContactForm.get('contactName')?.touched && paymentContactForm.get('contactName')?.hasError('required')) {
+                  <mat-error>{{ t('errorRequired') }}</mat-error>
+                  }
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>{{ t('contactAddress') }}</mat-label>
+                  <input matInput formControlName="contactAddress" />
+                  @if (paymentContactForm.get('contactAddress')?.touched && paymentContactForm.get('contactAddress')?.hasError('required')) {
+                  <mat-error>{{ t('errorRequired') }}</mat-error>
+                  }
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>{{ t('contactPhone') }}</mat-label>
+                  <input matInput formControlName="contactPhone" type="tel" inputmode="numeric"
+                    (input)="onPhoneInput($event)" maxlength="15" />
+                  @if (paymentContactForm.get('contactPhone')?.touched && paymentContactForm.get('contactPhone')?.hasError('required')) {
+                  <mat-error>{{ t('errorRequired') }}</mat-error>
+                  } @else if (paymentContactForm.get('contactPhone')?.touched && paymentContactForm.get('contactPhone')?.hasError('pattern')) {
+                  <mat-error>{{ t('errorPhoneDigits') }}</mat-error>
+                  }
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>{{ t('contactEmail') }}</mat-label>
+                  <input matInput formControlName="contactEmail" type="email" />
+                  @if (paymentContactForm.get('contactEmail')?.touched && paymentContactForm.get('contactEmail')?.hasError('required')) {
+                  <mat-error>{{ t('errorRequired') }}</mat-error>
+                  } @else if (paymentContactForm.get('contactEmail')?.touched && paymentContactForm.get('contactEmail')?.hasError('pattern')) {
+                  <mat-error>{{ t('errorEmailFormat') }}</mat-error>
+                  }
+                </mat-form-field>
+              </div>
+            </form>
+
+            <!-- Payment Buttons -->
             <div class="d-flex justify-content-center flex-wrap" style="gap: 16px;">
-              <button class="payment-btn clover-btn" (click)="onClover()">
+              <button class="payment-btn clover-btn" (click)="onClover()"
+                [disabled]="!isPaymentContactValid || isProcessingPayment"
+                [class.btn-disabled]="!isPaymentContactValid || isProcessingPayment">
+                @if (isProcessingPayment) {
+                <span>{{ t('processingPayment') }}</span>
+                } @else {
                 <span>{{ t('payWithClover') }}</span>
                 <img src="/assets/images/logos/clover-logo.svg" alt="Clover" height="32" />
+                }
               </button>
               <!-- PayPal button hidden until link is ready
               <button class="payment-btn paypal-btn" (click)="onPayPal()">
@@ -43,30 +127,58 @@
               </button>
               -->
             </div>
+            }
           </div>
         </div>
         } @else {
 
-        <!-- Disqualification Banner -->
-        @if (isDisqualified) {
-        <div class="disqualified-banner m-b-16">
-          <mat-icon>warning</mat-icon>
-          <div>
-            <strong>{{ t('disqualifiedTitle') }}</strong>
-            <p class="m-0 m-t-4">{{ t('disqualifiedMsg') }}</p>
-          </div>
-        </div>
-        }
-
-        <h2 class="f-w-600 f-s-24 m-b-4" style="font-family: 'Playfair Display', serif; font-style: italic;">
-          {{ t('title') }}
-        </h2>
         <p class="mat-body-1 f-s-14 m-b-8">{{ t('subtitle') }}</p>
         <p class="mat-body-2 f-s-12 m-b-16" style="color: #6b7280;">
           {{ t('fieldsRequired') }}
         </p>
 
         <mat-stepper orientation="vertical" #stepper>
+
+          <!-- STEP 0: Personal Information -->
+          <mat-step [stepControl]="personalInfoForm">
+            <form class="m-t-16" [formGroup]="personalInfoForm">
+              <ng-template matStepLabel>{{ t('stepPersonalInfo') }}</ng-template>
+
+              <!-- Date of Birth + Sex (side by side) -->
+              <div class="personal-info-row">
+                <mat-form-field appearance="outline" class="personal-info-field">
+                  <mat-label>{{ t('dateOfBirth') }}</mat-label>
+                  <input matInput [matDatepicker]="picker" formControlName="dateOfBirth" [max]="maxDate" />
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="personal-info-field">
+                  <mat-label>{{ t('sex') }}</mat-label>
+                  <mat-select formControlName="sex">
+                    <mat-option value="male">{{ t('sexMale') }}</mat-option>
+                    <mat-option value="female">{{ t('sexFemale') }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <!-- ED Question (subtle) -->
+              <div class="question-block">
+                <mat-label class="question-label">{{ t('edQuestion') }} <span class="text-error">*</span></mat-label>
+                <mat-radio-group formControlName="edQuestion" class="radio-group">
+                  <mat-radio-button value="yes">{{ t('yes') }}</mat-radio-button>
+                  <mat-radio-button value="no">{{ t('no') }}</mat-radio-button>
+                </mat-radio-group>
+                @if (personalInfoForm.get('edQuestion')?.touched && personalInfoForm.get('edQuestion')?.hasError('required')) {
+                <div class="text-error f-s-12 m-t-4">{{ t('snackInvalid') }}</div>
+                }
+              </div>
+
+              <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button matStepperNext>{{ t('next') }}</button>
+              </div>
+            </form>
+          </mat-step>
 
           <!-- STEP 1: Questions 1–4 -->
           <mat-step [stepControl]="questionsForm1">
@@ -124,6 +236,7 @@
               </div>
 
               <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
+                <button mat-flat-button class="bg-error text-white!" matStepperPrevious>{{ t('back') }}</button>
                 <button mat-flat-button matStepperNext>{{ t('next') }}</button>
               </div>
             </form>
@@ -196,11 +309,22 @@
             <div class="m-t-16">
 
               <!-- Prominent Eligibility Result -->
-              @if (isDisqualified) {
+              @if (!isPaymentEligible) {
               <div class="disqualified-result m-b-24">
                 <mat-icon>block</mat-icon>
+                @if (!isAgeEligible) {
+                <h3>{{ t('ageIneligibleTitle') }}</h3>
+                <p>{{ t('ageIneligibleMsg') }} <a [attr.href]="scheduleUrl" target="_blank" class="schedule-link">{{ t('ageIneligibleLink') }}</a></p>
+                } @else if (!isSexEligible) {
+                <h3>{{ t('sexIneligibleTitle') }}</h3>
+                <p>{{ t('sexIneligibleMsg') }} <a [attr.href]="scheduleUrl" target="_blank" class="schedule-link">{{ t('sexIneligibleLink') }}</a></p>
+                } @else if (!isEdEligible) {
+                <h3>{{ t('edIneligibleTitle') }}</h3>
+                <p>{{ t('edIneligibleMsg') }} <a [attr.href]="scheduleUrl" target="_blank" class="schedule-link">{{ t('edIneligibleLink') }}</a></p>
+                } @else {
                 <h3>{{ t('disqualifiedTitle') }}</h3>
-                <p>{{ t('disqualifiedMsg') }}</p>
+                <p>{{ t('disqualifiedMsg') }} <a [attr.href]="scheduleUrl" target="_blank" class="schedule-link">{{ t('disqualifiedLink') }}</a></p>
+                }
               </div>
               } @else {
               <div class="qualified-result m-b-24">
@@ -219,15 +343,29 @@
                 </mat-expansion-panel-header>
 
                 <div class="review-grid">
-                  <div class="review-row">
+                  <!-- Personal Info -->
+                  <div class="review-row" [class.disqualifying-answer]="isAnswerDisqualifying('dob')">
+                    <strong class="f-s-14">{{ t('dateOfBirth') }}</strong>
+                    <span class="f-s-14">{{ formatDate(personalInfoForm.get('dateOfBirth')?.value) }}</span>
+                  </div>
+                  <div class="review-row" [class.disqualifying-answer]="isAnswerDisqualifying('sex')">
+                    <strong class="f-s-14">{{ t('sex') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(personalInfoForm.get('sex')?.value, 'sex') }}</span>
+                  </div>
+                  <div class="review-row" [class.disqualifying-answer]="isAnswerDisqualifying('ed')">
+                    <strong class="f-s-14">{{ t('edQuestion') }}</strong>
+                    <span class="f-s-14">{{ answerLabel(personalInfoForm.get('edQuestion')?.value) }}</span>
+                  </div>
+                  <!-- Medical Questions -->
+                  <div class="review-row" [class.disqualifying-answer]="isAnswerDisqualifying('q1')">
                     <strong class="f-s-14">{{ t('q1') }}</strong>
                     <span class="f-s-14">{{ answerLabel(questionsForm1.get('q1')?.value) }}</span>
                   </div>
-                  <div class="review-row">
+                  <div class="review-row" [class.disqualifying-answer]="isAnswerDisqualifying('q2')">
                     <strong class="f-s-14">{{ t('q2') }}</strong>
                     <span class="f-s-14">{{ answerLabel(questionsForm1.get('q2')?.value) }}</span>
                   </div>
-                  <div class="review-row">
+                  <div class="review-row" [class.disqualifying-answer]="isAnswerDisqualifying('q3')">
                     <strong class="f-s-14">{{ t('q3') }}</strong>
                     <span class="f-s-14">{{ answerLabel(questionsForm1.get('q3')?.value) }}</span>
                   </div>
@@ -235,7 +373,7 @@
                     <strong class="f-s-14">{{ t('q4') }}</strong>
                     <span class="f-s-14">{{ answerLabel(questionsForm1.get('q4')?.value, 'q4') }}</span>
                   </div>
-                  <div class="review-row">
+                  <div class="review-row" [class.disqualifying-answer]="isAnswerDisqualifying('q5')">
                     <strong class="f-s-14">{{ t('q5') }}</strong>
                     <span class="f-s-14">{{ answerLabel(questionsForm2.get('q5')?.value) }}</span>
                   </div>
@@ -243,7 +381,7 @@
                     <strong class="f-s-14">{{ t('q6') }}</strong>
                     <span class="f-s-14">{{ answerLabel(questionsForm2.get('q6')?.value) }}</span>
                   </div>
-                  <div class="review-row">
+                  <div class="review-row" [class.disqualifying-answer]="isAnswerDisqualifying('q7')">
                     <strong class="f-s-14">{{ t('q7') }}</strong>
                     <span class="f-s-14">{{ answerLabel(questionsForm2.get('q7')?.value) }}</span>
                   </div>
@@ -255,7 +393,7 @@
               </mat-expansion-panel>
 
               <!-- Confirmation Checkbox -->
-              @if (!isDisqualified) {
+              @if (isPaymentEligible) {
               <div class="confirm-box m-b-24">
                 <mat-checkbox [(ngModel)]="confirmCheck" color="primary" class="confirm-checkbox">
                   {{ t('confirmLabel') }}
@@ -266,7 +404,7 @@
               <div class="d-flex align-items-center justify-content-end" style="gap: 12px;">
                 <button mat-flat-button class="bg-error text-white!" matStepperPrevious>{{ t('back') }}</button>
                 <button mat-flat-button color="primary" (click)="onSubmit()"
-                  [disabled]="isSubmitting || isDisqualified || !confirmCheck">
+                  [disabled]="isSubmitting || !isPaymentEligible || !confirmCheck">
                   @if (isSubmitting) {
                   {{ t('sending') }}
                   } @else {

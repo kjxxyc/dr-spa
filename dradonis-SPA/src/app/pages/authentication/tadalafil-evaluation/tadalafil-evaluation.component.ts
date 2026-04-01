@@ -8,6 +8,8 @@ import {
     ReactiveFormsModule,
 } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialModule } from '../../../material.module';
 import emailjs from '@emailjs/browser';
 
@@ -16,11 +18,18 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     en: {
         title: 'Tadalafil Medical Evaluation',
         subtitle: 'Please answer the following questions so we can determine if you are a candidate for Tadalafil (Cialis).',
-        fieldsRequired: 'All questions are required',
+        fieldsRequired: 'All fields are required',
         // Step labels
+        stepPersonalInfo: 'Personal Information',
         stepQuestions1: 'Medical History (1–4)',
         stepQuestions2: 'Medical History (5–8)',
         stepReview: 'Review & Submit',
+        // Personal info fields
+        dateOfBirth: 'Date of Birth',
+        sex: 'Biological Sex',
+        sexMale: 'Male',
+        sexFemale: 'Female',
+        edQuestion: 'Do you currently experience difficulty achieving or maintaining adequate intimate performance?',
         // Questions
         q1: '1. Are you currently using any medications containing nitrates? (Examples: Nitroglycerin, Isosorbide, or recreational drugs known as "poppers")',
         q1Note: 'Note: Combined use can cause a life-threatening drop in blood pressure.',
@@ -38,13 +47,14 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         yes: 'Yes',
         no: 'No',
         // Disqualification
-        disqualifiedTitle: 'Not Eligible for Direct Purchase',
-        disqualifiedMsg: 'We\'re sorry, for medical safety reasons, you are not a candidate for direct purchase. We recommend scheduling a teleconsultation or in-person consultation with Dr. Adonis.',
+        disqualifiedTitle: 'Not Eligible for Online Prescription',
+        disqualifiedMsg: 'We\'re sorry, for medical safety reasons, you are not a candidate for an online prescription.',
+        disqualifiedLink: 'We recommend scheduling a teleconsultation or in-person consultation with Dr. Adonis.',
         // Review
         reviewTitle: 'Review your answers',
         viewAnswers: 'View my answers',
-        qualifiedTitle: 'You are eligible!',
-        qualifiedMsg: 'Based on your answers, you can proceed to purchase Tadalafil (Cialis).',
+        qualifiedTitle: 'Evaluation Approved ✓',
+        qualifiedMsg: 'Your evaluation has been reviewed by Dr. Adonis. Based on your responses, you have been approved to proceed with the purchase of Tadalafil (Cialis).',
         confirmLabel: 'I confirm that all the information provided is correct. I am aware that this data is the basis for determining my suitability for the use of Tadalafil and I assume responsibility for any omissions or inaccuracies therein.',
         // Buttons
         next: 'Next',
@@ -52,24 +62,55 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         submit: 'Submit Evaluation',
         sending: 'Sending...',
         // Messages
-        successTitle: 'Evaluation Submitted Successfully!',
-        successMsg: 'Dr. Adonis will review your evaluation and contact you shortly.',
-        paymentTitle: 'Proceed to Payment',
+        successTitle: 'Evaluation Reviewed Successfully!',
+        successMsg: 'Dr. Adonis has reviewed your evaluation. Please complete your contact information and proceed to payment.',
+        paymentTitle: 'Contact Information & Payment',
+        paymentSubtitle: 'Please provide your details before proceeding to payment.',
         payWithPaypal: 'Pay with PayPal',
         payWithClover: 'Pay with CLOVER',
-        snackSuccess: '✅ Evaluation submitted successfully!',
-
+        snackSuccess: '✅ Ready! Please proceed with payment.',
         snackError: '❌ Failed to send. Please try again.',
         snackInvalid: 'Please answer all required questions.',
+        snackPaymentInvalid: 'Please fill in all contact fields before proceeding to payment.',
         langToggle: 'Español',
+        // Payment contact fields
+        contactName: 'Full Name',
+        contactAddress: 'Address',
+        contactPhone: 'Phone Number',
+        contactEmail: 'Email',
+        // Validation errors
+        errorPhoneDigits: 'Phone number must contain only digits.',
+        errorEmailFormat: 'Please enter a valid email (e.g. name@mail.com).',
+        errorRequired: 'This field is required.',
+        // Eligibility
+        ageIneligibleTitle: 'Age Requirement Not Met',
+        ageIneligibleMsg: 'You must be between 21 and 80 years old to be eligible for an online prescription.',
+        ageIneligibleLink: 'We recommend scheduling a consultation with Dr. Adonis.',
+        sexIneligibleTitle: 'Not Eligible',
+        sexIneligibleMsg: 'Tadalafil (Cialis) is indicated for male patients only.',
+        sexIneligibleLink: 'We recommend scheduling a consultation with Dr. Adonis for an appropriate evaluation.',
+        edIneligibleTitle: 'Consultation Recommended',
+        edIneligibleMsg: 'Based on your responses, an online prescription is not applicable at this time.',
+        edIneligibleLink: 'We recommend scheduling a teleconsultation or in-person visit with Dr. Adonis for a personalized evaluation.',
+        // Payment email
+        processingPayment: 'Processing... Please wait.',
+        paymentEmailSent: '✅ Notification sent. Redirecting to payment...',
+        paymentEmailError: '❌ Could not send notification. Please try again.', 
     },
     es: {
         title: 'Evaluación Médica de Tadalafil',
         subtitle: 'Por favor responda las siguientes preguntas para determinar si usted es candidato para Tadalafil (Cialis).',
-        fieldsRequired: 'Todas las preguntas son obligatorias',
+        fieldsRequired: 'Todos los campos son obligatorios',
+        stepPersonalInfo: 'Información Personal',
         stepQuestions1: 'Historial Médico (1–4)',
         stepQuestions2: 'Historial Médico (5–8)',
         stepReview: 'Revisar y Enviar',
+        // Personal info fields
+        dateOfBirth: 'Fecha de Nacimiento',
+        sex: 'Sexo Biológico',
+        sexMale: 'Masculino',
+        sexFemale: 'Femenino',
+        edQuestion: '¿Experimenta actualmente dificultad para lograr o mantener un rendimiento íntimo adecuado?',
         q1: '1. ¿Utiliza actualmente medicamentos que contengan nitratos? (Ejemplos: Nitroglicerina, Isosorbida, o drogas recreativas conocidas como "poppers")',
         q1Note: 'Nota: El uso conjunto puede causar una caída de presión arterial potencialmente mortal.',
         q2: '2. ¿Ha sufrido algún evento cardiovascular en los últimos 6 meses? (Infarto al miocardio, accidente cerebrovascular/Ictus o arritmias graves)',
@@ -84,27 +125,53 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         q8: '8. ¿Está tomando otros medicamentos para la disfunción eréctil o para la próstata (bloqueadores alfa)?',
         yes: 'Sí',
         no: 'No',
-        disqualifiedTitle: 'No Elegible para Compra Directa',
-        disqualifiedMsg: 'Lo sentimos, por razones de seguridad médica, usted no es candidato para la compra directa. Le recomendamos agendar una teleconsulta o consulta presencial con el Dr. Adonis.',
+        disqualifiedTitle: 'No Elegible para Prescripción en Línea',
+        disqualifiedMsg: 'Lo sentimos, por razones de seguridad médica, usted no es candidato para una prescripción en línea.',
+        disqualifiedLink: 'Le recomendamos agendar una teleconsulta o consulta presencial con el Dr. Adonis.',
+        scheduleLink: 'Agendar una consulta',
         reviewTitle: 'Revise sus respuestas',
         viewAnswers: 'Ver mis respuestas',
-        qualifiedTitle: '¡Usted es elegible!',
-        qualifiedMsg: 'Según sus respuestas, puede proceder a la compra de Tadalafil (Cialis).',
+        qualifiedTitle: 'Evaluación Aprobada ✓',
+        qualifiedMsg: 'Su evaluación ha sido revisada por el Dr. Adonis. Según sus respuestas, ha sido aprobado para proceder con la compra de Tadalafil (Cialis).',
         confirmLabel: 'Confirmo que toda la información suministrada es correcta. Soy consciente de que estos datos son la base para determinar mi aptitud para el uso de Tadalafil y asumo la responsabilidad derivada de cualquier omisión o inexactitud en la misma.',
         next: 'Siguiente',
         back: 'Atrás',
         submit: 'Enviar Evaluación',
         sending: 'Enviando...',
-        successTitle: '¡Evaluación Enviada Exitosamente!',
-        successMsg: 'El Dr. Adonis revisará su evaluación y se comunicará con usted pronto.',
-        paymentTitle: 'Proceder al Pago',
+        successTitle: '¡Evaluación Revisada Exitosamente!',
+        successMsg: 'El Dr. Adonis ha revisado su evaluación. Por favor complete sus datos de contacto y proceda al pago.',
+        paymentTitle: 'Información de Contacto y Pago',
+        paymentSubtitle: 'Por favor ingrese sus datos antes de proceder al pago.',
         payWithPaypal: 'Pagar con PayPal',
         payWithClover: 'Pagar con CLOVER',
-        snackSuccess: '✅ ¡Evaluación enviada exitosamente!',
-
+        snackSuccess: '✅ ¡Listo! Proceda con el método de pago.',
         snackError: '❌ Error al enviar. Intente de nuevo.',
         snackInvalid: 'Por favor responda todas las preguntas obligatorias.',
+        snackPaymentInvalid: 'Por favor complete todos los campos de contacto antes de proceder al pago.',
         langToggle: 'English',
+        // Payment contact fields
+        contactName: 'Nombre Completo',
+        contactAddress: 'Dirección',
+        contactPhone: 'Teléfono',
+        contactEmail: 'Correo Electrónico',
+        // Validation errors
+        errorPhoneDigits: 'El número de teléfono solo debe contener dígitos.',
+        errorEmailFormat: 'Ingrese un correo válido (ej. nombre@correo.com).',
+        errorRequired: 'Este campo es obligatorio.',
+        // Eligibility
+        ageIneligibleTitle: 'Requisito de Edad No Cumplido',
+        ageIneligibleMsg: 'Debe tener entre 21 y 80 años para ser elegible para una prescripción en línea.',
+        ageIneligibleLink: 'Le recomendamos agendar una consulta con el Dr. Adonis.',
+        sexIneligibleTitle: 'No Elegible',
+        sexIneligibleMsg: 'Tadalafil (Cialis) está indicado únicamente para pacientes masculinos.',
+        sexIneligibleLink: 'Le recomendamos agendar una consulta con el Dr. Adonis para una evaluación adecuada.',
+        edIneligibleTitle: 'Consulta Recomendada',
+        edIneligibleMsg: 'Según sus respuestas, una prescripción en línea no aplica en este momento.',
+        edIneligibleLink: 'Le recomendamos agendar una teleconsulta o visita presencial con el Dr. Adonis para una evaluación personalizada.',
+        // Payment email
+        processingPayment: 'Procesando... Por favor espere.',
+        paymentEmailSent: '✅ Notificación enviada. Redirigiendo al pago...',
+        paymentEmailError: '❌ No se pudo enviar la notificación. Intente de nuevo.',
     },
 };
 
@@ -116,6 +183,8 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         MaterialModule,
         FormsModule,
         ReactiveFormsModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
     ],
     templateUrl: './tadalafil-evaluation.component.html',
 })
@@ -125,13 +194,17 @@ export class TadalafilEvaluationComponent implements OnInit {
     submitted = false;
     confirmCheck = false;
 
+    personalInfoForm!: FormGroup;
     questionsForm1!: FormGroup;
     questionsForm2!: FormGroup;
+    paymentContactForm!: FormGroup;
+    maxDate = new Date(); // Cannot be born in the future
 
-    // EmailJS
-    private serviceId = 'YOUR_SERVICE_ID';
-    private templateId = 'YOUR_TEMPLATE_ID';
-    private publicKey = 'YOUR_PUBLIC_KEY';
+    // EmailJS (same config as vitamins form)
+    private serviceId = 'service_ldtmz6n';
+    private templateId = 'template_zbd3j1b';        // Admin notification (has auto-reply)
+    private clientTemplateId = 'template_lgv92j9';  // Client email
+    private publicKey = 'vsVqtrledUCs4qrDT';
 
     constructor(
         private fb: FormBuilder,
@@ -140,6 +213,12 @@ export class TadalafilEvaluationComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {
+        this.personalInfoForm = this.fb.group({
+            dateOfBirth: [null, Validators.required],
+            sex: ['', Validators.required],
+            edQuestion: ['', Validators.required],
+        });
+
         this.questionsForm1 = this.fb.group({
             q1: ['', Validators.required],
             q2: ['', Validators.required],
@@ -152,6 +231,13 @@ export class TadalafilEvaluationComponent implements OnInit {
             q6: ['', Validators.required],
             q7: ['', Validators.required],
             q8: ['', Validators.required],
+        });
+
+        this.paymentContactForm = this.fb.group({
+            contactName: ['', Validators.required],
+            contactAddress: ['', Validators.required],
+            contactPhone: ['', [Validators.required, Validators.pattern(/^[0-9]{7,15}$/)]],
+            contactEmail: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
         });
     }
 
@@ -172,6 +258,12 @@ export class TadalafilEvaluationComponent implements OnInit {
             : '/assets/images/flag/icon-flag-es.svg';
     }
 
+    get scheduleUrl(): string {
+        return this.lang === 'en'
+            ? 'https://dradonis.com/appointments/'
+            : 'https://dradonis.com/citas/';
+    }
+
     get otherFlagIcon(): string {
         return this.lang === 'en'
             ? '/assets/images/flag/icon-flag-es.svg'
@@ -180,6 +272,46 @@ export class TadalafilEvaluationComponent implements OnInit {
 
     toggleLanguage(): void {
         this.lang = this.lang === 'en' ? 'es' : 'en';
+    }
+
+    /** Calculate age from date of birth */
+    get calculatedAge(): number | null {
+        const dob = this.personalInfoForm?.get('dateOfBirth')?.value;
+        if (!dob) return null;
+        const today = new Date();
+        const birthDate = new Date(dob);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
+    /** Check if age is between 21 and 80 */
+    get isAgeEligible(): boolean {
+        const age = this.calculatedAge;
+        if (age === null) return true; // No date selected yet, don't block
+        return age >= 21 && age <= 80;
+    }
+
+    /** Check if ED question is answered "yes" */
+    get isEdEligible(): boolean {
+        const ed = this.personalInfoForm?.get('edQuestion')?.value;
+        if (!ed) return true; // Not answered yet, don't block
+        return ed === 'yes';
+    }
+
+    /** Check if biological sex is male */
+    get isSexEligible(): boolean {
+        const sex = this.personalInfoForm?.get('sex')?.value;
+        if (!sex) return true; // Not selected yet, don't block
+        return sex === 'male';
+    }
+
+    /** Overall payment eligibility: age 21-80, male, ED=yes, not medically disqualified */
+    get isPaymentEligible(): boolean {
+        return this.isAgeEligible && this.isSexEligible && this.isEdEligible && !this.isDisqualified;
     }
 
     /** Check if user is disqualified based on answers to Q1, Q2, Q3, Q5, Q7 */
@@ -192,6 +324,21 @@ export class TadalafilEvaluationComponent implements OnInit {
         return q1 === 'yes' || q2 === 'yes' || q3 === 'yes' || q5 === 'yes' || q7 === 'yes';
     }
 
+    /** Check if a specific question's answer is disqualifying (for review highlighting) */
+    isAnswerDisqualifying(question: string): boolean {
+        switch (question) {
+            case 'dob': return !this.isAgeEligible;
+            case 'sex': return !this.isSexEligible;
+            case 'ed': return !this.isEdEligible;
+            case 'q1': return this.questionsForm1.get('q1')?.value === 'yes';
+            case 'q2': return this.questionsForm1.get('q2')?.value === 'yes';
+            case 'q3': return this.questionsForm1.get('q3')?.value === 'yes';
+            case 'q5': return this.questionsForm2.get('q5')?.value === 'yes';
+            case 'q7': return this.questionsForm2.get('q7')?.value === 'yes';
+            default: return false;
+        }
+    }
+
     /** Helper to get translated answer */
     answerLabel(value: string, questionKey?: string): string {
         if (!value) return '—';
@@ -200,77 +347,137 @@ export class TadalafilEvaluationComponent implements OnInit {
             if (value === 'opt2') return this.t('q4Opt2');
             if (value === 'opt3') return this.t('q4Opt3');
         }
+        if (questionKey === 'sex') {
+            return value === 'male' ? this.t('sexMale') : this.t('sexFemale');
+        }
         return value === 'yes' ? this.t('yes') : this.t('no');
     }
 
+    /** Format date for display */
+    formatDate(date: Date | null): string {
+        if (!date) return '—';
+        return date.toLocaleDateString(this.lang === 'en' ? 'en-US' : 'es-ES', {
+            year: 'numeric', month: 'long', day: 'numeric'
+        });
+    }
+
     onSubmit(): void {
+        this.personalInfoForm.markAllAsTouched();
         this.questionsForm1.markAllAsTouched();
         this.questionsForm2.markAllAsTouched();
 
-        if (this.questionsForm1.invalid || this.questionsForm2.invalid) {
+        if (this.personalInfoForm.invalid || this.questionsForm1.invalid || this.questionsForm2.invalid) {
             this.snackBar.open(this.t('snackInvalid'), 'OK', { duration: 4000 });
             return;
         }
 
-        this.isSubmitting = true;
+        // No email sent here — the admin + client notification is sent when clicking "Pay with Clover"
+        this.submitted = true;
+        this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
+    }
 
+    onPayPal(): void {
+        if (!this.validatePaymentContact()) return;
+        window.open('https://www.paypal.com', '_blank');
+    }
+
+    isProcessingPayment = false;
+
+    onClover(): void {
+        if (!this.validatePaymentContact()) return;
+
+        this.isProcessingPayment = true;
+        this.snackBar.open(this.t('processingPayment'), '', { duration: 10000 });
+
+        const contact = this.paymentContactForm.value;
+        const personalInfo = this.personalInfoForm.value;
         const answers = {
             ...this.questionsForm1.value,
             ...this.questionsForm2.value,
         };
 
-        const templateParams = {
-            to_email: 'kevin',
-            form_type: 'Tadalafil (Cialis) Evaluation',
-            q1_nitrates: this.answerLabel(answers.q1),
-            q2_cardiovascular: this.answerLabel(answers.q2),
-            q3_heart_failure: this.answerLabel(answers.q3),
-            q4_blood_pressure: this.answerLabel(answers.q4, 'q4'),
-            q5_vision_loss: this.answerLabel(answers.q5),
-            q6_peyronie: this.answerLabel(answers.q6),
-            q7_kidney_liver: this.answerLabel(answers.q7),
-            q8_other_meds: this.answerLabel(answers.q8),
-            is_disqualified: this.isDisqualified ? 'YES — Not eligible' : 'NO — Eligible',
-            language: this.lang === 'en' ? 'English' : 'Spanish',
-        };
+        // Build admin message with all patient info
+        const adminMessage = `TADALAFIL (CIALIS) - PAYMENT INITIATED\n\n`
+            + `Patient ${contact.contactName} has completed the Tadalafil (Cialis) medical evaluation and PASSED.\n`
+            + `They have been redirected to Clover for payment.\n`
+            + `Please verify the payment in Clover and proceed to contact the patient to coordinate delivery.\n\n`
+            + `--- Patient Information ---\n`
+            + `Name: ${contact.contactName}\n`
+            + `Email: ${contact.contactEmail}\n`
+            + `Phone: ${contact.contactPhone}\n`
+            + `Address: ${contact.contactAddress}\n`
+            + `Date of Birth: ${this.formatDate(personalInfo.dateOfBirth)}\n`
+            + `Sex: ${this.answerLabel(personalInfo.sex, 'sex')}\n`
+            + `ED Question: ${this.answerLabel(personalInfo.edQuestion)}\n\n`
+            + `--- Medical Evaluation ---\n`
+            + `Q1 Nitrates: ${this.answerLabel(answers.q1)}\n`
+            + `Q2 Cardiovascular: ${this.answerLabel(answers.q2)}\n`
+            + `Q3 Heart Failure: ${this.answerLabel(answers.q3)}\n`
+            + `Q4 Blood Pressure: ${this.answerLabel(answers.q4, 'q4')}\n`
+            + `Q5 Vision Loss: ${this.answerLabel(answers.q5)}\n`
+            + `Q6 Peyronie: ${this.answerLabel(answers.q6)}\n`
+            + `Q7 Kidney/Liver: ${this.answerLabel(answers.q7)}\n`
+            + `Q8 Other Meds: ${this.answerLabel(answers.q8)}\n`
+            + `Result: ELIGIBLE\n`
+            + `Language: ${this.lang === 'en' ? 'English' : 'Spanish'}`;
 
-        if (this.serviceId === 'YOUR_SERVICE_ID') {
+        const clientMessage = this.lang === 'en'
+            ? `Dear ${contact.contactName},\n\nYour medical evaluation for Tadalafil (Cialis) has been reviewed and approved by Dr. Adonis. You are eligible for the use of this medication.\n\nOnce your payment is confirmed through Clover, we will contact you to coordinate the delivery of your prescription.\n\nPlease feel free to contact us at 305-204-7816 if you have any questions.\n\nBest regards,\nDr. Adonis Medical Team`
+            : `Estimado/a ${contact.contactName},\n\nSu evaluación médica para Tadalafil (Cialis) ha sido revisada y aprobada por el Dr. Adonis. Usted es apto/a para el uso de este medicamento.\n\nUna vez que su pago sea confirmado a través de Clover, nos comunicaremos con usted para coordinar la entrega de su prescripción.\n\nPor favor, no dude en contactarnos al 305-204-7816 si tiene alguna pregunta.\n\nAtentamente,\nEquipo Médico Dr. Adonis`;
 
-            setTimeout(() => {
+        const clientSubject = this.lang === 'en'
+            ? 'Your Tadalafil (Cialis) Evaluation Has Been Approved'
+            : 'Su Evaluación de Tadalafil (Cialis) Ha Sido Aprobada';
+
+        // Email 1: Admin notification (using CLIENT template which is proven to work)
+        const adminEmail = emailjs.send(this.serviceId, this.clientTemplateId, {
+            client_email: 'solangie@dradonis.com,maxia@dradonis.com',
+            client_subject: 'Tadalafil (Cialis) – Payment Initiated – ' + contact.contactName,
+            client_message: adminMessage,
+        }, this.publicKey);
+
+        // Email 2: Client confirmation
+        const clientEmail = emailjs.send(this.serviceId, this.clientTemplateId, {
+            client_email: contact.contactEmail,
+            client_subject: clientSubject,
+            client_message: clientMessage,
+        }, this.publicKey);
+
+        Promise.all([adminEmail, clientEmail])
+            .then(() => {
                 this.ngZone.run(() => {
-                    this.isSubmitting = false;
-                    this.submitted = true;
-                    this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
+                    this.isProcessingPayment = false;
+                    this.snackBar.open(this.t('paymentEmailSent'), 'OK', { duration: 4000 });
+                    window.open('https://link.clover.com/urlshortener/4wbzLj', '_blank');
                 });
-            }, 1000);
-        } else {
-            emailjs.send(this.serviceId, this.templateId, templateParams, this.publicKey)
-                .then(() => {
-                    this.ngZone.run(() => {
-                        this.isSubmitting = false;
-                        this.submitted = true;
-                        this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
-                    });
-                })
-                .catch((err) => {
-                    this.ngZone.run(() => {
-                        this.isSubmitting = false;
-                        console.error('Email send failed:', err);
-                        this.snackBar.open(this.t('snackError'), 'OK', { duration: 5000 });
-                    });
+            })
+            .catch((err) => {
+                this.ngZone.run(() => {
+                    this.isProcessingPayment = false;
+                    console.error('Payment email send failed:', err);
+                    this.snackBar.open(this.t('paymentEmailError'), 'OK', { duration: 5000 });
                 });
+            });
+    }
+
+    /** Strip non-numeric characters from phone input */
+    onPhoneInput(event: Event): void {
+        const input = event.target as HTMLInputElement;
+        input.value = input.value.replace(/[^0-9]/g, '');
+        this.paymentContactForm.get('contactPhone')?.setValue(input.value, { emitEvent: false });
+    }
+
+    /** Whether the payment contact form is fully valid */
+    get isPaymentContactValid(): boolean {
+        return this.paymentContactForm.valid;
+    }
+
+    private validatePaymentContact(): boolean {
+        this.paymentContactForm.markAllAsTouched();
+        if (this.paymentContactForm.invalid) {
+            this.snackBar.open(this.t('snackPaymentInvalid'), 'OK', { duration: 4000 });
+            return false;
         }
-    }
-
-    onPayPal(): void {
-        // TODO: Redirect to PayPal payment link
-        console.log('Redirecting to PayPal...');
-        window.open('https://www.paypal.com', '_blank');
-    }
-
-    onClover(): void {
-        // TODO: Redirect to Clover payment link
-        console.log('Redirecting to Clover...');
-        window.open('https://link.clover.com/urlshortener/4wbzLj', '_blank');
+        return true;
     }
 }
