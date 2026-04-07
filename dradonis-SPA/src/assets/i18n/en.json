@@ -3,10 +3,12 @@
     "phone": "(305)204-7816",
     "nav": {
       "shop": "SHOP",
+      "home": "HOME",
       "services": "SERVICES",
       "protocols": "PROTOCOLS",
       "videos": "VIDEOS & MORE",
-      "contact": "CONTACT"
+      "contact": "CONTACT",
+      "meetDoctor": "MEET YOUR DOCTOR"
     },
     "cta": "MAKE AN APPOINTMENT",
     "language": "ESPAÑOL"
@@ -28,10 +30,38 @@
     "successMessage": "Thank you for subscribing!",
     "errorMessage": "Please enter a valid email address"
   },
+  "servicesPromo": {
+    "title": "Online Medical Services",
+    "subtitle": "Quick, private medical evaluations from the comfort of your home",
+    "tadalafil": {
+      "title": "Tadalafil (Cialis®) Evaluation",
+      "description": "Complete a confidential medical evaluation reviewed by Dr. Adonis. Get your prescription quickly and discreetly.",
+      "btn": "START EVALUATION"
+    },
+    "vitamins": {
+      "title": "Personalized Vitamins Prescription",
+      "description": "Get a customized vitamin and supplement plan tailored to your specific health needs by Dr. Adonis.",
+      "btn": "GET YOUR PRESCRIPTION"
+    }
+  },
   "bookSection": {
-    "title": "Modern Medicine Times",
+    "title": "Modern Medicine for Modern Times",
     "subtitle": "Discover the principles of Functional Medicine",
-    "btnBuy": "BUY ON AMAZON"
+    "btnBuy": "BUY ON AMAZON",
+    "bookUrl": "https://www.amazon.com/Modern-Medicine-Times-Functional-Handbook-ebook/dp/B0146UK2FM?ref_=ast_author_dp&th=1&psc=1"
+  },
+  "meetDoctor": {
+    "eyebrow": "Get to Know Your Doctor",
+    "title": "Dr. Adonis Maiquez, MD",
+    "specialty": "Functional Medicine Doctor",
+    "paragraph1": "Dr. Adonis uses a functional medicine approach to identify the root causes of your medical issues, from cognitive decline, weight gain, hormone imbalance, chronic fatigue, to auto-immune or chronic degenerative diseases or if you simply want to prevent a disease that runs in your family or even recover from a health issue that has already happened like a stroke or heart attack or Alzheimer's disease.",
+    "paragraph2": "Most health issues are multi-factorial, meaning it goes beyond genetics, encompassing life-style, environmental, metabolic pathways, vitamin, hormone and toxin levels. Many biochemical processes affect disease and aging, including oxidation, inflammation, detoxification and others. Only when all of those variables are corrected in a unified program can prevention, healing or regeneration happen. Dr. Adonis believes that we need a balance of our body, mind and spirit to accomplish a healthy and fulfilled life.",
+    "paragraph3": "Dr. Adonis is dual-certified in Functional Medicine and Anti-Aging Regenerative Medicine. He completed his postgraduate and Fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida in Tampa and he is the author of \"Modern Medicine for Modern Times.\"",
+    "highlight": "Our Medical Director, Adonis Maiquez, MD, trained as a neurosurgeon, is a member of the American Academy of Pain Management and the World Institute of Pain.",
+    "badge1": "Functional Medicine",
+    "badge2": "Anti-Aging & Regenerative",
+    "bookPromo": "Dr. Adonis is the author of \"Modern Medicine for Modern Times: The Functional Medicine Handbook to Prevent and Treat Diseases from Their Origin\", a comprehensive guide to understanding and applying functional medicine principles. Available now on Amazon.",
+    "btnBuyBook": "GET THE BOOK ON AMAZON"
   },
   "vagustim": {
     "title": "TRANSCUTANEOUS VAGUS NERVE STIMULATOR",
@@ -61,5 +91,71 @@
       "iron": "Iron Liquid: Highly bioavailable liquid iron for oxygen transport. Vegetarian, hypoallergenic, great-tasting.",
       "probiomax": "ProbioMax® Sb DF: Gut balance, immunity, and regularity. With 4 probiotic strains and S. boulardii."
     }
+  },
+  "services": {
+    "eyebrow": "Dr. Adonis Maiquez, MD",
+    "heroTitle": "Our Services",
+    "heroSubtitle": "Comprehensive, personalized healthcare solutions designed to treat the root cause — not just the symptoms.",
+    "btnAppointment": "MAKE AN APPOINTMENT",
+    "functional": {
+      "title": "Functional Medicine",
+      "p1": "Functional medicine follows an approach fairly different from conventional medicinal practices, as we know them. This type of medicine recognizes each individual as being unique and, therefore, disproves the theory of offering standard solutions in targeting health conditions.",
+      "p2": "Dr. Adonis, a firm believer in functional medicine and its place amongst potent therapies, is a member of the Institute for Functional Medicine, the most prestigious and recognized organization for functional medicine in the country. He has an in-depth understanding of its principles and their application. He is not only a proponent of functional medicine, but is also an able ambassador of its benefits. He has empowered thousands of patients to take ownership of their health and set them on their journey to wellness.",
+      "p3": "If a meaningful and healthy life filled with better understanding of your body and mind is your calling, ensure you get in touch with our clinic today and book yourself an appointment with the best version of you.",
+      "videoCaption": "Watch: What is Functional Medicine? — Dr. Adonis Maiquez, MD"
+    },
+    "hormone": {
+      "title": "Bio-Identical Hormone Therapy",
+      "subtitle": "Why Choose BioIdentical Hormone Replacement Therapy?",
+      "p1": "Think hormonal changes are just a woman's concern? Think again. Menopause in women and its counterpart, andropause or late-onset hypogonadism in men, are natural stages of life that can significantly affect your well-being. But there's good news!",
+      "p2": "Dr. Adonis, a renowned functional medicine specialist in Miami, FL, is here to guide you seamlessly through these transitions. His expertise in bio-identical hormone therapy offers a holistic and highly effective approach to rebalance your body and rejuvenate your life.",
+      "p3": "Whether you're near or far, our personalized in-person and virtual consultations are your gateway to a harmonious and vibrant lifestyle. Why wait to feel your best?",
+      "btn": "BOOK YOUR CONSULTATION TODAY",
+      "feature1": "In-Person & Virtual Consultations",
+      "feature2": "Holistic Approach",
+      "feature3": "Men & Women"
+    },
+    "weight": {
+      "title": "Personalized Weight Loss",
+      "promoBadge": "SAVE 30%",
+      "promoText": "Our Personalized, Functional Medicine-Based Weight Loss Program is Now Just $976 — Save 30% Off the Regular Price of $1,395! This comprehensive package includes a choice of an in-person or virtual initial consultation, a custom-designed weight loss plan, a three-month supply of Semaglutide, fat burner shots, and specially formulated vitamins.",
+      "promoCode": "Click here and use code NYS30 to claim your discount!",
+      "p1": "At the core of our approach, Dr. Adonis understands that successful weight loss is a journey unique to each individual. He's helped thousands navigate this path, addressing weight-related challenges through a holistic methodology that combines dietary guidance, customized physical activity programs, and behavioral strategies. Our philosophy moves beyond the temporary fixes of fad diets and crash diets, focusing instead on sustainable, life-changing results.",
+      "p2": "The key to our success lies in recognizing that no two people are alike — in their metabolism, body composition, or personal health needs. That's why we don't believe in a one-size-fits-all solution. Our process begins with a comprehensive health analysis, leading to a deep understanding of your body and its specific requirements. This insight forms the foundation of your personalized weight loss plan, crafted by Dr. Adonis to align perfectly with your individual needs and preferences.",
+      "p3": "If you're ready to embark on a journey towards a healthier, more vibrant you, we're here to guide every step of the way. Our personalized weight loss program is more than a plan; it's a partnership in transforming your life.",
+      "readyTitle": "Ready to Begin Your Transformation?",
+      "readyText": "Take the first step today. Contact us to schedule your appointment and start your journey with a team committed to your success.",
+      "btn": "BEGIN YOUR WEIGHT LOSS JOURNEY TODAY",
+      "feature1": "Semaglutide Included",
+      "feature2": "Custom Weight Loss Plan",
+      "feature3": "Fat Burner Shots",
+      "feature4": "Specialized Vitamins"
+    },
+    "bottomCta": {
+      "title": "Ready to Transform Your Health?",
+      "subtitle": "Schedule your consultation today and take the first step toward a healthier, more vibrant you."
+    }
+  },
+  "videos": {
+    "eyebrow": "Dr. Adonis Maiquez, MD",
+    "heroTitle": "Videos & More",
+    "heroSubtitle": "Educational content on Functional Medicine, hormones, weight loss, and wellness from Dr. Adonis.",
+    "subscribeCta": "SUBSCRIBE ON YOUTUBE",
+    "gridTitle": "Most Popular Videos",
+    "list": {
+      "v1": "What is Functional Medicine",
+      "v2": "What is Functional Medicine? (Short)",
+      "v3": "Neuroendocrine Theory of Aging",
+      "v4": "The ASIA Syndrome",
+      "v5": "Neuroendocrine Theory of Aging (Spanish)",
+      "v6": "Book: Modern Medicine for Modern Times",
+      "v7": "9 Pillars of Fibromyalgia",
+      "v8": "The 5 Hormones in Menopause",
+      "v9": "Fibromyalgia / Chronic Fatigue / Adrenal Exhaustion",
+      "v10": "Lab Tests in Functional Medicine"
+    },
+    "reviewsTitle": "What Our Patients Say",
+    "reviewsSubtitle": "See what patients are saying about their experience with Dr. Adonis and our clinic on Google.",
+    "reviewsCta": "SEE ALL REVIEWS ON GOOGLE"
   }
 }

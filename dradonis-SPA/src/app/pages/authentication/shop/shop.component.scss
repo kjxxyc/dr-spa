@@ -18,129 +18,10 @@ $background-light: #F7FAFC;
 }
 
 // ===========================
-// HEADER (same as landing)
-// ===========================
-.landing-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    z-index: 1000;
-    padding: 0.5rem 2rem;
-
-    .header-content {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1.5rem;
-    }
-
-    .phone-number {
-        font-size: 14px;
-        font-weight: 600;
-        white-space: nowrap;
-
-        a {
-            color: $text-dark;
-            text-decoration: none;
-            transition: color 0.3s ease;
-
-            &:hover {
-                color: $primary-green;
-            }
-        }
-    }
-
-    .logo-container {
-        .logo {
-            height: 50px;
-            width: auto;
-        }
-    }
-
-    .navigation {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        flex: 1;
-        justify-content: center;
-
-        .nav-link {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            text-decoration: none;
-            color: $text-dark;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease;
-
-            mat-icon {
-                font-size: 18px;
-                width: 18px;
-                height: 18px;
-                color: $primary-green;
-                transition: color 0.3s ease, transform 0.3s ease;
-            }
-
-            &:hover,
-            &.active-link {
-                color: $primary-green;
-
-                mat-icon {
-                    transform: scale(1.1);
-                }
-            }
-        }
-    }
-
-    .cta-button {
-        background: $primary-green;
-        color: white;
-        border-radius: 6px;
-        padding: 0.6rem 1.5rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 12px;
-        letter-spacing: 0.5px;
-        box-shadow: 0 2px 8px rgba(129, 175, 90, 0.3);
-        transition: all 0.3s ease;
-
-        &:hover {
-            background: $primary-green-dark;
-            box-shadow: 0 4px 12px rgba(129, 175, 90, 0.4);
-            transform: translateY(-1px);
-        }
-    }
-
-    .language-toggle {
-        color: $text-medium;
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
-        padding: 0.5rem 1rem;
-        min-width: 80px;
-        transition: all 0.3s ease;
-
-        &:hover {
-            background: $background-light;
-            color: $primary-green;
-        }
-    }
-}
-
-// ===========================
 // SHOP SECTION
 // ===========================
 .fs-shop-section {
-    padding: 100px 2rem 80px;
+    padding: 30px 2rem 80px;
     max-width: 1400px;
     margin: 0 auto;
 
@@ -444,14 +325,8 @@ $background-light: #F7FAFC;
 // RESPONSIVE
 // ===========================
 @media (max-width: 768px) {
-    .landing-header {
-        .navigation {
-            display: none;
-        }
-    }
-
     .fs-shop-section {
-        padding: 90px 1.5rem 60px;
+        padding: 20px 1.5rem 60px;
 
         .shop-title {
             font-size: 32px;

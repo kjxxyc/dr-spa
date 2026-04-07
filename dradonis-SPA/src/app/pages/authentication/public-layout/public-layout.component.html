@@ -1,0 +1,107 @@
+<div class="public-layout">
+  <!-- Header / Navigation -->
+  <header class="landing-header">
+    <div class="header-content">
+      <!-- Phone Number -->
+      <div class="phone-number">
+        <a href="tel:+13052047816">{{ 'header.phone' | translate }}</a>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <a routerLink="/landing">
+          <img src="assets/images/logos/Logo_720x192.jpg" alt="Dr. Adonis - Functional & Regenerative Medicine"
+            class="logo">
+        </a>
+      </div>
+
+      <!-- Navigation Menu (desktop only) -->
+      <nav class="navigation desktop-nav">
+        <a routerLink="/landing/meet-doctor" class="nav-link" routerLinkActive="active-link">
+          <mat-icon>person</mat-icon>
+          {{ 'header.nav.meetDoctor' | translate }}
+        </a>
+        <a routerLink="/landing/shop" class="nav-link" routerLinkActive="active-link">
+          <mat-icon>shopping_bag</mat-icon>
+          {{ 'header.nav.shop' | translate }}
+        </a>
+        <a routerLink="/landing/services" class="nav-link" routerLinkActive="active-link">
+          <mat-icon>medical_services</mat-icon>
+          {{ 'header.nav.services' | translate }}
+        </a>
+        <a href="#protocols" class="nav-link">
+          <mat-icon>assignment</mat-icon>
+          {{ 'header.nav.protocols' | translate }}
+        </a>
+        <a routerLink="/landing/videos" class="nav-link" routerLinkActive="active-link">
+          <mat-icon>play_circle</mat-icon>
+          {{ 'header.nav.videos' | translate }}
+        </a>
+      </nav>
+
+      <!-- CTA Button (desktop only) -->
+      <button mat-raised-button color="primary" class="cta-button desktop-only">
+        {{ 'header.cta' | translate }}
+      </button>
+
+      <!-- Language Toggle (desktop only) -->
+      <button mat-button class="language-toggle desktop-only" (click)="toggleLanguage()">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <img
+            [src]="currentLang === 'en' ? '/assets/images/flag/icon-flag-es.svg' : '/assets/images/flag/icon-flag-en.svg'"
+            width="22" height="16" alt="flag" style="border-radius: 2px;" />
+          {{ 'header.language' | translate }}
+        </div>
+      </button>
+
+      <!-- Hamburger Menu Button (mobile/tablet only) -->
+      <button mat-icon-button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+        <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" [class.open]="menuOpen">
+      <nav class="mobile-nav-links">
+        <a routerLink="/landing/meet-doctor" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+          <mat-icon>person</mat-icon>
+          {{ 'header.nav.meetDoctor' | translate }}
+        </a>
+        <a routerLink="/landing/shop" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+          <mat-icon>shopping_bag</mat-icon>
+          {{ 'header.nav.shop' | translate }}
+        </a>
+        <a routerLink="/landing/services" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+          <mat-icon>medical_services</mat-icon>
+          {{ 'header.nav.services' | translate }}
+        </a>
+        <a href="#protocols" class="mobile-nav-link" (click)="toggleMenu()">
+          <mat-icon>assignment</mat-icon>
+          {{ 'header.nav.protocols' | translate }}
+        </a>
+        <a routerLink="/landing/videos" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+          <mat-icon>play_circle</mat-icon>
+          {{ 'header.nav.videos' | translate }}
+        </a>
+      </nav>
+
+      <button mat-raised-button color="primary" class="mobile-cta-button">
+        {{ 'header.cta' | translate }}
+      </button>
+
+      <button mat-button class="mobile-language-toggle" (click)="toggleLanguage()">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <img
+            [src]="currentLang === 'en' ? '/assets/images/flag/icon-flag-es.svg' : '/assets/images/flag/icon-flag-en.svg'"
+            width="22" height="16" alt="flag" style="border-radius: 2px;" />
+          {{ 'header.language' | translate }}
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Content (child routes render here) -->
+  <main class="page-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

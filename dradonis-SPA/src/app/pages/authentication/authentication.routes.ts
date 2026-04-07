@@ -3,32 +3,66 @@ import { Routes } from '@angular/router';
 import { AppErrorComponent } from './error/error.component';
 import { AppSideLoginComponent } from './side-login/side-login.component';
 import { AppSideRegisterComponent } from './side-register/side-register.component';
-import { LandingComponent } from './landing/landing.component';
+import { PublicLayoutComponent } from './public-layout/public-layout.component';
 
 export const AuthenticationRoutes: Routes = [
   {
     path: '',
     children: [
+      // Public pages with shared header layout
       {
         path: '',
-        component: LandingComponent,
+        component: PublicLayoutComponent,
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./landing/landing.component').then(
+                (m) => m.LandingComponent
+              ),
+          },
+          {
+            path: 'landing',
+            loadComponent: () =>
+              import('./landing/landing.component').then(
+                (m) => m.LandingComponent
+              ),
+          },
+          {
+            path: 'shop',
+            loadComponent: () =>
+              import('./shop/shop.component').then(
+                (m) => m.ShopComponent
+              ),
+          },
+          {
+            path: 'meet-doctor',
+            loadComponent: () =>
+              import('./meet-doctor/meet-doctor.component').then(
+                (m) => m.MeetDoctorComponent
+              ),
+          },
+          {
+            path: 'services',
+            loadComponent: () =>
+              import('./services/services.component').then(
+                (m) => m.ServicesComponent
+              ),
+          },
+          {
+            path: 'videos',
+            loadComponent: () =>
+              import('./videos/videos.component').then(
+                (m) => m.VideosComponent
+              ),
+          },
+        ],
       },
-      {
-        path: 'landing',
-        component: LandingComponent,
-      },
-      {
-        path: 'shop',
-        loadComponent: () =>
-          import('./shop/shop.component').then(
-            (m) => m.ShopComponent
-          ),
-      },
+      // Standalone pages (no shared header)
       {
         path: 'error',
         component: AppErrorComponent,
       },
-
       {
         path: 'login',
         component: AppSideLoginComponent,
@@ -54,4 +88,3 @@ export const AuthenticationRoutes: Routes = [
     ],
   },
 ];
-

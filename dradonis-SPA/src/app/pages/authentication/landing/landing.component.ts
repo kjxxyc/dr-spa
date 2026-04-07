@@ -22,20 +22,10 @@ import { NewsletterDialogComponent } from './newsletter-dialog.component';
     styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent {
-    currentLang: string = 'en';
-
     constructor(
         private translate: TranslateService,
         private dialog: MatDialog
-    ) {
-        this.translate.setDefaultLang('en');
-        this.translate.use('en');
-    }
-
-    toggleLanguage() {
-        this.currentLang = this.currentLang === 'en' ? 'es' : 'en';
-        this.translate.use(this.currentLang);
-    }
+    ) { }
 
     openNewsletterDialog() {
         const dialogRef = this.dialog.open(NewsletterDialogComponent, {

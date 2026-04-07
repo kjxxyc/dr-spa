@@ -1,60 +1,9 @@
 <div class="landing-container">
-  <!-- Header / Navigation -->
-  <header class="landing-header">
-    <div class="header-content">
-      <!-- Phone Number -->
-      <div class="phone-number">
-        <a href="tel:+13052047816">{{ 'header.phone' | translate }}</a>
-      </div>
-
-      <!-- Logo -->
-      <div class="logo-container">
-        <img src="assets/images/logos/Logo_720x192.jpg" alt="Dr. Adonis - Functional & Regenerative Medicine"
-          class="logo">
-      </div>
-
-      <!-- Navigation Menu -->
-      <nav class="navigation">
-        <a routerLink="/landing/shop" class="nav-link">
-          <mat-icon>shopping_bag</mat-icon>
-          {{ 'header.nav.shop' | translate }}
-        </a>
-        <a href="#services" class="nav-link">
-          <mat-icon>medical_services</mat-icon>
-          {{ 'header.nav.services' | translate }}
-        </a>
-        <a href="#protocols" class="nav-link">
-          <mat-icon>assignment</mat-icon>
-          {{ 'header.nav.protocols' | translate }}
-        </a>
-        <a href="#videos" class="nav-link">
-          <mat-icon>play_circle</mat-icon>
-          {{ 'header.nav.videos' | translate }}
-        </a>
-      </nav>
-
-      <!-- CTA Button -->
-      <button mat-raised-button color="primary" class="cta-button">
-        {{ 'header.cta' | translate }}
-      </button>
-
-      <!-- Language Toggle -->
-      <button mat-button class="language-toggle" (click)="toggleLanguage()">
-        <div style="display: flex; align-items: center; gap: 6px;">
-          <img
-            [src]="currentLang === 'en' ? '/assets/images/flag/icon-flag-es.svg' : '/assets/images/flag/icon-flag-en.svg'"
-            width="22" height="16" alt="flag" style="border-radius: 2px;" />
-          {{ 'header.language' | translate }}
-        </div>
-      </button>
-    </div>
-  </header>
-
 
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-background">
-      <img src="assets/images/backgrounds/home-main-img.jpg" alt="Dr. Adonis Maiquez" class="hero-image">
+      <img src="assets/images/backgrounds/home-main-img.png" alt="Dr. Adonis Maiquez" class="hero-image">
     </div>
 
     <div class="hero-content">
@@ -73,19 +22,52 @@
 
       <!-- CTA Buttons -->
       <div class="hero-buttons">
-        <a href="https://www.amazon.com/gp/product/B0146UK2FM/ref=dbs_a_def_rwt_bibl_vppi_i0" target="_blank"
+        <button mat-raised-button color="primary" class="primary-btn" (click)="openNewsletterDialog()">
+          <mat-icon>email</mat-icon>
+          {{ 'hero.btnSubscribe' | translate }}
+        </button>
+        <a [href]="'bookSection.bookUrl' | translate" target="_blank"
           rel="noopener noreferrer" mat-raised-button color="primary" class="primary-btn">
           <mat-icon>menu_book</mat-icon>
           {{ 'hero.btnBook' | translate }}
         </a>
-        <button mat-stroked-button class="secondary-btn" (click)="openNewsletterDialog()">
-          <mat-icon>email</mat-icon>
-          {{ 'hero.btnSubscribe' | translate }}
-        </button>
       </div>
     </div>
   </section>
 
+  <!-- Services Promo Section -->
+  <section class="services-promo-section" id="services">
+    <h2 class="services-promo-title">{{ 'servicesPromo.title' | translate }}</h2>
+    <p class="services-promo-subtitle">{{ 'servicesPromo.subtitle' | translate }}</p>
+
+    <div class="services-promo-grid">
+      <!-- Tadalafil Card -->
+      <div class="service-promo-card tadalafil-card">
+        <div class="service-promo-icon">
+          <mat-icon>medication</mat-icon>
+        </div>
+        <h3>{{ 'servicesPromo.tadalafil.title' | translate }}</h3>
+        <p>{{ 'servicesPromo.tadalafil.description' | translate }}</p>
+        <a routerLink="/landing/tadalafil-evaluation" class="service-promo-btn">
+          <mat-icon>arrow_forward</mat-icon>
+          {{ 'servicesPromo.tadalafil.btn' | translate }}
+        </a>
+      </div>
+
+      <!-- Vitamins Card -->
+      <div class="service-promo-card vitamins-card">
+        <div class="service-promo-icon">
+          <mat-icon>local_pharmacy</mat-icon>
+        </div>
+        <h3>{{ 'servicesPromo.vitamins.title' | translate }}</h3>
+        <p>{{ 'servicesPromo.vitamins.description' | translate }}</p>
+        <a routerLink="/landing/vitamins-prescription" class="service-promo-btn">
+          <mat-icon>arrow_forward</mat-icon>
+          {{ 'servicesPromo.vitamins.btn' | translate }}
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Book Section -->
   <section class="book-section" id="book">
@@ -96,7 +78,7 @@
       <div class="book-content">
         <h2>{{ 'bookSection.title' | translate }}</h2>
         <p>{{ 'bookSection.subtitle' | translate }}</p>
-        <a href="https://www.amazon.com/gp/product/B0146UK2FM/ref=dbs_a_def_rwt_bibl_vppi_i0" target="_blank"
+        <a [href]="'bookSection.bookUrl' | translate" target="_blank"
           rel="noopener noreferrer" mat-raised-button color="primary" class="book-btn">
           <mat-icon>shopping_cart</mat-icon>
           {{ 'bookSection.btnBuy' | translate }}

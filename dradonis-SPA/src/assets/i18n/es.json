@@ -3,10 +3,12 @@
     "phone": "(305)204-7816",
     "nav": {
       "shop": "TIENDA",
+      "home": "INICIO",
       "services": "SERVICIOS",
       "protocols": "PROTOCOLOS",
       "videos": "VIDEOS Y MÁS",
-      "contact": "CONTACTO"
+      "contact": "CONTACTO",
+      "meetDoctor": "CONOCE A TU DOCTOR"
     },
     "cta": "HAGA UNA CITA",
     "language": "ENGLISH"
@@ -28,10 +30,38 @@
     "successMessage": "¡Gracias por suscribirse!",
     "errorMessage": "Por favor ingrese un correo electrónico válido"
   },
+  "servicesPromo": {
+    "title": "Servicios Médicos en Línea",
+    "subtitle": "Evaluaciones médicas rápidas y privadas desde la comodidad de tu hogar",
+    "tadalafil": {
+      "title": "Evaluación de Tadalafil (Cialis®)",
+      "description": "Complete una evaluación médica confidencial revisada por el Dr. Adonis. Obtenga su prescripción de forma rápida y discreta.",
+      "btn": "INICIAR EVALUACIÓN"
+    },
+    "vitamins": {
+      "title": "Prescripción Personalizada de Vitaminas",
+      "description": "Obtenga un plan personalizado de vitaminas y suplementos adaptado a sus necesidades de salud por el Dr. Adonis.",
+      "btn": "OBTENER PRESCRIPCIÓN"
+    }
+  },
   "bookSection": {
-    "title": "Tiempos de Medicina Moderna",
+    "title": "Medicina Moderna para Tiempos Modernos",
     "subtitle": "Descubre los principios de la Medicina Funcional",
-    "btnBuy": "COMPRAR EN AMAZON"
+    "btnBuy": "COMPRAR EN AMAZON",
+    "bookUrl": "https://www.amazon.com/Medicina-Moderna-para-Tiempos-Modernos-ebook/dp/B0159BQAU8?ref_=ast_author_dp&th=1&psc=1"
+  },
+  "meetDoctor": {
+    "eyebrow": "Conoce a Tu Doctor",
+    "title": "Dr. Adonis Maiquez, MD",
+    "specialty": "Médico de Medicina Funcional",
+    "paragraph1": "El Dr. Adonis utiliza un enfoque de medicina funcional para identificar las causas raíz de sus problemas médicos, desde el deterioro cognitivo, aumento de peso, desequilibrio hormonal, fatiga crónica, hasta enfermedades autoinmunes o degenerativas crónicas, o si simplemente desea prevenir una enfermedad hereditaria o recuperarse de un problema de salud como un derrame cerebral, un ataque cardíaco o la enfermedad de Alzheimer.",
+    "paragraph2": "La mayoría de los problemas de salud son multifactoriales, lo que significa que van más allá de la genética, abarcando el estilo de vida, el medio ambiente, las vías metabólicas, los niveles de vitaminas, hormonas y toxinas. Muchos procesos bioquímicos afectan la enfermedad y el envejecimiento, incluyendo la oxidación, la inflamación, la desintoxicación y otros. Solo cuando todas esas variables se corrigen en un programa unificado puede ocurrir la prevención, la curación o la regeneración. El Dr. Adonis cree que necesitamos un equilibrio de cuerpo, mente y espíritu para lograr una vida saludable y plena.",
+    "paragraph3": "El Dr. Adonis tiene doble certificación en Medicina Funcional y Medicina Regenerativa Antienvejecimiento. Completó su formación de posgrado y Fellow en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida en Tampa y es autor de \"Modern Medicine for Modern Times\".",
+    "highlight": "Nuestro Director Médico, Adonis Maiquez, MD, formado como neurocirujano, es miembro de la Academia Americana de Manejo del Dolor y del Instituto Mundial del Dolor.",
+    "badge1": "Medicina Funcional",
+    "badge2": "Antienvejecimiento y Regenerativa",
+    "bookPromo": "El Dr. Adonis es autor del libro \"Medicina Moderna para los Tiempos Modernos: El Manual de Medicina Funcional para Prevenir y Tratar Enfermedades Desde su Origen\", una guía completa para entender y aplicar los principios de la medicina funcional. Disponible ahora en Amazon.",
+    "btnBuyBook": "CONSIGUE EL LIBRO EN AMAZON"
   },
   "vagustim": {
     "title": "ESTIMULADOR TRANSCUTÁNEO DEL NERVIO VAGO",
@@ -61,5 +91,71 @@
       "iron": "Iron Liquid: Hierro líquido altamente biodisponible para el transporte de oxígeno. Fórmula vegetariana e hipoalergénica, de gran sabor.",
       "probiomax": "ProbioMax® Sb DF: Equilibrio intestinal, inmunidad y regularidad. Con 4 cepas probióticas y S. boulardii."
     }
+  },
+  "services": {
+    "eyebrow": "Dr. Adonis Maiquez, MD",
+    "heroTitle": "Nuestros Servicios",
+    "heroSubtitle": "Soluciones de salud integrales y personalizadas diseñadas para tratar la causa raíz — no solo los síntomas.",
+    "btnAppointment": "HAGA UNA CITA",
+    "functional": {
+      "title": "Medicina Funcional",
+      "p1": "La medicina funcional sigue un enfoque bastante diferente de las prácticas médicas convencionales tal como las conocemos. Este tipo de medicina reconoce que cada individuo es único y, por lo tanto, refuta la teoría de ofrecer soluciones estándar para tratar las condiciones de salud.",
+      "p2": "El Dr. Adonis, un firme creyente en la medicina funcional y su lugar entre las terapias potentes, es miembro del Instituto de Medicina Funcional, la organización más prestigiosa y reconocida de medicina funcional en el país. Tiene una comprensión profunda de sus principios y su aplicación. No solo es un defensor de la medicina funcional, sino también un hábil embajador de sus beneficios. Ha empoderado a miles de pacientes para que tomen el control de su salud e inicien su camino hacia el bienestar.",
+      "p3": "Si una vida significativa y saludable, llena de una mejor comprensión de su cuerpo y mente, es su llamado, aségurese de ponerse en contacto con nuestra clínica hoy y reserve una cita con la mejor versión de usted.",
+      "videoCaption": "Mira: ¿Qué es la Medicina Funcional? — Dr. Adonis Maiquez, MD"
+    },
+    "hormone": {
+      "title": "Terapia Hormonal Bio-Idéntica",
+      "subtitle": "¿Por qué elegir la Terapia de Reemplazo Hormonal Bio-Idéntica?",
+      "p1": "¿Cree que los cambios hormonales son solo una preocupación de la mujer? Piénselo de nuevo. La menopausia en las mujeres y su contraparte, la andropausia o hipogonadismo de inicio tardío en los hombres, son etapas naturales de la vida que pueden afectar significativamente su bienestar. ¡Pero hay buenas noticias!",
+      "p2": "El Dr. Adonis, un reconocido especialista en medicina funcional en Miami, FL, está aquí para guiarlo sin problemas a través de estas transiciones. Su experiencia en terapia hormonal bio-idéntica ofrece un enfoque holístico y altamente efectivo para reequilibrar su cuerpo y rejuvenecer su vida.",
+      "p3": "Ya sea que esté cerca o lejos, nuestras consultas personalizadas presenciales y virtuales son su puerta de entrada a un estilo de vida armonioso y vibrante. ¿Por qué esperar para sentirse mejor?",
+      "btn": "RESERVE SU CONSULTA HOY",
+      "feature1": "Consultas Presenciales y Virtuales",
+      "feature2": "Enfoque Holístico",
+      "feature3": "Hombres y Mujeres"
+    },
+    "weight": {
+      "title": "Pérdida de Peso Personalizada",
+      "promoBadge": "AHORRE 30%",
+      "promoText": "¡Nuestro Programa Personalizado de Pérdida de Peso basado en Medicina Funcional ahora cuesta solo $976 — ahorre un 30% del precio regular de $1,395! Este paquete integral incluye una consulta inicial presencial o virtual, un plan de pérdida de peso personalizado, un suministro de tres meses de Semaglutida, inyecciones quema-grasa y vitaminas especialmente formuladas.",
+      "promoCode": "¡Haga clic aquí y use el código NYS30 para reclamar su descuento!",
+      "p1": "En el núcleo de nuestro enfoque, el Dr. Adonis entiende que la pérdida de peso exitosa es un camino único para cada individuo. Ha ayudado a miles a navegar este camino, abordando los desafíos relacionados con el peso a través de una metodología holística que combina orientación dietaria, programas de actividad física personalizados y estrategias conductuales. Nuestra filosofía va más allá de las soluciones temporales de las dietas de moda, enfocándose en resultados sostenibles que cambian la vida.",
+      "p2": "La clave de nuestro éxito radica en reconocer que no hay dos personas iguales — en su metabolismo, composición corporal o necesidades de salud personales. Por eso no creemos en una solución única para todos. Nuestro proceso comienza con un análisis de salud integral, que lleva a una comprensión profunda de su cuerpo y sus requisitos específicos. Esta visión forma la base de su plan de pérdida de peso personalizado, elaborado por el Dr. Adonis para alinearse perfectamente con sus necesidades y preferencias individuales.",
+      "p3": "Si está listo para embarcarse en un camino hacia un usted más saludable y vibrante, estamos aquí para guiar cada paso del camino. Nuestro programa personalizado de pérdida de peso es más que un plan; es una asociación en la transformación de su vida.",
+      "readyTitle": "¿Listo para Comenzar su Transformación?",
+      "readyText": "Dé el primer paso hoy. Contáctenos para programar su cita y comience su camino con un equipo comprometido con su éxito.",
+      "btn": "COMIENCE SU VIAJE DE PÉRDIDA DE PESO HOY",
+      "feature1": "Semaglutida Incluida",
+      "feature2": "Plan Personalizado",
+      "feature3": "Inyecciones Quema-Grasa",
+      "feature4": "Vitaminas Especializadas"
+    },
+    "bottomCta": {
+      "title": "¿Listo para Transformar su Salud?",
+      "subtitle": "Programe su consulta hoy y dé el primer paso hacia un usted más saludable y vibrante."
+    }
+  },
+  "videos": {
+    "eyebrow": "Dr. Adonis Maiquez, MD",
+    "heroTitle": "Videos y Más",
+    "heroSubtitle": "Contenido educativo sobre Medicina Funcional, hormonas, pérdida de peso y bienestar del Dr. Adonis.",
+    "subscribeCta": "SUSCRÍBETE EN YOUTUBE",
+    "gridTitle": "Videos Más Populares",
+    "list": {
+      "v1": "Qué es la Medicina Funcional",
+      "v2": "Qué es la Medicina Funcional? (Corto)",
+      "v3": "Teoría Neuroendocrina del Envejecimiento",
+      "v4": "El Síndrome ASIA",
+      "v5": "Teoría Neuroendocrina del Envejecimiento (Español)",
+      "v6": "Libro: Medicina Moderna para Tiempos Modernos",
+      "v7": "9 Pilares de la Fibromialgia",
+      "v8": "Las 5 Hormonas en la Menopausia",
+      "v9": "Fibromialgia / Fatiga Crónica / Agotamiento Adrenal",
+      "v10": "Análisis de Laboratorio en Medicina Funcional"
+    },
+    "reviewsTitle": "Lo Que Dicen Nuestros Pacientes",
+    "reviewsSubtitle": "Vea lo que los pacientes dicen sobre su experiencia con el Dr. Adonis y nuestra clínica en Google.",
+    "reviewsCta": "VER TODAS LAS RESEÑAS EN GOOGLE"
   }
 }

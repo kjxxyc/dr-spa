@@ -1,0 +1,175 @@
+<div class="services-page">
+
+  <!-- Page Hero -->
+  <section class="services-hero">
+    <div class="services-hero-layout">
+      <div class="services-hero-content">
+        <p class="services-eyebrow">{{ 'services.eyebrow' | translate }}</p>
+        <h1>{{ 'services.heroTitle' | translate }}</h1>
+        <p class="services-hero-subtitle">{{ 'services.heroSubtitle' | translate }}</p>
+      </div>
+
+      <!-- Service Promo Cards -->
+      <div class="services-hero-cards">
+        <!-- Tadalafil Card -->
+        <div class="service-promo-card tadalafil-card">
+          <div class="service-promo-icon">
+            <mat-icon>medication</mat-icon>
+          </div>
+          <h3>{{ 'servicesPromo.tadalafil.title' | translate }}</h3>
+          <p>{{ 'servicesPromo.tadalafil.description' | translate }}</p>
+          <a routerLink="/landing/tadalafil-evaluation" class="service-promo-btn">
+            <mat-icon>arrow_forward</mat-icon>
+            {{ 'servicesPromo.tadalafil.btn' | translate }}
+          </a>
+        </div>
+
+        <!-- Vitamins Card -->
+        <div class="service-promo-card vitamins-card">
+          <div class="service-promo-icon">
+            <mat-icon>local_pharmacy</mat-icon>
+          </div>
+          <h3>{{ 'servicesPromo.vitamins.title' | translate }}</h3>
+          <p>{{ 'servicesPromo.vitamins.description' | translate }}</p>
+          <a routerLink="/landing/vitamins-prescription" class="service-promo-btn">
+            <mat-icon>arrow_forward</mat-icon>
+            {{ 'servicesPromo.vitamins.btn' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 1: Functional Medicine -->
+  <section class="service-block" id="functional-medicine">
+    <div class="service-container">
+      <div class="service-text">
+        <div class="service-number">01</div>
+        <h2>{{ 'services.functional.title' | translate }}</h2>
+        <p>{{ 'services.functional.p1' | translate }}</p>
+        <p>{{ 'services.functional.p2' | translate }}</p>
+        <p class="service-cta-text">{{ 'services.functional.p3' | translate }}</p>
+        <a href="tel:+13052047816" class="service-btn primary">
+          <mat-icon>calendar_today</mat-icon>
+          {{ 'services.btnAppointment' | translate }}
+        </a>
+      </div>
+      <div class="service-media">
+        <div class="video-wrapper">
+          <iframe [src]="youtubeUrl" title="What is Functional Medicine"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">{{ 'services.functional.videoCaption' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 2: Bio-Identical Hormone Therapy -->
+  <section class="service-block alt-bg" id="hormone-therapy">
+    <div class="service-container reverse">
+      <div class="service-text">
+        <div class="service-number">02</div>
+        <h2>{{ 'services.hormone.title' | translate }}</h2>
+        <h3 class="service-subtitle">{{ 'services.hormone.subtitle' | translate }}</h3>
+        <p>{{ 'services.hormone.p1' | translate }}</p>
+        <p>{{ 'services.hormone.p2' | translate }}</p>
+        <p class="service-cta-text">{{ 'services.hormone.p3' | translate }}</p>
+        <a href="tel:+13052047816" class="service-btn primary">
+          <mat-icon>calendar_today</mat-icon>
+          {{ 'services.hormone.btn' | translate }}
+        </a>
+      </div>
+      <div class="service-media">
+        <div class="service-icon-display hormone-icon">
+          <mat-icon>biotech</mat-icon>
+          <div class="icon-rings"></div>
+        </div>
+        <div class="service-features">
+          <div class="feature-pill">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ 'services.hormone.feature1' | translate }}</span>
+          </div>
+          <div class="feature-pill">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ 'services.hormone.feature2' | translate }}</span>
+          </div>
+          <div class="feature-pill">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ 'services.hormone.feature3' | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 3: Personalized Weight Loss -->
+  <section class="service-block" id="weight-loss">
+    <div class="service-container">
+      <div class="service-text">
+        <div class="service-number">03</div>
+        <h2>{{ 'services.weight.title' | translate }}</h2>
+
+        <!-- Promo Banner -->
+        <div class="promo-banner">
+          <div class="promo-badge">{{ 'services.weight.promoBadge' | translate }}</div>
+          <p class="promo-text">{{ 'services.weight.promoText' | translate }}</p>
+          <p class="promo-code">{{ 'services.weight.promoCode' | translate }}</p>
+        </div>
+
+        <p>{{ 'services.weight.p1' | translate }}</p>
+        <p>{{ 'services.weight.p2' | translate }}</p>
+        <p class="service-cta-text">{{ 'services.weight.p3' | translate }}</p>
+
+        <h3 class="service-subtitle">{{ 'services.weight.readyTitle' | translate }}</h3>
+        <p>{{ 'services.weight.readyText' | translate }}</p>
+
+        <a href="tel:+13052047816" class="service-btn accent">
+          <mat-icon>fitness_center</mat-icon>
+          {{ 'services.weight.btn' | translate }}
+        </a>
+      </div>
+      <div class="service-media">
+        <div class="service-icon-display weight-icon">
+          <mat-icon>monitor_weight</mat-icon>
+          <div class="icon-rings"></div>
+        </div>
+        <div class="service-features">
+          <div class="feature-pill">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ 'services.weight.feature1' | translate }}</span>
+          </div>
+          <div class="feature-pill">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ 'services.weight.feature2' | translate }}</span>
+          </div>
+          <div class="feature-pill">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ 'services.weight.feature3' | translate }}</span>
+          </div>
+          <div class="feature-pill">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ 'services.weight.feature4' | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="services-bottom-cta">
+    <h2>{{ 'services.bottomCta.title' | translate }}</h2>
+    <p>{{ 'services.bottomCta.subtitle' | translate }}</p>
+    <div class="bottom-cta-actions">
+      <a href="tel:+13052047816" class="service-btn primary large">
+        <mat-icon>phone</mat-icon>
+        {{ 'header.phone' | translate }}
+      </a>
+      <a routerLink="/landing/meet-doctor" class="service-btn outline large">
+        <mat-icon>person</mat-icon>
+        {{ 'header.nav.meetDoctor' | translate }}
+      </a>
+    </div>
+  </section>
+
+</div>

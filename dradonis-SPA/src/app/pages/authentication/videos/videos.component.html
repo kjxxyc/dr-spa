@@ -1,0 +1,86 @@
+<div class="videos-page">
+
+  <!-- Hero -->
+  <section class="videos-hero">
+    <div class="videos-hero-content">
+      <p class="videos-eyebrow">{{ 'videos.eyebrow' | translate }}</p>
+      <h1>{{ 'videos.heroTitle' | translate }}</h1>
+      <p class="videos-hero-subtitle">{{ 'videos.heroSubtitle' | translate }}</p>
+      <a href="https://www.youtube.com/@DrAdonisMaiquezMD" target="_blank" rel="noopener noreferrer"
+        class="youtube-subscribe-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        {{ 'videos.subscribeCta' | translate }}
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Video Player -->
+  <section class="featured-video-section" id="featured-player">
+    <div class="featured-video-container" *ngIf="selectedVideo">
+      <div class="featured-player">
+        <iframe [src]="selectedVideo.embedUrl"
+          title="Dr. Adonis Video" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="featured-info">
+        <h2>{{ selectedVideo.titleKey | translate }}</h2>
+        <p class="featured-channel">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          ADONIS MAIQUEZ, MD
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Grid -->
+  <section class="videos-grid-section">
+    <h2 class="section-title">{{ 'videos.gridTitle' | translate }}</h2>
+    <div class="videos-grid">
+      <div *ngFor="let video of videos; let i = index"
+        class="video-card"
+        [class.active]="selectedVideo === video"
+        (click)="selectVideo(video)">
+        <div class="video-thumbnail">
+          <img [src]="'https://img.youtube.com/vi/' + video.id + '/mqdefault.jpg'"
+            [alt]="video.titleKey | translate" loading="lazy">
+          <div class="play-overlay">
+            <mat-icon>play_circle_filled</mat-icon>
+          </div>
+          <span class="video-num">{{ (i + 1) | number:'2.0-0' }}</span>
+        </div>
+        <h4>{{ video.titleKey | translate }}</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Reviews Section -->
+  <section class="reviews-section">
+    <h2 class="section-title">{{ 'videos.reviewsTitle' | translate }}</h2>
+    <p class="reviews-subtitle">{{ 'videos.reviewsSubtitle' | translate }}</p>
+
+    <div class="google-maps-embed">
+      <iframe [src]="googleMapsUrl"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="reviews-cta">
+      <a href="https://www.google.com/maps/place/Dr.+Adonis+(Adonis+Maiquez,+MD)/@25.7863004,-80.213865,17z/data=!3m2!4b1!5s0x88d9b6c0c0c2090b:0xc07bada0e8f71290!4m6!3m5!1s0x88d9b76d1434265b:0xfa2d0d393c1e7ec3!8m2!3d25.7863004!4d-80.2112901!16s%2Fg%2F11h0707mvm"
+        target="_blank" rel="noopener noreferrer" class="review-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        {{ 'videos.reviewsCta' | translate }}
+      </a>
+    </div>
+  </section>
+
+</div>

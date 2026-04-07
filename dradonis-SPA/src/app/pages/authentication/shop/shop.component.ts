@@ -29,7 +29,6 @@ export interface FullscriptProduct {
     styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent {
-    currentLang: string = 'en';
     selectedCategory: string = 'all';
 
     fullscriptProducts: FullscriptProduct[] = [
@@ -123,18 +122,7 @@ export class ShopComponent {
         return this.fullscriptProducts.filter(p => p.category === this.selectedCategory);
     }
 
-    constructor(private translate: TranslateService) {
-        this.translate.setDefaultLang('en');
-        this.currentLang = this.translate.currentLang || 'en';
-        this.translate.use(this.currentLang);
-    }
-
     selectCategory(category: string) {
         this.selectedCategory = category;
-    }
-
-    toggleLanguage() {
-        this.currentLang = this.currentLang === 'en' ? 'es' : 'en';
-        this.translate.use(this.currentLang);
     }
 }
