@@ -78,6 +78,7 @@
     "filterGeneral": "🌿 Bienestar General",
     "filterAntiaging": "🧬 Antienvejecimiento",
     "filterGut": "🦠 Salud Digestiva",
+    "filterMenopause": "🌸 Apoyo en la Menopausia",
     "viewProduct": "Ver producto",
     "poweredBy": "Powered by Fullscript",
     "products": {
@@ -89,7 +90,8 @@
       "mineral": "Complete Mineral Complex: Repone minerales esenciales para apoyar la salud ósea, nerviosa y celular.",
       "telomere": "Telomere Pro: Favorece envejecimiento saludable. Ayuda a mantener la longitud telomérica contra el estrés y toxinas.",
       "iron": "Iron Liquid: Hierro líquido altamente biodisponible para el transporte de oxígeno. Fórmula vegetariana e hipoalergénica, de gran sabor.",
-      "probiomax": "ProbioMax® Sb DF: Equilibrio intestinal, inmunidad y regularidad. Con 4 cepas probióticas y S. boulardii."
+      "probiomax": "ProbioMax® Sb DF: Equilibrio intestinal, inmunidad y regularidad. Con 4 cepas probióticas y S. boulardii.",
+      "dimEvail": "DIM-Evail™: Equilibra estrógenos naturalmente, aporta protección antioxidante avanzada y promueve la salud celular y ósea."
     }
   },
   "services": {

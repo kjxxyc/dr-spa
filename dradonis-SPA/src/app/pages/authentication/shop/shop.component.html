@@ -59,6 +59,9 @@
             <button class="filter-pill" [class.active]="selectedCategory === 'gut'" (click)="selectCategory('gut')">
                 {{ 'shop.filterGut' | translate }}
             </button>
+            <button class="filter-pill" [class.active]="selectedCategory === 'menopause'" (click)="selectCategory('menopause')">
+                {{ 'shop.filterMenopause' | translate }}
+            </button>
         </div>
 
         <!-- Product Grid -->

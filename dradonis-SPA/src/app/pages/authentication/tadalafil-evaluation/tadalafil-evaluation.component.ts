@@ -448,6 +448,10 @@ export class TadalafilEvaluationComponent implements OnInit {
                 this.ngZone.run(() => {
                     this.isProcessingPayment = false;
                     this.snackBar.open(this.t('paymentEmailSent'), 'OK', { duration: 4000 });
+                    if (typeof (window as any).fbq !== 'undefined') {
+                        (window as any).fbq('track', 'Lead');
+                        (window as any).fbq('track', 'Purchase', { value: 69.00, currency: 'USD' });
+                    }
                     window.open('https://link.clover.com/urlshortener/4wbzLj', '_blank');
                 });
             })

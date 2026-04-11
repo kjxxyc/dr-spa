@@ -11,7 +11,7 @@ export interface FullscriptProduct {
     subtitle: string;
     image: string;
     descriptionKey: string;
-    category: 'general' | 'antiaging' | 'gut';
+    category: 'general' | 'antiaging' | 'gut' | 'menopause';
     storeUrl: string;
 }
 
@@ -112,6 +112,15 @@ export class ShopComponent {
             descriptionKey: 'shop.products.probiomax',
             category: 'gut',
             storeUrl: 'https://us.fullscript.com/u/catalog/product/U3ByZWU6OlByb2R1Y3QtMTA1MDYw'
+        },
+        {
+            id: '72404',
+            name: 'DIM-Evail™',
+            subtitle: '60 Softgels',
+            image: 'https://assets.fullscript.io/Product/DF0179/400_front.png',
+            descriptionKey: 'shop.products.dimEvail',
+            category: 'menopause',
+            storeUrl: 'https://us.fullscript.com/u/catalog/product/U3ByZWU6OlByb2R1Y3QtNzI0MDQ='
         }
     ];
 

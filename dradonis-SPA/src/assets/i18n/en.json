@@ -78,6 +78,7 @@
     "filterGeneral": "🌿 General Wellness",
     "filterAntiaging": "🧬 Anti-Aging",
     "filterGut": "🦠 Digestive Health",
+    "filterMenopause": "🌸 Menopause Support",
     "viewProduct": "View product",
     "poweredBy": "Powered by Fullscript",
     "products": {
@@ -89,7 +90,8 @@
       "mineral": "Complete Mineral Complex: Replenishes essential minerals to support bone, nerve, and cellular health.",
       "telomere": "Telomere Pro: Supports healthy aging. Helps maintain telomere length against stress and toxins.",
       "iron": "Iron Liquid: Highly bioavailable liquid iron for oxygen transport. Vegetarian, hypoallergenic, great-tasting.",
-      "probiomax": "ProbioMax® Sb DF: Gut balance, immunity, and regularity. With 4 probiotic strains and S. boulardii."
+      "probiomax": "ProbioMax® Sb DF: Gut balance, immunity, and regularity. With 4 probiotic strains and S. boulardii.",
+      "dimEvail": "DIM-Evail™: Natural Estrogen Balance provides advanced antioxidant protection and promotes cellular and bone health."
     }
   },
   "services": {
