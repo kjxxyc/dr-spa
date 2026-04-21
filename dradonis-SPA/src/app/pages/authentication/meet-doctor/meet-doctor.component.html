@@ -4,7 +4,14 @@
     <!-- Doctor Image -->
     <div class="doctor-image-wrapper">
       <div class="doctor-image-frame">
-        <img src="assets/images/logos/dr-full-img.jpg" alt="Dr. Adonis Maiquez, MD" class="doctor-photo">
+        <picture>
+          <source
+            srcset="assets/images/logos/dr-full-img-sm.webp 400w, assets/images/logos/dr-full-img.webp 800w"
+            type="image/webp"
+            sizes="(max-width: 768px) 100vw, 50vw">
+          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="doctor-photo"
+            loading="lazy" width="800" height="1066">
+        </picture>
       </div>
       <div class="doctor-credentials">
         <div class="credential-badge">
@@ -61,7 +68,10 @@
 
       <div class="doctor-book-promo">
         <div class="book-promo-image">
-          <img src="assets/images/book-dradonis.png" alt="{{ 'bookSection.title' | translate }}">
+          <picture>
+            <source srcset="assets/images/book-dradonis.webp" type="image/webp">
+            <img src="assets/images/book-dradonis.png" alt="{{ 'bookSection.title' | translate }}" loading="lazy" width="200" height="260">
+          </picture>
         </div>
         <div class="book-promo-content">
           <mat-icon class="book-icon">menu_book</mat-icon>

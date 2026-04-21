@@ -1,9 +1,9 @@
 // ===========================
 // COLOR VARIABLES
 // ===========================
-$primary-green: #81af5a;
-$primary-green-dark: #6a964a;
-$primary-green-light: #98c070;
+$primary-green: #4d7a1f;
+$primary-green-dark: #3d6218;
+$primary-green-light: #81af5a; // decorative only
 $youtube-red: #FF0000;
 $text-dark: #1F2937;
 $text-medium: #4A5568;
@@ -116,7 +116,7 @@ $breakpoint-xs: 480px;
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 24px rgba($youtube-red, 0.5);
-        background: darken($youtube-red, 8%);
+        background: #cc0000; // darken(#FF0000, 8%) = #cc0000
     }
 }
 

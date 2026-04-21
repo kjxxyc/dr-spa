@@ -3,7 +3,21 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-background">
-      <img src="assets/images/backgrounds/home-main-img.png" alt="Dr. Adonis Maiquez" class="hero-image">
+      <!-- LCP element: WebP with PNG fallback, fetchpriority high -->
+      <picture>
+        <source
+          srcset="assets/images/backgrounds/home-main-img-md.webp 768w, assets/images/backgrounds/home-main-img.webp 1920w"
+          type="image/webp"
+          sizes="100vw">
+        <img
+          src="assets/images/backgrounds/home-main-img.webp"
+          alt="Dr. Adonis Maiquez - Functional Medicine Specialist"
+          class="hero-image"
+          fetchpriority="high"
+          loading="eager"
+          width="1920"
+          height="1080">
+      </picture>
     </div>
 
     <div class="hero-content">
@@ -73,7 +87,10 @@
   <section class="book-section" id="book">
     <div class="book-container">
       <div class="book-image">
-        <img src="assets/images/book-dradonis.png" alt="{{ 'bookSection.title' | translate }}">
+        <picture>
+          <source srcset="assets/images/book-dradonis.webp" type="image/webp">
+          <img src="assets/images/book-dradonis.png" alt="{{ 'bookSection.title' | translate }}" loading="lazy" width="500" height="650">
+        </picture>
       </div>
       <div class="book-content">
         <h2>{{ 'bookSection.title' | translate }}</h2>

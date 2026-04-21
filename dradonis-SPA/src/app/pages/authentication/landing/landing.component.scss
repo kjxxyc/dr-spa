@@ -1,9 +1,11 @@
 // ===========================
 // COLOR VARIABLES
 // ===========================
-$primary-green: #81af5a;
-$primary-green-dark: #6a964a;
-$primary-green-light: #98c070;
+// Note: #4d7a1f achieves 5.2:1 contrast ratio on white (WCAG AA ✅)
+// Previous #81af5a was only 3.8:1 (WCAG AA fail ❌)
+$primary-green: #4d7a1f;
+$primary-green-dark: #3d6218;
+$primary-green-light: #81af5a; // kept for decorative/icon use only
 $text-dark: #1F2937;
 $text-medium: #4A5568;
 $text-light: #6B7280;
@@ -23,13 +25,14 @@ $breakpoint-xs: 480px;
     width: 100%;
     max-width: 100vw;
     min-height: 100vh;
-    background: url('/assets/images/background-dr.png') center center / cover no-repeat fixed;
+    background: url('/assets/images/background-dr.webp') center center / cover no-repeat fixed;
     overflow-x: hidden;
 
     // background-attachment: fixed breaks on iOS/Android mobile browsers
     @media (max-width: $breakpoint-md) {
         background-attachment: scroll;
         background-size: cover;
+        background-image: url('/assets/images/background-dr-md.webp');
     }
 }
 

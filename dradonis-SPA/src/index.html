@@ -147,12 +147,28 @@
 
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <!-- Preconnect to Google Fonts (crossorigin required for fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload LCP hero image (critical for above-the-fold) -->
+  <link rel="preload" as="image" href="assets/images/backgrounds/home-main-img.webp" fetchpriority="high"
+    imagesrcset="assets/images/backgrounds/home-main-img-md.webp 768w, assets/images/backgrounds/home-main-img.webp 1920w"
+    imagesizes="100vw" type="image/webp">
+
+  <!-- Font: Plus Jakarta Sans - self-display:swap prevents FOIT -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- Meta Pixel Code -->
+  <!-- Material Icons - display=optional prevents render blocking -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=optional" rel="stylesheet">
+</head>
+
+<body class="mat-typography">
+  <app-root></app-root>
+
+  <!-- Meta Pixel Code (deferred to end of body to reduce TBT) -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -169,10 +185,6 @@
   src="https://www.facebook.com/tr?id=34862161576760674&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
-</head>
-
-<body class="mat-typography">
-  <app-root></app-root>
 </body>
 
 </html>
