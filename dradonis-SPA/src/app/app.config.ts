@@ -19,12 +19,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-// icons
-import { TablerIconsModule } from 'angular-tabler-icons';
-import * as TablerIcons from 'angular-tabler-icons/icons';
 
-// perfect scrollbar
-import { NgScrollbarModule } from 'ngx-scrollbar';
 
 //Import all material modules
 import { MaterialModule } from './material.module';
@@ -52,8 +47,6 @@ export const appConfig: ApplicationConfig = {
       FormsModule,
       ReactiveFormsModule,
       MaterialModule,
-      TablerIconsModule.pick(TablerIcons),
-      NgScrollbarModule,
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,

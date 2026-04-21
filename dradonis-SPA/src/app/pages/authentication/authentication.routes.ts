@@ -1,8 +1,5 @@
 import { Routes } from '@angular/router';
 
-import { AppErrorComponent } from './error/error.component';
-import { AppSideLoginComponent } from './side-login/side-login.component';
-import { AppSideRegisterComponent } from './side-register/side-register.component';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 
 export const AuthenticationRoutes: Routes = [
@@ -59,18 +56,6 @@ export const AuthenticationRoutes: Routes = [
         ],
       },
       // Standalone pages (no shared header)
-      {
-        path: 'error',
-        component: AppErrorComponent,
-      },
-      {
-        path: 'login',
-        component: AppSideLoginComponent,
-      },
-      {
-        path: 'register',
-        component: AppSideRegisterComponent,
-      },
       {
         path: 'vitamins-prescription',
         loadComponent: () =>
