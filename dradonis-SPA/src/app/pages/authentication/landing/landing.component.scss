@@ -25,15 +25,7 @@ $breakpoint-xs: 480px;
     width: 100%;
     max-width: 100vw;
     min-height: 100vh;
-    background: url('/assets/images/background-dr.webp') center center / cover no-repeat fixed;
     overflow-x: hidden;
-
-    // background-attachment: fixed breaks on iOS/Android mobile browsers
-    @media (max-width: $breakpoint-md) {
-        background-attachment: scroll;
-        background-size: cover;
-        background-image: url('/assets/images/background-dr-md.webp');
-    }
 }
 
 // ===========================
@@ -275,7 +267,7 @@ $breakpoint-xs: 480px;
 // ===========================
 .services-promo-section {
     padding: 80px 2rem;
-    background: rgba(255, 255, 255, 0.92);
+    background: #f8fcf5; // very light green/gray instead of transparent
     text-align: center;
 
     @media (max-width: $breakpoint-sm) {
