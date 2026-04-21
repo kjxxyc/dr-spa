@@ -9,8 +9,15 @@ import {
 } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MaterialModule } from '../../../material.module';
-import { MatStepper } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatStepperModule, MatStepper } from '@angular/material/stepper';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import emailjs from '@emailjs/browser';
 
 // ---------- translations ----------
@@ -133,9 +140,17 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
   standalone: true,
   imports: [
     CommonModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatStepperModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatSnackBarModule,
   ],
   templateUrl: './vitamins-prescription.component.html',
   styleUrls: ['./vitamins-prescription.component.scss'],

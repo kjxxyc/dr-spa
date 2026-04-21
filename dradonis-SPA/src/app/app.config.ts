@@ -22,7 +22,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 //Import all material modules
-import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient): any {
@@ -46,7 +45,6 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       FormsModule,
       ReactiveFormsModule,
-      MaterialModule,
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,

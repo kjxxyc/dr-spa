@@ -157,6 +157,9 @@
     imagesrcset="/assets/images/backgrounds/home-main-img-md.webp 768w, /assets/images/backgrounds/home-main-img.webp 1920w"
     imagesizes="100vw" type="image/webp">
 
+  <!-- Preload Translation File to break the critical request chain -->
+  <link rel="preload" href="/assets/i18n/en.json" as="fetch" crossorigin="anonymous">
+
   <!-- Font: Plus Jakarta Sans - self-display:swap prevents FOIT -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">

@@ -10,7 +10,17 @@ import {
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { MaterialModule } from '../../../material.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatExpansionModule } from '@angular/material/expansion';
 import emailjs from '@emailjs/browser';
 
 // ---------- translations ----------
@@ -180,11 +190,21 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     standalone: true,
     imports: [
         CommonModule,
-        MaterialModule,
         FormsModule,
         ReactiveFormsModule,
         MatDatepickerModule,
         MatNativeDateModule,
+        MatButtonModule,
+        MatCardModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatRadioModule,
+        MatSelectModule,
+        MatStepperModule,
+        MatCheckboxModule,
+        MatSnackBarModule,
+        MatExpansionModule
     ],
     templateUrl: './tadalafil-evaluation.component.html',
 })
@@ -431,7 +451,7 @@ export class TadalafilEvaluationComponent implements OnInit {
 
         // Email 1: Admin notification (using CLIENT template which is proven to work)
         const adminEmail = emailjs.send(this.serviceId, this.clientTemplateId, {
-            client_email: 'solangie@dradonis.com,maxia@dradonis.com',
+            client_email: 'solangie@dradonis.com,maria@dradonis.com',
             client_subject: 'Tadalafil (Cialis) – Payment Initiated – ' + contact.contactName,
             client_message: adminMessage,
         }, this.publicKey);
