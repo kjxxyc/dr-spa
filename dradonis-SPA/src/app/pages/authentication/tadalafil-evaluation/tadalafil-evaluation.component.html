@@ -135,7 +135,7 @@
             }
           </div>
         </div>
-        } @else {
+        } @else if (showMedicalSection) {
 
         <p class="mat-body-1 f-s-14 m-b-8">{{ t('subtitle') }}</p>
         <p class="mat-body-2 f-s-12 m-b-16" style="color: #6b7280;">
@@ -421,6 +421,43 @@
           </mat-step>
 
         </mat-stepper>
+
+        } @else {
+
+        <!-- SECTION 1: Contact Information + Pixel -->
+        <p class="mat-body-1 f-s-14 m-b-8">{{ t('subtitle') }}</p>
+
+        <form [formGroup]="contactInfoForm">
+          <div class="contact-initial-grid">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>{{ t('contactFullName') }}</mat-label>
+              <input matInput formControlName="contactFullName" />
+              @if (contactInfoForm.get('contactFullName')?.touched && contactInfoForm.get('contactFullName')?.hasError('required')) {
+              <mat-error>{{ t('errorRequired') }}</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>{{ t('contactEmailAddress') }}</mat-label>
+              <input matInput formControlName="contactEmailAddress" type="email" />
+              @if (contactInfoForm.get('contactEmailAddress')?.touched && contactInfoForm.get('contactEmailAddress')?.hasError('required')) {
+              <mat-error>{{ t('errorRequired') }}</mat-error>
+              } @else if (contactInfoForm.get('contactEmailAddress')?.touched && contactInfoForm.get('contactEmailAddress')?.hasError('pattern')) {
+              <mat-error>{{ t('errorEmailFormat') }}</mat-error>
+              }
+            </mat-form-field>
+          </div>
+
+          <!-- Security Notice -->
+          <div class="security-notice">
+            <mat-icon>lock</mat-icon>
+            <p>{{ t('securityMessage') }}</p>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <button mat-flat-button color="primary" (click)="onContactNext()">{{ t('contactNextBtn') }}</button>
+          </div>
+        </form>
 
         }
 

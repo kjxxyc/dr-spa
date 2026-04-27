@@ -396,11 +396,11 @@ export class VitaminsPrescriptionComponent implements OnInit {
           this.isSubmitting = false;
           this.submitted = true;
           this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
-          // Meta Pixel: track Lead event
+          /*// Meta Pixel: track Lead event
           const fbq = (window as any).fbq;
           if (fbq) {
             fbq('track', 'Lead');
-          }
+          }*/
         });
       }, 1000);
     } else {
@@ -410,11 +410,11 @@ export class VitaminsPrescriptionComponent implements OnInit {
             this.isSubmitting = false;
             this.submitted = true;
             this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
-            // Meta Pixel: track Lead event
+            /*// Meta Pixel: track Lead event
             const fbq = (window as any).fbq;
             if (fbq) {
               fbq('track', 'Lead');
-            }
+            }*/
           });
         })
         .catch((err) => {

@@ -83,6 +83,11 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         snackInvalid: 'Please answer all required questions.',
         snackPaymentInvalid: 'Please fill in all contact fields before proceeding to payment.',
         langToggle: 'Español',
+        // Section 1: Contact info
+        contactFullName: 'Full Name',
+        contactEmailAddress: 'Email',
+        securityMessage: 'The data shared in this form is handled under strict security and encryption standards. The information is exclusively used for processing your request and will not be shared with third parties under any circumstances.',
+        contactNextBtn: 'Next',
         // Payment contact fields
         contactName: 'Full Name',
         contactAddress: 'Address',
@@ -159,6 +164,11 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         snackInvalid: 'Por favor responda todas las preguntas obligatorias.',
         snackPaymentInvalid: 'Por favor complete todos los campos de contacto antes de proceder al pago.',
         langToggle: 'English',
+        // Section 1: Contact info
+        contactFullName: 'Nombre Completo',
+        contactEmailAddress: 'Correo Electrónico',
+        securityMessage: 'Los datos compartidos en este formulario se manejan bajo estrictos estándares de seguridad y cifrado. La información es de uso exclusivo para el procesamiento de tu solicitud y no será compartida con terceros bajo ningún concepto.',
+        contactNextBtn: 'Siguiente',
         // Payment contact fields
         contactName: 'Nombre Completo',
         contactAddress: 'Dirección',
@@ -213,7 +223,9 @@ export class TadalafilEvaluationComponent implements OnInit {
     isSubmitting = false;
     submitted = false;
     confirmCheck = false;
+    showMedicalSection = false; // Controls Section 1 → Section 2 transition
 
+    contactInfoForm!: FormGroup;   // Section 1: Name + Email
     personalInfoForm!: FormGroup;
     questionsForm1!: FormGroup;
     questionsForm2!: FormGroup;
@@ -233,6 +245,11 @@ export class TadalafilEvaluationComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {
+        this.contactInfoForm = this.fb.group({
+            contactFullName: ['', Validators.required],
+            contactEmailAddress: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
+        });
+
         this.personalInfoForm = this.fb.group({
             dateOfBirth: [null, Validators.required],
             sex: ['', Validators.required],
@@ -508,5 +525,48 @@ export class TadalafilEvaluationComponent implements OnInit {
             return false;
         }
         return true;
+    }
+
+    /** Section 1 → Section 2 transition: validate contact, load pixel, track Lead */
+    onContactNext(): void {
+        this.contactInfoForm.markAllAsTouched();
+        if (this.contactInfoForm.invalid) {
+            this.snackBar.open(this.t('snackInvalid'), 'OK', { duration: 4000 });
+            return;
+        }
+        this.loadPixelAndTrackLead();
+        // Pre-fill payment contact form with Section 1 data
+        const name = this.contactInfoForm.get('contactFullName')?.value;
+        const email = this.contactInfoForm.get('contactEmailAddress')?.value;
+        this.paymentContactForm.patchValue({
+            contactName: name,
+            contactEmail: email,
+        });
+        this.showMedicalSection = true;
+    }
+
+    /** Dynamically inject Meta Pixel and fire Lead event */
+    private loadPixelAndTrackLead(): void {
+        if (!(window as any).fbq) {
+            const n: any = ((window as any).fbq = function () {
+                n.callMethod
+                    ? n.callMethod.apply(n, arguments)
+                    : n.queue.push(arguments);
+            });
+            if (!(window as any)._fbq) (window as any)._fbq = n;
+            n.push = n;
+            n.loaded = true;
+            n.version = '2.0';
+            n.queue = [];
+            const t = document.createElement('script');
+            t.async = true;
+            t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+            const s = document.getElementsByTagName('script')[0];
+            s.parentNode?.insertBefore(t, s);
+        }
+        const fbq = (window as any).fbq;
+        fbq('init', '34862161576760674');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
     }
 }
