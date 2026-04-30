@@ -27,7 +27,7 @@ import emailjs from '@emailjs/browser';
 const TRANSLATIONS: Record<string, Record<string, string>> = {
     en: {
         title: 'Tadalafil Medical Evaluation',
-        subtitle: 'Please answer the following questions so we can determine if you are a candidate for Tadalafil (Cialis).',
+        subtitle: 'Answer the following questions to determine your profile\'s compatibility with our available options. This process is quick, secure, and for internal use only.',
         fieldsRequired: 'All fields are required',
         // Step labels
         stepPersonalInfo: 'Personal Information',
@@ -114,7 +114,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     },
     es: {
         title: 'Evaluación Médica de Tadalafil',
-        subtitle: 'Por favor responda las siguientes preguntas para determinar si usted es candidato para Tadalafil (Cialis).',
+        subtitle: 'Responde las siguientes preguntas para determinar la compatibilidad de tu perfil con nuestras opciones disponibles. Este proceso es rápido, seguro y de uso interno exclusivo.',
         fieldsRequired: 'Todos los campos son obligatorios',
         stepPersonalInfo: 'Información Personal',
         stepQuestions1: 'Historial Médico (1–4)',
