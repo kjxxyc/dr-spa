@@ -1,8 +1,8 @@
 # Dr. Adonis - Medical Forms
 
 This project contains two Angular-based medical forms:
-1. **Vitamins Prescription Form** - For requesting vitamin protocols.
-2. **Tadalafil Evaluation Form** - For assessing suitability for Tadalafil (Cialis).
+1. **Vitamins Prescription Form** (`/vitamins-prescription`) - For requesting vitamin protocols.
+2. **Men's Wellness Evaluation Form** (`/men-wellness`) - For assessing suitability for Tadalafil (Cialis).
 
 ## 📋 Prerequisites
 
@@ -37,7 +37,8 @@ This project contains two Angular-based medical forms:
 - **File**: `src/app/pages/authentication/vitamins-prescription/vitamins-prescription.component.ts`
 - **EmailJS Config**: Lines 375-377
 
-### Tadalafil Evaluation Form
+### Men's Wellness Evaluation Form (Tadalafil)
+- **Route**: `/men-wellness`
 - **File**: `src/app/pages/authentication/tadalafil-evaluation/tadalafil-evaluation.component.ts`
 - **EmailJS Config**: Lines 235-237
 
@@ -58,7 +59,7 @@ src/
 ├── app/
 │   ├── pages/
 │   │   └── authentication/
-│   │       ├── tadalafil-evaluation/  # Tadalafil evaluation form
+│   │       ├── tadalafil-evaluation/  # Men's Wellness form (route: /men-wellness)
 │   │       └── vitamins-prescription/   # Vitamins prescription form
 │   └── ...
 └── assets/
@@ -75,12 +76,22 @@ src/
 - EmailJS integration for notifications
 - Bilingual support (English/Spanish)
 
-### Tadalafil Evaluation Form
-- Multi-step form with 5 steps
+### Men's Wellness Evaluation Form
+- 3-section flow:
+  1. **Contact Info** — Name + Email + security message (Meta Pixel `Lead` fires here)
+  2. **Medical Questions** — Stepper with personal info + 8 medical questions
+  3. **Payment** — Contact details + Clover payment (Meta Pixel `Purchase` fires here)
 - Cardiovascular risk assessment
-- Payment integration (PayPal/Clover)
+- Payment integration (Clover)
 - EmailJS integration for notifications
 - Bilingual support (English/Spanish)
+
+## 🔒 Meta Pixel Integration
+
+- **Global pixel** (`index.html`): Fires `PageView` on all pages **except** `/men-wellness` and `/vitamins-prescription`
+- **Men's Wellness form**: Pixel is dynamically injected in Section 1 only (fires `Lead`). Section 3 fires `Purchase` on Clover payment.
+- **Vitamins form**: No pixel tracking
+- **Facebook Domain Verification**: Meta tag added to `<head>` in `index.html`
 
 ## 📝 Notes
 

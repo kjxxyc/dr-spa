@@ -64,7 +64,7 @@ export const AuthenticationRoutes: Routes = [
           ),
       },
       {
-        path: 'tadalafil-evaluation',
+        path: 'men-wellness',
         loadComponent: () =>
           import('./tadalafil-evaluation/tadalafil-evaluation.component').then(
             (m) => m.TadalafilEvaluationComponent
