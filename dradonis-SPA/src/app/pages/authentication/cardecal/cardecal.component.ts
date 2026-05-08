@@ -38,7 +38,9 @@ export class CardecalComponent {
   lang: 'en' | 'es' = 'en';
 
   constructor(private translate: TranslateService) {
-    this.lang = this.translate.currentLang as 'en' | 'es' || 'en';
+    this.translate.setDefaultLang('en');
+    this.lang = (this.translate.currentLang as 'en' | 'es') || 'en';
+    this.translate.use(this.lang);
   }
 
   get otherFlagIcon(): string {
