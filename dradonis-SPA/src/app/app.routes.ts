@@ -7,6 +7,13 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'cardecal',
+    loadComponent: () =>
+      import('./pages/authentication/cardecal/cardecal.component').then(
+        (m) => m.CardecalComponent
+      ),
+  },
+  {
     path: 'landing',
     loadChildren: () =>
       import('./pages/authentication/authentication.routes').then(

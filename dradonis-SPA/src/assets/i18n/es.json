@@ -159,5 +159,64 @@
     "reviewsTitle": "Lo Que Dicen Nuestros Pacientes",
     "reviewsSubtitle": "Vea lo que los pacientes dicen sobre su experiencia con el Dr. Adonis y nuestra clínica en Google.",
     "reviewsCta": "VER TODAS LAS RESEÑAS EN GOOGLE"
+  },
+  "cardecal": {
+    "title": "Clínica del Dr. Adonis",
+    "subtitle": "Soluciones de salud integrales y personalizadas diseñadas para tratar la causa raíz.",
+    "btnAppointment": "HAGA UNA CITA",
+    "btnWhatsapp": "CHATEAR POR WHATSAPP",
+    "whatsappLink": "https://api.whatsapp.com/send/?phone=13053355424&text=Hola%2C+deseo+informaci%C3%B3n&type=phone_number&app_absent=0",
+    "services": {
+      "hormone": {
+        "title": "Terapia hormonal",
+        "summary": "Restaure su energía, vitalidad y equilibrio con nuestra terapia de reemplazo hormonal bio-idéntica.",
+        "btn": "Más información"
+      },
+      "testosterone": {
+        "title": "Testosterona",
+        "summary": "Optimice sus niveles de testosterona para mejorar la masa muscular, la energía y el rendimiento general.",
+        "btn": "Más información"
+      },
+      "peptides": {
+        "title": "Péptidos",
+        "summary": "Terapias avanzadas con péptidos para acelerar la curación, reducir la inflamación y mejorar los procesos antienvejecimiento.",
+        "btn": "Más información"
+      },
+      "menopause": {
+        "title": "Menopausia",
+        "summary": "Apoyo integral y tratamientos para transitar la menopausia de forma fluida y aliviar sus síntomas.",
+        "btn": "Más información"
+      },
+      "weight": {
+        "title": "Pérdida de peso",
+        "summary": "Programas de pérdida de peso personalizados que abordan las causas metabólicas raíz para resultados sostenibles.",
+        "btn": "Más información"
+      },
+      "glp1": {
+        "title": "GLP-1s",
+        "summary": "Manejo médico efectivo del peso utilizando terapias modernas GLP-1 combinadas con orientación de estilo de vida.",
+        "btn": "Más información"
+      },
+      "ed": {
+        "title": "DE (Disfunción Eréctil)",
+        "summary": "Soluciones y tratamientos discretos y efectivos para la disfunción eréctil adaptados a sus necesidades específicas.",
+        "btn": "Más información"
+      },
+      "functional": {
+        "title": "Medicina Funcional",
+        "summary": "Un enfoque de causa raíz para su salud, tratando a la persona en su totalidad en lugar de solo síntomas aislados.",
+        "btn": "Más información"
+      },
+      "video": {
+        "title": "Video consulta",
+        "summary": "Consultas médicas convenientes y privadas con el Dr. Adonis desde la comodidad de su hogar.",
+        "btn": "Hacer una consulta"
+      },
+      "noVisit": {
+        "title": "Sin visita a la consulta",
+        "summary": "Obtenga sus evaluaciones médicas y recetas completamente en línea sin tener que pisar un consultorio.",
+        "btn": "Hacer una consulta"
+      }
+    }
   }
 }

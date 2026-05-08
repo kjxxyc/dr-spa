@@ -159,5 +159,64 @@
     "reviewsTitle": "What Our Patients Say",
     "reviewsSubtitle": "See what patients are saying about their experience with Dr. Adonis and our clinic on Google.",
     "reviewsCta": "SEE ALL REVIEWS ON GOOGLE"
+  },
+  "cardecal": {
+    "title": "Dr. Adonis Clinic",
+    "subtitle": "Comprehensive, personalized healthcare solutions designed to treat the root cause.",
+    "btnAppointment": "MAKE AN APPOINTMENT",
+    "btnWhatsapp": "CHAT ON WHATSAPP",
+    "whatsappLink": "https://api.whatsapp.com/send/?phone=13053355424&text=Hello%2C+I+would+like+more+information&type=phone_number&app_absent=0",
+    "services": {
+      "hormone": {
+        "title": "Hormone Replacement",
+        "summary": "Restore your energy, vitality, and balance with our bio-identical hormone replacement therapy.",
+        "btn": "More information"
+      },
+      "testosterone": {
+        "title": "Testosterone",
+        "summary": "Optimize your testosterone levels to improve muscle mass, energy, and overall performance.",
+        "btn": "More information"
+      },
+      "peptides": {
+        "title": "Peptides",
+        "summary": "Advanced peptide therapies to accelerate healing, reduce inflammation, and enhance anti-aging processes.",
+        "btn": "More information"
+      },
+      "menopause": {
+        "title": "Menopause",
+        "summary": "Comprehensive support and treatments to smoothly navigate menopause and alleviate its symptoms.",
+        "btn": "More information"
+      },
+      "weight": {
+        "title": "Weight Loss",
+        "summary": "Personalized weight loss programs addressing metabolic root causes for sustainable results.",
+        "btn": "More information"
+      },
+      "glp1": {
+        "title": "GLP-1s",
+        "summary": "Effective medical weight management utilizing modern GLP-1 therapies combined with lifestyle guidance.",
+        "btn": "More information"
+      },
+      "ed": {
+        "title": "ED (Erectile Dysfunction)",
+        "summary": "Discreet, effective solutions and treatments for erectile dysfunction tailored to your specific needs.",
+        "btn": "More information"
+      },
+      "functional": {
+        "title": "Functional Medicine",
+        "summary": "A root-cause approach to your health, treating the whole person rather than just isolated symptoms.",
+        "btn": "More information"
+      },
+      "video": {
+        "title": "Video Consultation",
+        "summary": "Convenient and private medical consultations with Dr. Adonis from the comfort of your home.",
+        "btn": "Make a consultation"
+      },
+      "noVisit": {
+        "title": "No Doctor Office Visit",
+        "summary": "Get your medical evaluations and prescriptions entirely online without stepping into an office.",
+        "btn": "Make a consultation"
+      }
+    }
   }
 }
