@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { forkJoin } from 'rxjs';
 import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
 
 @Component({
@@ -38,11 +39,22 @@ export class CardecalComponent {
 
   activeServiceId: string | null = null;
   lang: 'en' | 'es' = 'en';
+  translationsReady = false;
 
   constructor(private translate: TranslateService, private dialog: MatDialog) {
     this.translate.setDefaultLang('en');
     this.lang = (this.translate.currentLang as 'en' | 'es') || 'en';
     this.translate.use(this.lang);
+
+    forkJoin([
+      this.translate.getTranslation('en'),
+      this.translate.getTranslation('es')
+    ]).subscribe(() => { this.translationsReady = true; });
+  }
+
+  getText(key: string, lang: 'en' | 'es'): string {
+    const dict = (this.translate.translations[lang] || {}) as any;
+    return key.split('.').reduce((o, k) => (o ? o[k] : ''), dict) || '';
   }
 
   openAppointment(): void {

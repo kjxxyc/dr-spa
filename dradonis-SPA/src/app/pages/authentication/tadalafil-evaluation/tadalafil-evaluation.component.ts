@@ -21,6 +21,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import emailjs from '@emailjs/browser';
 
 // ---------- translations ----------
@@ -72,6 +73,8 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         submit: 'Submit Evaluation',
         sending: 'Sending...',
         // Messages
+        reviewingTitle: 'Reviewing your evaluation...',
+        reviewingMsg: 'A healthcare provider is reviewing your responses. This will only take a moment.',
         successTitle: 'Evaluation Reviewed Successfully!',
         successMsg: 'Dr. Adonis has reviewed your evaluation. Please complete your contact information and proceed to payment.',
         paymentTitle: 'Contact Information & Payment',
@@ -153,6 +156,8 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         back: 'Atrás',
         submit: 'Enviar Evaluación',
         sending: 'Enviando...',
+        reviewingTitle: 'Revisando su evaluación...',
+        reviewingMsg: 'Un proveedor de salud está revisando sus respuestas. Esto tomará solo un momento.',
         successTitle: '¡Evaluación Revisada Exitosamente!',
         successMsg: 'El Dr. Adonis ha revisado su evaluación. Por favor complete sus datos de contacto y proceda al pago.',
         paymentTitle: 'Información de Contacto y Pago',
@@ -214,7 +219,8 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         MatStepperModule,
         MatCheckboxModule,
         MatSnackBarModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatProgressSpinnerModule
     ],
     templateUrl: './tadalafil-evaluation.component.html',
 })
@@ -222,6 +228,7 @@ export class TadalafilEvaluationComponent implements OnInit {
     lang: 'en' | 'es' = 'en';
     isSubmitting = false;
     submitted = false;
+    isReviewingEvaluation = false;
     confirmCheck = false;
     showMedicalSection = false; // Controls Section 1 → Section 2 transition
 
@@ -409,8 +416,12 @@ export class TadalafilEvaluationComponent implements OnInit {
         }
 
         // No email sent here — the admin + client notification is sent when clicking "Pay with Clover"
-        this.submitted = true;
-        this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
+        this.isReviewingEvaluation = true;
+        setTimeout(() => {
+            this.isReviewingEvaluation = false;
+            this.submitted = true;
+            this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
+        }, 4800);
     }
 
     onPayPal(): void {
@@ -489,7 +500,7 @@ export class TadalafilEvaluationComponent implements OnInit {
                     const fbq = (window as any).fbq;
                     if (fbq) {
                         fbq('track', 'Lead');
-                        fbq('track', 'Purchase', { value: 69.00, currency: 'USD' });
+                        fbq('track', 'Purchase', { value: 19.99, currency: 'USD' });
                     }
                     // Small delay so the pixel events fire before Clover opens
                     setTimeout(() => {
