@@ -49,7 +49,7 @@
         <p>{{ 'services.functional.p1' | translate }}</p>
         <p>{{ 'services.functional.p2' | translate }}</p>
         <p class="service-cta-text">{{ 'services.functional.p3' | translate }}</p>
-        <a href="tel:+13052047816" class="service-btn primary">
+        <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn primary">
           <mat-icon>calendar_today</mat-icon>
           {{ 'services.btnAppointment' | translate }}
         </a>
@@ -75,7 +75,7 @@
         <p>{{ 'services.hormone.p1' | translate }}</p>
         <p>{{ 'services.hormone.p2' | translate }}</p>
         <p class="service-cta-text">{{ 'services.hormone.p3' | translate }}</p>
-        <a href="tel:+13052047816" class="service-btn primary">
+        <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn primary">
           <mat-icon>calendar_today</mat-icon>
           {{ 'services.hormone.btn' | translate }}
         </a>
@@ -124,7 +124,7 @@
         <h3 class="service-subtitle">{{ 'services.weight.readyTitle' | translate }}</h3>
         <p>{{ 'services.weight.readyText' | translate }}</p>
 
-        <a href="tel:+13052047816" class="service-btn accent">
+        <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn accent">
           <mat-icon>fitness_center</mat-icon>
           {{ 'services.weight.btn' | translate }}
         </a>

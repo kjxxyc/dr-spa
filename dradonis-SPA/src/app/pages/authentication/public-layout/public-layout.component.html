@@ -43,7 +43,7 @@
       </nav>
 
       <!-- CTA Button (desktop only) -->
-      <button mat-raised-button color="primary" class="cta-button desktop-only">
+      <button mat-raised-button color="primary" class="cta-button desktop-only" (click)="openAppointment()">
         {{ 'header.cta' | translate }}
       </button>
 
@@ -88,7 +88,7 @@
         </a>
       </nav>
 
-      <button mat-raised-button color="primary" class="mobile-cta-button">
+      <button mat-raised-button color="primary" class="mobile-cta-button" (click)="openAppointment()">
         {{ 'header.cta' | translate }}
       </button>
 

@@ -5,11 +5,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
 
 @Component({
   selector: 'app-cardecal',
   standalone: true,
-  imports: [CommonModule, TranslateModule, MatButtonModule, MatIconModule, RouterModule],
+  imports: [CommonModule, TranslateModule, MatButtonModule, MatIconModule, RouterModule, MatDialogModule],
   templateUrl: './cardecal.component.html',
   styleUrls: ['./cardecal.component.scss'],
   animations: [
@@ -37,10 +39,18 @@ export class CardecalComponent {
   activeServiceId: string | null = null;
   lang: 'en' | 'es' = 'en';
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private dialog: MatDialog) {
     this.translate.setDefaultLang('en');
     this.lang = (this.translate.currentLang as 'en' | 'es') || 'en';
     this.translate.use(this.lang);
+  }
+
+  openAppointment(): void {
+    this.dialog.open(AppointmentDialogComponent, {
+      width: '600px',
+      maxWidth: '95vw',
+      autoFocus: false
+    });
   }
 
   get otherFlagIcon(): string {

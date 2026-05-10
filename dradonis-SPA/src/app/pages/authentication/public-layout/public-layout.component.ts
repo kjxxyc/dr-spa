@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
 
 @Component({
     selector: 'app-public-layout',
@@ -13,7 +15,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
         RouterModule,
         MatButtonModule,
         MatIconModule,
-        TranslateModule
+        TranslateModule,
+        MatDialogModule
     ],
     templateUrl: './public-layout.component.html',
     styleUrls: ['./public-layout.component.scss']
@@ -22,10 +25,18 @@ export class PublicLayoutComponent {
     currentLang: string = 'en';
     menuOpen: boolean = false;
 
-    constructor(private translate: TranslateService) {
+    constructor(private translate: TranslateService, private dialog: MatDialog) {
         this.translate.setDefaultLang('en');
         this.currentLang = this.translate.currentLang || 'en';
         this.translate.use(this.currentLang);
+    }
+
+    openAppointment(): void {
+        this.dialog.open(AppointmentDialogComponent, {
+            width: '600px',
+            maxWidth: '95vw',
+            autoFocus: false
+        });
     }
 
     toggleMenu() {

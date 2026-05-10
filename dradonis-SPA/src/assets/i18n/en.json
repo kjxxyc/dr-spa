@@ -218,5 +218,19 @@
         "btn": "Make a consultation"
       }
     }
+  },
+  "appointmentModal": {
+    "title": "MAKE AN APPOINTMENT",
+    "subtitle": "To schedule an appointment, call our office at <strong style='color: #ea580c;'>305-204-7816</strong> / WhatsApp <a href='https://api.whatsapp.com/send/?phone=13053355424&text=Hello%2C+I+would+like+more+information&type=phone_number&app_absent=0' target='_blank' rel='noopener' style='color: #ea580c; font-weight: 700; text-decoration: none;'>+13053355424</a>. You can also fill the form below, and we'll contact you to book your appointment.",
+    "requiredMsg": "Fields marked with an * are required",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "reason": "Reason for Appointment",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "cancel": "Cancel",
+    "success": "Your appointment request has been sent!",
+    "error": "Failed to send request. Please try again."
   }
 }

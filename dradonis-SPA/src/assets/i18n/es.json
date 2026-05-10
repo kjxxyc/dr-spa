@@ -218,5 +218,19 @@
         "btn": "Hacer una consulta"
       }
     }
+  },
+  "appointmentModal": {
+    "title": "HAGA UNA CITA",
+    "subtitle": "Para programar una cita, llame a nuestra oficina al <strong style='color: #ea580c;'>305-204-7816</strong> / WhatsApp <a href='https://api.whatsapp.com/send/?phone=13053355424&text=Hola%2C+deseo+informaci%C3%B3n&type=phone_number&app_absent=0' target='_blank' rel='noopener' style='color: #ea580c; font-weight: 700; text-decoration: none;'>+13053355424</a>. También puede completar el formulario a continuación y lo contactaremos para reservar su cita.",
+    "requiredMsg": "Los campos marcados con * son obligatorios",
+    "fullName": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "phone": "Número de Teléfono",
+    "reason": "Razón de la Cita",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "cancel": "Cancelar",
+    "success": "¡Su solicitud de cita ha sido enviada!",
+    "error": "Error al enviar la solicitud. Intente de nuevo."
   }
 }
