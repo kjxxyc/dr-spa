@@ -5,6 +5,8 @@
       "shop": "SHOP",
       "home": "HOME",
       "services": "SERVICES",
+      "tools": "TOOLS",
+      "bmi": "BMI CALCULATOR",
       "videos": "VIDEOS & MORE",
       "contact": "CONTACT",
       "meetDoctor": "KNOW YOUR DOCTOR"
@@ -32,6 +34,37 @@
     "errorMessage": "Please enter a valid email address",
     "alreadySubscribed": "This email is already subscribed.",
     "errorGeneric": "Something went wrong. Please try again."
+  },
+  "bmi": {
+    "pageTitle": "BMI Calculator",
+    "pageSubtitle": "Calculate your Body Mass Index and assess your health risk in real time.",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "yourWeight": "YOUR WEIGHT",
+    "yourHeight": "YOUR HEIGHT",
+    "yourBmi": "YOUR BMI IS",
+    "classification": "Weight classification",
+    "risk": "Related disease risk",
+    "yourBmiClassification": "YOUR BMI CLASSIFICATION",
+    "class": {
+      "underweight": "Underweight",
+      "normal": "Normal weight",
+      "overweight": "Overweight",
+      "obese1": "Obesity Grade I",
+      "obese2": "Obesity Grade II",
+      "obese3": "Obesity Grade III"
+    },
+    "riskLevel": {
+      "low": "Low risk",
+      "medium": "Medium risk",
+      "high": "High risk",
+      "veryHigh": "Very high risk",
+      "extreme": "Extreme risk"
+    },
+    "ctaTitle": "Ready to take action?",
+    "ctaText": "Schedule a consultation with Dr. Adonis to discuss your results and personalized health plan.",
+    "ctaButton": "MAKE AN APPOINTMENT"
   },
   "servicesPromo": {
     "title": "Online Medical Services",

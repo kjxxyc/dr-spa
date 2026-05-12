@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
@@ -15,6 +16,7 @@ import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/a
         RouterModule,
         MatButtonModule,
         MatIconModule,
+        MatMenuModule,
         TranslateModule,
         MatDialogModule
     ],

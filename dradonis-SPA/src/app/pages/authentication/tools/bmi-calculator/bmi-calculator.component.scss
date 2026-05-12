@@ -1,0 +1,490 @@
+// Import Spike Admin theme variables (font, layout, colors, Material 3 tokens).
+@use '../../../../../assets/scss/variables' as *;
+
+:host {
+    display: block;
+    font-family: $font-family;
+    color: $text-color;
+}
+
+// ============================================================
+// PAGE
+// ============================================================
+.bmi-page {
+    padding: 20px $layout-padding;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bmi-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .bmi-title {
+        font-family: $font-family;
+        font-size: 30px;
+        font-weight: 800;
+        margin: 0 0 6px;
+        color: $text-color;
+    }
+
+    .bmi-subtitle {
+        font-size: 14px;
+        color: $text-color;
+        opacity: 0.7;
+        margin: 0;
+        max-width: 540px;
+        margin-inline: auto;
+    }
+}
+
+// ============================================================
+// CARD
+// ============================================================
+.bmi-card {
+    background: $white;
+    border: 1px solid $borderColor;
+    border-radius: $border-radius;
+    padding: 22px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.bmi-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 22px;
+    align-items: stretch;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// ============================================================
+// CONTROLS (left side)
+// ============================================================
+.bmi-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.bmi-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bmi-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $text-color;
+    opacity: 0.7;
+}
+
+// ----------- Gender avatars (centered, with horizontal icon+label) -----------
+.bmi-gender .gender-avatars {
+    display: flex;
+    gap: 14px;
+    justify-content: flex-start;
+}
+
+.gender-avatar {
+    flex: 1;
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+    padding: 10px 14px;
+    border: 2px solid transparent;
+    border-radius: $border-radius;
+    background: $light;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    font-family: $font-family;
+
+    .gender-icon {
+        // Material icons must be sized via width/height/font-size all together
+        width: 32px;
+        height: 32px;
+        font-size: 32px;
+        line-height: 32px;
+        color: $text-color;
+        opacity: 0.65;
+        display: block;
+        margin: 0 auto; // perfectly horizontally centered inside the button
+    }
+
+    .gender-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: $text-color;
+        text-align: center;
+        width: 100%;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &.selected {
+        border-color: $primary;
+        background: $light-primary;
+
+        .gender-icon {
+            color: $primary;
+            opacity: 1;
+        }
+    }
+}
+
+// ----------- Number input + unit toggle (all on the same row) -----------
+.bmi-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+// The textbox itself (pill-shaped, native spinner arrows preserved)
+.bmi-number-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 7px 14px;
+    border: 1.5px solid $borderformColor;
+    border-radius: 999px;
+    background: $white;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 700;
+    color: $text-color;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 3px $light-primary;
+    }
+}
+
+// kg/lb suffix label between input and toggle
+.bmi-unit-suffix {
+    font-size: 12px;
+    font-weight: 700;
+    color: $text-color;
+    opacity: 0.6;
+    pointer-events: none;
+    min-width: 18px;
+    text-align: center;
+}
+
+// The unit toggle BUTTON — now visually placed next to the input
+.unit-toggle {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border: 1.5px solid $primary;
+    border-radius: 999px;
+    background: $light-primary;
+    cursor: pointer;
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 700;
+    color: $primary;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+
+    .unit-toggle-icon {
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .unit-toggle-label {
+        line-height: 1;
+    }
+
+    &:hover {
+        background: $primary;
+        color: $white;
+        transform: scale(1.03);
+    }
+}
+
+// ----------- Range slider (cross-browser custom styling) -----------
+.bmi-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 999px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 6px;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: $primary;
+        border: 3px solid $white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+        cursor: pointer;
+        transition: transform 0.15s;
+    }
+
+    &::-webkit-slider-thumb:hover {
+        transform: scale(1.15);
+    }
+
+    &::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: $primary;
+        border: 3px solid $white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+        cursor: pointer;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $primary;
+        outline-offset: 4px;
+    }
+}
+
+// ============================================================
+// RESULT (right side)
+// ============================================================
+.bmi-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: $light;
+    border-radius: $border-radius;
+    text-align: center;
+
+    .bmi-result-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $text-color;
+        opacity: 0.7;
+        margin-bottom: 8px;
+    }
+
+    .bmi-value {
+        font-family: $font-family;
+        font-size: 70px;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 14px;
+        transition: color 0.25s;
+
+        &.color-low      { color: $success; }
+        &.color-medium   { color: $warning; }
+        &.color-high     { color: #f59e0b; }
+        &.color-veryHigh { color: #ea580c; }
+        &.color-extreme  { color: $error; }
+    }
+
+    .bmi-result-meta {
+        margin: 0;
+        font-size: 13px;
+        color: $text-color;
+        line-height: 1.6;
+    }
+
+    .bmi-result-row {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        dt, dd {
+            margin: 0;
+            opacity: 0.8;
+
+            strong {
+                opacity: 1;
+                color: $text-color;
+            }
+        }
+    }
+}
+
+// ============================================================
+// CLASSIFICATION CHART (6 boxes)
+// ============================================================
+.bmi-chart-wrapper {
+    margin-top: 22px;
+}
+
+.bmi-chart-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 10px;
+}
+
+.bmi-chart {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+
+    @media (max-width: 700px) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 8px;
+    }
+}
+
+.bmi-range {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 12px 6px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    text-align: center;
+    min-height: 80px;
+
+    .range-label {
+        font-size: 13px;
+        font-weight: 700;
+        color: $text-color;
+    }
+
+    .range-name {
+        font-size: 11px;
+        font-weight: 600;
+        color: $text-color;
+        opacity: 0.85;
+    }
+
+    .range-risk {
+        font-size: 10px;
+        font-weight: 500;
+        color: $text-color;
+        opacity: 0.7;
+        margin-top: 2px;
+    }
+
+    // Category backgrounds — light/tinted variants of the theme tokens
+    // so they work in both light and dark modes.
+    &.cat-underweight { background: $light-secondary; }
+    &.cat-normal      { background: $light-success; }
+    &.cat-overweight  { background: $light-warning; }
+    &.cat-obese1      { background: rgba(245, 158, 11, 0.18); }
+    &.cat-obese2      { background: rgba(234, 88, 12, 0.22); }
+    &.cat-obese3      { background: $light-error; }
+
+    &.active {
+        border-color: $primary;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+}
+
+// ============================================================
+// CTA — APPOINTMENT
+// Lives INSIDE the result panel (right column), shown only when BMI
+// falls outside the healthy sweet-spot (20..23). See showAppointmentCta.
+// ============================================================
+.bmi-cta {
+    width: 100%;
+    margin-top: 18px;
+    padding: 16px 14px 18px;
+    background: $light-primary;
+    border-radius: $border-radius;
+    text-align: center;
+
+    .bmi-cta-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: $text-color;
+        margin: 0 0 4px;
+    }
+
+    .bmi-cta-text {
+        font-size: 12px;
+        color: $text-color;
+        opacity: 0.85;
+        line-height: 1.45;
+        margin: 0 0 14px;
+    }
+
+    // The actual call-to-action button — visually prominent, using the theme's
+    // primary green at full strength with a strong shadow so it draws the eye.
+    .bmi-cta-btn {
+        font-family: $font-family;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0 22px;
+        min-width: 100%;
+        min-height: 46px;
+        line-height: 46px;
+        border-radius: 999px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+        mat-icon {
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+// ============================================================
+// RESPONSIVE TWEAKS
+// ============================================================
+@media (max-width: 600px) {
+    .bmi-header .bmi-title {
+        font-size: 24px;
+    }
+
+    .bmi-result .bmi-value {
+        font-size: 54px;
+    }
+
+    .bmi-card {
+        padding: 16px;
+    }
+
+    .bmi-input-row {
+        gap: 6px;
+    }
+
+    .unit-toggle {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+}

@@ -5,6 +5,8 @@
       "shop": "TIENDA",
       "home": "INICIO",
       "services": "SERVICIOS",
+      "tools": "HERRAMIENTAS",
+      "bmi": "CALCULADORA DE IMC",
       "videos": "VIDEOS Y MÁS",
       "contact": "CONTACTO",
       "meetDoctor": "CONOCE A TU DOCTOR"
@@ -32,6 +34,37 @@
     "errorMessage": "Por favor ingrese un correo electrónico válido",
     "alreadySubscribed": "Este correo ya está suscrito.",
     "errorGeneric": "Algo salió mal. Inténtelo de nuevo."
+  },
+  "bmi": {
+    "pageTitle": "Calculadora de IMC",
+    "pageSubtitle": "Calcule su Índice de Masa Corporal y conozca su riesgo de salud en tiempo real.",
+    "gender": "Género",
+    "male": "Masculino",
+    "female": "Femenino",
+    "yourWeight": "TU PESO",
+    "yourHeight": "TU ALTURA",
+    "yourBmi": "TU IMC ES",
+    "classification": "Clasificación de peso",
+    "risk": "Riesgo de enfermedad relacionada",
+    "yourBmiClassification": "TU CLASIFICACIÓN DE IMC",
+    "class": {
+      "underweight": "Bajo peso",
+      "normal": "Peso normal",
+      "overweight": "Exceso de peso",
+      "obese1": "Obesidad Grado I",
+      "obese2": "Obesidad Grado II",
+      "obese3": "Obesidad Grado III"
+    },
+    "riskLevel": {
+      "low": "Riesgo bajo",
+      "medium": "Riesgo medio",
+      "high": "Riesgo alto",
+      "veryHigh": "Riesgo muy alto",
+      "extreme": "Riesgo extremo"
+    },
+    "ctaTitle": "¿Listo para tomar acción?",
+    "ctaText": "Agenda una consulta con el Dr. Adonis para revisar tus resultados y un plan de salud personalizado.",
+    "ctaButton": "HACER UNA CITA"
   },
   "servicesPromo": {
     "title": "Servicios Médicos en Línea",

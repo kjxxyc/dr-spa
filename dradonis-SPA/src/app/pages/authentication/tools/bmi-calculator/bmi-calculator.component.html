@@ -1,0 +1,136 @@
+<div class="bmi-page">
+  <!-- Page header -->
+  <header class="bmi-header">
+    <h1 class="bmi-title">{{ 'bmi.pageTitle' | translate }}</h1>
+    <p class="bmi-subtitle">{{ 'bmi.pageSubtitle' | translate }}</p>
+  </header>
+
+  <form [formGroup]="form" class="bmi-card">
+    <div class="bmi-grid">
+      <!-- ==================== LEFT: CONTROLS ==================== -->
+      <section class="bmi-controls">
+        <!-- Gender selector (visual only, doesn't affect calculation) -->
+        <div class="bmi-section bmi-gender">
+          <label class="bmi-section-label">{{ 'bmi.gender' | translate }}</label>
+          <div class="gender-avatars">
+            <button type="button"
+                    class="gender-avatar"
+                    [class.selected]="isGender('male')"
+                    (click)="selectGender('male')"
+                    [attr.aria-label]="'bmi.male' | translate"
+                    [attr.aria-pressed]="isGender('male')">
+              <mat-icon class="gender-icon" aria-hidden="true">man</mat-icon>
+              <span class="gender-label">{{ 'bmi.male' | translate }}</span>
+            </button>
+            <button type="button"
+                    class="gender-avatar"
+                    [class.selected]="isGender('female')"
+                    (click)="selectGender('female')"
+                    [attr.aria-label]="'bmi.female' | translate"
+                    [attr.aria-pressed]="isGender('female')">
+              <mat-icon class="gender-icon" aria-hidden="true">woman</mat-icon>
+              <span class="gender-label">{{ 'bmi.female' | translate }}</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Weight control -->
+        <div class="bmi-section">
+          <label class="bmi-section-label">{{ 'bmi.yourWeight' | translate }}</label>
+          <div class="bmi-input-row">
+            <input type="number"
+                   class="bmi-number-input"
+                   [value]="form.value.weight"
+                   (input)="updateWeight($any($event.target).value)"
+                   [min]="weightMin" [max]="weightMax" step="0.1"
+                   inputmode="decimal"
+                   [attr.aria-label]="'bmi.yourWeight' | translate">
+            <span class="bmi-unit-suffix">{{ weightUnit }}</span>
+            <button type="button" class="unit-toggle" (click)="toggleWeightSystem()"
+                    [attr.aria-label]="'Toggle ' + weightUnit">
+              <mat-icon class="unit-toggle-icon" aria-hidden="true">swap_horiz</mat-icon>
+              <span class="unit-toggle-label">{{ form.value.weightSystem === 'metric' ? 'lb' : 'kg' }}</span>
+            </button>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.weight"
+                 (input)="updateWeight($any($event.target).value)"
+                 [min]="weightMin" [max]="weightMax" step="0.1"
+                 [attr.aria-label]="'bmi.yourWeight' | translate">
+        </div>
+
+        <!-- Height control -->
+        <div class="bmi-section">
+          <label class="bmi-section-label">{{ 'bmi.yourHeight' | translate }}</label>
+          <div class="bmi-input-row">
+            <input type="number"
+                   class="bmi-number-input"
+                   [value]="form.value.height"
+                   (input)="updateHeight($any($event.target).value)"
+                   [min]="heightMin" [max]="heightMax" step="0.1"
+                   inputmode="decimal"
+                   [attr.aria-label]="'bmi.yourHeight' | translate">
+            <span class="bmi-unit-suffix">{{ heightUnit }}</span>
+            <button type="button" class="unit-toggle" (click)="toggleHeightSystem()"
+                    [attr.aria-label]="'Toggle ' + heightUnit">
+              <mat-icon class="unit-toggle-icon" aria-hidden="true">swap_horiz</mat-icon>
+              <span class="unit-toggle-label">{{ form.value.heightSystem === 'metric' ? 'in' : 'cm' }}</span>
+            </button>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.height"
+                 (input)="updateHeight($any($event.target).value)"
+                 [min]="heightMin" [max]="heightMax" step="0.1"
+                 [attr.aria-label]="'bmi.yourHeight' | translate">
+        </div>
+      </section>
+
+      <!-- ==================== RIGHT: RESULT ==================== -->
+      <aside class="bmi-result">
+        <div class="bmi-result-label">{{ 'bmi.yourBmi' | translate }}</div>
+        <div class="bmi-value" [ngClass]="bmiColorClass">{{ bmi }}</div>
+
+        <dl class="bmi-result-meta">
+          <div class="bmi-result-row">
+            <dt>{{ 'bmi.classification' | translate }}:</dt>
+            <dd><strong>{{ ('bmi.class.' + classification.key) | translate }}</strong></dd>
+          </div>
+          <div class="bmi-result-row">
+            <dt>{{ 'bmi.risk' | translate }}:</dt>
+            <dd><strong>{{ ('bmi.riskLevel.' + classification.risk) | translate }}</strong></dd>
+          </div>
+        </dl>
+
+        <!-- Appointment CTA — hidden when BMI is in the healthy sweet-spot (20..23) -->
+        <div class="bmi-cta" *ngIf="showAppointmentCta">
+          <h3 class="bmi-cta-title">{{ 'bmi.ctaTitle' | translate }}</h3>
+          <p class="bmi-cta-text">{{ 'bmi.ctaText' | translate }}</p>
+          <button mat-raised-button color="primary" type="button" class="bmi-cta-btn" (click)="openAppointment()">
+            <mat-icon>event</mat-icon>
+            {{ 'bmi.ctaButton' | translate }}
+          </button>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ==================== BOTTOM: CLASSIFICATION BAR ==================== -->
+    <div class="bmi-chart-wrapper">
+      <h3 class="bmi-chart-title">{{ 'bmi.yourBmiClassification' | translate }}</h3>
+      <div class="bmi-chart">
+        <div *ngFor="let r of ranges"
+             class="bmi-range"
+             [ngClass]="r.cssClass"
+             [class.active]="r.key === classification.key">
+          <span class="range-label">{{ r.range }}</span>
+          <span class="range-name">{{ ('bmi.class.' + r.key) | translate }}</span>
+          <span class="range-risk" *ngIf="r.key === classification.key">
+            {{ ('bmi.riskLevel.' + r.risk) | translate }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

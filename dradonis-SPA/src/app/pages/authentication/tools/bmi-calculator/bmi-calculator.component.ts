@@ -1,0 +1,190 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { AppointmentDialogComponent } from '../../../../shared/appointment-dialog/appointment-dialog.component';
+
+type Gender = 'male' | 'female';
+type System = 'metric' | 'imperial';
+type RiskLevel = 'low' | 'medium' | 'high' | 'veryHigh' | 'extreme';
+type ColorLevel = 'low' | 'medium' | 'high' | 'veryHigh' | 'extreme';
+type BmiKey = 'underweight' | 'normal' | 'overweight' | 'obese1' | 'obese2' | 'obese3';
+
+export interface BmiClass {
+    key: BmiKey;
+    range: string;
+    cssClass: string;
+    risk: RiskLevel;
+    color: ColorLevel;
+}
+
+export interface BmiRange {
+    key: BmiKey;
+    range: string;
+    cssClass: string;
+    risk: RiskLevel;
+}
+
+@Component({
+    selector: 'app-bmi-calculator',
+    standalone: true,
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatIconModule,
+        TranslateModule,
+    ],
+    templateUrl: './bmi-calculator.component.html',
+    styleUrls: ['./bmi-calculator.component.scss'],
+})
+export class BmiCalculatorComponent {
+    form: FormGroup;
+
+    /** Static catalog of the 6 BMI categories used to render the classification bar. */
+    readonly ranges: BmiRange[] = [
+        { key: 'underweight', range: '<18',   cssClass: 'cat-underweight', risk: 'low' },
+        { key: 'normal',      range: '18-25', cssClass: 'cat-normal',      risk: 'low' },
+        { key: 'overweight',  range: '25-30', cssClass: 'cat-overweight',  risk: 'medium' },
+        { key: 'obese1',      range: '30-35', cssClass: 'cat-obese1',      risk: 'high' },
+        { key: 'obese2',      range: '35-40', cssClass: 'cat-obese2',      risk: 'veryHigh' },
+        { key: 'obese3',      range: '40+',   cssClass: 'cat-obese3',      risk: 'extreme' },
+    ];
+
+    constructor(
+        private fb: FormBuilder,
+        private dialog: MatDialog,
+    ) {
+        this.form = this.fb.group({
+            gender: ['male' as Gender],
+            weightSystem: ['metric' as System],
+            weight: [70],
+            heightSystem: ['metric' as System],
+            height: [170],
+        });
+    }
+
+    // ============================================================
+    // Derived state — recomputed automatically by change detection
+    // on every form input change (same pattern as vitamins-prescription).
+    // ============================================================
+
+    /** BMI = weight(kg) / height(m)². Always normalizes to metric first. */
+    get bmi(): number {
+        const { weight, height, weightSystem, heightSystem } = this.form.value;
+        const w = Number(weight) || 0;
+        const h = Number(height) || 0;
+        const kg = weightSystem === 'metric' ? w : w * 0.453592;
+        const cm = heightSystem === 'metric' ? h : h * 2.54;
+        const m = cm / 100;
+        return m > 0 ? +(kg / (m * m)).toFixed(1) : 0;
+    }
+
+    /** Classifies the current BMI into one of 6 WHO categories. */
+    get classification(): BmiClass {
+        const v = this.bmi;
+        if (v < 18.5) return { key: 'underweight', range: '<18',   cssClass: 'cat-underweight', risk: 'low',      color: 'low' };
+        if (v < 25)   return { key: 'normal',      range: '18-25', cssClass: 'cat-normal',      risk: 'low',      color: 'low' };
+        if (v < 30)   return { key: 'overweight',  range: '25-30', cssClass: 'cat-overweight',  risk: 'medium',   color: 'medium' };
+        if (v < 35)   return { key: 'obese1',      range: '30-35', cssClass: 'cat-obese1',      risk: 'high',     color: 'high' };
+        if (v < 40)   return { key: 'obese2',      range: '35-40', cssClass: 'cat-obese2',      risk: 'veryHigh', color: 'veryHigh' };
+        return                { key: 'obese3',     range: '40+',   cssClass: 'cat-obese3',      risk: 'extreme',  color: 'extreme' };
+    }
+
+    /** CSS class applied to the big BMI number for color coding. */
+    get bmiColorClass(): string {
+        return `color-${this.classification.color}`;
+    }
+
+    /**
+     * The appointment CTA is hidden inside the healthy sweet-spot (IMC 20..23).
+     * Shown otherwise (underweight, mild-overweight, obesity ranges) where the
+     * user would actually benefit from booking a consultation with Dr. Adonis.
+     */
+    get showAppointmentCta(): boolean {
+        const v = this.bmi;
+        return v > 0 && (v < 20 || v > 23);
+    }
+
+    // ============================================================
+    // Slider ranges (dynamic based on current unit system)
+    // ============================================================
+
+    get weightMin(): number { return this.form.value.weightSystem === 'metric' ? 30  : 66; }
+    get weightMax(): number { return this.form.value.weightSystem === 'metric' ? 200 : 441; }
+    get heightMin(): number { return this.form.value.heightSystem === 'metric' ? 100 : 39; }
+    get heightMax(): number { return this.form.value.heightSystem === 'metric' ? 220 : 87; }
+    get weightUnit(): string { return this.form.value.weightSystem === 'metric' ? 'kg' : 'lb'; }
+    get heightUnit(): string { return this.form.value.heightSystem === 'metric' ? 'cm' : 'in'; }
+
+    // ============================================================
+    // Unit toggles — convert current value when switching system
+    // ============================================================
+
+    /** Toggle between kg and lb, converting the current weight value. */
+    toggleWeightSystem(): void {
+        const current = Number(this.form.value.weight) || 0;
+        const isMetric = this.form.value.weightSystem === 'metric';
+        this.form.patchValue({
+            weightSystem: isMetric ? 'imperial' : 'metric',
+            weight: isMetric
+                ? +(current * 2.20462).toFixed(1) // kg → lb
+                : +(current * 0.453592).toFixed(1), // lb → kg
+        });
+    }
+
+    /** Toggle between cm and in, converting the current height value. */
+    toggleHeightSystem(): void {
+        const current = Number(this.form.value.height) || 0;
+        const isMetric = this.form.value.heightSystem === 'metric';
+        this.form.patchValue({
+            heightSystem: isMetric ? 'imperial' : 'metric',
+            height: isMetric
+                ? +(current * 0.393701).toFixed(1) // cm → in
+                : +(current * 2.54).toFixed(1),    // in → cm
+        });
+    }
+
+    // ============================================================
+    // Explicit value updates from inputs.
+    // Using [value] + (input) handlers instead of formControlName on each input
+    // because two inputs sharing one FormControl can have subtle propagation
+    // issues — this is bulletproof and keeps slider + number-spinner always synced.
+    // ============================================================
+
+    updateWeight(raw: string | number): void {
+        const v = typeof raw === 'string' ? parseFloat(raw) : raw;
+        this.form.patchValue({ weight: isFinite(v) ? v : 0 });
+    }
+
+    updateHeight(raw: string | number): void {
+        const v = typeof raw === 'string' ? parseFloat(raw) : raw;
+        this.form.patchValue({ height: isFinite(v) ? v : 0 });
+    }
+
+    // ============================================================
+    // UI helpers
+    // ============================================================
+
+    selectGender(gender: Gender): void {
+        this.form.patchValue({ gender });
+    }
+
+    isGender(gender: Gender): boolean {
+        return this.form.value.gender === gender;
+    }
+
+    /** Opens the same appointment modal used by the global header CTA. */
+    openAppointment(): void {
+        this.dialog.open(AppointmentDialogComponent, {
+            width: '600px',
+            maxWidth: '95vw',
+            autoFocus: false,
+        });
+    }
+}

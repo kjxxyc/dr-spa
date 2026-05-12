@@ -53,6 +53,13 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.VideosComponent
               ),
           },
+          {
+            path: 'tools/bmi-calculator',
+            loadComponent: () =>
+              import('./tools/bmi-calculator/bmi-calculator.component').then(
+                (m) => m.BmiCalculatorComponent
+              ),
+          },
         ],
       },
       // Standalone pages (no shared header)
