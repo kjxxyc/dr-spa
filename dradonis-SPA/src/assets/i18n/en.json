@@ -18,7 +18,9 @@
     "title": "Miami's Leading Functional Medicine Expert",
     "subtitle": "Functional Medicine addresses disease at the root cause. Most chronic degenerative diseases, like Alzheimer's disease, Cardiovascular and Auto-immune diseases, weight gain, hormone imbalance, chronic fatigue, have multiple identifiable causes that need to be addressed at the same time.",
     "btnBook": "READ MY BOOK",
-    "btnSubscribe": "SUBSCRIBE TO NEWSLETTER"
+    "btnSubscribe": "SUBSCRIBE TO NEWSLETTER",
+    "statsYears": "20+",
+    "statsYearsLabel": "Years of Experience"
   },
   "newsletter": {
     "title": "Subscribe to Our Newsletter",
@@ -28,7 +30,9 @@
     "btnSubmit": "Subscribe",
     "btnCancel": "Cancel",
     "successMessage": "Thank you for subscribing!",
-    "errorMessage": "Please enter a valid email address"
+    "errorMessage": "Please enter a valid email address",
+    "alreadySubscribed": "This email is already subscribed.",
+    "errorGeneric": "Something went wrong. Please try again."
   },
   "servicesPromo": {
     "title": "Online Medical Services",
@@ -45,6 +49,7 @@
     }
   },
   "bookSection": {
+    "eyebrow": "Featured Book",
     "title": "Modern Medicine for Modern Times",
     "subtitle": "Discover the principles of Functional Medicine",
     "btnBuy": "BUY ON AMAZON",

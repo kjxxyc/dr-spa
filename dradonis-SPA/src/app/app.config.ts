@@ -7,6 +7,7 @@ import {
   HttpClient,
   provideHttpClient,
   withInterceptorsFromDi,
+  withJsonpSupport,
 } from '@angular/common/http';
 import { routes } from './app.routes';
 import {
@@ -39,7 +40,7 @@ export const appConfig: ApplicationConfig = {
       }),
       withComponentInputBinding()
     ),
-    provideHttpClient(withInterceptorsFromDi()),
+    provideHttpClient(withInterceptorsFromDi(), withJsonpSupport()),
     provideClientHydration(),
     provideAnimationsAsync(),
     importProvidersFrom(

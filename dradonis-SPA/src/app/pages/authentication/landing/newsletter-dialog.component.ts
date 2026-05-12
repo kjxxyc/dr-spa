@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-newsletter-dialog',
@@ -20,12 +22,16 @@ import { TranslateModule } from '@ngx-translate/core';
     MatInputModule,
     MatCheckboxModule,
     MatIconModule,
+    MatSnackBarModule,
     ReactiveFormsModule,
     TranslateModule
   ],
   template: `
     <div class="newsletter-dialog">
-      <h2 mat-dialog-title>{{ 'newsletter.title' | translate }}</h2>
+      <h2 mat-dialog-title>
+        <span class="dialog-emoji" aria-hidden="true">📰</span>
+        {{ 'newsletter.title' | translate }}
+      </h2>
       
       <mat-dialog-content>
         <p class="subtitle">{{ 'newsletter.subtitle' | translate }}</p>
@@ -65,7 +71,7 @@ import { TranslateModule } from '@ngx-translate/core';
           mat-raised-button 
           color="primary" 
           (click)="onSubmit()"
-          [disabled]="!newsletterForm.valid || submitted">
+          [disabled]="!newsletterForm.valid || isSubmitting || submitted">
           {{ 'newsletter.btnSubmit' | translate }}
         </button>
       </mat-dialog-actions>
@@ -75,6 +81,13 @@ import { TranslateModule } from '@ngx-translate/core';
     .newsletter-dialog {
       min-width: 400px;
       max-width: 500px;
+    }
+
+    .dialog-emoji {
+      font-size: 1.4em;
+      margin-right: 0.4rem;
+      vertical-align: middle;
+      line-height: 1;
     }
 
     .subtitle {
@@ -131,12 +144,27 @@ import { TranslateModule } from '@ngx-translate/core';
   `]
 })
 export class NewsletterDialogComponent {
+  // MailChimp embedded form endpoint for the "Adonis Maiquez, MD" audience.
+  // Extracted from the embedded form's <form action="..."> URL (Audience → Signup forms
+  // → Embedded form). The `/post` path is swapped for `/post-json` to return JSONP.
+  private readonly mailchimpUrl =
+    'https://DrAdonis.us17.list-manage.com/subscribe/post-json?u=555536d54c3e113be047e52c3&id=4860348781';
+
+  // Honeypot anti-bot field. MailChimp expects to receive this field empty
+  // alongside EMAIL; if missing, the submission may be flagged as spam.
+  // Name pattern: b_<u>_<id>
+  private readonly mailchimpHoneypot = 'b_555536d54c3e113be047e52c3_4860348781';
+
   newsletterForm: FormGroup;
   submitted = false;
+  isSubmitting = false;
 
   constructor(
     private fb: FormBuilder,
-    private dialogRef: MatDialogRef<NewsletterDialogComponent>
+    private dialogRef: MatDialogRef<NewsletterDialogComponent>,
+    private http: HttpClient,
+    private snackBar: MatSnackBar,
+    private translate: TranslateService
   ) {
     this.newsletterForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -145,18 +173,33 @@ export class NewsletterDialogComponent {
   }
 
   onSubmit() {
-    if (this.newsletterForm.valid) {
-      // TODO: Integrate with email service (Mailchimp, SendGrid, etc.)
-      const emailData = this.newsletterForm.value;
-      console.log('Newsletter subscription:', emailData);
+    if (!this.newsletterForm.valid || this.isSubmitting) return;
+    this.isSubmitting = true;
+    const email = this.newsletterForm.value.email;
 
-      this.submitted = true;
+    const params = new HttpParams()
+      .set('EMAIL', email)
+      .set(this.mailchimpHoneypot, '');
+    const url = `${this.mailchimpUrl}&${params.toString()}`;
 
-      // Close dialog after 2 seconds
-      setTimeout(() => {
-        this.dialogRef.close(emailData);
-      }, 2000);
-    }
+    this.http.jsonp<{ result: 'success' | 'error'; msg: string }>(url, 'c')
+      .subscribe({
+        next: (res) => {
+          this.isSubmitting = false;
+          if (res.result === 'success') {
+            this.submitted = true;
+            setTimeout(() => this.dialogRef.close({ email }), 2000);
+          } else {
+            const already = /already subscribed/i.test(res.msg);
+            const key = already ? 'newsletter.alreadySubscribed' : 'newsletter.errorGeneric';
+            this.snackBar.open(this.translate.instant(key), 'OK', { duration: 5000 });
+          }
+        },
+        error: () => {
+          this.isSubmitting = false;
+          this.snackBar.open(this.translate.instant('newsletter.errorGeneric'), 'OK', { duration: 5000 });
+        }
+      });
   }
 
   onCancel() {

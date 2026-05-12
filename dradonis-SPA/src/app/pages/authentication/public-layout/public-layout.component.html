@@ -20,10 +20,6 @@
 
       <!-- Navigation Menu (desktop only) -->
       <nav class="navigation desktop-nav">
-        <a routerLink="/landing/meet-doctor" class="nav-link" routerLinkActive="active-link">
-          <mat-icon>person</mat-icon>
-          {{ 'header.nav.meetDoctor' | translate }}
-        </a>
         <a routerLink="/landing/shop" class="nav-link" routerLinkActive="active-link">
           <mat-icon>shopping_bag</mat-icon>
           {{ 'header.nav.shop' | translate }}
@@ -66,10 +62,6 @@
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav" [class.open]="menuOpen">
       <nav class="mobile-nav-links">
-        <a routerLink="/landing/meet-doctor" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
-          <mat-icon>person</mat-icon>
-          {{ 'header.nav.meetDoctor' | translate }}
-        </a>
         <a routerLink="/landing/shop" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>shopping_bag</mat-icon>
           {{ 'header.nav.shop' | translate }}

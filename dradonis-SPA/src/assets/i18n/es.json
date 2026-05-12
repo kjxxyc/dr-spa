@@ -18,7 +18,9 @@
     "title": "Líder Experto En Medicina Funcional En Miami",
     "subtitle": "La Medicina Funcional aborda la enfermedad desde su raíz. La mayoría de las enfermedades degenerativas crónicas, como el Alzheimer, las enfermedades cardiovasculares y autoinmunes, el aumento de peso, el desequilibrio hormonal y la fatiga crónica, tienen múltiples causas identificables que deben abordarse simultáneamente.",
     "btnBook": "LEE MI LIBRO",
-    "btnSubscribe": "SUSCRIBIRSE AL BOLETÍN"
+    "btnSubscribe": "SUSCRIBIRSE AL BOLETÍN",
+    "statsYears": "20+",
+    "statsYearsLabel": "Años de Experiencia"
   },
   "newsletter": {
     "title": "Suscríbase a Nuestro Boletín",
@@ -28,7 +30,9 @@
     "btnSubmit": "Suscribirse",
     "btnCancel": "Cancelar",
     "successMessage": "¡Gracias por suscribirse!",
-    "errorMessage": "Por favor ingrese un correo electrónico válido"
+    "errorMessage": "Por favor ingrese un correo electrónico válido",
+    "alreadySubscribed": "Este correo ya está suscrito.",
+    "errorGeneric": "Algo salió mal. Inténtelo de nuevo."
   },
   "servicesPromo": {
     "title": "Servicios Médicos en Línea",
@@ -45,6 +49,7 @@
     }
   },
   "bookSection": {
+    "eyebrow": "Libro Destacado",
     "title": "Medicina Moderna para Tiempos Modernos",
     "subtitle": "Descubre los principios de la Medicina Funcional",
     "btnBuy": "COMPRAR EN AMAZON",
