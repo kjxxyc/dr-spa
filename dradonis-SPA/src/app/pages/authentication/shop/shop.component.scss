@@ -216,9 +216,9 @@ $background-light: #F7FAFC;
 }
 
 .fs-product-card {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    grid-template-rows: 1fr auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
     background: white;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
@@ -230,93 +230,58 @@ $background-light: #F7FAFC;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     }
 
-    .fs-product-image {
-        grid-row: 1 / 3;
+    // Hides cards filtered out by the category selector. Using a class (display: none)
+    // instead of *ngIf so the Fullscript embed scripts injected on ngAfterViewInit
+    // don't get destroyed when the user switches filters.
+    &.fs-hidden {
+        display: none;
+    }
+
+    // Container where the Fullscript oEmbed script is injected at runtime (LEFT side).
+    // The widget self-replaces this slot with a product card (image + name + price + Buy button).
+    // Fixed width so the widget renders compact and the doctor's description gets room on the right.
+    .fs-embed-slot {
+        flex: 0 0 220px;
+        min-height: 280px;
+        padding: 0.75rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 1.5rem;
         background: #fafafa;
         border-right: 1px solid #f0f0f0;
 
-        img {
-            max-width: 140px;
-            max-height: 180px;
-            object-fit: contain;
-        }
-    }
-
-    .fs-product-info {
-        padding: 1.5rem 1.5rem 0.5rem;
-
-        .fs-product-desc {
-            font-size: 14px;
-            color: $text-medium;
-            line-height: 1.6;
-            margin: 0;
-        }
-    }
-
-    .fs-product-footer {
-        padding: 0.5rem 1.5rem 1.5rem;
-
-        .fs-product-name {
-            font-size: 16px;
-            font-weight: 700;
-            color: $text-dark;
-            margin: 0.75rem 0 0.25rem;
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-        }
-
-        .fs-product-subtitle {
-            font-size: 13px;
-            color: $text-light;
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        .fs-view-btn {
-            display: block;
+        // The Fullscript widget renders an iframe or its own DOM — let it fill the slot.
+        > * {
             width: 100%;
-            text-align: center;
-            background: $primary-green;
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            text-transform: capitalize;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(129, 175, 90, 0.25);
-
-            &:hover {
-                background: $primary-green-dark;
-                box-shadow: 0 4px 12px rgba(129, 175, 90, 0.4);
-                transform: translateY(-1px);
-            }
-        }
-
-        .fs-powered-by {
-            margin-top: 0.75rem;
-            text-align: center;
-
-            span {
-                font-size: 11px;
-                color: $text-light;
-            }
         }
     }
 
-    @media (max-width: 600px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+    // Doctor's custom description (RIGHT side, vertically centered).
+    .fs-desc {
+        flex: 1 1 auto;
+        padding: 1.25rem 1.5rem;
+        font-size: 14px;
+        color: $text-medium;
+        line-height: 1.6;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
 
-        .fs-product-image {
-            grid-row: auto;
-            padding: 2rem;
+    // Stack vertically on mobile / narrow viewports for readability.
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        .fs-embed-slot {
+            flex: 0 0 auto;
+            width: 100%;
             border-right: none;
             border-bottom: 1px solid #f0f0f0;
+        }
+
+        .fs-desc {
+            display: block;
+            padding: 1rem 1.25rem 1.25rem;
         }
     }
 }

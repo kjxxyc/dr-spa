@@ -68,26 +68,22 @@
         </div>
 
         <!-- Product Grid -->
+        <!--
+             Each card hosts the Fullscript oEmbed widget (injected programmatically
+             in shop.component.ts via Renderer2). The widget renders the live product
+             image, name, price, and Buy button with `store_slug: "dradonis"` so
+             every sale is attributed to Dr. Adonis for commission.
+             The doctor's custom description (multilingual) is rendered below the widget.
+        -->
         <div class="fs-catalog-container">
-            <div class="fs-product-card" *ngFor="let product of filteredProducts">
-                <div class="fs-product-image">
-                    <img [src]="product.image" [alt]="product.name"
-                    loading="lazy"
-                    onerror="this.src='assets/images/drug-bag-dradonis.webp'">
-                </div>
-                <div class="fs-product-info">
-                    <p class="fs-product-desc">{{ product.descriptionKey | translate }}</p>
-                </div>
-                <div class="fs-product-footer">
-                    <h4 class="fs-product-name">{{ product.name }}</h4>
-                    <span class="fs-product-subtitle">{{ product.subtitle }}</span>
-                    <a [href]="product.storeUrl" target="_blank" rel="noopener noreferrer" class="fs-view-btn">
-                        {{ 'shop.viewProduct' | translate }}
-                    </a>
-                    <div class="fs-powered-by">
-                        <span>💚 {{ 'shop.poweredBy' | translate }}</span>
-                    </div>
-                </div>
+            <div class="fs-product-card"
+                 *ngFor="let product of fullscriptProducts"
+                 [class.fs-hidden]="!isVisible(product.category)"
+                 [attr.data-cat]="product.category">
+                <!-- Slot where the Fullscript oEmbed script is injected at runtime -->
+                <div #embedSlot class="fs-embed-slot" [attr.aria-label]="product.name"></div>
+                <!-- Doctor's custom description (translated via i18n) -->
+                <div class="fs-desc">{{ product.descriptionKey | translate }}</div>
             </div>
         </div>
     </section>

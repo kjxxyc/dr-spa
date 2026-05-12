@@ -5,7 +5,6 @@
       "shop": "SHOP",
       "home": "HOME",
       "services": "SERVICES",
-      "protocols": "PROTOCOLS",
       "videos": "VIDEOS & MORE",
       "contact": "CONTACT",
       "meetDoctor": "KNOW YOUR DOCTOR"
@@ -84,8 +83,6 @@
     "filterAntiaging": "🧬 Anti-Aging",
     "filterGut": "🦠 Digestive Health",
     "filterMenopause": "🌸 Menopause Support",
-    "viewProduct": "View product",
-    "poweredBy": "Powered by Fullscript",
     "products": {
       "pectasol": "PectaSol: Longevity and total well-being. Supports balanced inflammation, cardiovascular health, and a strong immune system.",
       "mitochondrial": "Mitochondrial NRG: Optimizes cellular energy and mitochondrial function for maximum vitality and energy.",
