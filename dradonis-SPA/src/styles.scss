@@ -402,3 +402,17 @@ body {
         }
     }
 }
+
+/* Language selector dialog (cardecal first-visit prompt) */
+.lang-selector-panel .mat-mdc-dialog-container,
+.lang-selector-panel .mdc-dialog__surface {
+    border-radius: 16px !important;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(17, 34, 64, 0.28) !important;
+    padding: 0 !important;
+}
+
+.lang-selector-backdrop {
+    background: rgba(17, 34, 64, 0.55);
+    backdrop-filter: blur(4px);
+}

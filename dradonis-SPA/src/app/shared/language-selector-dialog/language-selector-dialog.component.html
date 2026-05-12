@@ -1,0 +1,41 @@
+<div class="lang-dialog">
+  <div class="lang-dialog__header">
+    <h2 class="lang-dialog__title">
+      <span class="lang-dialog__title-en">Choose your language</span>
+      <span class="lang-dialog__title-sep" aria-hidden="true">·</span>
+      <span class="lang-dialog__title-es">Elige tu idioma</span>
+    </h2>
+  </div>
+
+  <div class="lang-dialog__options" role="group" aria-label="Language selection">
+    <button
+      type="button"
+      class="lang-card"
+      (click)="select('en')"
+      (mouseenter)="hovered = 'en'"
+      (mouseleave)="hovered = null"
+      [class.is-hovered]="hovered === 'en'"
+      aria-label="Select English"
+    >
+      <div class="lang-card__flag">
+        <img src="/assets/images/flag/icon-flag-en.svg" alt="USA flag" />
+      </div>
+      <div class="lang-card__label">English</div>
+    </button>
+
+    <button
+      type="button"
+      class="lang-card"
+      (click)="select('es')"
+      (mouseenter)="hovered = 'es'"
+      (mouseleave)="hovered = null"
+      [class.is-hovered]="hovered === 'es'"
+      aria-label="Seleccionar Español"
+    >
+      <div class="lang-card__flag">
+        <img src="/assets/images/flag/icon-flag-es.svg" alt="Spain flag" />
+      </div>
+      <div class="lang-card__label">Español</div>
+    </button>
+  </div>
+</div>

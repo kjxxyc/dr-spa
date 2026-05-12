@@ -292,8 +292,8 @@ export class TadalafilEvaluationComponent implements OnInit {
 
     get bannerImage(): string {
         return this.lang === 'en'
-            ? '/assets/images/tadalafil-head-en.webp'
-            : '/assets/images/tadalafil-head-es.webp';
+            ? '/assets/images/tadalafil-cialis-en.webp'
+            : '/assets/images/tadalafil-cialis-es.webp';
     }
 
     get flagIcon(): string {

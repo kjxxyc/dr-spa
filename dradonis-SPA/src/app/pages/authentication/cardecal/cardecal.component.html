@@ -54,16 +54,14 @@
             <mat-icon>{{ s.icon }}</mat-icon>
           </div>
           <div class="service-titles">
-            <h3 class="lang-en">{{ getText('cardecal.services.' + s.id + '.title', 'en') }}</h3>
-            <h3 class="lang-es">{{ getText('cardecal.services.' + s.id + '.title', 'es') }}</h3>
+            <h3>{{ 'cardecal.services.' + s.id + '.title' | translate }}</h3>
           </div>
           <mat-icon class="expand-icon">{{ activeServiceId === s.id ? 'expand_less' : 'expand_more' }}</mat-icon>
         </div>
 
         <div class="service-dropdown" [@dropdownState]="activeServiceId === s.id ? 'visible' : 'hidden'">
           <div class="service-summaries">
-            <p class="lang-en">{{ getText('cardecal.services.' + s.id + '.summary', 'en') }}</p>
-            <p class="lang-es">{{ getText('cardecal.services.' + s.id + '.summary', 'es') }}</p>
+            <p>{{ 'cardecal.services.' + s.id + '.summary' | translate }}</p>
           </div>
           <div class="service-actions mt-3">
             <a href="javascript:void(0)" (click)="openAppointment(); $event.stopPropagation()"

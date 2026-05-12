@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -8,6 +8,12 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { forkJoin } from 'rxjs';
 import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
+import {
+  LanguageSelectorDialogComponent,
+  LangChoice
+} from '../../../shared/language-selector-dialog/language-selector-dialog.component';
+
+const CARDECAL_LANG_STORAGE_KEY = 'dradonis.cardecal.langSelected';
 
 @Component({
   selector: 'app-cardecal',
@@ -23,7 +29,7 @@ import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/a
     ])
   ]
 })
-export class CardecalComponent {
+export class CardecalComponent implements OnInit {
   services = [
     { id: 'hormone', icon: 'science' },
     { id: 'testosterone', icon: 'fitness_center' },
@@ -52,9 +58,30 @@ export class CardecalComponent {
     ]).subscribe(() => { this.translationsReady = true; });
   }
 
-  getText(key: string, lang: 'en' | 'es'): string {
-    const dict = (this.translate.translations[lang] || {}) as any;
-    return key.split('.').reduce((o, k) => (o ? o[k] : ''), dict) || '';
+  ngOnInit(): void {
+    const alreadySelected = typeof localStorage !== 'undefined'
+      && localStorage.getItem(CARDECAL_LANG_STORAGE_KEY) === 'true';
+    if (alreadySelected) return;
+
+    const ref = this.dialog.open(LanguageSelectorDialogComponent, {
+      width: '520px',
+      maxWidth: '95vw',
+      disableClose: true,
+      autoFocus: false,
+      panelClass: 'lang-selector-panel',
+      backdropClass: 'lang-selector-backdrop'
+    });
+
+    ref.afterClosed().subscribe((choice: LangChoice | undefined) => {
+      if (!choice) return;
+      this.lang = choice;
+      this.translate.use(choice);
+      try {
+        localStorage.setItem(CARDECAL_LANG_STORAGE_KEY, 'true');
+      } catch {
+        // localStorage unavailable (private mode, etc.) — ignore.
+      }
+    });
   }
 
   openAppointment(): void {

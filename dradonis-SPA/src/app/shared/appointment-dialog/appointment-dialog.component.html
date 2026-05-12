@@ -1,6 +1,7 @@
 <div style="padding: 24px 32px; font-family: 'Inter', 'Roboto', sans-serif;">
-  <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: #112240; font-size: 24px; margin-top: 0; margin-bottom: 16px; text-transform: uppercase; text-align: center;">
-    {{ 'appointmentModal.title' | translate }}
+  <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: #112240; font-size: 24px; margin-top: 0; margin-bottom: 16px; text-transform: uppercase; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <mat-icon style="color: #ea580c; font-size: 28px; width: 28px; height: 28px;">event</mat-icon>
+    <span>{{ 'appointmentModal.title' | translate }}</span>
   </h2>
   
   <p style="color: #4A5568; font-size: 15px; margin-bottom: 24px; line-height: 1.5;" [innerHTML]="'appointmentModal.subtitle' | translate"></p>
