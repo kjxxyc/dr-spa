@@ -58,28 +58,39 @@
     </div>
   </section>
 
-  <!-- Google Reviews Section -->
-  <section class="reviews-section">
-    <h2 class="section-title">{{ 'videos.reviewsTitle' | translate }}</h2>
-    <p class="reviews-subtitle">{{ 'videos.reviewsSubtitle' | translate }}</p>
+  <!-- Specialized Protocols Section -->
+  <section class="protocols-section">
+    <div class="protocols-container">
+      <h2 class="protocols-title">{{ 'videos.protocolsTitle' | translate }}</h2>
+      <p class="protocols-subtitle">{{ 'videos.protocolsSubtitle' | translate }}</p>
 
-    <div class="google-maps-embed">
-      <iframe [src]="googleMapsUrl"
-        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+      <div class="protocols-grid">
+        <article class="protocol-card protocol-card--stress">
+          <div class="protocol-icon">
+            <mat-icon>self_improvement</mat-icon>
+          </div>
+          <span class="protocol-eyebrow">{{ 'videos.protocols.stressManagement.tagline' | translate }}</span>
+          <h3 class="protocol-name">{{ 'videos.protocols.stressManagement.title' | translate }}</h3>
+          <p class="protocol-description">{{ 'videos.protocols.stressManagement.description' | translate }}</p>
+          <a href="javascript:void(0)" (click)="openAppointment()" class="protocol-btn">
+            <mat-icon>calendar_today</mat-icon>
+            {{ 'services.btnAppointment' | translate }}
+          </a>
+        </article>
 
-    <div class="reviews-cta">
-      <a href="https://www.google.com/maps/place/Dr.+Adonis+(Adonis+Maiquez,+MD)/@25.7863004,-80.213865,17z/data=!3m2!4b1!5s0x88d9b6c0c0c2090b:0xc07bada0e8f71290!4m6!3m5!1s0x88d9b76d1434265b:0xfa2d0d393c1e7ec3!8m2!3d25.7863004!4d-80.2112901!16s%2Fg%2F11h0707mvm"
-        target="_blank" rel="noopener noreferrer" class="review-btn">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
-          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-        </svg>
-        {{ 'videos.reviewsCta' | translate }}
-      </a>
+        <article class="protocol-card protocol-card--gut">
+          <div class="protocol-icon">
+            <mat-icon>restaurant</mat-icon>
+          </div>
+          <span class="protocol-eyebrow">{{ 'videos.protocols.gutHealing.tagline' | translate }}</span>
+          <h3 class="protocol-name">{{ 'videos.protocols.gutHealing.title' | translate }}</h3>
+          <p class="protocol-description">{{ 'videos.protocols.gutHealing.description' | translate }}</p>
+          <a href="javascript:void(0)" (click)="openAppointment()" class="protocol-btn">
+            <mat-icon>calendar_today</mat-icon>
+            {{ 'services.btnAppointment' | translate }}
+          </a>
+        </article>
+      </div>
     </div>
   </section>
 

@@ -182,39 +182,67 @@
     text-align: center;
 }
 
-// The unit toggle BUTTON — now visually placed next to the input
-.unit-toggle {
-    flex: 0 0 auto;
-    display: inline-flex;
+// Section header — label on the left, unit segmented control on the right.
+.bmi-section-header {
+    display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 6px 12px;
-    border: 1.5px solid $primary;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+}
+
+// Segmented control for kg ↔ lb and cm ↔ in.
+// Implemented with Material's mat-button-toggle-group so the active option
+// is unmistakable as a toggle (replaces the old single-button "swap" UI that
+// confused the client — they couldn't tell it was interactive).
+.unit-toggle-group {
     border-radius: 999px;
-    background: $light-primary;
-    cursor: pointer;
+    overflow: hidden;
+    border: 1.5px solid $primary;
     font-family: $font-family;
-    font-size: 12px;
-    font-weight: 700;
-    color: $primary;
-    transition: background 0.2s, transform 0.15s;
-    white-space: nowrap;
+    height: 30px;
+    background: $white;
 
-    .unit-toggle-icon {
-        width: 14px;
-        height: 14px;
-        font-size: 14px;
-        line-height: 14px;
+    ::ng-deep .mat-button-toggle {
+        background: transparent;
+        border: none;
+        color: $primary;
+        transition: background 0.2s, color 0.2s;
+
+        .mat-button-toggle-label-content {
+            line-height: 28px;
+            padding: 0 16px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background: $light-primary;
+        }
     }
 
-    .unit-toggle-label {
-        line-height: 1;
-    }
-
-    &:hover {
+    ::ng-deep .mat-button-toggle-checked {
         background: $primary;
-        color: $white;
-        transform: scale(1.03);
+
+        .mat-button-toggle-label-content {
+            color: $white;
+        }
+
+        &:hover {
+            background: $primary;
+        }
+    }
+
+    // Hide the default Material focus overlay / ripple borders that look ugly inside a pill.
+    ::ng-deep .mat-button-toggle-focus-overlay {
+        display: none;
+    }
+
+    ::ng-deep .mat-button-toggle + .mat-button-toggle {
+        border-left: 1px solid $primary;
     }
 }
 
@@ -483,8 +511,13 @@
         gap: 6px;
     }
 
-    .unit-toggle {
-        padding: 5px 10px;
-        font-size: 11px;
+    .unit-toggle-group {
+        height: 28px;
+
+        ::ng-deep .mat-button-toggle .mat-button-toggle-label-content {
+            line-height: 26px;
+            padding: 0 12px;
+            font-size: 11px;
+        }
     }
 }

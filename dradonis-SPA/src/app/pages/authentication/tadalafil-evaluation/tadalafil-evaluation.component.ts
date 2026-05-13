@@ -76,7 +76,11 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         reviewingTitle: 'Reviewing your evaluation...',
         reviewingMsg: 'A healthcare provider is reviewing your responses. This will only take a moment.',
         successTitle: 'Evaluation Reviewed Successfully!',
-        successMsg: 'Dr. Adonis has reviewed your evaluation. Please complete your contact information and proceed to payment.',
+        successMsg: 'A health care provider has reviewed your evaluation. Please complete your contact information and proceed to payment.',
+        // Product card shown post-approval, before the payment step
+        productName: 'Tadalafil (Cialis®) 20 mg',
+        productDetails: 'Bottle of 30 tablets',
+        productPriceLabel: 'one-time payment',
         paymentTitle: 'Contact Information & Payment',
         paymentSubtitle: 'Please provide your details before proceeding to payment.',
         payWithPaypal: 'Pay with PayPal',
@@ -159,7 +163,11 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         reviewingTitle: 'Revisando su evaluación...',
         reviewingMsg: 'Un proveedor de salud está revisando sus respuestas. Esto tomará solo un momento.',
         successTitle: '¡Evaluación Revisada Exitosamente!',
-        successMsg: 'El Dr. Adonis ha revisado su evaluación. Por favor complete sus datos de contacto y proceda al pago.',
+        successMsg: 'Un proveedor de atención médica ha revisado su evaluación. Por favor complete sus datos de contacto y proceda al pago.',
+        // Tarjeta de producto mostrada tras la aprobación, antes del pago
+        productName: 'Tadalafil (Cialis®) 20 mg',
+        productDetails: 'Frasco de 30 tabletas',
+        productPriceLabel: 'pago único',
         paymentTitle: 'Información de Contacto y Pago',
         paymentSubtitle: 'Por favor ingrese sus datos antes de proceder al pago.',
         payWithPaypal: 'Pagar con PayPal',
@@ -223,6 +231,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         MatProgressSpinnerModule
     ],
     templateUrl: './tadalafil-evaluation.component.html',
+    styleUrls: ['./tadalafil-evaluation.component.scss'],
 })
 export class TadalafilEvaluationComponent implements OnInit {
     lang: 'en' | 'es' = 'en';

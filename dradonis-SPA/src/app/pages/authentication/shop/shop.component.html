@@ -3,45 +3,51 @@
     <section class="fs-shop-section">
         <h1 class="shop-title">{{ 'shop.title' | translate }}</h1>
 
-        <!-- Featured Products -->
+        <!-- Featured Products (compact horizontal) -->
         <div class="featured-products">
             <!-- Featured: Amazon Book -->
-            <div class="featured-card featured-book">
+            <a [href]="'bookSection.bookUrl' | translate" target="_blank" rel="noopener noreferrer"
+               class="featured-card featured-book">
                 <div class="featured-image">
-                    <img src="assets/images/book-dradonis.webp" alt="{{ 'bookSection.title' | translate }}" loading="lazy" width="300" height="390">
+                    <img src="assets/images/book-dradonis.webp"
+                         alt="{{ 'bookSection.title' | translate }}"
+                         loading="lazy" width="110" height="143">
                 </div>
                 <div class="featured-content">
                     <h3>{{ 'bookSection.title' | translate }}</h3>
                     <p>{{ 'bookSection.subtitle' | translate }}</p>
-                    <a [href]="'bookSection.bookUrl' | translate"
-                        target="_blank" rel="noopener noreferrer" class="featured-btn">
+                    <span class="featured-btn">
                         <mat-icon>shopping_cart</mat-icon>
                         {{ 'bookSection.btnBuy' | translate }}
-                    </a>
+                    </span>
                 </div>
-            </div>
+            </a>
 
             <!-- Featured: Vagustim -->
-            <div class="featured-card featured-vagustim">
+            <a href="https://vagustim.io/" target="_blank" rel="noopener noreferrer"
+               class="featured-card featured-vagustim">
                 <div class="featured-image">
                     <img src="https://dradonis.com/wp-content/uploads/2026/01/vagutism.png?_t=1769392187"
-                        alt="{{ 'vagustim.title' | translate }}">
+                         alt="{{ 'vagustim.title' | translate }}" loading="lazy">
                 </div>
                 <div class="featured-content">
                     <h3>{{ 'vagustim.title' | translate }}</h3>
-                    <p>{{ 'vagustim.description1' | translate }}</p>
-                    <p>{{ 'vagustim.description2' | translate }}</p>
-                    <p>{{ 'vagustim.description3' | translate }}</p>
+                    <p class="featured-desc-clamp">{{ 'vagustim.description1' | translate }}</p>
                     <p class="discount-code">
-                        {{ 'vagustim.code' | translate }} <strong>DRADONIS10</strong> {{ 'vagustim.discount' | translate
-                        }}
+                        {{ 'vagustim.code' | translate }} <strong>DRADONIS10</strong>
+                        {{ 'vagustim.discount' | translate }}
                     </p>
-                    <a href="https://vagustim.io/" target="_blank" rel="noopener noreferrer" class="featured-btn">
-                        {{ 'vagustim.btnBuy' | translate }}
-                    </a>
+                    <span class="featured-btn">{{ 'vagustim.btnBuy' | translate }}</span>
                 </div>
-            </div>
+            </a>
         </div>
+
+        <!-- Scroll Hint Banner -->
+        <a href="#shop-catalog" class="shop-scroll-hint">
+            <span class="scroll-hint-count">{{ fullscriptProducts.length }}</span>
+            <span class="scroll-hint-text">{{ 'shop.scrollHint' | translate }}</span>
+            <mat-icon class="scroll-hint-arrow">arrow_drop_down</mat-icon>
+        </a>
 
         <!-- Filter Bar -->
         <div class="fs-filterbar">
@@ -72,7 +78,7 @@
              every sale is attributed to Dr. Adonis for commission.
              The doctor's custom description (multilingual) is rendered below the widget.
         -->
-        <div class="fs-catalog-container">
+        <div class="fs-catalog-container" id="shop-catalog">
             <div class="fs-product-card"
                  *ngFor="let product of fullscriptProducts"
                  [class.fs-hidden]="!isVisible(product.category)"

@@ -111,6 +111,7 @@
   },
   "shop": {
     "title": "Health Products",
+    "scrollHint": "health products below",
     "filterAll": "🛒 All Products",
     "filterGeneral": "🌿 General Wellness",
     "filterAntiaging": "🧬 Anti-Aging",
@@ -134,39 +135,84 @@
     "heroTitle": "Our Services",
     "heroSubtitle": "Comprehensive, personalized healthcare solutions designed to treat the root cause — not just the symptoms.",
     "btnAppointment": "MAKE AN APPOINTMENT",
-    "functional": {
-      "title": "Functional Medicine",
-      "p1": "Functional medicine follows an approach fairly different from conventional medicinal practices, as we know them. This type of medicine recognizes each individual as being unique and, therefore, disproves the theory of offering standard solutions in targeting health conditions.",
-      "p2": "Dr. Adonis, a firm believer in functional medicine and its place amongst potent therapies, is a member of the Institute for Functional Medicine, the most prestigious and recognized organization for functional medicine in the country. He has an in-depth understanding of its principles and their application. He is not only a proponent of functional medicine, but is also an able ambassador of its benefits. He has empowered thousands of patients to take ownership of their health and set them on their journey to wellness.",
-      "p3": "If a meaningful and healthy life filled with better understanding of your body and mind is your calling, ensure you get in touch with our clinic today and book yourself an appointment with the best version of you.",
-      "videoCaption": "Watch: What is Functional Medicine? — Dr. Adonis Maiquez, MD"
-    },
-    "hormone": {
-      "title": "Bio-Identical Hormone Therapy",
-      "subtitle": "Why Choose BioIdentical Hormone Replacement Therapy?",
-      "p1": "Think hormonal changes are just a woman's concern? Think again. Menopause in women and its counterpart, andropause or late-onset hypogonadism in men, are natural stages of life that can significantly affect your well-being. But there's good news!",
-      "p2": "Dr. Adonis, a renowned functional medicine specialist in Miami, FL, is here to guide you seamlessly through these transitions. His expertise in bio-identical hormone therapy offers a holistic and highly effective approach to rebalance your body and rejuvenate your life.",
-      "p3": "Whether you're near or far, our personalized in-person and virtual consultations are your gateway to a harmonious and vibrant lifestyle. Why wait to feel your best?",
-      "btn": "BOOK YOUR CONSULTATION TODAY",
-      "feature1": "In-Person & Virtual Consultations",
-      "feature2": "Holistic Approach",
-      "feature3": "Men & Women"
-    },
-    "weight": {
-      "title": "Personalized Weight Loss",
-      "promoBadge": "SAVE 30%",
-      "promoText": "Our Personalized, Functional Medicine-Based Weight Loss Program is Now Just $976 — Save 30% Off the Regular Price of $1,395! This comprehensive package includes a choice of an in-person or virtual initial consultation, a custom-designed weight loss plan, a three-month supply of Semaglutide, fat burner shots, and specially formulated vitamins.",
-      "promoCode": "Click here and use code NYS30 to claim your discount!",
-      "p1": "At the core of our approach, Dr. Adonis understands that successful weight loss is a journey unique to each individual. He's helped thousands navigate this path, addressing weight-related challenges through a holistic methodology that combines dietary guidance, customized physical activity programs, and behavioral strategies. Our philosophy moves beyond the temporary fixes of fad diets and crash diets, focusing instead on sustainable, life-changing results.",
-      "p2": "The key to our success lies in recognizing that no two people are alike — in their metabolism, body composition, or personal health needs. That's why we don't believe in a one-size-fits-all solution. Our process begins with a comprehensive health analysis, leading to a deep understanding of your body and its specific requirements. This insight forms the foundation of your personalized weight loss plan, crafted by Dr. Adonis to align perfectly with your individual needs and preferences.",
-      "p3": "If you're ready to embark on a journey towards a healthier, more vibrant you, we're here to guide every step of the way. Our personalized weight loss program is more than a plan; it's a partnership in transforming your life.",
-      "readyTitle": "Ready to Begin Your Transformation?",
-      "readyText": "Take the first step today. Contact us to schedule your appointment and start your journey with a team committed to your success.",
-      "btn": "BEGIN YOUR WEIGHT LOSS JOURNEY TODAY",
-      "feature1": "Semaglutide Included",
-      "feature2": "Custom Weight Loss Plan",
-      "feature3": "Fat Burner Shots",
-      "feature4": "Specialized Vitamins"
+    "btnSeeMore": "See more",
+    "btnSeeLess": "See less",
+    "badgeFeatured": "Featured",
+    "scrollHint": "specialized services below",
+    "listTitle": "Complete List of Services",
+    "list": {
+      "brainProtocol": {
+        "title": "The Brain Protocol® — Alzheimer's & Cognitive Decline",
+        "description": "SPECIALIZED CARE FOR ALZHEIMER'S DISEASE AND MILD COGNITIVE DECLINE. Globally, hundreds of millions are affected by neurological disorders. In the United States, Alzheimer's disease alone affects an estimated 5.7 million individuals, with statistics trending upward. Mild Cognitive Decline — forgetfulness, language and thinking difficulties beyond normal aging — afflicts millions more.\n\nDr. Adonis uses The Brain Protocol®, his proprietary comprehensive and multivariable approach customized to each patient's needs — not only to prevent neurological diseases like Alzheimer's and Parkinson's, but also to help regenerate the brain.\n\nAs a board-certified neurosurgeon using functional medicine to deliver complete physical, mental, and spiritual wellness, Dr. Adonis is one of the few specialists in Miami combining cutting-edge neuroscience with root-cause healing. Book an appointment today to keep your brain healthy and agile."
+      },
+      "painManagement": {
+        "title": "Pain Management",
+        "description": "Pain is a complex process and Neurosciences approach pain management from different angles. To be effective, pain management must address the entire loop — starting at the originating site (joint, spine, muscle, tendon) and addressing the nerves that bring signals to the brain.\n\nWe specialize in: joint and spine steroid/biological injections; nerve and plexus blocks; radiofrequency ablations. Dr. Adonis, trained as a neurosurgeon, is a member of the American Academy of Pain Management and the World Institute of Pain.\n\nWe have helped hundreds of patients with pain from car accidents, sport injuries, slip and falls, and chronic conditions like osteoarthritis and inflammatory arthritis."
+      },
+      "functionalMedicine": {
+        "title": "Functional Medicine",
+        "description": "Functional medicine follows an approach fairly different from conventional medicinal practices. This type of medicine recognizes each individual as being unique and, therefore, disproves the theory of offering standard solutions in targeting health conditions.\n\nDr. Adonis, a firm believer in functional medicine, is a member of the Institute for Functional Medicine — the most prestigious and recognized organization in the country. He has empowered thousands of patients to take ownership of their health and start their journey to wellness.\n\nIf a meaningful and healthy life with better understanding of your body and mind is your calling — get in touch with our clinic today."
+      },
+      "executivePhysical": {
+        "title": "Executive Physical Program",
+        "description": "To live a long, fruitful life we need to take care of our health. Being healthy means not just being disease-free but having mental, physical, and emotional well-being. Constant stress, faulty eating habits, and unhealthy lifestyles have brought deterioration in overall health.\n\nThe Executive Physical Program helps you get a clear picture of your current health status and begin your journey to a healthier you."
+      },
+      "weightLoss": {
+        "title": "Personalized Weight Loss",
+        "description": "SAVE 30% — Our Personalized Functional Medicine-Based Weight Loss Program is now just $976 (regular price $1,395). This comprehensive package includes a choice of in-person or virtual initial consultation, a custom-designed weight loss plan, a three-month supply of Semaglutide, fat burner shots, and specially formulated vitamins. Use code NYS30 to claim your discount.\n\nDr. Adonis understands that successful weight loss is unique to each individual. His holistic methodology combines dietary guidance, customized physical activity programs, and behavioral strategies — moving beyond temporary fixes toward sustainable, life-changing results.\n\nOur process begins with a comprehensive health analysis, leading to a personalized plan crafted to align with your individual needs."
+      },
+      "hormoneTherapy": {
+        "title": "Bio-Identical Hormone Therapy",
+        "description": "Think hormonal changes are just a woman's concern? Think again. Menopause in women and its counterpart — andropause or late-onset hypogonadism in men — are natural stages of life that can significantly affect your well-being.\n\nDr. Adonis, a renowned functional medicine specialist in Miami, FL, is here to guide you seamlessly through these transitions. His expertise in bio-identical hormone therapy offers a holistic and highly effective approach to rebalance your body and rejuvenate your life.\n\nWhether you're near or far, our personalized in-person and virtual consultations are your gateway to a harmonious and vibrant lifestyle."
+      },
+      "menopauseAndropause": {
+        "title": "Menopause and Andropause",
+        "description": "Dr. Adonis believes that menopause and andropause are phases that can be experienced with fulfillment and dignity. The experience varies from person to person depending on hereditary factors, constitution, and lifestyle.\n\nDr. A advocates an individualized approach that factors in all variables and suggests simple, sustainable measures to equip the body to manage these transitions with minimal medical intervention.\n\nIf you are looking to sail through andropause and menopause effortlessly and naturally without unnecessary medication — book an appointment today."
+      },
+      "agingBiomarkers": {
+        "title": "Aging Biomarkers",
+        "description": "Dr. A has helped thousands of patients embrace aging with a positive outlook and alternative therapies. By minimizing dependency on medication, he equips patients to gain better control over their lives and habits, providing an environment more conducive to coping with aging.\n\nIf you are looking to add life to your years — book an appointment with our clinic."
+      },
+      "specializedLabs": {
+        "title": "International Laboratory Testing",
+        "description": "ACCESS TO INTERNATIONAL LABORATORY NETWORKS — A KEY DIFFERENTIATOR. Dr. Adonis' clinic partners with leading international laboratories and operates its own on-site lab, providing access to advanced diagnostic tests rarely available elsewhere in the United States. This unique combination means specialized panels can be run immediately, without traveling abroad.\n\nWe offer comprehensive testing through our global lab network, including: international hormone analysis, cancer markers, genetic and epigenetic testing, food sensitivities, toxin levels, heavy metals, micronutrients, and advanced biomarker panels not commonly offered by conventional clinics.\n\nThis worldwide laboratory access, combined with Dr. Adonis' functional medicine expertise, enables precise diagnosis and timely intervention — whether you are local to Miami or visiting from abroad."
+      },
+      "detoxification": {
+        "title": "Detoxification",
+        "description": "Our body houses several disease-causing organisms and toxins. While the body has its own way of fighting back, the toxins we are exposed to daily need something extra to combat their effects on our health.\n\nA detoxification program is important to prevent toxin overdose and fight it off when it occurs. If you are ready for a healthier, less toxic version of yourself — book an appointment today."
+      },
+      "ivVitamin": {
+        "title": "Intravenous (IV) Vitamin Therapy",
+        "description": "Dr. Adonis has been hugely successful combining regular IV vitamin therapy with a modified diet and lifestyle regimen for a more productive, sustainable solution. He incorporates patient history and diet plans into the choice of treatment and produces consistent results.\n\nHe has achieved consistent results across patients of varying age groups and disorders — ranging from minor vitamin deficiencies to cancer. For an immediate boost of wellness and a more wholesome approach — book an appointment."
+      },
+      "autoimmune": {
+        "title": "Autoimmune Diseases",
+        "description": "Complex as they may be, autoimmune diseases can be diagnosed using a functional medicine protocol to arrive at the root cause. A complete study of hormones, vitamins, metabolic processes, inflammation, intestinal health, and other markers offers an in-depth view of the immune system.\n\nDr. Adonis has designed a multipronged approach for managing autoimmune diseases, enabling a near-normal and gratifying life. Conditions covered include thyroid disorders and various forms of arthritis."
+      },
+      "fibromyalgia": {
+        "title": "Fibromyalgia / Chronic Fatigue",
+        "description": "An increasingly common ailment, over 3% of the US population suffers from fibromyalgia. Although it can occur in almost anyone, women seem to be more prone to it. Fibromyalgia is marked by widespread pain throughout the body without any clearly identifiable cause.\n\nDr. Adonis has helped hundreds of patients suffering from FMS, some of whom have completely resolved their symptoms. Through years of study and practice, he has found a sustainable combination of techniques to help patients heal, build a sense of self, and live meaningful, pain-free lives."
+      },
+      "brainHealth": {
+        "title": "Brain Health — Alzheimer's & Cognitive Decline Prevention",
+        "description": "FOCUSED ON ALZHEIMER'S PREVENTION AND COGNITIVE DECLINE. Brain health is probably the most critical factor for overall well-being and quality of life. A healthy brain is responsible for optimal physiological functioning and cognitive processes — memory, language, focus, decision-making.\n\nDr. Adonis is a board-certified neurosurgeon, and through his extensive practice of functional medicine, helps patients understand the correlation between neurological processes and aging. He uses a multifunctional approach for those at risk of or suffering from Alzheimer's, Parkinson's, Mild Cognitive Decline, and other neurodegenerative conditions.\n\nAlthough his treatment finds the best results in cases detected early, all his patients benefit significantly from his recommendations. Early intervention is key — book your assessment today."
+      },
+      "neurotransmitters": {
+        "title": "Brain Neurotransmitters",
+        "description": "Neurotransmitters are chemicals in the brain that send signals to the nerves. These signal molecules are responsible for several functions including learning, energy, and psychological states. An imbalance can have serious consequences for the body.\n\nDr. Adonis, a trained neurosurgeon, has mastered the practice of neuroscience in conjunction with functional medicine to give patients improved results that last longer with little to no side effects. Restore balance, well-being, and positivity to your life."
+      },
+      "intestinalHealth": {
+        "title": "Intestinal Health",
+        "description": "Just as the brain controls voluntary and involuntary movement, the intestine looks after the immunity of the body. Good intestinal health helps with overall health.\n\nDr. Adonis employs the principles of functional medicine to improve gut health. A healthy intestine is not just the result of good genes, but the product of great care. Follow your gut and take time for yourself."
+      },
+      "telomeres": {
+        "title": "Telomeres",
+        "description": "Telomeres are important predictors of age and longevity. Telomere health is an important factor in keeping the body healthy, slowing aging, and ensuring a long life.\n\nDr. Adonis has enabled numerous patients to understand their body, the aging process, and how their telomere health contributes to it. He guides them to formulate methods to keep their body healthier and combat aging effectively."
+      },
+      "sexualHealth": {
+        "title": "Sexual Health",
+        "description": "Dr. Adonis believes that today it is easy to use hormone therapy to neutralize imbalances and improve sexual health and the overall experience couples face. He has enabled hundreds of couples to understand their sexual needs, get in touch with their physical state, and bring about improved sexual health through hormone therapy and couples talk therapy.\n\nHe stresses that both partners must be actively engaged, involved, and invested equally — sexual health cannot be defined or tackled alone."
+      }
     },
     "bottomCta": {
       "title": "Ready to Transform Your Health?",
@@ -191,9 +237,25 @@
       "v9": "Fibromyalgia / Chronic Fatigue / Adrenal Exhaustion",
       "v10": "Lab Tests in Functional Medicine"
     },
-    "reviewsTitle": "What Our Patients Say",
-    "reviewsSubtitle": "See what patients are saying about their experience with Dr. Adonis and our clinic on Google.",
-    "reviewsCta": "SEE ALL REVIEWS ON GOOGLE"
+    "protocolsTitle": "Specialized Protocols",
+    "protocolsSubtitle": "Premium, science-backed programs designed to address the root causes — from stress to gut health.",
+    "protocols": {
+      "stressManagement": {
+        "title": "Functional Stress Management",
+        "tagline": "Master the art of stress. Transform your relationship with it.",
+        "description": "Welcome to the Stress Management Mastery, where your journey to holistic well-being begins with mastering the art of stress management.\n\nManaging stress is not just about coping; it's about thriving. At the core of our mission is the belief that mastering stress is foundational to achieving optimal health and wellness.\n\nOur program offers a personalized approach that integrates the latest scientific research with tailored care. Through comprehensive assessments, we explore the unique aspects of your stress response, uncovering the underlying factors that contribute to your stress and its impact on your health.\n\nOur approach is holistic and proactive. Through mindfulness practices, nutritional support, lifestyle modifications, and — when necessary — targeted supplementation, we devise a plan that addresses your stress from multiple angles, empowering your body and mind to harness stress for positive change.\n\nDiscover the power of effective stress management in achieving mental clarity, emotional balance, and a renewed sense of energy. Your path to profound wellness starts here."
+      },
+      "gutHealing": {
+        "title": "Functional Gut Healing",
+        "tagline": "A balanced gut. Elevated mood. Renewed vitality.",
+        "description": "Discover the power of a balanced gut in achieving optimal health, elevated mood, and a renewed sense of vitality. Your path to profound health begins here.\n\nIn the intricate dance of wellness, the gut plays a leading role — influencing everything from mood and mental health to immune resilience. A thriving gut microbiome is the foundation of vibrant health.\n\nOur groundbreaking program offers a personalized pathway to gut health that harmonizes the latest scientific research with individualized care. Through comprehensive diagnostics — including a functional stool test and hormone-level assessment — we delve deep into the unique landscape of your gut microbiome, uncovering the root causes of discomfort and disease.\n\nWe craft a plan that nurtures your gut health and empowers your body's natural healing abilities — through dietary guidance, targeted supplementation (probiotics, prebiotics, fiber), lifestyle adjustments, and hormone balance support when necessary.\n\nTake the first step towards a happier, healthier life. Schedule your consultation today and let's explore together how a harmonized gut can elevate your entire well-being."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What Our Patients Say",
+    "subtitle": "See what patients are saying about their experience with Dr. Adonis and our clinic on Google.",
+    "cta": "SEE ALL REVIEWS ON GOOGLE"
   },
   "cardecal": {
     "title": "Dr. Adonis Clinic",

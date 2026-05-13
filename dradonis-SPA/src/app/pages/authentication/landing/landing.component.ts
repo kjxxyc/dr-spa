@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { NewsletterDialogComponent } from './newsletter-dialog.component';
 
 @Component({
@@ -42,10 +43,18 @@ export class LandingComponent {
         return [...this.services].reverse();
     }
 
+    // Google Maps embed URL for testimonials section
+    googleMapsUrl: SafeResourceUrl;
+
     constructor(
         private translate: TranslateService,
-        private dialog: MatDialog
-    ) { }
+        private dialog: MatDialog,
+        private sanitizer: DomSanitizer
+    ) {
+        this.googleMapsUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+            'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.1!2d-80.213865!3d25.7863004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b76d1434265b%3A0xfa2d0d393c1e7ec3!2sDr.%20Adonis%20(Adonis%20Maiquez%2C%20MD)!5e0!3m2!1sen!2sus!4v1'
+        );
+    }
 
     openNewsletterDialog() {
         const dialogRef = this.dialog.open(NewsletterDialogComponent, {

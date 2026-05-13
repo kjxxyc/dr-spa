@@ -789,3 +789,98 @@ $breakpoint-xs: 480px;
         }
     }
 }
+
+// ===========================
+// TESTIMONIALS / GOOGLE REVIEWS
+// ===========================
+.testimonials-section {
+    padding: 90px 1.5rem;
+    background: $white;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 60px 1rem;
+    }
+}
+
+.testimonials-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.testimonials-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: $text-dark;
+    text-align: center;
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 26px;
+    }
+}
+
+.testimonials-subtitle {
+    text-align: center;
+    font-size: 17px;
+    color: $text-medium;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 15px;
+        margin-bottom: 2rem;
+    }
+}
+
+.testimonials-map {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    iframe {
+        display: block;
+        width: 100%;
+        min-height: 450px;
+
+        @media (max-width: $breakpoint-sm) {
+            min-height: 350px;
+        }
+    }
+}
+
+.testimonials-cta {
+    text-align: center;
+    margin-top: 2.25rem;
+
+    .testimonials-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: $white;
+        color: $text-dark;
+        border: 2px solid #E5E7EB;
+        padding: 0.95rem 2rem;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        &:hover {
+            border-color: #4285F4;
+            box-shadow: 0 4px 16px rgba(66, 133, 244, 0.15);
+            transform: translateY(-2px);
+        }
+    }
+}

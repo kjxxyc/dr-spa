@@ -36,7 +36,15 @@
 
         <!-- Weight control -->
         <div class="bmi-section">
-          <label class="bmi-section-label">{{ 'bmi.yourWeight' | translate }}</label>
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'bmi.yourWeight' | translate }}</label>
+            <mat-button-toggle-group formControlName="weightSystem"
+                                     class="unit-toggle-group"
+                                     aria-label="Weight unit">
+              <mat-button-toggle value="metric">kg</mat-button-toggle>
+              <mat-button-toggle value="imperial">lb</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
           <div class="bmi-input-row">
             <input type="number"
                    class="bmi-number-input"
@@ -46,11 +54,6 @@
                    inputmode="decimal"
                    [attr.aria-label]="'bmi.yourWeight' | translate">
             <span class="bmi-unit-suffix">{{ weightUnit }}</span>
-            <button type="button" class="unit-toggle" (click)="toggleWeightSystem()"
-                    [attr.aria-label]="'Toggle ' + weightUnit">
-              <mat-icon class="unit-toggle-icon" aria-hidden="true">swap_horiz</mat-icon>
-              <span class="unit-toggle-label">{{ form.value.weightSystem === 'metric' ? 'lb' : 'kg' }}</span>
-            </button>
           </div>
           <input type="range"
                  class="bmi-slider"
@@ -62,7 +65,15 @@
 
         <!-- Height control -->
         <div class="bmi-section">
-          <label class="bmi-section-label">{{ 'bmi.yourHeight' | translate }}</label>
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'bmi.yourHeight' | translate }}</label>
+            <mat-button-toggle-group formControlName="heightSystem"
+                                     class="unit-toggle-group"
+                                     aria-label="Height unit">
+              <mat-button-toggle value="metric">cm</mat-button-toggle>
+              <mat-button-toggle value="imperial">in</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
           <div class="bmi-input-row">
             <input type="number"
                    class="bmi-number-input"
@@ -72,11 +83,6 @@
                    inputmode="decimal"
                    [attr.aria-label]="'bmi.yourHeight' | translate">
             <span class="bmi-unit-suffix">{{ heightUnit }}</span>
-            <button type="button" class="unit-toggle" (click)="toggleHeightSystem()"
-                    [attr.aria-label]="'Toggle ' + heightUnit">
-              <mat-icon class="unit-toggle-icon" aria-hidden="true">swap_horiz</mat-icon>
-              <span class="unit-toggle-label">{{ form.value.heightSystem === 'metric' ? 'in' : 'cm' }}</span>
-            </button>
           </div>
           <input type="range"
                  class="bmi-slider"

@@ -111,6 +111,7 @@
   },
   "shop": {
     "title": "Productos de Salud",
+    "scrollHint": "productos de salud abajo",
     "filterAll": "🛒 Todos",
     "filterGeneral": "🌿 Bienestar General",
     "filterAntiaging": "🧬 Antienvejecimiento",
@@ -134,39 +135,84 @@
     "heroTitle": "Nuestros Servicios",
     "heroSubtitle": "Soluciones de salud integrales y personalizadas diseñadas para tratar la causa raíz — no solo los síntomas.",
     "btnAppointment": "HAGA UNA CITA",
-    "functional": {
-      "title": "Medicina Funcional",
-      "p1": "La medicina funcional sigue un enfoque bastante diferente de las prácticas médicas convencionales tal como las conocemos. Este tipo de medicina reconoce que cada individuo es único y, por lo tanto, refuta la teoría de ofrecer soluciones estándar para tratar las condiciones de salud.",
-      "p2": "El Dr. Adonis, un firme creyente en la medicina funcional y su lugar entre las terapias potentes, es miembro del Instituto de Medicina Funcional, la organización más prestigiosa y reconocida de medicina funcional en el país. Tiene una comprensión profunda de sus principios y su aplicación. No solo es un defensor de la medicina funcional, sino también un hábil embajador de sus beneficios. Ha empoderado a miles de pacientes para que tomen el control de su salud e inicien su camino hacia el bienestar.",
-      "p3": "Si una vida significativa y saludable, llena de una mejor comprensión de su cuerpo y mente, es su llamado, aségurese de ponerse en contacto con nuestra clínica hoy y reserve una cita con la mejor versión de usted.",
-      "videoCaption": "Mira: ¿Qué es la Medicina Funcional? — Dr. Adonis Maiquez, MD"
-    },
-    "hormone": {
-      "title": "Terapia Hormonal Bio-Idéntica",
-      "subtitle": "¿Por qué elegir la Terapia de Reemplazo Hormonal Bio-Idéntica?",
-      "p1": "¿Cree que los cambios hormonales son solo una preocupación de la mujer? Piénselo de nuevo. La menopausia en las mujeres y su contraparte, la andropausia o hipogonadismo de inicio tardío en los hombres, son etapas naturales de la vida que pueden afectar significativamente su bienestar. ¡Pero hay buenas noticias!",
-      "p2": "El Dr. Adonis, un reconocido especialista en medicina funcional en Miami, FL, está aquí para guiarlo sin problemas a través de estas transiciones. Su experiencia en terapia hormonal bio-idéntica ofrece un enfoque holístico y altamente efectivo para reequilibrar su cuerpo y rejuvenecer su vida.",
-      "p3": "Ya sea que esté cerca o lejos, nuestras consultas personalizadas presenciales y virtuales son su puerta de entrada a un estilo de vida armonioso y vibrante. ¿Por qué esperar para sentirse mejor?",
-      "btn": "RESERVE SU CONSULTA HOY",
-      "feature1": "Consultas Presenciales y Virtuales",
-      "feature2": "Enfoque Holístico",
-      "feature3": "Hombres y Mujeres"
-    },
-    "weight": {
-      "title": "Pérdida de Peso Personalizada",
-      "promoBadge": "AHORRE 30%",
-      "promoText": "¡Nuestro Programa Personalizado de Pérdida de Peso basado en Medicina Funcional ahora cuesta solo $976 — ahorre un 30% del precio regular de $1,395! Este paquete integral incluye una consulta inicial presencial o virtual, un plan de pérdida de peso personalizado, un suministro de tres meses de Semaglutida, inyecciones quema-grasa y vitaminas especialmente formuladas.",
-      "promoCode": "¡Haga clic aquí y use el código NYS30 para reclamar su descuento!",
-      "p1": "En el núcleo de nuestro enfoque, el Dr. Adonis entiende que la pérdida de peso exitosa es un camino único para cada individuo. Ha ayudado a miles a navegar este camino, abordando los desafíos relacionados con el peso a través de una metodología holística que combina orientación dietaria, programas de actividad física personalizados y estrategias conductuales. Nuestra filosofía va más allá de las soluciones temporales de las dietas de moda, enfocándose en resultados sostenibles que cambian la vida.",
-      "p2": "La clave de nuestro éxito radica en reconocer que no hay dos personas iguales — en su metabolismo, composición corporal o necesidades de salud personales. Por eso no creemos en una solución única para todos. Nuestro proceso comienza con un análisis de salud integral, que lleva a una comprensión profunda de su cuerpo y sus requisitos específicos. Esta visión forma la base de su plan de pérdida de peso personalizado, elaborado por el Dr. Adonis para alinearse perfectamente con sus necesidades y preferencias individuales.",
-      "p3": "Si está listo para embarcarse en un camino hacia un usted más saludable y vibrante, estamos aquí para guiar cada paso del camino. Nuestro programa personalizado de pérdida de peso es más que un plan; es una asociación en la transformación de su vida.",
-      "readyTitle": "¿Listo para Comenzar su Transformación?",
-      "readyText": "Dé el primer paso hoy. Contáctenos para programar su cita y comience su camino con un equipo comprometido con su éxito.",
-      "btn": "COMIENCE SU VIAJE DE PÉRDIDA DE PESO HOY",
-      "feature1": "Semaglutida Incluida",
-      "feature2": "Plan Personalizado",
-      "feature3": "Inyecciones Quema-Grasa",
-      "feature4": "Vitaminas Especializadas"
+    "btnSeeMore": "Ver más",
+    "btnSeeLess": "Ver menos",
+    "badgeFeatured": "Destacado",
+    "scrollHint": "servicios especializados abajo",
+    "listTitle": "Lista Completa de Servicios",
+    "list": {
+      "brainProtocol": {
+        "title": "The Brain Protocol® — Alzheimer y Deterioro Cognitivo",
+        "description": "ATENCIÓN ESPECIALIZADA EN ALZHEIMER Y DETERIORO COGNITIVO LEVE. Globalmente, cientos de millones de personas se ven afectadas por trastornos neurológicos. Solo en Estados Unidos, la enfermedad de Alzheimer afecta a aproximadamente 5.7 millones de personas, con estadísticas en aumento. El Deterioro Cognitivo Leve — olvidos, dificultades de lenguaje y pensamiento más allá del envejecimiento normal — afecta a millones más.\n\nEl Dr. Adonis utiliza The Brain Protocol®, su protocolo propietario integral y multivariable personalizado a las necesidades de cada paciente — no solo para prevenir enfermedades neurológicas como Alzheimer y Parkinson, sino también para ayudar a regenerar el cerebro.\n\nComo neurocirujano certificado que usa medicina funcional para proveer bienestar físico, mental y espiritual completo, el Dr. Adonis es uno de los pocos especialistas en Miami que combina neurociencia de vanguardia con sanación de causa raíz. Agende una cita hoy para mantener su cerebro saludable y ágil."
+      },
+      "painManagement": {
+        "title": "Manejo del Dolor",
+        "description": "El dolor es un proceso complejo y las Neurociencias abordan su manejo desde diferentes ángulos. Para ser efectivo, el manejo del dolor debe abordar todo el circuito — desde el sitio de origen (articulación, columna, músculo, tendón) hasta los nervios que transmiten señales al cerebro.\n\nNos especializamos en: inyecciones de esteroides/biológicos en articulaciones y columna; bloqueos de nervios y plexos; ablaciones por radiofrecuencia. El Dr. Adonis, entrenado como neurocirujano, es miembro de la American Academy of Pain Management y del World Institute of Pain.\n\nHemos ayudado a cientos de pacientes con dolor por accidentes de auto, lesiones deportivas, caídas, y condiciones crónicas como osteoartritis y artritis inflamatoria."
+      },
+      "functionalMedicine": {
+        "title": "Medicina Funcional",
+        "description": "La medicina funcional sigue un enfoque bastante diferente de las prácticas médicas convencionales. Este tipo de medicina reconoce que cada individuo es único y, por lo tanto, refuta la teoría de ofrecer soluciones estándar para condiciones de salud.\n\nEl Dr. Adonis, firme creyente en la medicina funcional, es miembro del Institute for Functional Medicine — la organización más prestigiosa y reconocida del país. Ha empoderado a miles de pacientes para tomar las riendas de su salud y comenzar su camino al bienestar.\n\nSi una vida significativa y saludable, con mayor comprensión de su cuerpo y mente, es su llamado — póngase en contacto con nuestra clínica hoy."
+      },
+      "executivePhysical": {
+        "title": "Programa Ejecutivo de Examen Físico",
+        "description": "Para vivir una vida larga y fructífera necesitamos cuidar de nuestra salud. Estar saludable significa no solo estar libre de enfermedades, sino tener bienestar mental, físico y emocional. El estrés constante, los malos hábitos alimenticios y los estilos de vida poco saludables han deteriorado nuestra salud general.\n\nEl Executive Physical Program le ayuda a obtener un panorama claro de su estado de salud actual y comenzar su camino hacia una versión más saludable de usted mismo."
+      },
+      "weightLoss": {
+        "title": "Pérdida de Peso Personalizada",
+        "description": "AHORRE 30% — Nuestro Programa Personalizado de Pérdida de Peso basado en Medicina Funcional ahora cuesta solo $976 (precio regular $1,395). Este paquete integral incluye consulta inicial (presencial o virtual), un plan personalizado de pérdida de peso, tres meses de Semaglutida, inyecciones quema-grasa y vitaminas especialmente formuladas. Use el código NYS30 para reclamar su descuento.\n\nEl Dr. Adonis entiende que la pérdida de peso exitosa es única para cada individuo. Su metodología holística combina orientación dietaria, programas de actividad física personalizados y estrategias conductuales — más allá de soluciones temporales hacia resultados sostenibles que cambian vidas.\n\nNuestro proceso comienza con un análisis integral de salud, conduciendo a un plan personalizado diseñado para alinearse con sus necesidades individuales."
+      },
+      "hormoneTherapy": {
+        "title": "Terapia Hormonal Bio-Idéntica",
+        "description": "¿Cree que los cambios hormonales son solo asunto de mujeres? Piénselo de nuevo. La menopausia en mujeres y su contraparte — la andropausia o hipogonadismo de inicio tardío en hombres — son etapas naturales de la vida que pueden afectar significativamente su bienestar.\n\nEl Dr. Adonis, reconocido especialista en medicina funcional en Miami, FL, lo guía sin problemas a través de estas transiciones. Su experiencia en terapia hormonal bio-idéntica ofrece un enfoque holístico y altamente efectivo para reequilibrar su cuerpo y rejuvenecer su vida.\n\nYa sea cerca o lejos, nuestras consultas personalizadas presenciales y virtuales son su puerta de entrada a un estilo de vida armonioso y vibrante."
+      },
+      "menopauseAndropause": {
+        "title": "Menopausia y Andropausia",
+        "description": "El Dr. Adonis cree que la menopausia y la andropausia son fases que pueden vivirse con plenitud y dignidad. La experiencia varía de persona a persona dependiendo de factores hereditarios, constitución y estilo de vida.\n\nEl Dr. A defiende un enfoque individualizado que considera todas las variables y sugiere medidas simples y sostenibles para preparar al cuerpo a manejar estas transiciones con mínima intervención médica.\n\nSi busca atravesar la andropausia y la menopausia sin esfuerzo y de forma natural, sin medicación innecesaria — agende una cita hoy."
+      },
+      "agingBiomarkers": {
+        "title": "Biomarcadores del Envejecimiento",
+        "description": "El Dr. A ha ayudado a miles de pacientes a abrazar el envejecimiento con una perspectiva positiva y terapias alternativas. Al minimizar la dependencia de medicamentos, equipa a los pacientes para tener mejor control sobre sus vidas y hábitos, proporcionando un ambiente más propicio para enfrentar el envejecimiento.\n\nSi busca añadir vida a sus años — agende una cita con nuestra clínica."
+      },
+      "specializedLabs": {
+        "title": "Exámenes de Laboratorio Internacionales",
+        "description": "ACCESO A LABORATORIOS INTERNACIONALES — UN DIFERENCIADOR CLAVE. La clínica del Dr. Adonis tiene alianzas con laboratorios internacionales líderes y opera su propio laboratorio en sitio, ofreciendo acceso a pruebas diagnósticas avanzadas raramente disponibles en otras clínicas de Estados Unidos. Esta combinación única significa que paneles especializados pueden ejecutarse inmediatamente, sin necesidad de viajar al extranjero.\n\nOfrecemos pruebas integrales a través de nuestra red global de laboratorios, incluyendo: análisis hormonal internacional, marcadores de cáncer, pruebas genéticas y epigenéticas, sensibilidades alimentarias, niveles de toxinas, metales pesados, micronutrientes, y paneles de biomarcadores avanzados no comúnmente ofrecidos por clínicas convencionales.\n\nEste acceso mundial a laboratorios, combinado con la experiencia en medicina funcional del Dr. Adonis, permite diagnósticos precisos e intervenciones oportunas — ya sea que viva en Miami o nos visite desde el extranjero."
+      },
+      "detoxification": {
+        "title": "Desintoxicación",
+        "description": "Nuestro cuerpo alberga varios organismos que causan enfermedades y toxinas. Aunque el cuerpo tiene su propia forma de defenderse, las toxinas a las que estamos expuestos diariamente necesitan algo extra para combatir sus efectos en nuestra salud.\n\nUn programa de desintoxicación es importante para prevenir la sobrecarga de toxinas y combatirla cuando ocurre. Si está listo para una versión más saludable y menos tóxica de usted mismo — agende una cita hoy."
+      },
+      "ivVitamin": {
+        "title": "Terapia Intravenosa de Vitaminas (IV)",
+        "description": "El Dr. Adonis ha sido enormemente exitoso combinando terapia regular de vitaminas IV con un régimen modificado de dieta y estilo de vida para una solución más productiva y sostenible. Incorpora la historia del paciente y planes dietéticos en la elección del tratamiento, produciendo resultados consistentes.\n\nHa logrado resultados consistentes en pacientes de varios grupos de edad y trastornos — desde deficiencias menores de vitaminas hasta cáncer. Para un impulso inmediato de bienestar y un enfoque más holístico — agende una cita."
+      },
+      "autoimmune": {
+        "title": "Enfermedades Autoinmunes",
+        "description": "Por complejas que sean, las enfermedades autoinmunes pueden diagnosticarse usando un protocolo de medicina funcional para llegar a la causa raíz. Un estudio completo de hormonas, vitaminas, procesos metabólicos, inflamación, salud intestinal y otros marcadores ofrece una visión profunda del sistema inmune.\n\nEl Dr. Adonis ha diseñado un enfoque multifacético para manejar enfermedades autoinmunes, permitiendo una vida casi normal y gratificante. Las condiciones cubiertas incluyen trastornos de tiroides y varias formas de artritis."
+      },
+      "fibromyalgia": {
+        "title": "Fibromialgia / Fatiga Crónica",
+        "description": "Una dolencia cada vez más común, más del 3% de la población de EE.UU. sufre de fibromialgia. Aunque puede ocurrir en casi cualquier persona, las mujeres parecen ser más propensas. La fibromialgia se caracteriza por dolor generalizado en todo el cuerpo sin causa claramente identificable.\n\nEl Dr. Adonis ha ayudado a cientos de pacientes con SFM, algunos de los cuales han resuelto completamente sus síntomas. A través de años de estudio y práctica, ha encontrado una combinación sostenible de técnicas para ayudar a los pacientes a sanar, construir un sentido de sí mismos y vivir vidas significativas y sin dolor."
+      },
+      "brainHealth": {
+        "title": "Salud Cerebral — Prevención de Alzheimer y Deterioro Cognitivo",
+        "description": "ENFOCADO EN LA PREVENCIÓN DEL ALZHEIMER Y EL DETERIORO COGNITIVO. La salud cerebral es probablemente el factor más crítico para el bienestar general y la calidad de vida. Un cerebro sano es responsable del funcionamiento fisiológico óptimo y de los procesos cognitivos — memoria, lenguaje, concentración, toma de decisiones.\n\nEl Dr. Adonis es un neurocirujano certificado, y a través de su extensa práctica de medicina funcional, ayuda a los pacientes a entender la correlación entre los procesos neurológicos y el envejecimiento. Usa un enfoque multifuncional para quienes están en riesgo o sufren de Alzheimer, Parkinson, Deterioro Cognitivo Leve y otras condiciones neurodegenerativas.\n\nAunque su tratamiento encuentra los mejores resultados en casos detectados temprano, todos sus pacientes se benefician significativamente de sus recomendaciones. La intervención temprana es clave — agende su evaluación hoy."
+      },
+      "neurotransmitters": {
+        "title": "Neurotransmisores Cerebrales",
+        "description": "Los neurotransmisores son químicos en el cerebro que envían señales a los nervios. Estas moléculas son responsables de varias funciones, incluyendo aprendizaje, energía y estados psicológicos. Un desequilibrio puede tener consecuencias graves para el cuerpo.\n\nEl Dr. Adonis, neurocirujano entrenado, ha dominado la práctica de la neurociencia junto con la medicina funcional para dar a los pacientes resultados mejores que duran más, con pocos o ningún efecto secundario. Restaure el equilibrio, bienestar y positividad en su vida."
+      },
+      "intestinalHealth": {
+        "title": "Salud Intestinal",
+        "description": "Así como el cerebro controla los movimientos voluntarios e involuntarios, el intestino se ocupa de la inmunidad del cuerpo. Una buena salud intestinal ayuda con la salud general.\n\nEl Dr. Adonis emplea los principios de la medicina funcional para mejorar la salud intestinal. Un intestino saludable no es solo el resultado de buenos genes, sino el producto de un gran cuidado. Siga su intuición y tome tiempo para usted mismo."
+      },
+      "telomeres": {
+        "title": "Telómeros",
+        "description": "Los telómeros son predictores importantes de edad y longevidad. La salud de los telómeros es un factor importante para mantener el cuerpo saludable, ralentizar el envejecimiento y asegurar una larga vida.\n\nEl Dr. Adonis ha permitido a numerosos pacientes entender su cuerpo, el proceso de envejecimiento y cómo la salud de sus telómeros contribuye a ello. Los guía para formular métodos para mantener su cuerpo más saludable y combatir el envejecimiento efectivamente."
+      },
+      "sexualHealth": {
+        "title": "Salud Sexual",
+        "description": "El Dr. Adonis cree que hoy es fácil usar terapia hormonal para neutralizar desequilibrios y mejorar la salud sexual y la experiencia general que enfrentan las parejas. Ha permitido a cientos de parejas entender sus necesidades sexuales, conectar con su estado físico, y lograr una salud sexual mejorada a través de terapia hormonal y terapia de parejas.\n\nEnfatiza que ambos miembros deben estar activamente comprometidos, involucrados e invertidos por igual — la salud sexual no puede definirse ni abordarse en soledad."
+      }
     },
     "bottomCta": {
       "title": "¿Listo para Transformar su Salud?",
@@ -191,9 +237,25 @@
       "v9": "Fibromialgia / Fatiga Crónica / Agotamiento Adrenal",
       "v10": "Análisis de Laboratorio en Medicina Funcional"
     },
-    "reviewsTitle": "Lo Que Dicen Nuestros Pacientes",
-    "reviewsSubtitle": "Vea lo que los pacientes dicen sobre su experiencia con el Dr. Adonis y nuestra clínica en Google.",
-    "reviewsCta": "VER TODAS LAS RESEÑAS EN GOOGLE"
+    "protocolsTitle": "Protocolos Especializados",
+    "protocolsSubtitle": "Programas premium respaldados por la ciencia, diseñados para abordar la causa raíz — desde el estrés hasta la salud intestinal.",
+    "protocols": {
+      "stressManagement": {
+        "title": "Manejo Funcional del Estrés",
+        "tagline": "Domine el arte del estrés. Transforme su relación con él.",
+        "description": "Bienvenido al Dominio del Manejo del Estrés, donde su camino al bienestar holístico comienza dominando el arte del manejo del estrés.\n\nManejar el estrés no se trata solo de sobrellevarlo; se trata de prosperar. En el corazón de nuestra misión está la creencia de que dominar el estrés es fundamental para lograr salud y bienestar óptimos.\n\nNuestro programa ofrece un enfoque personalizado que integra las últimas investigaciones científicas con cuidado adaptado a cada paciente. A través de evaluaciones integrales, exploramos los aspectos únicos de su respuesta al estrés, descubriendo los factores subyacentes que contribuyen a su estrés y su impacto en su salud.\n\nNuestro enfoque es holístico y proactivo. A través de prácticas de mindfulness, apoyo nutricional, modificaciones de estilo de vida y — cuando es necesario — suplementación dirigida, diseñamos un plan que aborda su estrés desde múltiples ángulos, empoderando a su cuerpo y mente para aprovechar el estrés con fines positivos.\n\nDescubra el poder del manejo efectivo del estrés para lograr claridad mental, equilibrio emocional y energía renovada. Su camino al bienestar profundo comienza aquí."
+      },
+      "gutHealing": {
+        "title": "Sanación Funcional Intestinal",
+        "tagline": "Un intestino equilibrado. Mejor ánimo. Vitalidad renovada.",
+        "description": "Descubra el poder de un intestino equilibrado para lograr salud óptima, mejor estado de ánimo y vitalidad renovada. Su camino a la salud profunda comienza aquí.\n\nEn la intrincada danza del bienestar, el intestino juega un papel protagonista — influyendo en todo, desde el estado de ánimo y la salud mental hasta la resiliencia inmune. Un microbioma intestinal próspero es la base de una salud vibrante.\n\nNuestro innovador programa ofrece un camino personalizado a la salud intestinal que armoniza la última investigación científica con cuidado individualizado. A través de diagnósticos integrales — incluyendo prueba funcional de heces y evaluación de niveles hormonales — exploramos profundamente el paisaje único de su microbioma intestinal, descubriendo las causas raíz del malestar y la enfermedad.\n\nDiseñamos un plan que nutre su salud intestinal y empodera las capacidades naturales de sanación de su cuerpo — a través de orientación dietaria, suplementación dirigida (probióticos, prebióticos, fibra), ajustes de estilo de vida y apoyo de balance hormonal cuando es necesario.\n\nDé el primer paso hacia una vida más feliz y saludable. Agende su consulta hoy y exploremos juntos cómo un intestino armonizado puede elevar todo su bienestar."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Pacientes",
+    "subtitle": "Vea lo que los pacientes dicen sobre su experiencia con el Dr. Adonis y nuestra clínica en Google.",
+    "cta": "VER TODAS LAS RESEÑAS EN GOOGLE"
   },
   "cardecal": {
     "title": "Clínica del Dr. Adonis",

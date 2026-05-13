@@ -39,6 +39,21 @@
           <h3 class="f-w-600 m-t-16 f-s-20">{{ t('successTitle') }}</h3>
           <p class="mat-body-1 m-t-8">{{ t('successMsg') }}</p>
 
+          <!-- Product card: shows the product + price before the payment step. -->
+          <div class="product-card m-t-24">
+            <div class="product-card-icon">
+              <mat-icon>medication</mat-icon>
+            </div>
+            <div class="product-card-body">
+              <h4 class="product-card-name">{{ t('productName') }}</h4>
+              <p class="product-card-details">{{ t('productDetails') }}</p>
+            </div>
+            <div class="product-card-price">
+              <span class="price-amount">$19.99</span>
+              <span class="price-label">{{ t('productPriceLabel') }}</span>
+            </div>
+          </div>
+
           <div class="payment-section m-t-24">
 
             @if (!isPaymentEligible) {
@@ -338,11 +353,13 @@
                 }
               </div>
               } @else {
-              <div class="qualified-result m-b-24">
-                <mat-icon>verified</mat-icon>
-                <h3>{{ t('qualifiedTitle') }}</h3>
-                <p>{{ t('qualifiedMsg') }}</p>
-              </div>
+              <!--
+                "Evaluation Approved" banner intentionally removed from this step.
+                The approval is shown post-submit (after the mock-review spinner)
+                via successTitle/successMsg, so we don't claim approval before
+                the user has actually submitted the form for review.
+                Requested by client (Aymee) — see plan file.
+              -->
               }
 
               <!-- Collapsible Review -->

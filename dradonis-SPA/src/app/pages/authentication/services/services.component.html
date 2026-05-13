@@ -1,158 +1,89 @@
 <div class="services-page">
 
-  <!-- Page Hero -->
+  <!-- Page Hero (compact, centered) -->
   <section class="services-hero">
-    <div class="services-hero-layout">
-      <div class="services-hero-content">
-        <p class="services-eyebrow">{{ 'services.eyebrow' | translate }}</p>
-        <h1>{{ 'services.heroTitle' | translate }}</h1>
-        <p class="services-hero-subtitle">{{ 'services.heroSubtitle' | translate }}</p>
-      </div>
+    <div class="services-hero-content">
+      <p class="services-eyebrow">{{ 'services.eyebrow' | translate }}</p>
+      <h1>{{ 'services.heroTitle' | translate }}</h1>
+      <p class="services-hero-subtitle">{{ 'services.heroSubtitle' | translate }}</p>
+    </div>
 
-      <!-- Service Promo Cards -->
-      <div class="services-hero-cards">
-        <!-- Tadalafil Card -->
-        <div class="service-promo-card tadalafil-card">
-          <div class="service-promo-icon">
-            <mat-icon>medication</mat-icon>
-          </div>
+    <!-- Promo Cards: horizontal compact strip -->
+    <div class="services-hero-cards">
+      <a routerLink="/landing/men-wellness" class="service-promo-card tadalafil-card">
+        <div class="service-promo-icon">
+          <mat-icon>medication</mat-icon>
+        </div>
+        <div class="service-promo-text">
           <h3>{{ 'servicesPromo.tadalafil.title' | translate }}</h3>
           <p>{{ 'servicesPromo.tadalafil.description' | translate }}</p>
-          <a routerLink="/landing/men-wellness" class="service-promo-btn">
-            <mat-icon>arrow_forward</mat-icon>
-            {{ 'servicesPromo.tadalafil.btn' | translate }}
-          </a>
         </div>
+        <span class="service-promo-arrow">
+          <mat-icon>arrow_forward</mat-icon>
+        </span>
+      </a>
 
-        <!-- Vitamins Card -->
-        <div class="service-promo-card vitamins-card">
-          <div class="service-promo-icon">
-            <mat-icon>local_pharmacy</mat-icon>
-          </div>
+      <a routerLink="/landing/vitamins-prescription" class="service-promo-card vitamins-card">
+        <div class="service-promo-icon">
+          <mat-icon>local_pharmacy</mat-icon>
+        </div>
+        <div class="service-promo-text">
           <h3>{{ 'servicesPromo.vitamins.title' | translate }}</h3>
           <p>{{ 'servicesPromo.vitamins.description' | translate }}</p>
-          <a routerLink="/landing/vitamins-prescription" class="service-promo-btn">
-            <mat-icon>arrow_forward</mat-icon>
-            {{ 'servicesPromo.vitamins.btn' | translate }}
-          </a>
         </div>
-      </div>
+        <span class="service-promo-arrow">
+          <mat-icon>arrow_forward</mat-icon>
+        </span>
+      </a>
     </div>
   </section>
 
-  <!-- Service 1: Functional Medicine -->
-  <section class="service-block" id="functional-medicine">
-    <div class="service-container">
-      <div class="service-text">
-        <div class="service-number">01</div>
-        <h2>{{ 'services.functional.title' | translate }}</h2>
-        <p>{{ 'services.functional.p1' | translate }}</p>
-        <p>{{ 'services.functional.p2' | translate }}</p>
-        <p class="service-cta-text">{{ 'services.functional.p3' | translate }}</p>
-        <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn primary">
-          <mat-icon>calendar_today</mat-icon>
-          {{ 'services.btnAppointment' | translate }}
-        </a>
-      </div>
-      <div class="service-media">
-        <div class="video-wrapper">
-          <iframe [src]="youtubeUrl" title="What is Functional Medicine"
-            frameborder="0" loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-        <p class="video-caption">{{ 'services.functional.videoCaption' | translate }}</p>
-      </div>
-    </div>
-  </section>
+  <!-- Services Scroll Hint Banner -->
+  <a href="#services-list" class="services-scroll-hint">
+    <span class="scroll-hint-count">{{ services.length }}</span>
+    <span class="scroll-hint-text">{{ 'services.scrollHint' | translate }}</span>
+    <mat-icon class="scroll-hint-arrow">arrow_drop_down</mat-icon>
+  </a>
 
-  <!-- Service 2: Bio-Identical Hormone Therapy -->
-  <section class="service-block alt-bg" id="hormone-therapy">
-    <div class="service-container reverse">
-      <div class="service-text">
-        <div class="service-number">02</div>
-        <h2>{{ 'services.hormone.title' | translate }}</h2>
-        <h3 class="service-subtitle">{{ 'services.hormone.subtitle' | translate }}</h3>
-        <p>{{ 'services.hormone.p1' | translate }}</p>
-        <p>{{ 'services.hormone.p2' | translate }}</p>
-        <p class="service-cta-text">{{ 'services.hormone.p3' | translate }}</p>
-        <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn primary">
-          <mat-icon>calendar_today</mat-icon>
-          {{ 'services.hormone.btn' | translate }}
-        </a>
-      </div>
-      <div class="service-media">
-        <div class="service-icon-display hormone-icon">
-          <mat-icon>biotech</mat-icon>
-          <div class="icon-rings"></div>
-        </div>
-        <div class="service-features">
-          <div class="feature-pill">
-            <mat-icon>check_circle</mat-icon>
-            <span>{{ 'services.hormone.feature1' | translate }}</span>
-          </div>
-          <div class="feature-pill">
-            <mat-icon>check_circle</mat-icon>
-            <span>{{ 'services.hormone.feature2' | translate }}</span>
-          </div>
-          <div class="feature-pill">
-            <mat-icon>check_circle</mat-icon>
-            <span>{{ 'services.hormone.feature3' | translate }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Services 2-Column Grid -->
+  <section class="services-list-section" id="services-list">
+    <div class="services-list-container">
+      <h2 class="services-list-title">{{ 'services.listTitle' | translate }}</h2>
 
-  <!-- Service 3: Personalized Weight Loss -->
-  <section class="service-block" id="weight-loss">
-    <div class="service-container">
-      <div class="service-text">
-        <div class="service-number">03</div>
-        <h2>{{ 'services.weight.title' | translate }}</h2>
+      <div class="services-grid">
+        <article
+          class="service-card"
+          *ngFor="let s of services"
+          [class.expanded]="expandedId === s.id"
+          [class.featured]="s.featured"
+        >
+          <span class="featured-badge" *ngIf="s.featured">
+            <mat-icon>verified</mat-icon>
+            {{ 'services.badgeFeatured' | translate }}
+          </span>
 
-        <!-- Promo Banner -->
-        <div class="promo-banner">
-          <div class="promo-badge">{{ 'services.weight.promoBadge' | translate }}</div>
-          <p class="promo-text">{{ 'services.weight.promoText' | translate }}</p>
-          <p class="promo-code">{{ 'services.weight.promoCode' | translate }}</p>
-        </div>
+          <button class="service-card-header" (click)="toggleService(s.id)" [attr.aria-expanded]="expandedId === s.id">
+            <span class="service-icon-box" [style.background]="s.gradient">
+              <mat-icon>{{ s.icon }}</mat-icon>
+            </span>
+            <span class="service-card-title">{{ 'services.list.' + s.id + '.title' | translate }}</span>
+            <span class="service-card-chevron">
+              <mat-icon>{{ expandedId === s.id ? 'arrow_drop_down' : 'arrow_drop_down' }}</mat-icon>
+            </span>
+          </button>
 
-        <p>{{ 'services.weight.p1' | translate }}</p>
-        <p>{{ 'services.weight.p2' | translate }}</p>
-        <p class="service-cta-text">{{ 'services.weight.p3' | translate }}</p>
+          <div class="service-card-detail" [@expandState]="expandedId === s.id ? 'expanded' : 'collapsed'">
+            <p class="service-description">{{ 'services.list.' + s.id + '.description' | translate }}</p>
+            <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn primary">
+              <mat-icon>calendar_today</mat-icon>
+              {{ 'services.btnAppointment' | translate }}
+            </a>
+          </div>
 
-        <h3 class="service-subtitle">{{ 'services.weight.readyTitle' | translate }}</h3>
-        <p>{{ 'services.weight.readyText' | translate }}</p>
-
-        <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn accent">
-          <mat-icon>fitness_center</mat-icon>
-          {{ 'services.weight.btn' | translate }}
-        </a>
-      </div>
-      <div class="service-media">
-        <div class="service-icon-display weight-icon">
-          <mat-icon>monitor_weight</mat-icon>
-          <div class="icon-rings"></div>
-        </div>
-        <div class="service-features">
-          <div class="feature-pill">
-            <mat-icon>check_circle</mat-icon>
-            <span>{{ 'services.weight.feature1' | translate }}</span>
-          </div>
-          <div class="feature-pill">
-            <mat-icon>check_circle</mat-icon>
-            <span>{{ 'services.weight.feature2' | translate }}</span>
-          </div>
-          <div class="feature-pill">
-            <mat-icon>check_circle</mat-icon>
-            <span>{{ 'services.weight.feature3' | translate }}</span>
-          </div>
-          <div class="feature-pill">
-            <mat-icon>check_circle</mat-icon>
-            <span>{{ 'services.weight.feature4' | translate }}</span>
-          </div>
-        </div>
+          <button class="service-card-toggle" (click)="toggleService(s.id)">
+            {{ (expandedId === s.id ? 'services.btnSeeLess' : 'services.btnSeeMore') | translate }}
+          </button>
+        </article>
       </div>
     </div>
   </section>
@@ -162,13 +93,13 @@
     <h2>{{ 'services.bottomCta.title' | translate }}</h2>
     <p>{{ 'services.bottomCta.subtitle' | translate }}</p>
     <div class="bottom-cta-actions">
-      <a href="tel:+13052047816" class="service-btn primary large">
+      <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn primary large">
+        <mat-icon>calendar_today</mat-icon>
+        {{ 'services.btnAppointment' | translate }}
+      </a>
+      <a href="tel:+13052047816" class="service-btn outline large">
         <mat-icon>phone</mat-icon>
         {{ 'header.phone' | translate }}
-      </a>
-      <a routerLink="/landing/meet-doctor" class="service-btn outline large">
-        <mat-icon>person</mat-icon>
-        {{ 'header.nav.meetDoctor' | translate }}
       </a>
     </div>
   </section>

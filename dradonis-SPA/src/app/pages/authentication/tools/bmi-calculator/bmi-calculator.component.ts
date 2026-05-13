@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
@@ -36,6 +37,7 @@ export interface BmiRange {
         CommonModule,
         ReactiveFormsModule,
         MatButtonModule,
+        MatButtonToggleModule,
         MatDialogModule,
         MatIconModule,
         TranslateModule,
@@ -43,7 +45,7 @@ export interface BmiRange {
     templateUrl: './bmi-calculator.component.html',
     styleUrls: ['./bmi-calculator.component.scss'],
 })
-export class BmiCalculatorComponent {
+export class BmiCalculatorComponent implements OnInit {
     form: FormGroup;
 
     /** Static catalog of the 6 BMI categories used to render the classification bar. */
@@ -66,6 +68,28 @@ export class BmiCalculatorComponent {
             weight: [70],
             heightSystem: ['metric' as System],
             height: [170],
+        });
+    }
+
+    ngOnInit(): void {
+        // When the user switches kg ↔ lb via the segmented control, convert the
+        // current weight value automatically so the slider/input shows the
+        // equivalent in the new unit (e.g. 70 kg → 154.3 lb).
+        this.form.get('weightSystem')!.valueChanges.subscribe((newSystem: System) => {
+            const current = Number(this.form.value.weight) || 0;
+            const converted = newSystem === 'imperial'
+                ? +(current * 2.20462).toFixed(1)   // kg → lb
+                : +(current * 0.453592).toFixed(1); // lb → kg
+            this.form.patchValue({ weight: converted }, { emitEvent: false });
+        });
+
+        // Same conversion logic for height (cm ↔ in).
+        this.form.get('heightSystem')!.valueChanges.subscribe((newSystem: System) => {
+            const current = Number(this.form.value.height) || 0;
+            const converted = newSystem === 'imperial'
+                ? +(current * 0.393701).toFixed(1)  // cm → in
+                : +(current * 2.54).toFixed(1);     // in → cm
+            this.form.patchValue({ height: converted }, { emitEvent: false });
         });
     }
 
@@ -115,40 +139,19 @@ export class BmiCalculatorComponent {
     // Slider ranges (dynamic based on current unit system)
     // ============================================================
 
-    get weightMin(): number { return this.form.value.weightSystem === 'metric' ? 30  : 66; }
-    get weightMax(): number { return this.form.value.weightSystem === 'metric' ? 200 : 441; }
-    get heightMin(): number { return this.form.value.heightSystem === 'metric' ? 100 : 39; }
-    get heightMax(): number { return this.form.value.heightSystem === 'metric' ? 220 : 87; }
+    // Ranges chosen to cover edge cases (pediatric / muscular athletes / severe
+    // obesity) while keeping the slider granularity usable for typical adults.
+    // Metric ↔ imperial limits are symmetric: converting one yields the other.
+    get weightMin(): number { return this.form.value.weightSystem === 'metric' ? 20  : 44; }
+    get weightMax(): number { return this.form.value.weightSystem === 'metric' ? 250 : 550; }
+    get heightMin(): number { return this.form.value.heightSystem === 'metric' ? 90  : 35; }
+    get heightMax(): number { return this.form.value.heightSystem === 'metric' ? 230 : 91; }
     get weightUnit(): string { return this.form.value.weightSystem === 'metric' ? 'kg' : 'lb'; }
     get heightUnit(): string { return this.form.value.heightSystem === 'metric' ? 'cm' : 'in'; }
 
-    // ============================================================
-    // Unit toggles — convert current value when switching system
-    // ============================================================
-
-    /** Toggle between kg and lb, converting the current weight value. */
-    toggleWeightSystem(): void {
-        const current = Number(this.form.value.weight) || 0;
-        const isMetric = this.form.value.weightSystem === 'metric';
-        this.form.patchValue({
-            weightSystem: isMetric ? 'imperial' : 'metric',
-            weight: isMetric
-                ? +(current * 2.20462).toFixed(1) // kg → lb
-                : +(current * 0.453592).toFixed(1), // lb → kg
-        });
-    }
-
-    /** Toggle between cm and in, converting the current height value. */
-    toggleHeightSystem(): void {
-        const current = Number(this.form.value.height) || 0;
-        const isMetric = this.form.value.heightSystem === 'metric';
-        this.form.patchValue({
-            heightSystem: isMetric ? 'imperial' : 'metric',
-            height: isMetric
-                ? +(current * 0.393701).toFixed(1) // cm → in
-                : +(current * 2.54).toFixed(1),    // in → cm
-        });
-    }
+    // NOTE: Unit conversion now happens automatically via the valueChanges
+    // listeners on `weightSystem` / `heightSystem` set up in ngOnInit, because
+    // the mat-button-toggle-group is bound directly to those FormControls.
 
     // ============================================================
     // Explicit value updates from inputs.
