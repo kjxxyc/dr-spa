@@ -64,6 +64,8 @@ export class ShopComponent implements AfterViewInit, OnDestroy {
 
     /** Track injected script nodes so we can remove them on destroy. */
     private injectedScripts: HTMLScriptElement[] = [];
+    private intersectionObserver?: IntersectionObserver;
+    private injectedSlots = new WeakSet<HTMLDivElement>();
 
     constructor(
         private renderer: Renderer2,
@@ -76,10 +78,11 @@ export class ShopComponent implements AfterViewInit, OnDestroy {
         if (!isPlatformBrowser(this.platformId)) {
             return;
         }
-        this.injectFullscriptEmbeds();
+        this.observeEmbedSlots();
     }
 
     ngOnDestroy(): void {
+        this.intersectionObserver?.disconnect();
         // Clean up scripts to avoid leaks and double-execution if the component remounts.
         this.injectedScripts.forEach(script => {
             script.parentNode?.removeChild(script);
@@ -88,33 +91,65 @@ export class ShopComponent implements AfterViewInit, OnDestroy {
     }
 
     /**
-     * Inject one Fullscript oEmbed `<script>` per product into its corresponding slot.
-     * The script self-replaces with a product card (image + name + price + buy button)
-     * that includes the `store_slug: "dradonis"` attribution — this is what earns
-     * the commission on every sale.
+     * Observe each product card and only inject its Fullscript oEmbed `<script>`
+     * when the slot enters the viewport. This defers ~10 third-party requests
+     * (each loading external JS from fullscript.com) until they are actually needed.
      */
-    private injectFullscriptEmbeds(): void {
-        this.embedSlots.forEach((slot, index) => {
-            const product = this.fullscriptProducts[index];
-            if (!product) return;
+    private observeEmbedSlots(): void {
+        // Fallback for browsers without IntersectionObserver (very rare): inject eagerly.
+        if (typeof IntersectionObserver === 'undefined') {
+            this.embedSlots.forEach((slot, index) => this.injectScriptForSlot(slot, index));
+            return;
+        }
 
-            const script: HTMLScriptElement = this.renderer.createElement('script');
-            this.renderer.setAttribute(script, 'src', 'https://us.fullscript.com/oembed/embed.js');
-            this.renderer.setAttribute(
-                script,
-                'data-fs',
-                JSON.stringify({
-                    product_id: product.id,
-                    store_slug: 'dradonis',
-                    return: 'product_card'
-                })
-            );
-            // Tells OneTrust / cookie banners to leave this script alone.
-            this.renderer.setAttribute(script, 'data-ot-ignore', '');
+        this.intersectionObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    const el = entry.target as HTMLDivElement;
+                    if (this.injectedSlots.has(el)) return;
+                    const slotRef = this.embedSlots.find(s => s.nativeElement === el);
+                    const index = slotRef ? this.embedSlots.toArray().indexOf(slotRef) : -1;
+                    if (index < 0 || !slotRef) return;
+                    this.injectScriptForSlot(slotRef, index);
+                    this.intersectionObserver?.unobserve(el);
+                });
+            },
+            { rootMargin: '300px 0px', threshold: 0 }
+        );
 
-            this.renderer.appendChild(slot.nativeElement, script);
-            this.injectedScripts.push(script);
+        this.embedSlots.forEach((slot) => {
+            this.intersectionObserver?.observe(slot.nativeElement);
         });
+    }
+
+    /**
+     * Inject one Fullscript oEmbed `<script>` for a given product slot.
+     * The script self-replaces with a product card that includes the
+     * `store_slug: "dradonis"` attribution — required for commission tracking.
+     */
+    private injectScriptForSlot(slot: ElementRef<HTMLDivElement>, index: number): void {
+        const product = this.fullscriptProducts[index];
+        if (!product) return;
+        if (this.injectedSlots.has(slot.nativeElement)) return;
+
+        const script: HTMLScriptElement = this.renderer.createElement('script');
+        this.renderer.setAttribute(script, 'src', 'https://us.fullscript.com/oembed/embed.js');
+        this.renderer.setAttribute(
+            script,
+            'data-fs',
+            JSON.stringify({
+                product_id: product.id,
+                store_slug: 'dradonis',
+                return: 'product_card'
+            })
+        );
+        // Tells OneTrust / cookie banners to leave this script alone.
+        this.renderer.setAttribute(script, 'data-ot-ignore', '');
+
+        this.renderer.appendChild(slot.nativeElement, script);
+        this.injectedScripts.push(script);
+        this.injectedSlots.add(slot.nativeElement);
     }
 
     /** Whether a product card with `category` should be visible under the current filter. */

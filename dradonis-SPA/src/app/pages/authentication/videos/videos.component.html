@@ -21,7 +21,7 @@
     <div class="featured-video-container" *ngIf="selectedVideo">
       <div class="featured-player">
         <iframe [src]="selectedVideo.embedUrl"
-          title="Dr. Adonis Video" frameborder="0"
+          title="Dr. Adonis Video" frameborder="0" loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>

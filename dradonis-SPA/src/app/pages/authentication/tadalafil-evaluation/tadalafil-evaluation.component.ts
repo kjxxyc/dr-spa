@@ -559,15 +559,18 @@ export class TadalafilEvaluationComponent implements OnInit {
         this.showMedicalSection = true;
     }
 
-    /** Dynamically inject Meta Pixel and fire Lead event */
+    /** Fire Lead conversion event. Only loads Pixel script if not already present. */
     private loadPixelAndTrackLead(): void {
-        if (!(window as any).fbq) {
-            const n: any = ((window as any).fbq = function () {
+        const w = window as any;
+        if (!w.fbq) {
+            // First-time init: this route is excluded from the global Pixel,
+            // so we load it dynamically on conversion.
+            const n: any = (w.fbq = function () {
                 n.callMethod
                     ? n.callMethod.apply(n, arguments)
                     : n.queue.push(arguments);
             });
-            if (!(window as any)._fbq) (window as any)._fbq = n;
+            if (!w._fbq) w._fbq = n;
             n.push = n;
             n.loaded = true;
             n.version = '2.0';
@@ -577,10 +580,9 @@ export class TadalafilEvaluationComponent implements OnInit {
             t.src = 'https://connect.facebook.net/en_US/fbevents.js';
             const s = document.getElementsByTagName('script')[0];
             s.parentNode?.insertBefore(t, s);
+            w.fbq('init', '34862161576760674');
+            w.fbq('track', 'PageView');
         }
-        const fbq = (window as any).fbq;
-        fbq('init', '34862161576760674');
-        fbq('track', 'PageView');
-        fbq('track', 'Lead');
+        w.fbq('track', 'Lead');
     }
 }

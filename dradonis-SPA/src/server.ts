@@ -2,6 +2,7 @@ import 'zone.js/node';
 
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr/node';
+import compression from 'compression';
 import express from 'express';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -20,12 +21,24 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
+  // Brotli/gzip compression for all responses (HTML, CSS, JS, JSON, fonts).
+  // Azure SWA compresses automatically; this defends self-hosted SSR scenarios.
+  server.use(compression({ threshold: 1024 }));
+
   // Example Express Rest API endpoints
   // server.get('/api/{*splat}', (req, res) => { });
-  // Serve static files from /browser
+  // Serve static files from /browser with aggressive immutable cache.
+  // All asset filenames carry a content hash (outputHashing: all), so it's safe.
   server.use(express.static(distFolder, {
     maxAge: '1y',
+    immutable: true,
     index: false,
+    setHeaders: (res, path) => {
+      // index.html and translation JSON must revalidate every time.
+      if (path.endsWith('.html') || path.endsWith('en.json') || path.endsWith('es.json') || path.endsWith('fr.json') || path.endsWith('de.json')) {
+        res.setHeader('Cache-Control', 'no-cache, must-revalidate');
+      }
+    },
   }));
 
   // All regular routes use the Angular engine
