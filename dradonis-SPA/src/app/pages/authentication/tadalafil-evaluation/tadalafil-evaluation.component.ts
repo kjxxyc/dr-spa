@@ -505,19 +505,12 @@ export class TadalafilEvaluationComponent implements OnInit {
                 this.ngZone.run(() => {
                     this.isProcessingPayment = false;
                     this.snackBar.open(this.t('paymentEmailSent'), 'OK', { duration: 4000 });
-                    // Meta Pixel: track Lead event only.
-                    // NOTE: Purchase event removed — Meta was flagging the page as
-                    // pharmaceutical sales. Per client request only PageView + Lead
-                    // are allowed. Do not re-add Purchase / InitiateCheckout /
-                    // AddToCart / any other e-commerce events here.
-                    const fbq = (window as any).fbq;
-                    if (fbq) {
-                        fbq('track', 'Lead');
-                    }
-                    // Small delay so the pixel events fire before Clover opens
-                    setTimeout(() => {
-                        window.open('https://link.clover.com/urlshortener/4wbzLj', '_blank');
-                    }, 1000);
+                    // Meta Pixel: NO e-commerce events here.
+                    // Lead fires once in Section 1 (loadPixelAndTrackLead).
+                    // Do NOT re-add Purchase / InitiateCheckout / AddToCart /
+                    // Lead or any other events — Meta flags this page as
+                    // pharmaceutical sales otherwise.
+                    window.open('https://link.clover.com/urlshortener/4wbzLj', '_blank');
                 });
             })
             .catch((err) => {
