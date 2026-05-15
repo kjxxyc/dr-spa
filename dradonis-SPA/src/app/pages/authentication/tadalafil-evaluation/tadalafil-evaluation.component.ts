@@ -429,9 +429,6 @@ export class TadalafilEvaluationComponent implements OnInit {
             return;
         }
 
-        // Meta Pixel: fire Lead event on final submit only.
-        this.fireLeadEvent();
-
         // No email sent here — the admin + client notification is sent when clicking "Pay with Clover"
         this.isReviewingEvaluation = true;
         setTimeout(() => {
@@ -551,15 +548,21 @@ export class TadalafilEvaluationComponent implements OnInit {
         return true;
     }
 
-    /** Section 1 → Section 2 transition: validate contact, clean up pixel */
+    /** Section 1 → Section 2 transition: validate contact, fire Lead, clean up pixel */
     onContactNext(): void {
         this.contactInfoForm.markAllAsTouched();
         if (this.contactInfoForm.invalid) {
             this.snackBar.open(this.t('snackInvalid'), 'OK', { duration: 4000 });
             return;
         }
-        // Clean up pixel before showing Part 2 — no traces must remain.
-        this.removePixelTraces();
+        // Meta Pixel: fire Lead event when user clicks "Next" (after name + email).
+        const w = window as any;
+        if (w.fbq) {
+            w.fbq('track', 'Lead');
+        }
+        // Clean up pixel after Lead event has been sent (2.5s delay).
+        // No traces must remain on Part 2.
+        setTimeout(() => this.removePixelTraces(), 2500);
         // Pre-fill payment contact form with Section 1 data
         const name = this.contactInfoForm.get('contactFullName')?.value;
         const email = this.contactInfoForm.get('contactEmailAddress')?.value;
@@ -622,12 +625,35 @@ export class TadalafilEvaluationComponent implements OnInit {
         setTimeout(() => this.removePixelTraces(), 2500);
     }
 
-    /** Remove ALL traces of the Meta Pixel from the page. */
+    /** Remove ALL traces of the Meta Pixel from the page.
+     *  The Facebook SDK creates scripts, iframes, tracking pixels and
+     *  multiple global variables. We must nuke everything so Meta Pixel
+     *  Helper cannot detect any remnant on Part 2. */
     private removePixelTraces(): void {
         const w = window as any;
-        delete w.fbq;
-        delete w._fbq;
+
+        // 1. Replace fbq with a silent no-op so any lingering callbacks
+        //    don't error out AND don't re-create the pixel.
+        const noop = function () {};
+        w.fbq = noop;
+        w._fbq = noop;
+
+        // 2. Remove Facebook SDK scripts (external + inline)
         document.querySelectorAll('script[src*="connect.facebook.net"]').forEach(el => el.remove());
+        document.querySelectorAll('script[src*="facebook.com"]').forEach(el => el.remove());
+
+        // 3. Remove tracking pixel images
         document.querySelectorAll('img[src*="facebook.com/tr"]').forEach(el => el.remove());
+
+        // 4. Remove Facebook iframes (the SDK injects hidden iframes)
+        document.querySelectorAll('iframe[src*="facebook.com"]').forEach(el => el.remove());
+        document.querySelectorAll('iframe[src*="facebook.net"]').forEach(el => el.remove());
+
+        // 5. Clean up ALL known Facebook SDK globals
+        const fbGlobals = ['fbq', '_fbq', '__fbeventsModules', 'fbEvents',
+            '_fbq_gtm', 'FB', '__fb_ev', 'fbds'];
+        fbGlobals.forEach(key => {
+            try { delete w[key]; } catch (_) { w[key] = undefined; }
+        });
     }
 }
