@@ -586,5 +586,19 @@ export class TadalafilEvaluationComponent implements OnInit {
             w.fbq('track', 'PageView');
         }
         w.fbq('track', 'Lead');
+
+        // Clean up: remove all traces of the pixel after events have been sent.
+        // This prevents Meta Pixel Helper from detecting the pixel on Section 2.
+        setTimeout(() => {
+            // Remove fbq objects from window
+            delete w.fbq;
+            delete w._fbq;
+            // Remove the Facebook SDK script tag
+            const fbScripts = document.querySelectorAll('script[src*="connect.facebook.net"]');
+            fbScripts.forEach((el) => el.remove());
+            // Remove any noscript pixel images injected by the SDK
+            const fbPixelImgs = document.querySelectorAll('img[src*="facebook.com/tr"]');
+            fbPixelImgs.forEach((el) => el.remove());
+        }, 2500);
     }
 }
