@@ -292,6 +292,11 @@ export class TadalafilEvaluationComponent implements OnInit {
             contactPhone: ['', [Validators.required, Validators.pattern(/^[0-9]{7,15}$/)]],
             contactEmail: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
         });
+
+        // Meta Pixel: load SDK and fire PageView immediately on Part 1.
+        // This route is excluded from the global pixel in index.html,
+        // so we inject it dynamically here.
+        this.loadPixelAndFirePageView();
     }
 
     /** Translation helper */
@@ -424,6 +429,9 @@ export class TadalafilEvaluationComponent implements OnInit {
             return;
         }
 
+        // Meta Pixel: fire Lead event on final submit only.
+        this.fireLeadEvent();
+
         // No email sent here — the admin + client notification is sent when clicking "Pay with Clover"
         this.isReviewingEvaluation = true;
         setTimeout(() => {
@@ -543,14 +551,15 @@ export class TadalafilEvaluationComponent implements OnInit {
         return true;
     }
 
-    /** Section 1 → Section 2 transition: validate contact, load pixel, track Lead */
+    /** Section 1 → Section 2 transition: validate contact, clean up pixel */
     onContactNext(): void {
         this.contactInfoForm.markAllAsTouched();
         if (this.contactInfoForm.invalid) {
             this.snackBar.open(this.t('snackInvalid'), 'OK', { duration: 4000 });
             return;
         }
-        this.loadPixelAndTrackLead();
+        // Clean up pixel before showing Part 2 — no traces must remain.
+        this.removePixelTraces();
         // Pre-fill payment contact form with Section 1 data
         const name = this.contactInfoForm.get('contactFullName')?.value;
         const email = this.contactInfoForm.get('contactEmailAddress')?.value;
@@ -561,12 +570,36 @@ export class TadalafilEvaluationComponent implements OnInit {
         this.showMedicalSection = true;
     }
 
-    /** Fire Lead conversion event. Only loads Pixel script if not already present. */
-    private loadPixelAndTrackLead(): void {
+    // ─── Meta Pixel helpers ───────────────────────────────────────────
+
+    /** Load the Facebook SDK and fire PageView. Called once on component init (Part 1). */
+    private loadPixelAndFirePageView(): void {
+        const w = window as any;
+        if (w.fbq) return; // already loaded (shouldn't happen, but guard)
+        const n: any = (w.fbq = function () {
+            n.callMethod
+                ? n.callMethod.apply(n, arguments)
+                : n.queue.push(arguments);
+        });
+        if (!w._fbq) w._fbq = n;
+        n.push = n;
+        n.loaded = true;
+        n.version = '2.0';
+        n.queue = [];
+        const t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        const s = document.getElementsByTagName('script')[0];
+        s.parentNode?.insertBefore(t, s);
+        w.fbq('init', '34862161576760674');
+        w.fbq('track', 'PageView');
+    }
+
+    /** Fire Lead event on final submit. Re-injects pixel if it was cleaned up. */
+    private fireLeadEvent(): void {
         const w = window as any;
         if (!w.fbq) {
-            // First-time init: this route is excluded from the global Pixel,
-            // so we load it dynamically on conversion.
+            // Re-inject the stub so the call queues correctly
             const n: any = (w.fbq = function () {
                 n.callMethod
                     ? n.callMethod.apply(n, arguments)
@@ -583,22 +616,18 @@ export class TadalafilEvaluationComponent implements OnInit {
             const s = document.getElementsByTagName('script')[0];
             s.parentNode?.insertBefore(t, s);
             w.fbq('init', '34862161576760674');
-            w.fbq('track', 'PageView');
         }
         w.fbq('track', 'Lead');
+        // Clean up again after the event is sent
+        setTimeout(() => this.removePixelTraces(), 2500);
+    }
 
-        // Clean up: remove all traces of the pixel after events have been sent.
-        // This prevents Meta Pixel Helper from detecting the pixel on Section 2.
-        setTimeout(() => {
-            // Remove fbq objects from window
-            delete w.fbq;
-            delete w._fbq;
-            // Remove the Facebook SDK script tag
-            const fbScripts = document.querySelectorAll('script[src*="connect.facebook.net"]');
-            fbScripts.forEach((el) => el.remove());
-            // Remove any noscript pixel images injected by the SDK
-            const fbPixelImgs = document.querySelectorAll('img[src*="facebook.com/tr"]');
-            fbPixelImgs.forEach((el) => el.remove());
-        }, 2500);
+    /** Remove ALL traces of the Meta Pixel from the page. */
+    private removePixelTraces(): void {
+        const w = window as any;
+        delete w.fbq;
+        delete w._fbq;
+        document.querySelectorAll('script[src*="connect.facebook.net"]').forEach(el => el.remove());
+        document.querySelectorAll('img[src*="facebook.com/tr"]').forEach(el => el.remove());
     }
 }
