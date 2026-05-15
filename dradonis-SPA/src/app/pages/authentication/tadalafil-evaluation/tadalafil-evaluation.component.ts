@@ -598,32 +598,6 @@ export class TadalafilEvaluationComponent implements OnInit {
         w.fbq('track', 'PageView');
     }
 
-    /** Fire Lead event on final submit. Re-injects pixel if it was cleaned up. */
-    private fireLeadEvent(): void {
-        const w = window as any;
-        if (!w.fbq) {
-            // Re-inject the stub so the call queues correctly
-            const n: any = (w.fbq = function () {
-                n.callMethod
-                    ? n.callMethod.apply(n, arguments)
-                    : n.queue.push(arguments);
-            });
-            if (!w._fbq) w._fbq = n;
-            n.push = n;
-            n.loaded = true;
-            n.version = '2.0';
-            n.queue = [];
-            const t = document.createElement('script');
-            t.async = true;
-            t.src = 'https://connect.facebook.net/en_US/fbevents.js';
-            const s = document.getElementsByTagName('script')[0];
-            s.parentNode?.insertBefore(t, s);
-            w.fbq('init', '34862161576760674');
-        }
-        w.fbq('track', 'Lead');
-        // Clean up again after the event is sent
-        setTimeout(() => this.removePixelTraces(), 2500);
-    }
 
     /** Remove ALL traces of the Meta Pixel from the page.
      *  The Facebook SDK creates scripts, iframes, tracking pixels and
