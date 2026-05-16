@@ -385,6 +385,56 @@ $breakpoint-xs: 480px;
         height: 14px;
     }
 }
+.service-icon-offer {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+
+    .offer-badge-bg {
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: 64px;
+        height: 64px;
+        fill: #EF4444; /* red to stand out */
+        filter: drop-shadow(0 4px 8px rgba(239, 68, 68, 0.4));
+        transition: transform 0.3s ease;
+    }
+
+    .offer-badge-text {
+        position: relative;
+        z-index: 1;
+        color: $white;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        width: 48px;
+        height: 48px;
+
+        .offer-badge-bg {
+            top: -4px;
+            left: -4px;
+            width: 56px;
+            height: 56px;
+        }
+
+        .offer-badge-text {
+            font-size: 16px;
+        }
+    }
+}
+
+.service-card:hover .service-icon-offer .offer-badge-bg {
+    transform: scale(1.1) rotate(5deg);
+}
 
 .service-card-header {
     width: 100%;

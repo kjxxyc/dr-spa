@@ -57,15 +57,23 @@
           [class.expanded]="expandedId === s.id"
           [class.featured]="s.featured"
         >
-          <span class="featured-badge" *ngIf="s.featured">
+          <span class="featured-badge" *ngIf="s.featured && !s.offer">
             <mat-icon>verified</mat-icon>
             {{ 'services.badgeFeatured' | translate }}
           </span>
 
           <button class="service-card-header" (click)="toggleService(s.id)" [attr.aria-expanded]="expandedId === s.id">
-            <span class="service-icon-box" [style.background]="s.gradient">
+            <span class="service-icon-box" [style.background]="s.gradient" *ngIf="!s.offer">
               <mat-icon>{{ s.icon }}</mat-icon>
             </span>
+            
+            <span class="service-icon-offer" *ngIf="s.offer">
+              <svg viewBox="0 0 100 100" class="offer-badge-bg">
+                <path d="M50 0 L58.8 15.5 L76.5 11.5 L81.5 28.5 L98 32 L95 49 L100 65 L84 72 L82 89 L64.5 87 L50 100 L35.5 87 L18 89 L16 72 L0 65 L5 49 L2 32 L18.5 28.5 L23.5 11.5 L41.2 15.5 Z" />
+              </svg>
+              <span class="offer-badge-text">${{ s.offer }}</span>
+            </span>
+
             <span class="service-card-title">{{ 'services.list.' + s.id + '.title' | translate }}</span>
             <span class="service-card-chevron">
               <mat-icon>{{ expandedId === s.id ? 'arrow_drop_down' : 'arrow_drop_down' }}</mat-icon>
@@ -73,7 +81,7 @@
           </button>
 
           <div class="service-card-detail" [@expandState]="expandedId === s.id ? 'expanded' : 'collapsed'">
-            <p class="service-description">{{ 'services.list.' + s.id + '.description' | translate }}</p>
+            <p class="service-description" [innerHTML]="'services.list.' + s.id + '.description' | translate"></p>
             <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn primary">
               <mat-icon>calendar_today</mat-icon>
               {{ 'services.btnAppointment' | translate }}

@@ -13,6 +13,7 @@ interface ServiceItem {
     icon: string;       // Must be in the material-icons-subset.woff2 font
     gradient: string;   // CSS gradient for the icon box
     featured?: boolean; // Highlights the card with a "FEATURED" badge
+    offer?: string | number; // Highlights the card with an offer badge
 }
 
 @Component({
@@ -43,10 +44,10 @@ export class ServicesComponent {
         { id: 'brainProtocol',       icon: 'workspace_premium',  gradient: 'linear-gradient(135deg, #6366F1 0%, #4338CA 100%)', featured: true },
         { id: 'brainHealth',         icon: 'school',             gradient: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', featured: true },
         { id: 'specializedLabs',     icon: 'medical_information', gradient: 'linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)', featured: true },
+        { id: 'weightLoss',          icon: 'monitor_weight',     gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)', offer: 35 },
         { id: 'painManagement',      icon: 'medical_services',   gradient: 'linear-gradient(135deg, #EF4444 0%, #B91C1C 100%)' },
         { id: 'functionalMedicine',  icon: 'science',            gradient: 'linear-gradient(135deg, #14B8A6 0%, #0F766E 100%)' },
         { id: 'executivePhysical',   icon: 'verified',           gradient: 'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)' },
-        { id: 'weightLoss',          icon: 'monitor_weight',     gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)' },
         { id: 'hormoneTherapy',      icon: 'biotech',            gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)' },
         { id: 'menopauseAndropause', icon: 'spa',                gradient: 'linear-gradient(135deg, #EC4899 0%, #BE185D 100%)' },
         { id: 'agingBiomarkers',     icon: 'calculate',          gradient: 'linear-gradient(135deg, #D97706 0%, #92400E 100%)' },
