@@ -73,6 +73,13 @@ export const AuthenticationRoutes: Routes = [
       {
         path: 'men-wellness',
         loadComponent: () =>
+          import('./men-wellness-contact/men-wellness-contact.component').then(
+            (m) => m.MenWellnessContactComponent
+          ),
+      },
+      {
+        path: 'men-wellness/evaluation',
+        loadComponent: () =>
           import('./tadalafil-evaluation/tadalafil-evaluation.component').then(
             (m) => m.TadalafilEvaluationComponent
           ),

@@ -1,4 +1,5 @@
 import { Component, OnInit, NgZone } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {
     FormBuilder,
@@ -239,9 +240,7 @@ export class TadalafilEvaluationComponent implements OnInit {
     submitted = false;
     isReviewingEvaluation = false;
     confirmCheck = false;
-    showMedicalSection = false; // Controls Section 1 → Section 2 transition
 
-    contactInfoForm!: FormGroup;   // Section 1: Name + Email
     personalInfoForm!: FormGroup;
     questionsForm1!: FormGroup;
     questionsForm2!: FormGroup;
@@ -258,14 +257,10 @@ export class TadalafilEvaluationComponent implements OnInit {
         private fb: FormBuilder,
         private snackBar: MatSnackBar,
         private ngZone: NgZone,
+        private router: Router,
     ) { }
 
     ngOnInit(): void {
-        this.contactInfoForm = this.fb.group({
-            contactFullName: ['', Validators.required],
-            contactEmailAddress: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
-        });
-
         this.personalInfoForm = this.fb.group({
             dateOfBirth: [null, Validators.required],
             sex: ['', Validators.required],
@@ -293,10 +288,17 @@ export class TadalafilEvaluationComponent implements OnInit {
             contactEmail: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
         });
 
-        // Meta Pixel: load SDK and fire PageView immediately on Part 1.
-        // This route is excluded from the global pixel in index.html,
-        // so we inject it dynamically here.
-        this.loadPixelAndFirePageView();
+        // Read contact info passed from the contact page (Page 1) via router state.
+        // Using history.state instead of getCurrentNavigation() because the
+        // navigation has already completed by the time ngOnInit runs.
+        const state = history.state as any;
+        if (state?.contactName) {
+            if (state.lang) this.lang = state.lang;
+            this.paymentContactForm.patchValue({
+                contactName: state.contactName || '',
+                contactEmail: state.contactEmail || '',
+            });
+        }
     }
 
     /** Translation helper */
@@ -548,86 +550,4 @@ export class TadalafilEvaluationComponent implements OnInit {
         return true;
     }
 
-    /** Section 1 → Section 2 transition: validate contact, fire Lead, clean up pixel */
-    onContactNext(): void {
-        this.contactInfoForm.markAllAsTouched();
-        if (this.contactInfoForm.invalid) {
-            this.snackBar.open(this.t('snackInvalid'), 'OK', { duration: 4000 });
-            return;
-        }
-        // Meta Pixel: fire Lead event when user clicks "Next" (after name + email).
-        const w = window as any;
-        if (w.fbq) {
-            w.fbq('track', 'Lead');
-        }
-        // Clean up pixel after Lead event has been sent (2.5s delay).
-        // No traces must remain on Part 2.
-        setTimeout(() => this.removePixelTraces(), 2500);
-        // Pre-fill payment contact form with Section 1 data
-        const name = this.contactInfoForm.get('contactFullName')?.value;
-        const email = this.contactInfoForm.get('contactEmailAddress')?.value;
-        this.paymentContactForm.patchValue({
-            contactName: name,
-            contactEmail: email,
-        });
-        this.showMedicalSection = true;
-    }
-
-    // ─── Meta Pixel helpers ───────────────────────────────────────────
-
-    /** Load the Facebook SDK and fire PageView. Called once on component init (Part 1). */
-    private loadPixelAndFirePageView(): void {
-        const w = window as any;
-        if (w.fbq) return; // already loaded (shouldn't happen, but guard)
-        const n: any = (w.fbq = function () {
-            n.callMethod
-                ? n.callMethod.apply(n, arguments)
-                : n.queue.push(arguments);
-        });
-        if (!w._fbq) w._fbq = n;
-        n.push = n;
-        n.loaded = true;
-        n.version = '2.0';
-        n.queue = [];
-        const t = document.createElement('script');
-        t.async = true;
-        t.src = 'https://connect.facebook.net/en_US/fbevents.js';
-        const s = document.getElementsByTagName('script')[0];
-        s.parentNode?.insertBefore(t, s);
-        w.fbq('init', '34862161576760674');
-        w.fbq('track', 'PageView');
-    }
-
-
-    /** Remove ALL traces of the Meta Pixel from the page.
-     *  The Facebook SDK creates scripts, iframes, tracking pixels and
-     *  multiple global variables. We must nuke everything so Meta Pixel
-     *  Helper cannot detect any remnant on Part 2. */
-    private removePixelTraces(): void {
-        const w = window as any;
-
-        // 1. Replace fbq with a silent no-op so any lingering callbacks
-        //    don't error out AND don't re-create the pixel.
-        const noop = function () {};
-        w.fbq = noop;
-        w._fbq = noop;
-
-        // 2. Remove Facebook SDK scripts (external + inline)
-        document.querySelectorAll('script[src*="connect.facebook.net"]').forEach(el => el.remove());
-        document.querySelectorAll('script[src*="facebook.com"]').forEach(el => el.remove());
-
-        // 3. Remove tracking pixel images
-        document.querySelectorAll('img[src*="facebook.com/tr"]').forEach(el => el.remove());
-
-        // 4. Remove Facebook iframes (the SDK injects hidden iframes)
-        document.querySelectorAll('iframe[src*="facebook.com"]').forEach(el => el.remove());
-        document.querySelectorAll('iframe[src*="facebook.net"]').forEach(el => el.remove());
-
-        // 5. Clean up ALL known Facebook SDK globals
-        const fbGlobals = ['fbq', '_fbq', '__fbeventsModules', 'fbEvents',
-            '_fbq_gtm', 'FB', '__fb_ev', 'fbds'];
-        fbGlobals.forEach(key => {
-            try { delete w[key]; } catch (_) { w[key] = undefined; }
-        });
-    }
 }
