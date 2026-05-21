@@ -352,6 +352,11 @@ body {
     transition: all 0.25s ease;
     min-width: 280px;
     justify-content: center;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:visited { text-decoration: none; }
 
     img { height: 32px; width: auto; }
     &:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); }

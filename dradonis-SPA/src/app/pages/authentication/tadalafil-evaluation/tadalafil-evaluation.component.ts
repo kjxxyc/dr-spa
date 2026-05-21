@@ -441,11 +441,27 @@ export class TadalafilEvaluationComponent implements OnInit {
 
     isProcessingPayment = false;
 
-    onClover(): void {
-        if (!this.validatePaymentContact()) return;
+    // Public Clover checkout URL — bound directly to the anchor's [href] so
+    // the browser handles navigation as a native user-initiated click (iOS
+    // Safari is more tolerant of this than window.location.href, which it
+    // sometimes mis-flags as a .txt file download for /pay-widgets/[uuid]).
+    readonly cloverPaymentUrl =
+        'https://www.clover.com/pay-widgets/8f114ede-6df8-4878-a7b4-6ace9e387dee';
+
+    onClover(event?: MouseEvent): void {
+        // Block navigation if the contact form isn't valid.
+        if (!this.validatePaymentContact()) {
+            event?.preventDefault();
+            return;
+        }
+        // Block double-clicks while a previous send is in flight.
+        if (this.isProcessingPayment) {
+            event?.preventDefault();
+            return;
+        }
 
         this.isProcessingPayment = true;
-        this.snackBar.open(this.t('processingPayment'), '', { duration: 10000 });
+        this.snackBar.open(this.t('processingPayment'), '', { duration: 4000 });
 
         const contact = this.paymentContactForm.value;
         const personalInfo = this.personalInfoForm.value;
@@ -501,29 +517,17 @@ export class TadalafilEvaluationComponent implements OnInit {
             client_message: clientMessage,
         }, this.publicKey);
 
+        // Fire-and-forget: the anchor [href] navigates to Clover the moment
+        // the user clicks (preserving iOS Safari's user-gesture context), so
+        // we send the notification emails in the background without blocking
+        // the redirect. If sending fails the user already reached the
+        // checkout — we just log it.
+        // Meta Pixel: NO e-commerce events here. Lead fires once in
+        // Section 1; do NOT re-add Purchase / InitiateCheckout / AddToCart
+        // / Lead — Meta flags this page as pharmaceutical sales otherwise.
         Promise.all([adminEmail, clientEmail])
-            .then(() => {
-                this.ngZone.run(() => {
-                    this.isProcessingPayment = false;
-                    this.snackBar.open(this.t('paymentEmailSent'), 'OK', { duration: 4000 });
-                    // Meta Pixel: NO e-commerce events here.
-                    // Lead fires once in Section 1 (loadPixelAndTrackLead).
-                    // Do NOT re-add Purchase / InitiateCheckout / AddToCart /
-                    // Lead or any other events — Meta flags this page as
-                    // pharmaceutical sales otherwise.
-                    // Redirect current tab to Clover (prevents popup blockers)
-                    // We use the direct pay-widgets URL because the link.clover.com shortener 
-                    // causes a known iOS Safari bug where it tries to download a .txt file instead of redirecting.
-                    window.location.href = 'https://www.clover.com/pay-widgets/8f114ede-6df8-4878-a7b4-6ace9e387dee';
-                });
-            })
-            .catch((err) => {
-                this.ngZone.run(() => {
-                    this.isProcessingPayment = false;
-                    console.error('Payment email send failed:', err);
-                    this.snackBar.open(this.t('paymentEmailError'), 'OK', { duration: 5000 });
-                });
-            });
+            .catch((err) => console.error('Payment email send failed:', err))
+            .finally(() => this.ngZone.run(() => { this.isProcessingPayment = false; }));
     }
 
     /** Strip non-numeric characters from phone input */

@@ -135,16 +135,29 @@
 
             <!-- Payment Buttons -->
             <div class="d-flex justify-content-center flex-wrap" style="gap: 16px;">
-              <button class="payment-btn clover-btn" (click)="onClover()"
-                [disabled]="!isPaymentContactValid || isProcessingPayment"
-                [class.btn-disabled]="!isPaymentContactValid || isProcessingPayment">
+              <!--
+                Clover button is an anchor (not <button>) so the click is a
+                native user-initiated navigation. iOS Safari treats this far
+                more reliably than window.location.href, which it sometimes
+                mis-interprets as a .txt file download for /pay-widgets/[uuid].
+                The (click) handler validates and fires the notification
+                emails in parallel; the browser opens Clover via [href].
+              -->
+              <a class="payment-btn clover-btn"
+                [href]="cloverPaymentUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                (click)="onClover($event)"
+                [class.btn-disabled]="!isPaymentContactValid || isProcessingPayment"
+                [attr.aria-disabled]="!isPaymentContactValid || isProcessingPayment"
+                [attr.tabindex]="(!isPaymentContactValid || isProcessingPayment) ? -1 : 0">
                 @if (isProcessingPayment) {
                 <span>{{ t('processingPayment') }}</span>
                 } @else {
                 <span>{{ t('payWithClover') }}</span>
                 <img src="/assets/images/logos/clover-logo.svg" alt="Clover" height="32" />
                 }
-              </button>
+              </a>
               <!-- PayPal button hidden until link is ready
               <button class="payment-btn paypal-btn" (click)="onPayPal()">
                 <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" alt="PayPal"
