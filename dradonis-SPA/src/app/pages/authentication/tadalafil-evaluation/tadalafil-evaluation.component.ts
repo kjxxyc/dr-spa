@@ -288,16 +288,10 @@ export class TadalafilEvaluationComponent implements OnInit {
             contactEmail: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
         });
 
-        // Read contact info passed from the contact page (Page 1) via router state.
-        // Using history.state instead of getCurrentNavigation() because the
-        // navigation has already completed by the time ngOnInit runs.
+        // Read language preference passed from the landing page (Page 1) via router state.
         const state = history.state as any;
-        if (state?.contactName) {
-            if (state.lang) this.lang = state.lang;
-            this.paymentContactForm.patchValue({
-                contactName: state.contactName || '',
-                contactEmail: state.contactEmail || '',
-            });
+        if (state?.lang) {
+            this.lang = state.lang;
         }
     }
 

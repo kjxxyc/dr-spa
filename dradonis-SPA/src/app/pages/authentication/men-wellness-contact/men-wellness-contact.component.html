@@ -23,46 +23,50 @@
       <img [src]="bannerImage" [alt]="'Limitless Vitality and Energy'" class="banner-img" />
     </div>
 
-    <!-- Card -->
-    <mat-card class="cardWithShadow">
-      <mat-card-content class="p-24">
+    <!-- Landing Card -->
+    <div class="landing-hero-card">
 
-        <p class="mat-body-1 f-s-14 m-b-8">{{ t('subtitle') }}</p>
+      <!-- Title -->
+      <h1 class="landing-hero-title">{{ t('heroTitle') }}</h1>
 
-        <form [formGroup]="contactInfoForm">
-          <div class="contact-initial-grid">
-            <mat-form-field appearance="outline" class="w-100">
-              <mat-label>{{ t('contactFullName') }}</mat-label>
-              <input matInput formControlName="contactFullName" />
-              @if (contactInfoForm.get('contactFullName')?.touched && contactInfoForm.get('contactFullName')?.hasError('required')) {
-              <mat-error>{{ t('errorRequired') }}</mat-error>
-              }
-            </mat-form-field>
+      <!-- Subtitle -->
+      <p class="landing-hero-subtitle">{{ t('heroSubtitle') }}</p>
 
-            <mat-form-field appearance="outline" class="w-100">
-              <mat-label>{{ t('contactEmailAddress') }}</mat-label>
-              <input matInput formControlName="contactEmailAddress" type="email" />
-              @if (contactInfoForm.get('contactEmailAddress')?.touched && contactInfoForm.get('contactEmailAddress')?.hasError('required')) {
-              <mat-error>{{ t('errorRequired') }}</mat-error>
-              } @else if (contactInfoForm.get('contactEmailAddress')?.touched && contactInfoForm.get('contactEmailAddress')?.hasError('pattern')) {
-              <mat-error>{{ t('errorEmailFormat') }}</mat-error>
-              }
-            </mat-form-field>
-          </div>
+      <!-- Benefits -->
+      <ul class="landing-benefits">
+        <li>
+          <span class="benefit-emoji">💼</span>
+          <span>{{ t('benefit1') }}</span>
+        </li>
+        <li>
+          <span class="benefit-emoji">🚫</span>
+          <span>{{ t('benefit2') }}</span>
+        </li>
+        <li>
+          <span class="benefit-emoji">📦</span>
+          <span>{{ t('benefit3') }}</span>
+        </li>
+      </ul>
 
-          <!-- Security Notice -->
-          <div class="security-notice">
-            <mat-icon>lock</mat-icon>
-            <p>{{ t('securityMessage') }}</p>
-          </div>
+      <!-- CTA Button -->
+      <button class="landing-cta-btn" (click)="onStartConsultation()">
+        <mat-icon>arrow_forward</mat-icon>
+        <span>{{ t('ctaButton') }}</span>
+      </button>
 
-          <div class="d-flex justify-content-end">
-            <button mat-flat-button color="primary" (click)="onContactNext()">{{ t('contactNextBtn') }}</button>
-          </div>
-        </form>
+      <!-- Time estimate -->
+      <p class="landing-time-note">
+        <mat-icon>schedule</mat-icon>
+        {{ t('timeEstimate') }}
+      </p>
 
-      </mat-card-content>
-    </mat-card>
+      <!-- Security Notice -->
+      <div class="security-notice">
+        <mat-icon>lock</mat-icon>
+        <p>{{ t('securityMessage') }}</p>
+      </div>
+
+    </div>
 
   </div>
 </div>

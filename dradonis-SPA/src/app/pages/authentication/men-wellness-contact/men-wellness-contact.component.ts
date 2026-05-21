@@ -1,45 +1,35 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import {
-    FormBuilder,
-    FormGroup,
-    Validators,
-    ReactiveFormsModule,
-} from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { LanguageSelectorDialogComponent } from '../../../shared/language-selector-dialog/language-selector-dialog.component';
 
-// ---------- translations (contact-page subset) ----------
+// ---------- translations (landing-page) ----------
 const TRANSLATIONS: Record<string, Record<string, string>> = {
     en: {
-        subtitle: 'Answer the following questions to determine your profile\'s compatibility with our available options. This process is quick, secure, and for internal use only.',
-        contactFullName: 'Full Name',
-        contactEmailAddress: 'Email',
+        heroTitle: 'Regain confidence and spontaneity in your intimate moments.',
+        heroSubtitle: 'A safe medical process, designed exclusively for men seeking absolute discretion and real solutions.',
+        benefit1: 'Easy and secure process.',
+        benefit2: 'Private and comfortable, all from your phone.',
+        benefit3: 'Confidential delivery right to your door.',
+        ctaButton: 'Start my digital medical consultation',
+        timeEstimate: 'Takes only 2 minutes',
         securityMessage: 'The data shared in this form is handled under strict security and encryption standards. The information is exclusively used for processing your request and will not be shared with third parties under any circumstances.',
-        contactNextBtn: 'Next',
         langToggle: 'Español',
-        errorRequired: 'This field is required.',
-        errorEmailFormat: 'Please enter a valid email (e.g. name@mail.com).',
-        snackInvalid: 'Please fill in all required fields.',
     },
     es: {
-        subtitle: 'Responde las siguientes preguntas para determinar la compatibilidad de tu perfil con nuestras opciones disponibles. Este proceso es rápido, seguro y de uso interno exclusivo.',
-        contactFullName: 'Nombre Completo',
-        contactEmailAddress: 'Correo Electrónico',
+        heroTitle: 'Recupera la confianza y la espontaneidad en tus momentos íntimos.',
+        heroSubtitle: 'Un proceso médico seguro, diseñado exclusivamente para hombres que buscan discreción absoluta y soluciones reales.',
+        benefit1: 'Proceso fácil y seguro.',
+        benefit2: 'Privado y cómodo, todo desde tu celular.',
+        benefit3: 'Entrega confidencial directamente a tu puerta.',
+        ctaButton: 'Comenzar mi consulta médica digital',
+        timeEstimate: 'Toma 2 minutos',
         securityMessage: 'Los datos compartidos en este formulario se manejan bajo estrictos estándares de seguridad y cifrado. La información es de uso exclusivo para el procesamiento de tu solicitud y no será compartida con terceros bajo ningún concepto.',
-        contactNextBtn: 'Siguiente',
         langToggle: 'English',
-        errorRequired: 'Este campo es obligatorio.',
-        errorEmailFormat: 'Ingrese un correo válido (ej. nombre@correo.com).',
-        snackInvalid: 'Por favor complete todos los campos obligatorios.',
     },
 };
 
@@ -48,24 +38,17 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     standalone: true,
     imports: [
         CommonModule,
-        ReactiveFormsModule,
         MatButtonModule,
         MatCardModule,
         MatIconModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatSnackBarModule,
     ],
     templateUrl: './men-wellness-contact.component.html',
     styleUrls: ['./men-wellness-contact.component.scss'],
 })
 export class MenWellnessContactComponent implements OnInit, OnDestroy {
     lang: 'en' | 'es' = 'en';
-    contactInfoForm!: FormGroup;
 
     constructor(
-        private fb: FormBuilder,
-        private snackBar: MatSnackBar,
         private router: Router,
         private dialog: MatDialog,
     ) { }
@@ -73,11 +56,6 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
     ngOnInit(): void {
         // Show language selector dialog on entry (same as Cardecal)
         this.openLanguageDialog();
-
-        this.contactInfoForm = this.fb.group({
-            contactFullName: ['', Validators.required],
-            contactEmailAddress: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
-        });
 
         // Meta Pixel: load SDK and fire PageView on this page.
         this.loadPixel();
@@ -126,25 +104,17 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
         this.lang = this.lang === 'en' ? 'es' : 'en';
     }
 
-    /** Handle "Next" button click */
-    onContactNext(): void {
-        this.contactInfoForm.markAllAsTouched();
-        if (this.contactInfoForm.invalid) {
-            this.snackBar.open(this.t('snackInvalid'), 'OK', { duration: 4000 });
-            return;
-        }
-
-        // Meta Pixel: fire Lead event on "Next" click
+    /** Handle CTA button click */
+    onStartConsultation(): void {
+        // Meta Pixel: fire Lead event on CTA click
         const w = window as any;
         if (typeof w.fbq === 'function') {
             w.fbq('track', 'Lead');
         }
 
-        // Navigate to the evaluation form, passing contact info via router state
-        const name = this.contactInfoForm.get('contactFullName')?.value;
-        const email = this.contactInfoForm.get('contactEmailAddress')?.value;
+        // Navigate to the evaluation form, passing language via router state
         this.router.navigate(['/men-wellness/evaluation'], {
-            state: { contactName: name, contactEmail: email, lang: this.lang },
+            state: { lang: this.lang },
         });
     }
 
