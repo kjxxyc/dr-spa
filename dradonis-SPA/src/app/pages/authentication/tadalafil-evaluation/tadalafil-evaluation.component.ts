@@ -511,7 +511,8 @@ export class TadalafilEvaluationComponent implements OnInit {
                     // Do NOT re-add Purchase / InitiateCheckout / AddToCart /
                     // Lead or any other events — Meta flags this page as
                     // pharmaceutical sales otherwise.
-                    window.open('https://link.clover.com/urlshortener/4wbzLj', '_blank');
+                    // Redirect current tab to Clover (prevents popup blockers)
+                    window.location.href = 'https://link.clover.com/urlshortener/4wbzLj';
                 });
             })
             .catch((err) => {
