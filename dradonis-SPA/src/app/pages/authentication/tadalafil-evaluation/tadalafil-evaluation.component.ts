@@ -512,7 +512,9 @@ export class TadalafilEvaluationComponent implements OnInit {
                     // Lead or any other events — Meta flags this page as
                     // pharmaceutical sales otherwise.
                     // Redirect current tab to Clover (prevents popup blockers)
-                    window.location.href = 'https://link.clover.com/urlshortener/4wbzLj';
+                    // We use the direct pay-widgets URL because the link.clover.com shortener 
+                    // causes a known iOS Safari bug where it tries to download a .txt file instead of redirecting.
+                    window.location.href = 'https://www.clover.com/pay-widgets/8f114ede-6df8-4878-a7b4-6ace9e387dee';
                 });
             })
             .catch((err) => {
