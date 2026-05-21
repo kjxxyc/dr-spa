@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { LanguageSelectorDialogComponent } from '../../../shared/language-selector-dialog/language-selector-dialog.component';
 
 // ---------- translations (contact-page subset) ----------
 const TRANSLATIONS: Record<string, Record<string, string>> = {
@@ -65,9 +67,13 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
         private fb: FormBuilder,
         private snackBar: MatSnackBar,
         private router: Router,
-    ) {}
+        private dialog: MatDialog,
+    ) { }
 
     ngOnInit(): void {
+        // Show language selector dialog on entry (same as Cardecal)
+        this.openLanguageDialog();
+
         this.contactInfoForm = this.fb.group({
             contactFullName: ['', Validators.required],
             contactEmailAddress: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
@@ -75,11 +81,28 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
 
         // Meta Pixel: load SDK and fire PageView on this page.
         this.loadPixel();
+
+        // TikTok Pixel: load SDK and fire PageView on this page.
+        this.loadTikTokPixel();
+    }
+
+    /** Open the language selector dialog (disableClose forces user to pick). */
+    openLanguageDialog(): void {
+        const dialogRef = this.dialog.open(LanguageSelectorDialogComponent, {
+            disableClose: true,
+            panelClass: 'language-selector-panel',
+        });
+        dialogRef.afterClosed().subscribe((lang: string) => {
+            if (lang) {
+                this.lang = lang as 'en' | 'es';
+            }
+        });
     }
 
     ngOnDestroy(): void {
         // When navigating away, remove ALL pixel traces so Page 2 starts clean.
         this.removePixelTraces();
+        this.removeTikTokTraces();
     }
 
     /** Translation helper */
@@ -155,7 +178,7 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
         const w = window as any;
 
         // Replace with no-op first so lingering callbacks don't re-create
-        const noop = function () {};
+        const noop = function () { };
         w.fbq = noop;
         w._fbq = noop;
 
@@ -176,5 +199,60 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
         fbGlobals.forEach(key => {
             try { delete w[key]; } catch (_) { w[key] = undefined; }
         });
+    }
+
+    // ─── TikTok Pixel ────────────────────────────────────────────────
+
+    /** Load the TikTok Pixel SDK and fire PageView. */
+    private loadTikTokPixel(): void {
+        const w = window as any;
+        if (w.ttq) return; // already loaded
+
+        w.TiktokAnalyticsObject = 'ttq';
+        const ttq: any = (w.ttq = w.ttq || []);
+        ttq.methods = ['page', 'track', 'identify', 'instances', 'debug', 'on', 'off', 'once', 'ready', 'alias', 'group', 'enableCookie', 'disableCookie', 'holdConsent', 'revokeConsent', 'grantConsent'];
+        ttq.setAndDefer = function (t: any, e: string) {
+            t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))); };
+        };
+        for (let i = 0; i < ttq.methods.length; i++) { ttq.setAndDefer(ttq, ttq.methods[i]); }
+        ttq.instance = function (t: string) {
+            const e = ttq._i[t] || [];
+            for (let n = 0; n < ttq.methods.length; n++) { ttq.setAndDefer(e, ttq.methods[n]); }
+            return e;
+        };
+        ttq.load = function (e: string, n?: any) {
+            const r = 'https://analytics.tiktok.com/i18n/pixel/events.js';
+            ttq._i = ttq._i || {};
+            ttq._i[e] = [];
+            ttq._i[e]._u = r;
+            ttq._t = ttq._t || {};
+            ttq._t[e] = +new Date();
+            ttq._o = ttq._o || {};
+            ttq._o[e] = n || {};
+            const s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = r + '?sdkid=' + e + '&lib=ttq';
+            const first = document.getElementsByTagName('script')[0];
+            first.parentNode?.insertBefore(s, first);
+        };
+
+        w.ttq.load('D86TVORC77UAOJS102RG');
+        w.ttq.page();
+    }
+
+    /** Remove ALL traces of the TikTok Pixel from the page. */
+    private removeTikTokTraces(): void {
+        const w = window as any;
+
+        // Replace with no-op first
+        w.ttq = undefined;
+        w.TiktokAnalyticsObject = undefined;
+
+        // Remove TikTok SDK scripts
+        document.querySelectorAll('script[src*="analytics.tiktok.com"]').forEach(el => el.remove());
+
+        // Remove TikTok tracking images
+        document.querySelectorAll('img[src*="analytics.tiktok.com"]').forEach(el => el.remove());
     }
 }

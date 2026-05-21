@@ -18,6 +18,8 @@ import { MatStepperModule, MatStepper } from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { LanguageSelectorDialogComponent } from '../../../shared/language-selector-dialog/language-selector-dialog.component';
 import emailjs from '@emailjs/browser';
 
 // ---------- translations ----------
@@ -212,10 +214,14 @@ export class VitaminsPrescriptionComponent implements OnInit {
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
     private ngZone: NgZone,
-    private http: HttpClient
+    private http: HttpClient,
+    private dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
+    // Show language selector dialog on entry
+    this.openLanguageDialog();
+
     this.http.get<any[]>('https://restcountries.com/v3.1/all?fields=name,idd').subscribe({
       next: (data) => {
         let allCountries = data
@@ -294,6 +300,19 @@ export class VitaminsPrescriptionComponent implements OnInit {
 
   toggleLanguage(): void {
     this.lang = this.lang === 'en' ? 'es' : 'en';
+  }
+
+  /** Open the language selector dialog (disableClose forces user to pick). */
+  openLanguageDialog(): void {
+    const dialogRef = this.dialog.open(LanguageSelectorDialogComponent, {
+      disableClose: true,
+      panelClass: 'language-selector-panel',
+    });
+    dialogRef.afterClosed().subscribe((lang: string) => {
+      if (lang) {
+        this.lang = lang as 'en' | 'es';
+      }
+    });
   }
 
   get isUS(): boolean {

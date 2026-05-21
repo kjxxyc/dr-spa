@@ -275,6 +275,7 @@ $breakpoint-xs: 480px;
         @media (max-width: $breakpoint-md) {
             order: 1;
             min-height: 340px;
+            flex-direction: column;
         }
 
         @media (max-width: $breakpoint-sm) { min-height: 300px; }
@@ -338,7 +339,7 @@ $breakpoint-xs: 480px;
             display: flex;
             justify-content: center;
 
-            @media (max-width: $breakpoint-sm) {
+            @media (max-width: $breakpoint-md) {
                 position: static;
                 transform: none;
                 margin-top: 14px;
