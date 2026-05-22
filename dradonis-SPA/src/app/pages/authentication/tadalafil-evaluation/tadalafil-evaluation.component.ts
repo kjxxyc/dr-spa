@@ -449,27 +449,20 @@ export class TadalafilEvaluationComponent implements OnInit {
         'https://www.clover.com/pay-widgets/8f114ede-6df8-4878-a7b4-6ace9e387dee';
 
     /**
-     * Detect Chrome on iOS. Chrome iOS reports itself as "CriOS" in the UA.
-     * Although Chrome iOS still uses WebKit under the hood (Apple's rule),
-     * its download/navigation layer differs from Safari and mis-flags the
-     * Clover pay-widgets HTML stub as a downloadable .txt file when it
-     * opens in a new tab. Safari iOS does NOT have this bug.
+     * Target attribute for the Clover anchor — always '_self' so the link
+     * loads in the SAME tab on every device. The Clover /pay-widgets/[uuid]
+     * endpoint serves a 919-byte HTML stub that some browsers (notably
+     * Chrome iOS) mis-flag as a .txt download when opened in a NEW tab,
+     * because the bootstrap JS can't initialize properly in that context.
+     * Loading it as a primary navigation works consistently across Safari,
+     * Chrome, Firefox, Edge, on iOS, Android and desktop.
+     *
+     * This matches the convention of Stripe Checkout, PayPal Checkout,
+     * Square, etc. — payment redirects almost always replace the current
+     * tab rather than opening a new one. The notification emails are sent
+     * fire-and-forget in onClover() before the navigation kicks in.
      */
-    get isChromeIOS(): boolean {
-        if (typeof navigator === 'undefined') return false;
-        return /CriOS/i.test(navigator.userAgent);
-    }
-
-    /**
-     * Target attribute for the Clover anchor.
-     * - Chrome iOS: '_self' → load Clover in the same tab (bypasses the
-     *   new-tab download fallback that triggers the .txt bug).
-     * - Everything else (Safari iOS, Android, desktop): '_blank' → open in
-     *   a new tab so the user keeps the form behind for reference.
-     */
-    get cloverTarget(): string {
-        return this.isChromeIOS ? '_self' : '_blank';
-    }
+    readonly cloverTarget = '_self';
 
     onClover(event?: MouseEvent): void {
         // Block navigation if the contact form isn't valid.

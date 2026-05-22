@@ -137,15 +137,14 @@
             <div class="d-flex justify-content-center flex-wrap" style="gap: 16px;">
               <!--
                 Clover button is an anchor (not <button>) so the click is a
-                native user-initiated navigation. iOS Safari treats this far
-                more reliably than window.location.href, which it sometimes
-                mis-interprets as a .txt file download for /pay-widgets/[uuid].
-                target is dynamic: '_blank' on Safari/Android/desktop so the
-                form stays open behind the checkout; '_self' on Chrome iOS
-                because Chrome iOS' new-tab handler mis-flags the Clover
-                stub as a downloadable file (Safari iOS does not).
-                The (click) handler validates and fires the notification
-                emails in parallel; the browser opens Clover via [href].
+                native user-initiated navigation. target="_self" loads
+                Clover in the SAME tab on every device — required because
+                Chrome iOS (and potentially other strict mobile browsers)
+                mis-flags /pay-widgets/[uuid] as a downloadable .txt when
+                opened in a new tab. This matches the redirect-in-same-tab
+                convention of Stripe, PayPal, Square, etc. The (click)
+                handler validates the form and fires the notification
+                emails in parallel before navigation.
               -->
               <a class="payment-btn clover-btn"
                 [href]="cloverPaymentUrl"
