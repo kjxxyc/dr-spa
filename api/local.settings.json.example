@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "CLOVER_API_BASE": "https://api.clover.com",
+    "CLOVER_MERCHANT_ID": "YOUR_MERCHANT_ID_HERE",
+    "CLOVER_ECOMM_API_TOKEN": "YOUR_PRIVATE_ECOMM_API_TOKEN_HERE",
+    "CLOVER_PRODUCT_NAME": "Tadalafil (Cialis) 20mg",
+    "CLOVER_PRODUCT_PRICE_CENTS": "1999"
+  },
+  "Host": {
+    "CORS": "*"
+  }
+}

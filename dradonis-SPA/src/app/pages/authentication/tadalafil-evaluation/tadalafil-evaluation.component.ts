@@ -1,4 +1,6 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
+import type { StepperSelectionEvent } from '@angular/cdk/stepper';
+import type { MatStepper } from '@angular/material/stepper';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import {
@@ -235,11 +237,55 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     styleUrls: ['./tadalafil-evaluation.component.scss'],
 })
 export class TadalafilEvaluationComponent implements OnInit {
+    @ViewChild('stepper') stepper!: MatStepper;
+
     lang: 'en' | 'es' = 'en';
     isSubmitting = false;
     submitted = false;
     isReviewingEvaluation = false;
     confirmCheck = false;
+
+    /**
+     * Scroll the newly-active step header into view when the user advances
+     * the vertical stepper. Without this, on mobile the page stays scrolled
+     * near the previous "Next" button and the user lands mid-step (e.g. on
+     * Q7 instead of Q5).
+     *
+     * IMPORTANT: Material's vertical stepper has a ~225ms expand animation.
+     * We must wait for the new step's content to be laid out before reading
+     * the header's position, otherwise we scroll to a stale offset.
+     */
+    onStepChange(event: StepperSelectionEvent): void {
+        const scrollToActiveHeader = () => {
+            const headers = document.querySelectorAll<HTMLElement>(
+                '.tadalafil-eval .mat-step-header'
+            );
+            const target = headers[event.selectedIndex];
+            if (!target) return;
+
+            // Use absolute window scroll (more reliable than scrollIntoView
+            // on mobile, especially inside scroll containers).
+            const rect = target.getBoundingClientRect();
+            const absoluteTop = rect.top + window.pageYOffset;
+            const breathingRoom = 12; // tiny gap above the header
+
+            window.scrollTo({
+                top: Math.max(0, absoluteTop - breathingRoom),
+                behavior: 'smooth',
+            });
+        };
+
+        // Run outside Angular zone to avoid blocking change detection, then
+        // wait long enough for the stepper's expand animation (~225ms) to
+        // settle so getBoundingClientRect returns the final position.
+        this.ngZone.runOutsideAngular(() => {
+            // First quick scroll for snappy feedback…
+            setTimeout(scrollToActiveHeader, 50);
+            // …then a second one after the animation completes to land
+            // precisely at the new step's header.
+            setTimeout(scrollToActiveHeader, 320);
+        });
+    }
 
     personalInfoForm!: FormGroup;
     questionsForm1!: FormGroup;
@@ -441,43 +487,24 @@ export class TadalafilEvaluationComponent implements OnInit {
 
     isProcessingPayment = false;
 
-    // Public Clover checkout URL — bound directly to the anchor's [href] so
-    // the browser handles navigation as a native user-initiated click (iOS
-    // Safari is more tolerant of this than window.location.href, which it
-    // sometimes mis-flags as a .txt file download for /pay-widgets/[uuid]).
-    readonly cloverPaymentUrl =
-        'https://www.clover.com/pay-widgets/8f114ede-6df8-4878-a7b4-6ace9e387dee';
-
     /**
-     * Target attribute for the Clover anchor — always '_self' so the link
-     * loads in the SAME tab on every device. The Clover /pay-widgets/[uuid]
-     * endpoint serves a 919-byte HTML stub that some browsers (notably
-     * Chrome iOS) mis-flag as a .txt download when opened in a NEW tab,
-     * because the bootstrap JS can't initialize properly in that context.
-     * Loading it as a primary navigation works consistently across Safari,
-     * Chrome, Firefox, Edge, on iOS, Android and desktop.
+     * Creates a Clover Hosted Checkout session via our Azure Function backend
+     * (/api/clover-create-checkout) and redirects the user to the returned
+     * public checkout URL. The backend holds the Clover Ecommerce API token
+     * (kept server-side as an Azure SWA Application Setting), so the secret
+     * never reaches the browser.
      *
-     * This matches the convention of Stripe Checkout, PayPal Checkout,
-     * Square, etc. — payment redirects almost always replace the current
-     * tab rather than opening a new one. The notification emails are sent
-     * fire-and-forget in onClover() before the navigation kicks in.
+     * The returned URL has the format `https://www.clover.com/checkout/[id]`
+     * — a real public page that works in every browser, including Chrome
+     * iOS where the legacy `/pay-widgets/[uuid]` endpoint was being treated
+     * as a .txt file download.
      */
-    readonly cloverTarget = '_self';
-
-    onClover(event?: MouseEvent): void {
-        // Block navigation if the contact form isn't valid.
-        if (!this.validatePaymentContact()) {
-            event?.preventDefault();
-            return;
-        }
-        // Block double-clicks while a previous send is in flight.
-        if (this.isProcessingPayment) {
-            event?.preventDefault();
-            return;
-        }
+    async onClover(): Promise<void> {
+        if (!this.validatePaymentContact()) return;
+        if (this.isProcessingPayment) return;
 
         this.isProcessingPayment = true;
-        this.snackBar.open(this.t('processingPayment'), '', { duration: 4000 });
+        this.snackBar.open(this.t('processingPayment'), '', { duration: 8000 });
 
         const contact = this.paymentContactForm.value;
         const personalInfo = this.personalInfoForm.value;
@@ -533,17 +560,54 @@ export class TadalafilEvaluationComponent implements OnInit {
             client_message: clientMessage,
         }, this.publicKey);
 
-        // Fire-and-forget: the anchor [href] navigates to Clover the moment
-        // the user clicks (preserving iOS Safari's user-gesture context), so
-        // we send the notification emails in the background without blocking
-        // the redirect. If sending fails the user already reached the
-        // checkout — we just log it.
+        // Fire-and-forget: the EmailJS notifications send in parallel while
+        // we ask our backend for a Clover checkout URL. If they fail the
+        // user already reached the checkout — we just log it.
         // Meta Pixel: NO e-commerce events here. Lead fires once in
         // Section 1; do NOT re-add Purchase / InitiateCheckout / AddToCart
         // / Lead — Meta flags this page as pharmaceutical sales otherwise.
         Promise.all([adminEmail, clientEmail])
-            .catch((err) => console.error('Payment email send failed:', err))
-            .finally(() => this.ngZone.run(() => { this.isProcessingPayment = false; }));
+            .catch((err) => console.error('Payment email send failed:', err));
+
+        // Request a Hosted Checkout session from our Azure Function backend.
+        // The function calls Clover's /invoicingcheckoutservice/v1/checkouts
+        // server-side (the API token never leaves the server) and returns a
+        // public checkout URL that works in every browser.
+        try {
+            const response = await fetch('/api/clover-create-checkout', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contact: {
+                        name: contact.contactName,
+                        email: contact.contactEmail,
+                        phone: contact.contactPhone,
+                        address: contact.contactAddress,
+                    },
+                    lang: this.lang,
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`checkout_create_failed_${response.status}`);
+            }
+            const data = await response.json() as { href?: string };
+            if (!data.href) {
+                throw new Error('checkout_missing_href');
+            }
+
+            // Same-tab redirect — matches Stripe / PayPal / Square checkout
+            // conventions and avoids the new-tab download-fallback issue on
+            // Chrome iOS. The form behind is intentionally replaced because
+            // the user is now in the payment flow.
+            window.location.href = data.href;
+        } catch (err) {
+            console.error('Clover checkout creation failed:', err);
+            this.ngZone.run(() => {
+                this.isProcessingPayment = false;
+                this.snackBar.open(this.t('paymentEmailError'), 'OK', { duration: 5000 });
+            });
+        }
     }
 
     /** Strip non-numeric characters from phone input */

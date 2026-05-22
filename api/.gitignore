@@ -1,0 +1,21 @@
+# Azure Functions runtime
+bin/
+obj/
+.azure/
+.python_packages/
+
+# Local settings (contain secrets — never commit)
+local.settings.json
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

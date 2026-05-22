@@ -1,0 +1,14 @@
+{
+  "name": "dradonis-api",
+  "version": "1.0.0",
+  "description": "Azure Functions API for dradonis.com — handles Clover Hosted Checkout session creation.",
+  "private": true,
+  "main": "clover-create-checkout/index.js",
+  "scripts": {
+    "start": "func start"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}

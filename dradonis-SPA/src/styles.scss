@@ -315,6 +315,56 @@ body {
         background: #fffbeb;
         border: 1px solid #fde68a;
         border-radius: 8px;
+
+        // Make the checkbox + long label render as a flexible row so the
+        // legal text uses the full width instead of being squeezed into a
+        // narrow column on mobile.
+        .confirm-checkbox {
+            display: block;
+            width: 100%;
+
+            .mdc-form-field {
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+                gap: 4px;
+            }
+
+            // Anchor the checkbox at the top so the label starts on the
+            // same baseline regardless of how many lines the text wraps.
+            .mdc-checkbox {
+                flex: 0 0 auto;
+                margin-top: -8px; // counter Material's default vertical padding
+            }
+
+            // The label takes the rest of the row; allow wrapping with a
+            // sane line-height for readability.
+            .mdc-label,
+            label {
+                flex: 1 1 auto;
+                min-width: 0;
+                white-space: normal;
+                line-height: 1.5;
+                font-size: 13px;
+                padding-left: 4px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            padding: 12px;
+        }
+
+        @media (max-width: 420px) {
+            padding: 10px;
+
+            .confirm-checkbox {
+                .mdc-label,
+                label {
+                    font-size: 12.5px;
+                    line-height: 1.45;
+                }
+            }
+        }
     }
 
     /* Payment section */
@@ -425,6 +475,72 @@ body {
             min-width: 100%;
             padding: 12px 20px;
             font-size: 14px;
+        }
+
+        /* ------------------------------------------------------------------
+           Reclaim horizontal space on mobile: the vertical stepper indents
+           the active step content by 36px (line 454) plus a connector line.
+           That leaves the form barely 50% of the screen wide. Compact it.
+           ------------------------------------------------------------------ */
+        .mat-vertical-stepper-header {
+            padding-left: 8px !important;
+            padding-right: 8px !important;
+        }
+
+        .mat-vertical-content {
+            padding: 0 8px 16px 14px !important;
+        }
+
+        /* Hide the connector line on mobile — it eats ~24px of width. */
+        .mat-stepper-vertical-line::before,
+        .mat-vertical-content-container::before {
+            display: none !important;
+        }
+
+        .mat-vertical-content-container {
+            margin-left: 0 !important;
+        }
+
+        /* Outer card was using p-24 (24px). Bring it down on mobile. */
+        mat-card-content.p-24 {
+            padding: 12px !important;
+        }
+
+        /* Outer page wrapper (max-width: 860px; padding: 2rem 1rem) — drop side padding */
+        .position-relative.w-100 {
+            padding: 1rem 0.5rem !important;
+        }
+    }
+
+    /* ------------------------------------------------------------------
+       Confirm-box / checkbox: force the label to use the full row width
+       so the long legal sentence reads in wide lines rather than a
+       narrow column. Material's MDC defaults need !important to win.
+       ------------------------------------------------------------------ */
+    .confirm-box .confirm-checkbox {
+        display: block !important;
+        width: 100% !important;
+
+        .mat-mdc-checkbox-touch-target,
+        .mdc-form-field {
+            display: flex !important;
+            align-items: flex-start !important;
+            width: 100% !important;
+        }
+
+        .mdc-checkbox {
+            flex: 0 0 auto !important;
+        }
+
+        .mdc-label,
+        label {
+            flex: 1 1 auto !important;
+            min-width: 0 !important;
+            white-space: normal !important;
+            word-break: normal;
+            overflow-wrap: anywhere;
+            line-height: 1.5 !important;
+            padding-left: 6px !important;
         }
     }
 

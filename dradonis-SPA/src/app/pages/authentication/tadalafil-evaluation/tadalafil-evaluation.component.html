@@ -136,31 +136,26 @@
             <!-- Payment Buttons -->
             <div class="d-flex justify-content-center flex-wrap" style="gap: 16px;">
               <!--
-                Clover button is an anchor (not <button>) so the click is a
-                native user-initiated navigation. target="_self" loads
-                Clover in the SAME tab on every device — required because
-                Chrome iOS (and potentially other strict mobile browsers)
-                mis-flags /pay-widgets/[uuid] as a downloadable .txt when
-                opened in a new tab. This matches the redirect-in-same-tab
-                convention of Stripe, PayPal, Square, etc. The (click)
-                handler validates the form and fires the notification
-                emails in parallel before navigation.
+                Clover button kicks off an async flow:
+                1. onClover() validates the contact form
+                2. fires the EmailJS notifications in parallel
+                3. POSTs to /api/clover-create-checkout (Azure Function)
+                4. receives a public Clover checkout URL
+                5. redirects in the same tab
+                The API token stays server-side; the public URL works in
+                every browser including Chrome iOS.
               -->
-              <a class="payment-btn clover-btn"
-                [href]="cloverPaymentUrl"
-                [attr.target]="cloverTarget"
-                rel="noopener noreferrer"
-                (click)="onClover($event)"
-                [class.btn-disabled]="!isPaymentContactValid || isProcessingPayment"
-                [attr.aria-disabled]="!isPaymentContactValid || isProcessingPayment"
-                [attr.tabindex]="(!isPaymentContactValid || isProcessingPayment) ? -1 : 0">
+              <button class="payment-btn clover-btn" type="button"
+                (click)="onClover()"
+                [disabled]="!isPaymentContactValid || isProcessingPayment"
+                [class.btn-disabled]="!isPaymentContactValid || isProcessingPayment">
                 @if (isProcessingPayment) {
                 <span>{{ t('processingPayment') }}</span>
                 } @else {
                 <span>{{ t('payWithClover') }}</span>
                 <img src="/assets/images/logos/clover-logo.svg" alt="Clover" height="32" />
                 }
-              </a>
+              </button>
               <!-- PayPal button hidden until link is ready
               <button class="payment-btn paypal-btn" (click)="onPayPal()">
                 <img src="https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-200px.png" alt="PayPal"
@@ -179,7 +174,7 @@
           {{ t('fieldsRequired') }}
         </p>
 
-        <mat-stepper orientation="vertical" #stepper>
+        <mat-stepper orientation="vertical" #stepper (selectionChange)="onStepChange($event)">
 
           <!-- STEP 0: Personal Information -->
           <mat-step [stepControl]="personalInfoForm">
