@@ -69,6 +69,10 @@ body {
 
 /* ========== Tadalafil Evaluation Form ========== */
 .tadalafil-eval {
+    // Slight green tint behind the page so the white product pill and the
+    // form card stand out crisper.
+    background: linear-gradient(180deg, #f3f9ec 0%, #eaf3df 100%);
+    min-height: 100vh;
 
     .form-logo {
         height: 48px;
@@ -501,14 +505,31 @@ body {
             margin-left: 0 !important;
         }
 
-        /* Outer card was using p-24 (24px). Bring it down on mobile. */
+        /* Outer card was using p-24 (24px). Bring it down on mobile;
+           extra-tight top padding so the form text sits closer to the
+           product pill above. */
         mat-card-content.p-24 {
-            padding: 12px !important;
+            padding: 4px 10px 10px 10px !important;
         }
 
         /* Outer page wrapper (max-width: 860px; padding: 2rem 1rem) — drop side padding */
         .position-relative.w-100 {
-            padding: 1rem 0.5rem !important;
+            padding: 16px 6px !important;
+        }
+    }
+
+    @media (max-width: 420px) {
+        /* Even more aggressive on very small screens (iPhone SE, etc.) */
+        mat-card-content.p-24 {
+            padding: 4px 8px 8px 8px !important;
+        }
+
+        .position-relative.w-100 {
+            padding: 12px 4px !important;
+        }
+
+        .mat-vertical-content {
+            padding: 0 4px 14px 10px !important;
         }
     }
 
