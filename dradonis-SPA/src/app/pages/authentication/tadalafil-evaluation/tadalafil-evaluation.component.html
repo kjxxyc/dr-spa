@@ -140,12 +140,16 @@
                 native user-initiated navigation. iOS Safari treats this far
                 more reliably than window.location.href, which it sometimes
                 mis-interprets as a .txt file download for /pay-widgets/[uuid].
+                target is dynamic: '_blank' on Safari/Android/desktop so the
+                form stays open behind the checkout; '_self' on Chrome iOS
+                because Chrome iOS' new-tab handler mis-flags the Clover
+                stub as a downloadable file (Safari iOS does not).
                 The (click) handler validates and fires the notification
                 emails in parallel; the browser opens Clover via [href].
               -->
               <a class="payment-btn clover-btn"
                 [href]="cloverPaymentUrl"
-                target="_blank"
+                [attr.target]="cloverTarget"
                 rel="noopener noreferrer"
                 (click)="onClover($event)"
                 [class.btn-disabled]="!isPaymentContactValid || isProcessingPayment"

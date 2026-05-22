@@ -448,6 +448,29 @@ export class TadalafilEvaluationComponent implements OnInit {
     readonly cloverPaymentUrl =
         'https://www.clover.com/pay-widgets/8f114ede-6df8-4878-a7b4-6ace9e387dee';
 
+    /**
+     * Detect Chrome on iOS. Chrome iOS reports itself as "CriOS" in the UA.
+     * Although Chrome iOS still uses WebKit under the hood (Apple's rule),
+     * its download/navigation layer differs from Safari and mis-flags the
+     * Clover pay-widgets HTML stub as a downloadable .txt file when it
+     * opens in a new tab. Safari iOS does NOT have this bug.
+     */
+    get isChromeIOS(): boolean {
+        if (typeof navigator === 'undefined') return false;
+        return /CriOS/i.test(navigator.userAgent);
+    }
+
+    /**
+     * Target attribute for the Clover anchor.
+     * - Chrome iOS: '_self' → load Clover in the same tab (bypasses the
+     *   new-tab download fallback that triggers the .txt bug).
+     * - Everything else (Safari iOS, Android, desktop): '_blank' → open in
+     *   a new tab so the user keeps the form behind for reference.
+     */
+    get cloverTarget(): string {
+        return this.isChromeIOS ? '_self' : '_blank';
+    }
+
     onClover(event?: MouseEvent): void {
         // Block navigation if the contact form isn't valid.
         if (!this.validatePaymentContact()) {
