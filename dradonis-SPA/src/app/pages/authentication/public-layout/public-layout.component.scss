@@ -190,11 +190,13 @@ $breakpoint-xs: 480px;
             justify-content: center;
         }
 
-        mat-icon {
+        // Inline SVG hamburger / close (Material Icons font subset omits
+        // `menu` and `close` glyphs, so we render them as SVG).
+        .menu-svg {
+            width: 26px;
+            height: 26px;
             color: $text-dark;
-            font-size: 28px;
-            width: 28px;
-            height: 28px;
+            display: block;
         }
     }
 }

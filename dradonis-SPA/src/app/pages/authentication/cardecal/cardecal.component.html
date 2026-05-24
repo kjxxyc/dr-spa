@@ -56,7 +56,13 @@
           <div class="service-titles">
             <h3>{{ 'cardecal.services.' + s.id + '.title' | translate }}</h3>
           </div>
-          <mat-icon class="expand-icon">{{ activeServiceId === s.id ? 'expand_less' : 'expand_more' }}</mat-icon>
+          <!-- Inline SVG: `expand_more` / `expand_less` glyphs are not in the
+               subsetted Material Icons font, so we render a chevron as SVG
+               and rotate it via CSS based on the active state. -->
+          <svg class="expand-icon" [class.is-open]="activeServiceId === s.id"
+               viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
 
         <div class="service-dropdown" [@dropdownState]="activeServiceId === s.id ? 'visible' : 'hidden'">

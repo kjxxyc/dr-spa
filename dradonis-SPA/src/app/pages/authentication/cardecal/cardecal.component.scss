@@ -266,6 +266,12 @@ $breakpoint-md: 768px;
       transition: transform 0.3s ease;
       flex-shrink: 0;
       margin-left: auto;
+      width: 24px;
+      height: 24px;
+
+      &.is-open {
+        transform: rotate(180deg);
+      }
     }
   }
 

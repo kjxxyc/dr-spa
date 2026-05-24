@@ -221,7 +221,7 @@ $breakpoint-xs: 480px;
         padding: 0;
         margin: 0;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap; // keep both chips on the same row
         gap: 8px;
 
         li {
@@ -236,12 +236,38 @@ $breakpoint-xs: 480px;
             font-weight: 600;
             color: $primary-green-dark;
             box-shadow: 0 4px 12px rgba(17, 34, 64, 0.05);
+            white-space: nowrap;
 
             mat-icon {
                 font-size: 16px;
                 width: 16px;
                 height: 16px;
                 color: $primary-green;
+                flex-shrink: 0;
+            }
+        }
+
+        // Tighten the chips on mobile so both fit side-by-side
+        @media (max-width: $breakpoint-sm) {
+            gap: 6px;
+
+            li {
+                padding: 5px 9px;
+                font-size: 11px;
+                gap: 4px;
+
+                mat-icon {
+                    font-size: 14px;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+
+        @media (max-width: 380px) {
+            li {
+                padding: 4px 7px;
+                font-size: 10px;
             }
         }
     }

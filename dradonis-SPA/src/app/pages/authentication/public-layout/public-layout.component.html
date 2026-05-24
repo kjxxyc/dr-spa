@@ -61,8 +61,15 @@
       </button>
 
       <!-- Hamburger Menu Button (mobile/tablet only) -->
+      <!-- Inline SVGs because `menu` and `close` glyphs are not included in
+           the subsetted Material Icons font shipped at /assets/fonts/. -->
       <button mat-icon-button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
-        <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
+        <svg *ngIf="!menuOpen" class="menu-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg *ngIf="menuOpen" class="menu-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
       </button>
     </div>
 
