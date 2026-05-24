@@ -41,7 +41,10 @@ export const appConfig: ApplicationConfig = {
       withComponentInputBinding()
     ),
     provideHttpClient(withInterceptorsFromDi(), withJsonpSupport()),
-    provideClientHydration(),
+    // Hydration with event replay (Angular 20): replays clicks/keystrokes that
+    // happened before the app hydrated. Called once — the previous duplicate
+    // `provideClientHydration()` call was overridden anyway.
+    provideClientHydration(withEventReplay()),
     provideAnimationsAsync(),
     importProvidersFrom(
       FormsModule,
@@ -53,6 +56,6 @@ export const appConfig: ApplicationConfig = {
           deps: [HttpClient],
         },
       })
-    ), provideClientHydration(withEventReplay()),
+    ),
   ],
 };

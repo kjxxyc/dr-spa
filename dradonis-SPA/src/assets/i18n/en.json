@@ -255,7 +255,8 @@
   "testimonials": {
     "title": "What Our Patients Say",
     "subtitle": "See what patients are saying about their experience with Dr. Adonis and our clinic on Google.",
-    "cta": "SEE ALL REVIEWS ON GOOGLE"
+    "cta": "SEE ALL REVIEWS ON GOOGLE",
+    "mapPlaceholder": "Loading clinic location…"
   },
   "cardecal": {
     "title": "Dr. Adonis Clinic",

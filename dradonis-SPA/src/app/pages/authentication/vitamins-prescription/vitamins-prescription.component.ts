@@ -1,5 +1,5 @@
-import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy, NgZone, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import {
   FormBuilder,
   FormGroup,
@@ -19,7 +19,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
+import { Subscription } from 'rxjs';
 import { LanguageSelectorDialogComponent } from '../../../shared/language-selector-dialog/language-selector-dialog.component';
+import { SeoService } from '../../../shared/seo/seo.service';
 import emailjs from '@emailjs/browser';
 
 // ---------- translations ----------
@@ -157,7 +159,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
   templateUrl: './vitamins-prescription.component.html',
   styleUrls: ['./vitamins-prescription.component.scss'],
 })
-export class VitaminsPrescriptionComponent implements OnInit {
+export class VitaminsPrescriptionComponent implements OnInit, OnDestroy {
   @ViewChild('stepper') stepper!: MatStepper;
   lang: 'en' | 'es' = 'en';
   isSubmitting = false;
@@ -210,15 +212,89 @@ export class VitaminsPrescriptionComponent implements OnInit {
   selectedSymptoms: string[] = [];
   selectedAllergies: string[] = [];
 
+  private seoLangSub?: Subscription;
+
   constructor(
     private fb: FormBuilder,
     private snackBar: MatSnackBar,
     private ngZone: NgZone,
     private http: HttpClient,
     private dialog: MatDialog,
+    private seo: SeoService,
+    @Inject(PLATFORM_ID) private platformId: Object,
   ) { }
 
+  ngOnDestroy(): void {
+    this.seoLangSub?.unsubscribe();
+    this.seo.reset();
+  }
+
+  /**
+   * Vitamins Prescription page SEO. Positions as a physician-prescribed
+   * personalized vitamin protocol service (not online pharmacy).
+   */
+  private applySeo(): void {
+    const url = this.seo.absoluteUrl('/vitamins-prescription');
+    const lang: 'en' | 'es' = this.lang === 'es' ? 'es' : 'en';
+    const isEs = lang === 'es';
+    const config = isEs
+      ? {
+          title: 'Prescripción de Vitaminas Personalizada | Dr. Adonis Miami',
+          description: 'Protocolo personalizado de vitaminas y suplementos prescrito por el Dr. Adonis Maiquez en Miami. Evaluación médica, plan a la medida y entrega local en Estados Unidos.',
+          keywords: 'prescripción vitaminas Miami, suplementos personalizados Miami, plan vitaminas Dr. Adonis, evaluación nutricional Miami, vitaminas con receta médica Florida',
+        }
+      : {
+          title: 'Personalized Vitamin Prescription | Dr. Adonis Miami',
+          description: 'Personalized vitamin and supplement protocols prescribed by Dr. Adonis Maiquez in Miami. Medical evaluation, custom plan, US shipping included.',
+          keywords: 'vitamin prescription Miami, personalized supplements Miami, Dr. Adonis vitamin plan, nutritional evaluation Miami, doctor-prescribed vitamins Florida',
+        };
+
+    this.seo.apply({
+      ...config,
+      url,
+      lang,
+      ogType: 'website',
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'MedicalProcedure',
+        '@id': `${url}#procedure`,
+        name: isEs ? 'Prescripción de Vitaminas Personalizada' : 'Personalized Vitamin Prescription',
+        procedureType: 'TherapeuticProcedure',
+        url,
+        provider: { '@type': 'Physician', '@id': `${this.seo.origin}/#physician`, name: 'Dr. Adonis Maiquez, MD' },
+      },
+    });
+  }
+
   ngOnInit(): void {
+    // SEO: apply on mount (SSR-safe — no window access).
+    this.applySeo();
+
+    // Forms must initialize in both SSR and browser so the template can bind.
+    this.personalForm = this.fb.group({
+      fullName: ['', Validators.required],
+      sex: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required],
+    });
+
+    this.locationForm = this.fb.group({
+      country: ['United States', Validators.required],
+      state: [''],
+    });
+
+    this.symptomsForm = this.fb.group({
+      otherSymptoms: [''],
+    });
+
+    this.allergiesForm = this.fb.group({
+      otherAllergies: [''],
+    });
+
+    // Browser-only: dialog open, external HTTP fetch, and form valueChanges
+    // subscriptions. These don't need to run during SSR rendering.
+    if (!isPlatformBrowser(this.platformId)) return;
+
     // Show language selector dialog on entry
     this.openLanguageDialog();
 
@@ -248,25 +324,6 @@ export class VitaminsPrescriptionComponent implements OnInit {
       error: (err) => {
         console.error('Failed to load countries API', err);
       }
-    });
-    this.personalForm = this.fb.group({
-      fullName: ['', Validators.required],
-      sex: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required],
-    });
-
-    this.locationForm = this.fb.group({
-      country: ['United States', Validators.required],
-      state: [''],
-    });
-
-    this.symptomsForm = this.fb.group({
-      otherSymptoms: [''],
-    });
-
-    this.allergiesForm = this.fb.group({
-      otherAllergies: [''],
     });
 
     this.locationForm.get('country')?.valueChanges.subscribe((country) => {
@@ -311,6 +368,8 @@ export class VitaminsPrescriptionComponent implements OnInit {
     dialogRef.afterClosed().subscribe((lang: string) => {
       if (lang) {
         this.lang = lang as 'en' | 'es';
+        // Refresh SEO with the new language's metadata.
+        this.applySeo();
       }
     });
   }

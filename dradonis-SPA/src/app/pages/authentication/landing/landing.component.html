@@ -174,7 +174,7 @@
         </div>
         <h3>{{ 'servicesPromo.tadalafil.title' | translate }}</h3>
         <p>{{ 'servicesPromo.tadalafil.description' | translate }}</p>
-        <a routerLink="/landing/men-wellness" class="service-promo-btn">
+        <a routerLink="/men-wellness" class="service-promo-btn">
           <mat-icon>arrow_forward</mat-icon>
           {{ 'servicesPromo.tadalafil.btn' | translate }}
         </a>
@@ -187,7 +187,7 @@
         </div>
         <h3>{{ 'servicesPromo.vitamins.title' | translate }}</h3>
         <p>{{ 'servicesPromo.vitamins.description' | translate }}</p>
-        <a routerLink="/landing/vitamins-prescription" class="service-promo-btn">
+        <a routerLink="/vitamins-prescription" class="service-promo-btn">
           <mat-icon>arrow_forward</mat-icon>
           {{ 'servicesPromo.vitamins.btn' | translate }}
         </a>
@@ -227,11 +227,21 @@
       <h2 class="testimonials-title">{{ 'testimonials.title' | translate }}</h2>
       <p class="testimonials-subtitle">{{ 'testimonials.subtitle' | translate }}</p>
 
-      <div class="testimonials-map">
-        <iframe [src]="googleMapsUrl"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+      <!-- Maps deferred until the testimonials section is near the viewport.
+           Saves ~350 KiB of Google Maps scripts from the critical path. -->
+      @defer (on viewport; prefetch on idle) {
+        <div class="testimonials-map">
+          <iframe [src]="googleMapsUrl"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Dr. Adonis clinic location on Google Maps"></iframe>
+        </div>
+      } @placeholder (minimum 500ms) {
+        <div class="testimonials-map testimonials-map--placeholder"
+             style="width:100%;height:450px;background:linear-gradient(135deg,#e8f5e9 0%,#c8e6c9 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#2e7d32;font-weight:500;">
+          <span>{{ 'testimonials.mapPlaceholder' | translate }}</span>
+        </div>
+      }
 
       <div class="testimonials-cta">
         <a href="https://www.google.com/maps/place/Dr.+Adonis+(Adonis+Maiquez,+MD)/@25.7863004,-80.213865,17z/data=!3m2!4b1!5s0x88d9b6c0c0c2090b:0xc07bada0e8f71290!4m6!3m5!1s0x88d9b76d1434265b:0xfa2d0d393c1e7ec3!8m2!3d25.7863004!4d-80.2112901!16s%2Fg%2F11h0707mvm"

@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy, NgZone, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, NgZone, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
 import type { StepperSelectionEvent } from '@angular/cdk/stepper';
 import type { MatStepper } from '@angular/material/stepper';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import {
     FormBuilder,
     FormGroup,
@@ -306,6 +306,7 @@ export class TadalafilEvaluationComponent implements OnInit, OnDestroy {
         private ngZone: NgZone,
         private router: Router,
         private seo: SeoService,
+        @Inject(PLATFORM_ID) private platformId: Object,
     ) { }
 
     ngOnInit(): void {
@@ -337,9 +338,12 @@ export class TadalafilEvaluationComponent implements OnInit, OnDestroy {
         });
 
         // Read language preference passed from the landing page (Page 1) via router state.
-        const state = history.state as any;
-        if (state?.lang) {
-            this.lang = state.lang;
+        // `history` is a browser global — skip during SSR.
+        if (isPlatformBrowser(this.platformId)) {
+            const state = history.state as any;
+            if (state?.lang) {
+                this.lang = state.lang;
+            }
         }
 
         // SEO: physician-prescribed evaluation positioning. Bilingual.

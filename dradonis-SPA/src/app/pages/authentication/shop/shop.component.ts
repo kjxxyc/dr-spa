@@ -4,6 +4,7 @@ import {
     ElementRef,
     Inject,
     OnDestroy,
+    OnInit,
     PLATFORM_ID,
     QueryList,
     Renderer2,
@@ -13,7 +14,9 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+import { SeoService } from '../../../shared/seo/seo.service';
 
 export interface FullscriptProduct {
     /** Fullscript product ID (used in the oEmbed `data-fs` payload). */
@@ -39,7 +42,7 @@ export interface FullscriptProduct {
     templateUrl: './shop.component.html',
     styleUrls: ['./shop.component.scss']
 })
-export class ShopComponent implements AfterViewInit, OnDestroy {
+export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
     selectedCategory: string = 'all';
 
     /**
@@ -66,11 +69,81 @@ export class ShopComponent implements AfterViewInit, OnDestroy {
     private injectedScripts: HTMLScriptElement[] = [];
     private intersectionObserver?: IntersectionObserver;
     private injectedSlots = new WeakSet<HTMLDivElement>();
+    private langSub?: Subscription;
 
     constructor(
         private renderer: Renderer2,
-        @Inject(PLATFORM_ID) private platformId: Object
+        @Inject(PLATFORM_ID) private platformId: Object,
+        private translate: TranslateService,
+        private seo: SeoService,
     ) {}
+
+    ngOnInit(): void {
+        this.applySeo();
+        this.langSub = this.translate.onLangChange.subscribe(() => this.applySeo());
+    }
+
+    /**
+     * Shop page SEO — positions the page as a Store with Doctor-curated supplements,
+     * not a generic e-commerce shop. Uses Store + OfferCatalog schema.
+     */
+    private applySeo(): void {
+        const url = this.seo.absoluteUrl('/landing/shop');
+        const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
+        const isEs = lang === 'es';
+        const config = isEs
+            ? {
+                title: 'Suplementos Premium Curados por el Doctor | Dr. Adonis Miami',
+                description: 'Suplementos seleccionados por el Dr. Adonis Maiquez vía Fullscript. PectaSol, Mitochondrial NRG, OmegAvail Fish Oil y más — calidad médica para longevidad y bienestar óptimo.',
+                keywords: 'suplementos médicos Miami, Fullscript Dr. Adonis, PectaSol, Mitochondrial NRG, suplementos premium Miami, vitaminas calidad médica, doctor suplementos Miami',
+            }
+            : {
+                title: 'Premium Doctor-Curated Supplements | Dr. Adonis Miami',
+                description: "Doctor-curated supplements via Fullscript. PectaSol, Mitochondrial NRG, OmegAvail Fish Oil and more — selected by Dr. Adonis Maiquez for proven efficacy and longevity support.",
+                keywords: 'medical supplements Miami, Fullscript Dr. Adonis, PectaSol, Mitochondrial NRG, premium supplements Miami, doctor recommended vitamins, professional grade supplements',
+            };
+
+        this.seo.apply({
+            ...config,
+            url,
+            lang,
+            ogType: 'website',
+            jsonLd: this.buildJsonLd(lang, url),
+        });
+    }
+
+    private buildJsonLd(lang: 'en' | 'es', url: string): Record<string, unknown> {
+        const origin = this.seo.origin;
+        return {
+            '@context': 'https://schema.org',
+            '@type': 'Store',
+            '@id': `${url}#store`,
+            name: 'Dr. Adonis Supplement Shop',
+            url,
+            image: `${origin}/assets/images/logos/Logo_720x192.jpg`,
+            description: 'Doctor-curated supplements selected by Dr. Adonis Maiquez',
+            telephone: '+1-305-204-7816',
+            address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Miami',
+                addressRegion: 'FL',
+                addressCountry: 'US',
+            },
+            hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Featured Supplements',
+                itemListElement: this.fullscriptProducts.map((p) => ({
+                    '@type': 'Offer',
+                    itemOffered: {
+                        '@type': 'Product',
+                        name: p.name,
+                        category: 'Supplement',
+                    },
+                    seller: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
+                })),
+            },
+        };
+    }
 
     ngAfterViewInit(): void {
         // SSR / hydration guard: the Fullscript oEmbed script touches `window`
@@ -82,6 +155,8 @@ export class ShopComponent implements AfterViewInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
+        this.langSub?.unsubscribe();
+        this.seo.reset();
         this.intersectionObserver?.disconnect();
         // Clean up scripts to avoid leaks and double-execution if the component remounts.
         this.injectedScripts.forEach(script => {

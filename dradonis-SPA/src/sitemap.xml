@@ -1,63 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  SITEMAP for the Angular SPA currently hosted on my.dradonis.com.
-  The legacy WordPress site at dradonis.com still serves the marketing
-  homepage. When the SPA migration to dradonis.com is complete:
-    1. Find/replace "https://my.dradonis.com" → "https://dradonis.com"
-    2. Update SITE_ORIGIN_FALLBACK in src/app/shared/seo/seo.service.ts
-    3. Update robots.txt sitemap URL
-  Doing those three things is what flips the SEO target domain.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!--
+    Sitemap for dradonis.com (currently served from my.dradonis.com during the
+    domain-migration window).
 
-  <!-- Homepage / Landing Page -->
+    Migration steps when moving to dradonis.com:
+      1. Replace https://my.dradonis.com with https://dradonis.com everywhere
+         in this file.
+      2. Update robots.txt (Sitemap line).
+      3. Update SITE_ORIGIN_FALLBACK in src/app/shared/seo/seo.service.ts.
+
+    Bilingual note: the app uses ngx-translate (translation files); the URL
+    does NOT change by language. The hreflang alternates therefore all point
+    to the same URL — that's the correct signal for "this URL serves both
+    en-US and es". x-default is the same canonical URL.
+  -->
+
+  <!-- Homepage / Landing -->
   <url>
     <loc>https://my.dradonis.com/</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/"/>
   </url>
 
   <!--
-    Men's Wellness landing page — bilingual entry point for ED consultation
-    funnel. High priority since it's a primary conversion target for local
-    Miami / South Florida search intent.
+    Services page — high SEO value for keywords like "functional medicine Miami",
+    "hormone replacement Miami", "peptide therapy Florida". Lists all clinical
+    offerings with structured content + video.
+  -->
+  <url>
+    <loc>https://my.dradonis.com/landing/services</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/landing/services"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/landing/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/landing/services"/>
+  </url>
+
+  <!-- Meet the Doctor — brand search "Dr. Adonis Maiquez" / E-A-T signal -->
+  <url>
+    <loc>https://my.dradonis.com/landing/meet-doctor</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/landing/meet-doctor"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/landing/meet-doctor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/landing/meet-doctor"/>
+  </url>
+
+  <!--
+    Men's Wellness landing — bilingual entry point for ED consultation funnel.
+    Primary conversion target for local Miami / South Florida search intent.
+    Canonical URL is /men-wellness (NOT /landing/men-wellness — that 301s here).
   -->
   <url>
     <loc>https://my.dradonis.com/men-wellness</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/men-wellness"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/men-wellness?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/men-wellness"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/men-wellness"/>
   </url>
 
   <!--
-    Tadalafil (Cialis) medical evaluation — physician-prescribed service
-    page. Top priority for "tadalafil prescription Miami" / "cialis
-    evaluation Florida" local search intent. NOT positioned as e-commerce.
+    Tadalafil (Cialis) medical evaluation — physician-prescribed service page.
+    Top priority for "tadalafil prescription Miami" / "cialis evaluation Florida"
+    local search intent. NOT positioned as e-commerce.
   -->
   <url>
     <loc>https://my.dradonis.com/men-wellness/evaluation</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/men-wellness/evaluation"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/men-wellness/evaluation?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/men-wellness/evaluation"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/men-wellness/evaluation"/>
   </url>
 
-  <!-- Vitamins prescription funnel — secondary product line -->
+  <!--
+    Vitamins prescription funnel — secondary product line. Canonical URL is
+    /vitamins-prescription (NOT /landing/vitamins-prescription — that 301s here).
+  -->
   <url>
     <loc>https://my.dradonis.com/vitamins-prescription</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/vitamins-prescription"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/vitamins-prescription"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/vitamins-prescription"/>
+  </url>
+
+  <!-- Shop — Fullscript supplement catalog (PectaSol, Mitochondrial NRG, etc.) -->
+  <url>
+    <loc>https://my.dradonis.com/landing/shop</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/landing/shop"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/landing/shop"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/landing/shop"/>
+  </url>
+
+  <!-- Videos — patient testimonials + Google Reviews embed, engagement signal -->
+  <url>
+    <loc>https://my.dradonis.com/landing/videos</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/landing/videos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/landing/videos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/landing/videos"/>
+  </url>
+
+  <!-- BMI Calculator — long-tail "BMI calculator Miami doctor" / utility tool -->
+  <url>
+    <loc>https://my.dradonis.com/landing/tools/bmi-calculator</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/landing/tools/bmi-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/landing/tools/bmi-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/landing/tools/bmi-calculator"/>
   </url>
 
 </urlset>

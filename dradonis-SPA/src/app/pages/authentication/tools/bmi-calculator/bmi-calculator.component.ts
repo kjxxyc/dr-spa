@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 import { AppointmentDialogComponent } from '../../../../shared/appointment-dialog/appointment-dialog.component';
+import { SeoService } from '../../../../shared/seo/seo.service';
 
 type Gender = 'male' | 'female';
 type System = 'metric' | 'imperial';
@@ -45,7 +47,8 @@ export interface BmiRange {
     templateUrl: './bmi-calculator.component.html',
     styleUrls: ['./bmi-calculator.component.scss'],
 })
-export class BmiCalculatorComponent implements OnInit {
+export class BmiCalculatorComponent implements OnInit, OnDestroy {
+    private langSub?: Subscription;
     form: FormGroup;
 
     /** Static catalog of the 6 BMI categories used to render the classification bar. */
@@ -61,6 +64,8 @@ export class BmiCalculatorComponent implements OnInit {
     constructor(
         private fb: FormBuilder,
         private dialog: MatDialog,
+        private translate: TranslateService,
+        private seo: SeoService,
     ) {
         this.form = this.fb.group({
             gender: ['male' as Gender],
@@ -71,7 +76,55 @@ export class BmiCalculatorComponent implements OnInit {
         });
     }
 
+    ngOnDestroy(): void {
+        this.langSub?.unsubscribe();
+        this.seo.reset();
+    }
+
+    /**
+     * BMI Calculator SEO — captures long-tail "BMI calculator Miami" searches
+     * and positions the tool as a medical-grade utility from a real physician.
+     */
+    private applySeo(): void {
+        const url = this.seo.absoluteUrl('/landing/tools/bmi-calculator');
+        const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
+        const isEs = lang === 'es';
+        const config = isEs
+            ? {
+                title: 'Calculadora de IMC Online | Dr. Adonis Miami',
+                description: 'Calcula tu Índice de Masa Corporal (IMC) gratis. Resultado con orientación médica del Dr. Adonis Maiquez, especialista en pérdida de peso y medicina funcional en Miami.',
+                keywords: 'calculadora IMC, índice masa corporal Miami, IMC online, pérdida de peso Miami, Dr. Adonis Maiquez, doctor pérdida peso Florida',
+            }
+            : {
+                title: 'BMI Calculator | Body Mass Index Tool | Dr. Adonis Miami',
+                description: 'Free BMI calculator from Dr. Adonis Maiquez Miami practice. Calculate your Body Mass Index and learn about weight management programs from a functional medicine doctor.',
+                keywords: 'BMI calculator, body mass index Miami, free BMI tool, weight loss Miami, Dr. Adonis Maiquez, weight management Florida',
+            };
+
+        this.seo.apply({
+            ...config,
+            url,
+            lang,
+            ogType: 'website',
+            jsonLd: {
+                '@context': 'https://schema.org',
+                '@type': 'WebApplication',
+                '@id': `${url}#bmi-app`,
+                name: isEs ? 'Calculadora de IMC' : 'BMI Calculator',
+                applicationCategory: 'HealthApplication',
+                operatingSystem: 'Any',
+                url,
+                provider: { '@type': 'Physician', '@id': `${this.seo.origin}/#physician`, name: 'Dr. Adonis Maiquez, MD' },
+                offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+            },
+        });
+    }
+
     ngOnInit(): void {
+        // SEO: apply on mount, refresh when language changes.
+        this.applySeo();
+        this.langSub = this.translate.onLangChange.subscribe(() => this.applySeo());
+
         // When the user switches kg ↔ lb via the segmented control, convert the
         // current weight value automatically so the slider/input shows the
         // equivalent in the new unit (e.g. 70 kg → 154.3 lb).

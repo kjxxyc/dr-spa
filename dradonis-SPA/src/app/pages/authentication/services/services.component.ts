@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { Subscription } from 'rxjs';
 import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
+import { SeoService } from '../../../shared/seo/seo.service';
 
 interface ServiceItem {
     id: string;
@@ -37,7 +39,9 @@ interface ServiceItem {
         ])
     ]
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit, OnDestroy {
+    private langSub?: Subscription;
+
     // NOTE: icons are restricted to the project's material-icons-subset.woff2
     // Adding new icons requires regenerating the subset font.
     services: ServiceItem[] = [
@@ -63,7 +67,76 @@ export class ServicesComponent {
 
     expandedId: string | null = null;
 
-    constructor(private dialog: MatDialog) {}
+    constructor(
+        private dialog: MatDialog,
+        private translate: TranslateService,
+        private seo: SeoService,
+    ) {}
+
+    ngOnInit(): void {
+        this.applySeo();
+        this.langSub = this.translate.onLangChange.subscribe(() => this.applySeo());
+    }
+
+    ngOnDestroy(): void {
+        this.langSub?.unsubscribe();
+        this.seo.reset();
+    }
+
+    /**
+     * Services page SEO — high-value keywords for clinical service searches.
+     * Uses MedicalBusiness schema + ItemList of all services as MedicalProcedures.
+     */
+    private applySeo(): void {
+        const url = this.seo.absoluteUrl('/landing/services');
+        const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
+        const isEs = lang === 'es';
+        const config = isEs
+            ? {
+                title: 'Servicios de Medicina Funcional Miami | Hormonas, Péptidos, Pérdida de Peso',
+                description: 'Terapia hormonal bio-idéntica, testosterona, péptidos, GLP-1, menopausia, pérdida de peso e IV vitaminas en Miami. Medicina funcional personalizada por el Dr. Adonis Maiquez.',
+                keywords: 'medicina funcional Miami, terapia hormonal Miami, testosterona Miami, péptidos Miami, GLP-1 Miami, menopausia Miami, pérdida de peso Miami, IV vitaminas Miami, Dr. Adonis Maiquez',
+            }
+            : {
+                title: 'Functional Medicine Services Miami | Hormones, Peptides, Weight Loss',
+                description: 'Bio-identical hormone therapy, testosterone, peptides, GLP-1, menopause, weight loss, and IV vitamin therapy in Miami. Personalized functional medicine by Dr. Adonis Maiquez.',
+                keywords: 'functional medicine Miami, hormone therapy Miami, testosterone Miami, peptide therapy Miami, GLP-1 Miami, menopause Miami, weight loss Miami, IV vitamins Miami, Dr. Adonis Maiquez',
+            };
+
+        this.seo.apply({
+            ...config,
+            url,
+            lang,
+            ogType: 'website',
+            jsonLd: this.buildJsonLd(lang, url),
+        });
+    }
+
+    private buildJsonLd(lang: 'en' | 'es', url: string): Record<string, unknown> {
+        const origin = this.seo.origin;
+        return {
+            '@context': 'https://schema.org',
+            '@type': 'MedicalBusiness',
+            '@id': `${url}#medical-business`,
+            name: 'Dr. Adonis - Functional & Regenerative Medicine',
+            url,
+            telephone: '+1-305-204-7816',
+            address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Miami',
+                addressRegion: 'FL',
+                addressCountry: 'US',
+            },
+            medicalSpecialty: ['Functional Medicine', 'Regenerative Medicine'],
+            availableService: this.services.slice(0, 10).map((s) => ({
+                '@type': 'MedicalProcedure',
+                name: s.id,
+                procedureType: 'TherapeuticProcedure',
+            })),
+            priceRange: '$$',
+            image: `${origin}/assets/images/logos/Logo_720x192.jpg`,
+        };
+    }
 
     toggleService(id: string): void {
         this.expandedId = this.expandedId === id ? null : id;

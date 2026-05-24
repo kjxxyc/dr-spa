@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -53,15 +53,21 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
         private router: Router,
         private dialog: MatDialog,
         private seo: SeoService,
+        @Inject(PLATFORM_ID) private platformId: Object,
     ) { }
 
     ngOnInit(): void {
-        // Show language selector dialog on entry (same as Cardecal)
-        this.openLanguageDialog();
-
         // SEO: physician-prescribed Tadalafil consultation positioning.
         // Focus on local Miami/Florida search intent, not "buy online" terms.
+        // SEO runs in both SSR and browser — safe (no window access).
         this.applySeo();
+
+        // Browser-only: language dialog + tracking pixels (touch `window`).
+        // Skipping these during SSR prevents `ReferenceError: window is not defined`.
+        if (!isPlatformBrowser(this.platformId)) return;
+
+        // Show language selector dialog on entry (same as Cardecal)
+        this.openLanguageDialog();
 
         // Meta Pixel: load SDK and fire PageView on this page.
         this.loadPixel();
@@ -181,12 +187,12 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        // When navigating away, remove ALL pixel traces so Page 2 starts clean.
+        // SEO reset is SSR-safe (no window access).
+        this.seo.reset();
+        // Pixel trace removal touches `window` and only matters in the browser.
+        if (!isPlatformBrowser(this.platformId)) return;
         this.removePixelTraces();
         this.removeTikTokTraces();
-        // Reset SEO meta tags back to the site defaults so the next route
-        // doesn't inherit men-wellness specific tags before it sets its own.
-        this.seo.reset();
     }
 
     /** Translation helper */

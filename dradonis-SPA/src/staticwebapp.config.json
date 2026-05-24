@@ -15,6 +15,21 @@
     },
     "routes": [
         {
+            "route": "/landing/men-wellness",
+            "redirect": "/men-wellness",
+            "statusCode": 301
+        },
+        {
+            "route": "/landing/men-wellness/evaluation",
+            "redirect": "/men-wellness/evaluation",
+            "statusCode": 301
+        },
+        {
+            "route": "/landing/vitamins-prescription",
+            "redirect": "/vitamins-prescription",
+            "statusCode": 301
+        },
+        {
             "route": "/assets/*",
             "headers": {
                 "Cache-Control": "public, max-age=31536000, immutable"

@@ -1,0 +1,12 @@
+# Target modern browsers only — drops legacy polyfills (ES5 transforms, etc.)
+# Coverage check: https://browserslist.dev/?q=PiAwLjUlIGFuZCBub3QgZGVhZCwgbm90IElFIDExLCBub3Qgb3BfbWluaSBhbGw=
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Edge versions
+last 2 iOS versions
+last 2 ChromeAndroid versions
+> 0.5%
+not IE 11
+not op_mini all
+not dead

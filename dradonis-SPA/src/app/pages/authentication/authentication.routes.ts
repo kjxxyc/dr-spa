@@ -62,27 +62,23 @@ export const AuthenticationRoutes: Routes = [
           },
         ],
       },
-      // Standalone pages (no shared header)
+      // Legacy redirects: these URLs used to live under /landing/* but the
+      // canonical versions are at the root. Kept as redirects so old bookmarks
+      // and any internal link still in transition land on the SEO-canonical URL.
       {
         path: 'vitamins-prescription',
-        loadComponent: () =>
-          import('./vitamins-prescription/vitamins-prescription.component').then(
-            (m) => m.VitaminsPrescriptionComponent
-          ),
+        redirectTo: '/vitamins-prescription',
+        pathMatch: 'full',
       },
       {
         path: 'men-wellness',
-        loadComponent: () =>
-          import('./men-wellness-contact/men-wellness-contact.component').then(
-            (m) => m.MenWellnessContactComponent
-          ),
+        redirectTo: '/men-wellness',
+        pathMatch: 'full',
       },
       {
         path: 'men-wellness/evaluation',
-        loadComponent: () =>
-          import('./tadalafil-evaluation/tadalafil-evaluation.component').then(
-            (m) => m.TadalafilEvaluationComponent
-          ),
+        redirectTo: '/men-wellness/evaluation',
+        pathMatch: 'full',
       },
     ],
   },
