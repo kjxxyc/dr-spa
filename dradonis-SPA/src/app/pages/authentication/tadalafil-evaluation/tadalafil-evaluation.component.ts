@@ -68,7 +68,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         reviewTitle: 'Review your answers',
         viewAnswers: 'View my answers',
         qualifiedTitle: 'Evaluation Approved ✓',
-        qualifiedMsg: 'Your evaluation has been reviewed by Dr. Adonis. Based on your responses, you have been approved to proceed with the purchase of Tadalafil (Cialis).',
+        qualifiedMsg: 'Your evaluation has been reviewed by our healthcare providers. Based on your responses, you have been approved to proceed with the purchase of Tadalafil (Cialis).',
         confirmLabel: 'I confirm that all the information provided is correct. I am aware that this data is the basis for determining my suitability for the use of Tadalafil and I assume responsibility for any omissions or inaccuracies therein.',
         // Buttons
         next: 'Next',
@@ -157,7 +157,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         reviewTitle: 'Revise sus respuestas',
         viewAnswers: 'Ver mis respuestas',
         qualifiedTitle: 'Evaluación Aprobada ✓',
-        qualifiedMsg: 'Su evaluación ha sido revisada por el Dr. Adonis. Según sus respuestas, ha sido aprobado para proceder con la compra de Tadalafil (Cialis).',
+        qualifiedMsg: 'Su evaluación ha sido revisada por nuestros proveedores de salud. Según sus respuestas, ha sido aprobado para proceder con la compra de Tadalafil (Cialis).',
         confirmLabel: 'Confirmo que toda la información suministrada es correcta. Soy consciente de que estos datos son la base para determinar mi aptitud para el uso de Tadalafil y asumo la responsabilidad derivada de cualquier omisión o inexactitud en la misma.',
         next: 'Siguiente',
         back: 'Atrás',
@@ -539,8 +539,8 @@ export class TadalafilEvaluationComponent implements OnInit {
             + `Language: ${this.lang === 'en' ? 'English' : 'Spanish'}`;
 
         const clientMessage = this.lang === 'en'
-            ? `Dear ${contact.contactName},\n\nYour medical evaluation for Tadalafil (Cialis) has been reviewed and approved by Dr. Adonis. You are eligible for the use of this medication.\n\nOnce your payment is confirmed through Clover, we will contact you to coordinate the delivery of your prescription.\n\nPlease feel free to contact us at 305-204-7816 if you have any questions.\n\nBest regards,\nDr. Adonis Medical Team`
-            : `Estimado/a ${contact.contactName},\n\nSu evaluación médica para Tadalafil (Cialis) ha sido revisada y aprobada por el Dr. Adonis. Usted es apto/a para el uso de este medicamento.\n\nUna vez que su pago sea confirmado a través de Clover, nos comunicaremos con usted para coordinar la entrega de su prescripción.\n\nPor favor, no dude en contactarnos al 305-204-7816 si tiene alguna pregunta.\n\nAtentamente,\nEquipo Médico Dr. Adonis`;
+            ? `Dear ${contact.contactName},\n\nYour medical evaluation for Tadalafil (Cialis) has been reviewed and approved by our healthcare providers. You are eligible for the use of this medication.\n\nOnce your payment is confirmed through Clover, we will contact you to coordinate the delivery of your prescription.\n\nPlease feel free to contact us at 305-204-7816 if you have any questions.\n\nBest regards,\nDr. Adonis Medical Team`
+            : `Estimado ${contact.contactName},\n\nSu evaluación médica para Tadalafil (Cialis) ha sido revisada y aprobada por nuestros proveedores de salud. Usted es apto para el uso de este medicamento.\n\nUna vez que su pago sea confirmado a través de Clover, nos comunicaremos con usted para coordinar la entrega de su prescripción.\n\nPor favor, no dude en contactarnos al 305-204-7816 si tiene alguna pregunta.\n\nAtentamente,\nEquipo Médico Dr. Adonis`;
 
         const clientSubject = this.lang === 'en'
             ? 'Your Tadalafil (Cialis) Evaluation Has Been Approved'
