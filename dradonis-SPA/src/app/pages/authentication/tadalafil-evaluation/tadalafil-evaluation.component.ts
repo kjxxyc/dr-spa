@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, NgZone, ViewChild } from '@angular/core';
 import type { StepperSelectionEvent } from '@angular/cdk/stepper';
 import type { MatStepper } from '@angular/material/stepper';
 import { Router } from '@angular/router';
@@ -26,6 +26,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import emailjs from '@emailjs/browser';
+import { SeoService } from '../../../shared/seo/seo.service';
 
 // ---------- translations ----------
 const TRANSLATIONS: Record<string, Record<string, string>> = {
@@ -236,7 +237,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     templateUrl: './tadalafil-evaluation.component.html',
     styleUrls: ['./tadalafil-evaluation.component.scss'],
 })
-export class TadalafilEvaluationComponent implements OnInit {
+export class TadalafilEvaluationComponent implements OnInit, OnDestroy {
     @ViewChild('stepper') stepper!: MatStepper;
 
     lang: 'en' | 'es' = 'en';
@@ -304,6 +305,7 @@ export class TadalafilEvaluationComponent implements OnInit {
         private snackBar: MatSnackBar,
         private ngZone: NgZone,
         private router: Router,
+        private seo: SeoService,
     ) { }
 
     ngOnInit(): void {
@@ -339,6 +341,140 @@ export class TadalafilEvaluationComponent implements OnInit {
         if (state?.lang) {
             this.lang = state.lang;
         }
+
+        // SEO: physician-prescribed evaluation positioning. Bilingual.
+        // Avoid e-commerce / pharmacy keywords (legal compliance — site
+        // does not sell as an online pharmacy, the clinic prescribes).
+        this.applySeo();
+    }
+
+    ngOnDestroy(): void {
+        // Restore site-wide defaults when leaving this route so the next
+        // page doesn't inherit Tadalafil-specific tags.
+        this.seo.reset();
+    }
+
+    /**
+     * Apply SEO metadata for this route. Re-runs whenever the user toggles
+     * language so the localized meta take effect instantly.
+     */
+    private applySeo(): void {
+        // Build URL from active origin so it auto-switches between
+        // my.dradonis.com (current) and dradonis.com (post-migration)
+        // without code changes.
+        const url = this.seo.absoluteUrl('/men-wellness/evaluation');
+        if (this.lang === 'es') {
+            this.seo.apply({
+                title: 'Evaluación Médica para Tadalafil (Cialis) en Miami | Dr. Adonis',
+                description: 'Evaluación médica online para prescripción de Tadalafil (Cialis) 20 mg en Miami. Revisada por médico colegiado. Frasco de 30 tabletas por $19.99 con recogida en clínica o entrega local en Miami-Dade y Broward.',
+                keywords: 'evaluación médica Tadalafil Miami, prescripción Cialis Florida, médico Tadalafil Miami, doctor disfunción eréctil Miami, Cialis 20mg Miami, telemedicina hombres Miami, Tadalafil entrega Miami, Dr. Adonis',
+                url,
+                lang: 'es',
+                jsonLd: this.buildJsonLd('es', url),
+            });
+        } else {
+            this.seo.apply({
+                title: 'Tadalafil (Cialis) Medical Evaluation Miami | Dr. Adonis',
+                description: 'Online medical evaluation for Tadalafil (Cialis) 20mg prescription in Miami. Reviewed by licensed physician. 30-tablet bottle for $19.99 with in-clinic pickup or local delivery in Miami-Dade and Broward counties.',
+                keywords: 'Tadalafil medical evaluation Miami, Cialis prescription Florida, Tadalafil doctor Miami, erectile dysfunction physician Miami, Cialis 20mg Miami, men telemedicine Miami, Tadalafil delivery Miami, Dr. Adonis',
+                url,
+                lang: 'en',
+                jsonLd: this.buildJsonLd('en', url),
+            });
+        }
+    }
+
+    /**
+     * JSON-LD structured data for the evaluation page. Uses MedicalProcedure
+     * + Service (not Product/Pharmacy) to signal Google this is a regulated
+     * medical service, not an unregulated e-commerce listing.
+     */
+    private buildJsonLd(lang: 'en' | 'es', url: string): Record<string, unknown> {
+        const isEs = lang === 'es';
+        const origin = this.seo.origin;
+        return {
+            '@context': 'https://schema.org',
+            '@graph': [
+                {
+                    '@type': 'MedicalProcedure',
+                    '@id': `${url}#procedure`,
+                    name: isEs
+                        ? 'Evaluación médica para prescripción de Tadalafil (Cialis)'
+                        : 'Medical evaluation for Tadalafil (Cialis) prescription',
+                    procedureType: 'https://schema.org/DiagnosticProcedure',
+                    bodyLocation: 'Genitourinary system',
+                    howPerformed: isEs
+                        ? 'Cuestionario médico online revisado por un médico colegiado en Florida.'
+                        : 'Online medical questionnaire reviewed by a Florida-licensed physician.',
+                    indication: {
+                        '@type': 'MedicalCondition',
+                        name: 'Erectile Dysfunction',
+                    },
+                    preparation: isEs
+                        ? 'Tener a mano historial médico básico, lista de medicamentos actuales y fecha de nacimiento.'
+                        : 'Have basic medical history, current medications list, and date of birth ready.',
+                },
+                {
+                    '@type': 'Service',
+                    '@id': `${url}#service`,
+                    serviceType: isEs
+                        ? 'Evaluación médica y prescripción de Tadalafil (Cialis)'
+                        : 'Tadalafil (Cialis) medical evaluation and prescription',
+                    provider: {
+                        '@type': 'Physician',
+                        '@id': `${origin}/#physician`,
+                        name: 'Dr. Adonis Maiquez',
+                        telephone: '+1-305-204-7816',
+                        url: origin,
+                    },
+                    areaServed: [
+                        { '@type': 'City', name: 'Miami' },
+                        { '@type': 'City', name: 'Coral Gables' },
+                        { '@type': 'City', name: 'Aventura' },
+                        { '@type': 'City', name: 'Doral' },
+                        { '@type': 'City', name: 'Hialeah' },
+                        { '@type': 'City', name: 'Pembroke Pines' },
+                        { '@type': 'City', name: 'Fort Lauderdale' },
+                        { '@type': 'City', name: 'Boca Raton' },
+                    ],
+                    availableChannel: {
+                        '@type': 'ServiceChannel',
+                        serviceUrl: url,
+                        availableLanguage: ['English', 'Spanish'],
+                    },
+                    offers: {
+                        '@type': 'Offer',
+                        price: '19.99',
+                        priceCurrency: 'USD',
+                        url,
+                        availability: 'https://schema.org/InStock',
+                        description: isEs
+                            ? 'Frasco de 30 tabletas de Tadalafil (Cialis) 20 mg con prescripción médica. Recogida en clínica o entrega local en el sur de Florida.'
+                            : '30-tablet bottle of Tadalafil (Cialis) 20mg with physician prescription. In-clinic pickup or local delivery in South Florida.',
+                    },
+                },
+                {
+                    '@type': 'MedicalWebPage',
+                    '@id': `${url}#webpage`,
+                    url,
+                    inLanguage: isEs ? 'es-US' : 'en-US',
+                    name: isEs
+                        ? 'Evaluación Médica de Tadalafil (Cialis) Miami'
+                        : 'Tadalafil (Cialis) Medical Evaluation Miami',
+                    about: {
+                        '@type': 'MedicalCondition',
+                        name: 'Erectile Dysfunction',
+                        alternateName: ['ED', 'Disfunción Eréctil'],
+                    },
+                    audience: {
+                        '@type': 'PeopleAudience',
+                        suggestedGender: 'Male',
+                        suggestedMinAge: 21,
+                        suggestedMaxAge: 80,
+                    },
+                },
+            ],
+        };
     }
 
     /** Translation helper */
@@ -372,6 +508,8 @@ export class TadalafilEvaluationComponent implements OnInit {
 
     toggleLanguage(): void {
         this.lang = this.lang === 'en' ? 'es' : 'en';
+        // Re-apply SEO so title/description/og:locale switch immediately.
+        this.applySeo();
     }
 
     /** Calculate age from date of birth */

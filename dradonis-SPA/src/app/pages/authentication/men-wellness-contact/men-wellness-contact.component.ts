@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { LanguageSelectorDialogComponent } from '../../../shared/language-selector-dialog/language-selector-dialog.component';
+import { SeoService } from '../../../shared/seo/seo.service';
 
 // ---------- translations (landing-page) ----------
 const TRANSLATIONS: Record<string, Record<string, string>> = {
@@ -51,17 +52,119 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
     constructor(
         private router: Router,
         private dialog: MatDialog,
+        private seo: SeoService,
     ) { }
 
     ngOnInit(): void {
         // Show language selector dialog on entry (same as Cardecal)
         this.openLanguageDialog();
 
+        // SEO: physician-prescribed Tadalafil consultation positioning.
+        // Focus on local Miami/Florida search intent, not "buy online" terms.
+        this.applySeo();
+
         // Meta Pixel: load SDK and fire PageView on this page.
         this.loadPixel();
 
         // TikTok Pixel: load SDK and fire PageView on this page.
         this.loadTikTokPixel();
+    }
+
+    /**
+     * Apply SEO metadata for this route. Re-runs whenever the user toggles
+     * language so the localized title/description take effect immediately
+     * (Google's crawler may also pick up the localized version of this URL
+     * via hreflang in sitemap.xml).
+     */
+    private applySeo(): void {
+        // Build URL from active origin so it auto-switches between
+        // my.dradonis.com (current) and dradonis.com (post-migration)
+        // without code changes.
+        const url = this.seo.absoluteUrl('/men-wellness');
+        if (this.lang === 'es') {
+            this.seo.apply({
+                title: 'Bienestar Masculino & Disfunción Eréctil | Dr. Adonis Miami',
+                description: 'Evaluación médica privada para hombres en Miami. Consultas para vitalidad, energía y tratamiento de disfunción eréctil. Prescripción médica de Tadalafil (Cialis) con entrega local. Atendemos Miami, Coral Gables, Aventura, Doral, Hialeah y Fort Lauderdale.',
+                keywords: 'bienestar masculino Miami, disfunción eréctil Miami, médico Tadalafil Florida, evaluación médica online Miami, doctor Cialis Miami, salud sexual hombre Miami, telemedicina hombres Florida, Dr. Adonis',
+                url,
+                lang: 'es',
+                jsonLd: this.buildJsonLd('es', url),
+            });
+        } else {
+            this.seo.apply({
+                title: "Men's Wellness & ED Consultation | Dr. Adonis Miami",
+                description: "Private medical evaluation for men in Miami. Consultations for vitality, energy, and erectile dysfunction. Physician-prescribed Tadalafil (Cialis) with local pickup or delivery. Serving Miami, Coral Gables, Aventura, Doral, Hialeah and Fort Lauderdale.",
+                keywords: "men's wellness Miami, ED treatment Miami, Tadalafil prescription Florida, online medical evaluation Miami, Cialis doctor Miami, men's sexual health Miami, telehealth men Florida, Dr. Adonis",
+                url,
+                lang: 'en',
+                jsonLd: this.buildJsonLd('en', url),
+            });
+        }
+    }
+
+    /**
+     * JSON-LD for the men-wellness landing page. Uses MedicalBusiness +
+     * MedicalProcedure schema so Google understands this is a licensed
+     * medical service (not an unregulated e-commerce listing).
+     */
+    private buildJsonLd(lang: 'en' | 'es', url: string): Record<string, unknown> {
+        const isEs = lang === 'es';
+        const origin = this.seo.origin;
+        return {
+            '@context': 'https://schema.org',
+            '@graph': [
+                {
+                    '@type': 'MedicalBusiness',
+                    '@id': `${origin}/#medicalbusiness`,
+                    name: 'Dr. Adonis Maiquez - Functional & Regenerative Medicine',
+                    url: origin,
+                    telephone: '+1-305-204-7816',
+                    image: `${origin}/assets/images/logos/Logo_720x192.jpg`,
+                    priceRange: '$$',
+                    address: {
+                        '@type': 'PostalAddress',
+                        addressLocality: 'Miami',
+                        addressRegion: 'FL',
+                        addressCountry: 'US',
+                    },
+                    areaServed: [
+                        { '@type': 'City', name: 'Miami' },
+                        { '@type': 'City', name: 'Coral Gables' },
+                        { '@type': 'City', name: 'Aventura' },
+                        { '@type': 'City', name: 'Doral' },
+                        { '@type': 'City', name: 'Hialeah' },
+                        { '@type': 'City', name: 'Pembroke Pines' },
+                        { '@type': 'City', name: 'Fort Lauderdale' },
+                        { '@type': 'City', name: 'Boca Raton' },
+                    ],
+                    medicalSpecialty: ['Functional Medicine', 'Regenerative Medicine', "Men's Health"],
+                    availableLanguage: ['English', 'Spanish'],
+                },
+                {
+                    '@type': 'MedicalWebPage',
+                    '@id': `${url}#webpage`,
+                    url,
+                    inLanguage: isEs ? 'es-US' : 'en-US',
+                    name: isEs
+                        ? 'Bienestar Masculino & Disfunción Eréctil'
+                        : "Men's Wellness & ED Consultation",
+                    description: isEs
+                        ? 'Página informativa sobre la evaluación médica para tratamiento de disfunción eréctil con Tadalafil (Cialis) en Miami, Florida.'
+                        : 'Landing page for ED medical evaluation and Tadalafil (Cialis) prescription service in Miami, Florida.',
+                    about: {
+                        '@type': 'MedicalCondition',
+                        name: 'Erectile Dysfunction',
+                        alternateName: ['ED', 'Disfunción Eréctil'],
+                    },
+                    audience: {
+                        '@type': 'PeopleAudience',
+                        suggestedGender: 'Male',
+                        suggestedMinAge: 21,
+                        suggestedMaxAge: 80,
+                    },
+                },
+            ],
+        };
     }
 
     /** Open the language selector dialog (disableClose forces user to pick). */
@@ -81,6 +184,9 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
         // When navigating away, remove ALL pixel traces so Page 2 starts clean.
         this.removePixelTraces();
         this.removeTikTokTraces();
+        // Reset SEO meta tags back to the site defaults so the next route
+        // doesn't inherit men-wellness specific tags before it sets its own.
+        this.seo.reset();
     }
 
     /** Translation helper */
@@ -102,6 +208,8 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
 
     toggleLanguage(): void {
         this.lang = this.lang === 'en' ? 'es' : 'en';
+        // Re-apply SEO so title/description/og:locale switch immediately.
+        this.applySeo();
     }
 
     /** Handle CTA button click */

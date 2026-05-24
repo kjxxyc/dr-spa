@@ -150,7 +150,11 @@
           "options": {
             "routes": [
               "/",
-              "/landing"
+              "/landing",
+              "/men-wellness",
+              "/men-wellness/evaluation",
+              "/vitamins-prescription",
+              "/cardecal"
             ]
           },
           "configurations": {

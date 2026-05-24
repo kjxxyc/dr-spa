@@ -2,7 +2,11 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://dradonis.com/sitemap.xml
+# Active on my.dradonis.com (the Angular SPA).
+# When migrating the SPA back under dradonis.com root, change this URL
+# to https://dradonis.com/sitemap.xml and also re-deploy with the
+# updated sitemap.xml + SITE_ORIGIN_FALLBACK in seo.service.ts.
+Sitemap: https://my.dradonis.com/sitemap.xml
 
 # Crawl delay (optional, be nice to bots)
 Crawl-delay: 1
