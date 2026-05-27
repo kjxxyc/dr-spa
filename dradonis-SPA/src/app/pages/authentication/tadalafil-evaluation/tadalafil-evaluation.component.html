@@ -190,7 +190,8 @@
                   <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
 
-                <mat-form-field appearance="outline" class="personal-info-field">
+                <!-- Sex field hidden: campaign is segmented for men only. FormControl defaults to 'male'. -->
+                <mat-form-field *ngIf="false" appearance="outline" class="personal-info-field">
                   <mat-label>{{ t('sex') }}</mat-label>
                   <mat-select formControlName="sex">
                     <mat-option value="male">{{ t('sexMale') }}</mat-option>
@@ -264,6 +265,7 @@
                 <mat-label class="question-label">{{ t('q4') }} <span class="text-error">*</span></mat-label>
                 <mat-radio-group formControlName="q4" class="radio-group">
                   <mat-radio-button value="opt1">{{ t('q4Opt1') }}</mat-radio-button>
+                  <mat-radio-button value="optNeutral">{{ t('q4OptNeutral') }}</mat-radio-button>
                   <mat-radio-button value="opt2">{{ t('q4Opt2') }}</mat-radio-button>
                   <mat-radio-button value="opt3">{{ t('q4Opt3') }}</mat-radio-button>
                 </mat-radio-group>
