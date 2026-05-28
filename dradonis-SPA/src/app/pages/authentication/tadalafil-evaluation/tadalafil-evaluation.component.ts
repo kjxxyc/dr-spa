@@ -358,6 +358,44 @@ export class TadalafilEvaluationComponent implements OnInit, OnDestroy {
         // Restore site-wide defaults when leaving this route so the next
         // page doesn't inherit Tadalafil-specific tags.
         this.seo.reset();
+
+        // Clean up Meta and TikTok pixels when leaving the evaluation flow.
+        // The pixels are loaded in the landing page (men-wellness-contact) and
+        // must stay alive through the evaluation so the Lead event fires at checkout.
+        // Only clean up in the browser (not during SSR).
+        if (isPlatformBrowser(this.platformId)) {
+            this.removePixelTraces();
+            this.removeTikTokTraces();
+        }
+    }
+
+    // ─── Pixel Cleanup ──────────────────────────────────────────────
+
+    /** Remove ALL traces of the Meta Pixel from the page. */
+    private removePixelTraces(): void {
+        const w = window as any;
+        const noop = function () { };
+        w.fbq = noop;
+        w._fbq = noop;
+        document.querySelectorAll('script[src*="connect.facebook.net"]').forEach(el => el.remove());
+        document.querySelectorAll('script[src*="facebook.com"]').forEach(el => el.remove());
+        document.querySelectorAll('img[src*="facebook.com/tr"]').forEach(el => el.remove());
+        document.querySelectorAll('iframe[src*="facebook.com"]').forEach(el => el.remove());
+        document.querySelectorAll('iframe[src*="facebook.net"]').forEach(el => el.remove());
+        const fbGlobals = ['fbq', '_fbq', '__fbeventsModules', 'fbEvents',
+            '_fbq_gtm', 'FB', '__fb_ev', 'fbds'];
+        fbGlobals.forEach(key => {
+            try { delete w[key]; } catch (_) { w[key] = undefined; }
+        });
+    }
+
+    /** Remove ALL traces of the TikTok Pixel from the page. */
+    private removeTikTokTraces(): void {
+        const w = window as any;
+        w.ttq = undefined;
+        w.TiktokAnalyticsObject = undefined;
+        document.querySelectorAll('script[src*="analytics.tiktok.com"]').forEach(el => el.remove());
+        document.querySelectorAll('img[src*="analytics.tiktok.com"]').forEach(el => el.remove());
     }
 
     /**
@@ -621,6 +659,11 @@ export class TadalafilEvaluationComponent implements OnInit, OnDestroy {
         setTimeout(() => {
             this.isReviewingEvaluation = false;
             this.submitted = true;
+            // Meta Pixel: fire Lead ONLY when user reaches the checkout/payment screen
+            const w = window as any;
+            if (typeof w.fbq === 'function') {
+                w.fbq('track', 'Lead');
+            }
             this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
         }, 4800);
     }

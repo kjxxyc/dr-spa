@@ -189,10 +189,9 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
         // SEO reset is SSR-safe (no window access).
         this.seo.reset();
-        // Pixel trace removal touches `window` and only matters in the browser.
-        if (!isPlatformBrowser(this.platformId)) return;
-        this.removePixelTraces();
-        this.removeTikTokTraces();
+        // NOTE: Do NOT remove pixel traces here. The Meta and TikTok pixels
+        // must stay alive because the user continues to /men-wellness/evaluation
+        // where the Lead event fires at checkout.
     }
 
     /** Translation helper */
@@ -220,12 +219,6 @@ export class MenWellnessContactComponent implements OnInit, OnDestroy {
 
     /** Handle CTA button click */
     onStartConsultation(): void {
-        // Meta Pixel: fire Lead event on CTA click
-        const w = window as any;
-        if (typeof w.fbq === 'function') {
-            w.fbq('track', 'Lead');
-        }
-
         // Navigate to the evaluation form, passing language via router state
         this.router.navigate(['/men-wellness/evaluation'], {
             state: { lang: this.lang },
