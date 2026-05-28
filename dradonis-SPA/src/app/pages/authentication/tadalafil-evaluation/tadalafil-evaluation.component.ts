@@ -664,6 +664,10 @@ export class TadalafilEvaluationComponent implements OnInit, OnDestroy {
             if (typeof w.fbq === 'function') {
                 w.fbq('track', 'Lead');
             }
+            // TikTok Pixel: fire SubmitForm when evaluation is approved and checkout loads
+            if (w.ttq && typeof w.ttq.track === 'function') {
+                w.ttq.track('SubmitForm');
+            }
             this.snackBar.open(this.t('snackSuccess'), 'OK', { duration: 5000 });
         }, 4800);
     }
