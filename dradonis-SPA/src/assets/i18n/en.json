@@ -97,8 +97,9 @@
     "highlight": "Our Medical Director, Adonis Maiquez, MD, trained as a neurosurgeon, is a member of the American Academy of Pain Management and the World Institute of Pain.",
     "badge1": "Functional Medicine",
     "badge2": "Anti-Aging & Regenerative",
-    "bookPromo": "Dr. Adonis is the author of \"Modern Medicine for Modern Times: The Functional Medicine Handbook to Prevent and Treat Diseases from Their Origin\", a comprehensive guide to understanding and applying functional medicine principles. Available now on Amazon.",
-    "btnBuyBook": "GET THE BOOK ON AMAZON"
+    "bookPromo": "Dr. Adonis is the author of \"Modern Medicine for Modern Times: The Functional Medicine Handbook to Prevent and Treat Diseases from Their Origin\", a comprehensive guide to understanding and applying functional medicine principles.",
+    "btnBuyBook": "GET THE BOOK ON AMAZON",
+    "teamCaption": "Dr. Adonis and his team — dedicated to your wellness"
   },
   "vagustim": {
     "title": "TRANSCUTANEOUS VAGUS NERVE STIMULATOR",
@@ -330,5 +331,8 @@
     "cancel": "Cancel",
     "success": "Your appointment request has been sent!",
     "error": "Failed to send request. Please try again."
+  },
+  "footer": {
+    "developer": "Developed by"
   }
 }

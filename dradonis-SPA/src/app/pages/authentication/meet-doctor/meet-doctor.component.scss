@@ -20,11 +20,10 @@ $breakpoint-xs: 480px;
 // MEET YOUR DOCTOR SECTION
 // ===========================
 .meet-doctor-section {
-    padding: 40px 2rem 80px;
+    padding: 40px 2rem 40px;
     background: linear-gradient(160deg, #fafffe 0%, #f0f7ed 40%, #e8f0e3 100%);
     position: relative;
     overflow: hidden;
-    min-height: calc(100vh - 70px);
 
 // ===========================
 // 20+ YEARS CIRCULAR MEDALLION
@@ -179,7 +178,7 @@ $breakpoint-xs: 480px;
         @media (max-width: $breakpoint-md) {
             flex: none;
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
         }
 
         @media (max-width: $breakpoint-xs) {
@@ -191,6 +190,7 @@ $breakpoint-xs: 480px;
         position: relative;
         border-radius: 20px;
         overflow: hidden;
+        width: 100%;
         box-shadow:
             0 25px 60px rgba(0, 0, 0, 0.12),
             0 8px 20px rgba(129, 175, 90, 0.15);
@@ -219,29 +219,28 @@ $breakpoint-xs: 480px;
             width: 100%;
             height: auto;
             display: block;
-            aspect-ratio: 3 / 4;
             object-fit: cover;
-            object-position: top center;
+            object-position: center;
         }
     }
 
     .doctor-credentials {
         display: flex;
         gap: 0.75rem;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
     }
 
     .credential-badge {
         display: inline-flex;
         align-items: center;
-        gap: 0.4rem;
+        gap: 0.35rem;
         background: rgba(255, 255, 255, 0.85);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(129, 175, 90, 0.25);
         border-radius: 50px;
-        padding: 0.5rem 1rem;
-        font-size: 12px;
+        padding: 0.4rem 0.85rem;
+        font-size: 10px;
         font-weight: 600;
         color: $primary-green-dark;
         text-transform: uppercase;
@@ -250,9 +249,9 @@ $breakpoint-xs: 480px;
         transition: all 0.3s ease;
 
         mat-icon {
-            font-size: 16px;
-            width: 16px;
-            height: 16px;
+            font-size: 14px;
+            width: 14px;
+            height: 14px;
             color: $primary-green;
         }
 
@@ -269,6 +268,7 @@ $breakpoint-xs: 480px;
         gap: 0.75rem;
         justify-content: center;
         flex-wrap: wrap;
+        margin-bottom: 0.5rem;
     }
 
     .social-link {
@@ -323,6 +323,103 @@ $breakpoint-xs: 480px;
             background: #14171A;
             color: white;
             border-color: #14171A;
+        }
+    }
+
+    // --- Book Promotion Card ---
+    .doctor-book-promo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.25rem;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(129, 175, 90, 0.2);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 32px rgba(129, 175, 90, 0.15);
+        }
+
+        .book-promo-image {
+            width: 140px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+                transition: transform 0.3s ease;
+            }
+
+            &:hover img {
+                transform: scale(1.03);
+            }
+        }
+
+        .book-promo-content {
+            width: 100%;
+
+            .book-promo-text {
+                display: flex;
+                align-items: flex-start;
+                text-align: left;
+                gap: 0.75rem;
+                margin-bottom: 1.25rem;
+
+                .book-icon {
+                    font-size: 24px;
+                    width: 24px;
+                    height: 24px;
+                    color: $primary-green;
+                    flex-shrink: 0;
+                    margin-top: 2px;
+                }
+
+                p {
+                    font-size: 14px;
+                    color: $text-medium;
+                    line-height: 1.6;
+                    margin: 0;
+                }
+            }
+        }
+
+        .book-promo-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #ff9900, #e88600);
+            color: white;
+            padding: 0.8rem 1.25rem;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 14px rgba(255, 153, 0, 0.3);
+            transition: all 0.3s ease;
+            width: 100%;
+
+            mat-icon {
+                font-size: 18px;
+                width: 18px;
+                height: 18px;
+            }
+
+            &:hover {
+                background: linear-gradient(135deg, #e88600, #cc7700);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 18px rgba(255, 153, 0, 0.4);
+            }
         }
     }
 
@@ -428,7 +525,6 @@ $breakpoint-xs: 480px;
         border-left: 4px solid $primary-green;
         border-radius: 0 12px 12px 0;
         padding: 1.25rem 1.5rem;
-        margin-bottom: 2rem;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 
         mat-icon {
@@ -457,190 +553,6 @@ $breakpoint-xs: 480px;
 
             p {
                 font-size: 13px;
-            }
-        }
-    }
-
-    .doctor-actions {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-
-        @media (max-width: $breakpoint-md) {
-            justify-content: center;
-        }
-
-        @media (max-width: $breakpoint-xs) {
-            flex-direction: column;
-            width: 100%;
-        }
-
-        .primary-btn {
-            background: $primary-green;
-            color: white;
-            border-radius: 6px;
-            padding: 0.8rem 2rem;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 14px rgba(129, 175, 90, 0.3);
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-
-            mat-icon {
-                font-size: 20px;
-                width: 20px;
-                height: 20px;
-            }
-
-            &:hover {
-                background: $primary-green-dark;
-                transform: translateY(-2px);
-                box-shadow: 0 6px 18px rgba(129, 175, 90, 0.4);
-            }
-
-            @media (max-width: $breakpoint-xs) {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        .secondary-btn {
-            border: 2px solid $primary-green;
-            color: $primary-green;
-            background: rgba(129, 175, 90, 0.06);
-            border-radius: 6px;
-            padding: 0.8rem 2rem;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-
-            mat-icon {
-                font-size: 20px;
-                width: 20px;
-                height: 20px;
-            }
-
-            &:hover {
-                background: $primary-green;
-                color: white;
-                border-color: $primary-green;
-                transform: translateY(-2px);
-                box-shadow: 0 6px 18px rgba(129, 175, 90, 0.3);
-            }
-
-            @media (max-width: $breakpoint-xs) {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    }
-
-    // --- Book Promotion Card ---
-    .doctor-book-promo {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(129, 175, 90, 0.2);
-        border-radius: 16px;
-        padding: 1.5rem 2rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-        &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 32px rgba(129, 175, 90, 0.15);
-        }
-
-        @media (max-width: $breakpoint-sm) {
-            flex-direction: column;
-            text-align: center;
-            padding: 1.25rem;
-            gap: 1.25rem;
-        }
-
-        .book-promo-image {
-            flex-shrink: 0;
-            width: 130px;
-
-            img {
-                width: 100%;
-                height: auto;
-                border-radius: 8px;
-                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-                transition: transform 0.3s ease;
-            }
-
-            &:hover img {
-                transform: scale(1.03);
-            }
-
-            @media (max-width: $breakpoint-sm) {
-                width: 110px;
-            }
-        }
-
-        .book-promo-content {
-            flex: 1;
-
-            .book-icon {
-                font-size: 28px;
-                width: 28px;
-                height: 28px;
-                color: $primary-green;
-                margin-bottom: 0.5rem;
-            }
-
-            p {
-                font-size: 14px;
-                color: $text-medium;
-                line-height: 1.7;
-                margin-bottom: 1rem;
-
-                @media (max-width: $breakpoint-sm) {
-                    font-size: 13px;
-                }
-            }
-        }
-
-        .book-promo-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: linear-gradient(135deg, #ff9900, #e88600);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 14px rgba(255, 153, 0, 0.3);
-            transition: all 0.3s ease;
-
-            mat-icon {
-                font-size: 18px;
-                width: 18px;
-                height: 18px;
-            }
-
-            &:hover {
-                background: linear-gradient(135deg, #e88600, #cc7700);
-                transform: translateY(-2px);
-                box-shadow: 0 6px 18px rgba(255, 153, 0, 0.4);
             }
         }
     }

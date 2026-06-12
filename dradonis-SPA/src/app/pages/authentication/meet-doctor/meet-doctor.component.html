@@ -10,23 +10,17 @@
   </div>
 
   <div class="meet-doctor-container">
-    <!-- Doctor Image -->
+    <!-- Left Column: Image, Credentials, Socials, Book -->
     <div class="doctor-image-wrapper">
       <div class="doctor-image-frame">
         <picture>
-          <source
-            srcset="assets/images/logos/dr-full-img-sm.webp 400w, assets/images/logos/dr-full-img.webp 800w"
-            type="image/webp"
-            sizes="(max-width: 768px) 100vw, 50vw">
-          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="doctor-photo"
-            loading="lazy" width="800" height="1066">
+          <source srcset="assets/images/dr-team.webp" type="image/webp">
+          <img src="assets/images/dr-team.jpeg" alt="Dr. Adonis Maiquez and his team" class="doctor-photo"
+            loading="lazy" width="1448" height="1086">
         </picture>
       </div>
+      
       <div class="doctor-credentials">
-        <div class="credential-badge">
-          <mat-icon>verified</mat-icon>
-          <span>{{ 'meetDoctor.badge1' | translate }}</span>
-        </div>
         <div class="credential-badge">
           <mat-icon>verified</mat-icon>
           <span>{{ 'meetDoctor.badge2' | translate }}</span>
@@ -56,9 +50,24 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
       </div>
+
+      <!-- Book Promo moved here -->
+      <div class="doctor-book-promo">
+        <div class="book-promo-content">
+          <div class="book-promo-text">
+            <mat-icon class="book-icon">menu_book</mat-icon>
+            <p>{{ 'meetDoctor.bookPromo' | translate }}</p>
+          </div>
+          <a [href]="'bookSection.bookUrl' | translate" target="_blank" rel="noopener noreferrer"
+            class="book-promo-btn">
+            <mat-icon>shopping_cart</mat-icon>
+            {{ 'meetDoctor.btnBuyBook' | translate }}
+          </a>
+        </div>
+      </div>
     </div>
 
-    <!-- Doctor Info -->
+    <!-- Right Column: Doctor Info -->
     <div class="doctor-info">
       <p class="doctor-eyebrow">{{ 'meetDoctor.eyebrow' | translate }}</p>
       <h2 class="doctor-name">{{ 'meetDoctor.title' | translate }}</h2>
@@ -73,28 +82,6 @@
       <div class="doctor-highlight">
         <mat-icon>school</mat-icon>
         <p>{{ 'meetDoctor.highlight' | translate }}</p>
-      </div>
-
-      <div class="doctor-book-promo">
-        <div class="book-promo-image">
-          <img src="assets/images/book-dradonis.webp" alt="{{ 'bookSection.title' | translate }}" loading="lazy" width="200" height="260">
-        </div>
-        <div class="book-promo-content">
-          <mat-icon class="book-icon">menu_book</mat-icon>
-          <p>{{ 'meetDoctor.bookPromo' | translate }}</p>
-          <a [href]="'bookSection.bookUrl' | translate" target="_blank" rel="noopener noreferrer"
-            class="book-promo-btn">
-            <mat-icon>shopping_cart</mat-icon>
-            {{ 'meetDoctor.btnBuyBook' | translate }}
-          </a>
-        </div>
-      </div>
-
-      <div class="doctor-actions">
-        <a href="tel:+13052047816" mat-stroked-button class="secondary-btn">
-          <mat-icon>phone</mat-icon>
-          {{ 'header.phone' | translate }}
-        </a>
       </div>
     </div>
   </div>

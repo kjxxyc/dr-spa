@@ -97,8 +97,9 @@
     "highlight": "Nuestro Director Médico, Adonis Maiquez, MD, formado como neurocirujano, es miembro de la Academia Americana de Manejo del Dolor y del Instituto Mundial del Dolor.",
     "badge1": "Medicina Funcional",
     "badge2": "Antienvejecimiento y Regenerativa",
-    "bookPromo": "El Dr. Adonis es autor del libro \"Medicina Moderna para los Tiempos Modernos: El Manual de Medicina Funcional para Prevenir y Tratar Enfermedades Desde su Origen\", una guía completa para entender y aplicar los principios de la medicina funcional. Disponible ahora en Amazon.",
-    "btnBuyBook": "CONSIGUE EL LIBRO EN AMAZON"
+    "bookPromo": "El Dr. Adonis es autor del libro \"Medicina Moderna para los Tiempos Modernos: El Manual de Medicina Funcional para Prevenir y Tratar Enfermedades Desde su Origen\", una guía completa para entender y aplicar los principios de la medicina funcional.",
+    "btnBuyBook": "CONSIGUE EL LIBRO EN AMAZON",
+    "teamCaption": "El Dr. Adonis y su equipo — dedicados a tu bienestar"
   },
   "vagustim": {
     "title": "ESTIMULADOR TRANSCUTÁNEO DEL NERVIO VAGO",
@@ -330,5 +331,8 @@
     "cancel": "Cancelar",
     "success": "¡Su solicitud de cita ha sido enviada!",
     "error": "Error al enviar la solicitud. Intente de nuevo."
+  },
+  "footer": {
+    "developer": "Desarrollado por"
   }
 }
