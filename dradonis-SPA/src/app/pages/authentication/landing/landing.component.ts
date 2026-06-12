@@ -47,6 +47,18 @@ export class LandingComponent implements OnInit, OnDestroy {
         return [...this.services].reverse();
     }
 
+    // Reviews images for marquee
+    reviewImages = [
+        'Review Alexia.webp',
+        'Review Ana Giralt Oliva.webp',
+        'Review Karlos.webp',
+        'Review LT.webp',
+        'Review Mayli Dorta.webp',
+        'Review Miami Arts.webp',
+        'Review Noris.webp',
+        'Review Silvana.webp'
+    ];
+
     // Google Maps embed URL for testimonials section
     googleMapsUrl: SafeResourceUrl;
 

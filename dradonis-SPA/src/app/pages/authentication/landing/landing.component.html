@@ -160,62 +160,85 @@
   </section>
 
   <!-- ============================ -->
-  <!-- SERVICES PROMO SECTION       -->
+  <!-- REVIEWS MARQUEE CAROUSEL     -->
   <!-- ============================ -->
-  <section class="services-promo-section" id="services">
-    <h2 class="services-promo-title">{{ 'servicesPromo.title' | translate }}</h2>
-    <p class="services-promo-subtitle">{{ 'servicesPromo.subtitle' | translate }}</p>
-
-    <div class="services-promo-grid">
-      <!-- Tadalafil Card -->
-      <div class="service-promo-card tadalafil-card">
-        <div class="service-promo-icon">
-          <mat-icon>medication</mat-icon>
+  <section class="reviews-marquee-section" aria-label="Patient Reviews">
+    <div class="reviews-marquee">
+      <div class="reviews-marquee__track">
+        <!-- Original set -->
+        <div class="review-image-card" *ngFor="let img of reviewImages">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy">
         </div>
-        <h3>{{ 'servicesPromo.tadalafil.title' | translate }}</h3>
-        <p>{{ 'servicesPromo.tadalafil.description' | translate }}</p>
-        <a routerLink="/men-wellness" class="service-promo-btn">
-          <mat-icon>arrow_forward</mat-icon>
-          {{ 'servicesPromo.tadalafil.btn' | translate }}
-        </a>
-      </div>
-
-      <!-- Vitamins Card -->
-      <div class="service-promo-card vitamins-card">
-        <div class="service-promo-icon">
-          <mat-icon>local_pharmacy</mat-icon>
+        <!-- Duplicated set for seamless infinite loop -->
+        <div class="review-image-card" *ngFor="let img of reviewImages" aria-hidden="true">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy">
         </div>
-        <h3>{{ 'servicesPromo.vitamins.title' | translate }}</h3>
-        <p>{{ 'servicesPromo.vitamins.description' | translate }}</p>
-        <a routerLink="/vitamins-prescription" class="service-promo-btn">
-          <mat-icon>arrow_forward</mat-icon>
-          {{ 'servicesPromo.vitamins.btn' | translate }}
-        </a>
       </div>
     </div>
   </section>
 
   <!-- ============================ -->
-  <!-- BOOK SECTION                 -->
+  <!-- COMBINED SERVICES & BOOK     -->
   <!-- ============================ -->
-  <section class="book-section" id="book">
-    <div class="book-container">
-      <div class="book-image">
-        <img src="assets/images/book-dradonis.webp" alt="{{ 'bookSection.title' | translate }}" loading="lazy" width="500" height="650">
+  <section class="services-and-book-section" id="services">
+    <div class="services-and-book-container">
+      
+      <!-- Left Column: Services -->
+      <div class="services-column">
+        <h2 class="services-promo-title">{{ 'servicesPromo.title' | translate }}</h2>
+        <p class="services-promo-subtitle">{{ 'servicesPromo.subtitle' | translate }}</p>
+
+        <div class="services-promo-grid">
+          <!-- Tadalafil Card -->
+          <div class="service-promo-card tadalafil-card">
+            <div class="service-promo-icon">
+              <mat-icon>medication</mat-icon>
+            </div>
+            <h3>{{ 'servicesPromo.tadalafil.title' | translate }}</h3>
+            <p>{{ 'servicesPromo.tadalafil.description' | translate }}</p>
+            <a routerLink="/men-wellness" class="service-promo-btn">
+              <mat-icon>arrow_forward</mat-icon>
+              {{ 'servicesPromo.tadalafil.btn' | translate }}
+            </a>
+          </div>
+
+          <!-- Vitamins Card -->
+          <div class="service-promo-card vitamins-card">
+            <div class="service-promo-icon">
+              <mat-icon>local_pharmacy</mat-icon>
+            </div>
+            <h3>{{ 'servicesPromo.vitamins.title' | translate }}</h3>
+            <p>{{ 'servicesPromo.vitamins.description' | translate }}</p>
+            <a routerLink="/vitamins-prescription" class="service-promo-btn">
+              <mat-icon>arrow_forward</mat-icon>
+              {{ 'servicesPromo.vitamins.btn' | translate }}
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="book-content">
-        <p class="book-eyebrow">
-          <mat-icon>auto_stories</mat-icon>
-          {{ 'bookSection.eyebrow' | translate }}
-        </p>
-        <h2>{{ 'bookSection.title' | translate }}</h2>
-        <p>{{ 'bookSection.subtitle' | translate }}</p>
-        <a [href]="'bookSection.bookUrl' | translate" target="_blank" rel="noopener noreferrer"
-           class="cta-btn cta-btn--primary book-btn">
-          <mat-icon>shopping_cart</mat-icon>
-          <span>{{ 'bookSection.btnBuy' | translate }}</span>
-        </a>
+
+      <!-- Right Column: Book -->
+      <div class="book-column" id="book">
+        <div class="book-card-vertical">
+          <div class="book-image">
+            <img src="assets/images/book-dradonis.webp" alt="{{ 'bookSection.title' | translate }}" loading="lazy" width="400" height="520">
+          </div>
+          <div class="book-content">
+            <p class="book-eyebrow">
+              <mat-icon>auto_stories</mat-icon>
+              {{ 'bookSection.eyebrow' | translate }}
+            </p>
+            <h2>{{ 'bookSection.title' | translate }}</h2>
+            <p>{{ 'bookSection.subtitle' | translate }}</p>
+            <a [href]="'bookSection.bookUrl' | translate" target="_blank" rel="noopener noreferrer"
+               class="cta-btn cta-btn--primary book-btn">
+              <mat-icon>shopping_cart</mat-icon>
+              <span>{{ 'bookSection.btnBuy' | translate }}</span>
+            </a>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
