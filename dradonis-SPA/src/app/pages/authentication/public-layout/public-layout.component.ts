@@ -6,7 +6,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
 
 @Component({
     selector: 'app-public-layout',
@@ -33,7 +32,8 @@ export class PublicLayoutComponent {
         this.translate.use(this.currentLang);
     }
 
-    openAppointment(): void {
+    async openAppointment(): Promise<void> {
+        const { AppointmentDialogComponent } = await import('../../../shared/appointment-dialog/appointment-dialog.component');
         this.dialog.open(AppointmentDialogComponent, {
             width: '600px',
             maxWidth: '95vw',

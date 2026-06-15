@@ -101,7 +101,7 @@ export class LandingComponent implements OnInit, OnDestroy {
             : {
                 title: 'Dr. Adonis Maiquez, MD | Functional & Regenerative Medicine Miami',
                 description: "Miami's leading functional medicine expert. Root-cause treatment for chronic disease, hormone optimization, peptides, weight loss & anti-aging. Serving Miami, Coral Gables, Aventura, Doral & all of South Florida.",
-                keywords: 'functional medicine Miami, regenerative medicine Miami, Dr. Adonis Maiquez, hormone replacement Miami, peptide therapy Miami, anti-aging Miami, longevity doctor Miami, integrative medicine Florida, chronic disease specialist Miami',
+                keywords: 'functional medicine Miami, regenerative medicine Miami, Dr. Adonis Maiquez, hormone therapy Miami, peptide therapy Miami, anti-aging doctor Miami, longevity medicine Miami, integrative medicine Miami, functional medicine doctor Florida',
             };
 
         this.seo.apply({
@@ -242,6 +242,15 @@ export class LandingComponent implements OnInit, OnDestroy {
             if (result) {
                 console.log('Newsletter subscription data:', result);
             }
+        });
+    }
+
+    async openAppointment(): Promise<void> {
+        const { AppointmentDialogComponent } = await import('../../../shared/appointment-dialog/appointment-dialog.component');
+        this.dialog.open(AppointmentDialogComponent, {
+            width: '600px',
+            maxWidth: '95vw',
+            autoFocus: false
         });
     }
 }

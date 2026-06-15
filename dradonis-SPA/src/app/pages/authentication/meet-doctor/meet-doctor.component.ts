@@ -44,7 +44,7 @@ export class MeetDoctorComponent implements OnInit, OnDestroy {
      * "Dr. Adonis Maiquez" and credibility-building searches.
      */
     private applySeo(): void {
-        const url = this.seo.absoluteUrl('/landing/meet-doctor');
+        const url = this.seo.absoluteUrl('/meet-doctor');
         const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
         const isEs = lang === 'es';
         const config = isEs

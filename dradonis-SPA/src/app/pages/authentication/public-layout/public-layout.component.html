@@ -9,7 +9,7 @@
 
       <!-- Logo -->
       <div class="logo-container">
-        <a routerLink="/landing">
+        <a routerLink="/">
           <picture>
             <source srcset="assets/images/logos/Logo_720x192.webp" type="image/webp">
             <img src="assets/images/logos/Logo_720x192.jpg" alt="Dr. Adonis - Functional & Regenerative Medicine"
@@ -20,11 +20,11 @@
 
       <!-- Navigation Menu (desktop only) -->
       <nav class="navigation desktop-nav">
-        <a routerLink="/landing/shop" class="nav-link" routerLinkActive="active-link">
+        <a routerLink="/shop" class="nav-link" routerLinkActive="active-link">
           <mat-icon>shopping_bag</mat-icon>
           {{ 'header.nav.shop' | translate }}
         </a>
-        <a routerLink="/landing/services" class="nav-link" routerLinkActive="active-link">
+        <a routerLink="/services" class="nav-link" routerLinkActive="active-link">
           <mat-icon>medical_services</mat-icon>
           {{ 'header.nav.services' | translate }}
         </a>
@@ -34,12 +34,12 @@
           <mat-icon class="dropdown-arrow">arrow_drop_down</mat-icon>
         </button>
         <mat-menu #toolsMenu="matMenu">
-          <a mat-menu-item routerLink="/landing/tools/bmi-calculator">
+          <a mat-menu-item routerLink="/tools/bmi-calculator">
             <mat-icon>monitor_weight</mat-icon>
             <span>{{ 'header.nav.bmi' | translate }}</span>
           </a>
         </mat-menu>
-        <a routerLink="/landing/videos" class="nav-link" routerLinkActive="active-link">
+        <a routerLink="/videos" class="nav-link" routerLinkActive="active-link">
           <mat-icon>play_circle</mat-icon>
           {{ 'header.nav.videos' | translate }}
         </a>
@@ -76,19 +76,19 @@
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav" [class.open]="menuOpen">
       <nav class="mobile-nav-links">
-        <a routerLink="/landing/shop" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+        <a routerLink="/shop" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>shopping_bag</mat-icon>
           {{ 'header.nav.shop' | translate }}
         </a>
-        <a routerLink="/landing/services" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+        <a routerLink="/services" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>medical_services</mat-icon>
           {{ 'header.nav.services' | translate }}
         </a>
-        <a routerLink="/landing/tools/bmi-calculator" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+        <a routerLink="/tools/bmi-calculator" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>monitor_weight</mat-icon>
           {{ 'header.nav.bmi' | translate }}
         </a>
-        <a routerLink="/landing/videos" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+        <a routerLink="/videos" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>play_circle</mat-icon>
           {{ 'header.nav.videos' | translate }}
         </a>

@@ -62,24 +62,6 @@ export const AuthenticationRoutes: Routes = [
           },
         ],
       },
-      // Legacy redirects: these URLs used to live under /landing/* but the
-      // canonical versions are at the root. Kept as redirects so old bookmarks
-      // and any internal link still in transition land on the SEO-canonical URL.
-      {
-        path: 'vitamins-prescription',
-        redirectTo: '/vitamins-prescription',
-        pathMatch: 'full',
-      },
-      {
-        path: 'men-wellness',
-        redirectTo: '/men-wellness',
-        pathMatch: 'full',
-      },
-      {
-        path: 'men-wellness/evaluation',
-        redirectTo: '/men-wellness/evaluation',
-        pathMatch: 'full',
-      },
     ],
   },
 ];

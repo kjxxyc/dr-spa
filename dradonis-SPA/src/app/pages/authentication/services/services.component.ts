@@ -7,7 +7,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
-import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
 import { SeoService } from '../../../shared/seo/seo.service';
 
 interface ServiceItem {
@@ -88,7 +87,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
      * Uses MedicalBusiness schema + ItemList of all services as MedicalProcedures.
      */
     private applySeo(): void {
-        const url = this.seo.absoluteUrl('/landing/services');
+        const url = this.seo.absoluteUrl('/services');
         const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
         const isEs = lang === 'es';
         const config = isEs
@@ -142,7 +141,8 @@ export class ServicesComponent implements OnInit, OnDestroy {
         this.expandedId = this.expandedId === id ? null : id;
     }
 
-    openAppointment(): void {
+    async openAppointment(): Promise<void> {
+        const { AppointmentDialogComponent } = await import('../../../shared/appointment-dialog/appointment-dialog.component');
         this.dialog.open(AppointmentDialogComponent, {
             width: '600px',
             maxWidth: '95vw',

@@ -7,7 +7,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
-import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
 import { SeoService } from '../../../shared/seo/seo.service';
 
 export interface VideoItem {
@@ -73,7 +72,8 @@ export class VideosComponent implements OnInit, OnDestroy {
         }
     }
 
-    openAppointment(): void {
+    async openAppointment(): Promise<void> {
+        const { AppointmentDialogComponent } = await import('../../../shared/appointment-dialog/appointment-dialog.component');
         this.dialog.open(AppointmentDialogComponent, {
             width: '600px',
             maxWidth: '95vw',
@@ -96,7 +96,7 @@ export class VideosComponent implements OnInit, OnDestroy {
      * via VideoObject schema. Tells Google about each embedded video.
      */
     private applySeo(): void {
-        const url = this.seo.absoluteUrl('/landing/videos');
+        const url = this.seo.absoluteUrl('/videos');
         const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
         const isEs = lang === 'es';
         const config = isEs

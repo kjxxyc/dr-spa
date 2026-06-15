@@ -88,7 +88,7 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
      * not a generic e-commerce shop. Uses Store + OfferCatalog schema.
      */
     private applySeo(): void {
-        const url = this.seo.absoluteUrl('/landing/shop');
+        const url = this.seo.absoluteUrl('/shop');
         const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
         const isEs = lang === 'es';
         const config = isEs

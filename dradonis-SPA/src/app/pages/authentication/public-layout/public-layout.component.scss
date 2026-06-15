@@ -23,7 +23,7 @@ $breakpoint-xs: 480px;
     width: 100%;
     max-width: 100vw;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 .page-content {

@@ -8,7 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-import { AppointmentDialogComponent } from '../../../../shared/appointment-dialog/appointment-dialog.component';
 import { SeoService } from '../../../../shared/seo/seo.service';
 
 type Gender = 'male' | 'female';
@@ -86,7 +85,7 @@ export class BmiCalculatorComponent implements OnInit, OnDestroy {
      * and positions the tool as a medical-grade utility from a real physician.
      */
     private applySeo(): void {
-        const url = this.seo.absoluteUrl('/landing/tools/bmi-calculator');
+        const url = this.seo.absoluteUrl('/tools/bmi-calculator');
         const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
         const isEs = lang === 'es';
         const config = isEs
@@ -236,7 +235,8 @@ export class BmiCalculatorComponent implements OnInit, OnDestroy {
     }
 
     /** Opens the same appointment modal used by the global header CTA. */
-    openAppointment(): void {
+    async openAppointment(): Promise<void> {
+        const { AppointmentDialogComponent } = await import('../../../../shared/appointment-dialog/appointment-dialog.component');
         this.dialog.open(AppointmentDialogComponent, {
             width: '600px',
             maxWidth: '95vw',

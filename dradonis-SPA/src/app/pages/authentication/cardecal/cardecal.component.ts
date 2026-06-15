@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { forkJoin } from 'rxjs';
-import { AppointmentDialogComponent } from '../../../shared/appointment-dialog/appointment-dialog.component';
+import { SeoService } from '../../../shared/seo/seo.service';
 import {
   LanguageSelectorDialogComponent,
   LangChoice
@@ -84,13 +84,14 @@ export class CardecalComponent implements OnInit {
     });
   }
 
-  openAppointment(): void {
-    this.dialog.open(AppointmentDialogComponent, {
-      width: '600px',
-      maxWidth: '95vw',
-      autoFocus: false
-    });
-  }
+    async openAppointment(): Promise<void> {
+        const { AppointmentDialogComponent } = await import('../../../shared/appointment-dialog/appointment-dialog.component');
+        this.dialog.open(AppointmentDialogComponent, {
+            width: '600px',
+            maxWidth: '95vw',
+            autoFocus: false
+        });
+    }
 
   get otherFlagIcon(): string {
     return this.lang === 'en'

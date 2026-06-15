@@ -10,7 +10,7 @@ const FALLBACK_WHATSAPP_URL =
   'https://api.whatsapp.com/send/?phone=13053355424&text=Hello%2C+I+would+like+more+information&type=phone_number&app_absent=0';
 
 /** Routes where the WhatsApp button must NOT appear. */
-const HIDDEN_ROUTES = ['/men-wellness', '/vitamins-prescription', '/landing/men-wellness', '/landing/vitamins-prescription'];
+const HIDDEN_ROUTES = ['/men-wellness', '/vitamins-prescription', '/men-wellness/evaluation'];
 
 @Component({
   selector: 'app-whatsapp-btn',

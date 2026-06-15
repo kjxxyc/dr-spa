@@ -90,7 +90,7 @@
 
         <!-- Floating Learn more CTA -->
         <div class="hero-figure__floating">
-          <a routerLink="/landing/meet-doctor" class="cta-btn cta-btn--primary hero-figure__cta">
+          <a routerLink="/meet-doctor" class="cta-btn cta-btn--primary hero-figure__cta">
             <mat-icon>person</mat-icon>
             <span>{{ 'header.nav.meetDoctor' | translate }}</span>
           </a>
@@ -107,7 +107,7 @@
     <!-- Row 1: scrolls left -->
     <div class="services-marquee">
       <div class="services-marquee__track services-marquee__track--left">
-        <a routerLink="/landing/services"
+        <a routerLink="/services"
            class="services-marquee__chip"
            *ngFor="let s of services"
            [style.background]="s.color"
@@ -117,7 +117,7 @@
           </span>
           <span class="services-marquee__chip-label">{{ 'cardecal.services.' + s.id + '.title' | translate }}</span>
         </a>
-        <a routerLink="/landing/services"
+        <a routerLink="/services"
            class="services-marquee__chip"
            *ngFor="let s of services"
            [style.background]="s.color"
@@ -134,7 +134,7 @@
     <!-- Row 2: scrolls right (opposite direction), brick-offset -->
     <div class="services-marquee services-marquee--offset">
       <div class="services-marquee__track services-marquee__track--right">
-        <a routerLink="/landing/services"
+        <a routerLink="/services"
            class="services-marquee__chip"
            *ngFor="let s of servicesAlt"
            [style.background]="s.color"
@@ -144,7 +144,7 @@
           </span>
           <span class="services-marquee__chip-label">{{ 'cardecal.services.' + s.id + '.title' | translate }}</span>
         </a>
-        <a routerLink="/landing/services"
+        <a routerLink="/services"
            class="services-marquee__chip"
            *ngFor="let s of servicesAlt"
            [style.background]="s.color"
@@ -166,11 +166,11 @@
     <div class="reviews-marquee">
       <div class="reviews-marquee__track">
         <!-- Original set -->
-        <div class="review-image-card" *ngFor="let img of reviewImages">
+        <div class="review-image-card" *ngFor="let img of reviewImages" (click)="openAppointment()">
           <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy">
         </div>
         <!-- Duplicated set for seamless infinite loop -->
-        <div class="review-image-card" *ngFor="let img of reviewImages" aria-hidden="true">
+        <div class="review-image-card" *ngFor="let img of reviewImages" aria-hidden="true" (click)="openAppointment()">
           <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy">
         </div>
       </div>
