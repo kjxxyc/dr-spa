@@ -102,7 +102,7 @@ export class VideosComponent implements OnInit, OnDestroy {
         this.videos = videoIds.map(v => ({
             ...v,
             embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl(
-                `https://www.youtube.com/embed/${v.id}`
+                `https://www.youtube.com/embed/${v.id}?origin=https://dradonis.com&rel=0`
             )
         }));
 
