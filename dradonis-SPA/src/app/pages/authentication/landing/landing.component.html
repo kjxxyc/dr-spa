@@ -167,11 +167,11 @@
       <div class="reviews-marquee__track">
         <!-- Original set -->
         <div class="review-image-card" *ngFor="let img of reviewImages" (click)="openAppointment()">
-          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy" width="430" height="210">
         </div>
         <!-- Duplicated set for seamless infinite loop -->
         <div class="review-image-card" *ngFor="let img of reviewImages" aria-hidden="true" (click)="openAppointment()">
-          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy" width="430" height="210">
         </div>
       </div>
     </div>
