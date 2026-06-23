@@ -1,7 +1,5 @@
 import { Routes } from '@angular/router';
 
-import { PublicLayoutComponent } from './public-layout/public-layout.component';
-
 export const AuthenticationRoutes: Routes = [
   {
     path: '',
@@ -9,7 +7,10 @@ export const AuthenticationRoutes: Routes = [
       // Public pages with shared header layout
       {
         path: '',
-        component: PublicLayoutComponent,
+        loadComponent: () =>
+          import('./public-layout/public-layout.component').then(
+            (m) => m.PublicLayoutComponent
+          ),
         children: [
           {
             path: '',

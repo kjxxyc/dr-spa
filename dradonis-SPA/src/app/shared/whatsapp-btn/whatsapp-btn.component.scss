@@ -43,6 +43,11 @@
     background-color: #1ebc5a;
     transform: scale(1.05);
   }
+
+  &.left-side {
+    right: auto;
+    left: 40px;
+  }
 }
 
 @keyframes whatsapp-pulse {

@@ -215,7 +215,7 @@
         "description": "El Dr. Adonis cree que hoy es fácil usar terapia hormonal para neutralizar desequilibrios y mejorar la salud sexual y la experiencia general que enfrentan las parejas. Ha permitido a cientos de parejas entender sus necesidades sexuales, conectar con su estado físico, y lograr una salud sexual mejorada a través de terapia hormonal y terapia de parejas.\n\nEnfatiza que ambos miembros deben estar activamente comprometidos, involucrados e invertidos por igual — la salud sexual no puede definirse ni abordarse en soledad."
       },
       "regenerativeExosomes": {
-        "title": "Medicina Regenerativa y el Auge de los Exosomas",
+        "title": "Exosomas de celulas madres",
         "description": "<p><strong>El futuro de la curación sin cirugía</strong></p><p>La medicina regenerativa ha dado un salto cuántico en 2026. Ya no se trata solo de aliviar síntomas, sino de dar instrucciones precisas a nuestras células para que se reparen a sí mismas. En este escenario, los exosomas se han convertido en los protagonistas.</p><p><strong>¿Qué son y cómo funcionan?</strong><br>Los exosomas son pequeñas vesículas que actúan como \"mensajeros\" inteligentes. Transportan proteínas, lípidos y material genético de una célula a otra. En la práctica clínica, se utilizan para:</p><ul><li><strong>Reducir la inflamación sistémica:</strong> Envían señales que calman la respuesta inflamatoria exagerada.</li><li><strong>Acelerar la recuperación de tejidos:</strong> Ideales para pacientes con lesiones articulares o desgaste muscular.</li><li><strong>Rejuvenecimiento biológico:</strong> Activan las vías de regeneración que se vuelven lentas con la edad.</li></ul><p><strong>El papel de la suplementación en la regeneración</strong><br>Para que las terapias regenerativas funcionen, el cuerpo debe tener la \"materia prima\" necesaria. Por eso, en este proceso es vital:</p><ul><li><strong>Péptidos Bioactivos:</strong> Actúan como bloques de construcción para nuevos tejidos.</li><li><strong>Inductores de Colágeno y Elastina:</strong> Fundamentales para mantener la arquitectura de la matriz extracelular.</li><li><strong>Antioxidantes de Red:</strong> Como el glutatión, que protegen a las células nuevas del estrés oxidativo durante su formación.</li></ul>"
       }
     },
@@ -382,5 +382,14 @@
   },
   "footer": {
     "developer": "Desarrollado por"
+  },
+  "whatsappMessages": {
+    "default": "Hola, deseo información",
+    "services": "Hola, deseo más información sobre sus servicios",
+    "shop": "Hola, estoy interesado en sus productos de salud",
+    "cardecal": "Hola, vi su anuncio del cardecal y estoy interesado en un test de salud",
+    "videos": "Hola, vi sus videos y deseo más información",
+    "vitamins": "Hola, estoy interesado en una prescripción de vitaminas",
+    "menwellness": "Hola, estoy interesado en comprar tadalafil-cialis"
   }
 }

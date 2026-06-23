@@ -215,7 +215,7 @@
         "description": "<p>Sexual vitality is a key component of overall well-being. Using advanced peptide therapies (like PT-141) and targeted hormone optimization, we address the root causes of low libido and sexual dysfunction in both men and women.</p><p>Dr. Adonis focuses on restoring cellular communication, improving blood flow, and balancing the endocrine system to help you regain intimacy, confidence, and a fulfilling sexual life without relying solely on temporary chemical fixes.</p>"
       },
       "regenerativeExosomes": {
-        "title": "Regenerative Medicine and the Rise of Exosomes",
+        "title": "Exosomes from stem cells",
         "description": "<p><strong>The Future of Healing Without Surgery</strong></p><p>Regenerative medicine has taken a quantum leap in 2026. It's no longer just about alleviating symptoms, but about giving precise instructions to our cells so they can repair themselves. In this scenario, exosomes have become key players.</p><p><strong>What are they and how do they work?</strong><br>Exosomes are small vesicles that act as intelligent \"messengers.\" They transport proteins, lipids, and genetic material from one cell to another. In clinical practice, they are used to:</p><ul><li><strong>Reduce systemic inflammation:</strong> They send signals that calm the exaggerated inflammatory response.</li><li><strong>Accelerate tissue recovery:</strong> Ideal for patients with joint injuries or muscle atrophy.</li><li><strong>Biological rejuvenation:</strong> They activate regeneration pathways that slow down with age.</li></ul><p><strong>The Role of Supplementation in Regeneration</strong><br>For regenerative therapies to work, the body must have the necessary \"raw materials.\" Therefore, the following are vital in this process:</p><ul><li><strong>Bioactive Peptides:</strong> These act as building blocks for new tissues.</li><li><strong>Collagen and Elastin Inducers:</strong> These are essential for maintaining the architecture of the extracellular matrix.</li><li><strong>Network Antioxidants:</strong> Such as glutathione, which protect new cells from oxidative stress during their formation.</li></ul>"
       }
     },
@@ -382,5 +382,14 @@
   },
   "footer": {
     "developer": "Developed by"
+  },
+  "whatsappMessages": {
+    "default": "Hello, I would like more information",
+    "services": "Hello, I would like more information about your services",
+    "shop": "Hello, I am interested in your health products",
+    "cardecal": "Hello, I saw your cardecal ad and I am interested in a health test",
+    "videos": "Hello, I saw your videos and would like more information",
+    "vitamins": "Hello, I am interested in a vitamin prescription",
+    "menwellness": "Hello, I am interested in buying tadalafil-cialis"
   }
 }

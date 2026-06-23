@@ -224,66 +224,7 @@ $breakpoint-xs: 480px;
     }
 }
 
-// ===========================
-// SCROLL HINT BANNER
-// ===========================
-.services-scroll-hint {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    padding: 0.9rem 1.5rem;
-    background: linear-gradient(180deg, rgba($primary-green, 0.06) 0%, transparent 100%);
-    color: $primary-green-dark;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    transition: background 0.2s ease;
 
-    &:hover {
-        background: linear-gradient(180deg, rgba($primary-green, 0.12) 0%, transparent 100%);
-
-        .scroll-hint-arrow {
-            transform: translateY(2px);
-        }
-    }
-
-    .scroll-hint-count {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 30px;
-        height: 30px;
-        padding: 0 8px;
-        background: $primary-green;
-        color: $white;
-        border-radius: 999px;
-        font-size: 14px;
-        font-weight: 800;
-        letter-spacing: 0;
-    }
-
-    .scroll-hint-arrow {
-        font-size: 26px;
-        width: 26px;
-        height: 26px;
-        transition: transform 0.25s ease;
-        animation: scrollHintBounce 1.8s ease-in-out infinite;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-        font-size: 11px;
-        padding: 0.75rem 1rem;
-        letter-spacing: 0.8px;
-    }
-}
-
-@keyframes scrollHintBounce {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(3px); }
-}
 
 // ===========================
 // SERVICES LIST — 2-COLUMN GRID

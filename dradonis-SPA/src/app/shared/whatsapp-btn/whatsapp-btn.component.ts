@@ -4,13 +4,8 @@ import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
-// URL fija de respaldo — garantiza que el botón siempre lleve a WhatsApp,
-// incluso si el TranslateService no está inicializado o devuelve la clave literal.
-const FALLBACK_WHATSAPP_URL =
-  'https://api.whatsapp.com/send/?phone=13053355424&text=Hello%2C+I+would+like+more+information&type=phone_number&app_absent=0';
-
-/** Routes where the WhatsApp button must NOT appear. */
-const HIDDEN_ROUTES = ['/men-wellness', '/vitamins-prescription', '/men-wellness/evaluation'];
+/** Routes where the WhatsApp button must appear on the left side. */
+const LEFT_ROUTES = ['/men-wellness', '/vitamins-prescription', '/men-wellness/evaluation'];
 
 @Component({
   selector: 'app-whatsapp-btn',
@@ -20,7 +15,7 @@ const HIDDEN_ROUTES = ['/men-wellness', '/vitamins-prescription', '/men-wellness
   styleUrls: ['./whatsapp-btn.component.scss']
 })
 export class WhatsappBtnComponent implements OnInit {
-  showButton = true;
+  isLeftSide = false;
 
   constructor(
     private translate: TranslateService,
@@ -28,38 +23,42 @@ export class WhatsappBtnComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Check current route on init
-    this.showButton = !HIDDEN_ROUTES.some(route => this.router.url.startsWith(route));
+    this.updateState(this.router.url);
 
-    // Re-check on every navigation
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      this.showButton = !HIDDEN_ROUTES.some(route => event.urlAfterRedirects.startsWith(route));
+      this.updateState(event.urlAfterRedirects);
     });
   }
 
-  /**
-   * Primera línea de defensa: intenta usar la URL traducida; si no es una URL válida
-   * (porque el TranslateService no cargó el JSON o devolvió la clave literal),
-   * cae al fallback constante.
-   */
-  get whatsappHref(): string {
-    const value = this.translate.instant('cardecal.whatsappLink');
-    return typeof value === 'string' && value.startsWith('http') ? value : FALLBACK_WHATSAPP_URL;
+  private updateState(url: string): void {
+    this.isLeftSide = LEFT_ROUTES.some(route => url.startsWith(route));
   }
 
-  /**
-   * Segunda línea de defensa (red de seguridad final): si por cualquier razón el [href]
-   * no resolvió a una URL http(s), cancelamos la navegación del <a> y forzamos la apertura
-   * de la URL constante con window.open. Garantía: el click SIEMPRE lleva a WhatsApp.
-   */
-  onWhatsappClick(event: MouseEvent): void {
-    const href = this.whatsappHref;
-    if (!href || !href.startsWith('http')) {
-      event.preventDefault();
-      window.open(FALLBACK_WHATSAPP_URL, '_blank', 'noopener,noreferrer');
+  get whatsappHref(): string {
+    const url = this.router.url;
+    let messageKey = 'whatsappMessages.default';
+
+    if (url.startsWith('/services')) {
+      messageKey = 'whatsappMessages.services';
+    } else if (url.startsWith('/shop')) {
+      messageKey = 'whatsappMessages.shop';
+    } else if (url.startsWith('/cardecal')) {
+      messageKey = 'whatsappMessages.cardecal';
+    } else if (url.startsWith('/videos')) {
+      messageKey = 'whatsappMessages.videos';
+    } else if (url.startsWith('/vitamins-prescription')) {
+      messageKey = 'whatsappMessages.vitamins';
+    } else if (url.startsWith('/men-wellness')) {
+      messageKey = 'whatsappMessages.menwellness';
     }
+
+    const text = this.translate.instant(messageKey);
+    // If the translation isn't loaded yet or returns the key, use a fallback
+    const fallbackText = 'Hello, I would like more information';
+    const finalMessage = (typeof text === 'string' && !text.includes('whatsappMessages')) ? text : fallbackText;
+    
+    return `https://api.whatsapp.com/send/?phone=13053355424&text=${encodeURIComponent(finalMessage)}&type=phone_number&app_absent=0`;
   }
 }
-

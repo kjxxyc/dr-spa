@@ -166,60 +166,7 @@ $background-light: #F7FAFC;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-// ===========================
-// SCROLL HINT BANNER
-// ===========================
-.shop-scroll-hint {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    padding: 0.75rem 1.25rem;
-    margin: 0 auto 1.25rem;
-    max-width: 360px;
-    background: linear-gradient(180deg, rgba($primary-green, 0.08) 0%, rgba($primary-green, 0.02) 100%);
-    border-radius: 999px;
-    color: $primary-green-dark;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background 0.2s ease;
 
-    &:hover {
-        background: linear-gradient(180deg, rgba($primary-green, 0.14) 0%, rgba($primary-green, 0.04) 100%);
-        .scroll-hint-arrow { transform: translateY(2px); }
-    }
-
-    .scroll-hint-count {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 26px;
-        height: 26px;
-        padding: 0 7px;
-        background: $primary-green;
-        color: $white;
-        border-radius: 999px;
-        font-size: 13px;
-        font-weight: 800;
-        letter-spacing: 0;
-    }
-
-    .scroll-hint-arrow {
-        font-size: 22px;
-        width: 22px;
-        height: 22px;
-        transition: transform 0.25s ease;
-        animation: shopScrollHintBounce 1.8s ease-in-out infinite;
-    }
-}
-
-@keyframes shopScrollHintBounce {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(2px); }
-}
 
 // ===========================
 // FILTER BAR
