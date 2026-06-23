@@ -1,0 +1,53 @@
+<div class="articles-page">
+  <section class="articles-hero">
+    <div class="articles-hero-content">
+      <p class="articles-eyebrow">DR. ADONIS BLOG</p>
+      <h1>Recent Articles</h1>
+      <p class="articles-hero-subtitle">Insights on functional medicine, wellness, hormones, and longevity.</p>
+      
+      <div class="articles-filters">
+        <div class="search-box">
+          <mat-icon>search</mat-icon>
+          <input 
+            type="text" 
+            [(ngModel)]="searchText" 
+            (ngModelChange)="onFilterChange()" 
+            placeholder="Search articles..."
+          >
+        </div>
+        
+        <div class="lang-filter">
+          <select [(ngModel)]="selectedLanguage" (ngModelChange)="onFilterChange()">
+            <option value="all">All Languages</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="articles-list-section">
+    <div class="articles-grid">
+      <article class="article-card" *ngFor="let article of displayedArticles">
+        <a [routerLink]="['/articles', article.slug]" class="article-link">
+          <div class="article-image">
+            <img [src]="article.imageUrl || 'assets/images/logos/Logo_720x192.jpg'" [alt]="article.title" loading="lazy">
+          </div>
+          <div class="article-content">
+            <span class="article-date">{{ article.date | date:'longDate' }}</span>
+            <h2 class="article-title" [innerHTML]="article.title"></h2>
+            <div class="article-excerpt" [innerHTML]="article.excerpt"></div>
+            <span class="article-read-more">Read More <mat-icon>arrow_forward</mat-icon></span>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <div class="load-more-container" *ngIf="hasMore">
+      <button class="btn-load-more" (click)="loadMore()">
+        Load More Articles
+      </button>
+    </div>
+  </section>
+</div>

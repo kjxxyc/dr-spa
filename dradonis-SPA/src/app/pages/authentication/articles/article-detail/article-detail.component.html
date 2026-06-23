@@ -1,0 +1,27 @@
+<div class="article-detail-page" *ngIf="article; else loading">
+  
+  <div class="article-header-bg">
+    <div class="article-header-content">
+      <a routerLink="/articles" class="back-link">
+        <mat-icon>arrow_back</mat-icon> Back to Articles
+      </a>
+      <span class="article-meta-date">{{ article.date | date:'longDate' }}</span>
+      <h1 class="article-main-title" [innerHTML]="article.title"></h1>
+    </div>
+  </div>
+
+  <article class="article-body-container">
+    <div class="article-featured-image" *ngIf="article.imageUrl">
+      <img [src]="article.imageUrl" [alt]="article.title" fetchpriority="high">
+    </div>
+    
+    <div class="article-html-content" [innerHTML]="article.content"></div>
+  </article>
+
+</div>
+
+<ng-template #loading>
+  <div class="loading-container">
+    <p>Loading article...</p>
+  </div>
+</ng-template>

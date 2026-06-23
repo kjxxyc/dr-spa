@@ -61,10 +61,11 @@ export class ServicesComponent implements OnInit, OnDestroy {
         { id: 'neurotransmitters',   icon: 'swap_horiz',         gradient: 'linear-gradient(135deg, #D946EF 0%, #A21CAF 100%)' },
         { id: 'intestinalHealth',    icon: 'restaurant',         gradient: 'linear-gradient(135deg, #84CC16 0%, #4D7C0F 100%)' },
         { id: 'telomeres',           icon: 'auto_stories',       gradient: 'linear-gradient(135deg, #0EA5E9 0%, #0369A1 100%)' },
-        { id: 'sexualHealth',        icon: 'favorite',           gradient: 'linear-gradient(135deg, #F43F5E 0%, #BE123C 100%)' }
+        { id: 'sexualHealth',        icon: 'favorite',           gradient: 'linear-gradient(135deg, #F43F5E 0%, #BE123C 100%)' },
+        { id: 'regenerativeExosomes',icon: 'biotech',            gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', featured: true }
     ];
 
-    expandedId: string | null = null;
+    expandedIds: string[] = [];
 
     constructor(
         private dialog: MatDialog,
@@ -137,8 +138,27 @@ export class ServicesComponent implements OnInit, OnDestroy {
         };
     }
 
-    toggleService(id: string): void {
-        this.expandedId = this.expandedId === id ? null : id;
+    toggleService(index: number): void {
+        const id = this.services[index].id;
+        const isExpanded = this.expandedIds.includes(id);
+
+        if (isExpanded) {
+            // If already expanded, collapse everything
+            this.expandedIds = [];
+        } else {
+            // Expand the clicked item
+            this.expandedIds = [id];
+
+            // If desktop (2 columns), also expand the sibling in the same row
+            if (window.innerWidth > 968) {
+                const isEven = index % 2 === 0;
+                const siblingIndex = isEven ? index + 1 : index - 1;
+                
+                if (siblingIndex >= 0 && siblingIndex < this.services.length) {
+                    this.expandedIds.push(this.services[siblingIndex].id);
+                }
+            }
+        }
     }
 
     async openAppointment(): Promise<void> {

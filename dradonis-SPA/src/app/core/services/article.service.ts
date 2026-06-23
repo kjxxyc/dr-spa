@@ -1,0 +1,42 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map, shareReplay } from 'rxjs';
+
+export interface Article {
+  id: number;
+  slug: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  imageUrl: string;
+  language: 'en' | 'es';
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ArticleService {
+  private articles$?: Observable<Article[]>;
+
+  constructor(private http: HttpClient) {}
+
+  getArticles(): Observable<Article[]> {
+    if (!this.articles$) {
+      this.articles$ = this.http.get<Article[]>('/assets/data/articles.json').pipe(
+        map(articles => {
+          // Sort by date descending
+          return articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        }),
+        shareReplay(1)
+      );
+    }
+    return this.articles$;
+  }
+
+  getArticleBySlug(slug: string): Observable<Article | undefined> {
+    return this.getArticles().pipe(
+      map(articles => articles.find(a => a.slug === slug))
+    );
+  }
+}

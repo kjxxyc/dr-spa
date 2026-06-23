@@ -47,6 +47,20 @@ export const AuthenticationRoutes: Routes = [
               ),
           },
           {
+            path: 'articles',
+            loadComponent: () =>
+              import('./articles/articles-list/articles-list.component').then(
+                (m) => m.ArticlesListComponent
+              ),
+          },
+          {
+            path: 'articles/:slug',
+            loadComponent: () =>
+              import('./articles/article-detail/article-detail.component').then(
+                (m) => m.ArticleDetailComponent
+              ),
+          },
+          {
             path: 'videos',
             loadComponent: () =>
               import('./videos/videos.component').then(

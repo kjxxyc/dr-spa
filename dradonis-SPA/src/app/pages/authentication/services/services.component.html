@@ -53,8 +53,8 @@
       <div class="services-grid">
         <article
           class="service-card"
-          *ngFor="let s of services"
-          [class.expanded]="expandedId === s.id"
+          *ngFor="let s of services; let i = index"
+          [class.expanded]="expandedIds.includes(s.id)"
           [class.featured]="s.featured"
         >
           <span class="featured-badge" *ngIf="s.featured && !s.offer">
@@ -62,7 +62,7 @@
             {{ 'services.badgeFeatured' | translate }}
           </span>
 
-          <button class="service-card-header" (click)="toggleService(s.id)" [attr.aria-expanded]="expandedId === s.id">
+          <button class="service-card-header" (click)="toggleService(i)" [attr.aria-expanded]="expandedIds.includes(s.id)">
             <span class="service-icon-box" [style.background]="s.gradient" *ngIf="!s.offer">
               <mat-icon>{{ s.icon }}</mat-icon>
             </span>
@@ -76,11 +76,11 @@
 
             <span class="service-card-title">{{ 'services.list.' + s.id + '.title' | translate }}</span>
             <span class="service-card-chevron">
-              <mat-icon>{{ expandedId === s.id ? 'arrow_drop_down' : 'arrow_drop_down' }}</mat-icon>
+              <mat-icon>{{ expandedIds.includes(s.id) ? 'arrow_drop_down' : 'arrow_drop_down' }}</mat-icon>
             </span>
           </button>
 
-          <div class="service-card-detail" [@expandState]="expandedId === s.id ? 'expanded' : 'collapsed'">
+          <div class="service-card-detail" [@expandState]="expandedIds.includes(s.id) ? 'expanded' : 'collapsed'">
             <p class="service-description" [innerHTML]="'services.list.' + s.id + '.description' | translate"></p>
             <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn primary">
               <mat-icon>calendar_today</mat-icon>
@@ -88,8 +88,8 @@
             </a>
           </div>
 
-          <button class="service-card-toggle" (click)="toggleService(s.id)">
-            {{ (expandedId === s.id ? 'services.btnSeeLess' : 'services.btnSeeMore') | translate }}
+          <button class="service-card-toggle" (click)="toggleService(i)">
+            {{ (expandedIds.includes(s.id) ? 'services.btnSeeLess' : 'services.btnSeeMore') | translate }}
           </button>
         </article>
       </div>
