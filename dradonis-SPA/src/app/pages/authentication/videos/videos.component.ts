@@ -102,7 +102,7 @@ export class VideosComponent implements OnInit, OnDestroy {
         this.videos = videoIds.map(v => ({
             ...v,
             embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl(
-                `https://www.youtube.com/embed/${v.id}?origin=https://dradonis.com&rel=0`
+                `https://www.youtube-nocookie.com/embed/${v.id}?rel=0`
             )
         }));
 
@@ -179,7 +179,7 @@ export class VideosComponent implements OnInit, OnDestroy {
                     '@type': 'VideoObject',
                     name: v.titleKey,
                     thumbnailUrl: `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`,
-                    embedUrl: `https://www.youtube.com/embed/${v.id}`,
+                    embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`,
                     uploadDate: '2024-01-01',
                     publisher: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
                 },
