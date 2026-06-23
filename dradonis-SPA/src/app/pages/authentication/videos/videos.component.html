@@ -23,8 +23,9 @@
         <div class="featured-video-container" *ngIf="selectedVideo">
           <div class="featured-player">
             <iframe [src]="selectedVideo.embedUrl"
-              title="Dr. Adonis Video" frameborder="0" loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="Dr. Adonis Video" frameborder="0"
+              referrerpolicy="no-referrer-when-downgrade"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
           </div>
           <div class="featured-info">

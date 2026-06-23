@@ -11,7 +11,8 @@
             "*.webp",
             "*.ico",
             "*.woff",
-            "*.woff2"
+            "*.woff2",
+            "*.txt"
         ]
     },
     "routes": [
@@ -63,7 +64,6 @@
     ],
     "globalHeaders": {
         "X-Content-Type-Options": "nosniff",
-        "Content-Security-Policy": "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://youtube.com; frame-ancestors 'self'",
-        "Permissions-Policy": "accelerometer=*, autoplay=*, clipboard-write=*, encrypted-media=*, gyroscope=*, picture-in-picture=*"
+        "Referrer-Policy": "strict-origin-when-cross-origin"
     }
 }

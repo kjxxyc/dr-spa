@@ -99,10 +99,11 @@ export class VideosComponent implements OnInit, OnDestroy {
             { id: 'gfV0Ye73jS0', titleKey: 'videos.list.v63' }
         ];
 
+        const pageOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://dradonis.com';
         this.videos = videoIds.map(v => ({
             ...v,
             embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl(
-                `https://www.youtube-nocookie.com/embed/${v.id}?rel=0`
+                `https://www.youtube.com/embed/${v.id}?enablejsapi=0&origin=${pageOrigin}&rel=0`
             )
         }));
 
@@ -179,7 +180,7 @@ export class VideosComponent implements OnInit, OnDestroy {
                     '@type': 'VideoObject',
                     name: v.titleKey,
                     thumbnailUrl: `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`,
-                    embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`,
+                    embedUrl: `https://www.youtube.com/embed/${v.id}`,
                     uploadDate: '2024-01-01',
                     publisher: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
                 },
