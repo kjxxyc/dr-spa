@@ -819,4 +819,22 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/articles/quinoa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/articles/quinoa"/>
   </url>
+  <url>
+    <loc>https://my.dradonis.com/articles/the-power-of-peptides-fda-approved</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/articles/the-power-of-peptides-fda-approved"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/articles/the-power-of-peptides-fda-approved"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/articles/the-power-of-peptides-fda-approved"/>
+  </url>
+  <url>
+    <loc>https://my.dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://my.dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://my.dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://my.dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda"/>
+  </url>
 </urlset>

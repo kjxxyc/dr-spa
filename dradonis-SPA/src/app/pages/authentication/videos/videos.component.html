@@ -61,6 +61,15 @@
         </div>
         <h4>{{ video.titleKey | translate }}</h4>
       </div>
+      <!-- See Articles Card -->
+      <a routerLink="/articles" class="video-card see-articles-card">
+        <div class="video-thumbnail">
+          <div class="articles-placeholder">
+            <mat-icon class="large-icon">auto_stories</mat-icon>
+            <span class="view-articles-text">{{ 'videos.viewMoreArticles' | translate }}</span>
+          </div>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -73,7 +82,7 @@
           <p class="protocols-subtitle">{{ 'videos.protocolsSubtitle' | translate }}</p>
         </div>
         <a routerLink="/articles" class="btn-ver-mas-articulos">
-          {{ 'videos.viewMoreArticles' | translate }} <mat-icon>arrow_forward</mat-icon>
+          <mat-icon>auto_stories</mat-icon> {{ 'videos.viewMoreArticles' | translate }}
         </a>
       </div>
 

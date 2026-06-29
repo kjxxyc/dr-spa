@@ -128,4 +128,13 @@ export class CardecalComponent implements OnInit {
       this.activeServiceId = null;
     }
   }
+
+  getWhatsappLink(serviceId: string): string {
+    const base = 'https://api.whatsapp.com/send/?phone=13053355424&type=phone_number&app_absent=0&text=';
+    const title = this.translate.instant(`cardecal.services.${serviceId}.title`);
+    const text = this.lang === 'es' 
+      ? `Hola, necesito más información sobre el tratamiento/servicio de ${title}.`
+      : `Hello, I would like more information about the ${title} treatment/service.`;
+    return base + encodeURIComponent(text);
+  }
 }

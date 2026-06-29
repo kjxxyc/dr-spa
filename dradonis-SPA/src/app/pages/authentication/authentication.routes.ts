@@ -40,6 +40,14 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.MeetDoctorComponent
               ),
           },
+
+          {
+            path: 'sitemap',
+            loadComponent: () =>
+              import('./sitemap/sitemap.component').then(
+                (m) => m.SitemapComponent
+              ),
+          },
           {
             path: 'services',
             loadComponent: () =>

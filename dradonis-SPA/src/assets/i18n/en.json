@@ -9,7 +9,8 @@
       "bmi": "BMI CALCULATOR",
       "videos": "VIDEOS & MORE",
       "contact": "CONTACT",
-      "meetDoctor": "KNOW YOUR DOCTOR"
+      "meetDoctor": "KNOW YOUR DOCTOR",
+      "sitemap": "Sitemap"
     },
     "cta": "MAKE AN APPOINTMENT",
     "language": "ESPAÑOL"
@@ -222,7 +223,8 @@
     "bottomCta": {
       "title": "Ready to Transform Your Health?",
       "subtitle": "Schedule your consultation today and take the first step toward a healthier, more vibrant you."
-    }
+    },
+    "btnMoreServices": "More Services"
   },
   "videos": {
     "eyebrow": "Dr. Adonis Maiquez, MD",

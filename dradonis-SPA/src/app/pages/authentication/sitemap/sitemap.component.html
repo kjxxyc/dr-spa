@@ -1,0 +1,47 @@
+<div class="sitemap-page">
+  <div class="sitemap-header">
+    <div class="sitemap-header-content">
+      <h1>{{ lang === 'es' ? 'Mapa del Sitio' : 'Sitemap' }}</h1>
+      <p>{{ lang === 'es' ? 'Encuentra todas las secciones de nuestro sitio web.' : 'Find all the sections of our website.' }}</p>
+    </div>
+  </div>
+
+  <div class="sitemap-container">
+    <div class="sitemap-grid">
+      <!-- Main Pages -->
+      <section class="sitemap-section">
+        <h2>{{ lang === 'es' ? 'Páginas Principales' : 'Main Pages' }}</h2>
+        <ul>
+          <li><a routerLink="/landing">{{ 'header.home' | translate }}</a></li>
+          <li><a routerLink="/meet-doctor">{{ 'header.about' | translate }}</a></li>
+          <li><a routerLink="/services">{{ 'header.services' | translate }}</a></li>
+          <li><a routerLink="/shop">{{ 'header.shop' | translate }}</a></li>
+          <li><a routerLink="/tools">{{ 'header.tools' | translate }}</a></li>
+          <li><a routerLink="/videos">{{ 'header.videos' | translate }}</a></li>
+          <li><a routerLink="/articles">{{ 'header.articles' | translate }}</a></li>
+        </ul>
+      </section>
+
+      <!-- Services & Treatments -->
+      <section class="sitemap-section">
+        <h2>{{ lang === 'es' ? 'Tratamientos Destacados' : 'Featured Treatments' }}</h2>
+        <ul>
+          <li><a routerLink="/cardecal">Dr. Adonis Clinic (Cardecal)</a></li>
+          <li><a routerLink="/men-wellness">{{ 'servicesPromo.tadalafil.title' | translate }}</a></li>
+          <li><a routerLink="/vitamins-prescription">{{ 'servicesPromo.vitamins.title' | translate }}</a></li>
+          <li><a routerLink="/exosomes">Regenerative Exosomes</a></li>
+        </ul>
+      </section>
+
+      <!-- Articles -->
+      <section class="sitemap-section articles-section">
+        <h2>{{ lang === 'es' ? 'Todos los Artículos' : 'All Articles' }}</h2>
+        <ul>
+          <li *ngFor="let article of localizedArticles">
+            <a [routerLink]="['/articles', article.slug]">{{ article.title }}</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

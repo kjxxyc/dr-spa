@@ -9,7 +9,8 @@
       "bmi": "CALCULADORA DE IMC",
       "videos": "VIDEOS Y MÁS",
       "contact": "CONTACTO",
-      "meetDoctor": "CONOCE A TU DOCTOR"
+      "meetDoctor": "CONOCE A TU DOCTOR",
+      "sitemap": "Mapa del Sitio"
     },
     "cta": "HAGA UNA CITA",
     "language": "ENGLISH"
@@ -222,7 +223,8 @@
     "bottomCta": {
       "title": "¿Listo para Transformar su Salud?",
       "subtitle": "Programe su consulta hoy y dé el primer paso hacia un usted más saludable y vibrante."
-    }
+    },
+    "btnMoreServices": "Más Servicios"
   },
   "videos": {
     "eyebrow": "Dr. Adonis Maiquez, MD",

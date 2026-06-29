@@ -157,6 +157,18 @@ $breakpoint-md: 768px;
     }
   }
 
+  &.blue {
+    background: #0ea5e9;
+    color: $white;
+    box-shadow: 0 4px 16px rgba(#0ea5e9, 0.3);
+
+    &:hover {
+      background: #0284c7;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(#0ea5e9, 0.4);
+    }
+  }
+
   &.whatsapp {
     background: $whatsapp-green;
     color: $white;
@@ -214,6 +226,7 @@ $breakpoint-md: 768px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 1.5rem;
+  align-items: start;
 }
 
 .service-card {
