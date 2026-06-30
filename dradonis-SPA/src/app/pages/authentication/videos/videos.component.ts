@@ -33,6 +33,7 @@ export class VideosComponent implements OnInit, OnDestroy {
     private langSub?: Subscription;
     videos: VideoItem[] = [];
     selectedVideo: VideoItem | null = null;
+    currentLang = 'en';
 
     constructor(
         private sanitizer: DomSanitizer,
@@ -40,6 +41,7 @@ export class VideosComponent implements OnInit, OnDestroy {
         private translate: TranslateService,
         private seo: SeoService,
     ) {
+        this.currentLang = this.translate.currentLang || 'en';
         const videoIds = [
             // ── From old WordPress gallery (Page 1) ──
             { id: 'F-jWDkQGMRg', titleKey: 'videos.list.v11' },
@@ -130,7 +132,10 @@ export class VideosComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.applySeo();
-        this.langSub = this.translate.onLangChange.subscribe(() => this.applySeo());
+        this.langSub = this.translate.onLangChange.subscribe(e => {
+            this.currentLang = e.lang;
+            this.applySeo();
+        });
     }
 
     ngOnDestroy(): void {

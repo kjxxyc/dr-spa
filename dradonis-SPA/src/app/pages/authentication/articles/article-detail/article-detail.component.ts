@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ArticleService, Article } from '../../../../core/services/article.service';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { switchMap } from 'rxjs';
 
 import { SeoService } from '../../../../shared/seo/seo.service';
@@ -10,19 +12,25 @@ import { SeoService } from '../../../../shared/seo/seo.service';
 @Component({
   selector: 'app-article-detail',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatIconModule],
+  imports: [CommonModule, RouterModule, MatIconModule, MatDialogModule, TranslateModule],
   templateUrl: './article-detail.component.html',
   styleUrl: './article-detail.component.scss',
   encapsulation: ViewEncapsulation.None
 })
 export class ArticleDetailComponent implements OnInit {
   article?: Article;
+  lang = 'en';
 
   constructor(
     private route: ActivatedRoute,
     private articleService: ArticleService,
-    private seo: SeoService
-  ) {}
+    private seo: SeoService,
+    private dialog: MatDialog,
+    private translate: TranslateService
+  ) {
+    this.lang = this.translate.currentLang || 'en';
+    this.translate.onLangChange.subscribe(e => this.lang = e.lang);
+  }
 
   ngOnInit(): void {
     this.route.paramMap.pipe(
@@ -77,5 +85,14 @@ export class ArticleDetailComponent implements OnInit {
 
   ngOnDestroy(): void {
     this.seo.reset();
+  }
+
+  async openAppointment(): Promise<void> {
+    const { AppointmentDialogComponent } = await import('../../../../shared/appointment-dialog/appointment-dialog.component');
+    this.dialog.open(AppointmentDialogComponent, {
+      width: '600px',
+      maxWidth: '95vw',
+      autoFocus: false
+    });
   }
 }
