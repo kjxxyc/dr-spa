@@ -210,17 +210,21 @@ $background-light: #F7FAFC;
 // ===========================
 .fs-catalog-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 
-    @media (max-width: 968px) {
+    @media (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 700px) {
         grid-template-columns: 1fr;
     }
 }
 
 .fs-product-card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     background: white;
     border: 1px solid #e5e7eb;
@@ -240,18 +244,17 @@ $background-light: #F7FAFC;
         display: none;
     }
 
-    // Container where the Fullscript oEmbed script is injected at runtime (LEFT side).
+    // Container where the Fullscript oEmbed script is injected at runtime (TOP side).
     // The widget self-replaces this slot with a product card (image + name + price + Buy button).
-    // Fixed width so the widget renders compact and the doctor's description gets room on the right.
     .fs-embed-slot {
-        flex: 0 0 220px;
-        min-height: 280px;
+        flex: 0 0 auto;
+        min-height: 240px;
         padding: 0.75rem;
         display: flex;
         align-items: center;
         justify-content: center;
         background: #fafafa;
-        border-right: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
 
         // The Fullscript widget renders an iframe or its own DOM — let it fill the slot.
         > * {
@@ -259,33 +262,14 @@ $background-light: #F7FAFC;
         }
     }
 
-    // Doctor's custom description (RIGHT side, vertically centered).
+    // Doctor's custom description (BOTTOM side).
     .fs-desc {
         flex: 1 1 auto;
-        padding: 1.25rem 1.5rem;
+        padding: 1rem 1.25rem 1.25rem;
         font-size: 14px;
         color: $text-medium;
         line-height: 1.6;
         margin: 0;
-        display: flex;
-        align-items: center;
-    }
-
-    // Stack vertically on mobile / narrow viewports for readability.
-    @media (max-width: 768px) {
-        flex-direction: column;
-
-        .fs-embed-slot {
-            flex: 0 0 auto;
-            width: 100%;
-            border-right: none;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .fs-desc {
-            display: block;
-            padding: 1rem 1.25rem 1.25rem;
-        }
     }
 }
 

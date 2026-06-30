@@ -214,6 +214,7 @@ export class LandingComponent implements OnInit, OnDestroy {
                 offers: {
                     '@type': 'Offer',
                     url: 'https://vagustim.io/',
+                    price: '459.99',
                     priceCurrency: 'USD',
                     availability: 'https://schema.org/InStock',
                     seller: { '@type': 'Organization', name: 'Vagustim' },

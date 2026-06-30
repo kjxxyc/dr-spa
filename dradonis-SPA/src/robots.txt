@@ -1,16 +1,73 @@
+# =============================================================================
+# robots.txt — Dr. Adonis SPA (dradonis.com)
+# Best-practice configuration for Google Search Console & all major crawlers
+# Last updated: 2026-06-30
+# =============================================================================
+
+# ─── GLOBAL RULES (all bots) ────────────────────────────────────────────────
 User-agent: *
 Allow: /
 
-# Sitemap location
-# Active on my.dradonis.com (the Angular SPA).
-# When migrating the SPA back under dradonis.com root, change this URL
-# to https://dradonis.com/sitemap.xml and also re-deploy with the
-# updated sitemap.xml + SITE_ORIGIN_FALLBACK in seo.service.ts.
-Sitemap: https://my.dradonis.com/sitemap.xml
+# Allow crawling of all public pages, articles, services, shop, videos, etc.
+Allow: /landing
+Allow: /shop
+Allow: /services
+Allow: /meet-doctor
+Allow: /articles
+Allow: /videos
+Allow: /tools
+Allow: /cardecal
+Allow: /men-wellness
+Allow: /vitamins-prescription
+Allow: /sitemap
 
-# Crawl delay (optional, be nice to bots)
-Crawl-delay: 1
+# Allow assets needed for rendering (CSS, JS, images, fonts)
+Allow: /assets/
+Allow: /*.js$
+Allow: /*.css$
 
-# Disallow admin/internal paths
+# Block internal/admin paths (not public)
 Disallow: /api/
 Disallow: /admin/
+
+# Block query-string-only duplicates that waste crawl budget
+Disallow: /*?*fbclid
+Disallow: /*?*utm_
+Disallow: /*?*gclid
+
+# ─── GOOGLEBOT-SPECIFIC ─────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# ─── GOOGLEBOT IMAGE ────────────────────────────────────────────────────────
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# ─── BINGBOT ─────────────────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# ─── BLOCK AI SCRAPERS (protect content) ─────────────────────────────────────
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# ─── SITEMAPS ────────────────────────────────────────────────────────────────
+# Primary domain
+Sitemap: https://dradonis.com/sitemap.xml
+
+# Subdomain (current deployment — both resolve to the same SPA)
+Sitemap: https://my.dradonis.com/sitemap.xml
