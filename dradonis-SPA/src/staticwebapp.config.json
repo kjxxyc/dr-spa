@@ -17,6 +17,16 @@
     },
     "routes": [
         {
+            "route": "/home",
+            "redirect": "/",
+            "statusCode": 301
+        },
+        {
+            "route": "/shop-2",
+            "redirect": "/shop",
+            "statusCode": 301
+        },
+        {
             "route": "/landing/men-wellness",
             "redirect": "/men-wellness",
             "statusCode": 301

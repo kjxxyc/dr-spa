@@ -27,6 +27,8 @@ export interface FullscriptProduct {
     descriptionKey: string;
     /** Category used by the filter pills. */
     category: 'general' | 'antiaging' | 'gut' | 'menopause';
+    /** Price in USD — used exclusively in JSON-LD structured data for Google, not shown on the site. */
+    price: string;
 }
 
 @Component({
@@ -51,16 +53,16 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
      * since `store_slug: "dradonis"` is what attributes the commission to Dr. Adonis.
      */
     fullscriptProducts: FullscriptProduct[] = [
-        { id: '62134', name: 'PectaSol®', descriptionKey: 'shop.products.pectasol', category: 'general' },
-        { id: '72479', name: 'Mitochondrial NRG', descriptionKey: 'shop.products.mitochondrial', category: 'general' },
-        { id: '71334', name: 'Uric Acid Formula', descriptionKey: 'shop.products.uricAcid', category: 'general' },
-        { id: '72491', name: 'OmegAvail Hi-Po Fish Oil', descriptionKey: 'shop.products.omegavail', category: 'general' },
-        { id: '76696', name: 'Broccoli Seed Extract', descriptionKey: 'shop.products.broccoli', category: 'antiaging' },
-        { id: '72276', name: 'Complete Mineral Complex', descriptionKey: 'shop.products.mineral', category: 'general' },
-        { id: '89800', name: 'Telomere Pro', descriptionKey: 'shop.products.telomere', category: 'antiaging' },
-        { id: '71597', name: 'Iron Liquid', descriptionKey: 'shop.products.iron', category: 'general' },
-        { id: '105060', name: 'ProbioMax® Sb DF', descriptionKey: 'shop.products.probiomax', category: 'gut' },
-        { id: '72404', name: 'DIM-Evail™', descriptionKey: 'shop.products.dimEvail', category: 'menopause' }
+        { id: '62134', name: 'PectaSol®', descriptionKey: 'shop.products.pectasol', category: 'general', price: '39.99' },
+        { id: '72479', name: 'Mitochondrial NRG', descriptionKey: 'shop.products.mitochondrial', category: 'general', price: '29.99' },
+        { id: '71334', name: 'Uric Acid Formula', descriptionKey: 'shop.products.uricAcid', category: 'general', price: '19.99' },
+        { id: '72491', name: 'OmegAvail Hi-Po Fish Oil', descriptionKey: 'shop.products.omegavail', category: 'general', price: '19.99' },
+        { id: '76696', name: 'Broccoli Seed Extract', descriptionKey: 'shop.products.broccoli', category: 'antiaging', price: '19.99' },
+        { id: '72276', name: 'Complete Mineral Complex', descriptionKey: 'shop.products.mineral', category: 'general', price: '19.99' },
+        { id: '89800', name: 'Telomere Pro', descriptionKey: 'shop.products.telomere', category: 'antiaging', price: '49.99' },
+        { id: '71597', name: 'Iron Liquid', descriptionKey: 'shop.products.iron', category: 'general', price: '14.99' },
+        { id: '105060', name: 'ProbioMax® Sb DF', descriptionKey: 'shop.products.probiomax', category: 'gut', price: '29.99' },
+        { id: '72404', name: 'DIM-Evail™', descriptionKey: 'shop.products.dimEvail', category: 'menopause', price: '24.99' }
     ];
 
     @ViewChildren('embedSlot') embedSlots!: QueryList<ElementRef<HTMLDivElement>>;
@@ -138,6 +140,15 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
                         '@type': 'Product',
                         name: p.name,
                         category: 'Supplement',
+                        brand: { '@type': 'Brand', name: 'Designs for Health' },
+                        offers: {
+                            '@type': 'Offer',
+                            url,
+                            priceCurrency: 'USD',
+                            price: p.price,
+                            availability: 'https://schema.org/InStock',
+                            seller: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
+                        },
                     },
                     seller: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
                 })),

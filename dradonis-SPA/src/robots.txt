@@ -1,7 +1,7 @@
 # =============================================================================
 # robots.txt — Dr. Adonis SPA (dradonis.com)
 # Best-practice configuration for Google Search Console & all major crawlers
-# Last updated: 2026-06-30
+# Last updated: 2026-07-07
 # =============================================================================
 
 # ─── GLOBAL RULES (all bots) ────────────────────────────────────────────────
@@ -38,7 +38,6 @@ Disallow: /*?*gclid
 # ─── GOOGLEBOT-SPECIFIC ─────────────────────────────────────────────────────
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
 # ─── GOOGLEBOT IMAGE ────────────────────────────────────────────────────────
 User-agent: Googlebot-Image
@@ -47,7 +46,6 @@ Allow: /assets/images/
 # ─── BINGBOT ─────────────────────────────────────────────────────────────────
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 # ─── BLOCK AI SCRAPERS (protect content) ─────────────────────────────────────
 User-agent: GPTBot

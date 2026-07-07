@@ -210,11 +210,12 @@ export class LandingComponent implements OnInit, OnDestroy {
                 '@id': `${origin}/#vagustim`,
                 name: 'Vagustim - Vagus Nerve Stimulator',
                 description: 'Non-invasive vagus nerve stimulation device for wellness and relaxation',
+                image: `${origin}/assets/images/vagustim.webp`,
                 brand: { '@type': 'Brand', name: 'Vagustim' },
                 offers: {
                     '@type': 'Offer',
                     url: 'https://vagustim.io/',
-                    price: '459.99',
+                    price: '299.99',
                     priceCurrency: 'USD',
                     availability: 'https://schema.org/InStock',
                     seller: { '@type': 'Organization', name: 'Vagustim' },
