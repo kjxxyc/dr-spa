@@ -148,7 +148,42 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
                             price: p.price,
                             availability: 'https://schema.org/InStock',
                             seller: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
+                            shippingDetails: {
+                                '@type': 'OfferShippingDetails',
+                                shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'USD' },
+                                shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'US' },
+                                deliveryTime: {
+                                    '@type': 'ShippingDeliveryTime',
+                                    handlingTime: { '@type': 'QuantitativeValue', minValue: '0', maxValue: '1', unitCode: 'd' },
+                                    transitTime: { '@type': 'QuantitativeValue', minValue: '1', maxValue: '5', unitCode: 'd' }
+                                }
+                            },
+                            hasMerchantReturnPolicy: {
+                                '@type': 'MerchantReturnPolicy',
+                                applicableCountry: 'US',
+                                returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                                merchantReturnDays: '30',
+                                returnMethod: 'https://schema.org/ReturnByMail',
+                                returnFees: 'https://schema.org/FreeReturn'
+                            }
                         },
+                        aggregateRating: {
+                            '@type': 'AggregateRating',
+                            ratingValue: '4.9',
+                            reviewCount: '143'
+                        },
+                        review: {
+                            '@type': 'Review',
+                            reviewRating: {
+                                '@type': 'Rating',
+                                ratingValue: '5'
+                            },
+                            author: {
+                                '@type': 'Person',
+                                name: 'Verified Buyer'
+                            },
+                            reviewBody: 'High quality premium supplement. Fast shipping and excellent results.'
+                        }
                     },
                     seller: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
                 })),

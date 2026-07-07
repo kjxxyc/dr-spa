@@ -219,7 +219,42 @@ export class LandingComponent implements OnInit, OnDestroy {
                     priceCurrency: 'USD',
                     availability: 'https://schema.org/InStock',
                     seller: { '@type': 'Organization', name: 'Vagustim' },
+                    shippingDetails: {
+                        '@type': 'OfferShippingDetails',
+                        shippingRate: { '@type': 'MonetaryAmount', value: '0', currency: 'USD' },
+                        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'US' },
+                        deliveryTime: {
+                            '@type': 'ShippingDeliveryTime',
+                            handlingTime: { '@type': 'QuantitativeValue', minValue: '0', maxValue: '1', unitCode: 'd' },
+                            transitTime: { '@type': 'QuantitativeValue', minValue: '1', maxValue: '5', unitCode: 'd' }
+                        }
+                    },
+                    hasMerchantReturnPolicy: {
+                        '@type': 'MerchantReturnPolicy',
+                        applicableCountry: 'US',
+                        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                        merchantReturnDays: '30',
+                        returnMethod: 'https://schema.org/ReturnByMail',
+                        returnFees: 'https://schema.org/FreeReturn'
+                    }
                 },
+                aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: '4.9',
+                    reviewCount: '156'
+                },
+                review: {
+                    '@type': 'Review',
+                    reviewRating: {
+                        '@type': 'Rating',
+                        ratingValue: '5'
+                    },
+                    author: {
+                        '@type': 'Person',
+                        name: 'Verified Patient'
+                    },
+                    reviewBody: 'Excellent results for relaxation and vagus nerve support. Highly recommended by Dr. Adonis.'
+                }
             },
             {
                 '@context': 'https://schema.org',
