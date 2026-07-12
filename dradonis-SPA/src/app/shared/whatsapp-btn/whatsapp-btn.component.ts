@@ -5,7 +5,7 @@ import { filter } from 'rxjs/operators';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 /** Routes where the WhatsApp button must appear on the left side. */
-const LEFT_ROUTES = ['/men-wellness', '/vitamins-prescription', '/men-wellness/evaluation'];
+const LEFT_ROUTES = ['/men-wellness', '/vitamins-prescription', '/men-wellness/evaluation', '/makeanappointment'];
 
 @Component({
   selector: 'app-whatsapp-btn',
@@ -52,6 +52,8 @@ export class WhatsappBtnComponent implements OnInit {
       messageKey = 'whatsappMessages.vitamins';
     } else if (url.startsWith('/men-wellness')) {
       messageKey = 'whatsappMessages.menwellness';
+    } else if (url.startsWith('/makeanappointment')) {
+      messageKey = 'whatsappMessages.appointment';
     }
 
     const text = this.translate.instant(messageKey);

@@ -26,6 +26,8 @@ Customer-facing website for **Dr. Adonis Maiquez, MD**, a functional and regener
 | `/landing/videos` | `videos` | YouTube embeds (lazy-loaded) + Google Reviews |
 | `/landing/shop` | `shop` | 10 Fullscript supplement product cards (oEmbed, lazy via IntersectionObserver) |
 | `/landing/tools/bmi-calculator` | `bmi-calculator` | Free BMI tool with medical context |
+| `/tools/tmb-calculator` | `bmr-calculator` | Free BMR (TMB) and TDEE calculator tool |
+| `/makeanappointment` | `make-appointment` | Standalone appointment booking page for social media campaigns |
 | `/men-wellness` | `men-wellness-contact` | ED consultation entry — bilingual landing for the **tadalafil-cialis campaign** |
 | `/men-wellness/evaluation` | `tadalafil-evaluation` | Multi-step medical evaluation + PayPal/Clover payment |
 | `/vitamins-prescription` | `vitamins-prescription` | Personalized vitamin protocol intake form |
@@ -58,7 +60,7 @@ Legacy `/landing/men-wellness*` and `/landing/vitamins-prescription` paths **301
 - **TikTok Pixel** — only loaded inside `men-wellness-contact.component` for the tadalafil-cialis campaign (not global)
 - **Fullscript oEmbed** — 10 product cards on `/shop`, injected via `IntersectionObserver` when each card nears the viewport
 - **Google Maps embed** on the homepage testimonials — wrapped in Angular 20 `@defer (on viewport; prefetch on idle)` so its ~350 KiB of JS never touches the critical path
-- **WhatsApp floating button** — load-bearing conversion path (`https://api.whatsapp.com/send/?phone=13053355424...`). **Must not break** under any refactor; hidden on `/men-wellness*` and `/vitamins-prescription*` routes via `whatsapp-btn.component.ts → HIDDEN_ROUTES`
+- **WhatsApp floating button** — load-bearing conversion path (`https://api.whatsapp.com/send/?phone=13053355424...`). **Must not break** under any refactor. Automatically shifts to the left side and uses custom pre-filled messages on specific landing routes (`/men-wellness*`, `/vitamins-prescription*`, `/makeanappointment`) via `whatsapp-btn.component.ts → LEFT_ROUTES`.
 
 ---
 

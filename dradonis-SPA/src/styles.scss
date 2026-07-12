@@ -619,3 +619,48 @@ body {
     background: rgba(17, 34, 64, 0.55);
     backdrop-filter: blur(4px);
 }
+/* ─── DEVELOPER CREDIT FOOTER ─── */
+.developer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 1rem 1.5rem;
+  background: #111827;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  width: 100%;
+  margin-top: auto;
+
+  span {
+      color: rgba(255, 255, 255, 0.75);
+  }
+
+  a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+
+      &:hover {
+          color: #0A66C2;
+
+          .linkedin-icon {
+              color: #0A66C2;
+              transform: scale(1.15);
+          }
+      }
+  }
+
+  .linkedin-icon {
+      width: 14px;
+      height: 14px;
+      color: rgba(255, 255, 255, 0.55);
+      transition: color 0.3s ease, transform 0.3s ease;
+  }
+}

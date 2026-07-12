@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { TranslateModule } from '@ngx-translate/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -234,7 +235,8 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         MatCheckboxModule,
         MatSnackBarModule,
         MatExpansionModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        TranslateModule
     ],
     templateUrl: './tadalafil-evaluation.component.html',
     styleUrls: ['./tadalafil-evaluation.component.scss'],

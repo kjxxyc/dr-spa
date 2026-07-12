@@ -7,6 +7,7 @@
       "services": "SERVICES",
       "tools": "TOOLS",
       "bmi": "BMI CALCULATOR",
+      "bmr": "BMR CALCULATOR",
       "videos": "VIDEOS & MORE",
       "contact": "CONTACT",
       "meetDoctor": "KNOW YOUR DOCTOR",
@@ -65,6 +66,45 @@
     },
     "ctaTitle": "Ready to take action?",
     "ctaText": "Schedule a consultation with Dr. Adonis to discuss your results and personalized health plan.",
+    "ctaButton": "MAKE AN APPOINTMENT"
+  },
+  "bmr": {
+    "pageTitle": "BMR Calculator",
+    "pageSubtitle": "Calculate your Basal Metabolic Rate (BMR) and discover how many calories you need per day.",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "yourAge": "YOUR AGE",
+    "yourWeight": "YOUR WEIGHT",
+    "yourHeight": "YOUR HEIGHT",
+    "activityLevel": "Activity Level",
+    "activity": {
+      "sedentary": "Sedentary",
+      "sedentaryDesc": "Little to no exercise",
+      "light": "Lightly active",
+      "lightDesc": "Light exercise 1-3 days a week",
+      "moderate": "Moderately active",
+      "moderateDesc": "Moderate exercise 3-5 days a week",
+      "active": "Very active",
+      "activeDesc": "Hard exercise 6-7 days a week",
+      "extreme": "Extremely active",
+      "extremeDesc": "Very hard exercise or physical job"
+    },
+    "formulaLabel": "BASAL METABOLIC RATE FORMULA",
+    "formula": {
+      "mifflin": "Mifflin-St Jeor (Recommended)",
+      "harrisOriginal": "Harris-Benedict",
+      "harrisRevised": "Harris-Benedict revised",
+      "katch": "Katch-McArdle",
+      "schofield": "Schofield"
+    },
+    "bodyFat": "BODY FAT PERCENTAGE",
+    "calculateBtn": "Calculate your daily calories",
+    "yourTdee": "YOUR DAILY CALORIES",
+    "tdeeSubtitle": "Maintenance calories",
+    "yourBmr": "Your BMR (resting) is:",
+    "ctaTitle": "Ready to take action?",
+    "ctaText": "Schedule a consultation with Dr. Adonis to get a personalized health and nutrition plan.",
     "ctaButton": "MAKE AN APPOINTMENT"
   },
   "servicesPromo": {
@@ -143,6 +183,10 @@
     "scrollHint": "specialized services below",
     "listTitle": "Complete List of Services",
     "list": {
+      "telemedicine": {
+        "title": "Telemedicine & Virtual Care",
+        "description": "Receive top-tier Functional & Regenerative Medicine care from anywhere in the world. Comprehensive medical evaluations, lab reviews, and treatment plans completely online from the comfort of your home."
+      },
       "brainProtocol": {
         "title": "The Brain Protocol® — Alzheimer's & Cognitive Decline",
         "description": "SPECIALIZED CARE FOR ALZHEIMER'S DISEASE AND MILD COGNITIVE DECLINE. Globally, hundreds of millions are affected by neurological disorders. In the United States, Alzheimer's disease alone affects an estimated 5.7 million individuals, with statistics trending upward. Mild Cognitive Decline — forgetfulness, language and thinking difficulties beyond normal aging — afflicts millions more.\n\nDr. Adonis uses The Brain Protocol®, his proprietary comprehensive and multivariable approach customized to each patient's needs — not only to prevent neurological diseases like Alzheimer's and Parkinson's, but also to help regenerate the brain.\n\nAs a board-certified neurosurgeon using functional medicine to deliver complete physical, mental, and spiritual wellness, Dr. Adonis is one of the few specialists in Miami combining cutting-edge neuroscience with root-cause healing. Book an appointment today to keep your brain healthy and agile."
@@ -357,7 +401,7 @@
         "btn": "More information"
       },
       "video": {
-        "title": "Video Consultation",
+        "title": "Telemedicine (Video Consultation)",
         "summary": "Convenient and private medical consultations with Dr. Adonis from the comfort of your home.",
         "btn": "Make a consultation"
       },
@@ -370,7 +414,10 @@
   },
   "appointmentModal": {
     "title": "MAKE AN APPOINTMENT",
-    "subtitle": "To schedule an appointment, call our office at <strong style='color: #ea580c;'>305-204-7816</strong> / WhatsApp <a href='https://api.whatsapp.com/send/?phone=13053355424&text=Hello%2C+I+would+like+more+information&type=phone_number&app_absent=0' target='_blank' rel='noopener' style='color: #ea580c; font-weight: 700; text-decoration: none;'>+13053355424</a>. You can also fill the form below, and we'll contact you to book your appointment.",
+    "subtitle": "To schedule an appointment, call our office at <strong style='color: #ea580c;'>305-204-7816</strong>. You can also fill the form below, and we'll contact you to book your appointment.",
+    "appointmentType": "Appointment Type",
+    "inPerson": "In-Person",
+    "telemedicine": "Telemedicine",
     "requiredMsg": "Fields marked with an * are required",
     "fullName": "Full Name",
     "email": "Email",
@@ -382,6 +429,19 @@
     "success": "Your appointment request has been sent!",
     "error": "Failed to send request. Please try again."
   },
+  "appointmentPage": {
+    "specialty": "Functional & Regenerative Medicine Specialist",
+    "badge1": "Board Certified",
+    "badge2": "15+ Years Experience",
+    "guarantee": "Your information is 100% private and secure. We will never share your data with third parties.",
+    "formSubtitle": "Fill out the form below and our team will contact you to schedule your visit.",
+    "requiredField": "This field is required",
+    "validEmail": "Please enter a valid email address",
+    "reasonPlaceholder": "Briefly describe what you need help with...",
+    "successDetail": "We will contact you shortly to confirm your appointment. You can also reach us at 305-204-7816.",
+    "backHome": "Back to Homepage",
+    "viewArticles": "View Articles"
+  },
   "footer": {
     "developer": "Developed by"
   },
@@ -392,6 +452,7 @@
     "cardecal": "Hello, I saw your cardecal ad and I am interested in a health test",
     "videos": "Hello, I saw your videos and would like more information",
     "vitamins": "Hello, I am interested in a vitamin prescription",
-    "menwellness": "Hello, I am interested in buying tadalafil-cialis"
+    "menwellness": "Hello, I am interested in buying tadalafil-cialis",
+    "appointment": "Hello, I would like to schedule an appointment with Dr. Adonis"
   }
 }

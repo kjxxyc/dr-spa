@@ -73,6 +73,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos"/>
   </url>
   <url>
+    <loc>https://dradonis.com/makeanappointment</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/makeanappointment"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/makeanappointment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/makeanappointment"/>
+  </url>
+  <url>
     <loc>https://dradonis.com/tools/bmi-calculator</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -80,6 +89,15 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/tools/bmi-calculator"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/tools/bmi-calculator"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/tools/bmi-calculator"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/tools/tmb-calculator</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/tools/tmb-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/tools/tmb-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/tools/tmb-calculator"/>
   </url>
   <url>
     <loc>https://dradonis.com/articles</loc>
@@ -836,5 +854,14 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/makeanappointment</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/makeanappointment"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/makeanappointment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/makeanappointment"/>
   </url>
 </urlset>

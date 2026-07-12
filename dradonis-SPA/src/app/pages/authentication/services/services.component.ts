@@ -44,6 +44,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
     // NOTE: icons are restricted to the project's material-icons-subset.woff2
     // Adding new icons requires regenerating the subset font.
     services: ServiceItem[] = [
+        { id: 'telemedicine',        icon: 'verified',           gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', featured: true },
         { id: 'brainProtocol',       icon: 'workspace_premium',  gradient: 'linear-gradient(135deg, #6366F1 0%, #4338CA 100%)', featured: true },
         { id: 'brainHealth',         icon: 'school',             gradient: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', featured: true },
         { id: 'specializedLabs',     icon: 'medical_information', gradient: 'linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)', featured: true },
@@ -94,13 +95,13 @@ export class ServicesComponent implements OnInit, OnDestroy {
         const config = isEs
             ? {
                 title: 'Servicios de Medicina Funcional Miami | Hormonas, Péptidos, Pérdida de Peso',
-                description: 'Terapia hormonal bio-idéntica, testosterona, péptidos, GLP-1, menopausia, pérdida de peso e IV vitaminas en Miami. Medicina funcional personalizada por el Dr. Adonis Maiquez.',
-                keywords: 'medicina funcional Miami, terapia hormonal Miami, testosterona Miami, péptidos Miami, GLP-1 Miami, menopausia Miami, pérdida de peso Miami, IV vitaminas Miami, Dr. Adonis Maiquez',
+                description: 'Terapia hormonal bio-idéntica, testosterona, péptidos, GLP-1, menopausia, pérdida de peso, teleconsulta y telemedicina en Miami. Medicina funcional personalizada por el Dr. Adonis Maiquez.',
+                keywords: 'medicina funcional Miami, telemedicina, teleconsulta, terapia hormonal Miami, testosterona Miami, péptidos Miami, GLP-1 Miami, menopausia Miami, pérdida de peso Miami, IV vitaminas Miami, Dr. Adonis Maiquez',
             }
             : {
                 title: 'Functional Medicine Services Miami | Hormones, Peptides, Weight Loss',
-                description: 'Bio-identical hormone therapy, testosterone, peptides, GLP-1, menopause, weight loss, and IV vitamin therapy in Miami. Personalized functional medicine by Dr. Adonis Maiquez.',
-                keywords: 'functional medicine Miami, hormone therapy Miami, testosterone Miami, peptide therapy Miami, GLP-1 Miami, menopause Miami, weight loss Miami, IV vitamins Miami, Dr. Adonis Maiquez',
+                description: 'Bio-identical hormone therapy, testosterone, peptides, GLP-1, menopause, weight loss, telehealth and telemedicine in Miami. Personalized functional medicine by Dr. Adonis Maiquez.',
+                keywords: 'functional medicine Miami, telemedicine, telehealth, online doctor consultation, hormone therapy Miami, testosterone Miami, peptide therapy Miami, GLP-1 Miami, menopause Miami, weight loss Miami, IV vitamins Miami, Dr. Adonis Maiquez',
             };
 
         this.seo.apply({

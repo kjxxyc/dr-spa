@@ -36,7 +36,7 @@ export class AppointmentDialogComponent implements OnInit {
   private templateId = 'template_lgv92j9';
   private publicKey = 'vsVqtrledUCs4qrDT';
   // "pones el que va a quedar en producción que sería el de: aymee@dradonis.com"
-  private targetEmail = 'aymee@dradonis.com';
+  private targetEmail = 'aymee@dradonis.com, solangie@dradonis.com';
 
   constructor(
     private fb: FormBuilder,
@@ -51,6 +51,7 @@ export class AppointmentDialogComponent implements OnInit {
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
       phone: ['', [Validators.required, Validators.pattern(/^[0-9]{7,15}$/)]],
+      appointmentType: ['inPerson', Validators.required],
       reason: ['', Validators.required],
     });
   }
@@ -73,12 +74,14 @@ export class AppointmentDialogComponent implements OnInit {
 
     this.isSubmitting = true;
     const formValue = this.appointmentForm.value;
+    const typeLabel = formValue.appointmentType === 'telemedicine' ? 'TELECONSULTA' : 'PRESENCIAL';
+    const finalReason = `${typeLabel} - ${formValue.reason}`;
 
-    const message = `Full Name:\t${formValue.fullName}\nEmail:\t${formValue.email}\nPhone Number:\t${formValue.phone}\nReason for Appointment: ${formValue.reason}`;
+    const message = `Full Name:\t${formValue.fullName}\nEmail:\t${formValue.email}\nPhone Number:\t${formValue.phone}\nReason for Appointment: ${finalReason}`;
 
     emailjs.send(this.serviceId, this.templateId, {
       client_email: this.targetEmail,
-      client_subject: 'GENERAL APPOINTMENT',
+      client_subject: `GENERAL APPOINTMENT ${typeLabel}`,
       client_message: message,
     }, this.publicKey)
       .then(() => {

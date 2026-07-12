@@ -19,6 +19,7 @@ Allow: /tools
 Allow: /cardecal
 Allow: /men-wellness
 Allow: /vitamins-prescription
+Allow: /makeanappointment
 Allow: /sitemap
 
 # Allow assets needed for rendering (CSS, JS, images, fonts)

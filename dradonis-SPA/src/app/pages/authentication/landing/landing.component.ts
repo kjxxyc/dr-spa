@@ -95,13 +95,13 @@ export class LandingComponent implements OnInit, OnDestroy {
         const config = isEs
             ? {
                 title: 'Dr. Adonis Maiquez, MD | Medicina Funcional y Regenerativa Miami',
-                description: 'Médico experto en medicina funcional y regenerativa en Miami. Tratamiento de enfermedades crónicas, terapia hormonal, péptidos, pérdida de peso y antienvejecimiento. Atendemos Miami, Coral Gables, Aventura, Doral y todo el sur de Florida.',
-                keywords: 'medicina funcional Miami, medicina regenerativa Miami, Dr. Adonis Maiquez, terapia hormonal Miami, péptidos Miami, antienvejecimiento Miami, longevidad Miami, medicina integrativa Miami, médico medicina funcional Florida',
+                description: 'Médico experto en medicina funcional y regenerativa en Miami. Tratamiento de enfermedades crónicas, terapia hormonal, péptidos, pérdida de peso, teleconsulta y antienvejecimiento. Atendemos Miami y mediante telemedicina a todo el mundo.',
+                keywords: 'medicina funcional Miami, telemedicina, teleconsulta, medicina regenerativa Miami, Dr. Adonis Maiquez, terapia hormonal Miami, péptidos Miami, antienvejecimiento Miami, longevidad Miami, medicina integrativa Miami, médico medicina funcional Florida',
             }
             : {
                 title: 'Dr. Adonis Maiquez, MD | Functional & Regenerative Medicine Miami',
-                description: "Miami's leading functional medicine expert. Root-cause treatment for chronic disease, hormone optimization, peptides, weight loss & anti-aging. Serving Miami, Coral Gables, Aventura, Doral & all of South Florida.",
-                keywords: 'functional medicine Miami, regenerative medicine Miami, Dr. Adonis Maiquez, hormone therapy Miami, peptide therapy Miami, anti-aging doctor Miami, longevity medicine Miami, integrative medicine Miami, functional medicine doctor Florida',
+                description: "Miami's leading functional medicine expert. Root-cause treatment for chronic disease, hormone optimization, peptides, weight loss, telehealth & anti-aging. Serving South Florida & globally via telemedicine.",
+                keywords: 'functional medicine Miami, telemedicine, telehealth, online doctor consultation, regenerative medicine Miami, Dr. Adonis Maiquez, hormone therapy Miami, peptide therapy Miami, anti-aging doctor Miami, longevity medicine Miami, integrative medicine Miami, functional medicine doctor Florida',
             };
 
         this.seo.apply({

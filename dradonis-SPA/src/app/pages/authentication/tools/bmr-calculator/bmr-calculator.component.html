@@ -1,0 +1,207 @@
+<div class="bmi-page">
+  <!-- Page header -->
+  <header class="bmi-header">
+    <h1 class="bmi-title">{{ 'bmr.pageTitle' | translate }}</h1>
+    <p class="bmi-subtitle">{{ 'bmr.pageSubtitle' | translate }}</p>
+  </header>
+
+  <form [formGroup]="form" class="bmi-card">
+    <div class="bmi-grid">
+      <!-- ==================== LEFT: CONTROLS ==================== -->
+      <section class="bmi-controls">
+        <!-- Formula selector -->
+        <div class="bmi-section">
+          <label class="bmi-section-label">{{ 'bmr.formulaLabel' | translate }}</label>
+          <div class="bmi-input-row">
+            <select formControlName="formula" class="bmi-select">
+              <option value="mifflin">{{ 'bmr.formula.mifflin' | translate }}</option>
+              <option value="harrisOriginal">{{ 'bmr.formula.harrisOriginal' | translate }}</option>
+              <option value="harrisRevised">{{ 'bmr.formula.harrisRevised' | translate }}</option>
+              <option value="katch">{{ 'bmr.formula.katch' | translate }}</option>
+              <option value="schofield">{{ 'bmr.formula.schofield' | translate }}</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Gender selector -->
+        <div class="bmi-section bmi-gender">
+          <label class="bmi-section-label">{{ 'bmr.gender' | translate }}</label>
+          <div class="gender-avatars">
+            <button type="button"
+                    class="gender-avatar"
+                    [class.selected]="isGender('male')"
+                    (click)="selectGender('male')"
+                    [attr.aria-label]="'bmr.male' | translate"
+                    [attr.aria-pressed]="isGender('male')">
+              <mat-icon class="gender-icon" aria-hidden="true">man</mat-icon>
+              <span class="gender-label">{{ 'bmr.male' | translate }}</span>
+            </button>
+            <button type="button"
+                    class="gender-avatar"
+                    [class.selected]="isGender('female')"
+                    (click)="selectGender('female')"
+                    [attr.aria-label]="'bmr.female' | translate"
+                    [attr.aria-pressed]="isGender('female')">
+              <mat-icon class="gender-icon" aria-hidden="true">woman</mat-icon>
+              <span class="gender-label">{{ 'bmr.female' | translate }}</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Age control -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'bmr.yourAge' | translate }}</label>
+          </div>
+          <div class="bmi-input-row">
+            <input type="number"
+                   class="bmi-number-input"
+                   [value]="form.value.age"
+                   (input)="updateAge($any($event.target).value)"
+                   [min]="ageMin" [max]="ageMax" step="1"
+                   inputmode="numeric"
+                   [attr.aria-label]="'bmr.yourAge' | translate">
+            <span class="bmi-unit-suffix">años</span>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.age"
+                 (input)="updateAge($any($event.target).value)"
+                 [min]="ageMin" [max]="ageMax" step="1"
+                 [attr.aria-label]="'bmr.yourAge' | translate">
+        </div>
+
+        <!-- Weight control -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'bmr.yourWeight' | translate }}</label>
+            <mat-button-toggle-group formControlName="weightSystem"
+                                     class="unit-toggle-group"
+                                     aria-label="Weight unit">
+              <mat-button-toggle value="metric">kg</mat-button-toggle>
+              <mat-button-toggle value="imperial">lb</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+          <div class="bmi-input-row">
+            <input type="number"
+                   class="bmi-number-input"
+                   [value]="form.value.weight"
+                   (input)="updateWeight($any($event.target).value)"
+                   [min]="weightMin" [max]="weightMax" step="0.1"
+                   inputmode="decimal"
+                   [attr.aria-label]="'bmr.yourWeight' | translate">
+            <span class="bmi-unit-suffix">{{ weightUnit }}</span>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.weight"
+                 (input)="updateWeight($any($event.target).value)"
+                 [min]="weightMin" [max]="weightMax" step="0.1"
+                 [attr.aria-label]="'bmr.yourWeight' | translate">
+        </div>
+
+        <!-- Height control -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'bmr.yourHeight' | translate }}</label>
+            <mat-button-toggle-group formControlName="heightSystem"
+                                     class="unit-toggle-group"
+                                     aria-label="Height unit">
+              <mat-button-toggle value="metric">cm</mat-button-toggle>
+              <mat-button-toggle value="imperial">in</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+          <div class="bmi-input-row">
+            <input type="number"
+                   class="bmi-number-input"
+                   [value]="form.value.height"
+                   (input)="updateHeight($any($event.target).value)"
+                   [min]="heightMin" [max]="heightMax" step="0.1"
+                   inputmode="decimal"
+                   [attr.aria-label]="'bmr.yourHeight' | translate">
+            <span class="bmi-unit-suffix">{{ heightUnit }}</span>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.height"
+                 (input)="updateHeight($any($event.target).value)"
+                 [min]="heightMin" [max]="heightMax" step="0.1"
+                 [attr.aria-label]="'bmr.yourHeight' | translate">
+        </div>
+
+        <!-- Body Fat % control (Only for Katch-McArdle) -->
+        <div class="bmi-section" *ngIf="form.value.formula === 'katch'">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'bmr.bodyFat' | translate }}</label>
+          </div>
+          <div class="bmi-input-row">
+            <input type="number"
+                   class="bmi-number-input"
+                   [value]="form.value.bodyFat"
+                   (input)="updateBodyFat($any($event.target).value)"
+                   [min]="bodyFatMin" [max]="bodyFatMax" step="1"
+                   inputmode="numeric"
+                   [attr.aria-label]="'bmr.bodyFat' | translate">
+            <span class="bmi-unit-suffix">%</span>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.bodyFat"
+                 (input)="updateBodyFat($any($event.target).value)"
+                 [min]="bodyFatMin" [max]="bodyFatMax" step="1"
+                 [attr.aria-label]="'bmr.bodyFat' | translate">
+        </div>
+      </section>
+
+      <!-- ==================== CENTER: ACTIVITY ==================== -->
+      <section class="bmi-activity">
+        <!-- Activity Level control -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'bmr.activityLevel' | translate }}</label>
+          </div>
+          <div class="activity-radio-group">
+            <label *ngFor="let act of activities" 
+                   class="activity-radio-card" 
+                   [class.selected]="form.value.activityLevel === act.key">
+              <input type="radio" 
+                     name="activityLevel" 
+                     [value]="act.key" 
+                     formControlName="activityLevel"
+                     (change)="setActivityLevel(act.key)">
+              <div class="activity-radio-content">
+                <span class="activity-title">{{ ('bmr.activity.' + act.key) | translate }}</span>
+                <span class="activity-desc">{{ ('bmr.activity.' + act.key + 'Desc') | translate }}</span>
+              </div>
+              <div class="radio-indicator"></div>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== RIGHT: RESULT ==================== -->
+      <aside class="bmi-result">
+        <div class="bmi-result-label">{{ 'bmr.yourTdee' | translate }}</div>
+        <div class="bmi-value tdee-value color-medium">{{ tdee }}</div>
+        <div class="bmi-subtitle-result">{{ 'bmr.tdeeSubtitle' | translate }}</div>
+
+        <dl class="bmi-result-meta mt-4">
+          <div class="bmi-result-row">
+            <dt>{{ 'bmr.yourBmr' | translate }}</dt>
+            <dd><strong>{{ bmr }} kcal</strong></dd>
+          </div>
+        </dl>
+
+        <!-- Appointment CTA -->
+        <div class="bmi-cta">
+          <h3 class="bmi-cta-title">{{ 'bmr.ctaTitle' | translate }}</h3>
+          <p class="bmi-cta-text">{{ 'bmr.ctaText' | translate }}</p>
+          <button mat-raised-button color="primary" type="button" class="bmi-cta-btn" (click)="openAppointment()">
+            <mat-icon>event</mat-icon>
+            {{ 'bmr.ctaButton' | translate }}
+          </button>
+        </div>
+      </aside>
+    </div>
+  </form>
+</div>

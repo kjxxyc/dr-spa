@@ -12,6 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { TranslateModule } from '@ngx-translate/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule, MatStepper } from '@angular/material/stepper';
@@ -155,6 +156,7 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     MatSelectModule,
     MatRadioModule,
     MatSnackBarModule,
+    TranslateModule
   ],
   templateUrl: './vitamins-prescription.component.html',
   styleUrls: ['./vitamins-prescription.component.scss'],

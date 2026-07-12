@@ -83,6 +83,13 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.BmiCalculatorComponent
               ),
           },
+          {
+            path: 'tools/tmb-calculator',
+            loadComponent: () =>
+              import('./tools/bmr-calculator/bmr-calculator.component').then(
+                (m) => m.BmrCalculatorComponent
+              ),
+          },
         ],
       },
     ],

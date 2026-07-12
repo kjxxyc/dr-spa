@@ -1,0 +1,584 @@
+// Import Spike Admin theme variables (font, layout, colors, Material 3 tokens).
+@use '../../../../../assets/scss/variables' as *;
+
+:host {
+    display: block;
+    font-family: $font-family;
+    color: $text-color;
+}
+
+// ============================================================
+// PAGE
+// ============================================================
+.bmi-page {
+    padding: 20px $layout-padding;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bmi-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .bmi-title {
+        font-family: $font-family;
+        font-size: 30px;
+        font-weight: 800;
+        margin: 0 0 6px;
+        color: $text-color;
+    }
+
+    .bmi-subtitle {
+        font-size: 14px;
+        color: $text-color;
+        opacity: 0.7;
+        margin: 0;
+        max-width: 540px;
+        margin-inline: auto;
+    }
+}
+
+// ============================================================
+// CARD
+// ============================================================
+.bmi-card {
+    background: $white;
+    border: 1px solid $borderColor;
+    border-radius: $border-radius;
+    padding: 22px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.bmi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 0.9fr;
+    gap: 22px;
+    align-items: stretch;
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// ============================================================
+// CONTROLS (left side)
+// ============================================================
+.bmi-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.bmi-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bmi-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $text-color;
+    opacity: 0.7;
+}
+
+// ----------- Gender avatars (centered, with horizontal icon+label) -----------
+.bmi-gender .gender-avatars {
+    display: flex;
+    gap: 14px;
+    justify-content: flex-start;
+}
+
+.gender-avatar {
+    flex: 1;
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+    padding: 10px 14px;
+    border: 2px solid transparent;
+    border-radius: $border-radius;
+    background: $light;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    font-family: $font-family;
+
+    .gender-icon {
+        // Material icons must be sized via width/height/font-size all together
+        width: 32px;
+        height: 32px;
+        font-size: 32px;
+        line-height: 32px;
+        color: $text-color;
+        opacity: 0.65;
+        display: block;
+        margin: 0 auto; // perfectly horizontally centered inside the button
+    }
+
+    .gender-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: $text-color;
+        text-align: center;
+        width: 100%;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &.selected {
+        border-color: $primary;
+        background: $light-primary;
+
+        .gender-icon {
+            color: $primary;
+            opacity: 1;
+        }
+    }
+}
+
+// ----------- Number input + unit toggle (all on the same row) -----------
+.bmi-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+// The textbox itself (pill-shaped, native spinner arrows preserved)
+.bmi-number-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 7px 14px;
+    border: 1.5px solid $borderformColor;
+    border-radius: 999px;
+    background: $white;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 700;
+    color: $text-color;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 3px $light-primary;
+    }
+}
+
+.bmi-select {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 7px 14px;
+    border: 1.5px solid $borderformColor;
+    border-radius: 8px;
+    background: $white;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-color;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px top 50%;
+    background-size: 10px auto;
+    cursor: pointer;
+
+    &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 3px $light-primary;
+    }
+}
+
+// kg/lb suffix label between input and toggle
+.bmi-unit-suffix {
+    font-size: 12px;
+    font-weight: 700;
+    color: $text-color;
+    opacity: 0.6;
+    pointer-events: none;
+    min-width: 18px;
+    text-align: center;
+}
+
+// Section header — label on the left, unit segmented control on the right.
+.bmi-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+}
+
+// Segmented control for kg ↔ lb and cm ↔ in.
+// Implemented with Material's mat-button-toggle-group so the active option
+// is unmistakable as a toggle (replaces the old single-button "swap" UI that
+// confused the client — they couldn't tell it was interactive).
+.unit-toggle-group {
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1.5px solid $primary;
+    font-family: $font-family;
+    height: 30px;
+    background: $white;
+
+    ::ng-deep .mat-button-toggle {
+        background: transparent;
+        border: none;
+        color: $primary;
+        transition: background 0.2s, color 0.2s;
+
+        .mat-button-toggle-label-content {
+            line-height: 28px;
+            padding: 0 16px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background: $light-primary;
+        }
+    }
+
+    ::ng-deep .mat-button-toggle-checked {
+        background: $primary;
+
+        .mat-button-toggle-label-content {
+            color: $white;
+        }
+
+        &:hover {
+            background: $primary;
+        }
+    }
+
+    // Hide the default Material focus overlay / ripple borders that look ugly inside a pill.
+    ::ng-deep .mat-button-toggle-focus-overlay {
+        display: none;
+    }
+
+    ::ng-deep .mat-button-toggle + .mat-button-toggle {
+        border-left: 1px solid $primary;
+    }
+}
+
+// ----------- Range slider (cross-browser custom styling) -----------
+.bmi-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 999px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 6px;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: $primary;
+        border: 3px solid $white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+        cursor: pointer;
+        transition: transform 0.15s;
+    }
+
+    &::-webkit-slider-thumb:hover {
+        transform: scale(1.15);
+    }
+
+    &::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: $primary;
+        border: 3px solid $white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+        cursor: pointer;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $primary;
+        outline-offset: 4px;
+    }
+}
+
+// ============================================================
+// RESULT (right side)
+// ============================================================
+.bmi-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: $light;
+    border-radius: $border-radius;
+    text-align: center;
+
+    .bmi-result-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $text-color;
+        opacity: 0.7;
+        margin-bottom: 8px;
+    }
+
+    .bmi-value {
+        font-family: $font-family;
+        font-size: 70px;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 14px;
+        transition: color 0.25s;
+
+        &.color-low      { color: $success; }
+        &.color-medium   { color: $warning; }
+        &.color-high     { color: #f59e0b; }
+        &.color-veryHigh { color: #ea580c; }
+        &.color-extreme  { color: $error; }
+    }
+
+    .bmi-result-meta {
+        margin: 0;
+        font-size: 13px;
+        color: $text-color;
+        line-height: 1.6;
+    }
+
+    .bmi-result-row {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        dt, dd {
+            margin: 0;
+            opacity: 0.8;
+
+            strong {
+                opacity: 1;
+                color: $text-color;
+            }
+        }
+    }
+}
+
+// ============================================================
+// ACTIVITY RADIO GROUP
+// ============================================================
+.activity-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-radio-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid $borderColor;
+    border-radius: $border-radius;
+    background: $white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .radio-indicator {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid $text-color;
+        opacity: 0.5;
+        transition: all 0.2s ease;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $primary;
+            transition: all 0.2s ease;
+        }
+    }
+
+    .activity-radio-content {
+        margin-left: 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .activity-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: $text-color;
+        }
+
+        .activity-desc {
+            font-size: 12px;
+            color: $text-color;
+            opacity: 0.7;
+        }
+    }
+
+    &:hover {
+        border-color: $primary;
+    }
+
+    &.selected {
+        border-color: $primary;
+        background: $light-primary;
+
+        .radio-indicator {
+            border-color: $primary;
+            opacity: 1;
+
+            &::after {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+}
+
+// Result specific styles
+.bmi-subtitle-result {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $text-color;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.tdee-value {
+    color: $primary !important;
+}
+
+.mt-4 {
+    margin-top: 24px;
+}
+
+// ============================================================
+// CTA — APPOINTMENT
+// Lives INSIDE the result panel (right column), shown only when BMI
+// falls outside the healthy sweet-spot (20..23). See showAppointmentCta.
+// ============================================================
+.bmi-cta {
+    width: 100%;
+    margin-top: 18px;
+    padding: 16px 14px 18px;
+    background: $light-primary;
+    border-radius: $border-radius;
+    text-align: center;
+
+    .bmi-cta-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: $text-color;
+        margin: 0 0 4px;
+    }
+
+    .bmi-cta-text {
+        font-size: 12px;
+        color: $text-color;
+        opacity: 0.85;
+        line-height: 1.45;
+        margin: 0 0 14px;
+    }
+
+    // The actual call-to-action button — visually prominent, using the theme's
+    // primary green at full strength with a strong shadow so it draws the eye.
+    .bmi-cta-btn {
+        font-family: $font-family;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0 22px;
+        min-width: 100%;
+        min-height: 46px;
+        line-height: 46px;
+        border-radius: 999px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+        mat-icon {
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+// ============================================================
+// RESPONSIVE TWEAKS
+// ============================================================
+@media (max-width: 600px) {
+    .bmi-header .bmi-title {
+        font-size: 24px;
+    }
+
+    .bmi-result .bmi-value {
+        font-size: 54px;
+    }
+
+    .bmi-card {
+        padding: 16px;
+    }
+
+    .bmi-input-row {
+        gap: 6px;
+    }
+
+    .unit-toggle-group {
+        height: 28px;
+
+        ::ng-deep .mat-button-toggle .mat-button-toggle-label-content {
+            line-height: 26px;
+            padding: 0 12px;
+            font-size: 11px;
+        }
+    }
+}

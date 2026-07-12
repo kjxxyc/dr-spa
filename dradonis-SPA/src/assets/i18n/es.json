@@ -7,6 +7,7 @@
       "services": "SERVICIOS",
       "tools": "HERRAMIENTAS",
       "bmi": "CALCULADORA DE IMC",
+      "bmr": "CALCULADORA DE TMB",
       "videos": "VIDEOS Y MÁS",
       "contact": "CONTACTO",
       "meetDoctor": "CONOCE A TU DOCTOR",
@@ -65,6 +66,45 @@
     },
     "ctaTitle": "¿Listo para tomar acción?",
     "ctaText": "Agenda una consulta con el Dr. Adonis para revisar tus resultados y un plan de salud personalizado.",
+    "ctaButton": "HACER UNA CITA"
+  },
+  "bmr": {
+    "pageTitle": "Calculadora de TMB",
+    "pageSubtitle": "Calcule su Tasa Metabólica Basal (TMB) y conozca las calorías que necesita por día.",
+    "gender": "Género",
+    "male": "Masculino",
+    "female": "Femenino",
+    "yourAge": "TU EDAD",
+    "yourWeight": "TU PESO",
+    "yourHeight": "TU ALTURA",
+    "activityLevel": "Nivel de Actividad",
+    "activity": {
+      "sedentary": "Sedentario",
+      "sedentaryDesc": "Poco o ningún ejercicio",
+      "light": "Ligeramente activo",
+      "lightDesc": "Ejercicio ligero 1-3 días a la semana",
+      "moderate": "Moderadamente activo",
+      "moderateDesc": "Ejercicio moderado 3-5 días a la semana",
+      "active": "Muy activo",
+      "activeDesc": "Ejercicio intenso 6-7 días a la semana",
+      "extreme": "Extremadamente activo",
+      "extremeDesc": "Ejercicio muy intenso o trabajo físico"
+    },
+    "formulaLabel": "FÓRMULA TASA METABÓLICA BASAL",
+    "formula": {
+      "mifflin": "Mifflin-St Jeor (Recomendada)",
+      "harrisOriginal": "Harris-Benedict",
+      "harrisRevised": "Harris-Benedict revisada",
+      "katch": "Katch-McArdle",
+      "schofield": "Schofield"
+    },
+    "bodyFat": "PORCENTAJE DE GRASA CORPORAL",
+    "calculateBtn": "Calcula las calorías que necesitas",
+    "yourTdee": "TUS CALORÍAS DIARIAS",
+    "tdeeSubtitle": "Calorías de mantenimiento",
+    "yourBmr": "Tu TMB (en reposo) es:",
+    "ctaTitle": "¿Listo para tomar acción?",
+    "ctaText": "Agenda una consulta con el Dr. Adonis para obtener un plan de alimentación y salud personalizado.",
     "ctaButton": "HACER UNA CITA"
   },
   "servicesPromo": {
@@ -143,6 +183,10 @@
     "scrollHint": "servicios especializados abajo",
     "listTitle": "Lista Completa de Servicios",
     "list": {
+      "telemedicine": {
+        "title": "Telemedicina y Teleconsulta",
+        "description": "Recibe atención de primer nivel en Medicina Funcional y Regenerativa desde cualquier parte del mundo. Evaluaciones médicas integrales, revisión de laboratorios y planes de tratamiento completamente en línea desde la comodidad de tu hogar."
+      },
       "brainProtocol": {
         "title": "The Brain Protocol® — Alzheimer y Deterioro Cognitivo",
         "description": "ATENCIÓN ESPECIALIZADA EN ALZHEIMER Y DETERIORO COGNITIVO LEVE. Globalmente, cientos de millones de personas se ven afectadas por trastornos neurológicos. Solo en Estados Unidos, la enfermedad de Alzheimer afecta a aproximadamente 5.7 millones de personas, con estadísticas en aumento. El Deterioro Cognitivo Leve — olvidos, dificultades de lenguaje y pensamiento más allá del envejecimiento normal — afecta a millones más.\n\nEl Dr. Adonis utiliza The Brain Protocol®, su protocolo propietario integral y multivariable personalizado a las necesidades de cada paciente — no solo para prevenir enfermedades neurológicas como Alzheimer y Parkinson, sino también para ayudar a regenerar el cerebro.\n\nComo neurocirujano certificado que usa medicina funcional para proveer bienestar físico, mental y espiritual completo, el Dr. Adonis es uno de los pocos especialistas en Miami que combina neurociencia de vanguardia con sanación de causa raíz. Agende una cita hoy para mantener su cerebro saludable y ágil."
@@ -357,7 +401,7 @@
         "btn": "Más información"
       },
       "video": {
-        "title": "Video consulta",
+        "title": "Telemedicina (Video consulta)",
         "summary": "Consultas médicas convenientes y privadas con el Dr. Adonis desde la comodidad de su hogar.",
         "btn": "Hacer una consulta"
       },
@@ -370,7 +414,10 @@
   },
   "appointmentModal": {
     "title": "HAGA UNA CITA",
-    "subtitle": "Para programar una cita, llame a nuestra oficina al <strong style='color: #ea580c;'>305-204-7816</strong> / WhatsApp <a href='https://api.whatsapp.com/send/?phone=13053355424&text=Hola%2C+deseo+informaci%C3%B3n&type=phone_number&app_absent=0' target='_blank' rel='noopener' style='color: #ea580c; font-weight: 700; text-decoration: none;'>+13053355424</a>. También puede completar el formulario a continuación y lo contactaremos para reservar su cita.",
+    "subtitle": "Para programar una cita, llame a nuestra oficina al <strong style='color: #ea580c;'>305-204-7816</strong>. También puede completar el formulario a continuación y lo contactaremos para reservar su cita.",
+    "appointmentType": "Tipo de Cita",
+    "inPerson": "Presencial",
+    "telemedicine": "Teleconsulta",
     "requiredMsg": "Los campos marcados con * son obligatorios",
     "fullName": "Nombre Completo",
     "email": "Correo Electrónico",
@@ -382,6 +429,19 @@
     "success": "¡Su solicitud de cita ha sido enviada!",
     "error": "Error al enviar la solicitud. Intente de nuevo."
   },
+  "appointmentPage": {
+    "specialty": "Especialista en Medicina Funcional y Regenerativa",
+    "badge1": "Certificado por la Junta",
+    "badge2": "15+ Años de Experiencia",
+    "guarantee": "Su información es 100% privada y segura. Nunca compartiremos sus datos con terceros.",
+    "formSubtitle": "Complete el formulario a continuación y nuestro equipo le contactará para agendar su visita.",
+    "requiredField": "Este campo es obligatorio",
+    "validEmail": "Ingrese un correo electrónico válido",
+    "reasonPlaceholder": "Describa brevemente en qué podemos ayudarle...",
+    "successDetail": "Nos comunicaremos con usted a la brevedad para confirmar su cita. También puede llamarnos al 305-204-7816.",
+    "backHome": "Volver al Inicio",
+    "viewArticles": "Ver Artículos"
+  },
   "footer": {
     "developer": "Desarrollado por"
   },
@@ -392,6 +452,7 @@
     "cardecal": "Hola, vi su anuncio del cardecal y estoy interesado en un test de salud",
     "videos": "Hola, vi sus videos y deseo más información",
     "vitamins": "Hola, estoy interesado en una prescripción de vitaminas",
-    "menwellness": "Hola, estoy interesado en comprar tadalafil-cialis"
+    "menwellness": "Hola, estoy interesado en comprar tadalafil-cialis",
+    "appointment": "Hola, me gustaría agendar una cita con el Dr. Adonis"
   }
 }

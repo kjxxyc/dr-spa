@@ -30,6 +30,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'makeanappointment',
+    loadComponent: () =>
+      import('./pages/authentication/make-appointment/make-appointment.component').then(
+        (m) => m.MakeAppointmentComponent
+      ),
+  },
+  {
     path: '',
     loadChildren: () =>
       import('./pages/authentication/authentication.routes').then(

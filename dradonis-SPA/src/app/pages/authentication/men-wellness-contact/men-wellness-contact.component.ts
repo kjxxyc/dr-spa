@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LanguageSelectorDialogComponent } from '../../../shared/language-selector-dialog/language-selector-dialog.component';
 import { SeoService } from '../../../shared/seo/seo.service';
@@ -42,6 +44,8 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
         MatButtonModule,
         MatCardModule,
         MatIconModule,
+        ReactiveFormsModule,
+        TranslateModule,
     ],
     templateUrl: './men-wellness-contact.component.html',
     styleUrls: ['./men-wellness-contact.component.scss'],

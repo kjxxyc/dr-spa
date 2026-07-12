@@ -139,6 +139,7 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
                     itemOffered: {
                         '@type': 'Product',
                         name: p.name,
+                        image: `${origin}/assets/images/logos/Logo_720x192.jpg`,
                         category: 'Supplement',
                         brand: { '@type': 'Brand', name: 'Designs for Health' },
                         offers: {
