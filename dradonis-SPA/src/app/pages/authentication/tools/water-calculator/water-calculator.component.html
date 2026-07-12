@@ -1,0 +1,265 @@
+<div class="bmi-page">
+  <!-- Page header -->
+  <header class="bmi-header">
+    <h1 class="bmi-title">
+      <span class="bmi-title-main">{{ 'waterCalc.pageTitle' | translate }}:</span>
+      <span class="bmi-title-sub">{{ 'waterCalc.subtitleHowMany' | translate }}</span>
+      <span class="bmi-title-sep">&middot;</span>
+      <span class="bmi-title-sub">{{ 'waterCalc.subtitleEnoughWater' | translate }}</span>
+    </h1>
+  </header>
+
+  <form [formGroup]="form" class="bmi-card">
+    <div class="bmi-grid">
+      <!-- ==================== LEFT: PROFILE ==================== -->
+      <section class="bmi-controls">
+        <!-- Gender selector -->
+        <div class="bmi-section bmi-gender">
+          <label class="bmi-section-label">{{ 'waterCalc.gender' | translate }}</label>
+          <div class="gender-row">
+            <button type="button"
+                    class="gender-avatar"
+                    [class.selected]="isGender('male')"
+                    (click)="selectGender('male')">
+              <svg class="gender-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14 7h-4c-1.1 0-2 .9-2 2v6h2v7h4v-7h2V9c0-1.1-.9-2-2-2z"/>
+                <circle cx="12" cy="4" r="2"/>
+              </svg>
+              <span class="gender-label">{{ 'waterCalc.male' | translate }}</span>
+            </button>
+            <button type="button"
+                    class="gender-avatar"
+                    [class.selected]="isGender('female')"
+                    (click)="selectGender('female')">
+              <svg class="gender-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.94 8.31C13.62 7.52 12.85 7 12 7s-1.62.52-1.94 1.31L7 16h3.5v6h3v-6H17l-3.06-7.69z"/>
+                <circle cx="12" cy="4" r="2"/>
+              </svg>
+              <span class="gender-label">{{ 'waterCalc.female' | translate }}</span>
+            </button>
+            <label *ngIf="isGender('female')" class="pregnant-check">
+              <input type="checkbox" formControlName="isPregnant">
+              <span>{{ 'waterCalc.pregnantOrLactating' | translate }}</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Age control -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'waterCalc.yourAge' | translate }}</label>
+          </div>
+          <div class="bmi-input-row">
+            <input type="number"
+                   class="bmi-number-input"
+                   [value]="form.value.age"
+                   (input)="updateNumber('age', $any($event.target).value)"
+                   [min]="ageMin" [max]="ageMax" step="1"
+                   inputmode="numeric">
+            <span class="bmi-unit-suffix">{{ 'waterCalc.years' | translate }}</span>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.age"
+                 (input)="updateNumber('age', $any($event.target).value)"
+                 [min]="ageMin" [max]="ageMax" step="1">
+        </div>
+
+        <!-- Weight control -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'waterCalc.yourWeight' | translate }}</label>
+            <mat-button-toggle-group formControlName="weightSystem"
+                                     class="unit-toggle-group">
+              <mat-button-toggle value="metric">kg</mat-button-toggle>
+              <mat-button-toggle value="imperial">lb</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+          <div class="bmi-input-row">
+            <input type="number"
+                   class="bmi-number-input"
+                   [value]="form.value.weight"
+                   (input)="updateNumber('weight', $any($event.target).value)"
+                   [min]="weightMin" [max]="weightMax" step="0.1"
+                   inputmode="decimal">
+            <span class="bmi-unit-suffix">{{ weightUnit }}</span>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.weight"
+                 (input)="updateNumber('weight', $any($event.target).value)"
+                 [min]="weightMin" [max]="weightMax" step="0.1">
+        </div>
+
+        <!-- Height control -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'waterCalc.yourHeight' | translate }}</label>
+            <mat-button-toggle-group formControlName="heightSystem"
+                                     class="unit-toggle-group">
+              <mat-button-toggle value="metric">cm</mat-button-toggle>
+              <mat-button-toggle value="imperial">in</mat-button-toggle>
+            </mat-button-toggle-group>
+          </div>
+          <div class="bmi-input-row">
+            <input type="number"
+                   class="bmi-number-input"
+                   [value]="form.value.height"
+                   (input)="updateNumber('height', $any($event.target).value)"
+                   [min]="heightMin" [max]="heightMax" step="0.1"
+                   inputmode="decimal">
+            <span class="bmi-unit-suffix">{{ heightUnit }}</span>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.height"
+                 (input)="updateNumber('height', $any($event.target).value)"
+                 [min]="heightMin" [max]="heightMax" step="0.1">
+        </div>
+
+        <!-- Body Fat % control (Optional) -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'waterCalc.bodyFat' | translate }} <span style="font-size: 0.8em; color: #999;">({{ 'waterCalc.optional' | translate }})</span></label>
+          </div>
+          <div class="bmi-input-row bodyfat-row">
+            <input type="number"
+                   class="bmi-number-input bodyfat-input"
+                   [value]="form.value.bodyFat"
+                   (input)="updateNumber('bodyFat', $any($event.target).value)"
+                   [min]="bodyFatMin" [max]="bodyFatMax" step="1"
+                   inputmode="numeric">
+            <span class="bmi-unit-suffix">%</span>
+            <a mat-stroked-button color="primary" routerLink="/tools/tmb-calculator" class="switch-calc-btn">
+              <mat-icon>calculate</mat-icon>
+              {{ 'waterCalc.useBmrCalc' | translate }}
+            </a>
+          </div>
+          <input type="range"
+                 class="bmi-slider"
+                 [value]="form.value.bodyFat"
+                 (input)="updateNumber('bodyFat', $any($event.target).value)"
+                 [min]="bodyFatMin" [max]="bodyFatMax" step="1">
+        </div>
+      </section>
+
+      <!-- ==================== CENTER: LIFESTYLE & BEVERAGES ==================== -->
+      <section class="bmi-activity">
+        <!-- Activity Level control -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'waterCalc.activityLevel' | translate }}</label>
+          </div>
+          <div class="activity-slider">
+            <div class="activity-slider-current">
+              {{ ('waterCalc.activity.' + activities[activityIndex].key) | translate }}
+            </div>
+            <input type="range"
+                   class="bmi-slider activity-range"
+                   [value]="activityIndex"
+                   (input)="setActivityByIndex($any($event.target).value)"
+                   min="0"
+                   [max]="activities.length - 1"
+                   step="1"
+                   [attr.aria-label]="'waterCalc.activityLevel' | translate">
+            <div class="activity-slider-ticks">
+              <span *ngFor="let act of activities; let i = index"
+                    class="activity-tick"
+                    [class.active]="i === activityIndex"
+                    [attr.aria-label]="('waterCalc.activity.' + act.key) | translate"
+                    [title]="('waterCalc.activity.' + act.key) | translate"
+                    (click)="setActivityByIndex(i)">
+                {{ act.icon }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beverages Grid -->
+        <div class="bmi-section">
+          <div class="bmi-section-header">
+            <label class="bmi-section-label">{{ 'waterCalc.howManyGlasses' | translate }}</label>
+          </div>
+          <div class="beverage-grid">
+            <div class="beverage-card" *ngFor="let bev of beverages">
+              <div class="beverage-header">
+                <span class="beverage-icon" aria-hidden="true">{{ bev.icon }}</span>
+                <span class="beverage-title">{{ ('waterCalc.beverage.' + bev.key) | translate }}</span>
+                <span class="beverage-volume">({{ bev.volumeCl }}cl)</span>
+              </div>
+              <div class="beverage-controls">
+                <button type="button" class="bev-btn" (click)="decrementBev(bev.key)" [disabled]="form.value[bev.key] === 0">-</button>
+                <div class="bev-count">{{ form.value[bev.key] }}</div>
+                <button type="button" class="bev-btn" (click)="incrementBev(bev.key)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== RIGHT: RESULTS ==================== -->
+      <aside class="bmi-result">
+
+        <!-- Top row: Hydration Status + Liquid Calories side by side -->
+        <div class="result-top-row">
+          <div class="hydration-status" [class.is-good]="isHydrated" [class.is-low]="!isHydrated">
+            <div class="hydration-status-label">{{ 'waterCalc.hydrationStatus' | translate }}</div>
+            <div class="hydration-status-message">
+              {{ (isHydrated ? 'waterCalc.statusGood' : 'waterCalc.statusLow') | translate }}
+            </div>
+          </div>
+
+          <div class="calories-card" [class.is-high]="liquidCalories > 200">
+            <div class="calories-info">
+              <div class="calories-label">{{ 'waterCalc.liquidCalories' | translate }}</div>
+              <div class="calories-value">{{ liquidCalories }} <span>kcal</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress bar: actual vs ideal -->
+        <div class="hydration-progress">
+          <div class="hydration-progress-header">
+            <span class="hydration-progress-label">{{ 'waterCalc.progressLabel' | translate }}</span>
+            <span class="hydration-progress-percent">{{ hydrationPercent }}%</span>
+          </div>
+          <div class="hydration-progress-track">
+            <div class="hydration-progress-fill" [style.width.%]="hydrationPercent"></div>
+          </div>
+          <div class="hydration-progress-values">
+            <span><strong>{{ totalActualIntakeLiters }} L</strong> / {{ idealWaterLiters }} L</span>
+          </div>
+        </div>
+
+        <!-- Appointment CTA -->
+        <div class="bmi-cta">
+          <h3 class="bmi-cta-title">{{ 'waterCalc.ctaTitle' | translate }}</h3>
+          <button mat-raised-button color="primary" type="button" class="bmi-cta-btn" style="margin-top: 10px;" (click)="openAppointment()">
+            <mat-icon>event</mat-icon>
+            {{ 'waterCalc.ctaButton' | translate }}
+          </button>
+        </div>
+
+        <!-- Water Balance grid (2 columns) — placed at bottom -->
+        <div class="stats-grid">
+          <div class="stat-tile stat-primary">
+            <div class="stat-tile-label">{{ 'waterCalc.idealIntake' | translate }}</div>
+            <div class="stat-tile-value">{{ idealWaterLiters }} <span>L</span></div>
+          </div>
+          <div class="stat-tile stat-primary">
+            <div class="stat-tile-label">{{ 'waterCalc.actualIntake' | translate }}</div>
+            <div class="stat-tile-value">{{ totalActualIntakeLiters }} <span>L</span></div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-tile-label">{{ 'waterCalc.waterLost' | translate }}</div>
+            <div class="stat-tile-value">{{ waterLostLiters }} <span>L</span></div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-tile-label">{{ 'waterCalc.waterFromFood' | translate }}</div>
+            <div class="stat-tile-value">{{ waterFromFoodLiters }} <span>L</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </form>
+</div>

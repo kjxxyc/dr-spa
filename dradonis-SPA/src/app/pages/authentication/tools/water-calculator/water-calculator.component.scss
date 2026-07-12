@@ -1,0 +1,935 @@
+// Import Spike Admin theme variables (font, layout, colors, Material 3 tokens).
+@use '../../../../../assets/scss/variables' as *;
+
+:host {
+    display: block;
+    font-family: $font-family;
+    color: $text-color;
+}
+
+// ============================================================
+// PAGE
+// ============================================================
+.bmi-page {
+    padding: 20px $layout-padding;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+
+    @media (max-width: 600px) {
+        padding: 16px 10px;
+    }
+}
+
+.bmi-header {
+    text-align: center;
+    margin-bottom: 16px;
+
+    .bmi-title {
+        font-family: $font-family;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.4;
+        margin: 0;
+        color: $text-color;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        gap: 6px 8px;
+        max-width: 1000px;
+        margin-inline: auto;
+    }
+
+    .bmi-title-main {
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+    .bmi-title-sub {
+        opacity: 0.75;
+    }
+
+    .bmi-title-sep {
+        opacity: 0.4;
+    }
+}
+
+// ============================================================
+// CARD
+// ============================================================
+.bmi-card {
+    background: $white;
+    border: 1px solid $borderColor;
+    border-radius: $border-radius;
+    padding: 22px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+
+    @media (max-width: 600px) {
+        padding: 14px;
+    }
+}
+
+.bmi-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.5fr 0.9fr;
+    gap: 20px;
+    align-items: stretch;
+    min-width: 0;
+
+    > * {
+        min-width: 0;
+    }
+
+    @media (max-width: 1100px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// ============================================================
+// CONTROLS (left side)
+// ============================================================
+.bmi-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+}
+
+.bmi-activity {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+
+    > .bmi-section {
+        background: #f5f6f8;
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        border-radius: 14px;
+        padding: 14px 16px;
+        min-width: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        width: 100%;
+
+        @media (max-width: 480px) {
+            padding: 12px 10px;
+        }
+    }
+}
+
+.bmi-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.bmi-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $text-color;
+    opacity: 0.7;
+}
+
+// ----------- Gender row (Male, Female, and pregnancy checkbox all inline) -----------
+.gender-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.gender-avatar {
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 2px solid transparent;
+    border-radius: $border-radius;
+    background: $light;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    font-family: $font-family;
+
+    .gender-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        line-height: 20px;
+        color: $text-color;
+        opacity: 0.65;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .gender-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: $text-color;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+
+    &.selected {
+        border-color: $primary;
+        background: $light-primary;
+
+        .gender-icon {
+            color: $primary;
+            opacity: 1;
+        }
+    }
+}
+
+.pregnant-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    cursor: pointer;
+    flex: 1 1 auto;
+    min-width: 0;
+
+    input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        accent-color: $primary;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    span {
+        color: #666;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+}
+
+@media (max-width: 480px) {
+    .pregnant-check {
+        flex-basis: 100%;
+    }
+}
+
+// ----------- Number input + unit toggle (all on the same row) -----------
+.bmi-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+// The textbox itself (pill-shaped, native spinner arrows preserved)
+.bmi-number-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 7px 14px;
+    border: 1.5px solid $borderformColor;
+    border-radius: 999px;
+    background: $white;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 700;
+    color: $text-color;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 3px $light-primary;
+    }
+}
+
+// kg/lb suffix label between input and toggle
+.bmi-unit-suffix {
+    font-size: 12px;
+    font-weight: 700;
+    color: $text-color;
+    opacity: 0.6;
+    pointer-events: none;
+    min-width: 18px;
+    text-align: center;
+}
+
+// Section header — label on the left, unit segmented control on the right.
+.bmi-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+}
+
+// Segmented control for kg ↔ lb and cm ↔ in.
+// Implemented with Material's mat-button-toggle-group so the active option
+// is unmistakable as a toggle (replaces the old single-button "swap" UI that
+// confused the client — they couldn't tell it was interactive).
+.unit-toggle-group {
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1.5px solid $primary;
+    font-family: $font-family;
+    height: 30px;
+    background: $white;
+
+    ::ng-deep .mat-button-toggle {
+        background: transparent;
+        border: none;
+        color: $primary;
+        transition: background 0.2s, color 0.2s;
+
+        .mat-button-toggle-label-content {
+            line-height: 28px;
+            padding: 0 16px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            background: $light-primary;
+        }
+    }
+
+    ::ng-deep .mat-button-toggle-checked {
+        background: $primary;
+
+        .mat-button-toggle-label-content {
+            color: $white;
+        }
+
+        &:hover {
+            background: $primary;
+        }
+    }
+
+    // Hide the default Material focus overlay / ripple borders that look ugly inside a pill.
+    ::ng-deep .mat-button-toggle-focus-overlay {
+        display: none;
+    }
+
+    ::ng-deep .mat-button-toggle + .mat-button-toggle {
+        border-left: 1px solid $primary;
+    }
+}
+
+// ----------- Range slider (cross-browser custom styling) -----------
+.bmi-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 999px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 6px;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: $primary;
+        border: 3px solid $white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+        cursor: pointer;
+        transition: transform 0.15s;
+    }
+
+    &::-webkit-slider-thumb:hover {
+        transform: scale(1.15);
+    }
+
+    &::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: $primary;
+        border: 3px solid $white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+        cursor: pointer;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $primary;
+        outline-offset: 4px;
+    }
+}
+
+// ============================================================
+// RESULT (right side)
+// ============================================================
+.bmi-result {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px;
+    background: $light;
+    border-radius: $border-radius;
+    min-width: 0;
+}
+
+// -------- Top row (Hydration status + Liquid Calories side by side) --------
+.result-top-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: stretch;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// -------- Hydration status badge --------
+.hydration-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px 12px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    background: #fff;
+    height: 100%;
+
+    &.is-good {
+        background: rgba(16, 185, 129, 0.08);
+        border-color: rgba(16, 185, 129, 0.35);
+    }
+
+    &.is-low {
+        background: rgba(14, 165, 233, 0.08);
+        border-color: rgba(14, 165, 233, 0.35);
+    }
+
+    .hydration-status-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $text-color;
+        opacity: 0.55;
+    }
+
+    .hydration-status-message {
+        font-size: 15px;
+        font-weight: 700;
+        color: $text-color;
+        margin-top: 4px;
+        line-height: 1.35;
+    }
+}
+
+// -------- Progress bar --------
+.hydration-progress {
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 14px;
+
+    .hydration-progress-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 6px;
+    }
+
+    .hydration-progress-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: $text-color;
+        opacity: 0.6;
+    }
+
+    .hydration-progress-percent {
+        font-size: 18px;
+        font-weight: 800;
+        color: $primary;
+    }
+
+    .hydration-progress-track {
+        height: 8px;
+        background: rgba(0, 0, 0, 0.06);
+        border-radius: 999px;
+        overflow: hidden;
+    }
+
+    .hydration-progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #0ea5e9 0%, #0d6efd 100%);
+        border-radius: 999px;
+        transition: width 0.35s ease;
+    }
+
+    .hydration-progress-values {
+        margin-top: 6px;
+        font-size: 12px;
+        text-align: right;
+        color: $text-color;
+        opacity: 0.7;
+
+        strong {
+            color: $text-color;
+            opacity: 1;
+            font-weight: 800;
+        }
+    }
+}
+
+// -------- Stats grid (2 columns) --------
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    min-width: 0;
+}
+
+.stat-tile {
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+
+    &.stat-primary {
+        background: rgba(13, 110, 253, 0.06);
+        border-color: rgba(13, 110, 253, 0.15);
+
+        .stat-tile-value {
+            color: $primary;
+        }
+    }
+
+    .stat-tile-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $text-color;
+        opacity: 0.6;
+        margin-bottom: 6px;
+        min-height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stat-tile-value {
+        font-size: 20px;
+        font-weight: 800;
+        color: $text-color;
+        line-height: 1;
+
+        span {
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0.7;
+            margin-left: 2px;
+        }
+    }
+}
+
+// -------- Liquid calories card --------
+.calories-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 12px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 100%;
+
+    &.is-high {
+        background: rgba(249, 115, 22, 0.08);
+        border-color: rgba(249, 115, 22, 0.3);
+
+        .calories-value {
+            color: #f97316;
+        }
+    }
+
+    .calories-info {
+        flex: 1;
+    }
+
+    .calories-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $text-color;
+        opacity: 0.55;
+        margin-bottom: 6px;
+    }
+
+    .calories-value {
+        font-size: 22px;
+        font-weight: 800;
+        color: $text-color;
+        line-height: 1.15;
+
+        span {
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0.7;
+            margin-left: 2px;
+        }
+    }
+}
+
+
+// ============================================================
+// BEVERAGES GRID
+// ============================================================
+.beverage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    @media (min-width: 1400px) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.beverage-card {
+    background: #fff;
+    border: 1px solid $borderColor;
+    border-radius: 8px;
+    padding: 10px 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+    box-sizing: border-box;
+
+    .beverage-header {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        min-width: 0;
+        row-gap: 0;
+    }
+
+    .beverage-icon {
+        font-size: 16px;
+        line-height: 1;
+        flex-shrink: 0;
+        display: inline-block;
+    }
+
+    .beverage-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: $text-color;
+        min-width: 0;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .beverage-volume {
+        font-size: 10px;
+        color: #888;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .beverage-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .bev-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1px solid $primary;
+            background: #fff;
+            color: $primary;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+
+            &:hover:not(:disabled) {
+                background: $primary;
+                color: #fff;
+            }
+        }
+
+        .bev-count {
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 20px;
+        }
+    }
+}
+
+// ============================================================
+// ACTIVITY SLIDER
+// ============================================================
+.activity-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid $borderColor;
+    border-radius: 12px;
+}
+
+.activity-slider-current {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: $primary;
+    line-height: 1.2;
+    min-height: 24px;
+    transition: color 0.2s;
+}
+
+.activity-range {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+
+.activity-slider-ticks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px;
+    margin-top: 2px;
+}
+
+.activity-tick {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.45;
+    filter: grayscale(35%);
+    transition: opacity 0.2s, transform 0.2s, filter 0.2s;
+
+    &:hover {
+        opacity: 0.8;
+        filter: none;
+    }
+
+    &.active {
+        opacity: 1;
+        filter: none;
+        transform: scale(1.35);
+    }
+}
+
+// ============================================================
+// CTA — APPOINTMENT
+// ============================================================
+.bmi-cta {
+    width: 100%;
+    margin-top: 18px;
+    padding: 16px 14px 18px;
+    background: $light-primary;
+    border-radius: $border-radius;
+    text-align: center;
+
+    .bmi-cta-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: $text-color;
+        margin: 0 0 4px;
+    }
+
+    .bmi-cta-text {
+        font-size: 12px;
+        color: $text-color;
+        opacity: 0.85;
+        line-height: 1.45;
+        margin: 0 0 14px;
+    }
+
+    .bmi-cta-btn {
+        font-family: $font-family;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0 22px;
+        min-width: 100%;
+        min-height: 46px;
+        line-height: 46px;
+        border-radius: 999px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+        mat-icon {
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+// ============================================================
+// BODY FAT ROW (input + switch-to-BMR button inline)
+// ============================================================
+.bodyfat-row {
+    flex-wrap: wrap;
+    row-gap: 8px;
+}
+
+.bodyfat-input {
+    flex: 0 0 auto;
+    width: 72px;
+    text-align: center;
+}
+
+.switch-calc-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: $font-family;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 0 10px;
+    min-height: 36px;
+    line-height: 1.15;
+    text-decoration: none;
+    text-align: center;
+
+    mat-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .switch-calc-btn {
+        flex-basis: auto;
+        flex-grow: 1;
+        font-size: 10px;
+        padding: 0 8px;
+        letter-spacing: 0;
+        min-width: 0;
+
+        mat-icon {
+            font-size: 14px;
+            width: 14px;
+            height: 14px;
+            line-height: 14px;
+        }
+    }
+}
+
+// ============================================================
+// RESPONSIVE TWEAKS
+// ============================================================
+@media (max-width: 600px) {
+    .bmi-header .bmi-title {
+        font-size: 14px;
+        gap: 4px 6px;
+    }
+
+    .bmi-header .bmi-title-main {
+        font-size: 15px;
+    }
+
+    .bmi-card {
+        padding: 16px;
+    }
+
+    .bmi-input-row {
+        gap: 6px;
+    }
+
+    .unit-toggle-group {
+        height: 28px;
+
+        ::ng-deep .mat-button-toggle .mat-button-toggle-label-content {
+            line-height: 26px;
+            padding: 0 12px;
+            font-size: 11px;
+        }
+    }
+    
+    .beverage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .beverage-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .beverage-grid {
+        grid-template-columns: 1fr;
+    }
+}

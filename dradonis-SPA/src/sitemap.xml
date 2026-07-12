@@ -100,6 +100,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/tools/tmb-calculator"/>
   </url>
   <url>
+    <loc>https://dradonis.com/tools/water-calculator</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/tools/water-calculator"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/tools/water-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/tools/water-calculator"/>
+  </url>
+  <url>
     <loc>https://dradonis.com/articles</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>weekly</changefreq>

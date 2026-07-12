@@ -155,7 +155,8 @@
               "/men-wellness",
               "/men-wellness/evaluation",
               "/vitamins-prescription",
-              "/cardecal"
+              "/cardecal",
+              "/tools/water-calculator"
             ]
           },
           "configurations": {

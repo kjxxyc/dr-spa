@@ -90,6 +90,13 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.BmrCalculatorComponent
               ),
           },
+          {
+            path: 'tools/water-calculator',
+            loadComponent: () =>
+              import('./tools/water-calculator/water-calculator.component').then(
+                (m) => m.WaterCalculatorComponent
+              ),
+          },
         ],
       },
     ],

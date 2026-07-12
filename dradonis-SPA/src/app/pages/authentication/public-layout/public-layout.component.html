@@ -42,6 +42,14 @@
             <mat-icon>calculate</mat-icon>
             <span>{{ 'header.nav.bmr' | translate }}</span>
           </a>
+          <a mat-menu-item routerLink="/tools/water-calculator">
+            <mat-icon style="display: inline-flex; align-items: center; justify-content: center;">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" style="display:block;">
+                <path d="M12,20C8.69,20 6,17.31 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14C18,17.31 15.31,20 12,20Z"/>
+              </svg>
+            </mat-icon>
+            <span>{{ 'header.nav.water' | translate }}</span>
+          </a>
         </mat-menu>
         <a routerLink="/videos" class="nav-link" routerLinkActive="active-link">
           <mat-icon>play_circle</mat-icon>
@@ -95,6 +103,14 @@
         <a routerLink="/tools/tmb-calculator" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>calculate</mat-icon>
           {{ 'header.nav.bmr' | translate }}
+        </a>
+        <a routerLink="/tools/water-calculator" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+          <mat-icon style="display: inline-flex; align-items: center; justify-content: center;">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" style="display:block;">
+              <path d="M12,20C8.69,20 6,17.31 6,14C6,10 12,3.25 12,3.25C12,3.25 18,10 18,14C18,17.31 15.31,20 12,20Z"/>
+            </svg>
+          </mat-icon>
+          {{ 'header.nav.water' | translate }}
         </a>
         <a routerLink="/videos" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>play_circle</mat-icon>
