@@ -29,6 +29,13 @@ export interface FullscriptProduct {
     category: 'general' | 'antiaging' | 'gut' | 'menopause';
     /** Price in USD — used exclusively in JSON-LD structured data for Google, not shown on the site. */
     price: string;
+    /**
+     * Absolute URL of the product photo on Fullscript's public asset CDN.
+     * Required by Google Merchant listings — each Product in the JSON-LD must
+     * point at its own image, not a shared logo, or Search Console flags
+     * "Falta el campo image" (missing image field).
+     */
+    image: string;
 }
 
 @Component({
@@ -53,16 +60,16 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
      * since `store_slug: "dradonis"` is what attributes the commission to Dr. Adonis.
      */
     fullscriptProducts: FullscriptProduct[] = [
-        { id: '62134', name: 'PectaSol®', descriptionKey: 'shop.products.pectasol', category: 'general', price: '39.99' },
-        { id: '72479', name: 'Mitochondrial NRG', descriptionKey: 'shop.products.mitochondrial', category: 'general', price: '29.99' },
-        { id: '71334', name: 'Uric Acid Formula', descriptionKey: 'shop.products.uricAcid', category: 'general', price: '19.99' },
-        { id: '72491', name: 'OmegAvail Hi-Po Fish Oil', descriptionKey: 'shop.products.omegavail', category: 'general', price: '19.99' },
-        { id: '76696', name: 'Broccoli Seed Extract', descriptionKey: 'shop.products.broccoli', category: 'antiaging', price: '19.99' },
-        { id: '72276', name: 'Complete Mineral Complex', descriptionKey: 'shop.products.mineral', category: 'general', price: '19.99' },
-        { id: '89800', name: 'Telomere Pro', descriptionKey: 'shop.products.telomere', category: 'antiaging', price: '49.99' },
-        { id: '71597', name: 'Iron Liquid', descriptionKey: 'shop.products.iron', category: 'general', price: '14.99' },
-        { id: '105060', name: 'ProbioMax® Sb DF', descriptionKey: 'shop.products.probiomax', category: 'gut', price: '29.99' },
-        { id: '72404', name: 'DIM-Evail™', descriptionKey: 'shop.products.dimEvail', category: 'menopause', price: '24.99' }
+        { id: '62134', name: 'PectaSol®', descriptionKey: 'shop.products.pectasol', category: 'general', price: '39.99', image: 'https://assets.fullscript.io/Product/EN0037/400_front.png' },
+        { id: '72479', name: 'Mitochondrial NRG', descriptionKey: 'shop.products.mitochondrial', category: 'general', price: '29.99', image: 'https://assets.fullscript.io/Product/DF0263/400_front.png' },
+        { id: '71334', name: 'Uric Acid Formula', descriptionKey: 'shop.products.uricAcid', category: 'general', price: '19.99', image: 'https://assets.fullscript.io/Product/PU0785/400_front.png' },
+        { id: '72491', name: 'OmegAvail Hi-Po Fish Oil', descriptionKey: 'shop.products.omegavail', category: 'general', price: '19.99', image: 'https://assets.fullscript.io/Product/DF0253/400_front.png' },
+        { id: '76696', name: 'Broccoli Seed Extract', descriptionKey: 'shop.products.broccoli', category: 'antiaging', price: '19.99', image: 'https://assets.fullscript.io/Product/TH0319/400_front.png' },
+        { id: '72276', name: 'Complete Mineral Complex', descriptionKey: 'shop.products.mineral', category: 'general', price: '19.99', image: 'https://assets.fullscript.io/Product/DF0083/400_front.png' },
+        { id: '89800', name: 'Telomere Pro', descriptionKey: 'shop.products.telomere', category: 'antiaging', price: '49.99', image: 'https://assets.fullscript.io/Product/ES0025/400_front.png' },
+        { id: '71597', name: 'Iron Liquid', descriptionKey: 'shop.products.iron', category: 'general', price: '14.99', image: 'https://assets.fullscript.io/Product/PU0903/400_front.png' },
+        { id: '105060', name: 'ProbioMax® Sb DF', descriptionKey: 'shop.products.probiomax', category: 'gut', price: '29.99', image: 'https://assets.fullscript.io/Product/XM0146/400_front.png' },
+        { id: '72404', name: 'DIM-Evail™', descriptionKey: 'shop.products.dimEvail', category: 'menopause', price: '24.99', image: 'https://assets.fullscript.io/Product/DF0045/400_front.png' }
     ];
 
     @ViewChildren('embedSlot') embedSlots!: QueryList<ElementRef<HTMLDivElement>>;
@@ -139,7 +146,7 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
                     itemOffered: {
                         '@type': 'Product',
                         name: p.name,
-                        image: `${origin}/assets/images/logos/Logo_720x192.jpg`,
+                        image: p.image,
                         category: 'Supplement',
                         brand: { '@type': 'Brand', name: 'Designs for Health' },
                         offers: {

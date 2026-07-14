@@ -185,7 +185,10 @@
     "title": "Modern Medicine for Modern Times",
     "subtitle": "Discover the principles of Functional Medicine",
     "btnBuy": "BUY ON AMAZON",
-    "bookUrl": "https://www.amazon.com/Modern-Medicine-Times-Functional-Handbook-ebook/dp/B0146UK2FM?ref_=ast_author_dp&th=1&psc=1"
+    "btnWatchVideo": "WATCH VIDEO",
+    "bookUrl": "https://www.amazon.com/Modern-Medicine-Times-Functional-Handbook-ebook/dp/B0146UK2FM?ref_=ast_author_dp&th=1&psc=1",
+    "videoTitle": "Book preview by Dr. Adonis Maiquez, MD",
+    "videoPlayLabel": "Play book preview video"
   },
   "meetDoctor": {
     "eyebrow": "Get to Know Your Doctor",

@@ -220,9 +220,37 @@
       <!-- Right Column: Book -->
       <div class="book-column" id="book">
         <div class="book-card-vertical">
-          <div class="book-image">
-            <img src="assets/images/book-dradonis.webp" alt="{{ 'bookSection.title' | translate }}" loading="lazy" width="400" height="520">
+          <!-- Book Preview Video — lazy-loaded, iframe only mounts on click to protect PageSpeed -->
+          <div class="book-video-wrapper" [class.playing]="bookVideoPlaying">
+            @if (bookVideoPlaying) {
+              <iframe
+                [src]="bookVideoEmbedUrl"
+                [title]="'bookSection.videoTitle' | translate"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            } @else {
+              <button
+                type="button"
+                class="book-video-thumb"
+                (click)="playBookVideo()"
+                [attr.aria-label]="'bookSection.videoPlayLabel' | translate">
+                <img
+                  src="https://img.youtube.com/vi/SyF9dvOCCKI/hqdefault.jpg"
+                  [alt]="'bookSection.videoTitle' | translate"
+                  loading="lazy"
+                  width="480" height="360">
+                <span class="book-video-play" aria-hidden="true">
+                  <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/>
+                    <path d="M45 24 27 14v20" fill="#fff"/>
+                  </svg>
+                </span>
+              </button>
+            }
           </div>
+
           <div class="book-content">
             <p class="book-eyebrow">
               <mat-icon>auto_stories</mat-icon>

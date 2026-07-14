@@ -185,7 +185,10 @@
     "title": "Medicina Moderna para Tiempos Modernos",
     "subtitle": "Descubre los principios de la Medicina Funcional",
     "btnBuy": "COMPRAR EN AMAZON",
-    "bookUrl": "https://www.amazon.com/Medicina-Moderna-para-Tiempos-Modernos-ebook/dp/B0159BQAU8?ref_=ast_author_dp&th=1&psc=1"
+    "btnWatchVideo": "VER VIDEO",
+    "bookUrl": "https://www.amazon.com/Medicina-Moderna-para-Tiempos-Modernos-ebook/dp/B0159BQAU8?ref_=ast_author_dp&th=1&psc=1",
+    "videoTitle": "Presentación del libro por el Dr. Adonis Maiquez, MD",
+    "videoPlayLabel": "Reproducir video del libro"
   },
   "meetDoctor": {
     "eyebrow": "Conoce a Tu Doctor",

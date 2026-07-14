@@ -123,6 +123,13 @@ $background-light: #F7FAFC;
         }
     }
 
+    .featured-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.15rem;
+    }
+
     .featured-btn {
         display: inline-flex;
         align-items: center;
@@ -135,13 +142,30 @@ $background-light: #F7FAFC;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+        text-decoration: none;
         box-shadow: 0 3px 10px rgba(129, 175, 90, 0.3);
-        margin-top: 0.15rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 
         mat-icon {
             font-size: 14px;
             width: 14px;
             height: 14px;
+        }
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 14px rgba(129, 175, 90, 0.4);
+        }
+
+        // YouTube red variant for the "Watch Video" action
+        &--video {
+            background: #ff0000;
+            box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3);
+
+            &:hover {
+                background: #d90000;
+                box-shadow: 0 5px 14px rgba(255, 0, 0, 0.4);
+            }
         }
     }
 

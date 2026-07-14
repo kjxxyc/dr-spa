@@ -5,9 +5,8 @@
 
         <!-- Featured Products (compact horizontal) -->
         <div class="featured-products">
-            <!-- Featured: Amazon Book -->
-            <a [href]="'bookSection.bookUrl' | translate" target="_blank" rel="noopener noreferrer"
-               class="featured-card featured-book">
+            <!-- Featured: Book (Amazon + YouTube video) -->
+            <article class="featured-card featured-book">
                 <div class="featured-image">
                     <img src="assets/images/book-dradonis.webp"
                          alt="{{ 'bookSection.title' | translate }}"
@@ -16,12 +15,20 @@
                 <div class="featured-content">
                     <h3>{{ 'bookSection.title' | translate }}</h3>
                     <p>{{ 'bookSection.subtitle' | translate }}</p>
-                    <span class="featured-btn">
-                        <mat-icon>shopping_cart</mat-icon>
-                        {{ 'bookSection.btnBuy' | translate }}
-                    </span>
+                    <div class="featured-actions">
+                        <a [href]="'bookSection.bookUrl' | translate" target="_blank" rel="noopener noreferrer"
+                           class="featured-btn">
+                            <mat-icon>shopping_cart</mat-icon>
+                            {{ 'bookSection.btnBuy' | translate }}
+                        </a>
+                        <a href="https://youtu.be/SyF9dvOCCKI" target="_blank" rel="noopener noreferrer"
+                           class="featured-btn featured-btn--video">
+                            <mat-icon>play_circle</mat-icon>
+                            {{ 'bookSection.btnWatchVideo' | translate }}
+                        </a>
+                    </div>
                 </div>
-            </a>
+            </article>
 
             <!-- Featured: Vagustim -->
             <a href="https://vagustim.io/" target="_blank" rel="noopener noreferrer"

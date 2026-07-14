@@ -210,19 +210,6 @@ $breakpoint-md: 968px;
 
   &.services-btn {
     flex: 1;
-    background: $primary-color;
-    color: $white;
-    box-shadow: 0 4px 16px rgba($primary-color, 0.3);
-
-    &:hover {
-      background: darken($primary-color, 8%);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba($primary-color, 0.4);
-    }
-  }
-
-  &.appointment-btn {
-    flex: 1;
     background: #1a1a2e;
     color: $white;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -231,6 +218,19 @@ $breakpoint-md: 968px;
       background: #16213e;
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &.appointment-btn {
+    flex: 1;
+    background: $primary-color;
+    color: $white;
+    box-shadow: 0 4px 16px rgba($primary-color, 0.3);
+
+    &:hover {
+      background: darken($primary-color, 8%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba($primary-color, 0.4);
     }
   }
 

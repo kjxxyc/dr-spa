@@ -43,6 +43,8 @@ export class VideosComponent implements OnInit, OnDestroy {
     ) {
         this.currentLang = this.translate.currentLang || 'en';
         const videoIds = [
+            // ── Featured: book preview ──
+            { id: 'SyF9dvOCCKI', titleKey: 'videos.list.v58' },
             // ── From old WordPress gallery (Page 1) ──
             { id: 'F-jWDkQGMRg', titleKey: 'videos.list.v11' },
             { id: 'ri-sLzyiJjU', titleKey: 'videos.list.v12' },
@@ -93,7 +95,6 @@ export class VideosComponent implements OnInit, OnDestroy {
             { id: 'R5GW_x2qDck', titleKey: 'videos.list.v55' },
             { id: 'xOPKQ6YRpyk', titleKey: 'videos.list.v56' },
             { id: 'MYbdQgPCEYg', titleKey: 'videos.list.v57' },
-            { id: 'SyF9dvOCCKI', titleKey: 'videos.list.v58' },
             { id: 'lWorK6csgvI', titleKey: 'videos.list.v59' },
             { id: '3fbZ5Rqar3I', titleKey: 'videos.list.v60' },
             { id: 'hysrzfqncCA', titleKey: 'videos.list.v61' },
