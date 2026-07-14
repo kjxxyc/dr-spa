@@ -11,6 +11,12 @@ $breakpoint-md: 768px;
 .cardecal-page {
   background-color: $background-light;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  > .developer-footer {
+    margin-top: auto;
+  }
 }
 
 // ===========================

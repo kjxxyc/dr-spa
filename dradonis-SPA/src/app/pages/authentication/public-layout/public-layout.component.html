@@ -72,6 +72,21 @@
         </div>
       </button>
 
+      <!-- CTA Button (mobile/tablet only) — compact icon variant + attention bubble -->
+      <div class="mobile-cta-wrapper">
+        <button
+          mat-icon-button
+          class="mobile-cta-header"
+          (click)="openAppointment()"
+          [attr.aria-label]="'header.cta' | translate"
+          [attr.title]="'header.cta' | translate">
+          <mat-icon>event</mat-icon>
+        </button>
+        <span class="mobile-cta-bubble" aria-hidden="true">
+          {{ 'header.ctaBubble' | translate }}
+        </span>
+      </div>
+
       <!-- Hamburger Menu Button (mobile/tablet only) -->
       <!-- Inline SVGs because `menu` and `close` glyphs are not included in
            the subsetted Material Icons font shipped at /assets/fonts/. -->
