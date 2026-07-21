@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map, shareReplay } from 'rxjs';
+import { BUILD_VERSION } from '../../build-version';
 
 export interface Article {
   id: number;
@@ -23,7 +24,7 @@ export class ArticleService {
 
   getArticles(): Observable<Article[]> {
     if (!this.articles$) {
-      this.articles$ = this.http.get<Article[]>('/assets/data/articles.json').pipe(
+      this.articles$ = this.http.get<Article[]>(`/assets/data/articles.json?v=${BUILD_VERSION}`).pipe(
         map(articles => {
           // Sort by date descending
           return articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

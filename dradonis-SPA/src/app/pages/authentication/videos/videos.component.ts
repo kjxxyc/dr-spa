@@ -175,22 +175,36 @@ export class VideosComponent implements OnInit, OnDestroy {
 
     private buildJsonLd(lang: 'en' | 'es', url: string): Record<string, unknown> {
         const origin = this.seo.origin;
+        const isEs = lang === 'es';
+        const descriptionTemplate = isEs
+            ? (title: string) => `${title}. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.`
+            : (title: string) => `${title}. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.`;
         return {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
             '@id': `${url}#video-list`,
-            itemListElement: this.videos.map((v, i) => ({
-                '@type': 'ListItem',
-                position: i + 1,
-                item: {
-                    '@type': 'VideoObject',
-                    name: v.titleKey,
-                    thumbnailUrl: `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`,
-                    embedUrl: `https://www.youtube.com/embed/${v.id}`,
-                    uploadDate: '2024-01-01',
-                    publisher: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
-                },
-            })),
+            itemListElement: this.videos.map((v, i) => {
+                const title = this.translate.instant(v.titleKey);
+                return {
+                    '@type': 'ListItem',
+                    position: i + 1,
+                    item: {
+                        '@type': 'VideoObject',
+                        name: title,
+                        description: descriptionTemplate(title),
+                        thumbnailUrl: [
+                            `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`,
+                            `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`,
+                            `https://img.youtube.com/vi/${v.id}/mqdefault.jpg`,
+                        ],
+                        embedUrl: `https://www.youtube.com/embed/${v.id}`,
+                        contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
+                        uploadDate: '2024-01-01T00:00:00-05:00',
+                        inLanguage: lang,
+                        publisher: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
+                    },
+                };
+            }),
         };
     }
 }

@@ -17,16 +17,32 @@ import {
 } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import {
+  MissingTranslationHandler,
+  MissingTranslationHandlerParams,
+  TranslateLoader,
+  TranslateModule,
+} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BUILD_VERSION } from './build-version';
 
 
 
 //Import all material modules
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+// `?v=<build id>` busts browser/CDN caches on every deploy so a stale
+// translations file can never miss newly added keys.
 export function HttpLoaderFactory(http: HttpClient): any {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/', `.json?v=${BUILD_VERSION}`);
+}
+
+// If a key is ever missing anyway (stale cache edge case, typo), render
+// nothing instead of exposing the raw key (e.g. "HEADER.CTABUBBLE") to users.
+export class EmptyMissingTranslationHandler implements MissingTranslationHandler {
+  handle(_params: MissingTranslationHandlerParams): string {
+    return '';
+  }
 }
 
 export const appConfig: ApplicationConfig = {
@@ -54,6 +70,10 @@ export const appConfig: ApplicationConfig = {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,
           deps: [HttpClient],
+        },
+        missingTranslationHandler: {
+          provide: MissingTranslationHandler,
+          useClass: EmptyMissingTranslationHandler,
         },
       })
     ),
