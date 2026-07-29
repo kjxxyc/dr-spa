@@ -18,7 +18,7 @@
           <input type="text" formControlName="fullName" style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; color: #334155; box-sizing: border-box; outline: none; transition: border-color 0.2s;" [placeholder]="'John Smith'" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
         </div>
         <div *ngIf="appointmentForm.get('fullName')?.touched && appointmentForm.get('fullName')?.invalid" style="color: #ef4444; font-size: 12px; margin-top: 6px; display: flex; align-items: center; gap: 4px;">
-          <mat-icon style="font-size: 14px; width: 14px; height: 14px;">error_outline</mat-icon> Required field.
+          <mat-icon style="font-size: 14px; width: 14px; height: 14px;">error_outline</mat-icon> {{ 'appointmentPage.requiredField' | translate }}
         </div>
       </div>
       <div style="flex: 1;">
@@ -30,7 +30,7 @@
           <input type="tel" formControlName="phone" (input)="onPhoneInput($event)" style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; color: #334155; box-sizing: border-box; outline: none; transition: border-color 0.2s;" placeholder="(305) 555-0123" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
         </div>
         <div *ngIf="appointmentForm.get('phone')?.touched && appointmentForm.get('phone')?.invalid" style="color: #ef4444; font-size: 12px; margin-top: 6px; display: flex; align-items: center; gap: 4px;">
-          <mat-icon style="font-size: 14px; width: 14px; height: 14px;">error_outline</mat-icon> Required field.
+          <mat-icon style="font-size: 14px; width: 14px; height: 14px;">error_outline</mat-icon> {{ 'appointmentPage.requiredField' | translate }}
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@
         <input type="email" formControlName="email" style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; color: #334155; box-sizing: border-box; outline: none; transition: border-color 0.2s;" placeholder="john@example.com" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'">
       </div>
       <div *ngIf="appointmentForm.get('email')?.touched && appointmentForm.get('email')?.invalid" style="color: #ef4444; font-size: 12px; margin-top: 6px; display: flex; align-items: center; gap: 4px;">
-        <mat-icon style="font-size: 14px; width: 14px; height: 14px;">error_outline</mat-icon> Valid email is required.
+        <mat-icon style="font-size: 14px; width: 14px; height: 14px;">error_outline</mat-icon> {{ 'appointmentPage.validEmail' | translate }}
       </div>
     </div>
 
@@ -71,9 +71,9 @@
       <label style="display: block; margin-bottom: 8px; font-weight: 700; font-size: 13px; color: #334155;">
         {{ 'appointmentModal.reason' | translate }} <span style="color: #ef4444;">*</span>
       </label>
-      <textarea formControlName="reason" rows="2" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; color: #334155; box-sizing: border-box; resize: vertical; outline: none; transition: border-color 0.2s;" placeholder="Briefly describe what you need help with..." onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
+      <textarea formControlName="reason" rows="2" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; color: #334155; box-sizing: border-box; resize: vertical; outline: none; transition: border-color 0.2s;" [placeholder]="'appointmentPage.reasonPlaceholder' | translate" onfocus="this.style.borderColor='#2563eb'" onblur="this.style.borderColor='#cbd5e1'"></textarea>
       <div *ngIf="appointmentForm.get('reason')?.touched && appointmentForm.get('reason')?.invalid" style="color: #ef4444; font-size: 12px; margin-top: 6px; display: flex; align-items: center; gap: 4px;">
-        <mat-icon style="font-size: 14px; width: 14px; height: 14px;">error_outline</mat-icon> Please provide a reason for the appointment.
+        <mat-icon style="font-size: 14px; width: 14px; height: 14px;">error_outline</mat-icon> {{ 'appointmentPage.requiredField' | translate }}
       </div>
     </div>
 

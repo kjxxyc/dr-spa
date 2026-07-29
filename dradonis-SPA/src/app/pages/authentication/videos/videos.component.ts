@@ -164,16 +164,26 @@ export class VideosComponent implements OnInit, OnDestroy {
                 keywords: 'Dr. Adonis videos, functional medicine testimonials Miami, Dr. Adonis Maiquez reviews, patient stories functional medicine, functional medicine education',
             };
 
-        this.seo.apply({
-            ...config,
-            url,
-            lang,
-            ogType: 'website',
-            jsonLd: this.buildJsonLd(lang, url),
+        // translate.get() waits for the translation file to finish loading —
+        // instant() on first render returns raw keys (or empty strings), which
+        // Google then indexes as the video name ("videos.list.v11" in GSC).
+        const titleKeys = this.videos.map(v => v.titleKey);
+        this.translate.get(titleKeys).subscribe((titles: Record<string, string>) => {
+            this.seo.apply({
+                ...config,
+                url,
+                lang,
+                ogType: 'website',
+                jsonLd: this.buildJsonLd(lang, url, titles),
+            });
         });
     }
 
-    private buildJsonLd(lang: 'en' | 'es', url: string): Record<string, unknown> {
+    private buildJsonLd(
+        lang: 'en' | 'es',
+        url: string,
+        titles: Record<string, string>,
+    ): Record<string, unknown> {
         const origin = this.seo.origin;
         const isEs = lang === 'es';
         const descriptionTemplate = isEs
@@ -184,7 +194,7 @@ export class VideosComponent implements OnInit, OnDestroy {
             '@type': 'ItemList',
             '@id': `${url}#video-list`,
             itemListElement: this.videos.map((v, i) => {
-                const title = this.translate.instant(v.titleKey);
+                const title = titles[v.titleKey] || v.titleKey;
                 return {
                     '@type': 'ListItem',
                     position: i + 1,

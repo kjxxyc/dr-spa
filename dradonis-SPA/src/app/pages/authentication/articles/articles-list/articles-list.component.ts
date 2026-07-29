@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { ArticleService, Article } from '../../../../core/services/article.service';
 import { MatIconModule } from '@angular/material/icon';
 import { SeoService } from '../../../../shared/seo/seo.service';
@@ -14,17 +15,19 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './articles-list.component.html',
   styleUrl: './articles-list.component.scss'
 })
-export class ArticlesListComponent implements OnInit {
+export class ArticlesListComponent implements OnInit, OnDestroy {
   articles: Article[] = [];
   filteredArticles: Article[] = [];
   displayedArticles: Article[] = [];
-  
+
   pageSize = 12;
   currentPage = 1;
   hasMore = false;
 
   searchText = '';
   selectedLanguage: 'all' | 'en' | 'es' = 'all';
+
+  private langSub?: Subscription;
 
   constructor(
     private articleService: ArticleService,
@@ -38,20 +41,8 @@ export class ArticlesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.seo.apply({
-      title: 'Blog & Articles - Dr. Adonis Maiquez',
-      description: 'Insights on functional medicine, wellness, hormones, and longevity by Dr. Adonis.',
-      url: this.seo.absoluteUrl('/articles'),
-      lang: 'es',
-      ogType: 'website',
-      jsonLd: {
-        '@context': 'https://schema.org',
-        '@type': 'Blog',
-        'name': 'Dr. Adonis Blog',
-        'description': 'Insights on functional medicine, wellness, hormones, and longevity by Dr. Adonis.',
-        'url': this.seo.absoluteUrl('/articles')
-      }
-    });
+    this.applySeo();
+    this.langSub = this.translate.onLangChange.subscribe(() => this.applySeo());
 
     this.articleService.getArticles().subscribe(data => {
       this.articles = data;
@@ -60,7 +51,37 @@ export class ArticlesListComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
+    this.langSub?.unsubscribe();
     this.seo.reset();
+  }
+
+  private applySeo(): void {
+    const url = this.seo.absoluteUrl('/articles');
+    const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
+    const isEs = lang === 'es';
+    const config = isEs
+      ? {
+        title: 'Blog y Artículos - Dr. Adonis Maiquez',
+        description: 'Perspectivas sobre medicina funcional, bienestar, hormonas y longevidad por el Dr. Adonis.',
+      }
+      : {
+        title: 'Blog & Articles - Dr. Adonis Maiquez',
+        description: 'Insights on functional medicine, wellness, hormones, and longevity by Dr. Adonis.',
+      };
+
+    this.seo.apply({
+      ...config,
+      url,
+      lang,
+      ogType: 'website',
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'Blog',
+        'name': 'Dr. Adonis Blog',
+        'description': config.description,
+        'url': url
+      }
+    });
   }
 
   onFilterChange(): void {

@@ -27,9 +27,16 @@
         <h2>{{ lang === 'es' ? 'Tratamientos Destacados' : 'Featured Treatments' }}</h2>
         <ul>
           <li><a routerLink="/cardecal">Dr. Adonis Clinic (Cardecal)</a></li>
+          <li><a routerLink="/telemedicine">{{ 'telemedicinePage.title' | translate }}</a></li>
           <li><a routerLink="/men-wellness">{{ 'servicesPromo.tadalafil.title' | translate }}</a></li>
           <li><a routerLink="/vitamins-prescription">{{ 'servicesPromo.vitamins.title' | translate }}</a></li>
-          <li><a routerLink="/exosomes">Regenerative Exosomes</a></li>
+          <li>
+            <a [routerLink]="['/articles', lang === 'es'
+                ? 'exosomas-y-reduccion-de-la-inflamacion-una-nueva-esperanza'
+                : 'exosomes-and-inflammation-reduction-a-new-hope']">
+              {{ lang === 'es' ? 'Exosomas Regenerativos' : 'Regenerative Exosomes' }}
+            </a>
+          </li>
         </ul>
       </section>
 

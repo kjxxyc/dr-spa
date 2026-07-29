@@ -77,6 +77,17 @@ export const AuthenticationRoutes: Routes = [
               ),
           },
           {
+            path: 'telemedicine',
+            loadComponent: () =>
+              import('./telemedicine/telemedicine.component').then(
+                (m) => m.TelemedicineComponent
+              ),
+          },
+          {
+            path: 'teleconsulta',
+            redirectTo: 'telemedicine',
+          },
+          {
             path: 'tools/bmi-calculator',
             loadComponent: () =>
               import('./tools/bmi-calculator/bmi-calculator.component').then(

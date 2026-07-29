@@ -61,7 +61,7 @@
                    [min]="ageMin" [max]="ageMax" step="1"
                    inputmode="numeric"
                    [attr.aria-label]="'bmr.yourAge' | translate">
-            <span class="bmi-unit-suffix">años</span>
+            <span class="bmi-unit-suffix">{{ 'bmr.yearsSuffix' | translate }}</span>
           </div>
           <input type="range"
                  class="bmi-slider"

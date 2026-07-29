@@ -28,6 +28,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/meet-doctor"/>
   </url>
   <url>
+    <loc>https://dradonis.com/telemedicine</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/telemedicine"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/telemedicine"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/telemedicine"/>
+  </url>
+  <url>
     <loc>https://dradonis.com/men-wellness</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -863,6 +872,24 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/el-poder-de-los-peptidos-aprobados-por-la-fda"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/articles/proteina-despues-de-los-40-envejecimiento-saludable</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/protein-after-40-healthy-aging"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/proteina-despues-de-los-40-envejecimiento-saludable"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/proteina-despues-de-los-40-envejecimiento-saludable"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/articles/protein-after-40-healthy-aging</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/protein-after-40-healthy-aging"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/proteina-despues-de-los-40-envejecimiento-saludable"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/protein-after-40-healthy-aging"/>
   </url>
   <url>
     <loc>https://dradonis.com/makeanappointment</loc>

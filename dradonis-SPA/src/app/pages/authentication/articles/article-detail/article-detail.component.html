@@ -7,7 +7,7 @@
           <line x1="19" y1="12" x2="5" y2="12"></line>
           <polyline points="12 19 5 12 12 5"></polyline>
         </svg>
-        Back to Articles
+        {{ 'articlesPage.backToArticles' | translate }}
       </a>
       <span class="article-meta-date">{{ article.date | date:'longDate' }}</span>
       <h1 class="article-main-title" [innerHTML]="article.title"></h1>
@@ -54,6 +54,6 @@
 
 <ng-template #loading>
   <div class="loading-container">
-    <p>Loading article...</p>
+    <p>{{ 'articlesPage.loading' | translate }}</p>
   </div>
 </ng-template>

@@ -2,8 +2,8 @@
   <section class="articles-hero">
     <div class="articles-hero-content">
       <p class="articles-eyebrow">DR. ADONIS BLOG</p>
-      <h1>Recent Articles</h1>
-      <p class="articles-hero-subtitle">Insights on functional medicine, wellness, hormones, and longevity.</p>
+      <h1>{{ 'articlesPage.title' | translate }}</h1>
+      <p class="articles-hero-subtitle">{{ 'articlesPage.subtitle' | translate }}</p>
       
       <div class="articles-filters">
         <div class="search-box">
@@ -12,13 +12,13 @@
             type="text" 
             [(ngModel)]="searchText" 
             (ngModelChange)="onFilterChange()" 
-            placeholder="Search articles..."
+            [placeholder]="'articlesPage.searchPlaceholder' | translate"
           >
         </div>
         
         <div class="lang-filter">
           <select [(ngModel)]="selectedLanguage" (ngModelChange)="onFilterChange()">
-            <option value="all">All Languages</option>
+            <option value="all">{{ 'articlesPage.allLanguages' | translate }}</option>
             <option value="en">English</option>
             <option value="es">Español</option>
           </select>
@@ -38,7 +38,7 @@
             <span class="article-date">{{ article.date | date:'longDate' }}</span>
             <h2 class="article-title" [innerHTML]="article.title"></h2>
             <div class="article-excerpt" [innerHTML]="article.excerpt"></div>
-            <span class="article-read-more">Read More <mat-icon>arrow_forward</mat-icon></span>
+            <span class="article-read-more">{{ 'articlesPage.readMore' | translate }} <mat-icon>arrow_forward</mat-icon></span>
           </div>
         </a>
       </article>
@@ -46,7 +46,7 @@
 
     <div class="load-more-container" *ngIf="hasMore">
       <button class="btn-load-more" (click)="loadMore()">
-        Load More Articles
+        {{ 'articlesPage.loadMore' | translate }}
       </button>
     </div>
   </section>
