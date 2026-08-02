@@ -1,4 +1,26 @@
-import { Routes } from '@angular/router';
+import { Routes, UrlMatchResult, UrlSegment } from '@angular/router';
+
+/**
+ * Matches both /videos and /videos/:slug with a single route config so the
+ * VideosComponent instance is REUSED when navigating between videos (keeps
+ * the search text, avoids re-rendering the whole page, and lets the featured
+ * player swap in place). Two separate route entries would destroy/recreate
+ * the component on every card click.
+ */
+export function videosMatcher(segments: UrlSegment[]): UrlMatchResult | null {
+  if (
+    segments.length >= 1 &&
+    segments.length <= 2 &&
+    segments[0].path === 'videos'
+  ) {
+    const posParams: { [key: string]: UrlSegment } = {};
+    if (segments.length === 2) {
+      posParams['slug'] = segments[1];
+    }
+    return { consumed: segments, posParams };
+  }
+  return null;
+}
 
 export const AuthenticationRoutes: Routes = [
   {
@@ -31,6 +53,13 @@ export const AuthenticationRoutes: Routes = [
             loadComponent: () =>
               import('./shop/shop.component').then(
                 (m) => m.ShopComponent
+              ),
+          },
+          {
+            path: 'shop/:slug',
+            loadComponent: () =>
+              import('./shop/product-detail/product-detail.component').then(
+                (m) => m.ProductDetailComponent
               ),
           },
           {
@@ -70,7 +99,8 @@ export const AuthenticationRoutes: Routes = [
               ),
           },
           {
-            path: 'videos',
+            // /videos and /videos/:slug — see videosMatcher above.
+            matcher: videosMatcher,
             loadComponent: () =>
               import('./videos/videos.component').then(
                 (m) => m.VideosComponent

@@ -76,6 +76,10 @@
 
           <div class="service-card-detail" [@expandState]="expandedIds.includes(s.id) ? 'expanded' : 'collapsed'">
             <p class="service-description" [innerHTML]="'services.list.' + s.id + '.description' | translate"></p>
+            <a *ngIf="s.id === 'telemedicine'" routerLink="/telemedicine" class="service-btn telemedicine-link">
+              <mat-icon>videocam</mat-icon>
+              {{ 'services.btnTelemedicine' | translate }}
+            </a>
             <a href="javascript:void(0)" (click)="openAppointment()" class="service-btn primary">
               <mat-icon>calendar_today</mat-icon>
               {{ 'services.btnAppointment' | translate }}

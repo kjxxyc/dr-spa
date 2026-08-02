@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -8,10 +9,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../../shared/seo/seo.service';
+import { VideoCatalogItem, VideoService } from '../../../core/services/video.service';
 
-export interface VideoItem {
-    id: string;
-    titleKey: string;
+/** Catalog entry enriched with the sanitized embed URL for the player. */
+export interface VideoItem extends VideoCatalogItem {
     embedUrl: SafeResourceUrl;
 }
 
@@ -21,6 +22,7 @@ export interface VideoItem {
     imports: [
         CommonModule,
         RouterModule,
+        FormsModule,
         MatButtonModule,
         MatIconModule,
         TranslateModule,
@@ -31,95 +33,108 @@ export interface VideoItem {
 })
 export class VideosComponent implements OnInit, OnDestroy {
     private langSub?: Subscription;
+    private routeSub?: Subscription;
     videos: VideoItem[] = [];
+    filteredVideos: VideoItem[] = [];
     selectedVideo: VideoItem | null = null;
     currentLang = 'en';
+    searchText = '';
+
+    /** titleKey -> translated title for the active language (loaded async). */
+    private titles: Record<string, string> = {};
+    private titlesLoaded = false;
+    /** Slug currently in the URL (null on the plain /videos gallery). */
+    private activeSlug: string | null = null;
+    /** Set on card click so the route handler scrolls the player into view. */
+    private pendingScroll = false;
 
     constructor(
         private sanitizer: DomSanitizer,
         private dialog: MatDialog,
         private translate: TranslateService,
         private seo: SeoService,
+        private route: ActivatedRoute,
+        private router: Router,
+        private videoService: VideoService,
     ) {
         this.currentLang = this.translate.currentLang || 'en';
-        const videoIds = [
-            // ── Featured: book preview ──
-            { id: 'SyF9dvOCCKI', titleKey: 'videos.list.v58' },
-            // ── From old WordPress gallery (Page 1) ──
-            { id: 'F-jWDkQGMRg', titleKey: 'videos.list.v11' },
-            { id: 'ri-sLzyiJjU', titleKey: 'videos.list.v12' },
-            { id: 'M32eBbD-axE', titleKey: 'videos.list.v13' },
-            { id: 'kAeswsB3bkk', titleKey: 'videos.list.v14' },
-            { id: 'C5TrmOI9TMY', titleKey: 'videos.list.v15' },
-            { id: 'NQbmfUu8UHc', titleKey: 'videos.list.v16' },
-            { id: 'r5dT3iNlqXU', titleKey: 'videos.list.v17' },
-            { id: 'iyK-EPbfBlU', titleKey: 'videos.list.v18' },
-            { id: 'GKZR_XiSIbQ', titleKey: 'videos.list.v19' },
-            { id: 'QD-m7tjkLSs', titleKey: 'videos.list.v20' },
-            { id: '8ROj00ttX3w', titleKey: 'videos.list.v21' },
-            { id: 'RTKw2uPrk3s', titleKey: 'videos.list.v22' },
-            { id: 'i2-KROsfOqM', titleKey: 'videos.list.v23' },
-            { id: 'GcCt2jpYZpQ', titleKey: 'videos.list.v24' },
-            { id: 'wTn0WuYyN1o', titleKey: 'videos.list.v25' },
-            // ── Spanish-only versions from YouTube channel ──
-            { id: 'brnZdPm7mk8', titleKey: 'videos.list.v26' },
-            { id: 'cWrF75jkQhA', titleKey: 'videos.list.v27' },
-            { id: 'E-qqKxVesoc', titleKey: 'videos.list.v28' },
-            { id: 'QbQFOirN93I', titleKey: 'videos.list.v29' },
-            { id: 'WisYn539OSk', titleKey: 'videos.list.v30' },
-            { id: 'cgGzztfNPKw', titleKey: 'videos.list.v31' },
-            { id: 'K0YRurRVaEk', titleKey: 'videos.list.v32' },
-            { id: 'XMFAZB0dc20', titleKey: 'videos.list.v33' },
-            { id: 'hFwbHwvHoqU', titleKey: 'videos.list.v34' },
-            { id: 'L5VVQJ0lncM', titleKey: 'videos.list.v35' },
-            { id: 'v8pqsvpFkZI', titleKey: 'videos.list.v36' },
-            { id: 'rcaDR0VmaHY', titleKey: 'videos.list.v37' },
-            { id: 'yapm1IN6ObI', titleKey: 'videos.list.v38' },
-            { id: 'HROxqwf09rU', titleKey: 'videos.list.v39' },
-            { id: 'jaWlrZQ3Jyw', titleKey: 'videos.list.v40' },
-            // ── From old WordPress gallery (Pages 2 & 3) ──
-            { id: 'CpcAM1wrkPQ', titleKey: 'videos.list.v41' },
-            { id: 'wB3GeOd6S6E', titleKey: 'videos.list.v42' },
-            { id: 'zTAlspcuWkE', titleKey: 'videos.list.v43' },
-            { id: 'Kjke1NwQdXU', titleKey: 'videos.list.v44' },
-            { id: 'hWtgtv8O3NM', titleKey: 'videos.list.v45' },
-            { id: 'NJ2wFogrjqg', titleKey: 'videos.list.v46' },
-            { id: '14SZvW-OrGw', titleKey: 'videos.list.v47' },
-            { id: 'POOENh8EfxQ', titleKey: 'videos.list.v48' },
-            { id: 'BOiX3WyyR6E', titleKey: 'videos.list.v49' },
-            { id: 'Rd0Xm7NM3ho', titleKey: 'videos.list.v50' },
-            { id: 'C9n90j9Y98U', titleKey: 'videos.list.v51' },
-            { id: 'GvSc1QB_0Ts', titleKey: 'videos.list.v52' },
-            { id: 'q_tkF0eeOeA', titleKey: 'videos.list.v53' },
-            { id: '79Rx5UkoF40', titleKey: 'videos.list.v54' },
-            { id: 'R5GW_x2qDck', titleKey: 'videos.list.v55' },
-            { id: 'xOPKQ6YRpyk', titleKey: 'videos.list.v56' },
-            { id: 'MYbdQgPCEYg', titleKey: 'videos.list.v57' },
-            { id: 'lWorK6csgvI', titleKey: 'videos.list.v59' },
-            { id: '3fbZ5Rqar3I', titleKey: 'videos.list.v60' },
-            { id: 'hysrzfqncCA', titleKey: 'videos.list.v61' },
-            { id: 'aM-fAwEvomw', titleKey: 'videos.list.v62' },
-            { id: 'gfV0Ye73jS0', titleKey: 'videos.list.v63' }
-        ];
 
         const pageOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://dradonis.com';
-        this.videos = videoIds.map(v => ({
+        this.videos = this.videoService.getVideos().map(v => ({
             ...v,
             embedUrl: this.sanitizer.bypassSecurityTrustResourceUrl(
                 `https://www.youtube.com/embed/${v.id}?enablejsapi=0&origin=${pageOrigin}&rel=0`
             )
         }));
 
+        this.filteredVideos = this.videos;
         this.selectedVideo = this.videos[0];
     }
 
-    selectVideo(video: VideoItem) {
-        this.selectedVideo = video;
-        // Scroll to top of featured player
-        const el = document.getElementById('featured-player');
-        if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    ngOnInit(): void {
+        // Deep link support: /videos?q=fibromyalgia pre-fills the search box.
+        const q = this.route.snapshot.queryParamMap.get('q');
+        if (q) {
+            this.searchText = q;
         }
+
+        this.loadTitles();
+        this.langSub = this.translate.onLangChange.subscribe(e => {
+            this.currentLang = e.lang;
+            this.loadTitles();
+        });
+
+        // Single subscription handles both /videos and /videos/:slug — the
+        // route uses a UrlMatcher so the component instance is reused and
+        // only the param changes when the user clicks another video.
+        this.routeSub = this.route.paramMap.subscribe(pm => {
+            const slug = pm.get('slug');
+            if (slug && !this.videos.some(v => v.slug === slug)) {
+                // Unknown slug (old/typo link) — fall back to the gallery.
+                this.router.navigate(['/videos'], { replaceUrl: true });
+                return;
+            }
+            this.activeSlug = slug;
+            this.selectedVideo = slug
+                ? this.videos.find(v => v.slug === slug)!
+                : this.videos[0];
+            if (this.titlesLoaded) {
+                this.applySeo();
+            }
+            if (this.pendingScroll && typeof document !== 'undefined') {
+                this.pendingScroll = false;
+                document.getElementById('featured-player')
+                    ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    }
+
+    ngOnDestroy(): void {
+        this.langSub?.unsubscribe();
+        this.routeSub?.unsubscribe();
+        this.seo.reset();
+    }
+
+    /** Card click: navigation happens via routerLink; we just flag the scroll. */
+    onCardClick(): void {
+        this.pendingScroll = true;
+    }
+
+    onSearchChange(): void {
+        this.applyFilter();
+        // Keep the search shareable: /videos?q=<term> (replaceUrl avoids
+        // polluting browser history on every keystroke).
+        this.router.navigate([], {
+            relativeTo: this.route,
+            queryParams: { q: this.searchText.trim() || null },
+            queryParamsHandling: 'merge',
+            replaceUrl: true,
+        });
+    }
+
+    clearSearch(): void {
+        this.searchText = '';
+        this.onSearchChange();
     }
 
     async openAppointment(): Promise<void> {
@@ -131,27 +146,82 @@ export class VideosComponent implements OnInit, OnDestroy {
         });
     }
 
-    ngOnInit(): void {
-        this.applySeo();
-        this.langSub = this.translate.onLangChange.subscribe(e => {
-            this.currentLang = e.lang;
+    /**
+     * translate.get() waits for the translation file to finish loading —
+     * instant() on first render returns raw keys, which Google then indexes
+     * as the video name ("videos.list.v11" in GSC).
+     */
+    private loadTitles(): void {
+        const titleKeys = this.videos.map(v => v.titleKey);
+        this.translate.get(titleKeys).subscribe((titles: Record<string, string>) => {
+            this.titles = titles;
+            this.titlesLoaded = true;
+            this.applyFilter();
             this.applySeo();
         });
     }
 
-    ngOnDestroy(): void {
-        this.langSub?.unsubscribe();
-        this.seo.reset();
+    /**
+     * Accent/case-insensitive filter over the translated title + slug words.
+     * The slug keeps English keywords searchable in the Spanish UI (and
+     * Spanish keywords for the Spanish-only videos) — mirrors what people
+     * type into Google, e.g. "fibromyalgia dr adonis".
+     */
+    applyFilter(): void {
+        const query = this.normalize(this.searchText.trim());
+        if (!query) {
+            this.filteredVideos = this.videos;
+            return;
+        }
+        const tokens = query.split(/\s+/);
+        this.filteredVideos = this.videos.filter(v => {
+            const title = this.titles[v.titleKey] || '';
+            const haystack = this.normalize(
+                `${title} ${v.slug.replace(/-/g, ' ')} dr adonis maiquez md video`
+            );
+            return tokens.every(t => haystack.includes(t));
+        });
+    }
+
+    private normalize(s: string): string {
+        return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     }
 
     /**
      * Videos page SEO — captures branded video searches + engagement signal
-     * via VideoObject schema. Tells Google about each embedded video.
+     * via VideoObject schema. On /videos/<slug> the selected video becomes
+     * the page's primary entity (own title/description/canonical), so Google
+     * can rank and deep-link each video for its topic.
      */
     private applySeo(): void {
-        const url = this.seo.absoluteUrl('/videos');
         const lang = (this.translate.currentLang as 'en' | 'es') || 'en';
         const isEs = lang === 'es';
+        const video = this.activeSlug
+            ? this.videos.find(v => v.slug === this.activeSlug)
+            : null;
+
+        if (video) {
+            const title = this.titles[video.titleKey] || video.titleKey;
+            const url = this.seo.absoluteUrl(`/videos/${video.slug}`);
+            this.seo.apply({
+                title: `${title} | Dr. Adonis Maiquez, MD`,
+                description: this.videoDescription(title, isEs),
+                keywords: isEs
+                    ? `${title}, Dr. Adonis, video medicina funcional Miami`
+                    : `${title}, Dr. Adonis, functional medicine video Miami`,
+                url,
+                lang,
+                ogType: 'website',
+                image: `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`,
+                jsonLd: [
+                    this.videoJsonLd(video, isEs),
+                    this.itemListJsonLd(isEs),
+                ],
+            });
+            return;
+        }
+
+        const url = this.seo.absoluteUrl('/videos');
         const config = isEs
             ? {
                 title: 'Videos & Testimonios | Dr. Adonis Maiquez Miami',
@@ -164,57 +234,56 @@ export class VideosComponent implements OnInit, OnDestroy {
                 keywords: 'Dr. Adonis videos, functional medicine testimonials Miami, Dr. Adonis Maiquez reviews, patient stories functional medicine, functional medicine education',
             };
 
-        // translate.get() waits for the translation file to finish loading —
-        // instant() on first render returns raw keys (or empty strings), which
-        // Google then indexes as the video name ("videos.list.v11" in GSC).
-        const titleKeys = this.videos.map(v => v.titleKey);
-        this.translate.get(titleKeys).subscribe((titles: Record<string, string>) => {
-            this.seo.apply({
-                ...config,
-                url,
-                lang,
-                ogType: 'website',
-                jsonLd: this.buildJsonLd(lang, url, titles),
-            });
+        this.seo.apply({
+            ...config,
+            url,
+            lang,
+            ogType: 'website',
+            jsonLd: this.itemListJsonLd(isEs),
         });
     }
 
-    private buildJsonLd(
-        lang: 'en' | 'es',
-        url: string,
-        titles: Record<string, string>,
-    ): Record<string, unknown> {
+    private videoDescription(title: string, isEs: boolean): string {
+        return isEs
+            ? `${title}. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.`
+            : `${title}. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.`;
+    }
+
+    private videoJsonLd(v: VideoItem, isEs: boolean): Record<string, unknown> {
         const origin = this.seo.origin;
-        const isEs = lang === 'es';
-        const descriptionTemplate = isEs
-            ? (title: string) => `${title}. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.`
-            : (title: string) => `${title}. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.`;
+        const title = this.titles[v.titleKey] || v.titleKey;
+        return {
+            '@context': 'https://schema.org',
+            '@type': 'VideoObject',
+            '@id': `${origin}/videos/${v.slug}#video`,
+            name: title,
+            description: this.videoDescription(title, isEs),
+            url: `${origin}/videos/${v.slug}`,
+            thumbnailUrl: [
+                `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`,
+                `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`,
+                `https://img.youtube.com/vi/${v.id}/mqdefault.jpg`,
+            ],
+            embedUrl: `https://www.youtube.com/embed/${v.id}`,
+            contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
+            uploadDate: '2024-01-01T00:00:00-05:00',
+            inLanguage: v.lang || 'en',
+            publisher: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
+        };
+    }
+
+    private itemListJsonLd(isEs: boolean): Record<string, unknown> {
+        const origin = this.seo.origin;
         return {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
-            '@id': `${url}#video-list`,
-            itemListElement: this.videos.map((v, i) => {
-                const title = titles[v.titleKey] || v.titleKey;
-                return {
-                    '@type': 'ListItem',
-                    position: i + 1,
-                    item: {
-                        '@type': 'VideoObject',
-                        name: title,
-                        description: descriptionTemplate(title),
-                        thumbnailUrl: [
-                            `https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`,
-                            `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`,
-                            `https://img.youtube.com/vi/${v.id}/mqdefault.jpg`,
-                        ],
-                        embedUrl: `https://www.youtube.com/embed/${v.id}`,
-                        contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
-                        uploadDate: '2024-01-01T00:00:00-05:00',
-                        inLanguage: lang,
-                        publisher: { '@type': 'Person', name: 'Dr. Adonis Maiquez, MD', '@id': `${origin}/#physician` },
-                    },
-                };
-            }),
+            '@id': `${origin}/videos#video-list`,
+            itemListElement: this.videos.map((v, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                url: `${origin}/videos/${v.slug}`,
+                item: this.videoJsonLd(v, isEs),
+            })),
         };
     }
 }

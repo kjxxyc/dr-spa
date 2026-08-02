@@ -242,6 +242,148 @@ $breakpoint-xs: 480px;
     }
 }
 
+// Header row of the grid: search box (first) + section title on one line
+.videos-grid-header {
+    max-width: 1200px;
+    margin: 0 auto 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    .section-title {
+        margin: 0;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+
+        .section-title {
+            text-align: center;
+            white-space: normal;
+        }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+// Mini search (mirrors the articles page search box, adapted to light bg)
+.videos-search {
+    flex: 1;
+    max-width: 520px;
+
+    @media (max-width: $breakpoint-md) {
+        max-width: none;
+    }
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .search-icon {
+        position: absolute;
+        left: 1rem;
+        color: $text-light;
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.8rem 3rem 0.8rem 3rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 99px;
+        font-size: 16px;
+        font-family: inherit;
+        color: $text-dark;
+        background: $white;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: $primary-green;
+            box-shadow: 0 0 0 3px rgba($primary-green, 0.15);
+        }
+
+        &::placeholder {
+            color: $text-light;
+        }
+    }
+
+    .clear-search {
+        position: absolute;
+        right: 0.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: transparent;
+        color: $text-light;
+        cursor: pointer;
+        padding: 0.3rem;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:hover {
+            color: $text-dark;
+            background: rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+
+.no-results {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 1rem 4rem;
+    color: $text-medium;
+
+    .no-results-icon {
+        width: 56px;
+        height: 56px;
+        color: $text-light;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 0 0 1.5rem;
+    }
+
+    .btn-clear-filter {
+        border: 2px solid $primary-green;
+        background: transparent;
+        color: $primary-green;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 0.6rem 1.5rem;
+        border-radius: 99px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: $primary-green;
+            color: $white;
+        }
+    }
+}
+
 .videos-grid {
     max-width: 1200px;
     margin: 0 auto;
@@ -270,6 +412,9 @@ $breakpoint-xs: 480px;
 
 .video-card {
     cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: inherit;
     border-radius: 12px;
     overflow: hidden;
     background: $white;

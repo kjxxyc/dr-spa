@@ -1,0 +1,142 @@
+<div class="product-detail-page" *ngIf="product as p">
+
+  <!-- Hero: core info + Fullscript buy widget (the widget IS the product image) -->
+  <section class="pd-hero">
+    <div class="pd-hero-info">
+      <div class="pd-info-topline">
+        <span class="pd-category">{{ 'shop.filter' + (p.category === 'general' ? 'General' : p.category === 'antiaging' ? 'Antiaging' : p.category === 'gut' ? 'Gut' : 'Menopause') | translate }}</span>
+        <a routerLink="/shop" class="pd-back-link">
+          <!-- arrow_forward espejado: el subset de iconos no incluye arrow_back -->
+          <mat-icon class="pd-mirror">arrow_forward</mat-icon>
+          {{ 'shop.detail.backToShop' | translate }}
+        </a>
+      </div>
+      <h1>{{ p.name }}</h1>
+      <p class="pd-brand">{{ 'shop.detail.byBrand' | translate }} <strong>{{ p.brand }}</strong></p>
+      <p class="pd-description">{{ p.descriptionKey | translate }}</p>
+
+      <div class="pd-benefits">
+        <h2>{{ 'shop.detail.benefitsTitle' | translate }}</h2>
+        <p class="pd-preline">{{ 'shop.details.' + p.detailKey + '.benefits' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="pd-buy-card">
+      <h2>{{ 'shop.detail.buyTitle' | translate }}</h2>
+      <!-- Fullscript oEmbed widget (live image + price + Buy button, store_slug dradonis) -->
+      <div class="pd-embed-wrap">
+        <div #embedSlot class="pd-embed-slot" [attr.aria-label]="p.name"></div>
+        <!-- Globo de atención al costado derecho del botón "View product" -->
+        <span class="pd-buy-bubble" aria-hidden="true">{{ 'shop.detail.buyBubble' | translate }}</span>
+      </div>
+      <p class="pd-buy-note">
+        <mat-icon>verified</mat-icon>
+        {{ 'shop.detail.buyNote' | translate }}
+      </p>
+    </div>
+  </section>
+
+  <!-- Ingredients / who is it for (collapsible, same pattern as services page) -->
+  <section class="pd-main">
+    <div class="pd-detail-cards">
+      <div class="pd-card" [class.expanded]="isExpanded('ingredients')">
+        <button type="button" class="pd-card-header" (click)="toggleSection('ingredients')"
+          [attr.aria-expanded]="isExpanded('ingredients')">
+          <span class="pd-card-icon"><mat-icon>science</mat-icon></span>
+          <span class="pd-card-title">{{ 'shop.detail.ingredientsTitle' | translate }}</span>
+          <mat-icon class="pd-card-chevron">arrow_drop_down</mat-icon>
+        </button>
+        <div class="pd-card-body" [@expandState]="isExpanded('ingredients') ? 'expanded' : 'collapsed'">
+          <p>{{ 'shop.details.' + p.detailKey + '.ingredients' | translate }}</p>
+        </div>
+      </div>
+      <div class="pd-card" [class.expanded]="isExpanded('whoFor')">
+        <button type="button" class="pd-card-header" (click)="toggleSection('whoFor')"
+          [attr.aria-expanded]="isExpanded('whoFor')">
+          <span class="pd-card-icon"><mat-icon>person</mat-icon></span>
+          <span class="pd-card-title">{{ 'shop.detail.whoForTitle' | translate }}</span>
+          <mat-icon class="pd-card-chevron">arrow_drop_down</mat-icon>
+        </button>
+        <div class="pd-card-body" [@expandState]="isExpanded('whoFor') ? 'expanded' : 'collapsed'">
+          <p>{{ 'shop.details.' + p.detailKey + '.whoFor' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related services & tools -->
+  <section class="pd-related" *ngIf="p.relatedLinks.length">
+    <h2 class="pd-section-title">{{ 'shop.detail.relatedServicesTitle' | translate }}</h2>
+    <div class="pd-links-row">
+      <a class="pd-link-chip" *ngFor="let link of p.relatedLinks" [routerLink]="link.route">
+        <mat-icon>{{ link.icon }}</mat-icon>
+        {{ link.labelKey | translate }}
+      </a>
+    </div>
+  </section>
+
+  <!-- Related articles -->
+  <section class="pd-related" *ngIf="relatedArticles.length">
+    <h2 class="pd-section-title">{{ 'shop.detail.relatedArticlesTitle' | translate }}</h2>
+    <div class="pd-articles-grid">
+      <a class="pd-article-card" *ngFor="let article of relatedArticles"
+         [routerLink]="['/articles', article.slug]">
+        <div class="pd-article-image">
+          <img [src]="article.imageUrl || 'assets/images/logos/Logo_720x192.jpg'" [alt]="article.title" loading="lazy">
+        </div>
+        <div class="pd-article-content">
+          <h3 [innerHTML]="article.title"></h3>
+          <span class="pd-article-more">{{ 'articlesPage.readMore' | translate }} <mat-icon>arrow_forward</mat-icon></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- More products -->
+  <section class="pd-related pd-related--more" *ngIf="suggestions.length">
+    <h2 class="pd-section-title">{{ 'shop.detail.moreProductsTitle' | translate }}</h2>
+    <div class="pd-more-grid">
+      <a class="pd-more-card" *ngFor="let s of suggestions" [routerLink]="['/shop', s.slug]">
+        <img [src]="s.image" [alt]="s.name" loading="lazy">
+        <h3>{{ s.name }}</h3>
+        <span class="pd-more-brand">{{ s.brand }}</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Related videos -->
+  <section class="pd-related pd-related--videos" *ngIf="p.relatedVideos.length">
+    <h2 class="pd-section-title">{{ 'shop.detail.relatedVideosTitle' | translate }}</h2>
+    <div class="pd-videos-grid">
+      <a class="pd-video-card" *ngFor="let video of p.relatedVideos"
+         [routerLink]="['/videos', video.slug]">
+        <div class="pd-video-thumb">
+          <img [src]="videoThumb(video)" [alt]="video.titleKey | translate" loading="lazy">
+          <mat-icon class="pd-play">play_circle_filled</mat-icon>
+        </div>
+        <h3>{{ video.titleKey | translate }}</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- Appointment CTA -->
+  <section class="pd-cta">
+    <div class="pd-cta-inner">
+      <h2>{{ 'shop.detail.ctaTitle' | translate }}</h2>
+      <p>{{ 'shop.detail.ctaText' | translate }}</p>
+      <div class="pd-cta-actions">
+        <a href="javascript:void(0)" (click)="openAppointment()" class="pd-cta-btn">
+          <mat-icon>calendar_today</mat-icon>
+          {{ 'shop.detail.ctaButton' | translate }}
+        </a>
+        <a href="tel:+13052047816" class="pd-cta-phone">
+          <mat-icon>phone</mat-icon>
+          (305) 204-7816
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <p class="pd-disclaimer">{{ 'shop.detail.disclaimer' | translate }}</p>
+
+</div>

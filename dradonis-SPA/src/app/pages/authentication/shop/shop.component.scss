@@ -254,6 +254,9 @@ $background-light: #F7FAFC;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     overflow: hidden;
+    // Toda la tarjeta navega al detalle (menos el iframe de Fullscript,
+    // cuyos clics no llegan aquí).
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
@@ -289,11 +292,35 @@ $background-light: #F7FAFC;
     // Doctor's custom description (BOTTOM side).
     .fs-desc {
         flex: 1 1 auto;
-        padding: 1rem 1.25rem 1.25rem;
+        padding: 1rem 1.25rem 0.5rem;
         font-size: 14px;
         color: $text-medium;
         line-height: 1.6;
         margin: 0;
+    }
+
+    // Deep link to /shop/<slug> (detail page with related content + CTA).
+    .fs-details-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin: 0 1.25rem 1.1rem;
+        font-size: 13px;
+        font-weight: 700;
+        color: $primary-green;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        mat-icon {
+            font-size: 17px;
+            width: 17px;
+            height: 17px;
+        }
+
+        &:hover {
+            color: $primary-green-dark;
+            text-decoration: underline;
+        }
     }
 }
 

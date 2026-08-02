@@ -232,7 +232,80 @@
       "telomere": "Telomere Pro: Favorece envejecimiento saludable. Ayuda a mantener la longitud telomérica contra el estrés y toxinas.",
       "iron": "Iron Liquid: Hierro líquido altamente biodisponible para el transporte de oxígeno. Fórmula vegetariana e hipoalergénica, de gran sabor.",
       "probiomax": "ProbioMax® Sb DF: Equilibrio intestinal, inmunidad y regularidad. Con 4 cepas probióticas y S. boulardii.",
-      "dimEvail": "DIM-Evail™: Equilibra estrógenos naturalmente, aporta protección antioxidante avanzada y promueve la salud celular y ósea."
+      "femguard": "FemGuard + Balance™: Apoyo hormonal femenino integral — DIM, black cohosh y sauzgatillo (vitex) para promover un metabolismo saludable del estrógeno, confort mensual y equilibrio hormonal."
+    },
+    "viewDetails": "Ver detalles",
+    "detail": {
+      "breadcrumbHome": "Inicio",
+      "breadcrumbShop": "Tienda",
+      "byBrand": "de",
+      "backToShop": "Volver a la tienda",
+      "buyTitle": "Compra a través del dispensario del Dr. Adonis",
+      "buyNote": "Las compras se procesan en Fullscript, el dispensario profesional seguro. Cada pedido apoya la práctica del Dr. Adonis.",
+      "buyBubble": "¡Compra aquí!",
+      "benefitsTitle": "Beneficios principales",
+      "ingredientsTitle": "Qué contiene",
+      "whoForTitle": "¿Para quién es?",
+      "relatedArticlesTitle": "Lectura recomendada",
+      "relatedVideosTitle": "El Dr. Adonis lo explica en video",
+      "relatedServicesTitle": "Servicios y herramientas relacionados",
+      "moreProductsTitle": "Más suplementos recomendados por el Dr. Adonis",
+      "ctaTitle": "¿No estás seguro de si este suplemento es para ti?",
+      "ctaText": "Los suplementos funcionan mejor dentro de un plan personalizado. Agenda una consulta con el Dr. Adonis — presencial en Miami o por telemedicina — y recibe un protocolo diseñado según tus laboratorios, síntomas y objetivos.",
+      "ctaButton": "AGENDAR UNA CITA",
+      "disclaimer": "Estas declaraciones no han sido evaluadas por la Administración de Alimentos y Medicamentos (FDA). Estos productos no están destinados a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Consulta siempre a tu médico antes de iniciar cualquier suplemento."
+    },
+    "details": {
+      "pectasol": {
+        "benefits": "• Apoya la función celular saludable y el envejecimiento saludable\n• Ayuda a mantener niveles saludables de galectina-3\n• Apoya las vías naturales de desintoxicación del cuerpo\n• Suave para uso diario a largo plazo",
+        "ingredients": "PectaSol®, pectina cítrica modificada — una pectina de bajo peso molecular, investigada clínicamente, que tu cuerpo sí puede absorber.",
+        "whoFor": "Adultos que buscan apoyo celular y de desintoxicación con base científica como parte de un plan de longevidad. El Dr. Adonis suele combinarlo con una evaluación de medicina funcional."
+      },
+      "mitochondrial": {
+        "benefits": "• Apoya la producción de energía mitocondrial (ATP)\n• Ayuda a combatir la fatiga ocasional y la baja energía\n• Protección antioxidante para células de alto rendimiento\n• Apoya un metabolismo saludable",
+        "ingredients": "CoQ10, acetil-L-carnitina, ácido alfa-lipoico, creatina, vitaminas B y cofactores botánicos que alimentan el ciclo de energía mitocondrial.",
+        "whoFor": "Adultos con rutinas exigentes, baja energía o enfoque en el envejecimiento saludable que quieren apoyar sus motores celulares."
+      },
+      "uricAcid": {
+        "benefits": "• Ayuda a mantener niveles de ácido úrico ya dentro del rango normal\n• Apoya el metabolismo saludable de las purinas\n• Apoyo antioxidante para articulaciones y riñones\n• Complementa la hidratación y los cambios de dieta",
+        "ingredients": "Extracto de cereza ácida, quercetina, vitamina C y botánicos tradicionalmente usados para apoyar el metabolismo del ácido úrico.",
+        "whoFor": "Adultos que vigilan su ácido úrico como parte de su salud metabólica — idealmente junto a laboratorios y un plan personalizado del Dr. Adonis."
+      },
+      "omegavail": {
+        "benefits": "• Omega-3 EPA + DHA concentrados para corazón y cerebro\n• Apoya niveles saludables de triglicéridos ya en rango\n• Apoya el confort articular y una respuesta inflamatoria equilibrada\n• Forma triglicérida TruTG™ de absorción superior",
+        "ingredients": "Aceite de pescado de alta potencia con EPA y DHA en su forma triglicérida natural, destilado molecularmente para su pureza.",
+        "whoFor": "Adultos que apoyan su salud cardiovascular, cerebral y articular — especialmente quienes comen poco pescado graso."
+      },
+      "broccoli": {
+        "benefits": "• Precursores de sulforafano para la defensa antioxidante\n• Apoya las enzimas naturales de desintoxicación\n• Apoya la salud celular y el envejecimiento saludable\n• Actividad antioxidante amigable con la piel",
+        "ingredients": "Extracto de semilla de brócoli estandarizado en glucorafanina (SGS™), el precursor natural del sulforafano.",
+        "whoFor": "Adultos interesados en protección celular, apoyo a la desintoxicación y estrategias científicas de envejecimiento saludable."
+      },
+      "mineral": {
+        "benefits": "• Minerales totalmente quelados de absorción superior\n• Apoya huesos, músculos, nervios y función tiroidea\n• Ayuda a reponer minerales agotados por el estrés y la dieta moderna\n• Fórmula libre de hierro",
+        "ingredients": "Magnesio, zinc, selenio, cromo y otros oligoelementos quelados con bisglicinato, más yodo para el apoyo tiroideo.",
+        "whoFor": "Adultos con dietas restrictivas, estrés alto o deficiencias confirmadas por laboratorio — una base en muchos protocolos del Dr. Adonis."
+      },
+      "telomere": {
+        "benefits": "• Apoyo nutricional para el mantenimiento de los telómeros\n• Protección antioxidante para el ADN y las células\n• Complementa un estilo de vida enfocado en longevidad\n• Fórmula científica de envejecimiento saludable",
+        "ingredients": "Extracto de astrágalo y antioxidantes específicos estudiados por su papel en la biología de los telómeros.",
+        "whoFor": "Adultos enfocados en longevidad y optimización de la edad biológica, idealmente guiados por biomarcadores del envejecimiento."
+      },
+      "iron": {
+        "benefits": "• Hierro líquido suave y bien tolerado\n• Apoya glóbulos rojos saludables y el transporte de oxígeno\n• Ayuda a combatir la fatiga ligada a una baja ingesta de hierro\n• Fácil de dosificar y absorber",
+        "ingredients": "Hierro en forma líquida biodisponible, formulado para ser suave con el estómago.",
+        "whoFor": "Adultos con hierro bajo confirmado por laboratorio — especialmente mujeres con ciclos abundantes, fatiga persistente o caída de cabello. Confirma tus niveles con el Dr. Adonis antes de suplementar."
+      },
+      "probiomax": {
+        "benefits": "• Saccharomyces boulardii — una levadura probiótica resistente\n• Apoya un microbioma intestinal equilibrado\n• Ayuda a mantener la función saludable de la barrera intestinal\n• Sobrevive a antibióticos y al ácido estomacal",
+        "ingredients": "Saccharomyces boulardii verificada por ADN, libre de lácteos, en cápsula estable sin refrigeración.",
+        "whoFor": "Adultos que apoyan su salud intestinal durante viajes, después de antibióticos o como parte de un protocolo de sanación intestinal con el Dr. Adonis."
+      },
+      "femguard": {
+        "benefits": "• Apoya el metabolismo saludable del estrógeno y el equilibrio hormonal\n• Ayuda con el confort mensual y los cambios de ánimo del SPM\n• Acompaña a la mujer en la perimenopausia y menopausia\n• Apoyo antioxidante para la salud mamaria y celular",
+        "ingredients": "DIM (diindolilmetano), black cohosh, sauzgatillo (vitex) y vitaminas B activadas — una mezcla sinérgica para el apoyo hormonal femenino.",
+        "whoFor": "Mujeres con SPM, ciclos irregulares, perimenopausia o síntomas de dominancia estrogénica; se complementa naturalmente con la evaluación hormonal del Dr. Adonis."
+      }
     }
   },
   "services": {
@@ -240,6 +313,7 @@
     "heroTitle": "Nuestros Servicios",
     "heroSubtitle": "Soluciones de salud integrales y personalizadas diseñadas para tratar la causa raíz — no solo los síntomas.",
     "btnAppointment": "HAGA UNA CITA",
+    "btnTelemedicine": "VEA CÓMO FUNCIONA LA TELECONSULTA",
     "btnSeeMore": "Ver más",
     "btnSeeLess": "Ver menos",
     "badgeFeatured": "Destacado",
@@ -339,6 +413,9 @@
     "heroSubtitle": "Contenido educativo sobre Medicina Funcional, hormonas, pérdida de peso y bienestar del Dr. Adonis.",
     "subscribeCta": "SUSCRÍBETE EN YOUTUBE",
     "gridTitle": "Videos Más Populares",
+    "searchPlaceholder": "Buscar videos (fibromialgia, menopausia, tiroides...)",
+    "noResults": "Ningún video coincide con tu búsqueda.",
+    "clearSearch": "Limpiar búsqueda",
     "viewMoreArticles": "VER MÁS ARTÍCULOS",
     "list": {
       "v11": "Fibromialgia / Fatiga Crónica / Agotamiento Adrenal",
@@ -532,7 +609,19 @@
     "ctaTitle": "¿Listo para su primera teleconsulta?",
     "ctaText": "Agende hoy y reciba atención médica de clase mundial desde la comodidad de su hogar.",
     "ctaBtn": "HAGA UNA CITA",
-    "ctaWhatsapp": "ESCRÍBANOS POR WHATSAPP"
+    "ctaWhatsapp": "ESCRÍBANOS POR WHATSAPP",
+    "seoTitle": "Medicina funcional en línea, sin fronteras",
+    "seoP1": "La telemedicina del Dr. Adonis lleva la medicina funcional y regenerativa más allá del consultorio. Desde Miami, Florida, el Dr. Adonis Maiquez atiende por videollamada a pacientes en todo Estados Unidos y el extranjero que buscan un enfoque médico integral: revisión de laboratorios, optimización hormonal, pérdida de peso, longevidad y bienestar general. Cada teleconsulta mantiene el mismo estándar que una visita presencial: historia clínica completa, análisis de sus síntomas y un plan de tratamiento personalizado.",
+    "seoP2": "Una consulta virtual elimina traslados, salas de espera y limitaciones geográficas sin sacrificar calidad médica. Si vive fuera de Florida, viaja con frecuencia o simplemente prefiere la comodidad de su casa, la teleconsulta le da acceso directo a un especialista en medicina funcional con más de 20 años de experiencia, en español o inglés. Las órdenes de laboratorio se emiten a la clínica o aseguradora de su preferencia y las recetas se envían a su farmacia cuando están médicamente indicadas.",
+    "faqTitle": "Preguntas frecuentes sobre la teleconsulta",
+    "faq1Q": "¿Atiende pacientes fuera de Estados Unidos?",
+    "faq1A": "Sí. El Dr. Adonis atiende por teleconsulta a pacientes dentro y fuera de Estados Unidos. Solo necesita conexión a internet y un dispositivo con cámara.",
+    "faq2Q": "¿Puede recetar medicamentos por telemedicina?",
+    "faq2A": "Sí. Cuando está médicamente indicado, el Dr. Adonis emite recetas como parte de su teleconsulta.",
+    "faq3Q": "¿En qué idiomas se atiende?",
+    "faq3A": "Las consultas están disponibles en español e inglés.",
+    "faq4Q": "¿Qué pasa si necesito laboratorios?",
+    "faq4A": "El Dr. Adonis emite la orden de laboratorio a la clínica o al seguro de su preferencia, y los resultados se revisan juntos en su consulta."
   },
   "appointmentPage": {
     "specialty": "Especialista en Medicina Funcional y Regenerativa",
@@ -551,13 +640,20 @@
     "developer": "Desarrollado por"
   },
   "whatsappMessages": {
-    "default": "Hola, deseo información",
+    "default": "Hola, vi su sitio web y deseo más información",
     "services": "Hola, deseo más información sobre sus servicios",
     "shop": "Hola, estoy interesado en sus productos de salud",
+    "product": "Hola, estoy interesado en el producto {{product}} y deseo más información",
     "cardecal": "Hola, vi su anuncio del cardecal y estoy interesado en un test de salud",
     "videos": "Hola, vi sus videos y deseo más información",
+    "video": "Hola, vi su video \"{{video}}\" y deseo más información",
     "vitamins": "Hola, estoy interesado en una prescripción de vitaminas",
     "menwellness": "Hola, estoy interesado en comprar tadalafil-cialis",
-    "appointment": "Hola, me gustaría agendar una cita con el Dr. Adonis"
+    "appointment": "Hola, me gustaría agendar una cita con el Dr. Adonis",
+    "telemedicine": "Hola, deseo agendar una teleconsulta con el Dr. Adonis",
+    "articles": "Hola, leí sus artículos y deseo más información",
+    "article": "Hola, leí su artículo \"{{article}}\" y deseo más información",
+    "tools": "Hola, usé sus calculadoras de salud y deseo una consulta",
+    "meetDoctor": "Hola, deseo conocer más sobre el Dr. Adonis y agendar una cita"
   }
 }

@@ -49,6 +49,15 @@
   </section>
 
   <!-- ============================ -->
+  <!-- SEO PROSE BLOCK -->
+  <!-- ============================ -->
+  <section class="tele-seo-section">
+    <h2>{{ 'telemedicinePage.seoTitle' | translate }}</h2>
+    <p>{{ 'telemedicinePage.seoP1' | translate }}</p>
+    <p>{{ 'telemedicinePage.seoP2' | translate }}</p>
+  </section>
+
+  <!-- ============================ -->
   <!-- REQUIREMENTS + PRIVACY -->
   <!-- ============================ -->
   <section class="tele-needs-section">
@@ -64,6 +73,22 @@
         <mat-icon>lock</mat-icon>
         {{ 'telemedicinePage.privacyNote' | translate }}
       </p>
+    </div>
+  </section>
+
+  <!-- ============================ -->
+  <!-- FAQ (native accordion — content stays in the DOM for SEO) -->
+  <!-- ============================ -->
+  <section class="tele-faq-section">
+    <h2>{{ 'telemedicinePage.faqTitle' | translate }}</h2>
+    <div class="tele-faq-list">
+      <details class="tele-faq-item" *ngFor="let faq of faqs; let first = first" [open]="first">
+        <summary>
+          <span>{{ faq.q | translate }}</span>
+          <mat-icon aria-hidden="true">arrow_drop_down</mat-icon>
+        </summary>
+        <p>{{ faq.a | translate }}</p>
+      </details>
     </div>
   </section>
 

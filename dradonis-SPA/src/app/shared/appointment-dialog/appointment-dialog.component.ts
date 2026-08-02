@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -43,7 +44,8 @@ export class AppointmentDialogComponent implements OnInit {
     private snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<AppointmentDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -51,9 +53,25 @@ export class AppointmentDialogComponent implements OnInit {
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
       phone: ['', [Validators.required, Validators.pattern(/^[0-9]{7,15}$/)]],
-      appointmentType: ['inPerson', Validators.required],
+      appointmentType: [this.defaultAppointmentType(), Validators.required],
       reason: ['', Validators.required],
     });
+  }
+
+  /**
+   * Pre-selects the appointment type: explicit dialog data wins, otherwise
+   * opening the dialog from the telemedicine page defaults to "telemedicine"
+   * (any trigger — hero CTA, final CTA, header button, or mobile bubble).
+   */
+  private defaultAppointmentType(): 'inPerson' | 'telemedicine' {
+    if (this.data?.appointmentType === 'telemedicine' || this.data?.appointmentType === 'inPerson') {
+      return this.data.appointmentType;
+    }
+    const url = this.router.url;
+    if (url.startsWith('/telemedicine') || url.startsWith('/teleconsulta')) {
+      return 'telemedicine';
+    }
+    return 'inPerson';
   }
 
   onPhoneInput(event: Event): void {

@@ -232,7 +232,80 @@
       "telomere": "Telomere Pro: Supports healthy aging. Helps maintain telomere length against stress and toxins.",
       "iron": "Iron Liquid: Highly bioavailable liquid iron for oxygen transport. Vegetarian, hypoallergenic, great-tasting.",
       "probiomax": "ProbioMax® Sb DF: Gut balance, immunity, and regularity. With 4 probiotic strains and S. boulardii.",
-      "dimEvail": "DIM-Evail™: Natural Estrogen Balance provides advanced antioxidant protection and promotes cellular and bone health."
+      "femguard": "FemGuard + Balance™: Comprehensive female hormone support — DIM, black cohosh, and chaste tree (vitex) to promote healthy estrogen metabolism, monthly comfort, and hormonal balance."
+    },
+    "viewDetails": "View details",
+    "detail": {
+      "breadcrumbHome": "Home",
+      "breadcrumbShop": "Shop",
+      "byBrand": "by",
+      "backToShop": "Back to shop",
+      "buyTitle": "Buy through Dr. Adonis's dispensary",
+      "buyNote": "Purchases are processed by Fullscript, the secure professional-grade dispensary. Every order supports Dr. Adonis's practice.",
+      "buyBubble": "Buy here!",
+      "benefitsTitle": "Key benefits",
+      "ingredientsTitle": "What's inside",
+      "whoForTitle": "Who is it for?",
+      "relatedArticlesTitle": "Recommended reading",
+      "relatedVideosTitle": "Watch Dr. Adonis explain",
+      "relatedServicesTitle": "Related services & tools",
+      "moreProductsTitle": "More doctor-curated supplements",
+      "ctaTitle": "Not sure if this supplement is right for you?",
+      "ctaText": "Supplements work best inside a personalized plan. Schedule a consultation with Dr. Adonis — in person in Miami or by telemedicine — and get a protocol designed around your labs, symptoms, and goals.",
+      "ctaButton": "MAKE AN APPOINTMENT",
+      "disclaimer": "These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease. Always consult your physician before starting any supplement."
+    },
+    "details": {
+      "pectasol": {
+        "benefits": "• Supports healthy cellular function and healthy aging\n• Helps maintain healthy galectin-3 levels\n• Supports the body's natural detoxification pathways\n• Gentle enough for long-term daily use",
+        "ingredients": "PectaSol® modified citrus pectin — a clinically researched, low-molecular-weight citrus pectin your body can actually absorb.",
+        "whoFor": "Adults looking for evidence-based cellular health and detox support as part of a longevity-focused plan. Dr. Adonis often pairs it with a functional medicine evaluation."
+      },
+      "mitochondrial": {
+        "benefits": "• Supports mitochondrial energy (ATP) production\n• Helps fight occasional fatigue and low energy\n• Antioxidant protection for hard-working cells\n• Supports a healthy metabolism",
+        "ingredients": "CoQ10, acetyl-L-carnitine, alpha-lipoic acid, creatine, B vitamins, and botanical cofactors that feed the mitochondrial energy cycle.",
+        "whoFor": "Adults with demanding routines, low energy, or a focus on healthy aging who want to support their cellular engines."
+      },
+      "uricAcid": {
+        "benefits": "• Helps maintain uric acid levels already within the normal range\n• Supports healthy purine metabolism\n• Antioxidant support for joints and kidneys\n• Complements hydration and dietary changes",
+        "ingredients": "Tart cherry extract, quercetin, vitamin C, and botanicals traditionally used to support uric acid metabolism.",
+        "whoFor": "Adults watching their uric acid as part of their metabolic health — ideally alongside lab testing and a personalized plan from Dr. Adonis."
+      },
+      "omegavail": {
+        "benefits": "• Concentrated EPA + DHA omega-3s for heart and brain\n• Supports healthy triglyceride levels already in range\n• Supports joint comfort and a balanced inflammatory response\n• TruTG™ triglyceride form for superior absorption",
+        "ingredients": "High-potency fish oil delivering EPA and DHA in their natural triglyceride form, molecularly distilled for purity.",
+        "whoFor": "Adults supporting cardiovascular, brain, and joint health — especially those who eat little fatty fish."
+      },
+      "broccoli": {
+        "benefits": "• Sulforaphane precursors for antioxidant defense\n• Supports the body's natural detoxification enzymes\n• Supports cellular health and healthy aging\n• Skin-friendly antioxidant activity",
+        "ingredients": "Broccoli seed extract standardized to glucoraphanin (SGS™), the natural precursor of sulforaphane.",
+        "whoFor": "Adults interested in cellular protection, detox support, and science-driven healthy-aging strategies."
+      },
+      "mineral": {
+        "benefits": "• Fully chelated minerals for superior absorption\n• Supports bones, muscles, nerves, and thyroid function\n• Helps replenish minerals depleted by stress and modern diets\n• Iron-free formula",
+        "ingredients": "Bisglycinate-chelated magnesium, zinc, selenium, chromium, and other trace minerals, plus iodine for thyroid support.",
+        "whoFor": "Adults with restrictive diets, high stress, or lab-confirmed mineral gaps — a foundation in many of Dr. Adonis's protocols."
+      },
+      "telomere": {
+        "benefits": "• Nutritional support for telomere maintenance\n• Antioxidant protection for DNA and cells\n• Complements a longevity-focused lifestyle\n• Science-driven healthy-aging formula",
+        "ingredients": "Astragalus extract and targeted antioxidants studied for their role in supporting telomere biology.",
+        "whoFor": "Adults focused on longevity and biological-age optimization, ideally guided by biomarkers of aging."
+      },
+      "iron": {
+        "benefits": "• Gentle, well-tolerated liquid iron\n• Supports healthy red blood cells and oxygen transport\n• Helps fight fatigue linked to low iron intake\n• Easy to dose and absorb",
+        "ingredients": "Iron in a bioavailable liquid form, formulated to be gentle on the stomach.",
+        "whoFor": "Adults with lab-confirmed low iron — especially women with heavy cycles, persistent fatigue, or hair shedding. Confirm your levels with Dr. Adonis before supplementing."
+      },
+      "probiomax": {
+        "benefits": "• Saccharomyces boulardii — a resilient probiotic yeast\n• Supports a balanced gut microbiome\n• Helps maintain healthy intestinal barrier function\n• Survives antibiotics and stomach acid",
+        "ingredients": "DNA-verified Saccharomyces boulardii in a dairy-free, shelf-stable capsule.",
+        "whoFor": "Adults supporting gut health during travel, after antibiotics, or as part of a gut-healing protocol with Dr. Adonis."
+      },
+      "femguard": {
+        "benefits": "• Supports healthy estrogen metabolism and hormone balance\n• Helps with monthly comfort and PMS-related mood swings\n• Supports women through perimenopause and menopause\n• Antioxidant support for breast and cellular health",
+        "ingredients": "DIM (diindolylmethane), black cohosh, chaste tree (vitex), and activated B vitamins — a synergistic blend for female hormone support.",
+        "whoFor": "Women dealing with PMS, cycle irregularity, perimenopause, or estrogen-dominance symptoms; pairs naturally with Dr. Adonis's hormone evaluation."
+      }
     }
   },
   "services": {
@@ -240,6 +313,7 @@
     "heroTitle": "Our Services",
     "heroSubtitle": "Comprehensive, personalized healthcare solutions designed to treat the root cause — not just the symptoms.",
     "btnAppointment": "MAKE AN APPOINTMENT",
+    "btnTelemedicine": "SEE HOW TELEMEDICINE WORKS",
     "btnSeeMore": "See more",
     "btnSeeLess": "See less",
     "badgeFeatured": "Featured",
@@ -339,6 +413,9 @@
     "heroSubtitle": "Educational content on Functional Medicine, hormones, weight loss, and wellness from Dr. Adonis.",
     "subscribeCta": "SUBSCRIBE ON YOUTUBE",
     "gridTitle": "Most Popular Videos",
+    "searchPlaceholder": "Search videos (fibromyalgia, menopause, thyroid...)",
+    "noResults": "No videos match your search.",
+    "clearSearch": "Clear search",
     "viewMoreArticles": "VIEW MORE ARTICLES",
     "list": {
       "v11": "Fibromyalgia / Chronic Fatigue / Adrenal Exhaustion",
@@ -532,7 +609,19 @@
     "ctaTitle": "Ready for your first teleconsultation?",
     "ctaText": "Schedule today and receive world-class medical care from the comfort of your home.",
     "ctaBtn": "MAKE AN APPOINTMENT",
-    "ctaWhatsapp": "MESSAGE US ON WHATSAPP"
+    "ctaWhatsapp": "MESSAGE US ON WHATSAPP",
+    "seoTitle": "Online functional medicine, without borders",
+    "seoP1": "Dr. Adonis's telemedicine practice takes functional and regenerative medicine beyond the office. From Miami, Florida, Dr. Adonis Maiquez sees patients by video call across the United States and abroad who are looking for a comprehensive medical approach: lab review, hormone optimization, weight loss, longevity, and overall wellness. Every teleconsultation is held to the same standard as an in-person visit: a complete medical history, a thorough review of your symptoms, and a personalized treatment plan.",
+    "seoP2": "A virtual visit removes commutes, waiting rooms, and geographic limits without sacrificing medical quality. If you live outside Florida, travel frequently, or simply prefer the comfort of your home, a teleconsultation gives you direct access to a functional medicine specialist with more than 20 years of experience, in English or Spanish. Lab orders are sent to the clinic or insurance provider of your choice, and prescriptions go to your pharmacy when medically indicated.",
+    "faqTitle": "Telemedicine Frequently Asked Questions",
+    "faq1Q": "Do you see patients outside the United States?",
+    "faq1A": "Yes. Dr. Adonis sees patients via teleconsultation both inside and outside the United States. All you need is an internet connection and a device with a camera.",
+    "faq2Q": "Can you prescribe medication via telemedicine?",
+    "faq2A": "Yes. When medically indicated, Dr. Adonis issues prescriptions as part of your teleconsultation.",
+    "faq3Q": "In which languages are consultations available?",
+    "faq3A": "Consultations are available in English and Spanish.",
+    "faq4Q": "What if I need lab work?",
+    "faq4A": "Dr. Adonis sends the lab order to the clinic or insurance provider of your choice, and the results are reviewed together during your visit."
   },
   "appointmentPage": {
     "specialty": "Functional & Regenerative Medicine Specialist",
@@ -551,13 +640,20 @@
     "developer": "Developed by"
   },
   "whatsappMessages": {
-    "default": "Hello, I would like more information",
+    "default": "Hello, I saw your website and would like more information",
     "services": "Hello, I would like more information about your services",
     "shop": "Hello, I am interested in your health products",
+    "product": "Hello, I am interested in the product {{product}} and would like more information",
     "cardecal": "Hello, I saw your cardecal ad and I am interested in a health test",
     "videos": "Hello, I saw your videos and would like more information",
+    "video": "Hello, I watched your video \"{{video}}\" and would like more information",
     "vitamins": "Hello, I am interested in a vitamin prescription",
     "menwellness": "Hello, I am interested in buying tadalafil-cialis",
-    "appointment": "Hello, I would like to schedule an appointment with Dr. Adonis"
+    "appointment": "Hello, I would like to schedule an appointment with Dr. Adonis",
+    "telemedicine": "Hello, I would like to schedule a teleconsultation with Dr. Adonis",
+    "articles": "Hello, I read your articles and would like more information",
+    "article": "Hello, I read your article \"{{article}}\" and would like more information",
+    "tools": "Hello, I used your health calculators and would like a consultation",
+    "meetDoctor": "Hello, I would like to know more about Dr. Adonis and schedule an appointment"
   }
 }

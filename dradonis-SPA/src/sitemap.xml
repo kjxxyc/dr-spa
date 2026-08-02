@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://dradonis.com/</loc>
     <lastmod>2026-05-24</lastmod>
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://dradonis.com/shop</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop"/>
@@ -73,13 +73,898 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop"/>
   </url>
   <url>
+    <loc>https://dradonis.com/shop/pectasol-modified-citrus-pectin</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/pectasol-modified-citrus-pectin"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/pectasol-modified-citrus-pectin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/pectasol-modified-citrus-pectin"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/shop/mitochondrial-nrg</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/mitochondrial-nrg"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/mitochondrial-nrg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/mitochondrial-nrg"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/shop/uric-acid-formula</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/uric-acid-formula"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/uric-acid-formula"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/uric-acid-formula"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/shop/omegavail-hi-po-fish-oil</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/omegavail-hi-po-fish-oil"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/omegavail-hi-po-fish-oil"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/omegavail-hi-po-fish-oil"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/shop/broccoli-seed-extract</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/broccoli-seed-extract"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/broccoli-seed-extract"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/broccoli-seed-extract"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/shop/complete-mineral-complex</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/complete-mineral-complex"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/complete-mineral-complex"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/complete-mineral-complex"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/shop/telomere-pro</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/telomere-pro"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/telomere-pro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/telomere-pro"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/shop/iron-liquid</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/iron-liquid"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/iron-liquid"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/iron-liquid"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/shop/probiomax-sb-df</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/probiomax-sb-df"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/probiomax-sb-df"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/probiomax-sb-df"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/shop/femguard-balance</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/shop/femguard-balance"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/shop/femguard-balance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/shop/femguard-balance"/>
+  </url>
+  <url>
     <loc>https://dradonis.com/videos</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/book-modern-medicine-for-modern-times</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/book-modern-medicine-for-modern-times"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/book-modern-medicine-for-modern-times"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/book-modern-medicine-for-modern-times"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/SyF9dvOCCKI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Book 'Modern Medicine for Modern Times' by Dr. Adonis Maiquez</video:title>
+      <video:description>Book 'Modern Medicine for Modern Times' by Dr. Adonis Maiquez. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/SyF9dvOCCKI</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/fibromyalgia-chronic-fatigue-adrenal-exhaustion</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/fibromyalgia-chronic-fatigue-adrenal-exhaustion"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/fibromyalgia-chronic-fatigue-adrenal-exhaustion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/fibromyalgia-chronic-fatigue-adrenal-exhaustion"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/F-jWDkQGMRg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Fibromyalgia / Chronic Fatigue / Adrenal Exhaustion</video:title>
+      <video:description>Fibromyalgia / Chronic Fatigue / Adrenal Exhaustion. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/F-jWDkQGMRg</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/lab-tests-in-functional-medicine</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/lab-tests-in-functional-medicine"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/lab-tests-in-functional-medicine"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/lab-tests-in-functional-medicine"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/ri-sLzyiJjU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Lab tests in Functional Medicine</video:title>
+      <video:description>Lab tests in Functional Medicine. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ri-sLzyiJjU</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/hormone-replacement-menopause-alzheimers-risk</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/hormone-replacement-menopause-alzheimers-risk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/hormone-replacement-menopause-alzheimers-risk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/hormone-replacement-menopause-alzheimers-risk"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/M32eBbD-axE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Hormone replacement after menopause reduce risk Alzheimer's</video:title>
+      <video:description>Hormone replacement after menopause reduce risk Alzheimer's. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/M32eBbD-axE</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/trophic-theory-of-alzheimers</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/trophic-theory-of-alzheimers"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/trophic-theory-of-alzheimers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/trophic-theory-of-alzheimers"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/kAeswsB3bkk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Trophic theory of Alzheimer's</video:title>
+      <video:description>Trophic theory of Alzheimer's. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/kAeswsB3bkk</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/dangers-of-too-low-cholesterol</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/dangers-of-too-low-cholesterol"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/dangers-of-too-low-cholesterol"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/dangers-of-too-low-cholesterol"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/C5TrmOI9TMY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Dangers of too low cholesterol</video:title>
+      <video:description>Dangers of too low cholesterol. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/C5TrmOI9TMY</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/weight-rebound-after-diets-hormones</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/weight-rebound-after-diets-hormones"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/weight-rebound-after-diets-hormones"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/weight-rebound-after-diets-hormones"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/NQbmfUu8UHc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Rebound after diets hormones</video:title>
+      <video:description>Rebound after diets hormones. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/NQbmfUu8UHc</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/neuroplasticity-and-neurogenesis</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/neuroplasticity-and-neurogenesis"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/neuroplasticity-and-neurogenesis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/neuroplasticity-and-neurogenesis"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/r5dT3iNlqXU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Neuroplasticity and Neurogenesis</video:title>
+      <video:description>Neuroplasticity and Neurogenesis. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/r5dT3iNlqXU</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/the-5-hormones-in-menopause</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/the-5-hormones-in-menopause"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/the-5-hormones-in-menopause"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/the-5-hormones-in-menopause"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/iyK-EPbfBlU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>The 5 hormones in menopause</video:title>
+      <video:description>The 5 hormones in menopause. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/iyK-EPbfBlU</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/semaglutide-for-weight-loss</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/semaglutide-for-weight-loss"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/semaglutide-for-weight-loss"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/semaglutide-for-weight-loss"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/GKZR_XiSIbQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Semaglutide for weight loss</video:title>
+      <video:description>Semaglutide for weight loss. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/GKZR_XiSIbQ</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/when-does-menopause-start</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/when-does-menopause-start"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/when-does-menopause-start"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/when-does-menopause-start"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/QD-m7tjkLSs/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>When does Menopause start</video:title>
+      <video:description>When does Menopause start. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/QD-m7tjkLSs</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/sibo-small-intestinal-bacterial-overgrowth</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/sibo-small-intestinal-bacterial-overgrowth"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/sibo-small-intestinal-bacterial-overgrowth"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/sibo-small-intestinal-bacterial-overgrowth"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/8ROj00ttX3w/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>SIBO</video:title>
+      <video:description>SIBO. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/8ROj00ttX3w</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/the-asia-syndrome</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/the-asia-syndrome"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/the-asia-syndrome"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/the-asia-syndrome"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/RTKw2uPrk3s/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>THE ASIA SYNDROME</video:title>
+      <video:description>THE ASIA SYNDROME. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/RTKw2uPrk3s</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/alzheimers-prevention-toxins</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/alzheimers-prevention-toxins"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/alzheimers-prevention-toxins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/alzheimers-prevention-toxins"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/i2-KROsfOqM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Alzheimer's prevention toxins</video:title>
+      <video:description>Alzheimer's prevention toxins. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/i2-KROsfOqM</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/neat-calories-burned-without-exercise</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/neat-calories-burned-without-exercise"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/neat-calories-burned-without-exercise"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/neat-calories-burned-without-exercise"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/GcCt2jpYZpQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>NEAT Calories burnt without exercise</video:title>
+      <video:description>NEAT Calories burnt without exercise. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/GcCt2jpYZpQ</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/thyroid-health</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/thyroid-health"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/thyroid-health"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/thyroid-health"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/wTn0WuYyN1o/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Thyroid</video:title>
+      <video:description>Thyroid. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/wTn0WuYyN1o</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/fibromialgia-fatiga-cronica</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/fibromialgia-fatiga-cronica"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/fibromialgia-fatiga-cronica"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/fibromialgia-fatiga-cronica"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/brnZdPm7mk8/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Fibromialgia Fatiga Crónica</video:title>
+      <video:description>Fibromialgia Fatiga Crónica. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/brnZdPm7mk8</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/examenes-de-laboratorio-medicina-funcional</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/examenes-de-laboratorio-medicina-funcional"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/examenes-de-laboratorio-medicina-funcional"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/examenes-de-laboratorio-medicina-funcional"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/cWrF75jkQhA/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Análisis laboratorios en Medicina Funcional / Dr. Adonis</video:title>
+      <video:description>Análisis laboratorios en Medicina Funcional / Dr. Adonis. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/cWrF75jkQhA</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/sibo-sobrecrecimiento-bacteriano-intestinal</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/sibo-sobrecrecimiento-bacteriano-intestinal"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/sibo-sobrecrecimiento-bacteriano-intestinal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/sibo-sobrecrecimiento-bacteriano-intestinal"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/E-qqKxVesoc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Sobrecrecimiento bacteriano intestino delgado</video:title>
+      <video:description>Sobrecrecimiento bacteriano intestino delgado. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/E-qqKxVesoc</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/terapia-hormonal-menopausia-riesgo-alzheimer</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/terapia-hormonal-menopausia-riesgo-alzheimer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/terapia-hormonal-menopausia-riesgo-alzheimer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/terapia-hormonal-menopausia-riesgo-alzheimer"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/QbQFOirN93I/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Terapia hormonal en la menopausia reduce riesgo de Alzheimer</video:title>
+      <video:description>Terapia hormonal en la menopausia reduce riesgo de Alzheimer. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/QbQFOirN93I</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/teoria-trofica-del-alzheimer</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/teoria-trofica-del-alzheimer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/teoria-trofica-del-alzheimer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/teoria-trofica-del-alzheimer"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/WisYn539OSk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Teoría trófica del Alzheimer</video:title>
+      <video:description>Teoría trófica del Alzheimer. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/WisYn539OSk</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/peligros-del-colesterol-muy-bajo</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/peligros-del-colesterol-muy-bajo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/peligros-del-colesterol-muy-bajo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/peligros-del-colesterol-muy-bajo"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/cgGzztfNPKw/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Peligros del colesterol muy bajo</video:title>
+      <video:description>Peligros del colesterol muy bajo. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/cgGzztfNPKw</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/rebote-despues-de-las-dietas</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/rebote-despues-de-las-dietas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/rebote-despues-de-las-dietas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/rebote-despues-de-las-dietas"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/K0YRurRVaEk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Rebote después de las dietas</video:title>
+      <video:description>Rebote después de las dietas. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/K0YRurRVaEk</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/neurogenesis-y-neuroplasticidad</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/neurogenesis-y-neuroplasticidad"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/neurogenesis-y-neuroplasticidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/neurogenesis-y-neuroplasticidad"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/XMFAZB0dc20/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Neurogénesis y Neuroplasticidad</video:title>
+      <video:description>Neurogénesis y Neuroplasticidad. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/XMFAZB0dc20</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/las-5-hormonas-en-la-menopausia</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/las-5-hormonas-en-la-menopausia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/las-5-hormonas-en-la-menopausia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/las-5-hormonas-en-la-menopausia"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/hFwbHwvHoqU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Las 5 hormonas en la menopausia</video:title>
+      <video:description>Las 5 hormonas en la menopausia. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/hFwbHwvHoqU</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/bajar-de-peso-con-semaglutida</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/bajar-de-peso-con-semaglutida"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/bajar-de-peso-con-semaglutida"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/bajar-de-peso-con-semaglutida"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/L5VVQJ0lncM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Pérdida de peso con semaglutide</video:title>
+      <video:description>Pérdida de peso con semaglutide. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/L5VVQJ0lncM</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/cuando-comienza-la-menopausia</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/cuando-comienza-la-menopausia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/cuando-comienza-la-menopausia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/cuando-comienza-la-menopausia"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/v8pqsvpFkZI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Cuándo empieza la menopausia</video:title>
+      <video:description>Cuándo empieza la menopausia. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/v8pqsvpFkZI</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/el-sindrome-asia</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/el-sindrome-asia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/el-sindrome-asia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/el-sindrome-asia"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/rcaDR0VmaHY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>El síndrome ASIA</video:title>
+      <video:description>El síndrome ASIA. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/rcaDR0VmaHY</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/prevencion-del-alzheimer-toxinas</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/prevencion-del-alzheimer-toxinas"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/prevencion-del-alzheimer-toxinas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/prevencion-del-alzheimer-toxinas"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/yapm1IN6ObI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Prevención de Alzheimer - tóxicos</video:title>
+      <video:description>Prevención de Alzheimer - tóxicos. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/yapm1IN6ObI</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/neat-quemar-calorias-sin-ejercicio</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/neat-quemar-calorias-sin-ejercicio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/neat-quemar-calorias-sin-ejercicio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/neat-quemar-calorias-sin-ejercicio"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/HROxqwf09rU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>NEAT quemar calorias sin ejercicio</video:title>
+      <video:description>NEAT quemar calorias sin ejercicio. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/HROxqwf09rU</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/salud-de-la-tiroides</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/salud-de-la-tiroides"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/salud-de-la-tiroides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/salud-de-la-tiroides"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/jaWlrZQ3Jyw/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Tiroides</video:title>
+      <video:description>Tiroides. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/jaWlrZQ3Jyw</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/genetic-testing-alzheimers-prevention</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/genetic-testing-alzheimers-prevention"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/genetic-testing-alzheimers-prevention"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/genetic-testing-alzheimers-prevention"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/CpcAM1wrkPQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Genetic testing in Alzheimer's prevention</video:title>
+      <video:description>Genetic testing in Alzheimer's prevention. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/CpcAM1wrkPQ</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/covid-increases-dementia-risk</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/covid-increases-dementia-risk"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/covid-increases-dementia-risk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/covid-increases-dementia-risk"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/wB3GeOd6S6E/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>COVID increases risk of demencia</video:title>
+      <video:description>COVID increases risk of demencia. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/wB3GeOd6S6E</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/vitamin-d</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/vitamin-d"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/vitamin-d"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/vitamin-d"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/zTAlspcuWkE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>VITAMIN D</video:title>
+      <video:description>VITAMIN D. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/zTAlspcuWkE</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/neuroendocrine-theory-of-aging</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/neuroendocrine-theory-of-aging"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/neuroendocrine-theory-of-aging"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/neuroendocrine-theory-of-aging"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Kjke1NwQdXU/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Neuroendocrine theory of aging</video:title>
+      <video:description>Neuroendocrine theory of aging. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Kjke1NwQdXU</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/glutathione</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/glutathione"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/glutathione"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/glutathione"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/hWtgtv8O3NM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Glutathion</video:title>
+      <video:description>Glutathion. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/hWtgtv8O3NM</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/magnesium-deficiency</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/magnesium-deficiency"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/magnesium-deficiency"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/magnesium-deficiency"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/NJ2wFogrjqg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Magnesium Deficiency</video:title>
+      <video:description>Magnesium Deficiency. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/NJ2wFogrjqg</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/depression-and-autoimmunity</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/depression-and-autoimmunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/depression-and-autoimmunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/depression-and-autoimmunity"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/14SZvW-OrGw/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Depression and autoimmunity</video:title>
+      <video:description>Depression and autoimmunity. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/14SZvW-OrGw</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/mental-illness-metabolic-causes</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/mental-illness-metabolic-causes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/mental-illness-metabolic-causes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/mental-illness-metabolic-causes"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/POOENh8EfxQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Mental illnesses can be caused or worsened by physical or metabolic illnesses</video:title>
+      <video:description>Mental illnesses can be caused or worsened by physical or metabolic illnesses. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/POOENh8EfxQ</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/alzheimers-and-insulin-levels</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/alzheimers-and-insulin-levels"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/alzheimers-and-insulin-levels"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/alzheimers-and-insulin-levels"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/BOiX3WyyR6E/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Alzheimer's and insulin levels Dr Adonis</video:title>
+      <video:description>Alzheimer's and insulin levels Dr Adonis. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/BOiX3WyyR6E</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/post-covid-syndrome</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/post-covid-syndrome"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/post-covid-syndrome"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/post-covid-syndrome"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Rd0Xm7NM3ho/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Post-Covid Syndrome / DR. Adonis</video:title>
+      <video:description>Post-Covid Syndrome / DR. Adonis. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/Rd0Xm7NM3ho</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/the-heart-pill-launch</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/the-heart-pill-launch"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/the-heart-pill-launch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/the-heart-pill-launch"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/C9n90j9Y98U/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Launching The Heart Pill / Lanzando La Pastilla del Corazón !</video:title>
+      <video:description>Launching The Heart Pill / Lanzando La Pastilla del Corazón !. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/C9n90j9Y98U</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/anti-aging-regenerative-medicine-chapter</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/anti-aging-regenerative-medicine-chapter"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/anti-aging-regenerative-medicine-chapter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/anti-aging-regenerative-medicine-chapter"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/GvSc1QB_0Ts/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Dr Adonis writes chapter on Anti-Aging &amp; Regenerative Medicine</video:title>
+      <video:description>Dr Adonis writes chapter on Anti-Aging &amp; Regenerative Medicine. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/GvSc1QB_0Ts</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/tms-transcranial-magnetic-stimulation</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/tms-transcranial-magnetic-stimulation"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/tms-transcranial-magnetic-stimulation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/tms-transcranial-magnetic-stimulation"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/q_tkF0eeOeA/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>TMS Transcranial Magnetic Stimulation</video:title>
+      <video:description>TMS Transcranial Magnetic Stimulation. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/q_tkF0eeOeA</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/the-brain-protocol</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/the-brain-protocol"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/the-brain-protocol"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/the-brain-protocol"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/79Rx5UkoF40/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>The Brain Protocol by Dr. Adonis</video:title>
+      <video:description>The Brain Protocol by Dr. Adonis. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/79Rx5UkoF40</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/8-pillars-memory-preservation</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/8-pillars-memory-preservation"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/8-pillars-memory-preservation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/8-pillars-memory-preservation"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/R5GW_x2qDck/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>8 Pillars for Memory Preservation or Improvement</video:title>
+      <video:description>8 Pillars for Memory Preservation or Improvement. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/R5GW_x2qDck</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/8-pillars-stem-cells-functional-medicine</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/8-pillars-stem-cells-functional-medicine"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/8-pillars-stem-cells-functional-medicine"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/8-pillars-stem-cells-functional-medicine"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/xOPKQ6YRpyk/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>8 Pillars of Stem Cells in Functional Medicine</video:title>
+      <video:description>8 Pillars of Stem Cells in Functional Medicine. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/xOPKQ6YRpyk</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/9-pillars-of-fibromyalgia</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/9-pillars-of-fibromyalgia"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/9-pillars-of-fibromyalgia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/9-pillars-of-fibromyalgia"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/MYbdQgPCEYg/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>9 Pillars of Fibromyalgia Dr. Adonis Functional Medicine</video:title>
+      <video:description>9 Pillars of Fibromyalgia Dr. Adonis Functional Medicine. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/MYbdQgPCEYg</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/antioxidants</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/antioxidants"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/antioxidants"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/antioxidants"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/lWorK6csgvI/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Antioxidants Dr. Adonis</video:title>
+      <video:description>Antioxidants Dr. Adonis. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/lWorK6csgvI</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/hair-loss-in-women</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/hair-loss-in-women"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/hair-loss-in-women"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/hair-loss-in-women"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/3fbZ5Rqar3I/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Hair Loss in Women, Dr Adonis</video:title>
+      <video:description>Hair Loss in Women, Dr Adonis. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/3fbZ5Rqar3I</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/skin-hyperpigmentation-in-women</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/skin-hyperpigmentation-in-women"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/skin-hyperpigmentation-in-women"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/skin-hyperpigmentation-in-women"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/hysrzfqncCA/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Skin hyperpigmentation in women, Dr Adonis</video:title>
+      <video:description>Skin hyperpigmentation in women, Dr Adonis. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/hysrzfqncCA</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/what-is-functional-medicine</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/what-is-functional-medicine"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/what-is-functional-medicine"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/what-is-functional-medicine"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/aM-fAwEvomw/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>What is Functional Medicine</video:title>
+      <video:description>What is Functional Medicine. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/aM-fAwEvomw</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/new-office-welcome</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/new-office-welcome"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/new-office-welcome"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/new-office-welcome"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/gfV0Ye73jS0/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Dr. Adonis welcomes you to his new office</video:title>
+      <video:description>Dr. Adonis welcomes you to his new office. Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/gfV0Ye73jS0</video:player_loc>
+    </video:video>
   </url>
   <url>
     <loc>https://dradonis.com/makeanappointment</loc>
@@ -890,14 +1775,5 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/protein-after-40-healthy-aging"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/proteina-despues-de-los-40-envejecimiento-saludable"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/protein-after-40-healthy-aging"/>
-  </url>
-  <url>
-    <loc>https://dradonis.com/makeanappointment</loc>
-    <lastmod>2026-07-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/makeanappointment"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/makeanappointment"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/makeanappointment"/>
   </url>
 </urlset>

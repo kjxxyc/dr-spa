@@ -3,7 +3,7 @@
   <!-- Hero & Featured Player -->
   <section class="videos-hero">
     <div class="videos-hero-layout">
-      
+
       <!-- Left side: Text -->
       <div class="videos-hero-text">
         <p class="videos-eyebrow">{{ 'videos.eyebrow' | translate }}</p>
@@ -32,7 +32,7 @@
         <div class="featured-video-container" *ngIf="selectedVideo">
           <div class="featured-player">
             <iframe [src]="selectedVideo.embedUrl"
-              title="Dr. Adonis Video" frameborder="0"
+              [title]="selectedVideo.titleKey | translate" frameborder="0"
               referrerpolicy="no-referrer-when-downgrade"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen></iframe>
@@ -48,18 +48,48 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </section>
 
   <!-- Video Grid -->
   <section class="videos-grid-section">
-    <h2 class="section-title">{{ 'videos.gridTitle' | translate }}</h2>
-    <div class="videos-grid">
-      <div *ngFor="let video of videos; let i = index"
+    <!-- Search + section title on the same row (search first) -->
+    <!-- SVG icons inline: search/close/search_off no están en el subset de Material Icons del sitio -->
+    <div class="videos-grid-header">
+      <div class="videos-search">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.2" y2="16.2"></line>
+          </svg>
+          <input
+            type="text"
+            [(ngModel)]="searchText"
+            (ngModelChange)="onSearchChange()"
+            [placeholder]="'videos.searchPlaceholder' | translate"
+            [attr.aria-label]="'videos.searchPlaceholder' | translate">
+          <button *ngIf="searchText" type="button" class="clear-search" (click)="clearSearch()"
+            [attr.aria-label]="'videos.clearSearch' | translate">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <h2 class="section-title">{{ 'videos.gridTitle' | translate }}</h2>
+    </div>
+
+    <div class="videos-grid" *ngIf="filteredVideos.length; else noResults">
+      <a *ngFor="let video of filteredVideos; let i = index"
         class="video-card"
-        [class.active]="selectedVideo === video"
-        (click)="selectVideo(video)">
+        [routerLink]="['/videos', video.slug]"
+        queryParamsHandling="preserve"
+        (click)="onCardClick()"
+        [class.active]="selectedVideo === video">
         <div class="video-thumbnail">
           <img [src]="'https://img.youtube.com/vi/' + video.id + '/mqdefault.jpg'"
             [alt]="video.titleKey | translate" loading="lazy">
@@ -69,7 +99,7 @@
           <span class="video-num">{{ (i + 1) | number:'2.0-0' }}</span>
         </div>
         <h4>{{ video.titleKey | translate }}</h4>
-      </div>
+      </a>
       <!-- See Articles Card -->
       <a routerLink="/articles" class="video-card see-articles-card">
         <div class="video-thumbnail">
@@ -80,6 +110,22 @@
         </div>
       </a>
     </div>
+
+    <ng-template #noResults>
+      <div class="no-results">
+        <svg class="no-results-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.2" y2="16.2"></line>
+          <line x1="8.5" y1="8.5" x2="13.5" y2="13.5"></line>
+          <line x1="13.5" y1="8.5" x2="8.5" y2="13.5"></line>
+        </svg>
+        <p>{{ 'videos.noResults' | translate }}</p>
+        <button type="button" class="btn-clear-filter" (click)="clearSearch()">
+          {{ 'videos.clearSearch' | translate }}
+        </button>
+      </div>
+    </ng-template>
   </section>
 
   <!-- Specialized Protocols Section -->

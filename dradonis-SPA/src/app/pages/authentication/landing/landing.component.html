@@ -107,7 +107,7 @@
     <!-- Row 1: scrolls left -->
     <div class="services-marquee">
       <div class="services-marquee__track services-marquee__track--left">
-        <a routerLink="/services"
+        <a [routerLink]="s.link"
            class="services-marquee__chip"
            *ngFor="let s of services"
            [style.background]="s.color"
@@ -117,7 +117,7 @@
           </span>
           <span class="services-marquee__chip-label">{{ 'cardecal.services.' + s.id + '.title' | translate }}</span>
         </a>
-        <a routerLink="/services"
+        <a [routerLink]="s.link"
            class="services-marquee__chip"
            *ngFor="let s of services"
            [style.background]="s.color"
@@ -134,7 +134,7 @@
     <!-- Row 2: scrolls right (opposite direction), brick-offset -->
     <div class="services-marquee services-marquee--offset">
       <div class="services-marquee__track services-marquee__track--right">
-        <a routerLink="/services"
+        <a [routerLink]="s.link"
            class="services-marquee__chip"
            *ngFor="let s of servicesAlt"
            [style.background]="s.color"
@@ -144,7 +144,7 @@
           </span>
           <span class="services-marquee__chip-label">{{ 'cardecal.services.' + s.id + '.title' | translate }}</span>
         </a>
-        <a routerLink="/services"
+        <a [routerLink]="s.link"
            class="services-marquee__chip"
            *ngFor="let s of servicesAlt"
            [style.background]="s.color"

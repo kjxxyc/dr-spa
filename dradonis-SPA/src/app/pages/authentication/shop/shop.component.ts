@@ -11,32 +11,16 @@ import {
     ViewChildren,
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../../shared/seo/seo.service';
+import { Product, ProductService } from '../../../core/services/product.service';
 
-export interface FullscriptProduct {
-    /** Fullscript product ID (used in the oEmbed `data-fs` payload). */
-    id: string;
-    /** Display name kept for accessibility / fallback while embed loads. */
-    name: string;
-    /** i18n key for the doctor's custom description shown below the widget. */
-    descriptionKey: string;
-    /** Category used by the filter pills. */
-    category: 'general' | 'antiaging' | 'gut' | 'menopause';
-    /** Price in USD — used exclusively in JSON-LD structured data for Google, not shown on the site. */
-    price: string;
-    /**
-     * Absolute URL of the product photo on Fullscript's public asset CDN.
-     * Required by Google Merchant listings — each Product in the JSON-LD must
-     * point at its own image, not a shared logo, or Search Console flags
-     * "Falta el campo image" (missing image field).
-     */
-    image: string;
-}
+/** @deprecated Catalog moved to ProductService — kept as alias for compatibility. */
+export type FullscriptProduct = Product;
 
 @Component({
     selector: 'app-shop',
@@ -55,22 +39,10 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
     selectedCategory: string = 'all';
 
     /**
-     * Fullscript product catalog.
-     * IDs and categories must match the ones in `shop v9*.html` provided by the client,
-     * since `store_slug: "dradonis"` is what attributes the commission to Dr. Adonis.
+     * Fullscript product catalog — now shared with the /shop/<slug> detail
+     * pages via ProductService (single source of truth).
      */
-    fullscriptProducts: FullscriptProduct[] = [
-        { id: '62134', name: 'PectaSol®', descriptionKey: 'shop.products.pectasol', category: 'general', price: '39.99', image: 'https://assets.fullscript.io/Product/EN0037/400_front.png' },
-        { id: '72479', name: 'Mitochondrial NRG', descriptionKey: 'shop.products.mitochondrial', category: 'general', price: '29.99', image: 'https://assets.fullscript.io/Product/DF0263/400_front.png' },
-        { id: '71334', name: 'Uric Acid Formula', descriptionKey: 'shop.products.uricAcid', category: 'general', price: '19.99', image: 'https://assets.fullscript.io/Product/PU0785/400_front.png' },
-        { id: '72491', name: 'OmegAvail Hi-Po Fish Oil', descriptionKey: 'shop.products.omegavail', category: 'general', price: '19.99', image: 'https://assets.fullscript.io/Product/DF0253/400_front.png' },
-        { id: '76696', name: 'Broccoli Seed Extract', descriptionKey: 'shop.products.broccoli', category: 'antiaging', price: '19.99', image: 'https://assets.fullscript.io/Product/TH0319/400_front.png' },
-        { id: '72276', name: 'Complete Mineral Complex', descriptionKey: 'shop.products.mineral', category: 'general', price: '19.99', image: 'https://assets.fullscript.io/Product/DF0083/400_front.png' },
-        { id: '89800', name: 'Telomere Pro', descriptionKey: 'shop.products.telomere', category: 'antiaging', price: '49.99', image: 'https://assets.fullscript.io/Product/ES0025/400_front.png' },
-        { id: '71597', name: 'Iron Liquid', descriptionKey: 'shop.products.iron', category: 'general', price: '14.99', image: 'https://assets.fullscript.io/Product/PU0903/400_front.png' },
-        { id: '105060', name: 'ProbioMax® Sb DF', descriptionKey: 'shop.products.probiomax', category: 'gut', price: '29.99', image: 'https://assets.fullscript.io/Product/XM0146/400_front.png' },
-        { id: '72404', name: 'DIM-Evail™', descriptionKey: 'shop.products.dimEvail', category: 'menopause', price: '24.99', image: 'https://assets.fullscript.io/Product/DF0045/400_front.png' }
-    ];
+    fullscriptProducts: Product[] = [];
 
     @ViewChildren('embedSlot') embedSlots!: QueryList<ElementRef<HTMLDivElement>>;
 
@@ -85,7 +57,20 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
         @Inject(PLATFORM_ID) private platformId: Object,
         private translate: TranslateService,
         private seo: SeoService,
-    ) {}
+        private productService: ProductService,
+        private router: Router,
+    ) {
+        this.fullscriptProducts = this.productService.getProducts();
+    }
+
+    /**
+     * Whole-card click → product detail page. Clicks inside the Fullscript
+     * iframe (image / "View product") never bubble here, so the widget's own
+     * buy flow keeps working untouched.
+     */
+    goToDetail(product: Product): void {
+        this.router.navigate(['/shop', product.slug]);
+    }
 
     ngOnInit(): void {
         this.applySeo();
@@ -102,7 +87,7 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
         const isEs = lang === 'es';
         const config = isEs
             ? {
-                title: 'Suplementos Premium Curados por el Doctor | Dr. Adonis Miami',
+                title: 'Suplementos Premium Recomendados por el Doctor | Dr. Adonis Miami',
                 description: 'Suplementos seleccionados por el Dr. Adonis Maiquez vía Fullscript. PectaSol, Mitochondrial NRG, OmegAvail Fish Oil y más — calidad médica para longevidad y bienestar óptimo.',
                 keywords: 'suplementos médicos Miami, Fullscript Dr. Adonis, PectaSol, Mitochondrial NRG, suplementos premium Miami, vitaminas calidad médica, doctor suplementos Miami',
             }
@@ -147,11 +132,12 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
                         '@type': 'Product',
                         name: p.name,
                         image: p.image,
+                        url: `${origin}/shop/${p.slug}`,
                         category: 'Supplement',
-                        brand: { '@type': 'Brand', name: 'Designs for Health' },
+                        brand: { '@type': 'Brand', name: p.brand },
                         offers: {
                             '@type': 'Offer',
-                            url,
+                            url: `${origin}/shop/${p.slug}`,
                             priceCurrency: 'USD',
                             price: p.price,
                             availability: 'https://schema.org/InStock',

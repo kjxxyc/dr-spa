@@ -85,11 +85,17 @@
             <div class="fs-product-card"
                  *ngFor="let product of fullscriptProducts"
                  [class.fs-hidden]="!isVisible(product.category)"
-                 [attr.data-cat]="product.category">
+                 [attr.data-cat]="product.category"
+                 (click)="goToDetail(product)">
                 <!-- Slot where the Fullscript oEmbed script is injected at runtime -->
                 <div #embedSlot class="fs-embed-slot" [attr.aria-label]="product.name"></div>
                 <!-- Doctor's custom description (translated via i18n) -->
                 <div class="fs-desc">{{ product.descriptionKey | translate }}</div>
+                <!-- Deep link to the product detail page (benefits, related content, appointment CTA) -->
+                <a class="fs-details-link" [routerLink]="['/shop', product.slug]">
+                    <mat-icon>info</mat-icon>
+                    {{ 'shop.viewDetails' | translate }}
+                </a>
             </div>
         </div>
     </section>

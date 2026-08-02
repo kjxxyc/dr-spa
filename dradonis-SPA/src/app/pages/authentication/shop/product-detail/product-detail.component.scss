@@ -1,0 +1,704 @@
+// ===========================
+// COLOR VARIABLES (site palette)
+// ===========================
+$primary-green: #4d7a1f;
+$primary-green-dark: #3d6218;
+$text-dark: #1F2937;
+$text-medium: #4A5568;
+$text-light: #6B7280;
+$white: #FFFFFF;
+$background-light: #F7FAFC;
+
+$breakpoint-md: 968px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 480px;
+
+.product-detail-page {
+    width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(160deg, #fafffe 0%, #f0f7ed 40%, #e8f0e3 100%);
+}
+
+// arrow_forward espejado — el subset de Material Icons no trae arrow_back.
+.pd-mirror {
+    transform: scaleX(-1);
+}
+
+// Primera línea de la columna de información: chip de categoría + volver
+.pd-info-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.pd-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: $text-medium;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.35rem 0.8rem;
+    border-radius: 99px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: $white;
+    transition: all 0.3s ease;
+
+    mat-icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+    }
+
+    &:hover {
+        border-color: $primary-green;
+        color: $primary-green;
+        transform: translateX(-2px);
+    }
+}
+
+// ===========================
+// HERO (info + Fullscript widget)
+// ===========================
+.pd-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 1.25rem;
+    display: grid;
+    // Widget de compra Fullscript a la IZQUIERDA en escritorio; en móvil la
+    // información va primero (por eso las áreas, no el orden del DOM).
+    grid-template-columns: 380px 1fr;
+    grid-template-areas: 'buy info';
+    gap: 2rem;
+    align-items: start;
+
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'info' 'buy';
+        gap: 1.25rem;
+        padding: 1.25rem 1.25rem 1rem;
+    }
+}
+
+.pd-hero-info {
+    grid-area: info;
+}
+
+.pd-category {
+    display: inline-block;
+    background: rgba($primary-green, 0.1);
+    color: $primary-green;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.35rem 0.9rem;
+    border-radius: 99px;
+}
+
+.pd-hero-info {
+    h1 {
+        font-size: 38px;
+        font-weight: 800;
+        color: $text-dark;
+        margin: 0 0 0.35rem;
+        line-height: 1.15;
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: 28px;
+        }
+    }
+}
+
+.pd-brand {
+    font-size: 14px;
+    color: $text-light;
+    margin: 0 0 1.25rem;
+
+    strong {
+        color: $text-medium;
+    }
+}
+
+.pd-description {
+    font-size: 16px;
+    color: $text-medium;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+}
+
+.pd-benefits {
+    background: $white;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;
+
+    h2 {
+        font-size: 16px;
+        font-weight: 700;
+        color: $primary-green;
+        margin: 0 0 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+}
+
+.pd-preline {
+    white-space: pre-line;
+    font-size: 15px;
+    color: $text-medium;
+    line-height: 1.9;
+    margin: 0;
+}
+
+// ===========================
+// DETAIL CARDS
+// ===========================
+.pd-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem 1.5rem;
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 0 1.25rem 1.25rem;
+    }
+}
+
+.pd-buy-card {
+    grid-area: buy;
+    background: $white;
+    border-radius: 20px;
+    padding: 1.25rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+    border: 2px solid rgba($primary-green, 0.15);
+
+    h2 {
+        font-size: 16px;
+        font-weight: 700;
+        color: $text-dark;
+        margin: 0 0 0.75rem;
+        text-align: center;
+    }
+}
+
+.pd-embed-slot {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+
+    // The Fullscript iframe comes with a fixed narrow width — center it.
+    iframe {
+        max-width: 100%;
+    }
+}
+
+// Fila widget + globo: el globo queda pegado al borde derecho real del
+// iframe de Fullscript (su ancho varía), no al borde de la tarjeta.
+// El globo vive FUERA del slot porque re-inyectar el widget limpia su innerHTML.
+.pd-embed-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 9px;
+}
+
+// Globo de atención al costado derecho del botón "View product"
+// (mismo estilo que el globo del CTA móvil del header).
+.pd-buy-bubble {
+    $bubble-bg: #0ea5e9; // sky blue
+
+    position: relative;
+    align-self: flex-end;
+    margin-bottom: 62px; // a la altura del botón "View product" del widget
+    background: $bubble-bg;
+    color: $white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    padding: 6px 11px;
+    border-radius: 6px;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(14, 165, 233, 0.35);
+    pointer-events: none;
+    animation: pd-bubble-bounce 2.4s ease-in-out infinite;
+    z-index: 1;
+
+    // Flecha apuntando hacia la izquierda, al botón del widget
+    &::before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: 5px 5px 5px 0;
+        border-style: solid;
+        border-color: transparent $bubble-bg transparent transparent;
+    }
+}
+
+@keyframes pd-bubble-bounce {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-3px);
+    }
+}
+
+.pd-buy-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 12.5px;
+    color: $text-light;
+    line-height: 1.6;
+    margin: 0.75rem 0 0;
+
+    mat-icon {
+        color: $primary-green;
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+    }
+}
+
+.pd-detail-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Tarjeta plegable (mismo patrón que el acordeón de la página de servicios)
+.pd-card {
+    background: $white;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    align-self: start;
+
+    .pd-card-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 1.15rem 1.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        text-align: left;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background: rgba($primary-green, 0.04);
+        }
+    }
+
+    .pd-card-icon {
+        flex-shrink: 0;
+        width: 46px;
+        height: 46px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, $primary-green 0%, $primary-green-dark 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        mat-icon {
+            color: $white;
+            font-size: 24px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .pd-card-title {
+        flex: 1;
+        font-size: 17px;
+        font-weight: 700;
+        color: $text-dark;
+    }
+
+    // Chevron con aspecto de botón (círculo verde) para que se note clickeable
+    .pd-card-chevron {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        font-size: 26px;
+        border-radius: 50%;
+        background: rgba($primary-green, 0.12);
+        color: $primary-green;
+        transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    }
+
+    .pd-card-header:hover .pd-card-chevron {
+        background: rgba($primary-green, 0.22);
+    }
+
+    &.expanded .pd-card-chevron {
+        transform: rotate(180deg);
+        background: $primary-green;
+        color: $white;
+    }
+
+    .pd-card-body p {
+        font-size: 15px;
+        color: $text-medium;
+        line-height: 1.75;
+        margin: 0;
+    }
+}
+
+// ===========================
+// RELATED SECTIONS
+// ===========================
+.pd-related {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem 1.5rem;
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 0.5rem 1.25rem 1.25rem;
+    }
+}
+
+.pd-section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: $text-dark;
+    margin: 0 0 1rem;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+
+    @media (max-width: $breakpoint-sm) {
+        font-size: 19px;
+    }
+}
+
+.pd-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.pd-article-card {
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+
+        .pd-article-more {
+            color: $primary-green-dark;
+        }
+    }
+
+    .pd-article-image {
+        aspect-ratio: 16/8;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .pd-article-content {
+        padding: 1.1rem 1.25rem 1.25rem;
+
+        h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: $text-dark;
+            margin: 0 0 0.6rem;
+            line-height: 1.4;
+        }
+    }
+
+    .pd-article-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 13px;
+        font-weight: 700;
+        color: $primary-green;
+
+        mat-icon {
+            font-size: 15px;
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+.pd-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.pd-video-card {
+    text-decoration: none;
+    background: $white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+
+        .pd-play {
+            opacity: 1;
+        }
+    }
+
+    .pd-video-thumb {
+        position: relative;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pd-play {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            font-size: 48px;
+            width: 48px;
+            height: 48px;
+            color: $white;
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+    }
+
+    h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: $text-dark;
+        padding: 0.85rem 1rem;
+        margin: 0;
+        line-height: 1.4;
+    }
+}
+
+.pd-links-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pd-link-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: $white;
+    color: $text-dark;
+    border: 2px solid rgba($primary-green, 0.25);
+    padding: 0.75rem 1.4rem;
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    mat-icon {
+        color: $primary-green;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        background: $primary-green;
+        border-color: $primary-green;
+        color: $white;
+
+        mat-icon {
+            color: $white;
+        }
+    }
+}
+
+.pd-more-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.pd-more-card {
+    text-decoration: none;
+    background: $white;
+    border-radius: 14px;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        margin-bottom: 0.75rem;
+    }
+
+    h3 {
+        font-size: 15px;
+        font-weight: 700;
+        color: $text-dark;
+        margin: 0 0 0.25rem;
+    }
+
+    .pd-more-brand {
+        font-size: 12.5px;
+        color: $text-light;
+    }
+}
+
+// ===========================
+// APPOINTMENT CTA
+// ===========================
+.pd-cta {
+    padding: 0.75rem 2rem 1.5rem;
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 0.5rem 1.25rem 1.25rem;
+    }
+}
+
+.pd-cta-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 24px;
+    padding: 2.25rem 2rem;
+    text-align: center;
+
+    h2 {
+        font-size: 28px;
+        font-weight: 800;
+        color: $white;
+        margin: 0 0 0.75rem;
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: 22px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.7;
+        max-width: 640px;
+        margin: 0 auto 1.75rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 2rem 1.5rem;
+    }
+}
+
+.pd-cta-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.pd-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: $primary-green;
+    color: $white;
+    padding: 1rem 2.25rem;
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba($primary-green, 0.4);
+
+    mat-icon {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+    }
+
+    &:hover {
+        background: $primary-green-dark;
+        transform: translateY(-2px);
+    }
+}
+
+.pd-cta-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    opacity: 0.9;
+
+    mat-icon {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    &:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
+}
+
+.pd-disclaimer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem 2.5rem;
+    font-size: 11.5px;
+    color: $text-light;
+    line-height: 1.6;
+    text-align: center;
+}

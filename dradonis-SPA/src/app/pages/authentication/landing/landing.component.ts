@@ -29,17 +29,19 @@ export class LandingComponent implements OnInit, OnDestroy {
 
     // Services for the marquee carousel — muted/earthy palette, medical-friendly.
     // Keys come from cardecal.services.*
+    // `link` overrides the default /services destination (telemedicine chips
+    // deep-link to the dedicated /telemedicine page for internal SEO linking).
     services = [
-        { id: 'functional',   icon: 'health_and_safety',   color: '#6B9080' }, // sage green
-        { id: 'hormone',      icon: 'science',             color: '#8B7EA8' }, // muted lavender
-        { id: 'testosterone', icon: 'fitness_center',      color: '#D4A574' }, // warm tan
-        { id: 'menopause',    icon: 'spa',                 color: '#C490A0' }, // dusty rose
-        { id: 'peptides',     icon: 'biotech',             color: '#7FA8B0' }, // muted teal
-        { id: 'weight',       icon: 'monitor_weight',      color: '#9CAF7E' }, // olive
-        { id: 'glp1',         icon: 'medical_information', color: '#7B9BC1' }, // powder blue
-        { id: 'ed',           icon: 'favorite',            color: '#C28080' }, // muted coral
-        { id: 'video',        icon: 'videocam',            color: '#9B8AB0' }, // mauve
-        { id: 'noVisit',      icon: 'phonelink_ring',      color: '#80A8A0' }, // sea green
+        { id: 'functional',   icon: 'health_and_safety',   color: '#6B9080', link: '/services' },     // sage green
+        { id: 'hormone',      icon: 'science',             color: '#8B7EA8', link: '/services' },     // muted lavender
+        { id: 'testosterone', icon: 'fitness_center',      color: '#D4A574', link: '/services' },     // warm tan
+        { id: 'menopause',    icon: 'spa',                 color: '#C490A0', link: '/services' },     // dusty rose
+        { id: 'peptides',     icon: 'biotech',             color: '#7FA8B0', link: '/services' },     // muted teal
+        { id: 'weight',       icon: 'monitor_weight',      color: '#9CAF7E', link: '/services' },     // olive
+        { id: 'glp1',         icon: 'medical_information', color: '#7B9BC1', link: '/services' },     // powder blue
+        { id: 'ed',           icon: 'favorite',            color: '#C28080', link: '/services' },     // muted coral
+        { id: 'video',        icon: 'videocam',            color: '#9B8AB0', link: '/telemedicine' }, // mauve
+        { id: 'noVisit',      icon: 'phonelink_ring',      color: '#80A8A0', link: '/telemedicine' }, // sea green
     ];
 
     // Second row uses the same list reversed for a brick-stacked offset effect

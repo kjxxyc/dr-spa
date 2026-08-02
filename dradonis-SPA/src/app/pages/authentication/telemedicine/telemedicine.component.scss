@@ -259,6 +259,91 @@ $breakpoint-sm: 600px;
     }
 }
 
+// ── SEO PROSE BLOCK ──
+.tele-seo-section {
+    max-width: 760px !important;
+
+    h2 {
+        margin-bottom: 1.25rem;
+    }
+
+    p {
+        font-size: 15px;
+        color: $text-medium;
+        line-height: 1.75;
+        margin: 0 0 1.1rem;
+        text-align: center;
+
+        @media (max-width: $breakpoint-sm) {
+            text-align: left;
+        }
+    }
+}
+
+// ── FAQ (native <details> accordion) ──
+.tele-faq-section {
+    max-width: 760px !important;
+
+    .tele-faq-list {
+        margin-top: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+    }
+
+    .tele-faq-item {
+        background: $white;
+        border: 1px solid rgba(77, 122, 31, 0.15);
+        border-radius: 14px;
+        overflow: hidden;
+        transition: box-shadow 0.2s ease;
+
+        &[open] {
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+
+            summary mat-icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 1.1rem 1.35rem;
+            font-size: 15.5px;
+            font-weight: 700;
+            color: $text-dark;
+            cursor: pointer;
+            list-style: none;
+
+            // Hide the default disclosure triangle
+            &::-webkit-details-marker {
+                display: none;
+            }
+
+            mat-icon {
+                color: $primary-green;
+                flex-shrink: 0;
+                transition: transform 0.25s ease;
+            }
+
+            &:hover {
+                color: $primary-green-dark;
+            }
+        }
+
+        p {
+            font-size: 14.5px;
+            color: $text-medium;
+            line-height: 1.65;
+            margin: 0;
+            padding: 0 1.35rem 1.2rem;
+        }
+    }
+}
+
 // ── NEEDS / REQUIREMENTS ──
 .tele-needs-section {
     .tele-needs-card {
