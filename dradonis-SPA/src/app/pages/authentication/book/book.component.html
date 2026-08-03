@@ -1,0 +1,128 @@
+<div class="book-page">
+
+  <!-- ============================ -->
+  <!-- HERO: COVER + PITCH + BUY -->
+  <!-- ============================ -->
+  <section class="bookp-hero">
+    <div class="bookp-hero-grid">
+      <div class="bookp-cover">
+        <img src="assets/images/book-dradonis.webp"
+             alt="{{ 'bookPage.title' | translate }}"
+             width="400" height="520" loading="eager">
+      </div>
+
+      <div class="bookp-intro">
+        <span class="bookp-eyebrow">
+          <mat-icon>auto_stories</mat-icon>
+          {{ 'bookPage.eyebrow' | translate }}
+        </span>
+        <h1>{{ 'bookPage.title' | translate }}</h1>
+        <p class="bookp-author">{{ 'bookPage.author' | translate }}</p>
+        <p class="bookp-pitch">{{ 'bookPage.pitch' | translate }}</p>
+
+        <div class="bookp-buy-actions">
+          <a [href]="amazonEs" target="_blank" rel="noopener noreferrer" class="bookp-buy-btn">
+            <mat-icon>shopping_cart</mat-icon>
+            {{ 'bookPage.btnBuyEs' | translate }}
+          </a>
+          <a [href]="amazonEn" target="_blank" rel="noopener noreferrer" class="bookp-buy-btn bookp-buy-btn--alt">
+            <mat-icon>shopping_cart</mat-icon>
+            {{ 'bookPage.btnBuyEn' | translate }}
+          </a>
+        </div>
+        <p class="bookp-amazon-note">
+          <mat-icon>info</mat-icon>
+          {{ 'bookPage.amazonNote' | translate }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ -->
+  <!-- VIDEO (lite embed) -->
+  <!-- ============================ -->
+  <section class="bookp-video-section" id="video">
+    <h2>{{ 'bookPage.videoTitle' | translate }}</h2>
+    <div class="book-video-wrapper">
+      @if (videoPlaying) {
+        <iframe
+          [src]="videoEmbedUrl"
+          [title]="'bookPage.videoTitle' | translate"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      } @else {
+        <button
+          type="button"
+          class="book-video-thumb"
+          (click)="playVideo()"
+          [attr.aria-label]="'bookSection.videoPlayLabel' | translate">
+          <img [src]="videoThumbUrl"
+               [alt]="'bookPage.videoTitle' | translate"
+               loading="lazy" width="480" height="360">
+          <span class="book-video-play" aria-hidden="true">
+            <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 0 13.05 0 24 0 24s0 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C68 34.95 68 24 68 24s0-10.95-1.48-16.26z" fill="#f00"/>
+              <path d="M45 24 27 14v20" fill="#fff"/>
+            </svg>
+          </span>
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- ============================ -->
+  <!-- WHAT YOU'LL LEARN -->
+  <!-- ============================ -->
+  <section class="bookp-learn-section">
+    <h2>{{ 'bookPage.learnTitle' | translate }}</h2>
+    <ul class="bookp-learn-list">
+      <li *ngFor="let key of learnKeys">
+        <mat-icon>check_circle</mat-icon>
+        <span>{{ key | translate }}</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============================ -->
+  <!-- RELATED SUGGESTIONS -->
+  <!-- ============================ -->
+  <section class="bookp-related-section">
+    <h2>{{ 'bookPage.relatedTitle' | translate }}</h2>
+    <div class="bookp-related-grid">
+      <a [routerLink]="peptidesArticleLink" class="bookp-related-card">
+        <span class="bookp-related-icon"><mat-icon>biotech</mat-icon></span>
+        <h3>{{ 'bookPage.sug1Title' | translate }}</h3>
+        <p>{{ 'bookPage.sug1Text' | translate }}</p>
+        <span class="bookp-related-arrow"><mat-icon>arrow_forward</mat-icon></span>
+      </a>
+      <a [routerLink]="proteinArticleLink" class="bookp-related-card">
+        <span class="bookp-related-icon"><mat-icon>monitor_weight</mat-icon></span>
+        <h3>{{ 'bookPage.sug2Title' | translate }}</h3>
+        <p>{{ 'bookPage.sug2Text' | translate }}</p>
+        <span class="bookp-related-arrow"><mat-icon>arrow_forward</mat-icon></span>
+      </a>
+      <a routerLink="/shop" class="bookp-related-card">
+        <span class="bookp-related-icon"><mat-icon>local_pharmacy</mat-icon></span>
+        <h3>{{ 'bookPage.sug3Title' | translate }}</h3>
+        <p>{{ 'bookPage.sug3Text' | translate }}</p>
+        <span class="bookp-related-arrow"><mat-icon>arrow_forward</mat-icon></span>
+      </a>
+      <a routerLink="/telemedicine" class="bookp-related-card">
+        <span class="bookp-related-icon"><mat-icon>videocam</mat-icon></span>
+        <h3>{{ 'bookPage.sug4Title' | translate }}</h3>
+        <p>{{ 'bookPage.sug4Text' | translate }}</p>
+        <span class="bookp-related-arrow"><mat-icon>arrow_forward</mat-icon></span>
+      </a>
+    </div>
+
+    <div class="bookp-all-articles">
+      <a routerLink="/articles" class="bookp-articles-btn">
+        <mat-icon>menu_book</mat-icon>
+        {{ 'bookPage.allArticles' | translate }}
+      </a>
+    </div>
+  </section>
+
+</div>

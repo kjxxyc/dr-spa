@@ -167,6 +167,17 @@ $background-light: #F7FAFC;
                 box-shadow: 0 5px 14px rgba(255, 0, 0, 0.4);
             }
         }
+
+        // Navy variant linking to the dedicated /book page
+        &--book {
+            background: #112240;
+            box-shadow: 0 3px 10px rgba(17, 34, 64, 0.3);
+
+            &:hover {
+                background: #1d3557;
+                box-shadow: 0 5px 14px rgba(17, 34, 64, 0.4);
+            }
+        }
     }
 
     // Mobile: card sigue horizontal, solo más compacta

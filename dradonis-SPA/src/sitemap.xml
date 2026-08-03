@@ -28,6 +28,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/meet-doctor"/>
   </url>
   <url>
+    <loc>https://dradonis.com/book</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/book"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/book"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/book"/>
+  </url>
+  <url>
     <loc>https://dradonis.com/telemedicine</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>

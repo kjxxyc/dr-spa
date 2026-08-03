@@ -146,13 +146,13 @@ export class TelemedicineComponent implements OnInit, OnDestroy {
                 { q: '¿Atiende pacientes fuera de Estados Unidos?', a: 'Sí. El Dr. Adonis atiende por teleconsulta a pacientes dentro y fuera de Estados Unidos. Solo necesita conexión a internet y un dispositivo con cámara.' },
                 { q: '¿Puede recetar medicamentos por telemedicina?', a: 'Sí. Cuando está médicamente indicado, el Dr. Adonis emite recetas como parte de su teleconsulta.' },
                 { q: '¿En qué idiomas se atiende?', a: 'Las consultas están disponibles en español e inglés.' },
-                { q: '¿Qué pasa si necesito laboratorios?', a: 'El Dr. Adonis emite la orden de laboratorio a la clínica o al seguro de su preferencia, y los resultados se revisan juntos en su consulta.' },
+                { q: '¿Qué pasa si necesito laboratorios?', a: 'El Dr. Adonis le entrega la orden de laboratorio y usted la lleva al laboratorio de su preferencia. Los resultados se revisan juntos en su consulta.' },
             ]
             : [
                 { q: 'Do you see patients outside the United States?', a: 'Yes. Dr. Adonis sees patients via teleconsultation both inside and outside the United States. All you need is an internet connection and a device with a camera.' },
                 { q: 'Can you prescribe medication via telemedicine?', a: 'Yes. When medically indicated, Dr. Adonis issues prescriptions as part of your teleconsultation.' },
                 { q: 'In which languages are consultations available?', a: 'Consultations are available in English and Spanish.' },
-                { q: 'What if I need lab work?', a: 'Dr. Adonis sends the lab order to the clinic or insurance provider of your choice, and the results are reviewed together during your visit.' },
+                { q: 'What if I need lab work?', a: 'Dr. Adonis gives you the lab order and you take it to the laboratory of your choice. The results are reviewed together during your visit.' },
             ];
 
         return [

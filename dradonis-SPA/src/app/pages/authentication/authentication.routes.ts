@@ -118,6 +118,17 @@ export const AuthenticationRoutes: Routes = [
             redirectTo: 'telemedicine',
           },
           {
+            path: 'book',
+            loadComponent: () =>
+              import('./book/book.component').then(
+                (m) => m.BookComponent
+              ),
+          },
+          {
+            path: 'libro',
+            redirectTo: 'book',
+          },
+          {
             path: 'tools/bmi-calculator',
             loadComponent: () =>
               import('./tools/bmi-calculator/bmi-calculator.component').then(
