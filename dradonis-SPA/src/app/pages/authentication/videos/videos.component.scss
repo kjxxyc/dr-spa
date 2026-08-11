@@ -273,13 +273,91 @@ $breakpoint-xs: 480px;
     }
 }
 
+// ===========================
+// TOPIC + LANGUAGE FILTER BAR (shop-style pills)
+// ===========================
+.videos-filterbar {
+    max-width: 1200px;
+    margin: 0 auto 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+
+    .filter-pill {
+        padding: 0.7rem 1.35rem;
+        background: $white;
+        border: 2px solid #e5e7eb;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 13.5px;
+        color: $text-medium;
+        transition: all 0.3s ease;
+        outline: none;
+        font-family: inherit;
+
+        .pill-emoji {
+            margin-right: 6px;
+            font-size: 15px;
+        }
+
+        &:hover {
+            border-color: $primary-green;
+            color: $primary-green;
+            transform: translateY(-2px);
+        }
+
+        &.active {
+            background: $primary-green;
+            color: $white;
+            border-color: $primary-green;
+        }
+    }
+}
+
 // Mini search (mirrors the articles page search box, adapted to light bg)
 .videos-search {
     flex: 1;
-    max-width: 520px;
+    max-width: 640px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .search-box {
+        flex: 1;
+    }
 
     @media (max-width: $breakpoint-md) {
         max-width: none;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        flex-wrap: wrap;
+    }
+}
+
+// Language filter dropdown — sits right next to the search bar.
+.videos-lang-select {
+    select {
+        padding: 0.7rem 1.1rem;
+        background: $white;
+        border: 2px solid #e5e7eb;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 13.5px;
+        color: $text-medium;
+        font-family: inherit;
+        outline: none;
+        transition: border-color 0.3s ease, color 0.3s ease;
+
+        &:hover,
+        &:focus {
+            border-color: $primary-green;
+            color: $primary-green;
+        }
     }
 }
 

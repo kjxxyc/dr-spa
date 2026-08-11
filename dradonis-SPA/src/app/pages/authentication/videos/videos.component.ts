@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../../shared/seo/seo.service';
-import { VideoCatalogItem, VideoService } from '../../../core/services/video.service';
+import { VideoCatalogItem, VideoCategory, VideoService } from '../../../core/services/video.service';
 
 /** Catalog entry enriched with the sanitized embed URL for the player. */
 export interface VideoItem extends VideoCatalogItem {
@@ -40,6 +40,25 @@ export class VideosComponent implements OnInit, OnDestroy {
     currentLang = 'en';
     searchText = '';
 
+    /** Topic filter, shop-style pills. */
+    selectedCategory: 'all' | VideoCategory = 'all';
+    /**
+     * Language filter — defaults to the site language so English visitors
+     * don't get Spanish-only videos mixed in (and vice versa). The user can
+     * still switch to "All languages".
+     */
+    selectedLang: 'all' | 'en' | 'es' = 'all';
+
+    readonly categories: Array<{ key: 'all' | VideoCategory; labelKey: string; emoji: string }> = [
+        { key: 'all', labelKey: 'videos.filterAll', emoji: '🎬' },
+        { key: 'brain', labelKey: 'videos.filterBrain', emoji: '🧠' },
+        { key: 'hormones', labelKey: 'videos.filterHormones', emoji: '🌸' },
+        { key: 'weight', labelKey: 'videos.filterWeight', emoji: '⚖️' },
+        { key: 'wellness', labelKey: 'videos.filterWellness', emoji: '🥗' },
+        { key: 'functional', labelKey: 'videos.filterFunctional', emoji: '🔬' },
+        { key: 'about', labelKey: 'videos.filterAbout', emoji: '👨‍⚕️' },
+    ];
+
     /** titleKey -> translated title for the active language (loaded async). */
     private titles: Record<string, string> = {};
     private titlesLoaded = false;
@@ -58,6 +77,7 @@ export class VideosComponent implements OnInit, OnDestroy {
         private videoService: VideoService,
     ) {
         this.currentLang = this.translate.currentLang || 'en';
+        this.selectedLang = this.currentLang === 'es' ? 'es' : 'en';
 
         const pageOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://dradonis.com';
         this.videos = this.videoService.getVideos().map(v => ({
@@ -81,6 +101,9 @@ export class VideosComponent implements OnInit, OnDestroy {
         this.loadTitles();
         this.langSub = this.translate.onLangChange.subscribe(e => {
             this.currentLang = e.lang;
+            // Follow the site language so the default view stays consistent
+            // with what the visitor is reading.
+            this.selectedLang = e.lang === 'es' ? 'es' : 'en';
             this.loadTitles();
         });
 
@@ -137,6 +160,22 @@ export class VideosComponent implements OnInit, OnDestroy {
         this.onSearchChange();
     }
 
+    selectCategory(category: 'all' | VideoCategory): void {
+        this.selectedCategory = category;
+        this.applyFilter();
+    }
+
+    onLangFilterChange(): void {
+        this.applyFilter();
+    }
+
+    /** No-results reset: search, topic, and language back to "everything". */
+    clearAllFilters(): void {
+        this.selectedCategory = 'all';
+        this.selectedLang = 'all';
+        this.clearSearch(); // re-applies the filter and cleans the ?q= param
+    }
+
     async openAppointment(): Promise<void> {
         const { AppointmentDialogComponent } = await import('../../../shared/appointment-dialog/appointment-dialog.component');
         this.dialog.open(AppointmentDialogComponent, {
@@ -167,14 +206,20 @@ export class VideosComponent implements OnInit, OnDestroy {
      * Spanish keywords for the Spanish-only videos) — mirrors what people
      * type into Google, e.g. "fibromyalgia dr adonis".
      */
+    /** Combines the three filters: topic pill, language, and search text. */
     applyFilter(): void {
         const query = this.normalize(this.searchText.trim());
-        if (!query) {
-            this.filteredVideos = this.videos;
-            return;
-        }
-        const tokens = query.split(/\s+/);
+        const tokens = query ? query.split(/\s+/) : [];
         this.filteredVideos = this.videos.filter(v => {
+            if (this.selectedCategory !== 'all' && v.category !== this.selectedCategory) {
+                return false;
+            }
+            if (this.selectedLang !== 'all' && (v.lang || 'en') !== this.selectedLang) {
+                return false;
+            }
+            if (!tokens.length) {
+                return true;
+            }
             const title = this.titles[v.titleKey] || '';
             const haystack = this.normalize(
                 `${title} ${v.slug.replace(/-/g, ' ')} dr adonis maiquez md video`

@@ -79,8 +79,27 @@
             </svg>
           </button>
         </div>
+        <div class="videos-lang-select">
+          <select [(ngModel)]="selectedLang" (ngModelChange)="onLangFilterChange()"
+            [attr.aria-label]="'videos.langAll' | translate">
+            <option value="all">{{ 'videos.langAll' | translate }}</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+          </select>
+        </div>
       </div>
       <h2 class="section-title">{{ 'videos.gridTitle' | translate }}</h2>
+    </div>
+
+    <!-- Topic filter pills (shop-style) -->
+    <div class="videos-filterbar">
+      <button *ngFor="let c of categories"
+        type="button"
+        class="filter-pill"
+        [class.active]="selectedCategory === c.key"
+        (click)="selectCategory(c.key)">
+        <span class="pill-emoji" aria-hidden="true">{{ c.emoji }}</span>{{ c.labelKey | translate }}
+      </button>
     </div>
 
     <div class="videos-grid" *ngIf="filteredVideos.length; else noResults">
@@ -121,8 +140,8 @@
           <line x1="13.5" y1="8.5" x2="8.5" y2="13.5"></line>
         </svg>
         <p>{{ 'videos.noResults' | translate }}</p>
-        <button type="button" class="btn-clear-filter" (click)="clearSearch()">
-          {{ 'videos.clearSearch' | translate }}
+        <button type="button" class="btn-clear-filter" (click)="clearAllFilters()">
+          {{ 'videos.clearFilters' | translate }}
         </button>
       </div>
     </ng-template>
