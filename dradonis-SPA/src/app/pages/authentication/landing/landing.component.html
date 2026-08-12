@@ -237,7 +237,7 @@
                 (click)="playBookVideo()"
                 [attr.aria-label]="'bookSection.videoPlayLabel' | translate">
                 <img
-                  src="https://img.youtube.com/vi/SyF9dvOCCKI/hqdefault.jpg"
+                  [src]="'https://img.youtube.com/vi/' + bookVideoId + '/hqdefault.jpg'"
                   [alt]="'bookSection.videoTitle' | translate"
                   loading="lazy"
                   width="480" height="360">

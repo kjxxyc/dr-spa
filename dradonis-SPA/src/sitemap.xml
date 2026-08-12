@@ -196,6 +196,21 @@
     </video:video>
   </url>
   <url>
+    <loc>https://dradonis.com/videos/libro-medicina-moderna-para-tiempos-modernos</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/libro-medicina-moderna-para-tiempos-modernos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/libro-medicina-moderna-para-tiempos-modernos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/libro-medicina-moderna-para-tiempos-modernos"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/jk-zlZYrBfM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Libro 'Medicina Moderna para los Tiempos Modernos' del Dr. Adonis Maiquez</video:title>
+      <video:description>Libro 'Medicina Moderna para los Tiempos Modernos' del Dr. Adonis Maiquez. Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/jk-zlZYrBfM</video:player_loc>
+    </video:video>
+  </url>
+  <url>
     <loc>https://dradonis.com/videos/fibromyalgia-chronic-fatigue-adrenal-exhaustion</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>

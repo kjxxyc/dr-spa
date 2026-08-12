@@ -267,6 +267,13 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
         this.injectedSlots.add(slot.nativeElement);
     }
 
+    /** Book presentation video in the language the visitor is browsing. */
+    get bookVideoUrl(): string {
+        return this.translate.currentLang === 'es'
+            ? 'https://youtu.be/jk-zlZYrBfM'
+            : 'https://youtu.be/SyF9dvOCCKI';
+    }
+
     /** Whether a product card with `category` should be visible under the current filter. */
     isVisible(category: string): boolean {
         return this.selectedCategory === 'all' || this.selectedCategory === category;

@@ -65,8 +65,10 @@ export class LandingComponent implements OnInit, OnDestroy {
     googleMapsUrl: SafeResourceUrl;
 
     // Book preview video — iframe only mounts after the user clicks the thumbnail
-    // (avoids ~500 KiB of YouTube JS on initial load).
+    // (avoids ~500 KiB of YouTube JS on initial load). The video itself exists
+    // in two spoken languages, so the id follows the active site language.
     bookVideoPlaying = false;
+    bookVideoId = 'SyF9dvOCCKI';
     bookVideoEmbedUrl!: SafeResourceUrl;
 
     constructor(
@@ -78,8 +80,14 @@ export class LandingComponent implements OnInit, OnDestroy {
         this.googleMapsUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
             'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.1!2d-80.213865!3d25.7863004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b76d1434265b%3A0xfa2d0d393c1e7ec3!2sDr.%20Adonis%20(Adonis%20Maiquez%2C%20MD)!5e0!3m2!1sen!2sus!4v1'
         );
+        this.updateBookVideo();
+    }
+
+    /** English or Spanish recording of the same book presentation. */
+    private updateBookVideo(): void {
+        this.bookVideoId = (this.translate.currentLang === 'es') ? 'jk-zlZYrBfM' : 'SyF9dvOCCKI';
         this.bookVideoEmbedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-            'https://www.youtube.com/embed/SyF9dvOCCKI?autoplay=1&rel=0'
+            `https://www.youtube.com/embed/${this.bookVideoId}?autoplay=1&rel=0`
         );
     }
 
@@ -90,7 +98,12 @@ export class LandingComponent implements OnInit, OnDestroy {
     ngOnInit(): void {
         this.applySeo();
         // Re-apply SEO when the user toggles language so title/description swap.
-        this.langSub = this.translate.onLangChange.subscribe(() => this.applySeo());
+        this.langSub = this.translate.onLangChange.subscribe(() => {
+            // Swap the book video to the recording spoken in the new language —
+            // even mid-playback, so the audio always matches the page.
+            this.updateBookVideo();
+            this.applySeo();
+        });
     }
 
     ngOnDestroy(): void {

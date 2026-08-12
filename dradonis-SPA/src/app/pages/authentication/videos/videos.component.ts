@@ -104,6 +104,7 @@ export class VideosComponent implements OnInit, OnDestroy {
             // Follow the site language so the default view stays consistent
             // with what the visitor is reading.
             this.selectedLang = e.lang === 'es' ? 'es' : 'en';
+            this.swapSelectedVideoToLang(e.lang === 'es' ? 'es' : 'en');
             this.loadTitles();
         });
 
@@ -120,7 +121,7 @@ export class VideosComponent implements OnInit, OnDestroy {
             this.activeSlug = slug;
             this.selectedVideo = slug
                 ? this.videos.find(v => v.slug === slug)!
-                : this.videos[0];
+                : this.videoForLang(this.videos[0], this.currentLang === 'es' ? 'es' : 'en');
             if (this.titlesLoaded) {
                 this.applySeo();
             }
@@ -158,6 +159,42 @@ export class VideosComponent implements OnInit, OnDestroy {
     clearSearch(): void {
         this.searchText = '';
         this.onSearchChange();
+    }
+
+    /**
+     * Same talk in the requested language when a paired recording exists
+     * (altSlug); otherwise the video itself.
+     */
+    private videoForLang(video: VideoItem, lang: 'en' | 'es'): VideoItem {
+        if ((video.lang || 'en') === lang || !video.altSlug) {
+            return video;
+        }
+        const alt = this.videos.find(v => v.slug === video.altSlug);
+        return alt && (alt.lang || 'en') === lang ? alt : video;
+    }
+
+    /**
+     * Site-language change: keep the featured player in the language the
+     * visitor is reading. On /videos/<slug> this navigates to the paired
+     * slug (replaceUrl keeps history clean); on the plain gallery it just
+     * swaps the featured video in place.
+     */
+    private swapSelectedVideoToLang(lang: 'en' | 'es'): void {
+        if (!this.selectedVideo) {
+            return;
+        }
+        const target = this.videoForLang(this.selectedVideo, lang);
+        if (target === this.selectedVideo) {
+            return;
+        }
+        if (this.activeSlug) {
+            this.router.navigate(['/videos', target.slug], {
+                replaceUrl: true,
+                queryParamsHandling: 'preserve',
+            });
+        } else {
+            this.selectedVideo = target;
+        }
     }
 
     selectCategory(category: 'all' | VideoCategory): void {

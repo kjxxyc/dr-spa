@@ -15,6 +15,11 @@ export interface VideoCatalogItem {
   slug: string;
   /** Spoken language of the video itself ('en' when omitted). */
   lang?: 'en' | 'es';
+  /**
+   * Slug of the same talk recorded in the other language, when it exists.
+   * Lets the player swap to the matching recording on site-language change.
+   */
+  altSlug?: string;
 }
 
 /**
@@ -23,40 +28,41 @@ export interface VideoCatalogItem {
  * on video detail pages).
  */
 export const VIDEOS: VideoCatalogItem[] = [
-  // ── Featured: book preview ──
-  { id: 'SyF9dvOCCKI', titleKey: 'videos.list.v58', category: 'about', slug: 'book-modern-medicine-for-modern-times' },
+  // ── Featured: book preview (English + Spanish editions) ──
+  { id: 'SyF9dvOCCKI', titleKey: 'videos.list.v58', category: 'about', slug: 'book-modern-medicine-for-modern-times', altSlug: 'libro-medicina-moderna-para-tiempos-modernos' },
+  { id: 'jk-zlZYrBfM', titleKey: 'videos.list.v64', category: 'about', slug: 'libro-medicina-moderna-para-tiempos-modernos', lang: 'es', altSlug: 'book-modern-medicine-for-modern-times' },
   // ── From old WordPress gallery (Page 1) ──
-  { id: 'F-jWDkQGMRg', titleKey: 'videos.list.v11', category: 'functional', slug: 'fibromyalgia-chronic-fatigue-adrenal-exhaustion' },
-  { id: 'ri-sLzyiJjU', titleKey: 'videos.list.v12', category: 'functional', slug: 'lab-tests-in-functional-medicine' },
-  { id: 'M32eBbD-axE', titleKey: 'videos.list.v13', category: 'brain', slug: 'hormone-replacement-menopause-alzheimers-risk' },
-  { id: 'kAeswsB3bkk', titleKey: 'videos.list.v14', category: 'brain', slug: 'trophic-theory-of-alzheimers' },
-  { id: 'C5TrmOI9TMY', titleKey: 'videos.list.v15', category: 'wellness', slug: 'dangers-of-too-low-cholesterol' },
-  { id: 'NQbmfUu8UHc', titleKey: 'videos.list.v16', category: 'weight', slug: 'weight-rebound-after-diets-hormones' },
-  { id: 'r5dT3iNlqXU', titleKey: 'videos.list.v17', category: 'brain', slug: 'neuroplasticity-and-neurogenesis' },
-  { id: 'iyK-EPbfBlU', titleKey: 'videos.list.v18', category: 'hormones', slug: 'the-5-hormones-in-menopause' },
-  { id: 'GKZR_XiSIbQ', titleKey: 'videos.list.v19', category: 'weight', slug: 'semaglutide-for-weight-loss' },
-  { id: 'QD-m7tjkLSs', titleKey: 'videos.list.v20', category: 'hormones', slug: 'when-does-menopause-start' },
-  { id: '8ROj00ttX3w', titleKey: 'videos.list.v21', category: 'functional', slug: 'sibo-small-intestinal-bacterial-overgrowth' },
-  { id: 'RTKw2uPrk3s', titleKey: 'videos.list.v22', category: 'functional', slug: 'the-asia-syndrome' },
-  { id: 'i2-KROsfOqM', titleKey: 'videos.list.v23', category: 'brain', slug: 'alzheimers-prevention-toxins' },
-  { id: 'GcCt2jpYZpQ', titleKey: 'videos.list.v24', category: 'weight', slug: 'neat-calories-burned-without-exercise' },
-  { id: 'wTn0WuYyN1o', titleKey: 'videos.list.v25', category: 'hormones', slug: 'thyroid-health' },
+  { id: 'F-jWDkQGMRg', titleKey: 'videos.list.v11', category: 'functional', slug: 'fibromyalgia-chronic-fatigue-adrenal-exhaustion', altSlug: 'fibromialgia-fatiga-cronica' },
+  { id: 'ri-sLzyiJjU', titleKey: 'videos.list.v12', category: 'functional', slug: 'lab-tests-in-functional-medicine', altSlug: 'examenes-de-laboratorio-medicina-funcional' },
+  { id: 'M32eBbD-axE', titleKey: 'videos.list.v13', category: 'brain', slug: 'hormone-replacement-menopause-alzheimers-risk', altSlug: 'terapia-hormonal-menopausia-riesgo-alzheimer' },
+  { id: 'kAeswsB3bkk', titleKey: 'videos.list.v14', category: 'brain', slug: 'trophic-theory-of-alzheimers', altSlug: 'teoria-trofica-del-alzheimer' },
+  { id: 'C5TrmOI9TMY', titleKey: 'videos.list.v15', category: 'wellness', slug: 'dangers-of-too-low-cholesterol', altSlug: 'peligros-del-colesterol-muy-bajo' },
+  { id: 'NQbmfUu8UHc', titleKey: 'videos.list.v16', category: 'weight', slug: 'weight-rebound-after-diets-hormones', altSlug: 'rebote-despues-de-las-dietas' },
+  { id: 'r5dT3iNlqXU', titleKey: 'videos.list.v17', category: 'brain', slug: 'neuroplasticity-and-neurogenesis', altSlug: 'neurogenesis-y-neuroplasticidad' },
+  { id: 'iyK-EPbfBlU', titleKey: 'videos.list.v18', category: 'hormones', slug: 'the-5-hormones-in-menopause', altSlug: 'las-5-hormonas-en-la-menopausia' },
+  { id: 'GKZR_XiSIbQ', titleKey: 'videos.list.v19', category: 'weight', slug: 'semaglutide-for-weight-loss', altSlug: 'bajar-de-peso-con-semaglutida' },
+  { id: 'QD-m7tjkLSs', titleKey: 'videos.list.v20', category: 'hormones', slug: 'when-does-menopause-start', altSlug: 'cuando-comienza-la-menopausia' },
+  { id: '8ROj00ttX3w', titleKey: 'videos.list.v21', category: 'functional', slug: 'sibo-small-intestinal-bacterial-overgrowth', altSlug: 'sibo-sobrecrecimiento-bacteriano-intestinal' },
+  { id: 'RTKw2uPrk3s', titleKey: 'videos.list.v22', category: 'functional', slug: 'the-asia-syndrome', altSlug: 'el-sindrome-asia' },
+  { id: 'i2-KROsfOqM', titleKey: 'videos.list.v23', category: 'brain', slug: 'alzheimers-prevention-toxins', altSlug: 'prevencion-del-alzheimer-toxinas' },
+  { id: 'GcCt2jpYZpQ', titleKey: 'videos.list.v24', category: 'weight', slug: 'neat-calories-burned-without-exercise', altSlug: 'neat-quemar-calorias-sin-ejercicio' },
+  { id: 'wTn0WuYyN1o', titleKey: 'videos.list.v25', category: 'hormones', slug: 'thyroid-health', altSlug: 'salud-de-la-tiroides' },
   // ── Spanish-only versions from YouTube channel ──
-  { id: 'brnZdPm7mk8', titleKey: 'videos.list.v26', category: 'functional', slug: 'fibromialgia-fatiga-cronica', lang: 'es' },
-  { id: 'cWrF75jkQhA', titleKey: 'videos.list.v27', category: 'functional', slug: 'examenes-de-laboratorio-medicina-funcional', lang: 'es' },
-  { id: 'E-qqKxVesoc', titleKey: 'videos.list.v28', category: 'functional', slug: 'sibo-sobrecrecimiento-bacteriano-intestinal', lang: 'es' },
-  { id: 'QbQFOirN93I', titleKey: 'videos.list.v29', category: 'brain', slug: 'terapia-hormonal-menopausia-riesgo-alzheimer', lang: 'es' },
-  { id: 'WisYn539OSk', titleKey: 'videos.list.v30', category: 'brain', slug: 'teoria-trofica-del-alzheimer', lang: 'es' },
-  { id: 'cgGzztfNPKw', titleKey: 'videos.list.v31', category: 'wellness', slug: 'peligros-del-colesterol-muy-bajo', lang: 'es' },
-  { id: 'K0YRurRVaEk', titleKey: 'videos.list.v32', category: 'weight', slug: 'rebote-despues-de-las-dietas', lang: 'es' },
-  { id: 'XMFAZB0dc20', titleKey: 'videos.list.v33', category: 'brain', slug: 'neurogenesis-y-neuroplasticidad', lang: 'es' },
-  { id: 'hFwbHwvHoqU', titleKey: 'videos.list.v34', category: 'hormones', slug: 'las-5-hormonas-en-la-menopausia', lang: 'es' },
-  { id: 'L5VVQJ0lncM', titleKey: 'videos.list.v35', category: 'weight', slug: 'bajar-de-peso-con-semaglutida', lang: 'es' },
-  { id: 'v8pqsvpFkZI', titleKey: 'videos.list.v36', category: 'hormones', slug: 'cuando-comienza-la-menopausia', lang: 'es' },
-  { id: 'rcaDR0VmaHY', titleKey: 'videos.list.v37', category: 'functional', slug: 'el-sindrome-asia', lang: 'es' },
-  { id: 'yapm1IN6ObI', titleKey: 'videos.list.v38', category: 'brain', slug: 'prevencion-del-alzheimer-toxinas', lang: 'es' },
-  { id: 'HROxqwf09rU', titleKey: 'videos.list.v39', category: 'weight', slug: 'neat-quemar-calorias-sin-ejercicio', lang: 'es' },
-  { id: 'jaWlrZQ3Jyw', titleKey: 'videos.list.v40', category: 'hormones', slug: 'salud-de-la-tiroides', lang: 'es' },
+  { id: 'brnZdPm7mk8', titleKey: 'videos.list.v26', category: 'functional', slug: 'fibromialgia-fatiga-cronica', lang: 'es', altSlug: 'fibromyalgia-chronic-fatigue-adrenal-exhaustion' },
+  { id: 'cWrF75jkQhA', titleKey: 'videos.list.v27', category: 'functional', slug: 'examenes-de-laboratorio-medicina-funcional', lang: 'es', altSlug: 'lab-tests-in-functional-medicine' },
+  { id: 'E-qqKxVesoc', titleKey: 'videos.list.v28', category: 'functional', slug: 'sibo-sobrecrecimiento-bacteriano-intestinal', lang: 'es', altSlug: 'sibo-small-intestinal-bacterial-overgrowth' },
+  { id: 'QbQFOirN93I', titleKey: 'videos.list.v29', category: 'brain', slug: 'terapia-hormonal-menopausia-riesgo-alzheimer', lang: 'es', altSlug: 'hormone-replacement-menopause-alzheimers-risk' },
+  { id: 'WisYn539OSk', titleKey: 'videos.list.v30', category: 'brain', slug: 'teoria-trofica-del-alzheimer', lang: 'es', altSlug: 'trophic-theory-of-alzheimers' },
+  { id: 'cgGzztfNPKw', titleKey: 'videos.list.v31', category: 'wellness', slug: 'peligros-del-colesterol-muy-bajo', lang: 'es', altSlug: 'dangers-of-too-low-cholesterol' },
+  { id: 'K0YRurRVaEk', titleKey: 'videos.list.v32', category: 'weight', slug: 'rebote-despues-de-las-dietas', lang: 'es', altSlug: 'weight-rebound-after-diets-hormones' },
+  { id: 'XMFAZB0dc20', titleKey: 'videos.list.v33', category: 'brain', slug: 'neurogenesis-y-neuroplasticidad', lang: 'es', altSlug: 'neuroplasticity-and-neurogenesis' },
+  { id: 'hFwbHwvHoqU', titleKey: 'videos.list.v34', category: 'hormones', slug: 'las-5-hormonas-en-la-menopausia', lang: 'es', altSlug: 'the-5-hormones-in-menopause' },
+  { id: 'L5VVQJ0lncM', titleKey: 'videos.list.v35', category: 'weight', slug: 'bajar-de-peso-con-semaglutida', lang: 'es', altSlug: 'semaglutide-for-weight-loss' },
+  { id: 'v8pqsvpFkZI', titleKey: 'videos.list.v36', category: 'hormones', slug: 'cuando-comienza-la-menopausia', lang: 'es', altSlug: 'when-does-menopause-start' },
+  { id: 'rcaDR0VmaHY', titleKey: 'videos.list.v37', category: 'functional', slug: 'el-sindrome-asia', lang: 'es', altSlug: 'the-asia-syndrome' },
+  { id: 'yapm1IN6ObI', titleKey: 'videos.list.v38', category: 'brain', slug: 'prevencion-del-alzheimer-toxinas', lang: 'es', altSlug: 'alzheimers-prevention-toxins' },
+  { id: 'HROxqwf09rU', titleKey: 'videos.list.v39', category: 'weight', slug: 'neat-quemar-calorias-sin-ejercicio', lang: 'es', altSlug: 'neat-calories-burned-without-exercise' },
+  { id: 'jaWlrZQ3Jyw', titleKey: 'videos.list.v40', category: 'hormones', slug: 'salud-de-la-tiroides', lang: 'es', altSlug: 'thyroid-health' },
   // ── From old WordPress gallery (Pages 2 & 3) ──
   { id: 'CpcAM1wrkPQ', titleKey: 'videos.list.v41', category: 'brain', slug: 'genetic-testing-alzheimers-prevention' },
   { id: 'wB3GeOd6S6E', titleKey: 'videos.list.v42', category: 'brain', slug: 'covid-increases-dementia-risk' },

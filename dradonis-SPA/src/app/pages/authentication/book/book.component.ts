@@ -10,7 +10,9 @@ import { SeoService } from '../../../shared/seo/seo.service';
 
 const AMAZON_EN = 'https://www.amazon.com/Modern-Medicine-Times-Functional-Handbook-ebook/dp/B0146UK2FM?ref_=ast_author_dp&th=1&psc=1';
 const AMAZON_ES = 'https://www.amazon.com/Medicina-Moderna-para-Tiempos-Modernos-ebook/dp/B0159BQAU8?ref_=ast_author_dp&th=1&psc=1';
-const BOOK_VIDEO_ID = 'SyF9dvOCCKI';
+// The book presentation was recorded in both languages.
+const BOOK_VIDEO_EN = 'SyF9dvOCCKI';
+const BOOK_VIDEO_ES = 'jk-zlZYrBfM';
 
 @Component({
     selector: 'app-book',
@@ -31,7 +33,7 @@ export class BookComponent implements OnInit, OnDestroy {
 
     amazonEn = AMAZON_EN;
     amazonEs = AMAZON_ES;
-    videoThumbUrl = `https://img.youtube.com/vi/${BOOK_VIDEO_ID}/hqdefault.jpg`;
+    videoThumbUrl = `https://img.youtube.com/vi/${BOOK_VIDEO_EN}/hqdefault.jpg`;
 
     // Lite-embed: the YouTube iframe only mounts after the user clicks play.
     videoPlaying = false;
@@ -45,17 +47,27 @@ export class BookComponent implements OnInit, OnDestroy {
         private seo: SeoService,
     ) {
         this.currentLang = this.translate.currentLang || 'en';
-        this.videoEmbedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-            `https://www.youtube.com/embed/${BOOK_VIDEO_ID}?autoplay=1&rel=0`
-        );
+        this.updateVideo();
     }
 
     ngOnInit(): void {
         this.applySeo();
         this.langSub = this.translate.onLangChange.subscribe(e => {
             this.currentLang = e.lang;
+            // Keep the recording's spoken language in sync with the page,
+            // even if the user is mid-playback.
+            this.updateVideo();
             this.applySeo();
         });
+    }
+
+    /** Picks the English or Spanish recording to match the site language. */
+    private updateVideo(): void {
+        const id = this.currentLang === 'es' ? BOOK_VIDEO_ES : BOOK_VIDEO_EN;
+        this.videoThumbUrl = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+        this.videoEmbedUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+            `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`
+        );
     }
 
     ngOnDestroy(): void {
