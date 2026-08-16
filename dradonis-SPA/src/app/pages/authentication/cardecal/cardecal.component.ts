@@ -40,7 +40,6 @@ export class CardecalComponent implements OnInit {
     { id: 'ed', icon: 'favorite' },
     { id: 'functional', icon: 'health_and_safety' },
     { id: 'video', icon: 'videocam' },
-    { id: 'noVisit', icon: 'phonelink_ring' }
   ];
 
   activeServiceId: string | null = null;

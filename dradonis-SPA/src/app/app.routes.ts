@@ -16,20 +16,6 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'men-wellness',
-    loadComponent: () =>
-      import('./pages/authentication/men-wellness-contact/men-wellness-contact.component').then(
-        (m) => m.MenWellnessContactComponent
-      ),
-  },
-  {
-    path: 'men-wellness/evaluation',
-    loadComponent: () =>
-      import('./pages/authentication/tadalafil-evaluation/tadalafil-evaluation.component').then(
-        (m) => m.TadalafilEvaluationComponent
-      ),
-  },
-  {
     path: 'makeanappointment',
     loadComponent: () =>
       import('./pages/authentication/make-appointment/make-appointment.component').then(

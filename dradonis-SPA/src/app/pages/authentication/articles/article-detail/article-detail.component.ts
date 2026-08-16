@@ -62,7 +62,7 @@ export class ArticleDetailComponent implements OnInit {
             'author': {
               '@type': 'Person',
               'name': 'Dr. Adonis Maiquez',
-              'url': 'https://dradonis.com/landing/meet-doctor'
+              'url': 'https://dradonis.com/meet-doctor'
             },
             'publisher': {
               '@type': 'MedicalBusiness',

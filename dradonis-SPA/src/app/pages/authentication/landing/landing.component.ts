@@ -41,7 +41,6 @@ export class LandingComponent implements OnInit, OnDestroy {
         { id: 'glp1',         icon: 'medical_information', color: '#7B9BC1', link: '/services' },     // powder blue
         { id: 'ed',           icon: 'favorite',            color: '#C28080', link: '/services' },     // muted coral
         { id: 'video',        icon: 'videocam',            color: '#9B8AB0', link: '/telemedicine' }, // mauve
-        { id: 'noVisit',      icon: 'phonelink_ring',      color: '#80A8A0', link: '/telemedicine' }, // sea green
     ];
 
     // Second row uses the same list reversed for a brick-stacked offset effect

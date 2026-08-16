@@ -10,6 +10,7 @@
       "bmr": "CALCULADORA DE TMB",
       "water": "CALCULADORA DE AGUA",
       "videos": "VIDEOS Y MÁS",
+      "articles": "ARTÍCULOS",
       "contact": "CONTACTO",
       "meetDoctor": "CONOCE A TU DOCTOR",
       "sitemap": "Mapa del Sitio"
@@ -170,15 +171,10 @@
   "servicesPromo": {
     "title": "Servicios Médicos en Línea",
     "subtitle": "Evaluaciones médicas rápidas y privadas desde la comodidad de tu hogar",
-    "tadalafil": {
-      "title": "Evaluación de Tadalafil (Cialis®)",
-      "description": "Complete una evaluación médica confidencial revisada por el Dr. Adonis. Obtenga su prescripción de forma rápida y discreta.",
-      "btn": "INICIAR EVALUACIÓN"
-    },
     "vitamins": {
       "title": "Prescripción Personalizada de Vitaminas",
       "description": "Obtenga un plan personalizado de vitaminas y suplementos adaptado a sus necesidades de salud por el Dr. Adonis.",
-      "btn": "OBTENER PRESCRIPCIÓN"
+      "btn": "INICIE SU EVALUACIÓN"
     }
   },
   "bookSection": {
@@ -262,6 +258,7 @@
       "femguard": "FemGuard + Balance™: Apoyo hormonal femenino integral — DIM, black cohosh y sauzgatillo (vitex) para promover un metabolismo saludable del estrógeno, confort mensual y equilibrio hormonal."
     },
     "viewDetails": "Ver detalles",
+    "viewServices": "Ver Nuestros Servicios",
     "detail": {
       "breadcrumbHome": "Inicio",
       "breadcrumbShop": "Tienda",
@@ -382,18 +379,6 @@
       "agingBiomarkers": {
         "title": "Biomarcadores del Envejecimiento",
         "description": "El Dr. A ha ayudado a miles de pacientes a abrazar el envejecimiento con una perspectiva positiva y terapias alternativas. Al minimizar la dependencia de medicamentos, equipa a los pacientes para tener mejor control sobre sus vidas y hábitos, proporcionando un ambiente más propicio para enfrentar el envejecimiento.\n\nSi busca añadir vida a sus años — agende una cita con nuestra clínica."
-      },
-      "specializedLabs": {
-        "title": "Exámenes de Laboratorio Internacionales",
-        "description": "ACCESO A LABORATORIOS INTERNACIONALES — UN DIFERENCIADOR CLAVE. La clínica del Dr. Adonis tiene alianzas con laboratorios internacionales líderes y opera su propio laboratorio en sitio, ofreciendo acceso a pruebas diagnósticas avanzadas raramente disponibles en otras clínicas de Estados Unidos. Esta combinación única significa que paneles especializados pueden ejecutarse inmediatamente, sin necesidad de viajar al extranjero.\n\nOfrecemos pruebas integrales a través de nuestra red global de laboratorios, incluyendo: análisis hormonal internacional, marcadores de cáncer, pruebas genéticas y epigenéticas, sensibilidades alimentarias, niveles de toxinas, metales pesados, micronutrientes, y paneles de biomarcadores avanzados no comúnmente ofrecidos por clínicas convencionales.\n\nEste acceso mundial a laboratorios, combinado con la experiencia en medicina funcional del Dr. Adonis, permite diagnósticos precisos e intervenciones oportunas — ya sea que viva en Miami o nos visite desde el extranjero."
-      },
-      "detoxification": {
-        "title": "Desintoxicación",
-        "description": "Nuestro cuerpo alberga varios organismos que causan enfermedades y toxinas. Aunque el cuerpo tiene su propia forma de defenderse, las toxinas a las que estamos expuestos diariamente necesitan algo extra para combatir sus efectos en nuestra salud.\n\nUn programa de desintoxicación es importante para prevenir la sobrecarga de toxinas y combatirla cuando ocurre. Si está listo para una versión más saludable y menos tóxica de usted mismo — agende una cita hoy."
-      },
-      "ivVitamin": {
-        "title": "Terapia Intravenosa de Vitaminas (IV)",
-        "description": "El Dr. Adonis ha sido enormemente exitoso combinando terapia regular de vitaminas IV con un régimen modificado de dieta y estilo de vida para una solución más productiva y sostenible. Incorpora la historia del paciente y planes dietéticos en la elección del tratamiento, produciendo resultados consistentes.\n\nHa logrado resultados consistentes en pacientes de varios grupos de edad y trastornos — desde deficiencias menores de vitaminas hasta cáncer. Para un impulso inmediato de bienestar y un enfoque más holístico — agende una cita."
       },
       "autoimmune": {
         "title": "Enfermedades Autoinmunes",
@@ -581,11 +566,6 @@
         "title": "Telemedicina (Video consulta)",
         "summary": "Consultas médicas convenientes y privadas con el Dr. Adonis desde la comodidad de su hogar.",
         "btn": "Hacer una consulta"
-      },
-      "noVisit": {
-        "title": "Sin visita a la consulta",
-        "summary": "Obtenga sus evaluaciones médicas y recetas completamente en línea sin tener que pisar un consultorio.",
-        "btn": "Hacer una consulta"
       }
     }
   },
@@ -685,12 +665,33 @@
     "videos": "Hola, vi sus videos y deseo más información",
     "video": "Hola, vi su video \"{{video}}\" y deseo más información",
     "vitamins": "Hola, estoy interesado en una prescripción de vitaminas",
-    "menwellness": "Hola, estoy interesado en comprar tadalafil-cialis",
     "appointment": "Hola, me gustaría agendar una cita con el Dr. Adonis",
     "telemedicine": "Hola, deseo agendar una teleconsulta con el Dr. Adonis",
     "articles": "Hola, leí sus artículos y deseo más información",
     "article": "Hola, leí su artículo \"{{article}}\" y deseo más información",
     "tools": "Hola, usé sus calculadoras de salud y deseo una consulta",
     "meetDoctor": "Hola, deseo conocer más sobre el Dr. Adonis y agendar una cita"
+  },
+  "notFound": {
+    "title": "¡Ups! Esta página no existe",
+    "subtitle": "El sitio del Dr. Adonis se renovó por completo y algunos enlaces antiguos cambiaron de lugar. Lo que buscas muy probablemente sigue aquí — revisa las sugerencias o usa el buscador.",
+    "suggestionsTitle": "¿Es esto lo que buscabas?",
+    "resultsTitle": "Resultados",
+    "searchPlaceholder": "Busca videos, artículos y productos...",
+    "noResults": "Sin resultados para tu búsqueda. Prueba con otra palabra.",
+    "quickTitle": "O explora el sitio",
+    "badge": {
+      "article": "Artículo",
+      "video": "Video",
+      "product": "Producto"
+    },
+    "links": {
+      "shop": "Tienda",
+      "videos": "Videos",
+      "articles": "Artículos",
+      "services": "Servicios",
+      "tools": "Calculadoras"
+    },
+    "ctaText": "¿No lo encuentras? Te ayudamos en persona — agenda una cita o llámanos."
   }
 }

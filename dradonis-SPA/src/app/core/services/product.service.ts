@@ -65,7 +65,7 @@ export const PRODUCTS: Product[] = [
     image: 'https://assets.fullscript.io/Product/EN0037/400_front.png',
     relatedArticles: {
       en: ['what-is-detoxification-and-toxin-exposure', 'do-you-have-mold-in-your-home-be-careful-it-could-be-making-you-sick-without-you-noticing'],
-      es: ['que-es-la-desintoxicacion-y-la-exposicion-a-toxinas', 'tienes-moho-en-casa-cuidado-podria-estar-enfermandote-sin-que-lo-notes'],
+      es: ['tienes-moho-en-casa-cuidado-podria-estar-enfermandote-sin-que-lo-notes'],
     },
     relatedVideos: [
       { slug: 'alzheimers-prevention-toxins', youtubeId: 'i2-KROsfOqM', titleKey: 'videos.list.v23' },
@@ -159,7 +159,7 @@ export const PRODUCTS: Product[] = [
     image: 'https://assets.fullscript.io/Product/TH0319/400_front.png',
     relatedArticles: {
       en: ['unlock-the-secret-to-glowing-skin-the-power-of-antioxidants', 'what-is-detoxification-and-toxin-exposure'],
-      es: ['descubre-el-secreto-de-una-piel-radiante-el-poder-de-los-antioxidantes', 'que-es-la-desintoxicacion-y-la-exposicion-a-toxinas'],
+      es: ['descubre-el-secreto-de-una-piel-radiante-el-poder-de-los-antioxidantes'],
     },
     relatedVideos: [
       { slug: 'antioxidants', youtubeId: 'lWorK6csgvI', titleKey: 'videos.list.v59' },

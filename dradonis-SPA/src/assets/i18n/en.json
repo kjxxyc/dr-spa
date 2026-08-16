@@ -10,6 +10,7 @@
       "bmr": "BMR CALCULATOR",
       "water": "WATER CALCULATOR",
       "videos": "VIDEOS & MORE",
+      "articles": "ARTICLES",
       "contact": "CONTACT",
       "meetDoctor": "KNOW YOUR DOCTOR",
       "sitemap": "Sitemap"
@@ -170,15 +171,10 @@
   "servicesPromo": {
     "title": "Online Medical Services",
     "subtitle": "Quick, private medical evaluations from the comfort of your home",
-    "tadalafil": {
-      "title": "Tadalafil (Cialis®) Evaluation",
-      "description": "Complete a confidential medical evaluation reviewed by Dr. Adonis. Get your prescription quickly and discreetly.",
-      "btn": "START EVALUATION"
-    },
     "vitamins": {
       "title": "Personalized Vitamins Prescription",
       "description": "Get a customized vitamin and supplement plan tailored to your specific health needs by Dr. Adonis.",
-      "btn": "GET YOUR PRESCRIPTION"
+      "btn": "START YOUR EVALUATION"
     }
   },
   "bookSection": {
@@ -262,6 +258,7 @@
       "femguard": "FemGuard + Balance™: Comprehensive female hormone support — DIM, black cohosh, and chaste tree (vitex) to promote healthy estrogen metabolism, monthly comfort, and hormonal balance."
     },
     "viewDetails": "View details",
+    "viewServices": "View Our Services",
     "detail": {
       "breadcrumbHome": "Home",
       "breadcrumbShop": "Shop",
@@ -382,18 +379,6 @@
       "agingBiomarkers": {
         "title": "Aging Biomarkers",
         "description": "Dr. A has helped thousands of patients embrace aging with a positive outlook and alternative therapies. By minimizing dependency on medication, he equips patients to gain better control over their lives and habits, providing an environment more conducive to coping with aging.\n\nIf you are looking to add life to your years — book an appointment with our clinic."
-      },
-      "specializedLabs": {
-        "title": "International Laboratory Testing",
-        "description": "ACCESS TO INTERNATIONAL LABORATORY NETWORKS — A KEY DIFFERENTIATOR. Dr. Adonis' clinic partners with leading international laboratories and operates its own on-site lab, providing access to advanced diagnostic tests rarely available elsewhere in the United States. This unique combination means specialized panels can be run immediately, without traveling abroad.\n\nWe offer comprehensive testing through our global lab network, including: international hormone analysis, cancer markers, genetic and epigenetic testing, food sensitivities, toxin levels, heavy metals, micronutrients, and advanced biomarker panels not commonly offered by conventional clinics.\n\nThis worldwide laboratory access, combined with Dr. Adonis' functional medicine expertise, enables precise diagnosis and timely intervention — whether you are local to Miami or visiting from abroad."
-      },
-      "detoxification": {
-        "title": "Detoxification",
-        "description": "Our body houses several disease-causing organisms and toxins. While the body has its own way of fighting back, the toxins we are exposed to daily need something extra to combat their effects on our health.\n\nA detoxification program is important to prevent toxin overdose and fight it off when it occurs. If you are ready for a healthier, less toxic version of yourself — book an appointment today."
-      },
-      "ivVitamin": {
-        "title": "Intravenous (IV) Vitamin Therapy",
-        "description": "Dr. Adonis has been hugely successful combining regular IV vitamin therapy with a modified diet and lifestyle regimen for a more productive, sustainable solution. He incorporates patient history and diet plans into the choice of treatment and produces consistent results.\n\nHe has achieved consistent results across patients of varying age groups and disorders — ranging from minor vitamin deficiencies to cancer. For an immediate boost of wellness and a more wholesome approach — book an appointment."
       },
       "autoimmune": {
         "title": "Autoimmune Diseases",
@@ -581,11 +566,6 @@
         "title": "Telemedicine (Video Consultation)",
         "summary": "Convenient and private medical consultations with Dr. Adonis from the comfort of your home.",
         "btn": "Make a consultation"
-      },
-      "noVisit": {
-        "title": "No Doctor Office Visit",
-        "summary": "Get your medical evaluations and prescriptions entirely online without stepping into an office.",
-        "btn": "Make a consultation"
       }
     }
   },
@@ -685,12 +665,33 @@
     "videos": "Hello, I saw your videos and would like more information",
     "video": "Hello, I watched your video \"{{video}}\" and would like more information",
     "vitamins": "Hello, I am interested in a vitamin prescription",
-    "menwellness": "Hello, I am interested in buying tadalafil-cialis",
     "appointment": "Hello, I would like to schedule an appointment with Dr. Adonis",
     "telemedicine": "Hello, I would like to schedule a teleconsultation with Dr. Adonis",
     "articles": "Hello, I read your articles and would like more information",
     "article": "Hello, I read your article \"{{article}}\" and would like more information",
     "tools": "Hello, I used your health calculators and would like a consultation",
     "meetDoctor": "Hello, I would like to know more about Dr. Adonis and schedule an appointment"
+  },
+  "notFound": {
+    "title": "Oops! This page doesn't exist",
+    "subtitle": "Dr. Adonis's website got a full makeover and some older links have moved. What you're looking for is most likely still here — check the suggestions or search below.",
+    "suggestionsTitle": "Is this what you were looking for?",
+    "resultsTitle": "Results",
+    "searchPlaceholder": "Search videos, articles and products...",
+    "noResults": "No results for your search. Try a different word.",
+    "quickTitle": "Or explore the site",
+    "badge": {
+      "article": "Article",
+      "video": "Video",
+      "product": "Product"
+    },
+    "links": {
+      "shop": "Shop",
+      "videos": "Videos",
+      "articles": "Articles",
+      "services": "Services",
+      "tools": "Calculators"
+    },
+    "ctaText": "Can't find it? We'll help you personally — schedule an appointment or call us."
   }
 }

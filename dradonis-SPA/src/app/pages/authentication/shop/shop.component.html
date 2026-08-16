@@ -101,6 +101,14 @@
                     {{ 'shop.viewDetails' | translate }}
                 </a>
             </div>
+
+            <!-- See Services Card (mirrors the "see articles" card on /videos) -->
+            <a routerLink="/services" class="fs-product-card see-services-card">
+                <div class="services-placeholder">
+                    <mat-icon class="large-icon">medical_services</mat-icon>
+                    <span class="view-services-text">{{ 'shop.viewServices' | translate }}</span>
+                </div>
+            </a>
         </div>
     </section>
 </div>

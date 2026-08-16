@@ -44,9 +44,9 @@ export interface SeoConfig {
  *   constructor(private seo: SeoService) {}
  *   ngOnInit() {
  *     this.seo.apply({
- *       title: 'Tadalafil (Cialis) Prescription Miami | Dr. Adonis',
+ *       title: 'Telemedicine Consultation | Dr. Adonis',
  *       description: '...',
- *       url: 'https://dradonis.com/men-wellness/evaluation',
+ *       url: 'https://dradonis.com/telemedicine',
  *       lang: 'es',
  *       jsonLd: { ... },
  *     });
@@ -59,13 +59,11 @@ export interface SeoConfig {
  * of truth when constructing absolute URLs for static assets like
  * sitemap.xml or robots.txt where window.location can't be used.
  *
- * Current state (May 2026): the Angular SPA is deployed to
- * `my.dradonis.com`. The main `dradonis.com` still hosts the legacy
- * WordPress site. When the migration is complete, change this constant
- * to `https://dradonis.com` and also update sitemap.xml + robots.txt
- * accordingly.
+ * Current state (Aug 2026): the SPA serves `dradonis.com` (apex);
+ * `my.dradonis.com` 301-redirects here. The legacy WordPress lives only
+ * on `old.dradonis.com` (pending shutdown).
  */
-export const SITE_ORIGIN_FALLBACK = 'https://my.dradonis.com';
+export const SITE_ORIGIN_FALLBACK = 'https://dradonis.com';
 
 @Injectable({ providedIn: 'root' })
 export class SeoService {
@@ -96,8 +94,7 @@ export class SeoService {
      * Returns the active site origin (protocol + hostname + port). Resolves
      * automatically based on where the app is actually being served:
      *   - localhost:4200    → http://localhost:4200
-     *   - my.dradonis.com   → https://my.dradonis.com  (current production)
-     *   - dradonis.com      → https://dradonis.com     (after migration)
+     *   - dradonis.com      → https://dradonis.com     (production)
      *
      * During SSR / prerender (no `window`), falls back to SITE_ORIGIN_FALLBACK.
      * This means canonical links, og:url, and JSON-LD @id values are always
@@ -111,7 +108,7 @@ export class SeoService {
         return SITE_ORIGIN_FALLBACK;
     }
 
-    /** Convenience helper: builds an absolute URL from a path like '/men-wellness/evaluation'. */
+    /** Convenience helper: builds an absolute URL from a path like '/telemedicine'. */
     absoluteUrl(path: string): string {
         const cleanPath = path.startsWith('/') ? path : `/${path}`;
         return `${this.origin}${cleanPath}`;

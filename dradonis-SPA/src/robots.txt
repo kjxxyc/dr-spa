@@ -17,7 +17,6 @@ Allow: /articles
 Allow: /videos
 Allow: /tools
 Allow: /cardecal
-Allow: /men-wellness
 Allow: /vitamins-prescription
 Allow: /makeanappointment
 Allow: /sitemap
@@ -69,4 +68,3 @@ Disallow: /
 Sitemap: https://dradonis.com/sitemap.xml
 
 # Subdomain (current deployment — both resolve to the same SPA)
-Sitemap: https://my.dradonis.com/sitemap.xml

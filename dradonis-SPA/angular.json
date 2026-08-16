@@ -152,8 +152,6 @@
             "routes": [
               "/",
               "/landing",
-              "/men-wellness",
-              "/men-wellness/evaluation",
               "/vitamins-prescription",
               "/cardecal",
               "/tools/water-calculator"

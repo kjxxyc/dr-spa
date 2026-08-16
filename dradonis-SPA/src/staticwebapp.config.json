@@ -27,18 +27,213 @@
             "statusCode": 301
         },
         {
-            "route": "/landing/men-wellness",
-            "redirect": "/men-wellness",
+            "route": "/landing/men-wellness/evaluation",
+            "redirect": "/services",
             "statusCode": 301
         },
         {
-            "route": "/landing/men-wellness/evaluation",
-            "redirect": "/men-wellness/evaluation",
+            "route": "/landing/men-wellness",
+            "redirect": "/services",
             "statusCode": 301
         },
         {
             "route": "/landing/vitamins-prescription",
             "redirect": "/vitamins-prescription",
+            "statusCode": 301
+        },
+        {
+            "route": "/men-wellness/evaluation",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/men-wellness",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/about*",
+            "redirect": "/meet-doctor",
+            "statusCode": 301
+        },
+        {
+            "route": "/sobre-mi*",
+            "redirect": "/meet-doctor",
+            "statusCode": 301
+        },
+        {
+            "route": "/consulta-telefono-video*",
+            "redirect": "/telemedicine",
+            "statusCode": 301
+        },
+        {
+            "route": "/citas*",
+            "redirect": "/makeanappointment",
+            "statusCode": 301
+        },
+        {
+            "route": "/appointments*",
+            "redirect": "/makeanappointment",
+            "statusCode": 301
+        },
+        {
+            "route": "/vitaminas-personalizadas*",
+            "redirect": "/vitamins-prescription",
+            "statusCode": 301
+        },
+        {
+            "route": "/esp*",
+            "redirect": "/",
+            "statusCode": 301
+        },
+        {
+            "route": "/the-brain-protocol*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/el-protocolo-cerebral*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/brain-health*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/telomeres-and-aging-a-deep-dive-into-cellular-aging-mechanisms*",
+            "redirect": "/articles/telomeres-and-aging-a-deep-dive-into-cellular-aging-mechanisms",
+            "statusCode": 301
+        },
+        {
+            "route": "/telomeres*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/bio-identical-hormone-therapy*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/pain-management*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/detoxification*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/specialized-laboratory-tests*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/analisis-de-laboratorio*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/terapia-de-quelacion*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/terapia-de-vitaminas-intravenosas*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/weight-loss*",
+            "redirect": "/services",
+            "statusCode": 301
+        },
+        {
+            "route": "/protocols*",
+            "redirect": "/videos",
+            "statusCode": 301
+        },
+        {
+            "route": "/programas*",
+            "redirect": "/videos",
+            "statusCode": 301
+        },
+        {
+            "route": "/que-es-la-desintoxicacion-y-la-exposicion-a-toxinas*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/did-you-know-that-intravenous-exosomes-can-help-reverse-age-related-kidney-deterioration*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/sabias-que-los-exosomas-intravenosos-pueden-ayudar-a-revertir-el-deterioro-renal-asociado-a-la-edad*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/exosomas-y-reduccion-de-la-inflamacion-una-nueva-esperanza*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/envejecimiento-celulas-madres-terapia-de-oxigeno-hiperbarica*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/bioidentical-vs-synthetic-hormones-an-in-depth-comparison*",
+            "redirect": "/articles/bioidentical-vs-synthetic-hormones-an-in-depth-comparison",
+            "statusCode": 301
+        },
+        {
+            "route": "/the-biomarkers-of-aging-key-indicators-to-monitor-your-health-span*",
+            "redirect": "/articles/the-biomarkers-of-aging-key-indicators-to-monitor-your-health-span",
+            "statusCode": 301
+        },
+        {
+            "route": "/chronological-vs-biological-age-understanding-the-difference*",
+            "redirect": "/articles/chronological-vs-biological-age-understanding-the-difference",
+            "statusCode": 301
+        },
+        {
+            "route": "/articles/did-you-know-that-intravenous-exosomes-can-help-reverse-age-related-kidney-deterioration*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/articles/sabias-que-los-exosomas-intravenosos-pueden-ayudar-a-revertir-el-deterioro-renal-asociado-a-la-edad*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/articles/que-es-la-desintoxicacion-y-la-exposicion-a-toxinas*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/articles/exosomas-y-reduccion-de-la-inflamacion-una-nueva-esperanza*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/articles/envejecimiento-celulas-madres-terapia-de-oxigeno-hiperbarica*",
+            "redirect": "/articles",
+            "statusCode": 301
+        },
+        {
+            "route": "/articles/are-you-drinking-enough-water-to-beat-fatigue-copy*",
+            "redirect": "/articles/are-you-drinking-enough-water-to-beat-fatigue",
+            "statusCode": 301
+        },
+        {
+            "route": "/articles/se-siente-fatigado-la-culpa-podria-ser-de-tus-niveles-de-hierro-copy*",
+            "redirect": "/articles/se-siente-fatigado-la-culpa-podria-ser-de-tus-niveles-de-hierro",
             "statusCode": 301
         },
         {

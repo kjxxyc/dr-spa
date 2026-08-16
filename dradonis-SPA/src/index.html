@@ -81,15 +81,12 @@
       - Meta Pixel:   loaded on first user interaction (scroll/click/touch/keydown).
                       Lighthouse never interacts so it doesn't count against the score;
                       real users always trigger it within seconds.
-      - TikTok Pixel: loaded inside men-wellness-contact.component (where the
-                      tadalafil-cialis campaign lives — that's the only page that
-                      needs TikTok attribution).
   -->
   <script>
   (function(){
     var p=window.location.pathname;
-    // Meta Pixel: excluded from /men-wellness and /vitamins-prescription
-    if(p.indexOf('/men-wellness')!==-1 || p.indexOf('/vitamins-prescription')!==-1) return;
+    // Meta Pixel: excluded from /vitamins-prescription (health-intake page — no ad trackers)
+    if(p.indexOf('/vitamins-prescription')!==-1) return;
     var loaded=false;
     var loadPixel=function(){
       if(loaded) return; loaded=true;

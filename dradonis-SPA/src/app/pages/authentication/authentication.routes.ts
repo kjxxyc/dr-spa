@@ -149,6 +149,15 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.WaterCalculatorComponent
               ),
           },
+          {
+            // Smart 404 — MUST stay last. Lives inside the public layout so
+            // the error page keeps header, footer, and the WhatsApp button.
+            path: '**',
+            loadComponent: () =>
+              import('./not-found/not-found.component').then(
+                (m) => m.NotFoundComponent
+              ),
+          },
         ],
       },
     ],

@@ -1,0 +1,80 @@
+<div class="nf-page">
+
+  <section class="nf-hero">
+    <p class="nf-code">404</p>
+    <h1>{{ 'notFound.title' | translate }}</h1>
+    <p class="nf-subtitle">{{ 'notFound.subtitle' | translate }}</p>
+    <p class="nf-path"><code>{{ brokenPath }}</code></p>
+  </section>
+
+  <!-- Buscador global (videos + articulos + productos) -->
+  <section class="nf-search">
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.2" y2="16.2"></line>
+      </svg>
+      <input
+        type="text"
+        [(ngModel)]="searchText"
+        (ngModelChange)="onSearchChange()"
+        [placeholder]="'notFound.searchPlaceholder' | translate"
+        [attr.aria-label]="'notFound.searchPlaceholder' | translate">
+    </div>
+  </section>
+
+  <!-- Sugerencias desde la URL rota, o resultados de la busqueda -->
+  <section class="nf-results" *ngIf="displayResults.length">
+    <h2 class="nf-section-title">
+      {{ (showingSuggestions ? 'notFound.suggestionsTitle' : 'notFound.resultsTitle') | translate }}
+    </h2>
+    <div class="nf-results-grid">
+      <a class="nf-result-card" *ngFor="let r of displayResults" [routerLink]="r.route">
+        <div class="nf-result-image">
+          <img [src]="r.image" [alt]="r.title" loading="lazy">
+          <mat-icon *ngIf="r.type === 'video'" class="nf-play">play_circle_filled</mat-icon>
+        </div>
+        <div class="nf-result-body">
+          <span class="nf-badge" [class]="'nf-badge nf-badge--' + r.type">
+            <mat-icon>{{ r.type === 'article' ? 'auto_stories' : r.type === 'video' ? 'play_circle' : 'shopping_bag' }}</mat-icon>
+            {{ 'notFound.badge.' + r.type | translate }}
+          </span>
+          <h3>{{ r.title }}</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <p class="nf-no-results" *ngIf="searchText && !displayResults.length">
+    {{ 'notFound.noResults' | translate }}
+  </p>
+
+  <!-- Accesos directos a las secciones -->
+  <section class="nf-links">
+    <h2 class="nf-section-title">{{ 'notFound.quickTitle' | translate }}</h2>
+    <div class="nf-links-row">
+      <a class="nf-link-chip" routerLink="/shop"><mat-icon>shopping_bag</mat-icon> {{ 'notFound.links.shop' | translate }}</a>
+      <a class="nf-link-chip" routerLink="/videos"><mat-icon>play_circle_filled</mat-icon> {{ 'notFound.links.videos' | translate }}</a>
+      <a class="nf-link-chip" routerLink="/articles"><mat-icon>auto_stories</mat-icon> {{ 'notFound.links.articles' | translate }}</a>
+      <a class="nf-link-chip" routerLink="/services"><mat-icon>medical_services</mat-icon> {{ 'notFound.links.services' | translate }}</a>
+      <a class="nf-link-chip" routerLink="/tools/bmi-calculator"><mat-icon>calculate</mat-icon> {{ 'notFound.links.tools' | translate }}</a>
+    </div>
+  </section>
+
+  <!-- Camino a la cita, siempre -->
+  <section class="nf-cta">
+    <p>{{ 'notFound.ctaText' | translate }}</p>
+    <div class="nf-cta-actions">
+      <a href="javascript:void(0)" (click)="openAppointment()" class="nf-cta-btn">
+        <mat-icon>calendar_today</mat-icon>
+        {{ 'services.btnAppointment' | translate }}
+      </a>
+      <a href="tel:+13052047816" class="nf-cta-phone">
+        <mat-icon>phone</mat-icon>
+        (305) 204-7816
+      </a>
+    </div>
+  </section>
+
+</div>

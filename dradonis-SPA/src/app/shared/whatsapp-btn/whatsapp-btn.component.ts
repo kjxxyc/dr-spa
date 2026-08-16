@@ -8,7 +8,7 @@ import { ArticleService } from '../../core/services/article.service';
 import { VideoService } from '../../core/services/video.service';
 
 /** Routes where the WhatsApp button must appear on the left side. */
-const LEFT_ROUTES = ['/men-wellness', '/vitamins-prescription', '/men-wellness/evaluation', '/makeanappointment'];
+const LEFT_ROUTES = ['/vitamins-prescription', '/makeanappointment'];
 
 @Component({
   selector: 'app-whatsapp-btn',
@@ -107,8 +107,6 @@ export class WhatsappBtnComponent implements OnInit {
       messageKey = 'whatsappMessages.videos';
     } else if (url.startsWith('/vitamins-prescription')) {
       messageKey = 'whatsappMessages.vitamins';
-    } else if (url.startsWith('/men-wellness')) {
-      messageKey = 'whatsappMessages.menwellness';
     } else if (url.startsWith('/makeanappointment')) {
       messageKey = 'whatsappMessages.appointment';
     } else if (url.startsWith('/telemedicine') || url.startsWith('/teleconsulta')) {

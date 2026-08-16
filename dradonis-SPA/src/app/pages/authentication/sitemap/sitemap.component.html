@@ -12,13 +12,13 @@
       <section class="sitemap-section">
         <h2>{{ lang === 'es' ? 'Páginas Principales' : 'Main Pages' }}</h2>
         <ul>
-          <li><a routerLink="/landing">{{ 'header.home' | translate }}</a></li>
-          <li><a routerLink="/meet-doctor">{{ 'header.about' | translate }}</a></li>
-          <li><a routerLink="/services">{{ 'header.services' | translate }}</a></li>
-          <li><a routerLink="/shop">{{ 'header.shop' | translate }}</a></li>
-          <li><a routerLink="/tools">{{ 'header.tools' | translate }}</a></li>
-          <li><a routerLink="/videos">{{ 'header.videos' | translate }}</a></li>
-          <li><a routerLink="/articles">{{ 'header.articles' | translate }}</a></li>
+          <li><a routerLink="/landing">{{ 'header.nav.home' | translate }}</a></li>
+          <li><a routerLink="/meet-doctor">{{ 'header.nav.meetDoctor' | translate }}</a></li>
+          <li><a routerLink="/services">{{ 'header.nav.services' | translate }}</a></li>
+          <li><a routerLink="/shop">{{ 'header.nav.shop' | translate }}</a></li>
+          <li><a routerLink="/tools/bmi-calculator">{{ 'header.nav.tools' | translate }}</a></li>
+          <li><a routerLink="/videos">{{ 'header.nav.videos' | translate }}</a></li>
+          <li><a routerLink="/articles">{{ 'header.nav.articles' | translate }}</a></li>
         </ul>
       </section>
 
@@ -29,15 +29,7 @@
           <li><a routerLink="/cardecal">Dr. Adonis Clinic (Cardecal)</a></li>
           <li><a routerLink="/book">{{ 'bookPage.title' | translate }}</a></li>
           <li><a routerLink="/telemedicine">{{ 'telemedicinePage.title' | translate }}</a></li>
-          <li><a routerLink="/men-wellness">{{ 'servicesPromo.tadalafil.title' | translate }}</a></li>
           <li><a routerLink="/vitamins-prescription">{{ 'servicesPromo.vitamins.title' | translate }}</a></li>
-          <li>
-            <a [routerLink]="['/articles', lang === 'es'
-                ? 'exosomas-y-reduccion-de-la-inflamacion-una-nueva-esperanza'
-                : 'exosomes-and-inflammation-reduction-a-new-hope']">
-              {{ lang === 'es' ? 'Exosomas Regenerativos' : 'Regenerative Exosomes' }}
-            </a>
-          </li>
         </ul>
       </section>
 
