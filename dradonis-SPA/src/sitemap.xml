@@ -1693,6 +1693,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/protein-after-40-healthy-aging"/>
   </url>
   <url>
+    <loc>https://dradonis.com/articles/salud-cerebral-y-reserva-cognitiva</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/brain-health-and-cognitive-reserve"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/salud-cerebral-y-reserva-cognitiva"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/salud-cerebral-y-reserva-cognitiva"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/articles/brain-health-and-cognitive-reserve</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/brain-health-and-cognitive-reserve"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/salud-cerebral-y-reserva-cognitiva"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/brain-health-and-cognitive-reserve"/>
+  </url>
+  <url>
     <loc>https://dradonis.com/privacy-policy</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>yearly</changefreq>
