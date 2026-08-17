@@ -20,6 +20,13 @@ Allow: /cardecal
 Allow: /vitamins-prescription
 Allow: /makeanappointment
 Allow: /sitemap
+Allow: /telemedicine
+Allow: /book
+Allow: /privacy-policy
+Allow: /notice-of-privacy-practices
+Allow: /terms-of-service
+Allow: /telehealth-consent
+Allow: /refund-policy
 
 # Allow assets needed for rendering (CSS, JS, images, fonts)
 Allow: /assets/

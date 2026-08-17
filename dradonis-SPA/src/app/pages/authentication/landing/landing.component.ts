@@ -263,23 +263,6 @@ export class LandingComponent implements OnInit, OnDestroy {
                         returnMethod: 'https://schema.org/ReturnByMail',
                         returnFees: 'https://schema.org/FreeReturn'
                     }
-                },
-                aggregateRating: {
-                    '@type': 'AggregateRating',
-                    ratingValue: '4.9',
-                    reviewCount: '156'
-                },
-                review: {
-                    '@type': 'Review',
-                    reviewRating: {
-                        '@type': 'Rating',
-                        ratingValue: '5'
-                    },
-                    author: {
-                        '@type': 'Person',
-                        name: 'Verified Patient'
-                    },
-                    reviewBody: 'Excellent results for relaxation and vagus nerve support. Highly recommended by Dr. Adonis.'
                 }
             },
             {

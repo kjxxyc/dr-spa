@@ -149,6 +149,16 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.WaterCalculatorComponent
               ),
           },
+          // Legal / compliance pages (LegitScript: privacy & transparency).
+          // One shared component; the slug in `data` picks the content.
+          ...['privacy-policy', 'notice-of-privacy-practices', 'terms-of-service', 'telehealth-consent', 'refund-policy'].map((slug) => ({
+            path: slug,
+            data: { slug },
+            loadComponent: () =>
+              import('./legal/legal-page.component').then(
+                (m) => m.LegalPageComponent
+              ),
+          })),
           {
             // Smart 404 — MUST stay last. Lives inside the public layout so
             // the error page keeps header, footer, and the WhatsApp button.

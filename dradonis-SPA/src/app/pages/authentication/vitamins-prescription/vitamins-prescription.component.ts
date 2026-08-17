@@ -29,8 +29,8 @@ import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.com
 // ---------- translations ----------
 const TRANSLATIONS: Record<string, Record<string, string>> = {
   en: {
-    title: 'Vitamins Prescription',
-    subtitle: 'Please fill out the information below and Dr. Adonis will email you a protocol and vitamin recommendations.',
+    title: 'Personalized Supplement Plan',
+    subtitle: 'Please fill out the information below and Dr. Adonis will email you individualized nutritional and supplement recommendations based on your evaluation.',
     shippingNote: '(SHIPPING ONLY IN THE UNITED STATES)',
     fieldsRequired: 'Fields marked with * are required',
     // Step labels
@@ -88,8 +88,8 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     langToggle: 'Español',
   },
   es: {
-    title: 'Prescripción de Vitaminas',
-    subtitle: 'Complete la información a continuación y el Dr. Adonis le enviará un protocolo y recomendaciones de vitaminas.',
+    title: 'Plan Personalizado de Suplementos',
+    subtitle: 'Complete la información a continuación y el Dr. Adonis le enviará recomendaciones individualizadas de nutrición y suplementos según su evaluación.',
     shippingNote: '(ENVÍO SOLO EN ESTADOS UNIDOS)',
     fieldsRequired: 'Los campos marcados con * son obligatorios',
     stepPersonal: 'Información Personal',
@@ -243,14 +243,14 @@ export class VitaminsPrescriptionComponent implements OnInit, OnDestroy {
     const isEs = lang === 'es';
     const config = isEs
       ? {
-          title: 'Prescripción de Vitaminas Personalizada | Dr. Adonis Miami',
-          description: 'Protocolo personalizado de vitaminas y suplementos prescrito por el Dr. Adonis Maiquez en Miami. Evaluación médica, plan a la medida y entrega local en Estados Unidos.',
-          keywords: 'prescripción vitaminas Miami, suplementos personalizados Miami, plan vitaminas Dr. Adonis, evaluación nutricional Miami, vitaminas con receta médica Florida',
+          title: 'Plan Personalizado de Suplementos | Dr. Adonis Miami',
+          description: 'Recomendaciones individualizadas de nutrición y suplementos del Dr. Adonis Maiquez en Miami, según su historia clínica, sus objetivos de salud y su evaluación clínica.',
+          keywords: 'plan de suplementos Miami, suplementos personalizados Miami, plan de vitaminas Dr. Adonis, evaluación nutricional Miami',
         }
       : {
-          title: 'Personalized Vitamin Prescription | Dr. Adonis Miami',
-          description: 'Personalized vitamin and supplement protocols prescribed by Dr. Adonis Maiquez in Miami. Medical evaluation, custom plan, US shipping included.',
-          keywords: 'vitamin prescription Miami, personalized supplements Miami, Dr. Adonis vitamin plan, nutritional evaluation Miami, doctor-prescribed vitamins Florida',
+          title: 'Personalized Supplement Plan | Dr. Adonis Miami',
+          description: 'Individualized nutritional and supplement recommendations from Dr. Adonis Maiquez in Miami, based on your medical history, health goals, and clinical evaluation.',
+          keywords: 'supplement plan Miami, personalized supplements Miami, Dr. Adonis vitamin plan, nutritional evaluation Miami',
         };
 
     this.seo.apply({
@@ -262,7 +262,7 @@ export class VitaminsPrescriptionComponent implements OnInit, OnDestroy {
         '@context': 'https://schema.org',
         '@type': 'MedicalProcedure',
         '@id': `${url}#procedure`,
-        name: isEs ? 'Prescripción de Vitaminas Personalizada' : 'Personalized Vitamin Prescription',
+        name: isEs ? 'Plan Personalizado de Suplementos' : 'Personalized Supplement Plan',
         procedureType: 'TherapeuticProcedure',
         url,
         provider: { '@type': 'Physician', '@id': `${this.seo.origin}/#physician`, name: 'Dr. Adonis Maiquez, MD' },
@@ -464,10 +464,10 @@ export class VitaminsPrescriptionComponent implements OnInit, OnDestroy {
       // --- Variables para el Auto-Responder (Correo al Cliente) ---
       client_email: personal.email,
       client_subject: this.lang === 'en' 
-        ? 'Your Request for a Vitamins Prescription Has Been Received'
+        ? 'Your Personalized Supplement Plan Request Has Been Received'
         : 'Su Solicitud de Receta de Vitaminas ha sido Recibida',
       client_message: this.lang === 'en'
-        ? `Hi ${personal.fullName},\n\nThank you for submitting a vitamins prescription request. You should be receiving a call from our office soon to complete the process.\n\nPlease feel free to contact us at 305-204-7816 if you have any questions.\n\nBest regards,\nDr. Adonis Clinic`
+        ? `Hi ${personal.fullName},\n\nThank you for submitting a personalized supplement plan request. You should be receiving a call from our office soon to complete the process.\n\nPlease feel free to contact us at 305-204-7816 if you have any questions.\n\nBest regards,\nDr. Adonis Clinic`
         : `Hola ${personal.fullName},\n\nGracias por enviar una solicitud de prescripción de vitaminas. Pronto recibirá una llamada de nuestra oficina para completar el proceso.\n\nPor favor, no dude en contactarnos al 305-204-7816 si tiene alguna pregunta.\n\nAtentamente,\nClínica Dr. Adonis`
     };
 

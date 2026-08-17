@@ -21,8 +21,8 @@
   },
   "hero": {
     "eyebrow": "Adonis Maiquez, MD",
-    "title": "Líder Experto En Medicina Funcional En Miami",
-    "subtitle": "La Medicina Funcional aborda la enfermedad desde su raíz. La mayoría de las enfermedades degenerativas crónicas, como el Alzheimer, las enfermedades cardiovasculares y autoinmunes, el aumento de peso, el desequilibrio hormonal y la fatiga crónica, tienen múltiples causas identificables que deben abordarse simultáneamente.",
+    "title": "Medicina Funcional e Integrativa en Miami",
+    "subtitle": "La medicina funcional aborda la salud de manera integral, evaluando la historia clínica, el estilo de vida, los resultados de laboratorio y otros factores que pueden contribuir a los síntomas y preocupaciones de salud de cada paciente. El Dr. Adonis desarrolla planes de atención individualizados según la evaluación clínica y las necesidades médicas de cada paciente.",
     "btnBook": "LEE MI LIBRO",
     "btnSubscribe": "SUSCRIBIRSE AL BOLETÍN",
     "statsYears": "20+",
@@ -172,9 +172,9 @@
     "title": "Servicios Médicos en Línea",
     "subtitle": "Evaluaciones médicas rápidas y privadas desde la comodidad de tu hogar",
     "vitamins": {
-      "title": "Prescripción Personalizada de Vitaminas",
-      "description": "Obtenga un plan personalizado de vitaminas y suplementos adaptado a sus necesidades de salud por el Dr. Adonis.",
-      "btn": "INICIE SU EVALUACIÓN"
+      "title": "Plan Personalizado de Suplementos",
+      "description": "Reciba recomendaciones individualizadas de nutrición y suplementos según su historia clínica, sus objetivos de salud y su evaluación clínica.",
+      "btn": "INICIAR EVALUACIÓN"
     }
   },
   "bookSection": {
@@ -350,11 +350,11 @@
       },
       "brainProtocol": {
         "title": "The Brain Protocol® — Alzheimer y Deterioro Cognitivo",
-        "description": "ATENCIÓN ESPECIALIZADA EN ALZHEIMER Y DETERIORO COGNITIVO LEVE. Globalmente, cientos de millones de personas se ven afectadas por trastornos neurológicos. Solo en Estados Unidos, la enfermedad de Alzheimer afecta a aproximadamente 5.7 millones de personas, con estadísticas en aumento. El Deterioro Cognitivo Leve — olvidos, dificultades de lenguaje y pensamiento más allá del envejecimiento normal — afecta a millones más.\n\nEl Dr. Adonis utiliza The Brain Protocol®, su protocolo propietario integral y multivariable personalizado a las necesidades de cada paciente — no solo para prevenir enfermedades neurológicas como Alzheimer y Parkinson, sino también para ayudar a regenerar el cerebro.\n\nComo neurocirujano certificado que usa medicina funcional para proveer bienestar físico, mental y espiritual completo, el Dr. Adonis es uno de los pocos especialistas en Miami que combina neurociencia de vanguardia con sanación de causa raíz. Agende una cita hoy para mantener su cerebro saludable y ágil."
+        "description": "ATENCIÓN ESPECIALIZADA EN ALZHEIMER Y DETERIORO COGNITIVO LEVE. Globalmente, cientos de millones de personas se ven afectadas por trastornos neurológicos. Solo en Estados Unidos, la enfermedad de Alzheimer afecta a aproximadamente 5.7 millones de personas, y el Deterioro Cognitivo Leve — olvidos, dificultades de lenguaje y pensamiento más allá del envejecimiento normal — afecta a millones más.\n\nThe Brain Protocol® es el programa integral y multivariable de evaluación y atención del Dr. Adonis, personalizado para cada paciente. Combina una historia clínica completa, análisis de laboratorio y un plan individualizado que aborda factores modificables asociados con la salud cognitiva — como el riesgo cardiovascular, la salud metabólica, el sueño, la nutrición y el estado hormonal — bajo supervisión médica continua.\n\nLas recomendaciones de tratamiento son individualizadas y los resultados varían entre pacientes. The Brain Protocol® no se presenta como un tratamiento para curar o prevenir la enfermedad de Alzheimer, el Parkinson u otras condiciones neurodegenerativas. Agende una cita para saber si esta evaluación es apropiada para usted."
       },
       "painManagement": {
         "title": "Manejo del Dolor",
-        "description": "El dolor es un proceso complejo y las Neurociencias abordan su manejo desde diferentes ángulos. Para ser efectivo, el manejo del dolor debe abordar todo el circuito — desde el sitio de origen (articulación, columna, músculo, tendón) hasta los nervios que transmiten señales al cerebro.\n\nNos especializamos en: inyecciones de esteroides/biológicos en articulaciones y columna; bloqueos de nervios y plexos; ablaciones por radiofrecuencia. El Dr. Adonis, entrenado como neurocirujano, es miembro de la American Academy of Pain Management y del World Institute of Pain.\n\nHemos ayudado a cientos de pacientes con dolor por accidentes de auto, lesiones deportivas, caídas, y condiciones crónicas como osteoartritis y artritis inflamatoria."
+        "description": "El dolor es un proceso complejo y las Neurociencias abordan su manejo desde diferentes ángulos. Para ser efectivo, el manejo del dolor debe abordar todo el circuito — desde el sitio de origen (articulación, columna, músculo, tendón) hasta los nervios que transmiten señales al cerebro.\n\nNos especializamos en: inyecciones de esteroides y de PRP (plasma rico en plaquetas) en articulaciones y columna; bloqueos de nervios y plexos; ablaciones por radiofrecuencia. El Dr. Adonis, entrenado como neurocirujano, es miembro de la American Academy of Pain Management y del World Institute of Pain.\n\nEvaluamos y tratamos dolor por accidentes de auto, lesiones deportivas, caídas y condiciones crónicas como la osteoartritis y la artritis inflamatoria. Los planes de tratamiento son individualizados y los resultados varían entre pacientes."
       },
       "functionalMedicine": {
         "title": "Medicina Funcional",
@@ -365,8 +365,8 @@
         "description": "Para vivir una vida larga y fructífera necesitamos cuidar de nuestra salud. Estar saludable significa no solo estar libre de enfermedades, sino tener bienestar mental, físico y emocional. El estrés constante, los malos hábitos alimenticios y los estilos de vida poco saludables han deteriorado nuestra salud general.\n\nEl Executive Physical Program le ayuda a obtener un panorama claro de su estado de salud actual y comenzar su camino hacia una versión más saludable de usted mismo."
       },
       "weightLoss": {
-        "title": "Pérdida de Peso Personalizada",
-        "description": "<b>Nuestro Programa personalizado de Pérdida de Peso basado en la Medicina Funcional ahora comienza en $35 por semana.</b> Este paquete integral incluye <b>consulta inicial (presencial o virtual)</b>, un <b>plan personalizado de pérdida de peso</b>, <b>tres meses de Semaglutida</b>, <b>inyecciones quema-grasa</b> y <b>vitaminas especialmente formuladas</b>.\n\nEl Dr. Adonis entiende que la pérdida de peso exitosa es única para cada individuo. Su metodología holística combina orientación dietaria, programas de actividad física personalizados y estrategias conductuales — más allá de soluciones temporales hacia resultados sostenibles que cambian vidas.\n\nNuestro proceso comienza con un análisis integral de salud, conduciendo a un plan personalizado diseñado para alinearse con sus necesidades individuales."
+        "title": "Manejo Médico del Peso",
+        "description": "Nuestro programa de manejo del peso dirigido por un médico comienza con una evaluación médica integral — presencial o virtual — que incluye su historia clínica, sus hábitos y análisis de laboratorio.\n\nCon base en esa evaluación, el Dr. Adonis diseña un plan individualizado que puede incluir orientación nutricional, actividad física personalizada, estrategias conductuales y, solo cuando es médicamente apropiado, tratamiento con receta bajo monitoreo médico continuo.\n\nCompletar una evaluación no garantiza que se prescriba un medicamento. Las decisiones de tratamiento las toma el médico tratante según las circunstancias clínicas individuales de cada paciente."
       },
       "hormoneTherapy": {
         "title": "Terapia Hormonal Bio-Idéntica",
@@ -389,12 +389,12 @@
         "description": "Una dolencia cada vez más común, más del 3% de la población de EE.UU. sufre de fibromialgia. Aunque puede ocurrir en casi cualquier persona, las mujeres parecen ser más propensas. La fibromialgia se caracteriza por dolor generalizado en todo el cuerpo sin causa claramente identificable.\n\nEl Dr. Adonis ha ayudado a cientos de pacientes con SFM, algunos de los cuales han resuelto completamente sus síntomas. A través de años de estudio y práctica, ha encontrado una combinación sostenible de técnicas para ayudar a los pacientes a sanar, construir un sentido de sí mismos y vivir vidas significativas y sin dolor."
       },
       "brainHealth": {
-        "title": "Salud Cerebral — Prevención de Alzheimer y Deterioro Cognitivo",
-        "description": "ENFOCADO EN LA PREVENCIÓN DEL ALZHEIMER Y EL DETERIORO COGNITIVO. La salud cerebral es probablemente el factor más crítico para el bienestar general y la calidad de vida. Un cerebro sano es responsable del funcionamiento fisiológico óptimo y de los procesos cognitivos — memoria, lenguaje, concentración, toma de decisiones.\n\nEl Dr. Adonis es un neurocirujano certificado, y a través de su extensa práctica de medicina funcional, ayuda a los pacientes a entender la correlación entre los procesos neurológicos y el envejecimiento. Usa un enfoque multifuncional para quienes están en riesgo o sufren de Alzheimer, Parkinson, Deterioro Cognitivo Leve y otras condiciones neurodegenerativas.\n\nAunque su tratamiento encuentra los mejores resultados en casos detectados temprano, todos sus pacientes se benefician significativamente de sus recomendaciones. La intervención temprana es clave — agende su evaluación hoy."
+        "title": "Salud Cerebral y Bienestar Cognitivo",
+        "description": "ENFOCADO EN LA SALUD CEREBRAL Y EL BIENESTAR COGNITIVO. La salud cerebral es uno de los factores más importantes para el bienestar general y la calidad de vida. Un cerebro sano es responsable del funcionamiento fisiológico óptimo y de los procesos cognitivos — memoria, lenguaje, concentración, toma de decisiones.\n\nEl Dr. Adonis, entrenado como neurocirujano, usa su extensa práctica de medicina funcional para ayudar a los pacientes a entender la relación entre los procesos neurológicos y el envejecimiento. Usa un enfoque multifuncional para quienes están en riesgo o sufren de Alzheimer, Parkinson, Deterioro Cognitivo Leve y otras condiciones neurodegenerativas.\n\nLas recomendaciones de tratamiento son individualizadas y los resultados varían entre pacientes. La evaluación temprana permite considerar más opciones — agende su evaluación hoy."
       },
       "neurotransmitters": {
         "title": "Neurotransmisores Cerebrales",
-        "description": "Los neurotransmisores son químicos en el cerebro que envían señales a los nervios. Estas moléculas son responsables de varias funciones, incluyendo aprendizaje, energía y estados psicológicos. Un desequilibrio puede tener consecuencias graves para el cuerpo.\n\nEl Dr. Adonis, neurocirujano entrenado, ha dominado la práctica de la neurociencia junto con la medicina funcional para dar a los pacientes resultados mejores que duran más, con pocos o ningún efecto secundario. Restaure el equilibrio, bienestar y positividad en su vida."
+        "description": "Los neurotransmisores son químicos en el cerebro que envían señales a los nervios. Estas moléculas son responsables de varias funciones, incluyendo aprendizaje, energía y estados psicológicos. Un desequilibrio puede tener consecuencias graves para el cuerpo.\n\nEl Dr. Adonis, entrenado como neurocirujano, combina la neurociencia con la medicina funcional para evaluar los factores que pueden afectar el equilibrio de los neurotransmisores. Las recomendaciones de tratamiento son individualizadas y los resultados varían entre pacientes."
       },
       "intestinalHealth": {
         "title": "Salud Intestinal",
@@ -406,7 +406,7 @@
       },
       "sexualHealth": {
         "title": "Salud Sexual",
-        "description": "El Dr. Adonis cree que hoy es fácil usar terapia hormonal para neutralizar desequilibrios y mejorar la salud sexual y la experiencia general que enfrentan las parejas. Ha permitido a cientos de parejas entender sus necesidades sexuales, conectar con su estado físico, y lograr una salud sexual mejorada a través de terapia hormonal y terapia de parejas.\n\nEnfatiza que ambos miembros deben estar activamente comprometidos, involucrados e invertidos por igual — la salud sexual no puede definirse ni abordarse en soledad."
+        "description": "La vitalidad sexual es un componente importante del bienestar general. Los factores hormonales pueden contribuir a síntomas sexuales en algunos pacientes. Cuando está clínicamente indicado, la evaluación puede incluir análisis hormonales y la discusión de opciones de tratamiento apropiadas, tanto para hombres como para mujeres.\n\nLa atención es individualizada tras una evaluación médica y los resultados varían entre pacientes. El tratamiento se brinda únicamente cuando es médicamente apropiado, tras la evaluación de un profesional de salud con licencia."
       },
       "regenerativeExosomes": {
         "title": "Exosomas de celulas madres",
@@ -599,7 +599,7 @@
   "telemedicinePage": {
     "badge": "Atención 100% en línea",
     "title": "Teleconsulta con el Dr. Adonis",
-    "subtitle": "Reciba atención de primer nivel en Medicina Funcional y Regenerativa desde cualquier parte del mundo, sin salir de su casa.",
+    "subtitle": "Atención en Medicina Funcional y Regenerativa mediante videoconsultas seguras, sin salir de su casa.",
     "ctaTop": "AGENDE SU TELECONSULTA",
     "howTitle": "¿Cómo funciona?",
     "howSubtitle": "Su consulta virtual en 4 pasos sencillos",
@@ -610,12 +610,12 @@
     "step3Title": "Conéctese a su consulta",
     "step3Text": "Únase desde su teléfono o computadora. El Dr. Adonis le atiende cara a cara.",
     "step4Title": "Reciba su plan",
-    "step4Text": "Plan de tratamiento, laboratorios y recetas. Seguimiento 100% en línea.",
+    "step4Text": "Plan de tratamiento y órdenes de laboratorio. Las recetas se emiten solo cuando es médicamente apropiado. Seguimiento 100% en línea.",
     "treatTitle": "¿Qué se puede atender por teleconsulta?",
     "treat1": "Medicina Funcional integral",
     "treat2": "Revisión de laboratorios",
-    "treat3": "Terapia hormonal",
-    "treat4": "Pérdida de peso",
+    "treat3": "Evaluación de salud hormonal",
+    "treat4": "Manejo médico del peso",
     "treat5": "Salud y bienestar general",
     "treat6": "Citas de seguimiento",
     "needTitle": "¿Qué necesita para su teleconsulta?",
@@ -623,18 +623,19 @@
     "need2": "Conexión a internet estable",
     "need3": "Un lugar privado y tranquilo",
     "privacyNote": "Su consulta es completamente privada y segura. Su información médica se maneja bajo estrictos estándares de confidencialidad.",
+    "availabilityNote": "Disponibilidad de telemedicina: los servicios médicos de telemedicina están disponibles actualmente para pacientes elegibles que se encuentren físicamente en Florida al momento de su consulta. Los servicios médicos y el tratamiento con receta se brindan únicamente en las jurisdicciones donde el médico tratante está legalmente autorizado para ejercer.",
     "ctaTitle": "¿Listo para su primera teleconsulta?",
     "ctaText": "Agende hoy y reciba atención médica de clase mundial desde la comodidad de su hogar.",
     "ctaBtn": "HAGA UNA CITA",
     "ctaWhatsapp": "ESCRÍBANOS POR WHATSAPP",
-    "seoTitle": "Medicina funcional en línea, sin fronteras",
-    "seoP1": "La telemedicina del Dr. Adonis lleva la medicina funcional y regenerativa más allá del consultorio. Desde Miami, Florida, el Dr. Adonis Maiquez atiende por videollamada a pacientes en todo Estados Unidos y el extranjero que buscan un enfoque médico integral: revisión de laboratorios, optimización hormonal, pérdida de peso, longevidad y bienestar general. Cada teleconsulta mantiene el mismo estándar que una visita presencial: historia clínica completa, análisis de sus síntomas y un plan de tratamiento personalizado.",
-    "seoP2": "Una consulta virtual elimina traslados, salas de espera y limitaciones geográficas sin sacrificar calidad médica. Si vive fuera de Florida, viaja con frecuencia o simplemente prefiere la comodidad de su casa, la teleconsulta le da acceso directo a un especialista en medicina funcional con más de 20 años de experiencia, en español o inglés. Usted recibe sus órdenes de laboratorio para realizarlas en el laboratorio de su preferencia, y las recetas se envían a su farmacia cuando están médicamente indicadas.",
+    "seoTitle": "Telemedicina dirigida por un médico desde Miami, Florida",
+    "seoP1": "La telemedicina del Dr. Adonis lleva la medicina funcional y regenerativa más allá del consultorio. Desde Miami, el Dr. Adonis Maiquez atiende por videollamada segura a pacientes elegibles con un enfoque médico integral: revisión de laboratorios, evaluación de salud hormonal, manejo médico del peso y bienestar general. Los servicios médicos de telemedicina están disponibles actualmente para pacientes elegibles que se encuentren físicamente en Florida al momento de su consulta. Cada teleconsulta mantiene el mismo estándar que una visita presencial: historia clínica completa, análisis de sus síntomas y un plan de tratamiento personalizado.",
+    "seoP2": "Una consulta virtual elimina traslados y salas de espera sin sacrificar calidad médica, en español o inglés, con un especialista en medicina funcional con más de 20 años de experiencia. Usted recibe sus órdenes de laboratorio para realizarlas en el laboratorio de su preferencia y, cuando el tratamiento es médicamente apropiado tras la evaluación clínica, las recetas se envían a una farmacia con licencia. Completar una consulta no garantiza que se emita una receta.",
     "faqTitle": "Preguntas frecuentes sobre la teleconsulta",
-    "faq1Q": "¿Atiende pacientes fuera de Estados Unidos?",
-    "faq1A": "Sí. El Dr. Adonis atiende por teleconsulta a pacientes dentro y fuera de Estados Unidos. Solo necesita conexión a internet y un dispositivo con cámara.",
+    "faq1Q": "¿Dónde está disponible la telemedicina?",
+    "faq1A": "Los servicios médicos de telemedicina están disponibles actualmente para pacientes elegibles que se encuentren físicamente en Florida al momento de su consulta. Los servicios médicos y el tratamiento con receta se brindan únicamente en las jurisdicciones donde el médico tratante está legalmente autorizado para ejercer.",
     "faq2Q": "¿Puede recetar medicamentos por telemedicina?",
-    "faq2A": "Sí. Cuando está médicamente indicado, el Dr. Adonis emite recetas como parte de su teleconsulta.",
+    "faq2A": "Las recetas pueden emitirse únicamente cuando es médicamente apropiado, tras la evaluación del Dr. Adonis. Completar una consulta no garantiza que se emita una receta.",
     "faq3Q": "¿En qué idiomas se atiende?",
     "faq3A": "Las consultas están disponibles en español e inglés.",
     "faq4Q": "¿Qué pasa si necesito laboratorios?",
@@ -655,7 +656,14 @@
   },
   "footer": {
     "developer": "Desarrollado por",
-    "copyright": "© Copyright {{year}}, Dr. Adonis. Todos los Derechos Reservados"
+    "copyright": "© Copyright {{year}}, Dr. Adonis. Todos los Derechos Reservados",
+    "privacy": "Política de Privacidad",
+    "npp": "Aviso de Prácticas de Privacidad",
+    "terms": "Términos de Servicio",
+    "consent": "Consentimiento de Telemedicina",
+    "refund": "Política de Reembolsos y Cancelaciones",
+    "serviceArea": "Telemedicina disponible solo para pacientes ubicados físicamente en Florida. Las recetas se emiten solo cuando es médicamente apropiado, tras evaluación de un médico con licencia.",
+    "emergency": "No es para emergencias médicas — llame al 911."
   },
   "whatsappMessages": {
     "default": "Hola, vi su sitio web y deseo más información",

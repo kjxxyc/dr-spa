@@ -21,8 +21,8 @@
   },
   "hero": {
     "eyebrow": "Adonis Maiquez, MD",
-    "title": "Miami's Leading Functional Medicine Expert",
-    "subtitle": "Functional Medicine addresses disease at the root cause. Most chronic degenerative diseases, like Alzheimer's disease, Cardiovascular and Auto-immune diseases, weight gain, hormone imbalance, chronic fatigue, have multiple identifiable causes that need to be addressed at the same time.",
+    "title": "Functional & Integrative Medical Care in Miami",
+    "subtitle": "Functional medicine takes a comprehensive approach to health by evaluating medical history, lifestyle, laboratory findings, and other factors that may contribute to a patient's symptoms and health concerns. Dr. Adonis develops individualized care plans based on each patient's clinical evaluation and medical needs.",
     "btnBook": "READ MY BOOK",
     "btnSubscribe": "SUBSCRIBE TO NEWSLETTER",
     "statsYears": "20+",
@@ -172,9 +172,9 @@
     "title": "Online Medical Services",
     "subtitle": "Quick, private medical evaluations from the comfort of your home",
     "vitamins": {
-      "title": "Personalized Vitamins Prescription",
-      "description": "Get a customized vitamin and supplement plan tailored to your specific health needs by Dr. Adonis.",
-      "btn": "START YOUR EVALUATION"
+      "title": "Personalized Supplement Plan",
+      "description": "Receive individualized nutritional and supplement recommendations based on your medical history, health goals, and clinical evaluation.",
+      "btn": "START EVALUATION"
     }
   },
   "bookSection": {
@@ -350,11 +350,11 @@
       },
       "brainProtocol": {
         "title": "The Brain Protocol® — Alzheimer's & Cognitive Decline",
-        "description": "SPECIALIZED CARE FOR ALZHEIMER'S DISEASE AND MILD COGNITIVE DECLINE. Globally, hundreds of millions are affected by neurological disorders. In the United States, Alzheimer's disease alone affects an estimated 5.7 million individuals, with statistics trending upward. Mild Cognitive Decline — forgetfulness, language and thinking difficulties beyond normal aging — afflicts millions more.\n\nDr. Adonis uses The Brain Protocol®, his proprietary comprehensive and multivariable approach customized to each patient's needs — not only to prevent neurological diseases like Alzheimer's and Parkinson's, but also to help regenerate the brain.\n\nAs a board-certified neurosurgeon using functional medicine to deliver complete physical, mental, and spiritual wellness, Dr. Adonis is one of the few specialists in Miami combining cutting-edge neuroscience with root-cause healing. Book an appointment today to keep your brain healthy and agile."
+        "description": "SPECIALIZED CARE FOR ALZHEIMER'S DISEASE AND MILD COGNITIVE DECLINE. Globally, hundreds of millions of people are affected by neurological disorders. In the United States, Alzheimer's disease alone affects an estimated 5.7 million individuals, and Mild Cognitive Decline — forgetfulness, language and thinking difficulties beyond normal aging — affects millions more.\n\nThe Brain Protocol® is Dr. Adonis's comprehensive, multivariable evaluation and care program, customized to each patient. It combines a complete medical history, laboratory testing, and an individualized plan addressing modifiable factors associated with cognitive health — such as cardiovascular risk, metabolic health, sleep, nutrition, and hormonal status — under ongoing medical supervision.\n\nTreatment recommendations are individualized, and outcomes vary among patients. The Brain Protocol® is not represented as a treatment to cure or prevent Alzheimer's disease, Parkinson's disease, or other neurodegenerative conditions. Book an appointment to find out whether this evaluation is appropriate for you."
       },
       "painManagement": {
         "title": "Pain Management",
-        "description": "Pain is a complex process and Neurosciences approach pain management from different angles. To be effective, pain management must address the entire loop — starting at the originating site (joint, spine, muscle, tendon) and addressing the nerves that bring signals to the brain.\n\nWe specialize in: joint and spine steroid/biological injections; nerve and plexus blocks; radiofrequency ablations. Dr. Adonis, trained as a neurosurgeon, is a member of the American Academy of Pain Management and the World Institute of Pain.\n\nWe have helped hundreds of patients with pain from car accidents, sport injuries, slip and falls, and chronic conditions like osteoarthritis and inflammatory arthritis."
+        "description": "Pain is a complex process and Neurosciences approach pain management from different angles. To be effective, pain management must address the entire loop — starting at the originating site (joint, spine, muscle, tendon) and addressing the nerves that bring signals to the brain.\n\nWe specialize in: joint and spine steroid and PRP (platelet-rich plasma) injections; nerve and plexus blocks; radiofrequency ablations. Dr. Adonis, trained as a neurosurgeon, is a member of the American Academy of Pain Management and the World Institute of Pain.\n\nWe evaluate and treat pain from car accidents, sport injuries, slips and falls, and chronic conditions such as osteoarthritis and inflammatory arthritis. Treatment plans are individualized, and outcomes vary among patients."
       },
       "functionalMedicine": {
         "title": "Functional Medicine",
@@ -365,8 +365,8 @@
         "description": "To live a long, fruitful life we need to take care of our health. Being healthy means not just being disease-free but having mental, physical, and emotional well-being. Constant stress, faulty eating habits, and unhealthy lifestyles have brought deterioration in overall health.\n\nThe Executive Physical Program helps you get a clear picture of your current health status and begin your journey to a healthier you."
       },
       "weightLoss": {
-        "title": "Personalized Weight Loss",
-        "description": "<b>Our Personalized, Functional Medicine-Based Weight Loss Program now starts at $35 per week.</b> This comprehensive package includes a choice of <b>in-person or virtual initial consultation</b>, a <b>custom-designed weight loss plan</b>, a <b>three-month supply of Semaglutide</b>, <b>fat burner shots</b>, and <b>specially formulated vitamins</b>.\n\nDr. Adonis understands that successful weight loss is unique to each individual. His holistic methodology combines dietary guidance, customized physical activity programs, and behavioral strategies — moving beyond temporary fixes toward sustainable, life-changing results.\n\nOur process begins with a comprehensive health analysis, leading to a personalized plan crafted to align with your individual needs."
+        "title": "Medical Weight Management",
+        "description": "Our physician-led weight management program begins with a comprehensive medical evaluation — in person or virtual — including your medical history, habits, and laboratory analysis.\n\nBased on that evaluation, Dr. Adonis designs an individualized plan that may include nutritional guidance, personalized physical activity, behavioral strategies and, only when medically appropriate, prescription treatment with ongoing medical monitoring.\n\nCompleting an evaluation does not guarantee that medication will be prescribed. Treatment decisions are made by the treating physician based on each patient's individual clinical circumstances."
       },
       "hormoneTherapy": {
         "title": "Bio-Identical Hormone Therapy",
@@ -389,12 +389,12 @@
         "description": "An increasingly common ailment, over 3% of the US population suffers from fibromyalgia. Although it can occur in almost anyone, women seem to be more prone to it. Fibromyalgia is marked by widespread pain throughout the body without any clearly identifiable cause.\n\nDr. Adonis has helped hundreds of patients suffering from FMS, some of whom have completely resolved their symptoms. Through years of study and practice, he has found a sustainable combination of techniques to help patients heal, build a sense of self, and live meaningful, pain-free lives."
       },
       "brainHealth": {
-        "title": "Brain Health — Alzheimer's & Cognitive Decline Prevention",
-        "description": "FOCUSED ON ALZHEIMER'S PREVENTION AND COGNITIVE DECLINE. Brain health is probably the most critical factor for overall well-being and quality of life. A healthy brain is responsible for optimal physiological functioning and cognitive processes — memory, language, focus, decision-making.\n\nDr. Adonis is a board-certified neurosurgeon, and through his extensive practice of functional medicine, helps patients understand the correlation between neurological processes and aging. He uses a multifunctional approach for those at risk of or suffering from Alzheimer's, Parkinson's, Mild Cognitive Decline, and other neurodegenerative conditions.\n\nAlthough his treatment finds the best results in cases detected early, all his patients benefit significantly from his recommendations. Early intervention is key — book your assessment today."
+        "title": "Brain Health & Cognitive Wellness",
+        "description": "FOCUSED ON BRAIN HEALTH AND COGNITIVE WELLNESS. Brain health is one of the most important factors for overall well-being and quality of life. A healthy brain is responsible for optimal physiological functioning and cognitive processes — memory, language, focus, decision-making.\n\nDr. Adonis, trained as a neurosurgeon, uses his extensive practice of functional medicine to help patients understand the relationship between neurological processes and aging. He uses a multifunctional approach for those at risk of or suffering from Alzheimer's, Parkinson's, Mild Cognitive Decline, and other neurodegenerative conditions.\n\nTreatment recommendations are individualized, and outcomes vary among patients. Early evaluation allows more options to be considered — book your assessment today."
       },
       "neurotransmitters": {
         "title": "Brain Neurotransmitters",
-        "description": "Neurotransmitters are chemicals in the brain that send signals to the nerves. These signal molecules are responsible for several functions including learning, energy, and psychological states. An imbalance can have serious consequences for the body.\n\nDr. Adonis, a trained neurosurgeon, has mastered the practice of neuroscience in conjunction with functional medicine to give patients improved results that last longer with little to no side effects. Restore balance, well-being, and positivity to your life."
+        "description": "Neurotransmitters are chemicals in the brain that send signals to the nerves. These signal molecules are responsible for several functions including learning, energy, and psychological states. An imbalance can have serious consequences for the body.\n\nDr. Adonis, trained as a neurosurgeon, combines neuroscience with functional medicine to evaluate factors that may affect neurotransmitter balance. Treatment recommendations are individualized, and outcomes vary among patients."
       },
       "intestinalHealth": {
         "title": "Intestinal Health",
@@ -406,7 +406,7 @@
       },
       "sexualHealth": {
         "title": "Sexual Health",
-        "description": "<p>Sexual vitality is a key component of overall well-being. Using advanced peptide therapies (like PT-141) and targeted hormone optimization, we address the root causes of low libido and sexual dysfunction in both men and women.</p><p>Dr. Adonis focuses on restoring cellular communication, improving blood flow, and balancing the endocrine system to help you regain intimacy, confidence, and a fulfilling sexual life without relying solely on temporary chemical fixes.</p>"
+        "description": "<p>Sexual vitality is an important component of overall well-being. Hormonal factors can contribute to sexual symptoms in some patients. When clinically indicated, evaluation may include hormone testing and discussion of appropriate treatment options, for both men and women.</p><p>Care is individualized following medical evaluation, and outcomes vary among patients. Treatment is provided only when medically appropriate following evaluation by a licensed healthcare professional.</p>"
       },
       "regenerativeExosomes": {
         "title": "Exosomes from stem cells",
@@ -599,7 +599,7 @@
   "telemedicinePage": {
     "badge": "100% Online Care",
     "title": "Telemedicine with Dr. Adonis",
-    "subtitle": "Receive world-class Functional & Regenerative Medicine care from anywhere in the world, without leaving your home.",
+    "subtitle": "Functional & Regenerative Medicine care through secure video consultations, without leaving your home.",
     "ctaTop": "SCHEDULE YOUR TELECONSULTATION",
     "howTitle": "How does it work?",
     "howSubtitle": "Your virtual visit in 4 simple steps",
@@ -610,12 +610,12 @@
     "step3Title": "Join your consultation",
     "step3Text": "Join from your phone or computer. Dr. Adonis sees you face to face.",
     "step4Title": "Receive your plan",
-    "step4Text": "Treatment plan, labs, and prescriptions. Follow-up 100% online.",
+    "step4Text": "Treatment plan and lab orders. Prescriptions are issued only when medically appropriate. Follow-up 100% online.",
     "treatTitle": "What can be treated via telemedicine?",
     "treat1": "Comprehensive Functional Medicine",
     "treat2": "Lab results review",
-    "treat3": "Hormone therapy",
-    "treat4": "Weight loss",
+    "treat3": "Hormone health evaluation",
+    "treat4": "Medical weight management",
     "treat5": "General health & wellness",
     "treat6": "Follow-up visits",
     "needTitle": "What do you need for your teleconsultation?",
@@ -623,18 +623,19 @@
     "need2": "Stable internet connection",
     "need3": "A private, quiet place",
     "privacyNote": "Your consultation is completely private and secure. Your medical information is handled under strict confidentiality standards.",
+    "availabilityNote": "Telemedicine Availability: Telemedicine medical services are currently available to eligible patients who are physically located in Florida at the time of their consultation. Medical services and prescription treatment are provided only in jurisdictions where the treating clinician is legally authorized to practice.",
     "ctaTitle": "Ready for your first teleconsultation?",
     "ctaText": "Schedule today and receive world-class medical care from the comfort of your home.",
     "ctaBtn": "MAKE AN APPOINTMENT",
     "ctaWhatsapp": "MESSAGE US ON WHATSAPP",
-    "seoTitle": "Online functional medicine, without borders",
-    "seoP1": "Dr. Adonis's telemedicine practice takes functional and regenerative medicine beyond the office. From Miami, Florida, Dr. Adonis Maiquez sees patients by video call across the United States and abroad who are looking for a comprehensive medical approach: lab review, hormone optimization, weight loss, longevity, and overall wellness. Every teleconsultation is held to the same standard as an in-person visit: a complete medical history, a thorough review of your symptoms, and a personalized treatment plan.",
-    "seoP2": "A virtual visit removes commutes, waiting rooms, and geographic limits without sacrificing medical quality. If you live outside Florida, travel frequently, or simply prefer the comfort of your home, a teleconsultation gives you direct access to a functional medicine specialist with more than 20 years of experience, in English or Spanish. You receive your lab orders to take to the laboratory of your choice, and prescriptions go to your pharmacy when medically indicated.",
+    "seoTitle": "Physician-led telemedicine from Miami, Florida",
+    "seoP1": "Dr. Adonis's telemedicine practice brings functional and regenerative medicine beyond the office. From Miami, Dr. Adonis Maiquez sees eligible patients by secure video call for a comprehensive medical approach: lab review, hormone health evaluation, medical weight management, and overall wellness. Telemedicine medical services are currently available to eligible patients who are physically located in Florida at the time of their consultation. Every teleconsultation is held to the same standard as an in-person visit: a complete medical history, a thorough review of your symptoms, and a personalized treatment plan.",
+    "seoP2": "A virtual visit removes commutes and waiting rooms without sacrificing medical quality, in English or Spanish, with a functional medicine specialist with more than 20 years of experience. You receive your lab orders to take to the laboratory of your choice and, when treatment is medically appropriate following clinical evaluation, prescriptions are sent to a licensed pharmacy. Completing a consultation does not guarantee that a prescription will be issued.",
     "faqTitle": "Telemedicine Frequently Asked Questions",
-    "faq1Q": "Do you see patients outside the United States?",
-    "faq1A": "Yes. Dr. Adonis sees patients via teleconsultation both inside and outside the United States. All you need is an internet connection and a device with a camera.",
+    "faq1Q": "Where is telemedicine available?",
+    "faq1A": "Telemedicine medical services are currently available to eligible patients who are physically located in Florida at the time of their consultation. Medical services and prescription treatment are provided only in jurisdictions where the treating clinician is legally authorized to practice.",
     "faq2Q": "Can you prescribe medication via telemedicine?",
-    "faq2A": "Yes. When medically indicated, Dr. Adonis issues prescriptions as part of your teleconsultation.",
+    "faq2A": "Prescriptions may be issued only when medically appropriate, following evaluation by Dr. Adonis. Completing a consultation does not guarantee that a prescription will be issued.",
     "faq3Q": "In which languages are consultations available?",
     "faq3A": "Consultations are available in English and Spanish.",
     "faq4Q": "What if I need lab work?",
@@ -655,7 +656,14 @@
   },
   "footer": {
     "developer": "Developed by",
-    "copyright": "© Copyright {{year}}, Dr. Adonis. All Rights Reserved"
+    "copyright": "© Copyright {{year}}, Dr. Adonis. All Rights Reserved",
+    "privacy": "Privacy Policy",
+    "npp": "Notice of Privacy Practices",
+    "terms": "Terms of Service",
+    "consent": "Telehealth Consent",
+    "refund": "Refund & Cancellation Policy",
+    "serviceArea": "Telemedicine is available only to patients physically located in Florida. Prescriptions are issued only when medically appropriate, after evaluation by a licensed clinician.",
+    "emergency": "Not for medical emergencies — call 911."
   },
   "whatsappMessages": {
     "default": "Hello, I saw your website and would like more information",
