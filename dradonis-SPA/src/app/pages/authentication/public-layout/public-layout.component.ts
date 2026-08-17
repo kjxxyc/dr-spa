@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.component';
 
 @Component({
     selector: 'app-public-layout',
@@ -17,7 +18,8 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
         MatIconModule,
         MatMenuModule,
         TranslateModule,
-        MatDialogModule
+        MatDialogModule,
+        SiteFooterComponent
     ],
     templateUrl: './public-layout.component.html',
     styleUrls: ['./public-layout.component.scss']

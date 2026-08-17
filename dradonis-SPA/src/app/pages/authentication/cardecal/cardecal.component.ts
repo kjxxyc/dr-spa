@@ -8,6 +8,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { forkJoin } from 'rxjs';
 import { SeoService } from '../../../shared/seo/seo.service';
+import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.component';
 import {
   LanguageSelectorDialogComponent,
   LangChoice
@@ -18,7 +19,9 @@ const CARDECAL_LANG_STORAGE_KEY = 'dradonis.cardecal.langSelected';
 @Component({
   selector: 'app-cardecal',
   standalone: true,
-  imports: [CommonModule, TranslateModule, MatButtonModule, MatIconModule, RouterModule, MatDialogModule],
+  imports: [CommonModule, TranslateModule, MatButtonModule, MatIconModule, RouterModule, MatDialogModule,
+        SiteFooterComponent
+    ],
   templateUrl: './cardecal.component.html',
   styleUrls: ['./cardecal.component.scss'],
   animations: [

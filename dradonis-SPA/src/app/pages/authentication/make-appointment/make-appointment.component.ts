@@ -9,6 +9,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../../shared/seo/seo.service';
 import emailjs from '@emailjs/browser';
+import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.component';
 
 @Component({
     selector: 'app-make-appointment',
@@ -21,7 +22,8 @@ import emailjs from '@emailjs/browser';
         MatButtonModule,
         MatIconModule,
         MatSnackBarModule,
-        RouterModule
+        RouterModule,
+        SiteFooterComponent
     ],
     templateUrl: './make-appointment.component.html',
     styleUrls: ['./make-appointment.component.scss']

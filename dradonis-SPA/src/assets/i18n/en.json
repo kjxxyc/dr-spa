@@ -654,7 +654,8 @@
     "viewArticles": "View Articles"
   },
   "footer": {
-    "developer": "Developed by"
+    "developer": "Developed by",
+    "copyright": "© Copyright {{year}}, Dr. Adonis. All Rights Reserved"
   },
   "whatsappMessages": {
     "default": "Hello, I saw your website and would like more information",

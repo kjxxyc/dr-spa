@@ -24,6 +24,7 @@ import { Subscription } from 'rxjs';
 import { LanguageSelectorDialogComponent } from '../../../shared/language-selector-dialog/language-selector-dialog.component';
 import { SeoService } from '../../../shared/seo/seo.service';
 import emailjs from '@emailjs/browser';
+import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.component';
 
 // ---------- translations ----------
 const TRANSLATIONS: Record<string, Record<string, string>> = {
@@ -156,8 +157,9 @@ const TRANSLATIONS: Record<string, Record<string, string>> = {
     MatSelectModule,
     MatRadioModule,
     MatSnackBarModule,
-    TranslateModule
-  ],
+    TranslateModule,
+        SiteFooterComponent
+    ],
   templateUrl: './vitamins-prescription.component.html',
   styleUrls: ['./vitamins-prescription.component.scss'],
 })
