@@ -581,55 +581,52 @@ $breakpoint-xs: 480px;
 // ===========================
 // REVIEWS MARQUEE CAROUSEL
 // ===========================
-.reviews-marquee-section {
-    padding: 60px 0 0 0;
-    background: $surface-soft;
+// Reviews marquee — lives inside the "What Our Patients Say" section
+// (full-bleed strip between the section heading and the Google map).
+.reviews-marquee {
+    width: 100%;
     overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
 
-    .reviews-marquee {
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        display: flex;
-        align-items: center;
-
-        &__track {
-            display: inline-flex;
-            gap: 2rem;
-            padding-left: 2rem;
-            animation: marqueeScrollLeft 20s linear infinite;
-
-            &:hover {
-                animation-play-state: paused;
-            }
-        }
-    }
-
-    .review-image-card {
-        flex-shrink: 0;
-        display: inline-block;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        background: white;
-        cursor: pointer;
+    &__track {
+        display: inline-flex;
+        gap: 2rem;
+        padding-left: 2rem;
+        animation: marqueeScrollLeft 20s linear infinite;
 
         &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            animation-play-state: paused;
         }
+    }
+}
 
-        img {
-            display: block;
-            height: 180px; /* Fixed height to keep carousel aligned */
-            width: auto;
-            object-fit: cover;
-            border-radius: 12px;
+.review-image-card {
+    flex-shrink: 0;
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    cursor: pointer;
 
-            @media (max-width: $breakpoint-md) { height: 150px; }
-            @media (max-width: $breakpoint-sm) { height: 120px; }
-        }
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    img {
+        display: block;
+        height: 180px; /* Fixed height to keep carousel aligned */
+        width: auto;
+        object-fit: cover;
+        border-radius: 12px;
+
+        @media (max-width: $breakpoint-md) { height: 150px; }
+        @media (max-width: $breakpoint-sm) { height: 120px; }
     }
 }
 

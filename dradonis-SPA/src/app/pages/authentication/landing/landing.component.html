@@ -160,24 +160,6 @@
   </section>
 
   <!-- ============================ -->
-  <!-- REVIEWS MARQUEE CAROUSEL     -->
-  <!-- ============================ -->
-  <section class="reviews-marquee-section" aria-label="Patient Reviews">
-    <div class="reviews-marquee">
-      <div class="reviews-marquee__track">
-        <!-- Original set -->
-        <div class="review-image-card" *ngFor="let img of reviewImages" (click)="openAppointment()">
-          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy" width="430" height="210">
-        </div>
-        <!-- Duplicated set for seamless infinite loop -->
-        <div class="review-image-card" *ngFor="let img of reviewImages" aria-hidden="true" (click)="openAppointment()">
-          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy" width="430" height="210">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================ -->
   <!-- COMBINED SERVICES & BOOK     -->
   <!-- ============================ -->
   <section class="services-and-book-section" id="services">
@@ -264,7 +246,24 @@
     <div class="testimonials-container">
       <h2 class="testimonials-title">{{ 'testimonials.title' | translate }}</h2>
       <p class="testimonials-subtitle">{{ 'testimonials.subtitle' | translate }}</p>
+    </div>
 
+    <!-- Google review screenshots — marquee lives inside "What Our Patients Say"
+         (full-bleed, so it sits outside .testimonials-container). -->
+    <div class="reviews-marquee" aria-label="Patient Reviews">
+      <div class="reviews-marquee__track">
+        <!-- Original set -->
+        <div class="review-image-card" *ngFor="let img of reviewImages" (click)="openAppointment()">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy" width="430" height="210">
+        </div>
+        <!-- Duplicated set for seamless infinite loop -->
+        <div class="review-image-card" *ngFor="let img of reviewImages" aria-hidden="true" (click)="openAppointment()">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy" width="430" height="210">
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials-container">
       <!-- Maps deferred until the testimonials section is near the viewport.
            Saves ~350 KiB of Google Maps scripts from the critical path. -->
       @defer (on viewport; prefetch on idle) {
