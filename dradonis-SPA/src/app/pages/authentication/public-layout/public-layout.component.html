@@ -55,6 +55,10 @@
           <mat-icon>play_circle</mat-icon>
           {{ 'header.nav.videos' | translate }}
         </a>
+        <a routerLink="/contact" class="nav-link" routerLinkActive="active-link">
+          <mat-icon>mail_outline</mat-icon>
+          {{ 'header.nav.contact' | translate }}
+        </a>
       </nav>
 
       <!-- CTA Button (desktop only) -->
@@ -130,6 +134,10 @@
         <a routerLink="/videos" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>play_circle</mat-icon>
           {{ 'header.nav.videos' | translate }}
+        </a>
+        <a routerLink="/contact" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+          <mat-icon>mail_outline</mat-icon>
+          {{ 'header.nav.contact' | translate }}
         </a>
       </nav>
 

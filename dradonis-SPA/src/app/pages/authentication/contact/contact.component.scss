@@ -1,0 +1,138 @@
+.contact-page {
+  width: 100%;
+  min-height: 80vh;
+  background-color: #f8fafc;
+  padding-bottom: 60px;
+}
+
+.contact-header-section {
+  background: linear-gradient(135deg, #112240 0%, #1e3a8a 100%);
+  color: #ffffff;
+  padding: 48px 16px;
+  text-align: center;
+
+  .contact-main-title {
+    margin: 0 0 12px;
+    font-size: 2.25rem;
+    font-weight: 800;
+    font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    mat-icon {
+      font-size: 36px;
+      width: 36px;
+      height: 36px;
+      color: #ea580c;
+    }
+  }
+
+  .contact-main-subtitle {
+    margin: 0 auto;
+    max-width: 680px;
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+  }
+}
+
+.contact-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.contact-content-grid {
+  margin-top: -30px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+  }
+}
+
+.contact-info-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    .info-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: #eff6ff;
+      color: #005eb8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      mat-icon {
+        font-size: 22px;
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    .info-text {
+      h3 {
+        margin: 0 0 4px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #1e293b;
+      }
+
+      a {
+        color: #005eb8;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        margin: 0;
+        color: #64748b;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+.contact-form-wrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  min-height: 700px;
+
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 750px;
+    border: none;
+  }
+}

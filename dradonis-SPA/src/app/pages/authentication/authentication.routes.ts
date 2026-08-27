@@ -129,6 +129,21 @@ export const AuthenticationRoutes: Routes = [
             redirectTo: 'book',
           },
           {
+            path: 'contact',
+            loadComponent: () =>
+              import('./contact/contact.component').then(
+                (m) => m.ContactComponent
+              ),
+          },
+          {
+            path: 'contact-us',
+            redirectTo: 'contact',
+          },
+          {
+            path: 'contacto',
+            redirectTo: 'contact',
+          },
+          {
             path: 'tools/bmi-calculator',
             loadComponent: () =>
               import('./tools/bmi-calculator/bmi-calculator.component').then(

@@ -72,116 +72,26 @@
       </div>
     </div>
 
-    <!-- Right Column: Appointment Form -->
-    <div class="form-card">
-      <div class="form-header">
-        <h1 class="form-title">
-          <mat-icon>event</mat-icon>
-          <span>{{ 'appointmentModal.title' | translate }}</span>
-        </h1>
-        <p class="form-subtitle" [innerHTML]="'appointmentModal.subtitle' | translate"></p>
-      </div>
-
-      <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
-        <div class="input-row">
-          <!-- Full Name -->
-          <div class="input-group">
-            <label>
-              {{ 'appointmentModal.fullName' | translate }} <span class="required">*</span>
-            </label>
-            <div class="input-wrapper">
-              <mat-icon>person_outline</mat-icon>
-              <input type="text" formControlName="fullName" placeholder="John Smith">
-            </div>
-            <div *ngIf="appointmentForm.get('fullName')?.touched && appointmentForm.get('fullName')?.invalid" class="error-msg">
-              <mat-icon>error_outline</mat-icon> {{ 'appointmentPage.requiredField' | translate }}
-            </div>
-          </div>
-
-          <!-- Phone Number -->
-          <div class="input-group">
-            <label>
-              {{ 'appointmentModal.phone' | translate }} <span class="required">*</span>
-            </label>
-            <div class="input-wrapper">
-              <mat-icon>phone</mat-icon>
-              <input type="tel" formControlName="phone" (input)="onPhoneInput($event)" placeholder="(305) 555-0123">
-            </div>
-            <div *ngIf="appointmentForm.get('phone')?.touched && appointmentForm.get('phone')?.invalid" class="error-msg">
-              <mat-icon>error_outline</mat-icon> {{ 'appointmentPage.requiredField' | translate }}
-            </div>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="input-group">
-          <label>
-            {{ 'appointmentModal.email' | translate }} <span class="required">*</span>
-          </label>
-          <div class="input-wrapper">
-            <mat-icon>mail_outline</mat-icon>
-            <input type="email" formControlName="email" placeholder="john@example.com">
-          </div>
-          <div *ngIf="appointmentForm.get('email')?.touched && appointmentForm.get('email')?.invalid" class="error-msg">
-            <mat-icon>error_outline</mat-icon> {{ 'appointmentPage.validEmail' | translate }}
-          </div>
-        </div>
-
-        <!-- Appointment Type -->
-        <div class="input-group">
-          <label>
-            {{ 'appointmentModal.appointmentType' | translate }} <span class="required">*</span>
-          </label>
-          <div class="radio-group">
-            <label class="radio-option">
-              <input type="radio" formControlName="appointmentType" value="inPerson">
-              <span>{{ 'appointmentModal.inPerson' | translate }}</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" formControlName="appointmentType" value="telemedicine">
-              <span>{{ 'appointmentModal.telemedicine' | translate }}</span>
-            </label>
-          </div>
-        </div>
-
-        <!-- Reason -->
-        <div class="input-group">
-          <label>
-            {{ 'appointmentModal.reason' | translate }} <span class="required">*</span>
-          </label>
-          <div class="input-wrapper">
-            <textarea formControlName="reason" [placeholder]="'appointmentPage.reasonPlaceholder' | translate"></textarea>
-          </div>
-          <div *ngIf="appointmentForm.get('reason')?.touched && appointmentForm.get('reason')?.invalid" class="error-msg">
-            <mat-icon>error_outline</mat-icon> {{ 'appointmentPage.requiredField' | translate }}
-          </div>
-        </div>
-
-        <!-- Form Footer -->
-        <div class="form-footer">
-          <div class="required-note">
-            <mat-icon>info</mat-icon>
-            <span>{{ 'appointmentModal.requiredMsg' | translate }}</span>
-          </div>
-          <button type="submit" [disabled]="isSubmitting" class="submit-btn">
-            <mat-icon *ngIf="isSubmitting" class="spinner">autorenew</mat-icon>
-            {{ isSubmitting ? ('appointmentModal.sending' | translate) : ('appointmentModal.submit' | translate) }}
-          </button>
-        </div>
-      </form>
+    <!-- Right Column: Appointment Form Embed -->
+    <div class="form-card" style="padding: 16px; min-height: 750px;">
+      <iframe
+        [src]="formUrl"
+        style="width:100%;height:100%;min-height:750px;border:none;border-radius:8px"
+        id="inline-ISdbjfvFOOPm2YQArfiL"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Website Appt Request Form - A2P"
+        data-height="1207"
+        data-layout-iframe-id="inline-ISdbjfvFOOPm2YQArfiL"
+        data-form-id="ISdbjfvFOOPm2YQArfiL"
+        title="Website Appt Request Form - A2P">
+      </iframe>
     </div>
   </main>
-
-  <!-- Success State Modal Overlay -->
-  <div class="modal-overlay" *ngIf="isSubmitted">
-    <div class="form-card success-card">
-      <mat-icon class="success-icon">check_circle</mat-icon>
-      <h2>{{ 'appointmentModal.success' | translate }}</h2>
-      <p>{{ 'appointmentPage.successDetail' | translate }}</p>
-      <a routerLink="/" class="home-btn">
-        {{ 'appointmentPage.backHome' | translate }}
-      </a>
-    </div>
-  </div>
   <app-site-footer />
 </div>

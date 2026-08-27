@@ -1,14 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { Component, OnInit, OnDestroy, inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../../shared/seo/seo.service';
-import emailjs from '@emailjs/browser';
 import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.component';
 
 @Component({
@@ -16,12 +13,8 @@ import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.com
     standalone: true,
     imports: [
         CommonModule,
-        ReactiveFormsModule,
-        FormsModule,
         TranslateModule,
-        MatButtonModule,
         MatIconModule,
-        MatSnackBarModule,
         RouterModule,
         SiteFooterComponent
     ],
@@ -29,41 +22,41 @@ import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.com
     styleUrls: ['./make-appointment.component.scss']
 })
 export class MakeAppointmentComponent implements OnInit, OnDestroy {
-    appointmentForm!: FormGroup;
-    isSubmitting = false;
-    isSubmitted = false;
-    currentYear = new Date().getFullYear();
-    currentLang = 'en';
+    private sanitizer = inject(DomSanitizer);
+    private platformId = inject(PLATFORM_ID);
+    private translate = inject(TranslateService);
+    private seo = inject(SeoService);
 
-    private serviceId = 'service_ldtmz6n';
-    private templateId = 'template_lgv92j9';
-    private publicKey = 'vsVqtrledUCs4qrDT';
-    private targetEmail = 'aymee@dradonis.com, solangie@dradonis.com';
+    currentLang = 'en';
     private langSub?: Subscription;
 
-    constructor(
-        private fb: FormBuilder,
-        private snackBar: MatSnackBar,
-        private translate: TranslateService,
-        private seo: SeoService,
-    ) {
+    formUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
+        'https://brand.dradonis.com/widget/form/ISdbjfvFOOPm2YQArfiL'
+    );
+
+    constructor() {
         this.currentLang = this.translate.currentLang || 'en';
     }
 
     ngOnInit(): void {
-        this.appointmentForm = this.fb.group({
-            fullName: ['', Validators.required],
-            email: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/)]],
-            phone: ['', [Validators.required, Validators.pattern(/^[0-9]{7,15}$/)]],
-            appointmentType: ['inPerson', Validators.required],
-            reason: ['', Validators.required],
-        });
-
         this.applySeo();
         this.langSub = this.translate.onLangChange.subscribe(() => {
             this.currentLang = this.translate.currentLang;
             this.applySeo();
         });
+
+        if (isPlatformBrowser(this.platformId)) {
+            if (typeof window !== 'undefined') {
+                const existingScript = document.getElementById('ghl-form-embed-script');
+                if (!existingScript) {
+                    const script = document.createElement('script');
+                    script.id = 'ghl-form-embed-script';
+                    script.src = 'https://brand.dradonis.com/js/form_embed.js';
+                    script.async = true;
+                    document.body.appendChild(script);
+                }
+            }
+        }
     }
 
     ngOnDestroy(): void {
@@ -74,42 +67,6 @@ export class MakeAppointmentComponent implements OnInit, OnDestroy {
     toggleLanguage(): void {
         this.currentLang = this.currentLang === 'en' ? 'es' : 'en';
         this.translate.use(this.currentLang);
-    }
-
-    onPhoneInput(event: Event): void {
-        const input = event.target as HTMLInputElement;
-        input.value = input.value.replace(/[^0-9]/g, '');
-        this.appointmentForm.get('phone')?.setValue(input.value, { emitEvent: false });
-    }
-
-    onSubmit(): void {
-        if (this.appointmentForm.invalid) {
-            this.appointmentForm.markAllAsTouched();
-            return;
-        }
-
-        this.isSubmitting = true;
-        const formValue = this.appointmentForm.value;
-        const typeLabel = formValue.appointmentType === 'telemedicine' ? 'TELECONSULTA' : 'PRESENCIAL';
-        const finalReason = `${typeLabel} - ${formValue.reason}`;
-
-        const message = `Full Name:\t${formValue.fullName}\nEmail:\t${formValue.email}\nPhone Number:\t${formValue.phone}\nReason for Appointment: ${finalReason}\n\n[Source: /makeanappointment]`;
-
-        emailjs.send(this.serviceId, this.templateId, {
-            client_email: this.targetEmail,
-            client_subject: `NEW APPOINTMENT REQUEST (Meta) ${typeLabel}`,
-            client_message: message,
-        }, this.publicKey)
-            .then(() => {
-                this.isSubmitting = false;
-                this.isSubmitted = true;
-                this.snackBar.open(this.translate.instant('appointmentModal.success'), 'OK', { duration: 5000 });
-            })
-            .catch((err) => {
-                this.isSubmitting = false;
-                console.error('Email send failed:', err);
-                this.snackBar.open(this.translate.instant('appointmentModal.error'), 'OK', { duration: 5000 });
-            });
     }
 
     private applySeo(): void {

@@ -19,6 +19,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/services"/>
   </url>
   <url>
+    <loc>https://dradonis.com/contact</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/contact"/>
+  </url>
+  <url>
     <loc>https://dradonis.com/meet-doctor</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>

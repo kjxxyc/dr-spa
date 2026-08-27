@@ -1,0 +1,74 @@
+.appointment-dialog-container {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 90vh;
+  position: relative;
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+
+  .dialog-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #112240;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+
+    mat-icon {
+      color: #ea580c;
+    }
+  }
+
+  .close-dialog-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      background-color: #e2e8f0;
+      color: #0f172a;
+    }
+
+    mat-icon {
+      font-size: 22px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.iframe-container {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px;
+  min-height: 550px;
+  background: #ffffff;
+
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 650px;
+    border: none;
+  }
+}
