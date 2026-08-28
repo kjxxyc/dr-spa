@@ -581,15 +581,24 @@ $breakpoint-xs: 480px;
 // ===========================
 // REVIEWS MARQUEE CAROUSEL
 // ===========================
-// Reviews marquee — lives inside the "What Our Patients Say" section
-// (full-bleed strip between the section heading and the Google map).
+// Reviews marquee — lives inside the "What Our Patients Say" section as a
+// soft-tinted band so the white review screenshots stand out from the page.
 .reviews-marquee {
-    width: 100%;
+    max-width: 1100px; // matches .testimonials-container
+    margin: 0 auto 2.5rem;
     overflow: hidden;
     white-space: nowrap;
     display: flex;
     align-items: center;
-    margin-bottom: 2.5rem;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e8f5e9 100%);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 18px;
+    padding: 2rem 0;
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 1.25rem 0;
+        border-radius: 14px;
+    }
 
     &__track {
         display: inline-flex;
@@ -951,6 +960,20 @@ $breakpoint-xs: 480px;
     margin: 0 auto;
 }
 
+// Title + "See all reviews on Google" button on the same centered row.
+.testimonials-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+
+    .testimonials-title {
+        margin: 0;
+    }
+}
+
 .testimonials-title {
     font-size: 36px;
     font-weight: 700;
@@ -996,34 +1019,32 @@ $breakpoint-xs: 480px;
     }
 }
 
-.testimonials-cta {
-    text-align: center;
-    margin-top: 2.25rem;
+// Google reviews button — sits beside the section title in the header row.
+.testimonials-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: $white;
+    color: $text-dark;
+    border: 2px solid #E5E7EB;
+    padding: 0.7rem 1.4rem;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 
-    .testimonials-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.6rem;
-        background: $white;
-        color: $text-dark;
-        border: 2px solid #E5E7EB;
-        padding: 0.95rem 2rem;
-        border-radius: 10px;
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
 
-        svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        &:hover {
-            border-color: #4285F4;
-            box-shadow: 0 4px 16px rgba(66, 133, 244, 0.15);
-            transform: translateY(-2px);
-        }
+    &:hover {
+        border-color: #4285F4;
+        box-shadow: 0 4px 16px rgba(66, 133, 244, 0.15);
+        transform: translateY(-2px);
     }
 }
