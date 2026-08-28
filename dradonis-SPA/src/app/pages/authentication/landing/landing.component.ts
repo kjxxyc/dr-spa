@@ -48,7 +48,9 @@ export class LandingComponent implements OnInit, OnDestroy {
         return [...this.services].reverse();
     }
 
-    // Reviews images for marquee
+    // Reviews images for marquee.
+    // "Review Silvana.webp" is intentionally excluded — the file is still in
+    // assets/images/reviews/ if it ever needs to come back.
     reviewImages = [
         'Review Alexia.webp',
         'Review Ana Giralt Oliva.webp',
@@ -56,9 +58,14 @@ export class LandingComponent implements OnInit, OnDestroy {
         'Review LT.webp',
         'Review Mayli Dorta.webp',
         'Review Miami Arts.webp',
-        'Review Noris.webp',
-        'Review Silvana.webp'
+        'Review Noris.webp'
     ];
+
+    // Second row scrolls the opposite way with reversed order (same pattern
+    // as the services marquee) so both rows read as distinct at any moment.
+    get reviewImagesAlt() {
+        return [...this.reviewImages].reverse();
+    }
 
     // Google Maps embed URL for testimonials section
     googleMapsUrl: SafeResourceUrl;

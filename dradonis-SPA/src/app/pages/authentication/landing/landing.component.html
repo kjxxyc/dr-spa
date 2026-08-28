@@ -260,17 +260,31 @@
       <p class="testimonials-subtitle">{{ 'testimonials.subtitle' | translate }}</p>
     </div>
 
-    <!-- Google review screenshots — marquee lives inside "What Our Patients Say"
-         (full-bleed, so it sits outside .testimonials-container). -->
+    <!-- Google review screenshots — tinted full-width band inside "What Our
+         Patients Say". -->
     <div class="reviews-marquee" aria-label="Patient Reviews">
-      <div class="reviews-marquee__track">
-        <!-- Original set -->
+      <!-- NOTE: no loading="lazy" here — inside the transform-animated track
+           the browser mis-judges proximity and never fetches the off-screen
+           images, leaving most cards empty. decoding="async" keeps the
+           below-the-fold decode off the main thread instead. -->
+      <!-- Row 1: scrolls left -->
+      <div class="reviews-marquee__track reviews-marquee__track--left">
         <div class="review-image-card" *ngFor="let img of reviewImages" (click)="openAppointment()">
-          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy" width="430" height="210">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" decoding="async" width="430" height="210">
         </div>
         <!-- Duplicated set for seamless infinite loop -->
         <div class="review-image-card" *ngFor="let img of reviewImages" aria-hidden="true" (click)="openAppointment()">
-          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" loading="lazy" width="430" height="210">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" decoding="async" width="430" height="210">
+        </div>
+      </div>
+      <!-- Row 2: reversed order, scrolls right -->
+      <div class="reviews-marquee__track reviews-marquee__track--right">
+        <div class="review-image-card" *ngFor="let img of reviewImagesAlt" (click)="openAppointment()">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" decoding="async" width="430" height="210">
+        </div>
+        <!-- Duplicated set for seamless infinite loop -->
+        <div class="review-image-card" *ngFor="let img of reviewImagesAlt" aria-hidden="true" (click)="openAppointment()">
+          <img [src]="'assets/images/reviews/' + img" [alt]="'Review'" decoding="async" width="430" height="210">
         </div>
       </div>
     </div>
