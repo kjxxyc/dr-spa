@@ -85,7 +85,7 @@ export class ContactComponent implements OnInit, OnDestroy {
         mainEntity: {
           '@type': 'Physician',
           name: 'Dr. Adonis Maiquez, MD',
-          telephone: '+1-305-204-7816',
+          telephone: '+1-305-290-4691',
           url: origin,
           address: {
             '@type': 'PostalAddress',

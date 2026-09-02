@@ -1,6 +1,6 @@
 {
   "header": {
-    "phone": "(305)204-7816",
+    "phone": "(305) 290-4691",
     "nav": {
       "shop": "TIENDA",
       "home": "INICIO",
@@ -571,7 +571,7 @@
   },
   "appointmentModal": {
     "title": "HAGA UNA CITA",
-    "subtitle": "Para programar una cita, llame a nuestra oficina al <strong style='color: #ea580c;'>305-204-7816</strong>. También puede completar el formulario a continuación y lo contactaremos para reservar su cita.",
+    "subtitle": "Para programar una cita, llame a nuestra oficina al <strong style='color: #ea580c;'>305-290-4691</strong>. También puede completar el formulario a continuación y lo contactaremos para reservar su cita.",
     "appointmentType": "Tipo de Cita",
     "inPerson": "Presencial",
     "telemedicine": "Teleconsulta",
@@ -650,7 +650,7 @@
     "requiredField": "Este campo es obligatorio",
     "validEmail": "Ingrese un correo electrónico válido",
     "reasonPlaceholder": "Describa brevemente en qué podemos ayudarle...",
-    "successDetail": "Nos comunicaremos con usted a la brevedad para confirmar su cita. También puede llamarnos al 305-204-7816.",
+    "successDetail": "Nos comunicaremos con usted a la brevedad para confirmar su cita. También puede llamarnos al 305-290-4691.",
     "backHome": "Volver al Inicio",
     "viewArticles": "Ver Artículos"
   },

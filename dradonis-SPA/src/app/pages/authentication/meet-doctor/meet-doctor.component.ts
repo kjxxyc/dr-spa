@@ -80,7 +80,7 @@ export class MeetDoctorComponent implements OnInit, OnDestroy {
             url,
             image: `${origin}/assets/images/logos/dr-full-img.webp`,
             jobTitle: isEs ? 'Médico de Medicina Funcional y Regenerativa' : 'Functional & Regenerative Medicine Physician',
-            telephone: '+1-305-204-7816',
+            telephone: '+1-305-290-4691',
             address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Miami',

@@ -93,7 +93,7 @@ export class MakeAppointmentComponent implements OnInit, OnDestroy {
                     ? 'Especialista en medicina funcional y regenerativa en Miami'
                     : 'Functional & Regenerative Medicine specialist in Miami',
                 url: `${origin}/makeanappointment`,
-                telephone: '+1-305-204-7816',
+                telephone: '+1-305-290-4691',
                 address: {
                     '@type': 'PostalAddress',
                     addressLocality: 'Miami',

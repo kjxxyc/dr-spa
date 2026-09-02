@@ -30,7 +30,7 @@ import { TranslateModule } from '@ngx-translate/core';
                 <strong>{{ 'footer.emergency' | translate }}</strong>
             </p>
             <p class="footer-contact">Dr. Adonis Clinic — Adonis Maiquez, MD · Miami, Florida ·
-                <a href="tel:+13052047816">(305) 204-7816</a>
+                <a href="tel:+13052904691">(305) 290-4691</a>
             </p>
             <span>{{ 'footer.copyright' | translate: { year: year } }}</span>
         </footer>

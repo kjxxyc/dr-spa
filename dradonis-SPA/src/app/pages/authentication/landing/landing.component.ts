@@ -158,7 +158,7 @@ export class LandingComponent implements OnInit, OnDestroy {
                 url: origin,
                 image: `${origin}/assets/images/logos/dr-full-img.webp`,
                 logo: `${origin}/assets/images/logos/Logo_720x192.jpg`,
-                telephone: '+1-305-204-7816',
+                telephone: '+1-305-290-4691',
                 address: {
                     '@type': 'PostalAddress',
                     addressLocality: 'Miami',

@@ -25,8 +25,8 @@ export interface LegalPage {
     es: LegalPageContent;
 }
 
-const CONTACT_EN = `<p>Dr. Adonis Clinic — Adonis Maiquez, MD. Miami, Florida, United States. Phone: <a href="tel:+13052047816">(305) 204-7816</a>.</p>`;
-const CONTACT_ES = `<p>Dr. Adonis Clinic — Adonis Maiquez, MD. Miami, Florida, Estados Unidos. Teléfono: <a href="tel:+13052047816">(305) 204-7816</a>.</p>`;
+const CONTACT_EN = `<p>Dr. Adonis Clinic — Adonis Maiquez, MD. Miami, Florida, United States. Phone: <a href="tel:+13052904691">(305) 290-4691</a>.</p>`;
+const CONTACT_ES = `<p>Dr. Adonis Clinic — Adonis Maiquez, MD. Miami, Florida, Estados Unidos. Teléfono: <a href="tel:+13052904691">(305) 290-4691</a>.</p>`;
 
 const FLORIDA_EN = `Telemedicine medical services are currently available to eligible patients who are physically located in Florida at the time of their consultation. Medical services and prescription treatment are provided only in jurisdictions where the treating clinician is legally authorized to practice.`;
 const FLORIDA_ES = `Los servicios médicos de telemedicina están disponibles actualmente para pacientes elegibles que se encuentren físicamente en Florida al momento de su consulta. Los servicios médicos y el tratamiento con receta se brindan únicamente en las jurisdicciones donde el médico tratante está legalmente autorizado para ejercer.`;

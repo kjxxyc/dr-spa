@@ -166,7 +166,7 @@ export class TelemedicineComponent implements OnInit, OnDestroy {
                     : 'Functional and regenerative medicine teleconsultations with Dr. Adonis Maiquez',
                 url,
                 image: `${origin}/assets/images/logos/Logo_720x192.jpg`,
-                telephone: '+1-305-204-7816',
+                telephone: '+1-305-290-4691',
                 address: {
                     '@type': 'PostalAddress',
                     addressLocality: 'Miami',

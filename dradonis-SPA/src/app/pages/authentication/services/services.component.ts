@@ -118,7 +118,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
             '@id': `${url}#medical-business`,
             name: 'Dr. Adonis - Functional & Regenerative Medicine',
             url,
-            telephone: '+1-305-204-7816',
+            telephone: '+1-305-290-4691',
             address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Miami',

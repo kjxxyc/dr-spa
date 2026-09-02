@@ -116,7 +116,7 @@ export class ShopComponent implements OnInit, AfterViewInit, OnDestroy {
             url,
             image: `${origin}/assets/images/logos/Logo_720x192.jpg`,
             description: 'Doctor-curated supplements selected by Dr. Adonis Maiquez',
-            telephone: '+1-305-204-7816',
+            telephone: '+1-305-290-4691',
             address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Miami',

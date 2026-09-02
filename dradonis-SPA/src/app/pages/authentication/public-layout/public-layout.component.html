@@ -4,7 +4,7 @@
     <div class="header-content">
       <!-- Phone Number -->
       <div class="phone-number">
-        <a href="tel:+13052047816">{{ 'header.phone' | translate }}</a>
+        <a href="tel:+13052904691">{{ 'header.phone' | translate }}</a>
       </div>
 
       <!-- Logo -->
@@ -54,6 +54,10 @@
         <a routerLink="/videos" class="nav-link" routerLinkActive="active-link">
           <mat-icon>play_circle</mat-icon>
           {{ 'header.nav.videos' | translate }}
+        </a>
+        <a routerLink="/articles" class="nav-link" routerLinkActive="active-link">
+          <mat-icon>auto_stories</mat-icon>
+          {{ 'header.nav.articles' | translate }}
         </a>
         <a routerLink="/contact" class="nav-link" routerLinkActive="active-link">
           <mat-icon>mail_outline</mat-icon>
@@ -134,6 +138,10 @@
         <a routerLink="/videos" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>play_circle</mat-icon>
           {{ 'header.nav.videos' | translate }}
+        </a>
+        <a routerLink="/articles" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+          <mat-icon>auto_stories</mat-icon>
+          {{ 'header.nav.articles' | translate }}
         </a>
         <a routerLink="/contact" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
           <mat-icon>mail_outline</mat-icon>

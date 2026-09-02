@@ -1,6 +1,6 @@
 {
   "header": {
-    "phone": "(305)204-7816",
+    "phone": "(305) 290-4691",
     "nav": {
       "shop": "SHOP",
       "home": "HOME",
@@ -571,7 +571,7 @@
   },
   "appointmentModal": {
     "title": "MAKE AN APPOINTMENT",
-    "subtitle": "To schedule an appointment, call our office at <strong style='color: #ea580c;'>305-204-7816</strong>. You can also fill the form below, and we'll contact you to book your appointment.",
+    "subtitle": "To schedule an appointment, call our office at <strong style='color: #ea580c;'>305-290-4691</strong>. You can also fill the form below, and we'll contact you to book your appointment.",
     "appointmentType": "Appointment Type",
     "inPerson": "In-Person",
     "telemedicine": "Telemedicine",
@@ -650,7 +650,7 @@
     "requiredField": "This field is required",
     "validEmail": "Please enter a valid email address",
     "reasonPlaceholder": "Briefly describe what you need help with...",
-    "successDetail": "We will contact you shortly to confirm your appointment. You can also reach us at 305-204-7816.",
+    "successDetail": "We will contact you shortly to confirm your appointment. You can also reach us at 305-290-4691.",
     "backHome": "Back to Homepage",
     "viewArticles": "View Articles"
   },
