@@ -92,7 +92,15 @@ export const AuthenticationRoutes: Routes = [
               ),
           },
           {
+            path: 'services/peptide-therapy',
+            redirectTo: 'peptide-therapy',
+          },
+          {
             path: 'peptides',
+            redirectTo: 'peptide-therapy',
+          },
+          {
+            path: 'services/peptides',
             redirectTo: 'peptide-therapy',
           },
           {
