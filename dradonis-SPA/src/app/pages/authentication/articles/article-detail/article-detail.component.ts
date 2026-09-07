@@ -43,41 +43,46 @@ export class ArticleDetailComponent implements OnInit {
       
       if (article) {
         // Strip HTML tags for the description
-        const cleanDescription = article.excerpt.replace(/<[^>]*>?/gm, '').substring(0, 155).trim();
+        const cleanDescription = article.metaDescription || article.excerpt.replace(/<[^>]*>?/gm, '').substring(0, 155).trim();
+        const cleanTitle = article.metaTitle || `${article.title.replace(/<[^>]*>?/gm, '')} - Dr. Adonis Maiquez`;
         
+        const blogPostingSchema: Record<string, unknown> = {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          'headline': article.title.replace(/<[^>]*>?/gm, ''),
+          'image': article.imageUrl ? (article.imageUrl.startsWith('http') ? article.imageUrl : this.seo.absoluteUrl(article.imageUrl)) : undefined,
+          'datePublished': article.date,
+          'dateModified': article.date,
+          'author': {
+            '@type': 'Person',
+            'name': 'Dr. Adonis Maiquez',
+            'url': 'https://dradonis.com/meet-doctor'
+          },
+          'publisher': {
+            '@type': 'MedicalBusiness',
+            'name': 'Dr. Adonis Maiquez',
+            'logo': {
+              '@type': 'ImageObject',
+              'url': this.seo.absoluteUrl('/assets/images/logos/Logo_720x192.jpg')
+            }
+          },
+          'description': cleanDescription,
+          'mainEntityOfPage': {
+            '@type': 'WebPage',
+            '@id': this.seo.absoluteUrl(`/articles/${article.slug}`)
+          }
+        };
+
+        const jsonLd = article.faqSchema ? [blogPostingSchema, article.faqSchema] : blogPostingSchema;
+
         this.seo.apply({
-          title: `${article.title.replace(/<[^>]*>?/gm, '')} - Dr. Adonis Maiquez`,
+          title: cleanTitle,
           description: cleanDescription,
           url: this.seo.absoluteUrl(`/articles/${article.slug}`),
           lang: article.language || 'es',
           ogType: 'article',
           image: article.imageUrl ? (article.imageUrl.startsWith('http') ? article.imageUrl : this.seo.absoluteUrl(article.imageUrl)) : undefined,
-          jsonLd: {
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            'headline': article.title.replace(/<[^>]*>?/gm, ''),
-            'image': article.imageUrl ? (article.imageUrl.startsWith('http') ? article.imageUrl : this.seo.absoluteUrl(article.imageUrl)) : undefined,
-            'datePublished': article.date,
-            'dateModified': article.date,
-            'author': {
-              '@type': 'Person',
-              'name': 'Dr. Adonis Maiquez',
-              'url': 'https://dradonis.com/meet-doctor'
-            },
-            'publisher': {
-              '@type': 'MedicalBusiness',
-              'name': 'Dr. Adonis Maiquez',
-              'logo': {
-                '@type': 'ImageObject',
-                'url': this.seo.absoluteUrl('/assets/images/logos/Logo_720x192.jpg')
-              }
-            },
-            'description': cleanDescription,
-            'mainEntityOfPage': {
-              '@type': 'WebPage',
-              '@id': this.seo.absoluteUrl(`/articles/${article.slug}`)
-            }
-          }
+          jsonLd
         });
       }
     });

@@ -8,10 +8,14 @@ export interface Article {
   slug: string;
   date: string;
   title: string;
+  metaTitle?: string;
+  metaDescription?: string;
   excerpt: string;
   content: string;
   imageUrl: string;
+  imageAlt?: string;
   language: 'en' | 'es';
+  faqSchema?: Record<string, unknown>;
 }
 
 @Injectable({

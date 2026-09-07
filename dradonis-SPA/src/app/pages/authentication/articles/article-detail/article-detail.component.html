@@ -16,7 +16,7 @@
 
   <article class="article-body-container">
     <div class="article-featured-image" *ngIf="article.imageUrl">
-      <img [src]="article.imageUrl" [alt]="article.title" fetchpriority="high">
+      <img [src]="article.imageUrl" [alt]="article.imageAlt || article.title" fetchpriority="high">
     </div>
     
     <div class="article-html-content" [innerHTML]="article.content"></div>
