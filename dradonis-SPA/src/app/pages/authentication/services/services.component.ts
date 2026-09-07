@@ -65,6 +65,10 @@ export class ServicesComponent implements OnInit, OnDestroy {
 
     expandedIds: string[] = [];
 
+    get lang(): string {
+        return this.translate.currentLang || 'en';
+    }
+
     constructor(
         private dialog: MatDialog,
         private translate: TranslateService,

@@ -85,6 +85,21 @@ export const AuthenticationRoutes: Routes = [
               ),
           },
           {
+            path: 'peptide-therapy',
+            loadComponent: () =>
+              import('./peptide-therapy/peptide-therapy.component').then(
+                (m) => m.PeptideTherapyComponent
+              ),
+          },
+          {
+            path: 'peptides',
+            redirectTo: 'peptide-therapy',
+          },
+          {
+            path: 'peptidos',
+            redirectTo: 'peptide-therapy',
+          },
+          {
             path: 'articles',
             loadComponent: () =>
               import('./articles/articles-list/articles-list.component').then(

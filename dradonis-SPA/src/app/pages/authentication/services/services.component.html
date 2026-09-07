@@ -10,6 +10,18 @@
 
     <!-- Promo Cards: horizontal compact strip -->
     <div class="services-hero-cards">
+      <a routerLink="/peptide-therapy" class="service-promo-card peptide-card">
+        <div class="service-promo-icon">
+          <mat-icon>science</mat-icon>
+        </div>
+        <div class="service-promo-text">
+          <h3>{{ lang === 'es' ? 'Terapia de Péptidos en Miami' : 'Peptide Therapy Miami' }}</h3>
+          <p>{{ lang === 'es' ? 'Optimización celular y secretagogos de GH guiados por un médico.' : 'Physician-guided cellular optimization & GH secretagogue protocols.' }}</p>
+        </div>
+        <span class="service-promo-arrow">
+          <mat-icon>arrow_forward</mat-icon>
+        </span>
+      </a>
       <a routerLink="/vitamins-prescription" class="service-promo-card vitamins-card">
         <div class="service-promo-icon">
           <mat-icon>local_pharmacy</mat-icon>

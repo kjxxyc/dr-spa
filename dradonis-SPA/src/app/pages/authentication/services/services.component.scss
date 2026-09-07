@@ -212,6 +212,12 @@ $breakpoint-xs: 480px;
         }
     }
 
+    &.peptide-card {
+        background: linear-gradient(135deg, rgba(20, 60, 45, 0.95) 0%, rgba(35, 90, 65, 0.95) 100%);
+        border: 1px solid rgba(129, 175, 90, 0.28);
+        box-shadow: 0 6px 18px rgba(20, 60, 45, 0.35);
+    }
+
     &.vitamins-card {
         background: linear-gradient(135deg, rgba(77, 122, 31, 0.92) 0%, rgba(61, 98, 24, 0.92) 100%);
         box-shadow: 0 6px 18px rgba(77, 122, 31, 0.32);
