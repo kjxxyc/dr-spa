@@ -19,7 +19,7 @@
       <img [src]="article.imageUrl" [alt]="article.imageAlt || article.title" fetchpriority="high">
     </div>
     
-    <div class="article-html-content" [innerHTML]="article.content"></div>
+    <div class="article-html-content" [innerHTML]="article.content" (click)="onContentClick($event)"></div>
 
     <!-- Article Bottom CTAs -->
     <div class="article-bottom-cta">

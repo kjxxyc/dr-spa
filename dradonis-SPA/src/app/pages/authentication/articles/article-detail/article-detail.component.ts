@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { ArticleService, Article } from '../../../../core/services/article.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
@@ -22,6 +22,7 @@ export class ArticleDetailComponent implements OnInit {
   lang = 'en';
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private articleService: ArticleService,
     private seo: SeoService,
@@ -99,5 +100,26 @@ export class ArticleDetailComponent implements OnInit {
       maxWidth: '95vw',
       autoFocus: false
     });
+  }
+
+  onContentClick(event: MouseEvent): void {
+    const target = (event.target as HTMLElement).closest('a');
+    if (!target) return;
+
+    const href = target.getAttribute('href');
+    if (!href) return;
+
+    // Handle appointment triggers
+    if (href === '/makeanappointment' || href === '#appointment' || target.classList.contains('open-appointment-dialog')) {
+      event.preventDefault();
+      this.openAppointment();
+      return;
+    }
+
+    // Handle internal routing without page reload
+    if (href.startsWith('/') && !href.startsWith('//')) {
+      event.preventDefault();
+      this.router.navigateByUrl(href);
+    }
   }
 }
