@@ -211,6 +211,36 @@
     </video:video>
   </url>
   <url>
+    <loc>https://dradonis.com/videos/glp1-natural-vs-medicamentos-glp1</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/why-glp1-medications-last-longer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/glp1-natural-vs-medicamentos-glp1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/glp1-natural-vs-medicamentos-glp1"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/ARVu9Hw3kHQ/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>GLP-1 natural vs. medicamentos GLP-1: ¿por qué duran más en tu cuerpo?</video:title>
+      <video:description>GLP-1 natural vs. medicamentos GLP-1: ¿por qué duran más en tu cuerpo? Dr. Adonis Maiquez, MD explica conceptos de medicina funcional y regenerativa desde su consulta en Miami, Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/ARVu9Hw3kHQ</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://dradonis.com/videos/why-glp1-medications-last-longer</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/videos/why-glp1-medications-last-longer"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/videos/glp1-natural-vs-medicamentos-glp1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/videos/why-glp1-medications-last-longer"/>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/3CsLbOThutw/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Why Do GLP-1 Medications Last Longer Than Natural GLP-1?</video:title>
+      <video:description>Why Do GLP-1 Medications Last Longer Than Natural GLP-1? Dr. Adonis Maiquez, MD explains functional and regenerative medicine concepts from his Miami, Florida practice.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/3CsLbOThutw</video:player_loc>
+    </video:video>
+  </url>
+  <url>
     <loc>https://dradonis.com/videos/fibromyalgia-chronic-fatigue-adrenal-exhaustion</loc>
     <lastmod>2026-08-01</lastmod>
     <changefreq>monthly</changefreq>

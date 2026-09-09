@@ -31,6 +31,9 @@ export const VIDEOS: VideoCatalogItem[] = [
   // ── Featured: book preview (English + Spanish editions) ──
   { id: 'SyF9dvOCCKI', titleKey: 'videos.list.v58', category: 'about', slug: 'book-modern-medicine-for-modern-times', altSlug: 'libro-medicina-moderna-para-tiempos-modernos' },
   { id: 'jk-zlZYrBfM', titleKey: 'videos.list.v64', category: 'about', slug: 'libro-medicina-moderna-para-tiempos-modernos', lang: 'es', altSlug: 'book-modern-medicine-for-modern-times' },
+  // ── Latest uploads (English + Spanish recordings) ──
+  { id: '3CsLbOThutw', titleKey: 'videos.list.v66', category: 'weight', slug: 'why-glp1-medications-last-longer', altSlug: 'glp1-natural-vs-medicamentos-glp1' },
+  { id: 'ARVu9Hw3kHQ', titleKey: 'videos.list.v65', category: 'weight', slug: 'glp1-natural-vs-medicamentos-glp1', lang: 'es', altSlug: 'why-glp1-medications-last-longer' },
   // ── From old WordPress gallery (Page 1) ──
   { id: 'F-jWDkQGMRg', titleKey: 'videos.list.v11', category: 'functional', slug: 'fibromyalgia-chronic-fatigue-adrenal-exhaustion', altSlug: 'fibromialgia-fatiga-cronica' },
   { id: 'ri-sLzyiJjU', titleKey: 'videos.list.v12', category: 'functional', slug: 'lab-tests-in-functional-medicine', altSlug: 'examenes-de-laboratorio-medicina-funcional' },
