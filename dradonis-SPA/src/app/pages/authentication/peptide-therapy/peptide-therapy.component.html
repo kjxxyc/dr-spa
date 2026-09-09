@@ -111,8 +111,8 @@
       <div class="peptide-card" *ngFor="let item of peptides" [class.is-approved]="item.fdaStatus === 'approved'">
         <div class="peptide-card-header">
           <span class="peptide-category">{{ item.category }}</span>
-          <span class="status-badge" *ngIf="item.fdaStatus === 'approved'" [class.approved]="item.fdaStatus === 'approved'" [class.unapproved]="item.fdaStatus === 'unapproved'">
-            <mat-icon>{{ item.fdaStatus === 'approved' ? 'check_circle' : 'info' }}</mat-icon>
+          <span class="status-badge approved" *ngIf="item.fdaStatus === 'approved'">
+            <mat-icon>check_circle</mat-icon>
             {{ item.fdaStatusLabel }}
           </span>
         </div>
