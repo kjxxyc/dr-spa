@@ -111,7 +111,7 @@
       <div class="peptide-card" *ngFor="let item of peptides" [class.is-approved]="item.fdaStatus === 'approved'">
         <div class="peptide-card-header">
           <span class="peptide-category">{{ item.category }}</span>
-          <span class="status-badge" [class.approved]="item.fdaStatus === 'approved'" [class.unapproved]="item.fdaStatus === 'unapproved'">
+          <span class="status-badge" *ngIf="item.fdaStatus === 'approved'" [class.approved]="item.fdaStatus === 'approved'" [class.unapproved]="item.fdaStatus === 'unapproved'">
             <mat-icon>{{ item.fdaStatus === 'approved' ? 'check_circle' : 'info' }}</mat-icon>
             {{ item.fdaStatusLabel }}
           </span>
@@ -120,78 +120,12 @@
         <h3 class="peptide-name">{{ item.name }}</h3>
         <p class="peptide-desc">{{ item.description }}</p>
 
-        <div class="peptide-note">
-          <strong>Evaluated Indication:</strong> {{ item.indicationNote }}
-        </div>
-
         <div class="peptide-action" *ngIf="item.linkUrl">
           <a [routerLink]="item.linkUrl" class="card-link">
             <span>{{ item.linkText }}</span>
             <mat-icon>arrow_forward</mat-icon>
           </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 3: FDA REGULATORY STATUS & COMPLIANCE -->
-  <!-- ========================================== -->
-  <section class="fda-compliance-section">
-    <div class="compliance-card">
-      <div class="compliance-header">
-        <div class="compliance-badge">
-          <mat-icon>verified</mat-icon>
-          <span>REGULATORY TRANSPARENCY</span>
-        </div>
-        <h2>Where These Stand with the FDA</h2>
-        <p class="compliance-lead">
-          This is the section most wellness clinics leave out. It determines what is legally available to you, so we would rather you read it here clearly than find out later.
-        </p>
-      </div>
-
-      <div class="compliance-columns">
-        <div class="comp-col approved-col">
-          <div class="col-title">
-            <mat-icon>check_circle</mat-icon>
-            <h3>FDA-Approved Medications</h3>
-          </div>
-          <p>
-            <strong>Semaglutide and Tirzepatide</strong> are FDA-approved drugs. They have completed formal Phase III multi-center clinical trials, regulatory review, and demonstrated clear safety and efficacy endpoints.
-          </p>
-        </div>
-
-        <div class="comp-col compounded-col">
-          <div class="col-title">
-            <mat-icon>info</mat-icon>
-            <h3>Compounded / Unapproved Peptides</h3>
-          </div>
-          <p>
-            <strong>BPC-157, TB-500, CJC-1295, and MOTS-c</strong> are not FDA-approved drugs. None has FDA-validated commercial indications, standardized universal dosing, or large-scale clinical trials.
-          </p>
-        </div>
-      </div>
-
-      <div class="advisory-vote-box">
-        <h4>Understanding the July 2026 FDA Advisory Committee Vote</h4>
-        <p>
-          In July 2026, the FDA's Pharmacy Compounding Advisory Committee met and voted to recommend that BPC-157, TB-500, and MOTS-c be added to the 503A bulk drug substances list (which governs pharmacy compounding). 
-          The committee recommended these substances over written objections from FDA staff reviewers who noted clinical data in humans remains limited.
-        </p>
-        <div class="alert-box">
-          <mat-icon>warning</mat-icon>
-          <div>
-            <strong>Those votes are advisory, not binding.</strong> The FDA has not yet finalized rulemaking. Formal rulemaking is expected to take several months. What compounding pharmacies can legally prepare may evolve, and we track it continually to keep you fully compliant and informed.
-          </div>
-        </div>
-        <span class="regulatory-timestamp">Regulatory status current as of September 2026 and subject to change.</span>
-      </div>
-
-      <div class="physician-candor-quote">
-        <p>
-          <em>"A physician who describes every peptide as safe, proven, and well-established is either not following the regulatory landscape or is not being straight with you. We are specific about the science, the evidence, and the gaps."</em>
-        </p>
-        <span class="quote-author">— Adonis Maiquez, MD</span>
       </div>
     </div>
   </section>
@@ -241,7 +175,7 @@
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of candidatePoints">
-            <mat-icon>check</mat-icon>
+            <mat-icon>check_circle</mat-icon>
             <span>{{ pt }}</span>
           </li>
         </ul>
@@ -250,12 +184,12 @@
       <!-- Not a Fit -->
       <div class="candidacy-card unfit-card">
         <div class="cand-header">
-          <mat-icon class="cand-icon negative">close</mat-icon>
+          <mat-icon class="cand-icon negative">cancel</mat-icon>
           <h3>It is NOT appropriate if you:</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of nonCandidatePoints">
-            <mat-icon>close</mat-icon>
+            <mat-icon>cancel</mat-icon>
             <span>{{ pt }}</span>
           </li>
         </ul>

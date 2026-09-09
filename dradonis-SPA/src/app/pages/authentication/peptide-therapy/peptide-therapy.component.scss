@@ -707,6 +707,7 @@ $breakpoint-sm: 640px;
         font-size: 28px;
         width: 28px;
         height: 28px;
+        line-height: 28px;
 
         &.positive { color: $primary-green; }
         &.negative { color: #dc2626; }
@@ -738,6 +739,7 @@ $breakpoint-sm: 640px;
           font-size: 18px;
           width: 18px;
           height: 18px;
+          line-height: 18px;
           margin-top: 2px;
           flex-shrink: 0;
         }
