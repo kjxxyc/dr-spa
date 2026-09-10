@@ -1,0 +1,359 @@
+<div class="service-page">
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION -->
+  <!-- ========================================== -->
+  <section class="service-hero">
+    <div class="hero-badge">
+      <mat-icon>health_and_safety</mat-icon>
+      <span>ROOT-CAUSE MEDICAL CARE</span>
+    </div>
+
+    <h1>Functional Medicine in Miami, FL</h1>
+    <p class="hero-lead">
+      A diagnosis names what you are experiencing. It does not always explain why it is happening.
+      We test comprehensively, find the mechanism, and correct it in the order that matters.
+    </p>
+
+    <div class="hero-cta-group">
+      <button type="button" class="btn-primary-glow" (click)="openAppointment()">
+        <mat-icon>calendar_today</mat-icon>
+        <span>Request A Consultation</span>
+      </button>
+      <a href="tel:+13052904691" class="btn-secondary-phone">
+        <mat-icon>phone</mat-icon>
+        <span>Call (305) 290-4691</span>
+      </a>
+    </div>
+
+    <div class="hero-pill-bar">
+      <div class="pill-item">
+        <mat-icon>biotech</mat-icon>
+        <span>Comprehensive Testing First</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>person</mat-icon>
+        <span>Physician-Led Care</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>videocam</mat-icon>
+        <span>Florida Telehealth Available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 1: WHAT FUNCTIONAL MEDICINE IS -->
+  <!-- ========================================== -->
+  <section class="intro-section">
+    <div class="section-card intro-card">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <span class="section-tag">THE APPROACH</span>
+          <h2>What Functional Medicine Actually Means</h2>
+          <p class="lead-paragraph">
+            Most chronic complaints get one of two responses: a medication that reduces the symptom, or a workup that finds nothing and concludes the problem is stress. Both leave the patient managing something indefinitely.
+          </p>
+          <p>
+            Functional medicine works in the other direction. It starts from the symptom, uses comprehensive laboratory testing to identify the systems driving it, and corrects those systems in sequence. The aim is not to suppress what you are feeling but to remove the reason you are feeling it.
+          </p>
+          <p class="highlight-callout">
+            <strong>There is usually a mechanism, and it is usually findable.</strong>
+          </p>
+          <p>
+            It is not a replacement for conventional medicine. Red-flag symptoms, structural disease, and conditions requiring specialist management need conventional evaluation, and we refer for those directly.
+          </p>
+        </div>
+
+        <div class="intro-features">
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>biotech</mat-icon></div>
+            <div class="feat-content">
+              <h3>Testing Comes First</h3>
+              <p>Comprehensive panels before treatment, every time. Treating without testing is guessing.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>swap_horiz</mat-icon></div>
+            <div class="feat-content">
+              <h3>Systems, Not Departments</h3>
+              <p>Gut, hormones, metabolism, inflammation, and cognition interact. We treat them as one picture.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>person</mat-icon></div>
+            <div class="feat-content">
+              <h3>One Physician Throughout</h3>
+              <p>Dr. Adonis reviews your results and builds your protocol personally, then follows it with you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: SERVICE AREAS (CHILD PAGES) -->
+  <!-- ========================================== -->
+  <section class="catalog-section" id="service-areas">
+    <div class="section-header">
+      <span class="section-tag">AREAS OF CARE</span>
+      <h2>Our Functional Medicine Programs</h2>
+      <p class="section-subtitle">
+        Each program begins with the same comprehensive testing and is built around where your symptoms are actually coming from.
+      </p>
+    </div>
+
+    <div class="catalog-grid">
+      <div class="catalog-card" *ngFor="let area of serviceAreas">
+        <div class="catalog-card-header">
+          <span class="catalog-category">{{ area.category }}</span>
+        </div>
+
+        <h3 class="catalog-name">{{ area.name }}</h3>
+        <p class="catalog-desc">{{ area.description }}</p>
+
+        <div class="catalog-action">
+          <a [routerLink]="area.linkUrl" class="card-link">
+            <span>{{ area.linkText }}</span>
+            <mat-icon>arrow_forward</mat-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 3: HOW WE PRACTICE -->
+  <!-- ========================================== -->
+  <section class="clinical-approach-section">
+    <div class="section-header">
+      <span class="section-tag">METHODOLOGY</span>
+      <h2>How We Practice</h2>
+      <p class="section-subtitle">
+        The same four principles apply to every program on this page.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card" *ngFor="let p of pillars; let i = index">
+        <div class="pillar-num">0{{ i + 1 }}</div>
+        <div class="pillar-icon-wrapper">
+          <mat-icon>{{ p.icon }}</mat-icon>
+        </div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 4: CANDIDACY (WHO THIS IS FOR / NOT FOR) -->
+  <!-- ========================================== -->
+  <section class="candidacy-section">
+    <div class="section-header">
+      <span class="section-tag">EVALUATION</span>
+      <h2>Who This Is For — And Who It Is Not For</h2>
+      <p class="section-subtitle">
+        Functional medicine suits some situations and not others. We are direct about which is which.
+      </p>
+    </div>
+
+    <div class="candidacy-grid">
+      <!-- Right Fit -->
+      <div class="candidacy-card fit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon positive">check_circle</mat-icon>
+          <h3>This is a strong fit if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of candidatePoints">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Not a Fit -->
+      <div class="candidacy-card unfit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon negative">block</mat-icon>
+          <h3>It is not the right fit if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of nonCandidatePoints">
+            <mat-icon>block</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 5: HOW CARE WORKS -->
+  <!-- ========================================== -->
+  <section class="treatment-steps-section">
+    <div class="section-header">
+      <span class="section-tag">THE PROCESS</span>
+      <h2>How Care Works</h2>
+      <p class="section-subtitle">
+        From first consultation to confirmed follow-up testing, every program follows the same path.
+      </p>
+    </div>
+
+    <div class="steps-timeline">
+      <div class="step-timeline-item" *ngFor="let st of treatmentSteps">
+        <div class="step-badge-circle">
+          <span>{{ st.number }}</span>
+        </div>
+        <div class="step-card-body">
+          <div class="step-title-row">
+            <mat-icon>{{ st.icon }}</mat-icon>
+            <h3>{{ st.title }}</h3>
+          </div>
+          <p>{{ st.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-note">
+      <mat-icon>schedule</mat-icon>
+      <span>Most patients report meaningful change within 90 days, though response varies by cause, severity, and how long symptoms have been present.</span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 6: WHAT'S INCLUDED -->
+  <!-- ========================================== -->
+  <section class="program-included-section">
+    <div class="included-card">
+      <div class="included-header">
+        <span class="section-tag">YOUR PROGRAM</span>
+        <h2>What’s Included in Your Care</h2>
+        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="inc-item" *ngFor="let inc of included">
+          <mat-icon>{{ inc.icon }}</mat-icon>
+          <h4>{{ inc.title }}</h4>
+          <p>{{ inc.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 7: YOUR PHYSICIAN -->
+  <!-- ========================================== -->
+  <section class="physician-section">
+    <div class="physician-card">
+      <div class="physician-img-col">
+        <picture>
+          <source srcset="assets/images/logos/dr-full-img.webp" type="image/webp">
+          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="dr-photo" loading="lazy">
+        </picture>
+        <div class="physician-credentials-badge">
+          <strong>Adonis Maiquez, MD</strong>
+          <span>Functional &amp; Regenerative Medicine</span>
+        </div>
+      </div>
+
+      <div class="physician-bio-col">
+        <span class="section-tag">MEDICAL EXPERTISE</span>
+        <h2>Why A Surgeon Practices Root-Cause Medicine</h2>
+        <p>
+          Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures before turning to functional and regenerative medicine.
+        </p>
+        <p>
+          What moved him was the recognition that so much of what he saw arriving at the operating room began years earlier, in systems nobody had examined. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.
+        </p>
+
+        <div class="credentials-pills">
+          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 8: PATIENT TESTIMONIAL -->
+  <!-- ========================================== -->
+  <section class="testimonial-section">
+    <div class="testimonial-card">
+      <div class="quote-stars">
+        <mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon>
+      </div>
+      <blockquote>
+        "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I'm very glad to have found someone who listens."
+      </blockquote>
+      <div class="testimonial-meta">
+        <strong>— Alexia A.</strong>
+        <span>Verified Clinic Patient</span>
+      </div>
+      <p class="testimonial-disclaimer">
+        *Individual results vary. Patient experiences described here are not a guarantee of outcome.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 9: FREQUENTLY ASKED QUESTIONS -->
+  <!-- ========================================== -->
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-tag">QUESTIONS & ANSWERS</span>
+      <h2>Frequently Asked Questions</h2>
+      <p class="section-subtitle">
+        Everything you need to know about how functional medicine works here.
+      </p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
+        <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
+          <span>{{ faq.question }}</span>
+          <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
+        </button>
+        <div class="faq-answer-panel" *ngIf="faq.isOpen">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 10: FINAL CONSULTATION CTA -->
+  <!-- ========================================== -->
+  <section class="final-cta-section" id="consultation">
+    <div class="final-cta-card">
+      <span class="cta-tag">GET STARTED</span>
+      <h2>Find Out What’s Actually Happening</h2>
+      <p class="cta-lead">
+        Comprehensive testing usually explains in one round what years of managing symptoms could not.
+      </p>
+
+      <div class="final-cta-buttons">
+        <button type="button" class="btn-primary-large" (click)="openAppointment()">
+          <mat-icon>event</mat-icon>
+          <span>Request A Consultation</span>
+        </button>
+        <a href="tel:+13052904691" class="btn-outline-phone">
+          <mat-icon>phone</mat-icon>
+          <span>Call or Text (305) 290-4691</span>
+        </a>
+      </div>
+
+      <p class="compliance-footer-note">
+        *Functional medicine care requires medical evaluation and is not appropriate for every patient. Symptoms requiring urgent or specialist assessment are referred for conventional evaluation.
+      </p>
+    </div>
+  </section>
+
+</div>

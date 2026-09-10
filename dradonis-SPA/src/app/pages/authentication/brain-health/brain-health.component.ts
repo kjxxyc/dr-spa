@@ -371,7 +371,7 @@ export class BrainHealthComponent implements OnInit, OnDestroy {
 
   private applySeo(): void {
     const origin = this.seo.origin;
-    const url = `${origin}/brain-health`;
+    const url = `${origin}/functional-medicine/brain-health`;
     const isEs = this.currentLang === 'es';
 
     const title = isEs

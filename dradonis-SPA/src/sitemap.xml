@@ -28,22 +28,31 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/peptide-therapy"/>
   </url>
   <url>
-    <loc>https://dradonis.com/gut-health</loc>
+    <loc>https://dradonis.com/functional-medicine</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/gut-health"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/gut-health"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/gut-health"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/functional-medicine"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/functional-medicine"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/functional-medicine"/>
   </url>
   <url>
-    <loc>https://dradonis.com/brain-health</loc>
+    <loc>https://dradonis.com/functional-medicine/gut-health</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/brain-health"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/brain-health"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/brain-health"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/functional-medicine/gut-health"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/functional-medicine/gut-health"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/functional-medicine/gut-health"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/functional-medicine/brain-health</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/functional-medicine/brain-health"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/functional-medicine/brain-health"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/functional-medicine/brain-health"/>
   </url>
   <url>
     <loc>https://dradonis.com/contact</loc>

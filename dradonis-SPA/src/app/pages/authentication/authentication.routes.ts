@@ -107,35 +107,62 @@ export const AuthenticationRoutes: Routes = [
             path: 'peptidos',
             redirectTo: 'peptide-therapy',
           },
+          // ── Functional medicine hub and its child service pages ──
           {
-            path: 'gut-health',
+            path: 'functional-medicine',
+            loadComponent: () =>
+              import('./functional-medicine/functional-medicine.component').then(
+                (m) => m.FunctionalMedicineComponent
+              ),
+          },
+          {
+            path: 'functional-medicine/gut-health',
             loadComponent: () =>
               import('./gut-health/gut-health.component').then(
                 (m) => m.GutHealthComponent
               ),
           },
           {
-            path: 'services/gut-health',
-            redirectTo: 'gut-health',
-          },
-          {
-            path: 'salud-intestinal',
-            redirectTo: 'gut-health',
-          },
-          {
-            path: 'brain-health',
+            path: 'functional-medicine/brain-health',
             loadComponent: () =>
               import('./brain-health/brain-health.component').then(
                 (m) => m.BrainHealthComponent
               ),
           },
+          // Aliases for the hub
+          {
+            path: 'services/functional-medicine',
+            redirectTo: 'functional-medicine',
+          },
+          {
+            path: 'medicina-funcional',
+            redirectTo: 'functional-medicine',
+          },
+          // The child pages previously lived at the top level; keep those
+          // URLs working by redirecting them under the hub.
+          {
+            path: 'gut-health',
+            redirectTo: 'functional-medicine/gut-health',
+          },
+          {
+            path: 'services/gut-health',
+            redirectTo: 'functional-medicine/gut-health',
+          },
+          {
+            path: 'salud-intestinal',
+            redirectTo: 'functional-medicine/gut-health',
+          },
+          {
+            path: 'brain-health',
+            redirectTo: 'functional-medicine/brain-health',
+          },
           {
             path: 'services/brain-health',
-            redirectTo: 'brain-health',
+            redirectTo: 'functional-medicine/brain-health',
           },
           {
             path: 'salud-cerebral',
-            redirectTo: 'brain-health',
+            redirectTo: 'functional-medicine/brain-health',
           },
           {
             path: 'articles',

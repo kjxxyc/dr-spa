@@ -368,7 +368,7 @@ export class GutHealthComponent implements OnInit, OnDestroy {
 
   private applySeo(): void {
     const origin = this.seo.origin;
-    const url = `${origin}/gut-health`;
+    const url = `${origin}/functional-medicine/gut-health`;
     const isEs = this.currentLang === 'es';
 
     const title = isEs
