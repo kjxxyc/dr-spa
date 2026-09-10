@@ -108,6 +108,21 @@ export const AuthenticationRoutes: Routes = [
             redirectTo: 'peptide-therapy',
           },
           {
+            path: 'gut-health',
+            loadComponent: () =>
+              import('./gut-health/gut-health.component').then(
+                (m) => m.GutHealthComponent
+              ),
+          },
+          {
+            path: 'services/gut-health',
+            redirectTo: 'gut-health',
+          },
+          {
+            path: 'salud-intestinal',
+            redirectTo: 'gut-health',
+          },
+          {
             path: 'articles',
             loadComponent: () =>
               import('./articles/articles-list/articles-list.component').then(
