@@ -888,6 +888,35 @@ $breakpoint-sm: 640px;
   }
 }
 
+// -- SCOPE / LIMITATION NOTE --------------
+// A neutral, non-alarming disclaimer strip for stating plainly what a
+// service does not do (e.g. "we do not treat or reverse dementia").
+.scope-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 900px;
+  margin: 2rem auto 0;
+  padding: 18px 22px;
+  background: $card-bg;
+  border: 1px solid $border-color;
+  border-left: 4px solid $accent-gold;
+  border-radius: 0 12px 12px 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: $text-medium;
+
+  mat-icon {
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    color: $accent-gold;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+}
+
 // ── WHAT'S INCLUDED ───────────────────────
 .program-included-section {
   .included-card {

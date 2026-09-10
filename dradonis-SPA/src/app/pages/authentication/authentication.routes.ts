@@ -123,6 +123,21 @@ export const AuthenticationRoutes: Routes = [
             redirectTo: 'gut-health',
           },
           {
+            path: 'brain-health',
+            loadComponent: () =>
+              import('./brain-health/brain-health.component').then(
+                (m) => m.BrainHealthComponent
+              ),
+          },
+          {
+            path: 'services/brain-health',
+            redirectTo: 'brain-health',
+          },
+          {
+            path: 'salud-cerebral',
+            redirectTo: 'brain-health',
+          },
+          {
             path: 'articles',
             loadComponent: () =>
               import('./articles/articles-list/articles-list.component').then(
