@@ -73,6 +73,13 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
       description: 'Hashimoto’s is an immune condition, not just a thyroid one. We test antibodies rather than hormone alone, investigate what triggered the immune activity, and treat the gut alongside the gland instead of adjusting your dose and stopping there.',
       linkText: 'Learn More',
       linkUrl: '/functional-medicine/hashimotos'
+    },
+    {
+      name: 'Thyroid Dysfunction',
+      category: 'Full Thyroid Panel & Care',
+      description: 'Most thyroid care stops at TSH, which measures the signal rather than the hormone your cells receive. We run free T3, reverse T3 and antibodies, find where the chain is breaking, and treat the reasons it stopped working.',
+      linkText: 'Learn More',
+      linkUrl: '/functional-medicine/thyroid'
     }
   ];
 

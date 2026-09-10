@@ -1,0 +1,417 @@
+<div class="service-page">
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION -->
+  <!-- ========================================== -->
+  <section class="service-hero">
+    <div class="hero-badge">
+      <mat-icon>health_and_safety</mat-icon>
+      <span>THYROID & ENDOCRINE CARE</span>
+    </div>
+
+    <h1>Thyroid Treatment in Miami, FL</h1>
+    <p class="hero-lead">
+      Your thyroid is not one number. It is a chain that can break in four different places,
+      and three of them are invisible on the test most people are given.
+    </p>
+
+    <div class="hero-cta-group">
+      <button type="button" class="btn-primary-glow" (click)="openAppointment()">
+        <mat-icon>calendar_today</mat-icon>
+        <span>Request A Consultation</span>
+      </button>
+      <a href="tel:+13052904691" class="btn-secondary-phone">
+        <mat-icon>phone</mat-icon>
+        <span>Call (305) 290-4691</span>
+      </a>
+    </div>
+
+    <div class="hero-pill-bar">
+      <div class="pill-item">
+        <mat-icon>biotech</mat-icon>
+        <span>Full Panel, Not Just TSH</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>health_and_safety</mat-icon>
+        <span>Antibodies On Every Patient</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>videocam</mat-icon>
+        <span>Florida Telehealth Available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 1: WHAT THYROID DYSFUNCTION IS -->
+  <!-- ========================================== -->
+  <section class="intro-section">
+    <div class="section-card intro-card">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <span class="section-tag">THE SCIENCE</span>
+          <h2>What Thyroid Dysfunction Is</h2>
+          <p class="lead-paragraph">
+            The thyroid produces hormones that set the metabolic rate of nearly every cell you have. When output falls, everything slows. When it rises, everything accelerates.
+          </p>
+          <p>
+            The chain matters because most thyroid problems are not the gland failing. Your thyroid mainly produces T4, which is largely inactive. T4 has to convert into T3, the form your cells actually use, and that conversion happens outside the thyroid, in the liver, kidneys, and gut.
+          </p>
+          <p class="highlight-callout">
+            <strong>A person can have a normal TSH, adequate T4, and still be functionally hypothyroid. That patient will be told nothing is wrong.</strong>
+          </p>
+          <p>
+            The most common cause of hypothyroidism is autoimmune. If your antibodies come back elevated, see our
+            <a routerLink="/functional-medicine/hashimotos">Hashimoto’s page</a>.
+          </p>
+        </div>
+
+        <div class="intro-features">
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>swap_horiz</mat-icon></div>
+            <div class="feat-content">
+              <h3>Hypothyroidism</h3>
+              <p>Underproduction. Fatigue, weight gain, cold intolerance, constipation, dry skin, hair loss, brain fog, low mood, and slow recovery. By far the more common presentation.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>favorite</mat-icon></div>
+            <div class="feat-content">
+              <h3>Hyperthyroidism</h3>
+              <p>Overproduction. Anxiety, racing heart, weight loss, heat intolerance, tremor, and insomnia.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>error_outline</mat-icon></div>
+            <div class="feat-content">
+              <h3>Subclinical Dysfunction</h3>
+              <p>Where most of our patients sit. TSH is drifting but has not crossed the threshold, or looks acceptable while the hormones downstream do not. Symptoms are present. Treatment has not been offered.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: WHERE THE CHAIN BREAKS -->
+  <!-- ========================================== -->
+  <section class="catalog-section">
+    <div class="section-header">
+      <span class="section-tag">THE FOUR LINKS</span>
+      <h2>Where The Chain Breaks</h2>
+      <p class="section-subtitle">
+        A signal from the pituitary, a hormone produced by the gland, a conversion step in the liver and gut, and receptors that have to receive it.
+      </p>
+    </div>
+
+    <div class="catalog-grid">
+      <div class="catalog-card" *ngFor="let item of chainLinks">
+        <div class="catalog-card-header">
+          <span class="catalog-category">{{ item.category }}</span>
+        </div>
+
+        <h3 class="catalog-name">{{ item.name }}</h3>
+        <p class="catalog-desc">{{ item.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 3: OUR APPROACH -->
+  <!-- ========================================== -->
+  <section class="clinical-approach-section">
+    <div class="section-header">
+      <span class="section-tag">METHODOLOGY</span>
+      <h2>Our Approach</h2>
+      <p class="section-subtitle">
+        Testing TSH alone to assess thyroid function is like judging a delivery by checking whether the order was placed.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card" *ngFor="let p of pillars; let i = index">
+        <div class="pillar-num">0{{ i + 1 }}</div>
+        <div class="pillar-icon-wrapper">
+          <mat-icon>{{ p.icon }}</mat-icon>
+        </div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+      </div>
+    </div>
+
+    <div class="doctor-quote">
+      <p>
+        “Being healthy is more than the absence of visible disease. There is a great deal happening inside the body that needs to be addressed long before it becomes a disorder.”
+      </p>
+      <span class="quote-author">— Dr. Adonis</span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 4: SIGNS THIS COULD HELP YOU -->
+  <!-- ========================================== -->
+  <section class="signs-section">
+    <div class="section-header">
+      <span class="section-tag">SYMPTOM CHECK</span>
+      <h2>Signs Thyroid Testing Could Help You</h2>
+      <p class="section-subtitle">
+        Thyroid symptoms are easy to attribute to stress, age, or a busy schedule. These are the patterns we see most.
+      </p>
+    </div>
+
+    <div class="section-card">
+      <ul class="signs-list">
+        <li *ngFor="let s of signs">
+          <mat-icon>check_circle</mat-icon>
+          <span>{{ s }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="timeline-note">
+      <mat-icon>info</mat-icon>
+      <span>If several of these apply and the only thyroid test you have had is TSH, you have not been fully assessed.</span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 5: CANDIDACY (WHO THIS IS FOR / NOT FOR) -->
+  <!-- ========================================== -->
+  <section class="candidacy-section">
+    <div class="section-header">
+      <span class="section-tag">EVALUATION</span>
+      <h2>Who This Is For — And Who It Is Not For</h2>
+      <p class="section-subtitle">
+        Some thyroid presentations need endocrinology, surgery, or emergency care first, and we will say so directly.
+      </p>
+    </div>
+
+    <div class="candidacy-grid">
+      <!-- Right Fit -->
+      <div class="candidacy-card fit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon positive">check_circle</mat-icon>
+          <h3>This is a strong fit if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of candidatePoints">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Not a Fit -->
+      <div class="candidacy-card unfit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon negative">block</mat-icon>
+          <h3>It may not be right if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of nonCandidatePoints">
+            <mat-icon>block</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="scope-note">
+      <mat-icon>error_outline</mat-icon>
+      <span>
+        Severe hyperthyroidism or thyroid storm symptoms are a medical emergency and require immediate care. Thyroid nodules, masses, and thyroid cancer under active treatment belong with endocrinology and surgical care, and we refer rather than work around it.
+      </span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 6: HOW TREATMENT WORKS -->
+  <!-- ========================================== -->
+  <section class="treatment-steps-section">
+    <div class="section-header">
+      <span class="section-tag">THE PROCESS</span>
+      <h2>How Treatment Works</h2>
+      <p class="section-subtitle">
+        From first consultation to confirmed follow-up testing, here is what your care looks like.
+      </p>
+    </div>
+
+    <div class="steps-timeline">
+      <div class="step-timeline-item" *ngFor="let st of treatmentSteps">
+        <div class="step-badge-circle">
+          <span>{{ st.number }}</span>
+        </div>
+        <div class="step-card-body">
+          <div class="step-title-row">
+            <mat-icon>{{ st.icon }}</mat-icon>
+            <h3>{{ st.title }}</h3>
+          </div>
+          <p>{{ st.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-note">
+      <mat-icon>schedule</mat-icon>
+      <span>Most patients report meaningful change within 90 days. Energy and mental clarity often move first; hair, skin, and weight are slower.</span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 7: WHAT'S INCLUDED -->
+  <!-- ========================================== -->
+  <section class="program-included-section">
+    <div class="included-card">
+      <div class="included-header">
+        <span class="section-tag">YOUR PROGRAM</span>
+        <h2>What’s Included in Your Care</h2>
+        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="inc-item" *ngFor="let inc of included">
+          <mat-icon>{{ inc.icon }}</mat-icon>
+          <h4>{{ inc.title }}</h4>
+          <p>{{ inc.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 8: BENEFITS -->
+  <!-- ========================================== -->
+  <section class="benefits-section">
+    <div class="section-header">
+      <span class="section-tag">POTENTIAL OUTCOMES</span>
+      <h2>Benefits of Proper Thyroid Treatment</h2>
+      <p class="section-subtitle">
+        Response varies with cause, severity, and how long the dysfunction has been running.
+      </p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card" *ngFor="let b of benefits">
+        <div class="benefit-icon">
+          <mat-icon>{{ b.icon }}</mat-icon>
+        </div>
+        <h3>{{ b.title }}</h3>
+        <p>{{ b.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 9: YOUR PHYSICIAN -->
+  <!-- ========================================== -->
+  <section class="physician-section">
+    <div class="physician-card">
+      <div class="physician-img-col">
+        <picture>
+          <source srcset="assets/images/logos/dr-full-img.webp" type="image/webp">
+          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="dr-photo" loading="lazy">
+        </picture>
+        <div class="physician-credentials-badge">
+          <strong>Adonis Maiquez, MD</strong>
+          <span>Functional &amp; Regenerative Medicine</span>
+        </div>
+      </div>
+
+      <div class="physician-bio-col">
+        <span class="section-tag">MEDICAL EXPERTISE</span>
+        <h2>He Operated On The Gland At The Top Of This Axis</h2>
+        <p>
+          Dr. Adonis trained as a <strong>neurosurgeon in pituitary surgery</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida. The pituitary produces TSH, the signal that tells the thyroid to work.
+        </p>
+        <p>
+          He spent years operating on the gland at the top of this axis before turning to what happens to patients further down it. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.
+        </p>
+
+        <div class="credentials-pills">
+          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 10: PATIENT TESTIMONIAL -->
+  <!-- ========================================== -->
+  <section class="testimonial-section">
+    <div class="testimonial-card">
+      <div class="quote-stars">
+        <mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon>
+      </div>
+      <blockquote>
+        "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I'm very glad to have found someone who listens."
+      </blockquote>
+      <div class="testimonial-meta">
+        <strong>— Alexia A.</strong>
+        <span>Verified Clinic Patient</span>
+      </div>
+      <p class="testimonial-disclaimer">
+        *Individual results vary. Patient experiences described here are not a guarantee of outcome.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 11: FREQUENTLY ASKED QUESTIONS -->
+  <!-- ========================================== -->
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-tag">QUESTIONS & ANSWERS</span>
+      <h2>Frequently Asked Questions</h2>
+      <p class="section-subtitle">
+        Everything you need to know about full thyroid testing, medication, and what treatment can change.
+      </p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
+        <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
+          <span>{{ faq.question }}</span>
+          <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
+        </button>
+        <div class="faq-answer-panel" *ngIf="faq.isOpen">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 12: FINAL CONSULTATION CTA -->
+  <!-- ========================================== -->
+  <section class="final-cta-section" id="consultation">
+    <div class="final-cta-card">
+      <span class="cta-tag">GET STARTED</span>
+      <h2>Get The Full Picture</h2>
+      <p class="cta-lead">
+        If nobody has checked your free T3, reverse T3, and thyroid antibodies, nobody has actually assessed your thyroid. One panel answers the question.
+      </p>
+
+      <div class="final-cta-buttons">
+        <button type="button" class="btn-primary-large" (click)="openAppointment()">
+          <mat-icon>event</mat-icon>
+          <span>Request A Consultation</span>
+        </button>
+        <a href="tel:+13052904691" class="btn-outline-phone">
+          <mat-icon>phone</mat-icon>
+          <span>Call or Text (305) 290-4691</span>
+        </a>
+      </div>
+
+      <p class="compliance-footer-note">
+        *Thyroid treatment requires medical evaluation and is not appropriate for every patient. Treatment is prescribed only after physician review of your history and laboratory results.
+      </p>
+    </div>
+  </section>
+
+</div>

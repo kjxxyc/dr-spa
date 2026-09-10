@@ -143,6 +143,13 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.HashimotosComponent
               ),
           },
+          {
+            path: 'functional-medicine/thyroid',
+            loadComponent: () =>
+              import('./thyroid/thyroid.component').then(
+                (m) => m.ThyroidComponent
+              ),
+          },
           // Aliases for the hub
           {
             path: 'services/functional-medicine',
@@ -201,6 +208,18 @@ export const AuthenticationRoutes: Routes = [
           {
             path: 'hashimoto',
             redirectTo: 'functional-medicine/hashimotos',
+          },
+          {
+            path: 'thyroid',
+            redirectTo: 'functional-medicine/thyroid',
+          },
+          {
+            path: 'services/thyroid',
+            redirectTo: 'functional-medicine/thyroid',
+          },
+          {
+            path: 'tiroides',
+            redirectTo: 'functional-medicine/thyroid',
           },
           {
             path: 'articles',
