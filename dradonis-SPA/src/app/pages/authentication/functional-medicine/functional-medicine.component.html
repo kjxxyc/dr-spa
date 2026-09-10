@@ -131,7 +131,32 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- SECTION 4: FINAL CONSULTATION CTA -->
+  <!-- SECTION 4: FREQUENTLY ASKED QUESTIONS -->
+  <!-- ========================================== -->
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-tag">QUESTIONS & ANSWERS</span>
+      <h2>Frequently Asked Questions</h2>
+      <p class="section-subtitle">
+        Everything you need to know about how functional medicine works here.
+      </p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
+        <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
+          <span>{{ faq.question }}</span>
+          <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
+        </button>
+        <div class="faq-answer-panel" *ngIf="faq.isOpen">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 5: FINAL CONSULTATION CTA -->
   <!-- ========================================== -->
   <section class="final-cta-section" id="consultation">
     <div class="final-cta-card">

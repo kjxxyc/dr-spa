@@ -8,6 +8,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../../shared/seo/seo.service';
 
+export interface FaqItem {
+  question: string;
+  answer: string;
+  isOpen?: boolean;
+}
+
 /** A child service page surfaced as a card on this hub page. */
 export interface ServiceAreaItem {
   name: string;
@@ -56,6 +62,45 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
     }
   ];
 
+  // Frequently asked questions
+  faqs: FaqItem[] = [
+    {
+      question: 'What is functional medicine?',
+      answer: 'Functional medicine investigates why a symptom is happening rather than only naming it. It uses comprehensive laboratory testing to identify the metabolic, hormonal, inflammatory, digestive, and nutritional contributors to a presentation, then corrects those contributors in sequence.',
+      isOpen: false
+    },
+    {
+      question: 'Is this a replacement for my regular doctor or specialist?',
+      answer: 'No. It works alongside conventional care. Red-flag symptoms, structural disease, and conditions requiring specialist management need conventional evaluation, and we refer for those directly.',
+      isOpen: false
+    },
+    {
+      question: 'My labs came back normal. Is there any point?',
+      answer: 'Frequently, yes. Standard panels are narrow by design. A comprehensive panel looks at markers that a routine workup does not order, and normal results on a limited panel narrow the question rather than answering it.',
+      isOpen: false
+    },
+    {
+      question: 'Which service should I start with?',
+      answer: 'If your symptoms are primarily digestive, start with gut health. If they are primarily cognitive, start with brain health. If both apply, the initial consultation determines which is driving the other, and the testing is arranged accordingly.',
+      isOpen: false
+    },
+    {
+      question: 'How long until I feel better?',
+      answer: 'Most patients report meaningful change within 90 days. Nutrient corrections often register sooner; metabolic, hormonal, and microbiome changes take longer.',
+      isOpen: false
+    },
+    {
+      question: 'Do you take insurance?',
+      answer: 'No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program.',
+      isOpen: false
+    },
+    {
+      question: 'Can this be managed by telehealth?',
+      answer: 'Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp.',
+      isOpen: false
+    }
+  ];
+
   constructor(
     private translate: TranslateService,
     private dialog: MatDialog,
@@ -75,6 +120,10 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.langSub?.unsubscribe();
     this.seo.reset();
+  }
+
+  toggleFaq(faq: FaqItem): void {
+    faq.isOpen = !faq.isOpen;
   }
 
   async openAppointment(): Promise<void> {
@@ -101,8 +150,6 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
       ? 'Medicina funcional en Miami con el Dr. Adonis Maiquez. Pruebas completas para identificar la causa de sus síntomas, con programas de salud intestinal y salud cerebral. Telemedicina en Florida.'
       : 'Functional medicine in Miami with Dr. Adonis Maiquez. Comprehensive testing to find the cause of your symptoms, with gut health and brain health programs. Florida telehealth.';
 
-    // No FAQPage schema here: this page has no visible FAQ section, and
-    // Google requires FAQ markup to match content present on the page.
     const medicalWebPageSchema: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
@@ -136,13 +183,26 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
       }
     };
 
+    const faqSchema: Record<string, unknown> = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: this.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    };
+
     this.seo.apply({
       title,
       description,
       url,
       lang: isEs ? 'es' : 'en',
       ogType: 'website',
-      jsonLd: medicalWebPageSchema
+      jsonLd: [medicalWebPageSchema, faqSchema]
     });
   }
 }
