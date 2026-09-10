@@ -136,6 +136,13 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.AutoimmuneComponent
               ),
           },
+          {
+            path: 'functional-medicine/hashimotos',
+            loadComponent: () =>
+              import('./hashimotos/hashimotos.component').then(
+                (m) => m.HashimotosComponent
+              ),
+          },
           // Aliases for the hub
           {
             path: 'services/functional-medicine',
@@ -182,6 +189,18 @@ export const AuthenticationRoutes: Routes = [
           {
             path: 'autoinmune',
             redirectTo: 'functional-medicine/autoimmune',
+          },
+          {
+            path: 'hashimotos',
+            redirectTo: 'functional-medicine/hashimotos',
+          },
+          {
+            path: 'services/hashimotos',
+            redirectTo: 'functional-medicine/hashimotos',
+          },
+          {
+            path: 'hashimoto',
+            redirectTo: 'functional-medicine/hashimotos',
           },
           {
             path: 'articles',

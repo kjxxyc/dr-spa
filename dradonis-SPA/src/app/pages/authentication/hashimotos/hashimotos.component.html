@@ -1,0 +1,410 @@
+<div class="service-page">
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION -->
+  <!-- ========================================== -->
+  <section class="service-hero">
+    <div class="hero-badge">
+      <mat-icon>health_and_safety</mat-icon>
+      <span>AUTOIMMUNE THYROID CARE</span>
+    </div>
+
+    <h1>Hashimoto’s Treatment in Miami, FL</h1>
+    <p class="hero-lead">
+      Most Hashimoto’s patients are handed a thyroid prescription and told there is nothing else to do.
+      That replaces the hormone. It does nothing about the immune system destroying the gland.
+    </p>
+
+    <div class="hero-cta-group">
+      <button type="button" class="btn-primary-glow" (click)="openAppointment()">
+        <mat-icon>calendar_today</mat-icon>
+        <span>Request A Consultation</span>
+      </button>
+      <a href="tel:+13052904691" class="btn-secondary-phone">
+        <mat-icon>phone</mat-icon>
+        <span>Call (305) 290-4691</span>
+      </a>
+    </div>
+
+    <div class="hero-pill-bar">
+      <div class="pill-item">
+        <mat-icon>biotech</mat-icon>
+        <span>Antibodies Tested, Not Just TSH</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>restaurant</mat-icon>
+        <span>Gut Treated Alongside Thyroid</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>videocam</mat-icon>
+        <span>Florida Telehealth Available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 1: WHAT HASHIMOTO'S IS -->
+  <!-- ========================================== -->
+  <section class="intro-section">
+    <div class="section-card intro-card">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <span class="section-tag">THE MECHANISM</span>
+          <h2>What Hashimoto’s Is</h2>
+          <p class="lead-paragraph">
+            Hashimoto’s thyroiditis is an autoimmune condition in which the immune system produces antibodies against thyroid tissue. Over time, that attack damages the gland and hormone production falls.
+          </p>
+          <p>
+            It is the most common cause of hypothyroidism in the United States, and it disproportionately affects women.
+          </p>
+          <p class="highlight-callout">
+            <strong>The thyroid is the target here. It is not the origin.</strong>
+          </p>
+          <p>
+            Increased intestinal permeability is repeatedly implicated in autoimmune activation, and Hashimoto’s patients frequently have digestive symptoms nobody connected to their thyroid. See our
+            <a routerLink="/functional-medicine/gut-health">Gut Health page</a>.
+          </p>
+        </div>
+
+        <div class="intro-features">
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>biotech</mat-icon></div>
+            <div class="feat-content">
+              <h3>Antibodies Are Testable</h3>
+              <p>TPO and thyroglobulin antibodies establish that this is autoimmune, and change the plan entirely.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>woman</mat-icon></div>
+            <div class="feat-content">
+              <h3>Most Common Cause Of Hypothyroidism</h3>
+              <p>The leading cause in the United States, and one that disproportionately affects women.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>restaurant</mat-icon></div>
+            <div class="feat-content">
+              <h3>70% Of Immune Tissue Is In The Gut</h3>
+              <p>Which is why gut repair sits alongside hormone replacement rather than after it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: PATTERNS WORTH KNOWING -->
+  <!-- ========================================== -->
+  <section class="catalog-section">
+    <div class="section-header">
+      <span class="section-tag">WHAT GETS MISSED</span>
+      <h2>Three Patterns Worth Knowing</h2>
+      <p class="section-subtitle">
+        Each of these is routinely overlooked, and each one changes what should happen next.
+      </p>
+    </div>
+
+    <div class="catalog-grid">
+      <div class="catalog-card" *ngFor="let item of patterns">
+        <div class="catalog-card-header">
+          <span class="catalog-category">{{ item.category }}</span>
+        </div>
+
+        <h3 class="catalog-name">{{ item.name }}</h3>
+        <p class="catalog-desc">{{ item.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 3: OUR APPROACH -->
+  <!-- ========================================== -->
+  <section class="clinical-approach-section">
+    <div class="section-header">
+      <span class="section-tag">METHODOLOGY</span>
+      <h2>Our Approach</h2>
+      <p class="section-subtitle">
+        Hormone replacement is part of the plan here rather than the whole of it.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card" *ngFor="let p of pillars; let i = index">
+        <div class="pillar-num">0{{ i + 1 }}</div>
+        <div class="pillar-icon-wrapper">
+          <mat-icon>{{ p.icon }}</mat-icon>
+        </div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 4: SIGNS THIS COULD HELP YOU -->
+  <!-- ========================================== -->
+  <section class="signs-section">
+    <div class="section-header">
+      <span class="section-tag">SYMPTOM CHECK</span>
+      <h2>Signs This Could Help You</h2>
+      <p class="section-subtitle">
+        These are the patterns that most often bring patients to root-cause thyroid care.
+      </p>
+    </div>
+
+    <div class="section-card">
+      <ul class="signs-list">
+        <li *ngFor="let s of signs">
+          <mat-icon>check_circle</mat-icon>
+          <span>{{ s }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="timeline-note">
+      <mat-icon>info</mat-icon>
+      <span>That last one is worth naming directly. Elevated antibodies with normal hormone levels is a treatable finding, not a waiting period.</span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 5: CANDIDACY (WHO THIS IS FOR / NOT FOR) -->
+  <!-- ========================================== -->
+  <section class="candidacy-section">
+    <div class="section-header">
+      <span class="section-tag">EVALUATION</span>
+      <h2>Who This Is For — And Who It Is Not For</h2>
+      <p class="section-subtitle">
+        Some presentations need surgical or endocrine evaluation first, and we will say so directly.
+      </p>
+    </div>
+
+    <div class="candidacy-grid">
+      <!-- Right Fit -->
+      <div class="candidacy-card fit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon positive">check_circle</mat-icon>
+          <h3>This is a strong fit if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of candidatePoints">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Not a Fit -->
+      <div class="candidacy-card unfit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon negative">block</mat-icon>
+          <h3>It may not be right if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of nonCandidatePoints">
+            <mat-icon>block</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="scope-note">
+      <mat-icon>error_outline</mat-icon>
+      <span>
+        Hashimoto’s is a chronic autoimmune condition. It is managed, sometimes very well, but it is not cured, and thyroid tissue already destroyed does not regenerate. Antibody levels often improve with treatment; we cannot promise that they will normalize.
+      </span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 6: HOW TREATMENT WORKS -->
+  <!-- ========================================== -->
+  <section class="treatment-steps-section">
+    <div class="section-header">
+      <span class="section-tag">THE PROCESS</span>
+      <h2>How Treatment Works</h2>
+      <p class="section-subtitle">
+        From first consultation to confirmed follow-up testing, here is what your care looks like.
+      </p>
+    </div>
+
+    <div class="steps-timeline">
+      <div class="step-timeline-item" *ngFor="let st of treatmentSteps">
+        <div class="step-badge-circle">
+          <span>{{ st.number }}</span>
+        </div>
+        <div class="step-card-body">
+          <div class="step-title-row">
+            <mat-icon>{{ st.icon }}</mat-icon>
+            <h3>{{ st.title }}</h3>
+          </div>
+          <p>{{ st.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-note">
+      <mat-icon>schedule</mat-icon>
+      <span>Most patients report meaningful change within 90 days. Antibody levels move more slowly than symptoms and are tracked over the longer term.</span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 7: WHAT'S INCLUDED -->
+  <!-- ========================================== -->
+  <section class="program-included-section">
+    <div class="included-card">
+      <div class="included-header">
+        <span class="section-tag">YOUR PROGRAM</span>
+        <h2>What’s Included in Your Care</h2>
+        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="inc-item" *ngFor="let inc of included">
+          <mat-icon>{{ inc.icon }}</mat-icon>
+          <h4>{{ inc.title }}</h4>
+          <p>{{ inc.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 8: BENEFITS -->
+  <!-- ========================================== -->
+  <section class="benefits-section">
+    <div class="section-header">
+      <span class="section-tag">POTENTIAL OUTCOMES</span>
+      <h2>Benefits of Root-Cause Hashimoto’s Care</h2>
+      <p class="section-subtitle">
+        Response varies with how much thyroid function remains, how long the condition has been active, and adherence to dietary and lifestyle changes.
+      </p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card" *ngFor="let b of benefits">
+        <div class="benefit-icon">
+          <mat-icon>{{ b.icon }}</mat-icon>
+        </div>
+        <h3>{{ b.title }}</h3>
+        <p>{{ b.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 9: YOUR PHYSICIAN -->
+  <!-- ========================================== -->
+  <section class="physician-section">
+    <div class="physician-card">
+      <div class="physician-img-col">
+        <picture>
+          <source srcset="assets/images/logos/dr-full-img.webp" type="image/webp">
+          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="dr-photo" loading="lazy">
+        </picture>
+        <div class="physician-credentials-badge">
+          <strong>Adonis Maiquez, MD</strong>
+          <span>Functional &amp; Regenerative Medicine</span>
+        </div>
+      </div>
+
+      <div class="physician-bio-col">
+        <span class="section-tag">MEDICAL EXPERTISE</span>
+        <h2>Why Pituitary Surgery Informs Thyroid Care</h2>
+        <p>
+          Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, where he performed hundreds of pituitary procedures.
+        </p>
+        <p>
+          That work left him with an unusually detailed understanding of the thyroid axis, and with an interest in the patients whose problems began long before anything was surgical. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced root-cause medicine in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.
+        </p>
+
+        <div class="credentials-pills">
+          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 10: PATIENT TESTIMONIAL -->
+  <!-- ========================================== -->
+  <section class="testimonial-section">
+    <div class="testimonial-card">
+      <div class="quote-stars">
+        <mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon>
+      </div>
+      <blockquote>
+        "Excellent experience in this clinic. The staff is very professional and friendly, and the medical team provides first-class care. Without a doubt, a quality medical service that I totally recommend."
+      </blockquote>
+      <div class="testimonial-meta">
+        <strong>— Ana G.</strong>
+        <span>Verified Clinic Patient</span>
+      </div>
+      <p class="testimonial-disclaimer">
+        *Individual results vary. Patient experiences described here are not a guarantee of outcome.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 11: FREQUENTLY ASKED QUESTIONS -->
+  <!-- ========================================== -->
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-tag">QUESTIONS & ANSWERS</span>
+      <h2>Frequently Asked Questions</h2>
+      <p class="section-subtitle">
+        Everything you need to know about antibodies, medication, and what treatment can change.
+      </p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
+        <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
+          <span>{{ faq.question }}</span>
+          <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
+        </button>
+        <div class="faq-answer-panel" *ngIf="faq.isOpen">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 12: FINAL CONSULTATION CTA -->
+  <!-- ========================================== -->
+  <section class="final-cta-section" id="consultation">
+    <div class="final-cta-card">
+      <span class="cta-tag">GET STARTED</span>
+      <h2>Treat The Immune System, Not Just The Gland</h2>
+      <p class="cta-lead">
+        If you have Hashimoto’s and the only thing anyone has adjusted is your dose, there is more available to you.
+      </p>
+
+      <div class="final-cta-buttons">
+        <button type="button" class="btn-primary-large" (click)="openAppointment()">
+          <mat-icon>event</mat-icon>
+          <span>Request A Consultation</span>
+        </button>
+        <a href="tel:+13052904691" class="btn-outline-phone">
+          <mat-icon>phone</mat-icon>
+          <span>Call or Text (305) 290-4691</span>
+        </a>
+      </div>
+
+      <p class="compliance-footer-note">
+        *Hashimoto’s treatment requires medical evaluation and is not appropriate for every patient. Treatment is prescribed only after physician review of your history and laboratory results.
+      </p>
+    </div>
+  </section>
+
+</div>

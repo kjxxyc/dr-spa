@@ -66,6 +66,13 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
       description: 'Root-cause investigation of the triggers driving immune activity — infections, toxins, food antigens, stress, nutrient status, and gut barrier integrity — worked alongside your rheumatologist or gastroenterologist rather than around them.',
       linkText: 'Learn More',
       linkUrl: '/functional-medicine/autoimmune'
+    },
+    {
+      name: 'Hashimoto’s Thyroiditis',
+      category: 'Autoimmune Thyroid Care',
+      description: 'Hashimoto’s is an immune condition, not just a thyroid one. We test antibodies rather than hormone alone, investigate what triggered the immune activity, and treat the gut alongside the gland instead of adjusting your dose and stopping there.',
+      linkText: 'Learn More',
+      linkUrl: '/functional-medicine/hashimotos'
     }
   ];
 
