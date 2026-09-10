@@ -43,59 +43,7 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- SECTION 1: WHAT FUNCTIONAL MEDICINE IS -->
-  <!-- ========================================== -->
-  <section class="intro-section">
-    <div class="section-card intro-card">
-      <div class="intro-grid">
-        <div class="intro-text">
-          <span class="section-tag">THE APPROACH</span>
-          <h2>What Functional Medicine Actually Means</h2>
-          <p class="lead-paragraph">
-            Most chronic complaints get one of two responses: a medication that reduces the symptom, or a workup that finds nothing and concludes the problem is stress. Both leave the patient managing something indefinitely.
-          </p>
-          <p>
-            Functional medicine works in the other direction. It starts from the symptom, uses comprehensive laboratory testing to identify the systems driving it, and corrects those systems in sequence. The aim is not to suppress what you are feeling but to remove the reason you are feeling it.
-          </p>
-          <p class="highlight-callout">
-            <strong>There is usually a mechanism, and it is usually findable.</strong>
-          </p>
-          <p>
-            It is not a replacement for conventional medicine. Red-flag symptoms, structural disease, and conditions requiring specialist management need conventional evaluation, and we refer for those directly.
-          </p>
-        </div>
-
-        <div class="intro-features">
-          <div class="feature-box">
-            <div class="feat-icon"><mat-icon>biotech</mat-icon></div>
-            <div class="feat-content">
-              <h3>Testing Comes First</h3>
-              <p>Comprehensive panels before treatment, every time. Treating without testing is guessing.</p>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <div class="feat-icon"><mat-icon>swap_horiz</mat-icon></div>
-            <div class="feat-content">
-              <h3>Systems, Not Departments</h3>
-              <p>Gut, hormones, metabolism, inflammation, and cognition interact. We treat them as one picture.</p>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <div class="feat-icon"><mat-icon>person</mat-icon></div>
-            <div class="feat-content">
-              <h3>One Physician Throughout</h3>
-              <p>Dr. Adonis reviews your results and builds your protocol personally, then follows it with you.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 2: SERVICE AREAS (CHILD PAGES) -->
+  <!-- SECTION 1: SERVICE AREAS (CHILD PAGES) -->
   <!-- ========================================== -->
   <section class="catalog-section" id="service-areas">
     <div class="section-header">
@@ -126,128 +74,7 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- SECTION 3: HOW WE PRACTICE -->
-  <!-- ========================================== -->
-  <section class="clinical-approach-section">
-    <div class="section-header">
-      <span class="section-tag">METHODOLOGY</span>
-      <h2>How We Practice</h2>
-      <p class="section-subtitle">
-        The same four principles apply to every program on this page.
-      </p>
-    </div>
-
-    <div class="pillars-grid">
-      <div class="pillar-card" *ngFor="let p of pillars; let i = index">
-        <div class="pillar-num">0{{ i + 1 }}</div>
-        <div class="pillar-icon-wrapper">
-          <mat-icon>{{ p.icon }}</mat-icon>
-        </div>
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 4: CANDIDACY (WHO THIS IS FOR / NOT FOR) -->
-  <!-- ========================================== -->
-  <section class="candidacy-section">
-    <div class="section-header">
-      <span class="section-tag">EVALUATION</span>
-      <h2>Who This Is For — And Who It Is Not For</h2>
-      <p class="section-subtitle">
-        Functional medicine suits some situations and not others. We are direct about which is which.
-      </p>
-    </div>
-
-    <div class="candidacy-grid">
-      <!-- Right Fit -->
-      <div class="candidacy-card fit-card">
-        <div class="cand-header">
-          <mat-icon class="cand-icon positive">check_circle</mat-icon>
-          <h3>This is a strong fit if you:</h3>
-        </div>
-        <ul class="cand-list">
-          <li *ngFor="let pt of candidatePoints">
-            <mat-icon>check_circle</mat-icon>
-            <span>{{ pt }}</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Not a Fit -->
-      <div class="candidacy-card unfit-card">
-        <div class="cand-header">
-          <mat-icon class="cand-icon negative">block</mat-icon>
-          <h3>It is not the right fit if you:</h3>
-        </div>
-        <ul class="cand-list">
-          <li *ngFor="let pt of nonCandidatePoints">
-            <mat-icon>block</mat-icon>
-            <span>{{ pt }}</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 5: HOW CARE WORKS -->
-  <!-- ========================================== -->
-  <section class="treatment-steps-section">
-    <div class="section-header">
-      <span class="section-tag">THE PROCESS</span>
-      <h2>How Care Works</h2>
-      <p class="section-subtitle">
-        From first consultation to confirmed follow-up testing, every program follows the same path.
-      </p>
-    </div>
-
-    <div class="steps-timeline">
-      <div class="step-timeline-item" *ngFor="let st of treatmentSteps">
-        <div class="step-badge-circle">
-          <span>{{ st.number }}</span>
-        </div>
-        <div class="step-card-body">
-          <div class="step-title-row">
-            <mat-icon>{{ st.icon }}</mat-icon>
-            <h3>{{ st.title }}</h3>
-          </div>
-          <p>{{ st.description }}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-note">
-      <mat-icon>schedule</mat-icon>
-      <span>Most patients report meaningful change within 90 days, though response varies by cause, severity, and how long symptoms have been present.</span>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 6: WHAT'S INCLUDED -->
-  <!-- ========================================== -->
-  <section class="program-included-section">
-    <div class="included-card">
-      <div class="included-header">
-        <span class="section-tag">YOUR PROGRAM</span>
-        <h2>What’s Included in Your Care</h2>
-        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
-      </div>
-
-      <div class="included-grid">
-        <div class="inc-item" *ngFor="let inc of included">
-          <mat-icon>{{ inc.icon }}</mat-icon>
-          <h4>{{ inc.title }}</h4>
-          <p>{{ inc.description }}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 7: YOUR PHYSICIAN -->
+  <!-- SECTION 2: YOUR PHYSICIAN -->
   <!-- ========================================== -->
   <section class="physician-section">
     <div class="physician-card">
@@ -283,7 +110,7 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- SECTION 8: PATIENT TESTIMONIAL -->
+  <!-- SECTION 3: PATIENT TESTIMONIALS -->
   <!-- ========================================== -->
   <section class="testimonial-section">
     <div class="testimonial-card">
@@ -304,32 +131,7 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- SECTION 9: FREQUENTLY ASKED QUESTIONS -->
-  <!-- ========================================== -->
-  <section class="faq-section">
-    <div class="section-header">
-      <span class="section-tag">QUESTIONS & ANSWERS</span>
-      <h2>Frequently Asked Questions</h2>
-      <p class="section-subtitle">
-        Everything you need to know about how functional medicine works here.
-      </p>
-    </div>
-
-    <div class="faq-accordion">
-      <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
-        <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
-          <span>{{ faq.question }}</span>
-          <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
-        </button>
-        <div class="faq-answer-panel" *ngIf="faq.isOpen">
-          <p>{{ faq.answer }}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 10: FINAL CONSULTATION CTA -->
+  <!-- SECTION 4: FINAL CONSULTATION CTA -->
   <!-- ========================================== -->
   <section class="final-cta-section" id="consultation">
     <div class="final-cta-card">
