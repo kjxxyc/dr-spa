@@ -150,6 +150,13 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.ThyroidComponent
               ),
           },
+          {
+            path: 'functional-medicine/fibromyalgia',
+            loadComponent: () =>
+              import('./fibromyalgia/fibromyalgia.component').then(
+                (m) => m.FibromyalgiaComponent
+              ),
+          },
           // Aliases for the hub
           {
             path: 'services/functional-medicine',
@@ -220,6 +227,18 @@ export const AuthenticationRoutes: Routes = [
           {
             path: 'tiroides',
             redirectTo: 'functional-medicine/thyroid',
+          },
+          {
+            path: 'fibromyalgia',
+            redirectTo: 'functional-medicine/fibromyalgia',
+          },
+          {
+            path: 'services/fibromyalgia',
+            redirectTo: 'functional-medicine/fibromyalgia',
+          },
+          {
+            path: 'fibromialgia',
+            redirectTo: 'functional-medicine/fibromyalgia',
           },
           {
             path: 'articles',

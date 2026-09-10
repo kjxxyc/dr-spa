@@ -80,6 +80,13 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
       description: 'Most thyroid care stops at TSH, which measures the signal rather than the hormone your cells receive. We run free T3, reverse T3 and antibodies, find where the chain is breaking, and treat the reasons it stopped working.',
       linkText: 'Learn More',
       linkUrl: '/functional-medicine/thyroid'
+    },
+    {
+      name: 'Fibromyalgia',
+      category: 'Chronic Pain & Fatigue Care',
+      description: 'Widespread pain and exhaustion deserve a proper investigation. We test for the thyroid, nutrient, inflammatory, hormonal, and sleep drivers that the standard workup was never designed to find, and address sleep first.',
+      linkText: 'Learn More',
+      linkUrl: '/functional-medicine/fibromyalgia'
     }
   ];
 
