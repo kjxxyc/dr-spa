@@ -916,6 +916,15 @@ $breakpoint-sm: 640px;
   }
 }
 
+// -- SIGNS SECTION SPACING ----------------
+// The signs card has no bottom margin of its own, so a callout placed
+// after it would otherwise sit flush against the card.
+.signs-section {
+  .timeline-note {
+    margin-top: 2rem;
+  }
+}
+
 // -- SCOPE / LIMITATION NOTE --------------
 // A neutral, non-alarming disclaimer strip for stating plainly what a
 // service does not do (e.g. "we do not treat or reverse dementia").
