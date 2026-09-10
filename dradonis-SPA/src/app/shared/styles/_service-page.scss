@@ -925,6 +925,15 @@ $breakpoint-sm: 640px;
   }
 }
 
+// -- CANDIDACY SECTION SPACING ------------
+// Same for the candidacy grid: a callout following the two cards needs
+// its own top margin. (.scope-note already carries one.)
+.candidacy-section {
+  .timeline-note {
+    margin-top: 2rem;
+  }
+}
+
 // -- SCOPE / LIMITATION NOTE --------------
 // A neutral, non-alarming disclaimer strip for stating plainly what a
 // service does not do (e.g. "we do not treat or reverse dementia").
