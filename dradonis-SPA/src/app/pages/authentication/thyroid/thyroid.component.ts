@@ -317,8 +317,8 @@ export class ThyroidComponent implements OnInit, OnDestroy {
       isOpen: false
     },
     {
-      question: '¿Habla español el Dr. Adonis?',
-      answer: 'Sí. Las consultas están disponibles en inglés y español.',
+      question: 'Does Dr. Adonis speak Spanish?',
+      answer: 'Yes. Consultations are available in English and Spanish.',
       isOpen: false
     }
   ];
