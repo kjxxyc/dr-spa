@@ -129,6 +129,13 @@ export const AuthenticationRoutes: Routes = [
                 (m) => m.BrainHealthComponent
               ),
           },
+          {
+            path: 'functional-medicine/autoimmune',
+            loadComponent: () =>
+              import('./autoimmune/autoimmune.component').then(
+                (m) => m.AutoimmuneComponent
+              ),
+          },
           // Aliases for the hub
           {
             path: 'services/functional-medicine',
@@ -163,6 +170,18 @@ export const AuthenticationRoutes: Routes = [
           {
             path: 'salud-cerebral',
             redirectTo: 'functional-medicine/brain-health',
+          },
+          {
+            path: 'autoimmune',
+            redirectTo: 'functional-medicine/autoimmune',
+          },
+          {
+            path: 'services/autoimmune',
+            redirectTo: 'functional-medicine/autoimmune',
+          },
+          {
+            path: 'autoinmune',
+            redirectTo: 'functional-medicine/autoimmune',
           },
           {
             path: 'articles',

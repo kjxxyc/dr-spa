@@ -59,6 +59,13 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
       description: 'Root-cause evaluation of brain fog, memory, and focus. We test the metabolic, vascular, hormonal, inflammatory, nutritional, and sleep drivers of cognition rather than attributing symptoms to age or stress.',
       linkText: 'Learn More',
       linkUrl: '/functional-medicine/brain-health'
+    },
+    {
+      name: 'Autoimmune Conditions',
+      category: 'Immune & Inflammatory Care',
+      description: 'Root-cause investigation of the triggers driving immune activity — infections, toxins, food antigens, stress, nutrient status, and gut barrier integrity — worked alongside your rheumatologist or gastroenterologist rather than around them.',
+      linkText: 'Learn More',
+      linkUrl: '/functional-medicine/autoimmune'
     }
   ];
 
