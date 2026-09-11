@@ -128,6 +128,23 @@ export const AuthenticationRoutes: Routes = [
             redirectTo: 'medical-weight-loss',
           },
 
+          // ── Enclomiphene (top-level, not a functional medicine child) ──
+          {
+            path: 'enclomiphene',
+            loadComponent: () =>
+              import('./enclomiphene/enclomiphene.component').then(
+                (m) => m.EnclomipheneComponent
+              ),
+          },
+          {
+            path: 'services/enclomiphene',
+            redirectTo: 'enclomiphene',
+          },
+          {
+            path: 'enclomifeno',
+            redirectTo: 'enclomiphene',
+          },
+
           // ── Functional medicine hub and its child service pages ──
           {
             path: 'functional-medicine',
