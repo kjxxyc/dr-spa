@@ -128,6 +128,25 @@ export const AuthenticationRoutes: Routes = [
             redirectTo: 'medical-weight-loss',
           },
 
+          // ── Testosterone replacement therapy (top-level) ──
+          {
+            path: 'testosterone-replacement-therapy',
+            loadComponent: () =>
+              import('./trt/trt.component').then((m) => m.TrtComponent),
+          },
+          {
+            path: 'trt',
+            redirectTo: 'testosterone-replacement-therapy',
+          },
+          {
+            path: 'services/testosterone-replacement-therapy',
+            redirectTo: 'testosterone-replacement-therapy',
+          },
+          {
+            path: 'testosterona',
+            redirectTo: 'testosterone-replacement-therapy',
+          },
+
           // ── Erectile dysfunction (top-level, not a functional medicine child) ──
           {
             path: 'erectile-dysfunction',
