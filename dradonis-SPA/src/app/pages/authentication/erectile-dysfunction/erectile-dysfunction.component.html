@@ -1,0 +1,391 @@
+<div class="service-page">
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION -->
+  <!-- ========================================== -->
+  <section class="service-hero">
+    <div class="hero-badge">
+      <mat-icon>favorite</mat-icon>
+      <span>MEN’S VASCULAR &amp; HORMONE HEALTH</span>
+    </div>
+
+    <h1>Erectile Dysfunction Treatment in Miami, FL</h1>
+    <p class="hero-lead">
+      An erection is a vascular event. It requires healthy blood vessels, adequate nitric oxide, functioning nerves, and hormones in range.
+      Handing a man a prescription and sending him home treats the symptom and ignores the message.
+    </p>
+
+    <div class="hero-cta-group">
+      <button type="button" class="btn-primary-glow" (click)="openAppointment()">
+        <mat-icon>calendar_today</mat-icon>
+        <span>Request A Consultation</span>
+      </button>
+      <a href="tel:+13052904691" class="btn-secondary-phone">
+        <mat-icon>phone</mat-icon>
+        <span>Call (305) 290-4691</span>
+      </a>
+    </div>
+
+    <div class="hero-pill-bar">
+      <div class="pill-item">
+        <mat-icon>lock</mat-icon>
+        <span>Confidential &amp; Cash-Pay</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>biotech</mat-icon>
+        <span>Full Workup, Not A Questionnaire</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>videocam</mat-icon>
+        <span>Florida Telehealth Available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 1: WHAT ED IS -->
+  <!-- ========================================== -->
+  <section class="intro-section">
+    <div class="section-card intro-card">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <span class="section-tag">THE CLINICAL PICTURE</span>
+          <h2>What Erectile Dysfunction Is</h2>
+          <p class="lead-paragraph">
+            ED is the persistent difficulty achieving or maintaining an erection sufficient for satisfactory sexual activity. Occasional difficulty is normal and universal. A consistent pattern is a clinical finding.
+          </p>
+          <p>
+            Erectile dysfunction is rarely just an inconvenience. It is frequently the first visible sign that one of those systems is under strain, and it often shows up years before anything else does.
+          </p>
+          <p class="highlight-callout">
+            <strong>The penile arteries are narrower than the coronary arteries, which is why they show impairment earlier.</strong>
+          </p>
+          <p>
+            The causes fall into several categories, and most men have more than one running at once.
+          </p>
+        </div>
+
+        <div class="intro-features">
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>favorite</mat-icon></div>
+            <div class="feat-content">
+              <h3>An Early Warning</h3>
+              <p>In a meaningful number of men, ED precedes a cardiovascular diagnosis by several years.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>biotech</mat-icon></div>
+            <div class="feat-content">
+              <h3>Testable Causes</h3>
+              <p>Vascular, hormonal, metabolic, neurologic, and medication contributors are all identifiable on a proper panel.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>lock</mat-icon></div>
+            <div class="feat-content">
+              <h3>Handled Discreetly</h3>
+              <p>A clinical consultation with a physician. No jokes, no euphemisms, and nothing reported to an insurer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: THE CAUSES -->
+  <!-- ========================================== -->
+  <section class="catalog-section">
+    <div class="section-header">
+      <span class="section-tag">WHAT WE TEST FOR</span>
+      <h2>The Causes Behind It</h2>
+      <p class="section-subtitle">
+        Most men have more than one of these running at once, which is why the workup covers all of them.
+      </p>
+    </div>
+
+    <div class="catalog-grid">
+      <div class="catalog-card" *ngFor="let item of causes">
+        <div class="catalog-card-header">
+          <span class="catalog-category">{{ item.category }}</span>
+        </div>
+
+        <h3 class="catalog-name">{{ item.name }}</h3>
+        <p class="catalog-desc">{{ item.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 3: OUR APPROACH -->
+  <!-- ========================================== -->
+  <section class="clinical-approach-section">
+    <div class="section-header">
+      <span class="section-tag">METHODOLOGY</span>
+      <h2>Our Approach</h2>
+      <p class="section-subtitle">
+        The most consequential thing we do is not the prescription. It is the workup.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card" *ngFor="let p of pillars; let i = index">
+        <div class="pillar-num">0{{ i + 1 }}</div>
+        <div class="pillar-icon-wrapper">
+          <mat-icon>{{ p.icon }}</mat-icon>
+        </div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 4: SIGNS THIS COULD HELP YOU -->
+  <!-- ========================================== -->
+  <section class="signs-section">
+    <div class="section-header">
+      <span class="section-tag">SYMPTOM CHECK</span>
+      <h2>Signs This Could Help You</h2>
+      <p class="section-subtitle">
+        The pattern matters diagnostically — how it started, and what happens in the morning.
+      </p>
+    </div>
+
+    <div class="section-card">
+      <ul class="signs-list">
+        <li *ngFor="let s of signs">
+          <mat-icon>check_circle</mat-icon>
+          <span>{{ s }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="timeline-note">
+      <mat-icon>info</mat-icon>
+      <span>If any of these describe you, particularly reduced morning erections or gradual onset, a workup is warranted regardless of whether you also want a prescription.</span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 5: CANDIDACY (WHO THIS IS FOR / NOT FOR) -->
+  <!-- ========================================== -->
+  <section class="candidacy-section">
+    <div class="section-header">
+      <span class="section-tag">EVALUATION</span>
+      <h2>Who This Is For — And Who It Is Not For</h2>
+      <p class="section-subtitle">
+        Some presentations belong with urology or cardiology first, and we will say so.
+      </p>
+    </div>
+
+    <div class="candidacy-grid">
+      <!-- Right Fit -->
+      <div class="candidacy-card fit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon positive">check_circle</mat-icon>
+          <h3>This is a strong fit if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of candidatePoints">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Not a Fit -->
+      <div class="candidacy-card unfit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon negative">block</mat-icon>
+          <h3>It may not be right if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of nonCandidatePoints">
+            <mat-icon>block</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="scope-note">
+      <mat-icon>error_outline</mat-icon>
+      <span>
+        <strong>If you take nitrates for a heart condition, PDE5 inhibitors are absolutely contraindicated.</strong> Tell us before anything is prescribed. Unstable cardiovascular disease needs cardiology clearance first, because sexual activity carries cardiac demand. We review your medications and cardiac history before prescribing anything.
+      </span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 6: HOW TREATMENT WORKS -->
+  <!-- ========================================== -->
+  <section class="treatment-steps-section">
+    <div class="section-header">
+      <span class="section-tag">THE PROCESS</span>
+      <h2>How Treatment Works</h2>
+      <p class="section-subtitle">
+        Two tracks from the start — immediate function, and the underlying cause.
+      </p>
+    </div>
+
+    <div class="steps-timeline">
+      <div class="step-timeline-item" *ngFor="let st of treatmentSteps">
+        <div class="step-badge-circle">
+          <span>{{ st.number }}</span>
+        </div>
+        <div class="step-card-body">
+          <div class="step-title-row">
+            <mat-icon>{{ st.icon }}</mat-icon>
+            <h3>{{ st.title }}</h3>
+          </div>
+          <p>{{ st.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-note">
+      <mat-icon>schedule</mat-icon>
+      <span>Symptomatic treatment often works immediately. Correcting the hormonal and metabolic causes is slower, and most patients report meaningful change within 90 days. That is the work that changes the trajectory rather than the evening.</span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 7: WHAT'S INCLUDED -->
+  <!-- ========================================== -->
+  <section class="program-included-section">
+    <div class="included-card">
+      <div class="included-header">
+        <span class="section-tag">YOUR PROGRAM</span>
+        <h2>What’s Included in Your Care</h2>
+        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="inc-item" *ngFor="let inc of included">
+          <mat-icon>{{ inc.icon }}</mat-icon>
+          <h4>{{ inc.title }}</h4>
+          <p>{{ inc.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 8: BENEFITS -->
+  <!-- ========================================== -->
+  <section class="benefits-section">
+    <div class="section-header">
+      <span class="section-tag">POTENTIAL OUTCOMES</span>
+      <h2>Benefits of Treatment</h2>
+      <p class="section-subtitle">
+        Individual response depends on cause, severity, and adherence.
+      </p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card" *ngFor="let b of benefits">
+        <div class="benefit-icon">
+          <mat-icon>{{ b.icon }}</mat-icon>
+        </div>
+        <h3>{{ b.title }}</h3>
+        <p>{{ b.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 9: YOUR PHYSICIAN -->
+  <!-- ========================================== -->
+  <section class="physician-section">
+    <div class="physician-card">
+      <div class="physician-img-col">
+        <picture>
+          <source srcset="assets/images/logos/dr-full-img.webp" type="image/webp">
+          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="dr-photo" loading="lazy">
+        </picture>
+        <div class="physician-credentials-badge">
+          <strong>Adonis Maiquez, MD</strong>
+          <span>Functional &amp; Regenerative Medicine</span>
+        </div>
+      </div>
+
+      <div class="physician-bio-col">
+        <span class="section-tag">MEDICAL EXPERTISE</span>
+        <h2>Trained To Evaluate All Three Systems</h2>
+        <p>
+          Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures before moving into functional and regenerative medicine.
+        </p>
+        <p>
+          That background matters here for a specific reason: erectile function depends on vascular, neurologic, and endocrine systems working together, and he was trained to evaluate all three rather than treat the symptom in front of him. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>. Consultations are confidential.
+        </p>
+
+        <div class="credentials-pills">
+          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 10: FREQUENTLY ASKED QUESTIONS -->
+  <!-- ========================================== -->
+  <!-- NOTE: no testimonial section on this page. Patients rarely leave -->
+  <!-- public ED reviews under their own name, and borrowing an          -->
+  <!-- unrelated one would cost trust on a page selling discretion.      -->
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-tag">QUESTIONS & ANSWERS</span>
+      <h2>Frequently Asked Questions</h2>
+      <p class="section-subtitle">
+        Everything you need to know about causes, treatment, safety, and confidentiality.
+      </p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
+        <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
+          <span>{{ faq.question }}</span>
+          <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
+        </button>
+        <div class="faq-answer-panel" *ngIf="faq.isOpen">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 11: FINAL CONSULTATION CTA -->
+  <!-- ========================================== -->
+  <section class="final-cta-section" id="consultation">
+    <div class="final-cta-card">
+      <span class="cta-tag">GET STARTED</span>
+      <h2>Get The Actual Answer</h2>
+      <p class="cta-lead">
+        ED is treatable. It is also informative. The workup tells you both how to restore function and whether your vascular and metabolic health need attention while there is still time to act.
+      </p>
+
+      <div class="final-cta-buttons">
+        <button type="button" class="btn-primary-large" (click)="openAppointment()">
+          <mat-icon>event</mat-icon>
+          <span>Request A Consultation</span>
+        </button>
+        <a href="tel:+13052904691" class="btn-outline-phone">
+          <mat-icon>phone</mat-icon>
+          <span>Call or Text (305) 290-4691</span>
+        </a>
+      </div>
+
+      <p class="compliance-footer-note">
+        *Treatment for erectile dysfunction requires medical evaluation and is not appropriate for every patient. Medications are prescribed only after physician review of your history, medications, and cardiovascular status.
+      </p>
+    </div>
+  </section>
+
+</div>

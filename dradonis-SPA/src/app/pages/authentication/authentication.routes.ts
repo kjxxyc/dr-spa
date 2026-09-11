@@ -128,6 +128,27 @@ export const AuthenticationRoutes: Routes = [
             redirectTo: 'medical-weight-loss',
           },
 
+          // ── Erectile dysfunction (top-level, not a functional medicine child) ──
+          {
+            path: 'erectile-dysfunction',
+            loadComponent: () =>
+              import('./erectile-dysfunction/erectile-dysfunction.component').then(
+                (m) => m.ErectileDysfunctionComponent
+              ),
+          },
+          {
+            path: 'services/erectile-dysfunction',
+            redirectTo: 'erectile-dysfunction',
+          },
+          {
+            path: 'ed-treatment',
+            redirectTo: 'erectile-dysfunction',
+          },
+          {
+            path: 'disfuncion-erectil',
+            redirectTo: 'erectile-dysfunction',
+          },
+
           // ── Enclomiphene (top-level, not a functional medicine child) ──
           {
             path: 'enclomiphene',
