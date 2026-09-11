@@ -128,6 +128,25 @@ export const AuthenticationRoutes: Routes = [
             redirectTo: 'medical-weight-loss',
           },
 
+          // ── Hormone replacement therapy (top-level) ──
+          {
+            path: 'hormone-replacement-therapy',
+            loadComponent: () =>
+              import('./hrt/hrt.component').then((m) => m.HrtComponent),
+          },
+          {
+            path: 'hrt',
+            redirectTo: 'hormone-replacement-therapy',
+          },
+          {
+            path: 'services/hormone-replacement-therapy',
+            redirectTo: 'hormone-replacement-therapy',
+          },
+          {
+            path: 'terapia-hormonal',
+            redirectTo: 'hormone-replacement-therapy',
+          },
+
           // ── Testosterone replacement therapy (top-level) ──
           {
             path: 'testosterone-replacement-therapy',

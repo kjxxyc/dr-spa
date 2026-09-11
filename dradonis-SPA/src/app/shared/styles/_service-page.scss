@@ -935,6 +935,52 @@ $breakpoint-sm: 640px;
   }
 }
 
+// -- MULTIPLE TESTIMONIALS ----------------
+// Stacks several .testimonial-card blocks with spacing, for pages that
+// have more than one review on file.
+.testimonials-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+// -- GROUPED SIGNS LISTS ------------------
+// Two labelled signs lists side by side (e.g. "For women" / "For men").
+.signs-groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+
+  .signs-group-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+    font-weight: 800;
+    color: $text-dark;
+    margin: 0 0 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $border-color;
+
+    mat-icon {
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      color: $primary-green;
+      flex-shrink: 0;
+    }
+  }
+
+  .signs-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 // -- SCOPE / LIMITATION NOTE --------------
 // A neutral, non-alarming disclaimer strip for stating plainly what a
 // service does not do (e.g. "we do not treat or reverse dementia").
