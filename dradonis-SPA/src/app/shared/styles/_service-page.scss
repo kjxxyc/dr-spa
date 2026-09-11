@@ -934,44 +934,12 @@ $breakpoint-sm: 640px;
 }
 
 // -- MULTIPLE TESTIMONIALS ----------------
-// Lays several .testimonial-card blocks out in a row on desktop, for
-// pages that have more than one review on file. Cards stretch to equal
-// height and the attribution is pinned to the bottom, so quotes of very
-// different lengths still line up.
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+// Stacks several .testimonial-card blocks with spacing, for pages that
+// have more than one review on file.
+.testimonials-stack {
+  display: flex;
+  flex-direction: column;
   gap: 24px;
-  align-items: stretch;
-
-  @media (max-width: $breakpoint-lg) {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonial-card {
-    // Override the single-card layout: no width cap, fills its column.
-    max-width: none;
-    margin: 0;
-    padding: 32px 26px;
-    display: flex;
-    flex-direction: column;
-
-    blockquote {
-      font-size: 15.5px;
-      line-height: 1.65;
-      max-width: none;
-      margin: 0 0 1.5rem;
-    }
-
-    .testimonial-meta {
-      // Pins attribution to the card bottom regardless of quote length.
-      margin-top: auto;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-      padding: 28px 20px;
-    }
-  }
 }
 
 // -- GROUPED SIGNS LISTS ------------------
