@@ -917,19 +917,16 @@ $breakpoint-sm: 640px;
   }
 }
 
-// -- SIGNS SECTION SPACING ----------------
-// The signs card has no bottom margin of its own, so a callout placed
-// after it would otherwise sit flush against the card.
-.signs-section {
-  .timeline-note {
-    margin-top: 2rem;
-  }
-}
-
-// -- CANDIDACY SECTION SPACING ------------
-// Same for the candidacy grid: a callout following the two cards needs
-// its own top margin. (.scope-note already carries one.)
-.candidacy-section {
+// -- CALLOUT SPACING AFTER CARD GRIDS -----
+// The signs card, candidacy grid, benefits grid and testimonial stack
+// carry no bottom margin of their own, so a .timeline-note placed after
+// any of them would sit flush against the cards above it. The steps
+// section is excluded: .steps-timeline already supplies that gap, and
+// .scope-note already carries its own top margin everywhere.
+.signs-section,
+.candidacy-section,
+.benefits-section,
+.testimonial-section {
   .timeline-note {
     margin-top: 2rem;
   }
