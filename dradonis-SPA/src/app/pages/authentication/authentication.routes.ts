@@ -107,6 +107,27 @@ export const AuthenticationRoutes: Routes = [
             path: 'peptidos',
             redirectTo: 'peptide-therapy',
           },
+          // ── Medical weight loss (top-level, not a functional medicine child) ──
+          {
+            path: 'medical-weight-loss',
+            loadComponent: () =>
+              import('./medical-weight-loss/medical-weight-loss.component').then(
+                (m) => m.MedicalWeightLossComponent
+              ),
+          },
+          {
+            path: 'services/medical-weight-loss',
+            redirectTo: 'medical-weight-loss',
+          },
+          {
+            path: 'weight-loss',
+            redirectTo: 'medical-weight-loss',
+          },
+          {
+            path: 'perdida-de-peso',
+            redirectTo: 'medical-weight-loss',
+          },
+
           // ── Functional medicine hub and its child service pages ──
           {
             path: 'functional-medicine',

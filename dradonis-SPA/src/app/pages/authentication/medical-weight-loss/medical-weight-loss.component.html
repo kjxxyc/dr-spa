@@ -1,0 +1,439 @@
+<div class="service-page">
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION -->
+  <!-- ========================================== -->
+  <section class="service-hero">
+    <div class="hero-badge">
+      <mat-icon>monitor_weight</mat-icon>
+      <span>PHYSICIAN-MANAGED METABOLIC CARE</span>
+    </div>
+
+    <h1>Medical Weight Loss in Miami, FL</h1>
+    <p class="hero-lead">
+      If eating less and moving more had been going to work, it would have worked.
+      When it does not, the reason is not discipline — it is physiology you cannot see. That system is testable.
+    </p>
+
+    <div class="hero-cta-group">
+      <button type="button" class="btn-primary-glow" (click)="openAppointment()">
+        <mat-icon>calendar_today</mat-icon>
+        <span>Request A Consultation</span>
+      </button>
+      <a href="tel:+13052904691" class="btn-secondary-phone">
+        <mat-icon>phone</mat-icon>
+        <span>Call (305) 290-4691</span>
+      </a>
+    </div>
+
+    <div class="hero-pill-bar">
+      <div class="pill-item">
+        <mat-icon>biotech</mat-icon>
+        <span>Testing Before Prescribing</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>fitness_center</mat-icon>
+        <span>Lean Mass Protected</span>
+      </div>
+      <div class="pill-item">
+        <mat-icon>videocam</mat-icon>
+        <span>Florida Telehealth Available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 1: WHAT MEDICAL WEIGHT LOSS IS -->
+  <!-- ========================================== -->
+  <section class="intro-section">
+    <div class="section-card intro-card">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <span class="section-tag">THE APPROACH</span>
+          <h2>What Medical Weight Loss Is</h2>
+          <p class="lead-paragraph">
+            Medical weight loss is weight management directed by a physician, built on diagnostic testing, and using prescription therapy where it is clinically appropriate.
+          </p>
+          <p>
+            The distinction from a commercial program is the workup. Before any medication is prescribed, we establish what is driving the resistance, because several distinct problems produce the same outcome and they do not respond to the same treatment.
+          </p>
+          <p class="highlight-callout">
+            <strong>For a significant number of people, no amount of willpower overrides physiology it cannot see.</strong>
+          </p>
+          <p>
+            GLP-1 medications are genuinely effective. Neither addresses why your metabolism resisted in the first place, which is the part that determines what happens when you stop.
+          </p>
+        </div>
+
+        <div class="intro-features">
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>biotech</mat-icon></div>
+            <div class="feat-content">
+              <h3>Insulin, Not Just Glucose</h3>
+              <p>Insulin rises years before glucose does. A normal fasting glucose with high fasting insulin explains a great deal of weight resistance.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>monitor_weight</mat-icon></div>
+            <div class="feat-content">
+              <h3>Body Composition, Not The Scale</h3>
+              <p>InBody analysis tracks fat and lean mass separately, because the scale cannot tell you which one you are losing.</p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <div class="feat-icon"><mat-icon>fitness_center</mat-icon></div>
+            <div class="feat-content">
+              <h3>Muscle Is What Holds It</h3>
+              <p>Protein targets, resistance training, and an appropriate rate of loss are in the protocol from day one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: WHAT IS DRIVING THE RESISTANCE -->
+  <!-- ========================================== -->
+  <section class="catalog-section">
+    <div class="section-header">
+      <span class="section-tag">WHAT WE TEST FOR</span>
+      <h2>What’s Actually Working Against You</h2>
+      <p class="section-subtitle">
+        Several distinct problems produce the same outcome, and they do not respond to the same treatment.
+      </p>
+    </div>
+
+    <div class="catalog-grid">
+      <div class="catalog-card" *ngFor="let item of drivers">
+        <div class="catalog-card-header">
+          <span class="catalog-category">{{ item.category }}</span>
+        </div>
+
+        <h3 class="catalog-name">{{ item.name }}</h3>
+        <p class="catalog-desc">{{ item.description }}</p>
+
+        <div class="catalog-action" *ngIf="item.linkUrl">
+          <a [routerLink]="item.linkUrl" class="card-link">
+            <span>{{ item.linkText }}</span>
+            <mat-icon>arrow_forward</mat-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 3: THE MEDICATIONS -->
+  <!-- ========================================== -->
+  <section class="catalog-section">
+    <div class="section-header">
+      <span class="section-tag">PRESCRIPTION THERAPY</span>
+      <h2>About Semaglutide and Tirzepatide</h2>
+      <p class="section-subtitle">
+        The two GLP-1 receptor medications with the strongest weight management data behind them. Neither is prescribed as a default.
+      </p>
+    </div>
+
+    <div class="catalog-grid">
+      <div class="catalog-card" *ngFor="let med of medications">
+        <div class="catalog-card-header">
+          <span class="catalog-category">{{ med.category }}</span>
+        </div>
+
+        <h3 class="catalog-name">{{ med.name }}</h3>
+        <p class="catalog-desc">{{ med.description }}</p>
+
+        <div class="catalog-note">
+          <strong>Brand names:</strong> {{ med.brands }}
+        </div>
+      </div>
+    </div>
+
+    <div class="scope-note">
+      <mat-icon>error_outline</mat-icon>
+      <span>
+        Semaglutide and tirzepatide commonly cause nausea, constipation, and reduced appetite, particularly during dose increases. Less common but more serious risks include pancreatitis and gallbladder disease. Which medication you receive, if either, is decided by your testing, your history, and your contraindications — and we will tell you exactly what you are being prescribed before you start.
+      </span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 4: OUR APPROACH -->
+  <!-- ========================================== -->
+  <section class="clinical-approach-section">
+    <div class="section-header">
+      <span class="section-tag">METHODOLOGY</span>
+      <h2>Our Approach</h2>
+      <p class="section-subtitle">
+        The first thing that happens here is a panel, not a prescription.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card" *ngFor="let p of pillars; let i = index">
+        <div class="pillar-num">0{{ i + 1 }}</div>
+        <div class="pillar-icon-wrapper">
+          <mat-icon>{{ p.icon }}</mat-icon>
+        </div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 5: SIGNS THIS COULD HELP YOU -->
+  <!-- ========================================== -->
+  <section class="signs-section">
+    <div class="section-header">
+      <span class="section-tag">SYMPTOM CHECK</span>
+      <h2>Signs This Could Help You</h2>
+      <p class="section-subtitle">
+        These are the patterns that most often turn out to have something testable behind them.
+      </p>
+    </div>
+
+    <div class="section-card">
+      <ul class="signs-list">
+        <li *ngFor="let s of signs">
+          <mat-icon>check_circle</mat-icon>
+          <span>{{ s }}</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 6: CANDIDACY (WHO THIS IS FOR / NOT FOR) -->
+  <!-- ========================================== -->
+  <section class="candidacy-section">
+    <div class="section-header">
+      <span class="section-tag">EVALUATION</span>
+      <h2>Who This Is For — And Who It Is Not For</h2>
+      <p class="section-subtitle">
+        GLP-1 therapy carries real contraindications, and some situations call for a different kind of care entirely.
+      </p>
+    </div>
+
+    <div class="candidacy-grid">
+      <!-- Right Fit -->
+      <div class="candidacy-card fit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon positive">check_circle</mat-icon>
+          <h3>This is a strong fit if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of candidatePoints">
+            <mat-icon>check_circle</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Not a Fit -->
+      <div class="candidacy-card unfit-card">
+        <div class="cand-header">
+          <mat-icon class="cand-icon negative">block</mat-icon>
+          <h3>It is not the right fit if you:</h3>
+        </div>
+        <ul class="cand-list">
+          <li *ngFor="let pt of nonCandidatePoints">
+            <mat-icon>block</mat-icon>
+            <span>{{ pt }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 7: HOW TREATMENT WORKS -->
+  <!-- ========================================== -->
+  <section class="treatment-steps-section">
+    <div class="section-header">
+      <span class="section-tag">THE PROCESS</span>
+      <h2>How Treatment Works</h2>
+      <p class="section-subtitle">
+        From your weight history to maintenance planning, here is what your care looks like.
+      </p>
+    </div>
+
+    <div class="steps-timeline">
+      <div class="step-timeline-item" *ngFor="let st of treatmentSteps">
+        <div class="step-badge-circle">
+          <span>{{ st.number }}</span>
+        </div>
+        <div class="step-card-body">
+          <div class="step-title-row">
+            <mat-icon>{{ st.icon }}</mat-icon>
+            <h3>{{ st.title }}</h3>
+          </div>
+          <p>{{ st.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-note">
+      <mat-icon>schedule</mat-icon>
+      <span>Most patients report meaningful change within 90 days.</span>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 8: WHAT'S INCLUDED -->
+  <!-- ========================================== -->
+  <section class="program-included-section">
+    <div class="included-card">
+      <div class="included-header">
+        <span class="section-tag">YOUR PROGRAM</span>
+        <h2>What’s Included in Your Care</h2>
+        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+      </div>
+
+      <div class="included-grid">
+        <div class="inc-item" *ngFor="let inc of included">
+          <mat-icon>{{ inc.icon }}</mat-icon>
+          <h4>{{ inc.title }}</h4>
+          <p>{{ inc.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 9: BENEFITS -->
+  <!-- ========================================== -->
+  <section class="benefits-section">
+    <div class="section-header">
+      <span class="section-tag">POTENTIAL OUTCOMES</span>
+      <h2>Benefits of Physician-Managed Weight Loss</h2>
+      <p class="section-subtitle">
+        Response varies with your metabolic picture, medication response, and adherence.
+      </p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-card" *ngFor="let b of benefits">
+        <div class="benefit-icon">
+          <mat-icon>{{ b.icon }}</mat-icon>
+        </div>
+        <h3>{{ b.title }}</h3>
+        <p>{{ b.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 10: YOUR PHYSICIAN -->
+  <!-- ========================================== -->
+  <section class="physician-section">
+    <div class="physician-card">
+      <div class="physician-img-col">
+        <picture>
+          <source srcset="assets/images/logos/dr-full-img.webp" type="image/webp">
+          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="dr-photo" loading="lazy">
+        </picture>
+        <div class="physician-credentials-badge">
+          <strong>Adonis Maiquez, MD</strong>
+          <span>Functional &amp; Regenerative Medicine</span>
+        </div>
+      </div>
+
+      <div class="physician-bio-col">
+        <span class="section-tag">MEDICAL EXPERTISE</span>
+        <h2>An Unusual Route Into Weight Medicine</h2>
+        <p>
+          Dr. Adonis trained as a <strong>neurosurgeon in pituitary surgery</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida. The pituitary governs thyroid, adrenal, and sex hormone output, which together determine much of how a body stores and releases energy.
+        </p>
+        <p>
+          That is an unusual route into weight medicine, and it is why the first thing that happens here is a panel rather than a prescription. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.
+        </p>
+
+        <div class="credentials-pills">
+          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 11: PATIENT TESTIMONIAL -->
+  <!-- ========================================== -->
+  <section class="testimonial-section">
+    <div class="testimonial-card">
+      <div class="quote-stars">
+        <mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon>
+      </div>
+      <blockquote>
+        "Excellent experience in this clinic. The staff is very professional and friendly, and the medical team provides first-class care. Without a doubt, a quality medical service that I totally recommend."
+      </blockquote>
+      <div class="testimonial-meta">
+        <strong>— Ana G.</strong>
+        <span>Verified Clinic Patient</span>
+      </div>
+      <p class="testimonial-disclaimer">
+        *Individual results vary. Patient experiences described here are not a guarantee of outcome.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 12: FREQUENTLY ASKED QUESTIONS -->
+  <!-- ========================================== -->
+  <section class="faq-section">
+    <div class="section-header">
+      <span class="section-tag">QUESTIONS & ANSWERS</span>
+      <h2>Frequently Asked Questions</h2>
+      <p class="section-subtitle">
+        Everything you need to know about testing, medication, side effects, and what happens afterward.
+      </p>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
+        <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
+          <span>{{ faq.question }}</span>
+          <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
+        </button>
+        <div class="faq-answer-panel" *ngIf="faq.isOpen">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 13: FINAL CONSULTATION CTA -->
+  <!-- ========================================== -->
+  <section class="final-cta-section" id="consultation">
+    <div class="final-cta-card">
+      <span class="cta-tag">GET STARTED</span>
+      <h2>Find Out What’s In The Way</h2>
+      <p class="cta-lead">
+        If effort has not been the problem, more effort is not the answer. A metabolic panel will tell you what is actually happening.
+      </p>
+
+      <div class="final-cta-buttons">
+        <button type="button" class="btn-primary-large" (click)="openAppointment()">
+          <mat-icon>event</mat-icon>
+          <span>Request A Consultation</span>
+        </button>
+        <a href="tel:+13052904691" class="btn-outline-phone">
+          <mat-icon>phone</mat-icon>
+          <span>Call or Text (305) 290-4691</span>
+        </a>
+      </div>
+
+      <p class="compliance-footer-note">
+        *Weight management treatment requires medical evaluation and is not appropriate for every patient. Medications are prescribed only after physician review of your history, testing, and contraindications.
+      </p>
+    </div>
+  </section>
+
+</div>
