@@ -2738,5 +2738,375 @@
       "title": "Medicina Funcional en Miami | Atención de Causa Raíz — Dr. Adonis Maiquez, MD",
       "description": "Medicina funcional en Miami con el Dr. Adonis Maiquez. Pruebas completas para identificar la causa de sus síntomas, con programas de salud intestinal y salud cerebral. Telemedicina en Florida."
     }
+  },
+  "weightLossPage": {
+    "badge": "ATENCIÓN METABÓLICA DIRIGIDA POR UN MÉDICO",
+    "title": "Pérdida de Peso Médica en Miami, FL",
+    "lead": "Si comer menos y moverse más fuera a funcionar, ya habría funcionado. Cuando no lo hace, la razón no es la disciplina: es una fisiología que usted no puede ver. Ese sistema se puede medir.",
+    "ctaConsult": "Solicite una Consulta",
+    "ctaCall": "Llame al (305) 290-4691",
+    "pills": {
+      "testing": "Pruebas Antes de Recetar",
+      "lean": "Masa Magra Protegida",
+      "telehealth": "Telemedicina en Florida Disponible"
+    },
+    "intro": {
+      "tag": "EL ENFOQUE",
+      "title": "Qué Es la Pérdida de Peso Médica",
+      "lead": "La pérdida de peso médica es el manejo del peso dirigido por un médico, construido sobre pruebas diagnósticas y con terapia con receta cuando es clínicamente apropiada.",
+      "p2": "Lo que la distingue de un programa comercial es el estudio previo. Antes de recetar cualquier medicamento, establecemos qué está impulsando la resistencia, porque varios problemas distintos producen el mismo resultado y no responden al mismo tratamiento.",
+      "callout": "Para un número considerable de personas, ninguna cantidad de fuerza de voluntad supera una fisiología que no puede ver.",
+      "p4": "Los medicamentos GLP-1 son realmente eficaces. Ninguno aborda por qué su metabolismo se resistió en primer lugar, que es la parte que determina qué ocurre cuando usted los deja.",
+      "features": {
+        "insulin": {
+          "title": "Insulina, No Solo Glucosa",
+          "desc": "La insulina sube años antes que la glucosa. Una glucosa en ayunas normal con una insulina en ayunas alta explica buena parte de la resistencia al peso."
+        },
+        "body": {
+          "title": "Composición Corporal, No la Báscula",
+          "desc": "El análisis InBody sigue la grasa y la masa magra por separado, porque la báscula no puede decirle cuál de las dos está perdiendo."
+        },
+        "muscle": {
+          "title": "El Músculo Es lo que lo Sostiene",
+          "desc": "Los objetivos de proteína, el entrenamiento de fuerza y un ritmo de pérdida apropiado están en el protocolo desde el primer día."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "LO QUE EVALUAMOS",
+      "title": "Qué Está Trabajando Realmente en su Contra",
+      "subtitle": "Varios problemas distintos producen el mismo resultado, y no responden al mismo tratamiento.",
+      "thyroidLink": "Consulte nuestra página de Tiroides",
+      "list": {
+        "d1": {
+          "name": "Resistencia a la Insulina",
+          "category": "Metabólico",
+          "description": "La insulina elevada favorece el almacenamiento de grasa y bloquea su liberación. La glucosa en ayunas puede parecer completamente normal mientras la insulina permanece alta durante años. Medir la insulina, y no solo la glucosa, es lo que hace visible este problema."
+        },
+        "d2": {
+          "name": "Disfunción Tiroidea",
+          "category": "Tasa Metabólica",
+          "description": "La tiroides fija su tasa metabólica. Una mala conversión de T4 a T3 produce resistencia a la pérdida de peso con una TSH normal, y por eso a tantos pacientes se les dice que su tiroides está bien."
+        },
+        "d3": {
+          "name": "Descenso Hormonal",
+          "category": "Endocrino",
+          "description": "La caída del estrógeno, la progesterona o la testosterona cambia la distribución de la grasa y reduce la masa magra, lo que disminuye el ritmo al que usted quema cualquier cosa."
+        },
+        "d4": {
+          "name": "Desregulación del Cortisol",
+          "category": "Fisiología del Estrés",
+          "description": "La fisiología del estrés crónico favorece el almacenamiento de grasa central y aumenta el apetito."
+        },
+        "d5": {
+          "name": "Inflamación",
+          "category": "Señalización Inmunitaria",
+          "description": "La inflamación sistémica interfiere con la señalización que regula el hambre y la saciedad."
+        },
+        "d6": {
+          "name": "Alteración del Sueño",
+          "category": "Recuperación",
+          "description": "El mal sueño eleva la grelina, reduce la leptina y empeora la sensibilidad a la insulina. La apnea del sueño no tratada hace que la pérdida de peso sostenida sea mucho más difícil."
+        },
+        "d7": {
+          "name": "Efectos de Medicamentos",
+          "category": "Factores Farmacológicos",
+          "description": "Algunos antidepresivos, corticoides, betabloqueantes y otras recetas contribuyen directamente."
+        }
+      }
+    },
+    "medications": {
+      "tag": "TERAPIA CON RECETA",
+      "title": "Sobre la Semaglutida y la Tirzepatida",
+      "subtitle": "Los dos medicamentos con receptor GLP-1 con los datos más sólidos en manejo de peso. Ninguno se receta por defecto.",
+      "brandsLabel": "Nombres comerciales:",
+      "scopeNote": "La semaglutida y la tirzepatida causan con frecuencia náuseas, estreñimiento y reducción del apetito, en particular durante los aumentos de dosis. Riesgos menos comunes pero más graves incluyen la pancreatitis y la enfermedad de la vesícula biliar. Cuál recibe usted, si es que recibe alguno, lo deciden sus pruebas, su historia y sus contraindicaciones, y le diremos exactamente qué se le está recetando antes de comenzar.",
+      "list": {
+        "m1": {
+          "name": "Semaglutida",
+          "category": "Agonista del Receptor GLP-1",
+          "brands": "Ozempic · Wegovy",
+          "description": "Ralentiza el vaciamiento gástrico, actúa sobre la regulación del apetito en el cerebro y mejora la respuesta a la insulina."
+        },
+        "m2": {
+          "name": "Tirzepatida",
+          "category": "Agonista de los Receptores GLP-1 y GIP",
+          "brands": "Mounjaro · Zepbound",
+          "description": "Actúa sobre dos receptores, GLP-1 y GIP. En datos de ensayos comparativos directos ha producido por lo general una mayor reducción media de peso que la semaglutida, aunque la respuesta individual varía considerablemente y el perfil de efectos secundarios es similar."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "Lo primero que ocurre aquí es un panel, no una receta.",
+      "list": {
+        "p1": {
+          "title": "Evaluamos Antes de Recetar",
+          "description": "Los medicamentos GLP-1 funcionan, y funcionan para muchas personas que no han tenido éxito de otra manera. También es cierto que no corrigen un problema tiroideo sin diagnosticar y no abordan la desregulación de la insulina que seguirá ahí después."
+        },
+        "p2": {
+          "title": "Medimos la Composición Corporal, No Solo el Peso",
+          "description": "El número de la báscula no distingue grasa de músculo. Perder masa magra mientras se pierde peso reduce su tasa metabólica y prepara la recuperación del peso. El análisis InBody sigue lo que está cambiando realmente."
+        },
+        "p3": {
+          "title": "Protegemos el Músculo",
+          "description": "Esto es lo más importante que hacemos y lo que los programas de pérdida rápida descuidan con más frecuencia. La proteína adecuada, el entrenamiento de fuerza y un ritmo de pérdida apropiado están integrados en el protocolo desde el principio, porque la masa magra es lo que sostiene el resultado."
+        },
+        "p4": {
+          "title": "Planificamos lo que Viene Después",
+          "description": "La recuperación del peso tras suspender un GLP-1 está bien documentada. Es una consecuencia predecible de dejar un medicamento sin haber corregido la disfunción metabólica de fondo. Nuestro objetivo es tratar el factor causal durante el tratamiento para que haya algo que sostenga el resultado después."
+        },
+        "p5": {
+          "title": "Lo Dirige un Médico",
+          "description": "El Dr. Adonis revisa su historia, solicita sus pruebas, las interpreta y dirige su protocolo."
+        }
+      }
+    },
+    "signs": {
+      "tag": "REVISIÓN DE SÍNTOMAS",
+      "title": "Señales de que Esto Podría Ayudarle",
+      "subtitle": "Estos son los patrones que con más frecuencia resultan tener algo medible detrás.",
+      "list": {
+        "s1": "Peso que no se mueve a pesar de un esfuerzo genuino y constante",
+        "s2": "Perder peso y recuperarlo una y otra vez",
+        "s3": "Aumento de peso que comenzó sin un cambio en la dieta o la actividad",
+        "s4": "Peso que se acumula específicamente en la zona media",
+        "s5": "Hambre persistente, o sensación de insatisfacción después de comer",
+        "s6": "Antojos intensos de carbohidratos y azúcar",
+        "s7": "Fatiga después de las comidas",
+        "s8": "Aumento de peso que comenzó en la perimenopausia, la menopausia o a los cuarenta y tantos",
+        "s9": "Prediabetes, glucosa en ayunas elevada o antecedentes familiares de diabetes",
+        "s10": "Presión arterial o colesterol elevados junto con el peso",
+        "s11": "Fatiga, intolerancia al frío y aumento de peso a la vez, lo que sugiere tiroides",
+        "s12": "Medicación previa para bajar de peso que dejó de funcionar o que nunca se le explicó",
+        "s13": "Ronquidos, sueño no reparador o despertarse con dolor de cabeza"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — y para Quién No",
+      "subtitle": "La terapia con GLP-1 tiene contraindicaciones reales, y algunas situaciones requieren un tipo de atención completamente distinto.",
+      "fitTitle": "Encaja bien si usted:",
+      "unfitTitle": "No es lo indicado si usted:",
+      "fit": {
+        "c1": "Ha tenido dificultades con el peso a pesar de un esfuerzo genuino",
+        "c2": "Ha recuperado el peso después de una pérdida previa exitosa",
+        "c3": "Tiene prediabetes, resistencia a la insulina o síndrome metabólico",
+        "c4": "Sospecha un componente tiroideo u hormonal",
+        "c5": "Quiere pruebas antes de la medicación y no en lugar de ella",
+        "c6": "Está dispuesto a entrenar y comer de una forma que proteja el músculo"
+      },
+      "unfit": {
+        "n1": "Tiene antecedentes de un trastorno alimentario. No querríamos que este programa interactúe mal con eso, y una atención especializada es más apropiada.",
+        "n2": "Tiene antecedentes personales o familiares de carcinoma medular de tiroides o MEN2. Esto contraindica la terapia con GLP-1.",
+        "n3": "Está embarazada, amamantando o planea un embarazo a corto plazo",
+        "n4": "Tiene antecedentes de pancreatitis o enfermedad activa de la vesícula biliar. Requiere evaluación individual.",
+        "n5": "Quiere una receta sin pruebas ni seguimiento",
+        "n6": "Quiere una pérdida rápida sin importar qué se pierde. La pérdida de músculo es la forma en que la gente termina más pesada dos años después."
+      }
+    },
+    "steps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde su historia de peso hasta la planificación del mantenimiento, así es su atención.",
+      "list": {
+        "s1": {
+          "title": "Consulta",
+          "description": "Su historia de peso y cada intento anterior. Qué funcionó temporalmente y qué ocurrió después es diagnósticamente útil."
+        },
+        "s2": {
+          "title": "Pruebas",
+          "description": "Panel metabólico, tiroideo y hormonal más composición corporal. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "s3": {
+          "title": "Interpretación",
+          "description": "El Dr. Adonis identifica qué mecanismos están impulsando la resistencia."
+        },
+        "s4": {
+          "title": "Consulta de Resultados",
+          "description": "Hallazgos explicados, con un plan que aborda tanto el objetivo inmediato como la disfunción de fondo."
+        },
+        "s5": {
+          "title": "Comienza el Tratamiento",
+          "description": "Terapia con receta cuando sea apropiada, junto con la corrección de los factores tiroideos, hormonales y metabólicos y un plan de nutrición y entrenamiento."
+        },
+        "s6": {
+          "title": "Seguimiento",
+          "description": "Composición corporal monitorizada para saber que está perdiendo grasa y no músculo, con la dosis y el protocolo ajustados según sea necesario."
+        },
+        "s7": {
+          "title": "Pruebas de Seguimiento Cada Seis Meses",
+          "description": "Marcadores metabólicos revisados para confirmar que el panorama de fondo está mejorando y no solo la báscula."
+        },
+        "s8": {
+          "title": "Planificación del Mantenimiento",
+          "description": "Se habla desde el principio, no se plantea al final."
+        }
+      },
+      "note": "La mayoría de los pacientes reporta un cambio significativo en 90 días."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención",
+      "subtitle": "Un modelo de pago directo, completo y transparente, sin facturas sorpresa.",
+      "list": {
+        "i1": {
+          "title": "Consulta Inicial Completa",
+          "description": "Historia de peso, intentos previos y qué ocurrió, dieta y actividad actuales, medicamentos, sueño, estrés y antecedentes médicos y familiares."
+        },
+        "i2": {
+          "title": "Panel Metabólico Completo",
+          "description": "Glucosa en ayunas, insulina en ayunas, HbA1c, lípidos, función tiroidea completa, hormonas sexuales y suprarrenales, marcadores inflamatorios, vitamina D y nutrientes, y función hepática y renal."
+        },
+        "i3": {
+          "title": "Análisis de Composición Corporal",
+          "description": "Evaluación InBody que establece su masa magra y su grasa corporal de partida, para poder seguir lo que está cambiando realmente."
+        },
+        "i4": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "description": "Qué está impulsando la resistencia y el plan para cada factor."
+        },
+        "i5": {
+          "title": "Terapia con Receta Cuando Es Clínicamente Apropiada",
+          "description": "Recetamos semaglutida y tirzepatida, los dos medicamentos con receptor GLP-1 con los datos más sólidos en manejo de peso. Cuál recibe usted, si es que recibe alguno, lo deciden sus pruebas, su historia y sus contraindicaciones. Ninguno se receta por defecto."
+        },
+        "i6": {
+          "title": "Corrección de los Factores de Fondo",
+          "description": "Tratamiento tiroideo, optimización hormonal, sensibilización a la insulina, reducción inflamatoria e intervención sobre el sueño según indiquen sus hallazgos."
+        },
+        "i7": {
+          "title": "Pautas de Nutrición y Entrenamiento",
+          "description": "Objetivos de proteína y orientación de entrenamiento de fuerza diseñados para proteger la masa magra durante todo el proceso."
+        },
+        "i8": {
+          "title": "Pruebas de Laboratorio de Seguimiento Cada Seis Meses",
+          "description": "Con la composición corporal seguida en paralelo."
+        },
+        "i9": {
+          "title": "Acceso Directo a la Consulta",
+          "description": "Llame o envíe un mensaje de texto a la clínica al (305) 290-4691 en cualquier momento y comuníquese directamente con nuestro personal."
+        },
+        "i10": {
+          "title": "Laboratorios y Consultas Incluidos",
+          "description": "Esta es una consulta de pago directo. No se proporcionan superbills."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POSIBLES",
+      "title": "Beneficios de una Pérdida de Peso Dirigida por un Médico",
+      "subtitle": "La respuesta varía según su panorama metabólico, su respuesta a la medicación y la adherencia.",
+      "list": {
+        "b1": {
+          "title": "Pérdida de Grasa Sostenible",
+          "description": "Con la masa magra protegida, que es lo que hace que se mantenga."
+        },
+        "b2": {
+          "title": "Mejores Marcadores Metabólicos",
+          "description": "La insulina en ayunas, la HbA1c y los lípidos con frecuencia mejoran junto con el peso, y a menudo antes que él."
+        },
+        "b3": {
+          "title": "Corrección Tiroidea y Hormonal",
+          "description": "Con efectos que van mucho más allá del peso: energía, ánimo, sueño y cognición."
+        },
+        "b4": {
+          "title": "Menor Riesgo Cardiovascular y de Diabetes",
+          "description": "El sentido clínico de todo el ejercicio."
+        },
+        "b5": {
+          "title": "Más Energía",
+          "description": "A medida que se estabiliza la insulina y se alivian los bajones después de comer."
+        },
+        "b6": {
+          "title": "Regulación del Apetito Restaurada",
+          "description": "Tanto por la medicación como por corregir la fisiología que impulsa el hambre."
+        },
+        "b7": {
+          "title": "Mejor Sueño y Confort Articular",
+          "description": "Efectos secundarios fiables de la pérdida de grasa."
+        },
+        "b8": {
+          "title": "Un Plan para Después",
+          "description": "Porque se trataron los factores de fondo en lugar de solo anularlos."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Un Camino Poco Habitual Hacia la Medicina del Peso",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano en cirugía hipofisaria</strong>, completando su formación de posgrado y su fellowship en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida. La hipófisis gobierna la producción tiroidea, suprarrenal y de hormonas sexuales, que en conjunto determinan buena parte de cómo un cuerpo almacena y libera energía.",
+      "p2": "Ese es un camino poco habitual hacia la medicina del peso, y es la razón por la que lo primero que ocurre aquí es un panel y no una receta. Está certificado por el Institute for Functional Medicine y por la American Academy of Anti-Aging Medicine, ejerce en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Medicina Funcional y Regenerativa",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "Fellowship en Neurocirugía, USF",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "Certificado por A4M",
+        "campus": "Campus Médico UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "Excelente experiencia en esta clínica. El personal es muy profesional y amable, y el equipo médico brinda una atención de primera clase. Sin duda, un servicio médico de calidad que recomiendo totalmente.",
+      "author": "— Ana G.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no son garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre las pruebas, la medicación, los efectos secundarios y qué ocurre después.",
+      "list": {
+        "f1": {
+          "q": "¿Tengo que tomar medicación?",
+          "a": "No. La medicación se receta cuando es clínicamente apropiada, y a algunos pacientes les va bien una vez que se corrige un problema tiroideo, una resistencia a la insulina o una deficiencia hormonal. Las pruebas determinan qué necesita realmente."
+        },
+        "f2": {
+          "q": "¿Recuperaré el peso si dejo la medicación?",
+          "a": "La recuperación tras suspenderla es común y está bien documentada, en particular cuando no se abordó nada de fondo. Precisamente por eso tratamos los factores metabólicos durante el tratamiento en lugar de depender solo del medicamento."
+        },
+        "f3": {
+          "q": "¿Qué medicación me recetarán?",
+          "a": "Semaglutida o tirzepatida, si alguna es apropiada para usted. Esa decisión se basa en sus pruebas metabólicas, su historia médica, sus contraindicaciones y cómo responde. Algunos pacientes no necesitan medicación en absoluto una vez que se corrige un problema tiroideo o de insulina."
+        },
+        "f4": {
+          "q": "¿Y las versiones compuestas (compounded)?",
+          "a": "La situación regulatoria de la semaglutida y la tirzepatida compuestas cambió sustancialmente después de que la FDA declarara resueltas ambas escaseces, y la elaboración a gran escala de estos medicamentos ya no está permitida como lo estuvo durante el período de escasez. Le diremos exactamente qué se le está recetando antes de comenzar."
+        },
+        "f5": {
+          "q": "¿Cuáles son los efectos secundarios?",
+          "a": "La semaglutida y la tirzepatida causan con frecuencia náuseas, estreñimiento y reducción del apetito, en particular durante los aumentos de dosis. Riesgos menos comunes pero más graves incluyen la pancreatitis y la enfermedad de la vesícula biliar. La pérdida de masa muscular magra es una preocupación real con la pérdida rápida, y por eso seguimos la composición corporal y no solo el peso."
+        },
+        "f6": {
+          "q": "¿Con qué rapidez perderé peso?",
+          "a": "Una pérdida gradual y sostenida preserva más masa magra que una pérdida rápida, y la masa magra es lo que determina si el resultado se mantiene. Buscamos un ritmo que la proteja."
+        },
+        "f7": {
+          "q": "¿Por qué miden la insulina y no solo la glucosa?",
+          "a": "Porque la insulina sube años antes que la glucosa. Una glucosa en ayunas normal con una insulina en ayunas alta es un hallazgo muy común y explica buena parte de una resistencia al peso que de otro modo parece inexplicable."
+        },
+        "f8": {
+          "q": "¿Se puede manejar por telemedicina?",
+          "a": "Sí, para pacientes ubicados en Florida. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp, y el análisis de composición corporal InBody se hace en la clínica."
+        },
+        "f9": {
+          "q": "¿Aceptan seguro?",
+          "a": "No. Esta es una consulta de pago directo y no proporcionamos superbills. Sus laboratorios y consultas están incluidos en su programa."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Descubra Qué Se Interpone",
+      "lead": "Si el esfuerzo no ha sido el problema, más esfuerzo no es la respuesta. Un panel metabólico le dirá qué está ocurriendo realmente.",
+      "primary": "Solicite una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*El tratamiento del manejo del peso requiere evaluación médica y no es apropiado para todos los pacientes. Los medicamentos se recetan solo después de que el médico revise su historia, sus pruebas y sus contraindicaciones."
+    },
+    "seo": {
+      "title": "Pérdida de Peso Médica en Miami | Atención Metabólica Dirigida por un Médico — Dr. Adonis Maiquez, MD",
+      "description": "Pérdida de peso médica dirigida por un médico en Miami. Evaluamos las razones metabólicas, tiroideas y hormonales por las que el peso no baja, y las tratamos. Telemedicina en Florida."
+    }
   }
 }
