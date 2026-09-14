@@ -1656,5 +1656,315 @@
       "title": "Tratamiento de Enfermedades Autoinmunes en Miami | Atención de Causa Raíz — Dr. Adonis Maiquez, MD",
       "description": "Medicina funcional para enfermedades autoinmunes en Miami. Investigamos los desencadenantes que impulsan la actividad inmunitaria en lugar de solo suprimir los síntomas. Telemedicina en Florida."
     }
+  },
+  "hashimotosPage": {
+    "badge": "ATENCIÓN TIROIDEA AUTOINMUNE",
+    "title": "Tratamiento de Hashimoto en Miami, FL",
+    "lead": "A la mayoría de los pacientes con Hashimoto se les entrega una receta tiroidea y se les dice que no hay nada más que hacer. Eso repone la hormona. No hace nada respecto al sistema inmunitario que está destruyendo la glándula.",
+    "ctaConsult": "Solicite una Consulta",
+    "ctaCall": "Llame al (305) 290-4691",
+    "pills": {
+      "antibodies": "Anticuerpos Evaluados, No Solo TSH",
+      "gut": "Intestino Tratado Junto con la Tiroides",
+      "telehealth": "Telemedicina en Florida Disponible"
+    },
+    "intro": {
+      "tag": "EL MECANISMO",
+      "title": "Qué Es el Hashimoto",
+      "lead": "La tiroiditis de Hashimoto es una condición autoinmune en la que el sistema inmunitario produce anticuerpos contra el tejido tiroideo. Con el tiempo, ese ataque daña la glándula y la producción de hormona disminuye.",
+      "p2": "Es la causa más común de hipotiroidismo en los Estados Unidos y afecta de forma desproporcionada a las mujeres.",
+      "callout": "La tiroides es aquí el objetivo. No es el origen.",
+      "gutPre": "El aumento de la permeabilidad intestinal está implicado repetidamente en la activación autoinmune, y los pacientes con Hashimoto con frecuencia tienen síntomas digestivos que nadie conectó con su tiroides. Consulte nuestra",
+      "gutLink": "página de Salud Intestinal",
+      "features": {
+        "antibodies": {
+          "title": "Los Anticuerpos Se Pueden Medir",
+          "desc": "Los anticuerpos TPO y antitiroglobulina establecen que esto es autoinmune y cambian el plan por completo."
+        },
+        "common": {
+          "title": "La Causa Más Común de Hipotiroidismo",
+          "desc": "La principal causa en los Estados Unidos, y una que afecta de forma desproporcionada a las mujeres."
+        },
+        "gut": {
+          "title": "El 70% del Tejido Inmunitario Está en el Intestino",
+          "desc": "Por eso la reparación intestinal va junto a la reposición hormonal y no después de ella."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "LO QUE SE PASA POR ALTO",
+      "title": "Tres Patrones que Vale la Pena Conocer",
+      "subtitle": "Cada uno de estos se pasa por alto habitualmente, y cada uno cambia lo que debería ocurrir después.",
+      "list": {
+        "d1": {
+          "name": "Los Anticuerpos Llegan Primero",
+          "category": "La Brecha Diagnóstica",
+          "description": "Los anticuerpos aparecen con frecuencia años, a veces una década, antes de que los niveles de hormona tiroidea bajen lo suficiente como para provocar un diagnóstico. Durante esa ventana los pacientes se sienten mal, se hacen análisis y les dicen que su tiroides está bien, porque nadie pidió anticuerpos."
+        },
+        "d2": {
+          "name": "El Patrón de Oscilación",
+          "category": "A Menudo Mal Interpretado",
+          "description": "A medida que la glándula se daña, la hormona almacenada se libera en ráfagas, de modo que los pacientes alternan entre períodos con sensación de hipertiroidismo (ansiedad y taquicardia) y períodos con sensación de hipotiroidismo (agotamiento). Esa inestabilidad se confunde a menudo con ansiedad o un trastorno del ánimo."
+        },
+        "d3": {
+          "name": "Genética, Desencadenante y Permeabilidad",
+          "category": "Por Qué Empezó",
+          "description": "Las condiciones autoinmunes no aparecen de la nada. La investigación apunta de forma consistente a una combinación de susceptibilidad genética, un desencadenante ambiental y un aumento de la permeabilidad intestinal. No puede cambiar su genética. Los otros dos sí se pueden abordar."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "Aquí la reposición hormonal es parte del plan y no todo el plan.",
+      "list": {
+        "p1": {
+          "title": "Evaluamos Anticuerpos, No Solo Hormona",
+          "description": "Los anticuerpos antiperoxidasa tiroidea y antitiroglobulina establecen que esto es autoinmune. Sin ellos, se está tratando una tiroides lenta sin saber por qué se está volviendo lenta, y el plan de tratamiento resulta completamente distinto."
+        },
+        "p2": {
+          "title": "Buscamos Qué lo Desencadenó",
+          "description": "Los factores comunes incluyen permeabilidad intestinal y disbiosis, infección crónica, estrés importante, deficiencias nutricionales en particular de selenio, vitamina D, zinc y hierro, exposición a toxinas ambientales y metales pesados y, en algunos pacientes, el gluten. Investigamos en lugar de suponer, porque el desencadenante varía según la persona."
+        },
+        "p3": {
+          "title": "Tratamos el Intestino Junto con la Tiroides",
+          "description": "Alrededor del setenta por ciento del tejido inmunitario se encuentra en el revestimiento intestinal. El aumento de la permeabilidad intestinal está implicado repetidamente en la activación autoinmune, y los pacientes con Hashimoto con frecuencia tienen síntomas digestivos que nadie conectó con su tiroides."
+        },
+        "p4": {
+          "title": "Reponemos Hormona Cuando Hace Falta",
+          "description": "Nada de lo anterior significa rechazar la medicación. Si su glándula no produce lo suficiente, necesita reposición, y puede necesitarla de forma permanente. Lo que cambia es que la reposición pasa a ser una parte del plan en lugar de todo el plan."
+        },
+        "p5": {
+          "title": "Vigilamos la Compañía",
+          "description": "Las condiciones autoinmunes se agrupan. Los pacientes con Hashimoto tienen tasas elevadas de enfermedad celíaca, anemia perniciosa y otras condiciones autoinmunes, y hacemos cribado en consecuencia en lugar de esperar a que el segundo diagnóstico se anuncie solo."
+        }
+      }
+    },
+    "signs": {
+      "tag": "REVISIÓN DE SÍNTOMAS",
+      "title": "Señales de que Esto Podría Ayudarle",
+      "subtitle": "Estos son los patrones que con más frecuencia llevan a los pacientes a la atención tiroidea de causa raíz.",
+      "note": "Ese último punto merece nombrarse directamente. Tener anticuerpos elevados con niveles hormonales normales es un hallazgo tratable, no un período de espera.",
+      "list": {
+        "s1": "Diagnóstico de hipotiroidismo sin que nunca le hayan evaluado los anticuerpos",
+        "s2": "Hashimoto conocido, con medicación y aún con síntomas",
+        "s3": "Niveles tiroideos que fluctúan y obligan a cambios de dosis repetidos",
+        "s4": "Períodos alternantes de ansiedad y agotamiento",
+        "s5": "Fatiga que la medicación mejoró pero no resolvió",
+        "s6": "Aumento de peso que persiste a pesar de niveles tiroideos tratados",
+        "s7": "Niebla mental, mala memoria, dificultad para concentrarse",
+        "s8": "Sensación de plenitud en el cuello, presión o dificultad para tragar",
+        "s9": "Dolor articular, dolores musculares y rigidez",
+        "s10": "Síntomas digestivos junto con los síntomas tiroideos",
+        "s11": "Caída del cabello que continúa a pesar del tratamiento",
+        "s12": "Otro diagnóstico autoinmune, o antecedentes familiares marcados",
+        "s13": "Le han dicho que sus anticuerpos están elevados y que simplemente hay que vigilar"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — y para Quién No",
+      "subtitle": "Algunas presentaciones necesitan evaluación quirúrgica o endocrina primero, y se lo diremos con claridad.",
+      "fitTitle": "Encaja bien si usted:",
+      "unfitTitle": "Puede no ser lo indicado si usted:",
+      "scopeNote": "El Hashimoto es una condición autoinmune crónica. Se maneja, a veces muy bien, pero no se cura, y el tejido tiroideo ya destruido no se regenera. Los niveles de anticuerpos a menudo mejoran con el tratamiento; no podemos prometer que se normalicen.",
+      "fit": {
+        "c1": "Tiene Hashimoto y quiere algo más que reposición hormonal",
+        "c2": "Tiene anticuerpos elevados y le dijeron solo que vigilara",
+        "c3": "Está con medicación y sigue teniendo síntomas",
+        "c4": "Tiene síntomas digestivos junto con los síntomas tiroideos",
+        "c5": "Tiene otra condición autoinmune o antecedentes familiares marcados",
+        "c6": "Está dispuesto a hacer cambios dietéticos reales: esto no es opcional en la atención autoinmune"
+      },
+      "unfit": {
+        "n1": "Quiere solo un ajuste de medicación, sin cambios de dieta ni de estilo de vida",
+        "n2": "Tiene un nódulo o una masa tiroidea que requiere biopsia o evaluación quirúrgica",
+        "n3": "Le han extirpado la tiroides. El manejo hormonal sigue siendo apropiado, pero el tratamiento dirigido al sistema inmunitario para proteger la glándula ya no aplica de la misma manera.",
+        "n4": "Espera que los anticuerpos se normalicen en un plazo fijo. A menudo mejoran. No podemos prometerlo.",
+        "n5": "Busca una cura. El Hashimoto se maneja, a veces muy bien. No se cura."
+      }
+    },
+    "steps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde la primera consulta hasta las pruebas de seguimiento confirmadas, así es su atención.",
+      "list": {
+        "s1": {
+          "title": "Consulta",
+          "description": "Su historia completa, incluido cuándo dejó de sentirse bien por primera vez y no cuándo fue diagnosticado. Esas fechas suelen estar separadas por años y esa diferencia es informativa."
+        },
+        "s2": {
+          "title": "Pruebas",
+          "description": "Función tiroidea, anticuerpos, nutrientes, inflamación e investigación de desencadenantes. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "s3": {
+          "title": "Interpretación",
+          "description": "El Dr. Adonis evalúa cuánta función tiroidea queda, qué tan activo está el ataque inmunitario y qué parece estar impulsándolo."
+        },
+        "s4": {
+          "title": "Consulta de Resultados",
+          "description": "Sus niveles de anticuerpos explicados, los desencadenantes probables identificados y un plan que trata tanto el déficit hormonal como la actividad inmunitaria."
+        },
+        "s5": {
+          "title": "Comienza el Tratamiento",
+          "description": "Reposición hormonal cuando esté indicada, junto con reparación intestinal, corrección nutricional y cambios dietéticos dirigidos a la inflamación."
+        },
+        "s6": {
+          "title": "Pruebas de Seguimiento Cada Seis Meses",
+          "description": "Se revisan tanto los niveles tiroideos como los anticuerpos. Unos anticuerpos en descenso indican que la actividad inmunitaria se está calmando."
+        }
+      },
+      "note": "La mayoría de los pacientes reporta un cambio significativo en 90 días. Los niveles de anticuerpos se mueven más lentamente que los síntomas y se siguen a más largo plazo."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención",
+      "subtitle": "Un modelo de pago directo, completo y transparente, sin facturas sorpresa.",
+      "list": {
+        "i1": {
+          "title": "Consulta Inicial Completa",
+          "description": "Historia y cronología de síntomas, tratamiento tiroideo previo, historia digestiva, antecedentes de estrés y enfermedades, exposiciones ambientales y antecedentes familiares autoinmunes."
+        },
+        "i2": {
+          "title": "Panel Tiroideo y Autoinmune Completo",
+          "description": "TSH, T4 libre, T3 libre, T3 reversa, anticuerpos antiperoxidasa tiroidea y antitiroglobulina, ferritina y estudios de hierro, vitamina D, B12, selenio, zinc, marcadores inflamatorios, cribado de celiaquía y marcadores autoinmunes adicionales cuando estén indicados."
+        },
+        "i3": {
+          "title": "Evaluación del Intestino y los Desencadenantes",
+          "description": "Pruebas de permeabilidad intestinal, disbiosis, sensibilidades alimentarias y exposición a toxinas o metales pesados cuando su historia lo sugiera."
+        },
+        "i4": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "description": "Qué significan sus anticuerpos, qué parece estar impulsando la actividad inmunitaria y en qué secuencia lo abordaremos."
+        },
+        "i5": {
+          "title": "Su Protocolo de Tratamiento",
+          "description": "Reposición de hormona tiroidea cuando esté indicada, apoyo inmunitario y antiinflamatorio, reparación intestinal, corrección nutricional dirigida y un plan de nutrición antiinflamatoria construido para sus hallazgos."
+        },
+        "i6": {
+          "title": "Pruebas de Laboratorio de Seguimiento Cada Seis Meses",
+          "description": "Siguiendo tanto la función tiroidea como los niveles de anticuerpos."
+        },
+        "i7": {
+          "title": "Acceso Directo a la Consulta",
+          "description": "Llame o envíe un mensaje de texto a la clínica al (305) 290-4691 en cualquier momento y comuníquese directamente con nuestro personal."
+        },
+        "i8": {
+          "title": "Laboratorios y Consultas Incluidos",
+          "description": "Esta es una consulta de pago directo. No se proporcionan superbills."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POSIBLES",
+      "title": "Beneficios de la Atención de Causa Raíz para el Hashimoto",
+      "subtitle": "La respuesta varía según cuánta función tiroidea quede, cuánto tiempo lleve activa la condición y la adherencia a los cambios de dieta y estilo de vida.",
+      "list": {
+        "b1": {
+          "title": "Niveles de Anticuerpos Reducidos",
+          "description": "Muchos pacientes ven bajar los anticuerpos a medida que se eliminan los desencadenantes y se controla la inflamación. Este es el marcador que la medicina convencional rara vez sigue."
+        },
+        "b2": {
+          "title": "Niveles Tiroideos Más Estables",
+          "description": "Menos oscilaciones, menos cambios de dosis, menos semanas sintiéndose mal antes del siguiente ajuste."
+        },
+        "b3": {
+          "title": "Alivio de Síntomas Más Allá de lo que Dio la Medicación",
+          "description": "En particular la fatiga, la niebla mental y el dolor articular."
+        },
+        "b4": {
+          "title": "Mejor Digestión",
+          "description": "Con frecuencia lo primero que cambia, ya que la reparación intestinal suele comenzar temprano."
+        },
+        "b5": {
+          "title": "Mejor Respuesta a la Medicación Tiroidea",
+          "description": "Corregir el selenio, el hierro, el zinc y la inflamación mejora qué tan bien funciona realmente la reposición."
+        },
+        "b6": {
+          "title": "Menos Inflamación en General",
+          "description": "El dolor articular, los problemas de piel y el malestar general suelen mejorar juntos."
+        },
+        "b7": {
+          "title": "Progresión Más Lenta",
+          "description": "Reducir la actividad inmunitaria busca proteger el tejido tiroideo que aún conserva."
+        },
+        "b8": {
+          "title": "Riesgo Autoinmune Adicional Abordado",
+          "description": "Cribado y apoyo inmunitario en lugar de esperar un segundo diagnóstico."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Por Qué la Cirugía Hipofisaria Informa la Atención Tiroidea",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano</strong>, completando su formación de posgrado y su fellowship en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida, donde realizó cientos de procedimientos hipofisarios.",
+      "p2": "Ese trabajo le dejó una comprensión inusualmente detallada del eje tiroideo y un interés por los pacientes cuyos problemas comenzaron mucho antes de que nada fuera quirúrgico. Está certificado por el Institute for Functional Medicine y por la American Academy of Anti-Aging Medicine, ejerce medicina de causa raíz en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Medicina Funcional y Regenerativa",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "Fellowship en Neurocirugía, USF",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "Certificado por A4M",
+        "campus": "Campus Médico UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "Excelente experiencia en esta clínica. El personal es muy profesional y amable, y el equipo médico brinda una atención de primera clase. Sin duda, un servicio médico de calidad que recomiendo totalmente.",
+      "author": "— Ana G.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no son garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre los anticuerpos, la medicación y qué puede cambiar el tratamiento.",
+      "list": {
+        "f1": {
+          "q": "¿Se puede revertir el Hashimoto?",
+          "a": "El Hashimoto es una condición autoinmune crónica y no la describimos como reversible. Lo que sí puede cambiar es qué tan activo está el ataque inmunitario y qué tan bien se siente usted. Muchos pacientes ven bajar sus niveles de anticuerpos y mejorar sus síntomas de forma sustancial. El tejido tiroideo ya destruido no se regenera, y por eso importa intervenir temprano."
+        },
+        "f2": {
+          "q": "¿Por qué mi médico no evalúa los anticuerpos?",
+          "a": "Porque en la práctica convencional el resultado a menudo no cambiaría el tratamiento. Si el plan es reposición hormonal de todos modos, el resultado de anticuerpos es informativo. En nuestro enfoque cambia el plan por completo, así que lo pedimos."
+        },
+        "f3": {
+          "q": "¿Tengo que dejar el gluten?",
+          "a": "El gluten es un desencadenante común en la enfermedad tiroidea autoinmune y existe una asociación documentada con la enfermedad celíaca. Si importa en su caso concreto es algo que las pruebas y una prueba estructurada pueden establecer. No aplicamos una regla general sin evidencia que la respalde."
+        },
+        "f4": {
+          "q": "¿Seguiré necesitando medicación tiroidea?",
+          "a": "Probablemente, y posiblemente de forma permanente. El tejido tiroideo dañado no vuelve. Lo que el tratamiento de causa raíz busca cambiar es cuánto daño adicional ocurre y qué tan bien se siente usted con su dosis."
+        },
+        "f5": {
+          "q": "Mis anticuerpos están altos pero mis niveles tiroideos son normales. ¿Es un problema?",
+          "a": "Es un hallazgo temprano sobre el que vale la pena actuar. Anticuerpos elevados con niveles hormonales normales significa que el ataque inmunitario está en marcha y que la glándula aún está compensando. Este es el momento más útil para intervenir."
+        },
+        "f6": {
+          "q": "¿Cuánto tardaré en notar una diferencia?",
+          "a": "La mayoría de los pacientes reporta un cambio significativo en 90 días. Los niveles de anticuerpos suelen moverse más lentamente que los síntomas."
+        },
+        "f7": {
+          "q": "¿Se puede manejar por telemedicina?",
+          "a": "Sí, para pacientes ubicados en Florida. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "f8": {
+          "q": "¿Aceptan seguro?",
+          "a": "No. Esta es una consulta de pago directo y no proporcionamos superbills. Sus laboratorios y consultas están incluidos en su programa."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Trate el Sistema Inmunitario, No Solo la Glándula",
+      "lead": "Si tiene Hashimoto y lo único que le han ajustado es la dosis, hay más disponible para usted.",
+      "primary": "Solicite una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*El tratamiento del Hashimoto requiere evaluación médica y no es apropiado para todos los pacientes. El tratamiento se prescribe solo después de que el médico revise su historia y sus resultados de laboratorio."
+    },
+    "seo": {
+      "title": "Tratamiento de Hashimoto en Miami | Atención Tiroidea Autoinmune de Causa Raíz — Dr. Adonis Maiquez, MD",
+      "description": "La tiroiditis de Hashimoto es una condición inmunitaria, no solo tiroidea. Tratamos los anticuerpos y los desencadenantes, no solo la hormona en descenso. Miami y telemedicina en Florida."
+    }
   }
 }

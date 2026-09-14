@@ -1656,5 +1656,315 @@
       "title": "Autoimmune Disease Treatment Miami | Root-Cause Care — Dr. Adonis Maiquez, MD",
       "description": "Functional medicine for autoimmune conditions in Miami. We investigate the triggers driving immune activity rather than only suppressing the symptoms. Florida telehealth available."
     }
+  },
+  "hashimotosPage": {
+    "badge": "AUTOIMMUNE THYROID CARE",
+    "title": "Hashimoto’s Treatment in Miami, FL",
+    "lead": "Most Hashimoto’s patients are handed a thyroid prescription and told there is nothing else to do. That replaces the hormone. It does nothing about the immune system destroying the gland.",
+    "ctaConsult": "Request A Consultation",
+    "ctaCall": "Call (305) 290-4691",
+    "pills": {
+      "antibodies": "Antibodies Tested, Not Just TSH",
+      "gut": "Gut Treated Alongside Thyroid",
+      "telehealth": "Florida Telehealth Available"
+    },
+    "intro": {
+      "tag": "THE MECHANISM",
+      "title": "What Hashimoto’s Is",
+      "lead": "Hashimoto’s thyroiditis is an autoimmune condition in which the immune system produces antibodies against thyroid tissue. Over time, that attack damages the gland and hormone production falls.",
+      "p2": "It is the most common cause of hypothyroidism in the United States, and it disproportionately affects women.",
+      "callout": "The thyroid is the target here. It is not the origin.",
+      "gutPre": "Increased intestinal permeability is repeatedly implicated in autoimmune activation, and Hashimoto’s patients frequently have digestive symptoms nobody connected to their thyroid. See our",
+      "gutLink": "Gut Health page",
+      "features": {
+        "antibodies": {
+          "title": "Antibodies Are Testable",
+          "desc": "TPO and thyroglobulin antibodies establish that this is autoimmune, and change the plan entirely."
+        },
+        "common": {
+          "title": "Most Common Cause Of Hypothyroidism",
+          "desc": "The leading cause in the United States, and one that disproportionately affects women."
+        },
+        "gut": {
+          "title": "70% Of Immune Tissue Is In The Gut",
+          "desc": "Which is why gut repair sits alongside hormone replacement rather than after it."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "WHAT GETS MISSED",
+      "title": "Three Patterns Worth Knowing",
+      "subtitle": "Each of these is routinely overlooked, and each one changes what should happen next.",
+      "list": {
+        "d1": {
+          "name": "Antibodies Come First",
+          "category": "The Diagnostic Gap",
+          "description": "Antibodies frequently appear years, sometimes a decade, before thyroid hormone levels drop far enough to trigger a diagnosis. During that window patients feel unwell, get tested, and are told their thyroid is fine, because nobody ordered antibodies."
+        },
+        "d2": {
+          "name": "The Swing Pattern",
+          "category": "Often Misread",
+          "description": "As the gland is damaged, stored hormone is released in bursts, so patients cycle between hyperthyroid-feeling periods of anxiety and racing heart and hypothyroid-feeling periods of exhaustion. That instability is often misread as anxiety or a mood disorder."
+        },
+        "d3": {
+          "name": "Genetics, Trigger, Permeability",
+          "category": "Why It Started",
+          "description": "Autoimmune conditions do not appear from nowhere. Research consistently points to a combination of genetic susceptibility, an environmental trigger, and increased intestinal permeability. You cannot change your genetics. The other two are addressable."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METHODOLOGY",
+      "title": "Our Approach",
+      "subtitle": "Hormone replacement is part of the plan here rather than the whole of it.",
+      "list": {
+        "p1": {
+          "title": "We Test Antibodies, Not Just Hormone",
+          "description": "Thyroid peroxidase and thyroglobulin antibodies establish that this is autoimmune. Without them, you are treating a slow thyroid without knowing why it is slowing, and the treatment plan looks entirely different as a result."
+        },
+        "p2": {
+          "title": "We Look For What Triggered It",
+          "description": "Common contributors include gut permeability and dysbiosis, chronic infection, significant stress, nutrient deficiencies particularly selenium, vitamin D, zinc, and iron, environmental toxin and heavy metal exposure, and in some patients, gluten. We investigate rather than assume, because the trigger differs by person."
+        },
+        "p3": {
+          "title": "We Treat The Gut Alongside The Thyroid",
+          "description": "Roughly seventy percent of immune tissue sits in the gut lining. Increased intestinal permeability is repeatedly implicated in autoimmune activation, and Hashimoto’s patients frequently have digestive symptoms nobody connected to their thyroid."
+        },
+        "p4": {
+          "title": "We Replace Hormone Where It Is Needed",
+          "description": "None of the above means declining medication. If your gland is not producing enough, you need replacement, and you may need it permanently. What changes is that replacement becomes one part of the plan instead of the whole plan."
+        },
+        "p5": {
+          "title": "We Watch For Company",
+          "description": "Autoimmune conditions cluster. Patients with Hashimoto’s have elevated rates of celiac disease, pernicious anemia, and other autoimmune conditions, and we screen accordingly rather than waiting for the second diagnosis to announce itself."
+        }
+      }
+    },
+    "signs": {
+      "tag": "SYMPTOM CHECK",
+      "title": "Signs This Could Help You",
+      "subtitle": "These are the patterns that most often bring patients to root-cause thyroid care.",
+      "note": "That last one is worth naming directly. Elevated antibodies with normal hormone levels is a treatable finding, not a waiting period.",
+      "list": {
+        "s1": "Diagnosed with hypothyroidism but never tested for antibodies",
+        "s2": "Known Hashimoto’s, on medication, still symptomatic",
+        "s3": "Thyroid levels that fluctuate, requiring repeated dose changes",
+        "s4": "Alternating periods of anxiety and exhaustion",
+        "s5": "Fatigue that medication improved but did not resolve",
+        "s6": "Weight gain that persists despite treated thyroid levels",
+        "s7": "Brain fog, poor recall, difficulty concentrating",
+        "s8": "Neck fullness, pressure, or difficulty swallowing",
+        "s9": "Joint pain, muscle aches, and stiffness",
+        "s10": "Digestive symptoms alongside your thyroid symptoms",
+        "s11": "Hair loss continuing despite treatment",
+        "s12": "Another autoimmune diagnosis, or a strong family history",
+        "s13": "Told your antibodies are elevated and simply to monitor"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUATION",
+      "title": "Who This Is For — And Who It Is Not For",
+      "subtitle": "Some presentations need surgical or endocrine evaluation first, and we will say so directly.",
+      "fitTitle": "This is a strong fit if you:",
+      "unfitTitle": "It may not be right if you:",
+      "scopeNote": "Hashimoto’s is a chronic autoimmune condition. It is managed, sometimes very well, but it is not cured, and thyroid tissue already destroyed does not regenerate. Antibody levels often improve with treatment; we cannot promise that they will normalize.",
+      "fit": {
+        "c1": "Have Hashimoto’s and want more than hormone replacement",
+        "c2": "Have elevated antibodies and were told only to monitor",
+        "c3": "Are on medication and still have symptoms",
+        "c4": "Have digestive symptoms alongside thyroid symptoms",
+        "c5": "Have another autoimmune condition or a strong family history",
+        "c6": "Are willing to make real dietary changes — this is not optional in autoimmune care"
+      },
+      "unfit": {
+        "n1": "Want medication adjustment only, with no dietary or lifestyle change",
+        "n2": "Have a thyroid nodule or mass requiring biopsy or surgical evaluation",
+        "n3": "Have had your thyroid removed. Hormone management is still appropriate, but immune-directed treatment aimed at protecting the gland no longer applies in the same way.",
+        "n4": "Expect antibodies to normalize on a fixed timeline. They often improve. We cannot promise it.",
+        "n5": "Are looking for a cure. Hashimoto’s is managed, sometimes very well. It is not cured."
+      }
+    },
+    "steps": {
+      "tag": "THE PROCESS",
+      "title": "How Treatment Works",
+      "subtitle": "From first consultation to confirmed follow-up testing, here is what your care looks like.",
+      "list": {
+        "s1": {
+          "title": "Consultation",
+          "description": "Your full history, including when you first stopped feeling well rather than when you were diagnosed. Those dates are usually years apart and the gap is informative."
+        },
+        "s2": {
+          "title": "Testing",
+          "description": "Thyroid function, antibodies, nutrients, inflammation, and trigger investigation. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "s3": {
+          "title": "Interpretation",
+          "description": "Dr. Adonis assesses how much thyroid function remains, how active the immune attack is, and what appears to be driving it."
+        },
+        "s4": {
+          "title": "Results Consultation",
+          "description": "Your antibody levels explained, the likely triggers identified, and a plan that treats both the hormone deficit and the immune activity."
+        },
+        "s5": {
+          "title": "Treatment Begins",
+          "description": "Hormone replacement where indicated, together with gut repair, nutrient correction, and dietary changes targeting inflammation."
+        },
+        "s6": {
+          "title": "Follow-Up Testing Every Six Months",
+          "description": "Thyroid levels and antibodies both rechecked. Falling antibodies indicate the immune activity is calming."
+        }
+      },
+      "note": "Most patients report meaningful change within 90 days. Antibody levels move more slowly than symptoms and are tracked over the longer term."
+    },
+    "included": {
+      "tag": "YOUR PROGRAM",
+      "title": "What’s Included in Your Care",
+      "subtitle": "A comprehensive, transparent cash-pay model with zero surprise bills.",
+      "list": {
+        "i1": {
+          "title": "Initial Comprehensive Consultation",
+          "description": "Symptom history and timeline, prior thyroid treatment, digestive history, stress and illness history, environmental exposures, and family autoimmune history."
+        },
+        "i2": {
+          "title": "Complete Thyroid & Autoimmune Panel",
+          "description": "TSH, free T4, free T3, reverse T3, thyroid peroxidase and thyroglobulin antibodies, ferritin and iron studies, vitamin D, B12, selenium, zinc, inflammatory markers, celiac screening, and additional autoimmune markers where indicated."
+        },
+        "i3": {
+          "title": "Gut & Trigger Assessment",
+          "description": "Testing for intestinal permeability, dysbiosis, food sensitivities, and toxin or heavy metal exposure where your history suggests it."
+        },
+        "i4": {
+          "title": "Results Consultation with Dr. Adonis",
+          "description": "What your antibodies mean, what appears to be driving the immune activity, and the sequence in which we address it."
+        },
+        "i5": {
+          "title": "Your Treatment Protocol",
+          "description": "Thyroid hormone replacement where indicated, immune and inflammatory support, gut repair, targeted nutrient correction, and an anti-inflammatory nutrition plan built for your findings."
+        },
+        "i6": {
+          "title": "Follow-Up Lab Testing Every Six Months",
+          "description": "Tracking both thyroid function and antibody levels."
+        },
+        "i7": {
+          "title": "Direct Access To The Practice",
+          "description": "Call or text the clinic at (305) 290-4691 at any time and message directly with our staff."
+        },
+        "i8": {
+          "title": "Labs And Consultations Included",
+          "description": "This is a cash-pay practice. Superbills are not provided."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "POTENTIAL OUTCOMES",
+      "title": "Benefits of Root-Cause Hashimoto’s Care",
+      "subtitle": "Response varies with how much thyroid function remains, how long the condition has been active, and adherence to dietary and lifestyle changes.",
+      "list": {
+        "b1": {
+          "title": "Reduced Antibody Levels",
+          "description": "Many patients see antibodies fall as triggers are removed and inflammation is controlled. This is the marker conventional care rarely tracks."
+        },
+        "b2": {
+          "title": "More Stable Thyroid Levels",
+          "description": "Fewer swings, fewer dose changes, fewer weeks of feeling wrong before the next adjustment."
+        },
+        "b3": {
+          "title": "Symptom Relief Beyond Medication Alone",
+          "description": "Particularly fatigue, brain fog, and joint pain."
+        },
+        "b4": {
+          "title": "Improved Digestion",
+          "description": "Frequently the first thing to change, since gut repair usually starts early."
+        },
+        "b5": {
+          "title": "Better Response To Thyroid Medication",
+          "description": "Correcting selenium, iron, zinc, and inflammation improves how well replacement actually works."
+        },
+        "b6": {
+          "title": "Reduced Inflammation Overall",
+          "description": "Joint pain, skin problems, and general achiness commonly improve together."
+        },
+        "b7": {
+          "title": "Slower Progression",
+          "description": "Reducing immune activity aims to protect the thyroid tissue you still have."
+        },
+        "b8": {
+          "title": "Additional Autoimmune Risk Addressed",
+          "description": "Screening and immune support rather than waiting for a second diagnosis."
+        }
+      }
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "Why Pituitary Surgery Informs Thyroid Care",
+      "p1": "Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, where he performed hundreds of pituitary procedures.",
+      "p2": "That work left him with an unusually detailed understanding of the thyroid axis, and with an interest in the patients whose problems began long before anything was surgical. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced root-cause medicine in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Functional &amp; Regenerative Medicine",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "USF Neurosurgery Fellowship",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "A4M Board Certified",
+        "campus": "UM Medical Campus &amp; Florida Telehealth"
+      }
+    },
+    "testimonial": {
+      "quote": "Excellent experience in this clinic. The staff is very professional and friendly, and the medical team provides first-class care. Without a doubt, a quality medical service that I totally recommend.",
+      "author": "— Ana G.",
+      "role": "Verified Clinic Patient",
+      "disclaimer": "*Individual results vary. Patient experiences described here are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about antibodies, medication, and what treatment can change.",
+      "list": {
+        "f1": {
+          "q": "Can Hashimoto’s be reversed?",
+          "a": "Hashimoto’s is a chronic autoimmune condition and we do not describe it as reversible. What can change is how active the immune attack is and how well you feel. Many patients see antibody levels fall and symptoms improve substantially. Thyroid tissue already destroyed does not regenerate, which is why early intervention matters."
+        },
+        "f2": {
+          "q": "Why does my doctor not test antibodies?",
+          "a": "Because in conventional practice the result often would not change the treatment. If the plan is hormone replacement either way, the antibody result is informational. In our approach it changes the plan entirely, so we order it."
+        },
+        "f3": {
+          "q": "Do I have to go gluten-free?",
+          "a": "Gluten is a common trigger in autoimmune thyroid disease and there is a documented association with celiac disease. Whether it matters for you specifically is something testing and a structured trial can establish. We do not apply a blanket rule without evidence for it."
+        },
+        "f4": {
+          "q": "Will I still need thyroid medication?",
+          "a": "Probably, and possibly permanently. Damaged thyroid tissue does not come back. What root-cause treatment aims to change is how much further damage occurs and how well you feel on your dose."
+        },
+        "f5": {
+          "q": "My antibodies are high but my thyroid levels are normal. Is that a problem?",
+          "a": "It is an early finding worth acting on. Elevated antibodies with normal hormone levels means the immune attack is underway and the gland is still compensating. This is the most useful moment to intervene."
+        },
+        "f6": {
+          "q": "How long until I feel different?",
+          "a": "Most patients report meaningful change within 90 days. Antibody levels typically move more slowly than symptoms."
+        },
+        "f7": {
+          "q": "Can this be managed by telehealth?",
+          "a": "Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "f8": {
+          "q": "Do you take insurance?",
+          "a": "No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program."
+        }
+      }
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "Treat The Immune System, Not Just The Gland",
+      "lead": "If you have Hashimoto’s and the only thing anyone has adjusted is your dose, there is more available to you.",
+      "primary": "Request A Consultation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Hashimoto’s treatment requires medical evaluation and is not appropriate for every patient. Treatment is prescribed only after physician review of your history and laboratory results."
+    },
+    "seo": {
+      "title": "Hashimoto’s Treatment Miami | Root-Cause Autoimmune Thyroid Care — Dr. Adonis Maiquez, MD",
+      "description": "Hashimoto’s is an immune condition, not just a thyroid one. We treat the antibodies and the triggers, not only the falling hormone. Miami and Florida telehealth."
+    }
   }
 }
