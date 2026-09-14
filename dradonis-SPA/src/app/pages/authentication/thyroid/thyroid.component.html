@@ -6,38 +6,35 @@
   <section class="service-hero">
     <div class="hero-badge">
       <mat-icon>health_and_safety</mat-icon>
-      <span>THYROID & ENDOCRINE CARE</span>
+      <span>{{ i18n + '.badge' | translate }}</span>
     </div>
 
-    <h1>Thyroid Treatment in Miami, FL</h1>
-    <p class="hero-lead">
-      Your thyroid is not one number. It is a chain that can break in four different places,
-      and three of them are invisible on the test most people are given.
-    </p>
+    <h1>{{ i18n + '.title' | translate }}</h1>
+    <p class="hero-lead">{{ i18n + '.lead' | translate }}</p>
 
     <div class="hero-cta-group">
       <button type="button" class="btn-primary-glow" (click)="openAppointment()">
         <mat-icon>calendar_today</mat-icon>
-        <span>Request A Consultation</span>
+        <span>{{ i18n + '.ctaConsult' | translate }}</span>
       </button>
       <a href="tel:+13052904691" class="btn-secondary-phone">
         <mat-icon>phone</mat-icon>
-        <span>Call (305) 290-4691</span>
+        <span>{{ i18n + '.ctaCall' | translate }}</span>
       </a>
     </div>
 
     <div class="hero-pill-bar">
       <div class="pill-item">
         <mat-icon>biotech</mat-icon>
-        <span>Full Panel, Not Just TSH</span>
+        <span>{{ i18n + '.pills.panel' | translate }}</span>
       </div>
       <div class="pill-item">
         <mat-icon>health_and_safety</mat-icon>
-        <span>Antibodies On Every Patient</span>
+        <span>{{ i18n + '.pills.antibodies' | translate }}</span>
       </div>
       <div class="pill-item">
         <mat-icon>videocam</mat-icon>
-        <span>Florida Telehealth Available</span>
+        <span>{{ i18n + '.pills.telehealth' | translate }}</span>
       </div>
     </div>
   </section>
@@ -49,20 +46,16 @@
     <div class="section-card intro-card">
       <div class="intro-grid">
         <div class="intro-text">
-          <span class="section-tag">THE SCIENCE</span>
-          <h2>What Thyroid Dysfunction Is</h2>
-          <p class="lead-paragraph">
-            The thyroid produces hormones that set the metabolic rate of nearly every cell you have. When output falls, everything slows. When it rises, everything accelerates.
-          </p>
-          <p>
-            The chain matters because most thyroid problems are not the gland failing. Your thyroid mainly produces T4, which is largely inactive. T4 has to convert into T3, the form your cells actually use, and that conversion happens outside the thyroid, in the liver, kidneys, and gut.
-          </p>
+          <span class="section-tag">{{ i18n + '.intro.tag' | translate }}</span>
+          <h2>{{ i18n + '.intro.title' | translate }}</h2>
+          <p class="lead-paragraph">{{ i18n + '.intro.lead' | translate }}</p>
+          <p>{{ i18n + '.intro.p2' | translate }}</p>
           <p class="highlight-callout">
-            <strong>A person can have a normal TSH, adequate T4, and still be functionally hypothyroid. That patient will be told nothing is wrong.</strong>
+            <strong>{{ i18n + '.intro.callout' | translate }}</strong>
           </p>
           <p>
-            The most common cause of hypothyroidism is autoimmune. If your antibodies come back elevated, see our
-            <a routerLink="/functional-medicine/hashimotos">Hashimoto’s page</a>.
+            {{ i18n + '.intro.hashiPre' | translate }}
+            <a routerLink="/functional-medicine/hashimotos">{{ i18n + '.intro.hashiLink' | translate }}</a>.
           </p>
         </div>
 
@@ -70,24 +63,24 @@
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>swap_horiz</mat-icon></div>
             <div class="feat-content">
-              <h3>Hypothyroidism</h3>
-              <p>Underproduction. Fatigue, weight gain, cold intolerance, constipation, dry skin, hair loss, brain fog, low mood, and slow recovery. By far the more common presentation.</p>
+              <h3>{{ i18n + '.intro.features.hypo.title' | translate }}</h3>
+              <p>{{ i18n + '.intro.features.hypo.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>favorite</mat-icon></div>
             <div class="feat-content">
-              <h3>Hyperthyroidism</h3>
-              <p>Overproduction. Anxiety, racing heart, weight loss, heat intolerance, tremor, and insomnia.</p>
+              <h3>{{ i18n + '.intro.features.hyper.title' | translate }}</h3>
+              <p>{{ i18n + '.intro.features.hyper.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>error_outline</mat-icon></div>
             <div class="feat-content">
-              <h3>Subclinical Dysfunction</h3>
-              <p>Where most of our patients sit. TSH is drifting but has not crossed the threshold, or looks acceptable while the hormones downstream do not. Symptoms are present. Treatment has not been offered.</p>
+              <h3>{{ i18n + '.intro.features.sub.title' | translate }}</h3>
+              <p>{{ i18n + '.intro.features.sub.desc' | translate }}</p>
             </div>
           </div>
         </div>
@@ -100,21 +93,19 @@
   <!-- ========================================== -->
   <section class="catalog-section">
     <div class="section-header">
-      <span class="section-tag">THE FOUR LINKS</span>
-      <h2>Where The Chain Breaks</h2>
-      <p class="section-subtitle">
-        A signal from the pituitary, a hormone produced by the gland, a conversion step in the liver and gut, and receptors that have to receive it.
-      </p>
+      <span class="section-tag">{{ i18n + '.catalog.tag' | translate }}</span>
+      <h2>{{ i18n + '.catalog.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.catalog.subtitle' | translate }}</p>
     </div>
 
     <div class="catalog-grid">
       <div class="catalog-card" *ngFor="let item of chainLinks">
         <div class="catalog-card-header">
-          <span class="catalog-category">{{ item.category }}</span>
+          <span class="catalog-category">{{ i18n + '.catalog.list.' + item.id + '.category' | translate }}</span>
         </div>
 
-        <h3 class="catalog-name">{{ item.name }}</h3>
-        <p class="catalog-desc">{{ item.description }}</p>
+        <h3 class="catalog-name">{{ i18n + '.catalog.list.' + item.id + '.name' | translate }}</h3>
+        <p class="catalog-desc">{{ i18n + '.catalog.list.' + item.id + '.description' | translate }}</p>
       </div>
     </div>
   </section>
@@ -124,11 +115,9 @@
   <!-- ========================================== -->
   <section class="clinical-approach-section">
     <div class="section-header">
-      <span class="section-tag">METHODOLOGY</span>
-      <h2>Our Approach</h2>
-      <p class="section-subtitle">
-        Testing TSH alone to assess thyroid function is like judging a delivery by checking whether the order was placed.
-      </p>
+      <span class="section-tag">{{ i18n + '.approach.tag' | translate }}</span>
+      <h2>{{ i18n + '.approach.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.approach.subtitle' | translate }}</p>
     </div>
 
     <div class="pillars-grid">
@@ -137,16 +126,14 @@
         <div class="pillar-icon-wrapper">
           <mat-icon>{{ p.icon }}</mat-icon>
         </div>
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
+        <h3>{{ i18n + '.approach.list.' + p.id + '.title' | translate }}</h3>
+        <p>{{ i18n + '.approach.list.' + p.id + '.description' | translate }}</p>
       </div>
     </div>
 
     <div class="doctor-quote">
-      <p>
-        “Being healthy is more than the absence of visible disease. There is a great deal happening inside the body that needs to be addressed long before it becomes a disorder.”
-      </p>
-      <span class="quote-author">— Dr. Adonis</span>
+      <p>{{ i18n + '.approach.quote' | translate }}</p>
+      <span class="quote-author">{{ i18n + '.approach.quoteAuthor' | translate }}</span>
     </div>
   </section>
 
@@ -155,25 +142,23 @@
   <!-- ========================================== -->
   <section class="signs-section">
     <div class="section-header">
-      <span class="section-tag">SYMPTOM CHECK</span>
-      <h2>Signs Thyroid Testing Could Help You</h2>
-      <p class="section-subtitle">
-        Thyroid symptoms are easy to attribute to stress, age, or a busy schedule. These are the patterns we see most.
-      </p>
+      <span class="section-tag">{{ i18n + '.signs.tag' | translate }}</span>
+      <h2>{{ i18n + '.signs.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.signs.subtitle' | translate }}</p>
     </div>
 
     <div class="section-card">
       <ul class="signs-list">
         <li *ngFor="let s of signs">
           <mat-icon>check_circle</mat-icon>
-          <span>{{ s }}</span>
+          <span>{{ i18n + '.signs.list.' + s | translate }}</span>
         </li>
       </ul>
     </div>
 
     <div class="timeline-note">
       <mat-icon>info</mat-icon>
-      <span>If several of these apply and the only thyroid test you have had is TSH, you have not been fully assessed.</span>
+      <span>{{ i18n + '.signs.note' | translate }}</span>
     </div>
   </section>
 
@@ -182,11 +167,9 @@
   <!-- ========================================== -->
   <section class="candidacy-section">
     <div class="section-header">
-      <span class="section-tag">EVALUATION</span>
-      <h2>Who This Is For — And Who It Is Not For</h2>
-      <p class="section-subtitle">
-        Some thyroid presentations need endocrinology, surgery, or emergency care first, and we will say so directly.
-      </p>
+      <span class="section-tag">{{ i18n + '.candidacy.tag' | translate }}</span>
+      <h2>{{ i18n + '.candidacy.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.candidacy.subtitle' | translate }}</p>
     </div>
 
     <div class="candidacy-grid">
@@ -194,12 +177,12 @@
       <div class="candidacy-card fit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon positive">check_circle</mat-icon>
-          <h3>This is a strong fit if you:</h3>
+          <h3>{{ i18n + '.candidacy.fitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of candidatePoints">
             <mat-icon>check_circle</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ i18n + '.candidacy.fit.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -208,12 +191,12 @@
       <div class="candidacy-card unfit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon negative">block</mat-icon>
-          <h3>It may not be right if you:</h3>
+          <h3>{{ i18n + '.candidacy.unfitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of nonCandidatePoints">
             <mat-icon>block</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ i18n + '.candidacy.unfit.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -221,9 +204,7 @@
 
     <div class="scope-note">
       <mat-icon>error_outline</mat-icon>
-      <span>
-        Severe hyperthyroidism or thyroid storm symptoms are a medical emergency and require immediate care. Thyroid nodules, masses, and thyroid cancer under active treatment belong with endocrinology and surgical care, and we refer rather than work around it.
-      </span>
+      <span>{{ i18n + '.candidacy.scopeNote' | translate }}</span>
     </div>
   </section>
 
@@ -232,11 +213,9 @@
   <!-- ========================================== -->
   <section class="treatment-steps-section">
     <div class="section-header">
-      <span class="section-tag">THE PROCESS</span>
-      <h2>How Treatment Works</h2>
-      <p class="section-subtitle">
-        From first consultation to confirmed follow-up testing, here is what your care looks like.
-      </p>
+      <span class="section-tag">{{ i18n + '.steps.tag' | translate }}</span>
+      <h2>{{ i18n + '.steps.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.steps.subtitle' | translate }}</p>
     </div>
 
     <div class="steps-timeline">
@@ -247,16 +226,16 @@
         <div class="step-card-body">
           <div class="step-title-row">
             <mat-icon>{{ st.icon }}</mat-icon>
-            <h3>{{ st.title }}</h3>
+            <h3>{{ i18n + '.steps.list.' + st.id + '.title' | translate }}</h3>
           </div>
-          <p>{{ st.description }}</p>
+          <p>{{ i18n + '.steps.list.' + st.id + '.description' | translate }}</p>
         </div>
       </div>
     </div>
 
     <div class="timeline-note">
       <mat-icon>schedule</mat-icon>
-      <span>Most patients report meaningful change within 90 days. Energy and mental clarity often move first; hair, skin, and weight are slower.</span>
+      <span>{{ i18n + '.steps.note' | translate }}</span>
     </div>
   </section>
 
@@ -266,16 +245,16 @@
   <section class="program-included-section">
     <div class="included-card">
       <div class="included-header">
-        <span class="section-tag">YOUR PROGRAM</span>
-        <h2>What’s Included in Your Care</h2>
-        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+        <span class="section-tag">{{ i18n + '.included.tag' | translate }}</span>
+        <h2>{{ i18n + '.included.title' | translate }}</h2>
+        <p>{{ i18n + '.included.subtitle' | translate }}</p>
       </div>
 
       <div class="included-grid">
         <div class="inc-item" *ngFor="let inc of included">
           <mat-icon>{{ inc.icon }}</mat-icon>
-          <h4>{{ inc.title }}</h4>
-          <p>{{ inc.description }}</p>
+          <h4>{{ i18n + '.included.list.' + inc.id + '.title' | translate }}</h4>
+          <p>{{ i18n + '.included.list.' + inc.id + '.description' | translate }}</p>
         </div>
       </div>
     </div>
@@ -286,11 +265,9 @@
   <!-- ========================================== -->
   <section class="benefits-section">
     <div class="section-header">
-      <span class="section-tag">POTENTIAL OUTCOMES</span>
-      <h2>Benefits of Proper Thyroid Treatment</h2>
-      <p class="section-subtitle">
-        Response varies with cause, severity, and how long the dysfunction has been running.
-      </p>
+      <span class="section-tag">{{ i18n + '.benefits.tag' | translate }}</span>
+      <h2>{{ i18n + '.benefits.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.benefits.subtitle' | translate }}</p>
     </div>
 
     <div class="benefits-grid">
@@ -298,8 +275,8 @@
         <div class="benefit-icon">
           <mat-icon>{{ b.icon }}</mat-icon>
         </div>
-        <h3>{{ b.title }}</h3>
-        <p>{{ b.description }}</p>
+        <h3>{{ i18n + '.benefits.list.' + b.id + '.title' | translate }}</h3>
+        <p>{{ i18n + '.benefits.list.' + b.id + '.description' | translate }}</p>
       </div>
     </div>
   </section>
@@ -312,29 +289,27 @@
       <div class="physician-img-col">
         <picture>
           <source srcset="assets/images/logos/dr-full-img.webp" type="image/webp">
-          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="dr-photo" loading="lazy">
+          <img src="assets/images/logos/dr-full-img.webp"
+               [alt]="i18n + '.physician.photoAlt' | translate"
+               class="dr-photo" loading="lazy">
         </picture>
         <div class="physician-credentials-badge">
-          <strong>Adonis Maiquez, MD</strong>
-          <span>Functional &amp; Regenerative Medicine</span>
+          <strong>{{ i18n + '.physician.name' | translate }}</strong>
+          <span [innerHTML]="i18n + '.physician.role' | translate"></span>
         </div>
       </div>
 
       <div class="physician-bio-col">
-        <span class="section-tag">MEDICAL EXPERTISE</span>
-        <h2>He Operated On The Gland At The Top Of This Axis</h2>
-        <p>
-          Dr. Adonis trained as a <strong>neurosurgeon in pituitary surgery</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida. The pituitary produces TSH, the signal that tells the thyroid to work.
-        </p>
-        <p>
-          He spent years operating on the gland at the top of this axis before turning to what happens to patients further down it. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.
-        </p>
+        <span class="section-tag">{{ i18n + '.physician.tag' | translate }}</span>
+        <h2>{{ i18n + '.physician.title' | translate }}</h2>
+        <p [innerHTML]="i18n + '.physician.p1' | translate"></p>
+        <p [innerHTML]="i18n + '.physician.p2' | translate"></p>
 
         <div class="credentials-pills">
-          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
-          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
-          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
-          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+          <span class="c-pill"><mat-icon>school</mat-icon> {{ i18n + '.physician.pills.fellowship' | translate }}</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> {{ i18n + '.physician.pills.ifm' | translate }}</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> {{ i18n + '.physician.pills.a4m' | translate }}</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> <span [innerHTML]="i18n + '.physician.pills.campus' | translate"></span></span>
         </div>
       </div>
     </div>
@@ -348,16 +323,12 @@
       <div class="quote-stars">
         <mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon>
       </div>
-      <blockquote>
-        "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I'm very glad to have found someone who listens."
-      </blockquote>
+      <blockquote>{{ i18n + '.testimonial.quote' | translate }}</blockquote>
       <div class="testimonial-meta">
-        <strong>— Alexia A.</strong>
-        <span>Verified Clinic Patient</span>
+        <strong>{{ i18n + '.testimonial.author' | translate }}</strong>
+        <span>{{ i18n + '.testimonial.role' | translate }}</span>
       </div>
-      <p class="testimonial-disclaimer">
-        *Individual results vary. Patient experiences described here are not a guarantee of outcome.
-      </p>
+      <p class="testimonial-disclaimer">{{ i18n + '.testimonial.disclaimer' | translate }}</p>
     </div>
   </section>
 
@@ -366,21 +337,19 @@
   <!-- ========================================== -->
   <section class="faq-section">
     <div class="section-header">
-      <span class="section-tag">QUESTIONS & ANSWERS</span>
-      <h2>Frequently Asked Questions</h2>
-      <p class="section-subtitle">
-        Everything you need to know about full thyroid testing, medication, and what treatment can change.
-      </p>
+      <span class="section-tag">{{ i18n + '.faq.tag' | translate }}</span>
+      <h2>{{ i18n + '.faq.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.faq.subtitle' | translate }}</p>
     </div>
 
     <div class="faq-accordion">
       <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
         <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
-          <span>{{ faq.question }}</span>
+          <span>{{ i18n + '.faq.list.' + faq.id + '.q' | translate }}</span>
           <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
         </button>
         <div class="faq-answer-panel" *ngIf="faq.isOpen">
-          <p>{{ faq.answer }}</p>
+          <p>{{ i18n + '.faq.list.' + faq.id + '.a' | translate }}</p>
         </div>
       </div>
     </div>
@@ -391,26 +360,22 @@
   <!-- ========================================== -->
   <section class="final-cta-section" id="consultation">
     <div class="final-cta-card">
-      <span class="cta-tag">GET STARTED</span>
-      <h2>Get The Full Picture</h2>
-      <p class="cta-lead">
-        If nobody has checked your free T3, reverse T3, and thyroid antibodies, nobody has actually assessed your thyroid. One panel answers the question.
-      </p>
+      <span class="cta-tag">{{ i18n + '.cta.tag' | translate }}</span>
+      <h2>{{ i18n + '.cta.title' | translate }}</h2>
+      <p class="cta-lead">{{ i18n + '.cta.lead' | translate }}</p>
 
       <div class="final-cta-buttons">
         <button type="button" class="btn-primary-large" (click)="openAppointment()">
           <mat-icon>event</mat-icon>
-          <span>Request A Consultation</span>
+          <span>{{ i18n + '.cta.primary' | translate }}</span>
         </button>
         <a href="tel:+13052904691" class="btn-outline-phone">
           <mat-icon>phone</mat-icon>
-          <span>Call or Text (305) 290-4691</span>
+          <span>{{ i18n + '.cta.phone' | translate }}</span>
         </a>
       </div>
 
-      <p class="compliance-footer-note">
-        *Thyroid treatment requires medical evaluation and is not appropriate for every patient. Treatment is prescribed only after physician review of your history and laboratory results.
-      </p>
+      <p class="compliance-footer-note">{{ i18n + '.cta.note' | translate }}</p>
     </div>
   </section>
 

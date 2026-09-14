@@ -1966,5 +1966,322 @@
       "title": "Hashimoto’s Treatment Miami | Root-Cause Autoimmune Thyroid Care — Dr. Adonis Maiquez, MD",
       "description": "Hashimoto’s is an immune condition, not just a thyroid one. We treat the antibodies and the triggers, not only the falling hormone. Miami and Florida telehealth."
     }
+  },
+  "thyroidPage": {
+    "badge": "THYROID & ENDOCRINE CARE",
+    "title": "Thyroid Treatment in Miami, FL",
+    "lead": "Your thyroid is not one number. It is a chain that can break in four different places, and three of them are invisible on the test most people are given.",
+    "ctaConsult": "Request A Consultation",
+    "ctaCall": "Call (305) 290-4691",
+    "pills": {
+      "panel": "Full Panel, Not Just TSH",
+      "antibodies": "Antibodies On Every Patient",
+      "telehealth": "Florida Telehealth Available"
+    },
+    "intro": {
+      "tag": "THE SCIENCE",
+      "title": "What Thyroid Dysfunction Is",
+      "lead": "The thyroid produces hormones that set the metabolic rate of nearly every cell you have. When output falls, everything slows. When it rises, everything accelerates.",
+      "p2": "The chain matters because most thyroid problems are not the gland failing. Your thyroid mainly produces T4, which is largely inactive. T4 has to convert into T3, the form your cells actually use, and that conversion happens outside the thyroid, in the liver, kidneys, and gut.",
+      "callout": "A person can have a normal TSH, adequate T4, and still be functionally hypothyroid. That patient will be told nothing is wrong.",
+      "hashiPre": "The most common cause of hypothyroidism is autoimmune. If your antibodies come back elevated, see our",
+      "hashiLink": "Hashimoto’s page",
+      "features": {
+        "hypo": {
+          "title": "Hypothyroidism",
+          "desc": "Underproduction. Fatigue, weight gain, cold intolerance, constipation, dry skin, hair loss, brain fog, low mood, and slow recovery. By far the more common presentation."
+        },
+        "hyper": {
+          "title": "Hyperthyroidism",
+          "desc": "Overproduction. Anxiety, racing heart, weight loss, heat intolerance, tremor, and insomnia."
+        },
+        "sub": {
+          "title": "Subclinical Dysfunction",
+          "desc": "Where most of our patients sit. TSH is drifting but has not crossed the threshold, or looks acceptable while the hormones downstream do not. Symptoms are present. Treatment has not been offered."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "THE FOUR LINKS",
+      "title": "Where The Chain Breaks",
+      "subtitle": "A signal from the pituitary, a hormone produced by the gland, a conversion step in the liver and gut, and receptors that have to receive it.",
+      "list": {
+        "d1": {
+          "name": "The Signal",
+          "category": "Pituitary — TSH",
+          "description": "TSH is a pituitary hormone. It measures the signal being sent, not the hormone being produced, converted, or received. Testing TSH alone to assess thyroid function is like judging a delivery by checking whether the order was placed."
+        },
+        "d2": {
+          "name": "Production",
+          "category": "The Gland — T4",
+          "description": "Your thyroid mainly produces T4, which is largely inactive. Autoimmune attack is the most common reason production falls, and antibodies frequently show up years before hormone levels move."
+        },
+        "d3": {
+          "name": "Conversion",
+          "category": "Liver, Kidneys & Gut — T4 to T3",
+          "description": "T4 has to convert into T3, the form your cells actually use, and that happens outside the thyroid. Under chronic stress, inflammation, nutrient deficiency, or illness, the body converts T4 into reverse T3 instead."
+        },
+        "d4": {
+          "name": "Reception",
+          "category": "The Receptor",
+          "description": "Reverse T3 occupies the receptor without activating it. A person can have a normal TSH, adequate T4, and still be functionally hypothyroid. That patient will be told nothing is wrong."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METHODOLOGY",
+      "title": "Our Approach",
+      "subtitle": "Testing TSH alone to assess thyroid function is like judging a delivery by checking whether the order was placed.",
+      "quote": "“Being healthy is more than the absence of visible disease. There is a great deal happening inside the body that needs to be addressed long before it becomes a disorder.”",
+      "quoteAuthor": "— Dr. Adonis",
+      "list": {
+        "p1": {
+          "title": "We Run The Full Panel, Not TSH",
+          "description": "Your panel may include TSH, free T4, free T3, reverse T3, thyroid peroxidase antibodies, thyroglobulin antibodies, ferritin, iron, vitamin D, B12, selenium, zinc, and inflammatory markers. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "p2": {
+          "title": "We Check Antibodies On Every Patient",
+          "description": "The most common cause of hypothyroidism is autoimmune, and antibodies frequently show up years before thyroid hormone levels move. Finding them early changes the entire treatment plan, because the problem is then an immune system attacking the gland rather than a gland that quit."
+        },
+        "p3": {
+          "title": "We Read Optimal, Not Just Normal",
+          "description": "Reference ranges describe the population that walked into the lab, which includes a great many people with undiagnosed thyroid disease. A free T3 at the bottom edge of range, next to elevated reverse T3 and low ferritin, tells a story that no single value tells alone."
+        },
+        "p4": {
+          "title": "We Treat The Reason It Broke",
+          "description": "Low ferritin impairs conversion. So does low selenium and zinc, chronic cortisol elevation, gut inflammation, and insulin resistance. Prescribing thyroid hormone while those remain uncorrected means chasing dose increases that never quite work."
+        }
+      }
+    },
+    "signs": {
+      "tag": "SYMPTOM CHECK",
+      "title": "Signs Thyroid Testing Could Help You",
+      "subtitle": "Thyroid symptoms are easy to attribute to stress, age, or a busy schedule. These are the patterns we see most.",
+      "note": "If several of these apply and the only thyroid test you have had is TSH, you have not been fully assessed.",
+      "list": {
+        "s1": "Fatigue that sleep does not touch",
+        "s2": "Weight gain, or weight that will not move regardless of effort",
+        "s3": "Cold hands and feet, or being cold when nobody else is",
+        "s4": "Hair thinning, particularly at the outer eyebrows",
+        "s5": "Dry skin, brittle nails, hair that breaks",
+        "s6": "Brain fog, poor recall, slow processing",
+        "s7": "Constipation",
+        "s8": "Low mood or depression that has not responded to treatment",
+        "s9": "Heavy or irregular periods, or difficulty conceiving",
+        "s10": "Muscle aches, joint stiffness, slow recovery from exercise",
+        "s11": "A puffy face, or swelling around the eyes",
+        "s12": "Elevated cholesterol without an obvious cause",
+        "s13": "Family history of thyroid or autoimmune disease"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUATION",
+      "title": "Who This Is For — And Who It Is Not For",
+      "subtitle": "Some thyroid presentations need endocrinology, surgery, or emergency care first, and we will say so directly.",
+      "fitTitle": "This is a strong fit if you:",
+      "unfitTitle": "It may not be right if you:",
+      "scopeNote": "Severe hyperthyroidism or thyroid storm symptoms are a medical emergency and require immediate care. Thyroid nodules, masses, and thyroid cancer under active treatment belong with endocrinology and surgical care, and we refer rather than work around it.",
+      "fit": {
+        "c1": "Have thyroid symptoms and have only ever had TSH tested",
+        "c2": "Have been told your thyroid is normal but do not feel it",
+        "c3": "Are on thyroid medication and still symptomatic",
+        "c4": "Have thyroid antibodies with no treatment plan beyond monitoring",
+        "c5": "Have a family history and want to catch it early",
+        "c6": "Are willing to address nutrition and the other drivers alongside medication"
+      },
+      "unfit": {
+        "n1": "Have a thyroid nodule or mass requiring biopsy or surgical evaluation. That needs endocrinology and surgical care, and we will refer.",
+        "n2": "Have thyroid cancer under active treatment",
+        "n3": "Have severe hyperthyroidism or thyroid storm symptoms. This is urgent and requires emergency care.",
+        "n4": "Want a prescription without testing. We do not treat the thyroid blind.",
+        "n5": "Are unwilling to change anything about diet or nutrient status"
+      }
+    },
+    "steps": {
+      "tag": "THE PROCESS",
+      "title": "How Treatment Works",
+      "subtitle": "From first consultation to confirmed follow-up testing, here is what your care looks like.",
+      "list": {
+        "s1": {
+          "title": "Consultation",
+          "description": "Your symptoms, your history, and every thyroid test you have already had. Bring old labs if you have them. The trend over years is often more informative than one snapshot."
+        },
+        "s2": {
+          "title": "Testing",
+          "description": "Full panel. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "s3": {
+          "title": "Interpretation",
+          "description": "Dr. Adonis identifies where in the chain the problem sits: production, conversion, autoimmunity, or a nutrient bottleneck."
+        },
+        "s4": {
+          "title": "Results Consultation",
+          "description": "Every value explained. What is causing your symptoms, what we are correcting, and in what order."
+        },
+        "s5": {
+          "title": "Treatment Begins",
+          "description": "Hormone replacement where indicated, plus the nutrient and inflammatory corrections that determine whether it works."
+        },
+        "s6": {
+          "title": "Follow-Up Testing Every Six Months",
+          "description": "Levels and symptoms reviewed together, with dose adjusted as needed."
+        }
+      },
+      "note": "Most patients report meaningful change within 90 days. Energy and mental clarity often move first; hair, skin, and weight are slower."
+    },
+    "included": {
+      "tag": "YOUR PROGRAM",
+      "title": "What’s Included in Your Care",
+      "subtitle": "A comprehensive, transparent cash-pay model with zero surprise bills.",
+      "list": {
+        "i1": {
+          "title": "Initial Comprehensive Consultation",
+          "description": "Full symptom history, timeline, prior thyroid testing and treatment, family history, and the other systems that affect thyroid function."
+        },
+        "i2": {
+          "title": "Complete Thyroid & Nutrient Panel",
+          "description": "TSH, free T4, free T3, reverse T3, thyroid antibodies, ferritin and iron studies, vitamin D, B12, selenium, zinc, and inflammatory and metabolic markers."
+        },
+        "i3": {
+          "title": "Results Consultation with Dr. Adonis",
+          "description": "Where the chain is breaking, why, and what we are doing about each part of it."
+        },
+        "i4": {
+          "title": "Your Treatment Protocol",
+          "description": "Thyroid hormone replacement where indicated, including T3-containing options when conversion is the problem, alongside correction of the nutrient, inflammatory, and adrenal findings driving it."
+        },
+        "i5": {
+          "title": "Nutrition & Lifestyle Direction",
+          "description": "Targeted to what your labs show."
+        },
+        "i6": {
+          "title": "Follow-Up Lab Testing Every Six Months",
+          "description": "With dose adjusted against both your numbers and your symptoms."
+        },
+        "i7": {
+          "title": "Direct Access To The Practice",
+          "description": "Call or text the clinic at (305) 290-4691 at any time and message directly with our staff."
+        },
+        "i8": {
+          "title": "Labs And Consultations Included",
+          "description": "This is a cash-pay practice. Superbills are not provided."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "POTENTIAL OUTCOMES",
+      "title": "Benefits of Proper Thyroid Treatment",
+      "subtitle": "Response varies with cause, severity, and how long the dysfunction has been running.",
+      "list": {
+        "b1": {
+          "title": "Energy That Holds Through The Day",
+          "description": "The change patients notice first and comment on most."
+        },
+        "b2": {
+          "title": "Mental Clarity",
+          "description": "Fog lifting, recall improving, processing speed returning."
+        },
+        "b3": {
+          "title": "Weight That Responds Again",
+          "description": "Thyroid sets metabolic rate. When it is corrected, effort starts producing results."
+        },
+        "b4": {
+          "title": "Temperature Regulation",
+          "description": "Being cold all the time is a symptom, not a personality trait."
+        },
+        "b5": {
+          "title": "Hair, Skin & Nails",
+          "description": "Slower to change, but they do change."
+        },
+        "b6": {
+          "title": "Mood Stability",
+          "description": "Thyroid dysfunction produces depression and anxiety that antidepressants alone often fail to resolve."
+        },
+        "b7": {
+          "title": "Digestive Regularity",
+          "description": "Slow thyroid slows the gut."
+        },
+        "b8": {
+          "title": "Cardiovascular Markers",
+          "description": "Hypothyroidism raises cholesterol. Correcting it frequently improves the lipid panel without a statin."
+        }
+      }
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "He Operated On The Gland At The Top Of This Axis",
+      "p1": "Dr. Adonis trained as a <strong>neurosurgeon in pituitary surgery</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida. The pituitary produces TSH, the signal that tells the thyroid to work.",
+      "p2": "He spent years operating on the gland at the top of this axis before turning to what happens to patients further down it. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Functional &amp; Regenerative Medicine",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "USF Neurosurgery Fellowship",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "A4M Board Certified",
+        "campus": "UM Medical Campus &amp; Florida Telehealth"
+      }
+    },
+    "testimonial": {
+      "quote": "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I'm very glad to have found someone who listens.",
+      "author": "— Alexia A.",
+      "role": "Verified Clinic Patient",
+      "disclaimer": "*Individual results vary. Patient experiences described here are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about full thyroid testing, medication, and what treatment can change.",
+      "list": {
+        "f1": {
+          "q": "My TSH is normal. Can I still have a thyroid problem?",
+          "a": "Yes, and this is one of the most common situations we see. TSH measures the pituitary signal, not what your cells receive. Poor T4-to-T3 conversion, elevated reverse T3, and early autoimmune activity all occur with a TSH inside range."
+        },
+        "f2": {
+          "q": "What is reverse T3 and why does it matter?",
+          "a": "Reverse T3 is an inactive form your body produces from T4 under stress, illness, inflammation, or nutrient deficiency. It binds thyroid receptors without activating them. Elevated reverse T3 means hormone is present but not working, which is why some patients feel hypothyroid on paper-perfect labs."
+        },
+        "f3": {
+          "q": "I’m already on levothyroxine and still feel terrible. Why?",
+          "a": "Levothyroxine is T4. If your problem is conversion rather than production, adding more T4 does not fix it and can increase reverse T3. This is where a full panel changes treatment, and it is a common reason patients arrive here."
+        },
+        "f4": {
+          "q": "Do you use natural desiccated thyroid or T3?",
+          "a": "Treatment is selected based on what your labs show. When conversion is the bottleneck, a T3-containing option is often more appropriate than T4 alone."
+        },
+        "f5": {
+          "q": "How often will my levels be checked?",
+          "a": "We do follow-up lab testing every six months, and you can call or text the clinic at any time between visits if something changes."
+        },
+        "f6": {
+          "q": "Do you take insurance?",
+          "a": "No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program."
+        },
+        "f7": {
+          "q": "Can this be managed by telehealth?",
+          "a": "Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "f8": {
+          "q": "Will I be on thyroid medication forever?",
+          "a": "It depends on the cause. Autoimmune destruction of the gland generally requires ongoing replacement. Dysfunction driven by nutrient deficiency, stress physiology, or gut inflammation sometimes improves substantially once those are corrected."
+        },
+        "f9": {
+          "q": "Does Dr. Adonis speak Spanish?",
+          "a": "Yes. Consultations are available in English and Spanish."
+        }
+      }
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "Get The Full Picture",
+      "lead": "If nobody has checked your free T3, reverse T3, and thyroid antibodies, nobody has actually assessed your thyroid. One panel answers the question.",
+      "primary": "Request A Consultation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Thyroid treatment requires medical evaluation and is not appropriate for every patient. Treatment is prescribed only after physician review of your history and laboratory results."
+    },
+    "seo": {
+      "title": "Thyroid Treatment Miami | Full Thyroid Panel & Root-Cause Care — Dr. Adonis Maiquez, MD",
+      "description": "Most thyroid care stops at TSH. We run full thyroid function and treat the reasons it stopped working. Physician-led thyroid care in Miami and by telehealth in Florida."
+    }
   }
 }

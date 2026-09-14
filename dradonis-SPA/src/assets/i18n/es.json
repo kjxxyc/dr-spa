@@ -1966,5 +1966,322 @@
       "title": "Tratamiento de Hashimoto en Miami | Atención Tiroidea Autoinmune de Causa Raíz — Dr. Adonis Maiquez, MD",
       "description": "La tiroiditis de Hashimoto es una condición inmunitaria, no solo tiroidea. Tratamos los anticuerpos y los desencadenantes, no solo la hormona en descenso. Miami y telemedicina en Florida."
     }
+  },
+  "thyroidPage": {
+    "badge": "ATENCIÓN TIROIDEA Y ENDOCRINA",
+    "title": "Tratamiento de Tiroides en Miami, FL",
+    "lead": "Su tiroides no es un solo número. Es una cadena que puede romperse en cuatro puntos distintos, y tres de ellos son invisibles en el análisis que se le hace a la mayoría de la gente.",
+    "ctaConsult": "Solicite una Consulta",
+    "ctaCall": "Llame al (305) 290-4691",
+    "pills": {
+      "panel": "Panel Completo, No Solo TSH",
+      "antibodies": "Anticuerpos en Todos los Pacientes",
+      "telehealth": "Telemedicina en Florida Disponible"
+    },
+    "intro": {
+      "tag": "LA CIENCIA",
+      "title": "Qué Es la Disfunción Tiroidea",
+      "lead": "La tiroides produce hormonas que fijan la tasa metabólica de casi todas las células que usted tiene. Cuando la producción baja, todo se ralentiza. Cuando sube, todo se acelera.",
+      "p2": "La cadena importa porque la mayoría de los problemas tiroideos no son un fallo de la glándula. Su tiroides produce principalmente T4, que es en gran medida inactiva. La T4 tiene que convertirse en T3, la forma que sus células realmente usan, y esa conversión ocurre fuera de la tiroides, en el hígado, los riñones y el intestino.",
+      "callout": "Una persona puede tener una TSH normal, T4 adecuada y aun así estar funcionalmente hipotiroidea. A ese paciente le dirán que no pasa nada.",
+      "hashiPre": "La causa más común de hipotiroidismo es autoinmune. Si sus anticuerpos salen elevados, consulte nuestra",
+      "hashiLink": "página de Hashimoto",
+      "features": {
+        "hypo": {
+          "title": "Hipotiroidismo",
+          "desc": "Producción insuficiente. Fatiga, aumento de peso, intolerancia al frío, estreñimiento, piel seca, caída del cabello, niebla mental, ánimo bajo y recuperación lenta. Con diferencia, la presentación más común."
+        },
+        "hyper": {
+          "title": "Hipertiroidismo",
+          "desc": "Producción excesiva. Ansiedad, taquicardia, pérdida de peso, intolerancia al calor, temblor e insomnio."
+        },
+        "sub": {
+          "title": "Disfunción Subclínica",
+          "desc": "Donde se encuentran la mayoría de nuestros pacientes. La TSH se está desviando pero no ha cruzado el umbral, o parece aceptable mientras las hormonas de más abajo no lo están. Hay síntomas. No se ha ofrecido tratamiento."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "LOS CUATRO ESLABONES",
+      "title": "Dónde Se Rompe la Cadena",
+      "subtitle": "Una señal desde la hipófisis, una hormona producida por la glándula, un paso de conversión en el hígado y el intestino, y receptores que tienen que recibirla.",
+      "list": {
+        "d1": {
+          "name": "La Señal",
+          "category": "Hipófisis — TSH",
+          "description": "La TSH es una hormona hipofisaria. Mide la señal que se envía, no la hormona que se produce, se convierte o se recibe. Evaluar solo la TSH para valorar la función tiroidea es como juzgar una entrega comprobando únicamente si se hizo el pedido."
+        },
+        "d2": {
+          "name": "Producción",
+          "category": "La Glándula — T4",
+          "description": "Su tiroides produce principalmente T4, que es en gran medida inactiva. El ataque autoinmune es la razón más común de que caiga la producción, y los anticuerpos aparecen con frecuencia años antes de que se muevan los niveles hormonales."
+        },
+        "d3": {
+          "name": "Conversión",
+          "category": "Hígado, Riñones e Intestino — de T4 a T3",
+          "description": "La T4 tiene que convertirse en T3, la forma que sus células realmente usan, y eso ocurre fuera de la tiroides. Bajo estrés crónico, inflamación, deficiencia nutricional o enfermedad, el cuerpo convierte la T4 en T3 reversa en su lugar."
+        },
+        "d4": {
+          "name": "Recepción",
+          "category": "El Receptor",
+          "description": "La T3 reversa ocupa el receptor sin activarlo. Una persona puede tener una TSH normal, T4 adecuada y aun así estar funcionalmente hipotiroidea. A ese paciente le dirán que no pasa nada."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "Evaluar solo la TSH para valorar la función tiroidea es como juzgar una entrega comprobando únicamente si se hizo el pedido.",
+      "quote": "«Estar sano es más que la ausencia de enfermedad visible. Ocurren muchísimas cosas dentro del cuerpo que hay que abordar mucho antes de que se conviertan en un trastorno.»",
+      "quoteAuthor": "— Dr. Adonis",
+      "list": {
+        "p1": {
+          "title": "Hacemos el Panel Completo, No Solo la TSH",
+          "description": "Su panel puede incluir TSH, T4 libre, T3 libre, T3 reversa, anticuerpos antiperoxidasa tiroidea, anticuerpos antitiroglobulina, ferritina, hierro, vitamina D, B12, selenio, zinc y marcadores inflamatorios. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "p2": {
+          "title": "Evaluamos Anticuerpos en Todos los Pacientes",
+          "description": "La causa más común de hipotiroidismo es autoinmune, y los anticuerpos aparecen con frecuencia años antes de que se muevan los niveles de hormona tiroidea. Encontrarlos temprano cambia todo el plan de tratamiento, porque entonces el problema es un sistema inmunitario atacando la glándula y no una glándula que dejó de funcionar."
+        },
+        "p3": {
+          "title": "Leemos lo Óptimo, No Solo lo Normal",
+          "description": "Los rangos de referencia describen a la población que entró al laboratorio, que incluye a muchísimas personas con enfermedad tiroidea sin diagnosticar. Una T3 libre en el borde inferior del rango, junto a una T3 reversa elevada y una ferritina baja, cuenta una historia que ningún valor aislado cuenta."
+        },
+        "p4": {
+          "title": "Tratamos la Razón por la que se Rompió",
+          "description": "La ferritina baja dificulta la conversión. También lo hacen el selenio y el zinc bajos, la elevación crónica del cortisol, la inflamación intestinal y la resistencia a la insulina. Recetar hormona tiroidea mientras eso sigue sin corregirse significa perseguir aumentos de dosis que nunca terminan de funcionar."
+        }
+      }
+    },
+    "signs": {
+      "tag": "REVISIÓN DE SÍNTOMAS",
+      "title": "Señales de que Evaluar la Tiroides Podría Ayudarle",
+      "subtitle": "Los síntomas tiroideos se atribuyen con facilidad al estrés, a la edad o a una agenda muy ocupada. Estos son los patrones que más vemos.",
+      "note": "Si varios de estos aplican y el único análisis tiroideo que le han hecho es la TSH, no le han evaluado por completo.",
+      "list": {
+        "s1": "Fatiga que el sueño no alivia",
+        "s2": "Aumento de peso, o peso que no se mueve por mucho que se esfuerce",
+        "s3": "Manos y pies fríos, o tener frío cuando nadie más lo tiene",
+        "s4": "Adelgazamiento del cabello, en particular en la cola de las cejas",
+        "s5": "Piel seca, uñas quebradizas, cabello que se rompe",
+        "s6": "Niebla mental, mala memoria, procesamiento lento",
+        "s7": "Estreñimiento",
+        "s8": "Ánimo bajo o depresión que no ha respondido al tratamiento",
+        "s9": "Reglas abundantes o irregulares, o dificultad para concebir",
+        "s10": "Dolores musculares, rigidez articular, recuperación lenta tras el ejercicio",
+        "s11": "Cara hinchada o inflamación alrededor de los ojos",
+        "s12": "Colesterol elevado sin una causa evidente",
+        "s13": "Antecedentes familiares de enfermedad tiroidea o autoinmune"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — y para Quién No",
+      "subtitle": "Algunas presentaciones tiroideas necesitan endocrinología, cirugía o atención de emergencia primero, y se lo diremos con claridad.",
+      "fitTitle": "Encaja bien si usted:",
+      "unfitTitle": "Puede no ser lo indicado si usted:",
+      "scopeNote": "El hipertiroidismo grave o los síntomas de tormenta tiroidea son una emergencia médica y requieren atención inmediata. Los nódulos y masas tiroideas y el cáncer de tiroides en tratamiento activo corresponden a endocrinología y a la atención quirúrgica, y derivamos en lugar de rodear el problema.",
+      "fit": {
+        "c1": "Tiene síntomas tiroideos y solo le han evaluado la TSH",
+        "c2": "Le han dicho que su tiroides está normal pero usted no lo siente así",
+        "c3": "Está con medicación tiroidea y sigue con síntomas",
+        "c4": "Tiene anticuerpos tiroideos sin más plan que la vigilancia",
+        "c5": "Tiene antecedentes familiares y quiere detectarlo temprano",
+        "c6": "Está dispuesto a abordar la nutrición y los demás factores junto con la medicación"
+      },
+      "unfit": {
+        "n1": "Tiene un nódulo o una masa tiroidea que requiere biopsia o evaluación quirúrgica. Eso necesita endocrinología y atención quirúrgica, y lo derivaremos.",
+        "n2": "Tiene cáncer de tiroides en tratamiento activo",
+        "n3": "Tiene hipertiroidismo grave o síntomas de tormenta tiroidea. Esto es urgente y requiere atención de emergencia.",
+        "n4": "Quiere una receta sin pruebas. No tratamos la tiroides a ciegas.",
+        "n5": "No está dispuesto a cambiar nada en su dieta o en su estado nutricional"
+      }
+    },
+    "steps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde la primera consulta hasta las pruebas de seguimiento confirmadas, así es su atención.",
+      "list": {
+        "s1": {
+          "title": "Consulta",
+          "description": "Sus síntomas, su historia y todas las pruebas tiroideas que ya se ha hecho. Traiga análisis antiguos si los tiene. La tendencia a lo largo de los años suele ser más informativa que una sola foto."
+        },
+        "s2": {
+          "title": "Pruebas",
+          "description": "Panel completo. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "s3": {
+          "title": "Interpretación",
+          "description": "El Dr. Adonis identifica en qué punto de la cadena está el problema: producción, conversión, autoinmunidad o un cuello de botella nutricional."
+        },
+        "s4": {
+          "title": "Consulta de Resultados",
+          "description": "Cada valor explicado. Qué está causando sus síntomas, qué estamos corrigiendo y en qué orden."
+        },
+        "s5": {
+          "title": "Comienza el Tratamiento",
+          "description": "Reposición hormonal cuando esté indicada, además de las correcciones nutricionales e inflamatorias que determinan si funciona."
+        },
+        "s6": {
+          "title": "Pruebas de Seguimiento Cada Seis Meses",
+          "description": "Niveles y síntomas revisados juntos, con la dosis ajustada según sea necesario."
+        }
+      },
+      "note": "La mayoría de los pacientes reporta un cambio significativo en 90 días. La energía y la claridad mental suelen moverse primero; el cabello, la piel y el peso son más lentos."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención",
+      "subtitle": "Un modelo de pago directo, completo y transparente, sin facturas sorpresa.",
+      "list": {
+        "i1": {
+          "title": "Consulta Inicial Completa",
+          "description": "Historia completa de síntomas, cronología, pruebas y tratamientos tiroideos previos, antecedentes familiares y los demás sistemas que afectan la función tiroidea."
+        },
+        "i2": {
+          "title": "Panel Tiroideo y Nutricional Completo",
+          "description": "TSH, T4 libre, T3 libre, T3 reversa, anticuerpos tiroideos, ferritina y estudios de hierro, vitamina D, B12, selenio, zinc y marcadores inflamatorios y metabólicos."
+        },
+        "i3": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "description": "Dónde se está rompiendo la cadena, por qué, y qué estamos haciendo con cada parte de ella."
+        },
+        "i4": {
+          "title": "Su Protocolo de Tratamiento",
+          "description": "Reposición de hormona tiroidea cuando esté indicada, incluidas opciones con T3 cuando el problema es la conversión, junto con la corrección de los hallazgos nutricionales, inflamatorios y suprarrenales que lo impulsan."
+        },
+        "i5": {
+          "title": "Pautas de Nutrición y Estilo de Vida",
+          "description": "Dirigidas a lo que muestran sus análisis."
+        },
+        "i6": {
+          "title": "Pruebas de Laboratorio de Seguimiento Cada Seis Meses",
+          "description": "Con la dosis ajustada tanto a sus números como a sus síntomas."
+        },
+        "i7": {
+          "title": "Acceso Directo a la Consulta",
+          "description": "Llame o envíe un mensaje de texto a la clínica al (305) 290-4691 en cualquier momento y comuníquese directamente con nuestro personal."
+        },
+        "i8": {
+          "title": "Laboratorios y Consultas Incluidos",
+          "description": "Esta es una consulta de pago directo. No se proporcionan superbills."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POSIBLES",
+      "title": "Beneficios de un Tratamiento Tiroideo Adecuado",
+      "subtitle": "La respuesta varía según la causa, la gravedad y cuánto tiempo lleva activa la disfunción.",
+      "list": {
+        "b1": {
+          "title": "Energía que Dura Todo el Día",
+          "description": "El cambio que los pacientes notan primero y del que más hablan."
+        },
+        "b2": {
+          "title": "Claridad Mental",
+          "description": "La niebla se levanta, la memoria mejora, la velocidad de procesamiento vuelve."
+        },
+        "b3": {
+          "title": "Peso que Vuelve a Responder",
+          "description": "La tiroides fija la tasa metabólica. Cuando se corrige, el esfuerzo empieza a dar resultados."
+        },
+        "b4": {
+          "title": "Regulación de la Temperatura",
+          "description": "Tener frío todo el tiempo es un síntoma, no un rasgo de personalidad."
+        },
+        "b5": {
+          "title": "Cabello, Piel y Uñas",
+          "description": "Más lentos en cambiar, pero cambian."
+        },
+        "b6": {
+          "title": "Estabilidad del Ánimo",
+          "description": "La disfunción tiroidea produce depresión y ansiedad que los antidepresivos por sí solos a menudo no resuelven."
+        },
+        "b7": {
+          "title": "Regularidad Digestiva",
+          "description": "Una tiroides lenta ralentiza el intestino."
+        },
+        "b8": {
+          "title": "Marcadores Cardiovasculares",
+          "description": "El hipotiroidismo eleva el colesterol. Corregirlo con frecuencia mejora el perfil lipídico sin una estatina."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Operó la Glándula que Está en la Cima de Este Eje",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano en cirugía hipofisaria</strong>, completando su formación de posgrado y su fellowship en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida. La hipófisis produce la TSH, la señal que le dice a la tiroides que trabaje.",
+      "p2": "Pasó años operando la glándula que está en la cima de este eje antes de dedicarse a lo que les ocurre a los pacientes más abajo. Está certificado por el Institute for Functional Medicine y por la American Academy of Anti-Aging Medicine, ejerce en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Medicina Funcional y Regenerativa",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "Fellowship en Neurocirugía, USF",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "Certificado por A4M",
+        "campus": "Campus Médico UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "Encontrar médicos locales con experiencia que realmente tomaran en serio mis síntomas fue difícil. Tuve que entrevistar a varios antes de que me refirieran al Dr. Adonis. Estoy muy contenta de haber encontrado a alguien que escucha.",
+      "author": "— Alexia A.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no son garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre el panel tiroideo completo, la medicación y qué puede cambiar el tratamiento.",
+      "list": {
+        "f1": {
+          "q": "Mi TSH es normal. ¿Aun así puedo tener un problema de tiroides?",
+          "a": "Sí, y esta es una de las situaciones más comunes que vemos. La TSH mide la señal hipofisaria, no lo que reciben sus células. Una mala conversión de T4 a T3, una T3 reversa elevada y la actividad autoinmune temprana ocurren todas con una TSH dentro del rango."
+        },
+        "f2": {
+          "q": "¿Qué es la T3 reversa y por qué importa?",
+          "a": "La T3 reversa es una forma inactiva que su cuerpo produce a partir de la T4 bajo estrés, enfermedad, inflamación o deficiencia nutricional. Se une a los receptores tiroideos sin activarlos. Una T3 reversa elevada significa que la hormona está presente pero no funciona, y por eso algunos pacientes se sienten hipotiroideos con análisis aparentemente perfectos."
+        },
+        "f3": {
+          "q": "Ya tomo levotiroxina y sigo sintiéndome mal. ¿Por qué?",
+          "a": "La levotiroxina es T4. Si su problema es la conversión y no la producción, añadir más T4 no lo soluciona y puede aumentar la T3 reversa. Aquí es donde un panel completo cambia el tratamiento, y es una razón frecuente por la que los pacientes llegan aquí."
+        },
+        "f4": {
+          "q": "¿Usan tiroides desecada natural o T3?",
+          "a": "El tratamiento se selecciona según lo que muestren sus análisis. Cuando la conversión es el cuello de botella, una opción que contenga T3 suele ser más apropiada que la T4 sola."
+        },
+        "f5": {
+          "q": "¿Con qué frecuencia se revisarán mis niveles?",
+          "a": "Hacemos pruebas de laboratorio de seguimiento cada seis meses, y puede llamar o escribir a la clínica en cualquier momento entre visitas si algo cambia."
+        },
+        "f6": {
+          "q": "¿Aceptan seguro?",
+          "a": "No. Esta es una consulta de pago directo y no proporcionamos superbills. Sus laboratorios y consultas están incluidos en su programa."
+        },
+        "f7": {
+          "q": "¿Se puede manejar por telemedicina?",
+          "a": "Sí, para pacientes ubicados en Florida. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "f8": {
+          "q": "¿Tomaré medicación tiroidea para siempre?",
+          "a": "Depende de la causa. La destrucción autoinmune de la glándula generalmente requiere reposición continua. La disfunción impulsada por deficiencia nutricional, fisiología del estrés o inflamación intestinal a veces mejora sustancialmente una vez que se corrigen."
+        },
+        "f9": {
+          "q": "¿Habla español el Dr. Adonis?",
+          "a": "Sí. Las consultas están disponibles en inglés y español."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Obtenga el Panorama Completo",
+      "lead": "Si nadie ha revisado su T3 libre, su T3 reversa y sus anticuerpos tiroideos, nadie ha evaluado realmente su tiroides. Un solo panel responde la pregunta.",
+      "primary": "Solicite una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*El tratamiento tiroideo requiere evaluación médica y no es apropiado para todos los pacientes. El tratamiento se prescribe solo después de que el médico revise su historia y sus resultados de laboratorio."
+    },
+    "seo": {
+      "title": "Tratamiento de Tiroides en Miami | Panel Tiroideo Completo y Atención de Causa Raíz — Dr. Adonis Maiquez, MD",
+      "description": "La mayoría de la atención tiroidea se detiene en la TSH. Evaluamos la función tiroidea completa y tratamos las razones por las que dejó de funcionar. Atención en Miami y telemedicina en Florida."
+    }
   }
 }
