@@ -42,7 +42,14 @@ export class ArticlesListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.applySeo();
-    this.langSub = this.translate.onLangChange.subscribe(() => this.applySeo());
+    this.langSub = this.translate.onLangChange.subscribe(({ lang }) => {
+      this.applySeo();
+      // Keep the language filter in step with the site-wide language toggle.
+      if (lang === 'es' || lang === 'en') {
+        this.selectedLanguage = lang;
+        this.onFilterChange();
+      }
+    });
 
     this.articleService.getArticles().subscribe(data => {
       this.articles = data;
@@ -87,6 +94,15 @@ export class ArticlesListComponent implements OnInit, OnDestroy {
   onFilterChange(): void {
     this.currentPage = 1;
     this.applyFilters();
+  }
+
+  onLanguageFilterChange(): void {
+    this.onFilterChange();
+    // Picking a specific language here also switches the site language;
+    // "all" only widens the list and leaves the site language as it is.
+    if (this.selectedLanguage !== 'all' && this.selectedLanguage !== this.translate.currentLang) {
+      this.translate.use(this.selectedLanguage);
+    }
   }
 
   applyFilters(): void {

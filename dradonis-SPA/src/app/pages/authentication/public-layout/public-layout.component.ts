@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -24,14 +25,22 @@ import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.com
     templateUrl: './public-layout.component.html',
     styleUrls: ['./public-layout.component.scss']
 })
-export class PublicLayoutComponent {
+export class PublicLayoutComponent implements OnDestroy {
     currentLang: string = 'en';
     menuOpen: boolean = false;
+    private langSub: Subscription;
 
     constructor(private translate: TranslateService, private dialog: MatDialog) {
         this.translate.setDefaultLang('en');
         this.currentLang = this.translate.currentLang || 'en';
         this.translate.use(this.currentLang);
+        // Pages can switch the language too (e.g. the articles filter), so the
+        // header flag follows every change, not only its own toggle.
+        this.langSub = this.translate.onLangChange.subscribe(e => this.currentLang = e.lang);
+    }
+
+    ngOnDestroy(): void {
+        this.langSub.unsubscribe();
     }
 
     async openAppointment(): Promise<void> {

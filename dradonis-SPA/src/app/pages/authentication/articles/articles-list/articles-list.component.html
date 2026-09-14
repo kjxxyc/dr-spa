@@ -17,7 +17,7 @@
         </div>
         
         <div class="lang-filter">
-          <select [(ngModel)]="selectedLanguage" (ngModelChange)="onFilterChange()">
+          <select [(ngModel)]="selectedLanguage" (ngModelChange)="onLanguageFilterChange()">
             <option value="all">{{ 'articlesPage.allLanguages' | translate }}</option>
             <option value="en">English</option>
             <option value="es">Español</option>
