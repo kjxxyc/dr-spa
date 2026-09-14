@@ -1023,5 +1023,328 @@
       "title": "Gut Health Treatment Miami | Root-Cause Digestive Care — Dr. Adonis Maiquez, MD",
       "description": "Functional medicine gut care in Miami. Comprehensive testing for dysbiosis, permeability, and food sensitivity, with a protocol that repairs rather than suppresses. Florida telehealth."
     }
+  },
+  "brainHealthPage": {
+    "badge": "COGNITIVE & FUNCTIONAL MEDICINE",
+    "title": "Brain Health in Miami, FL",
+    "lead": "You walk into a room and cannot recall why. A word you have used your whole life sits just out of reach. This gets attributed to age, stress, or having a lot on. Often it is not, and the alternative explanations are measurable.",
+    "ctaConsult": "Request A Consultation",
+    "ctaCall": "Call (305) 290-4691",
+    "pills": {
+      "panel": "Broad Diagnostic Panel",
+      "sleep": "Sleep Assessed First",
+      "telehealth": "Florida Telehealth Available"
+    },
+    "intro": {
+      "tag": "THE SCIENCE",
+      "title": "What Brain Health Means Here",
+      "lead": "Your brain is metabolically expensive. It represents roughly two percent of body weight and consumes about twenty percent of your energy.",
+      "p2": "That demand makes it unusually sensitive to anything affecting fuel supply, inflammation, or hormonal signaling. Which is why cognitive symptoms so often arrive as the first visible sign of a problem somewhere else entirely.",
+      "callout": "Being told it is stress is not a workup.",
+      "p4": "Reading takes twice as long because you keep going back. Names sit just out of reach. Sometimes age and stress are the correct explanation — and often they are not, which is exactly why the question is worth testing rather than assuming.",
+      "features": {
+        "energy": {
+          "title": "20% Of Your Energy",
+          "desc": "Two percent of body weight, a fifth of your fuel. Anything limiting that supply shows up as cognition first."
+        },
+        "vessels": {
+          "title": "Dense Small-Vessel Supply",
+          "desc": "Blood pressure, lipids, and endothelial function determine how well circulation actually delivers."
+        },
+        "clearance": {
+          "title": "Overnight Clearance",
+          "desc": "Metabolic waste is cleared from the brain predominantly during sleep, which makes untreated apnea consequential."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "WHAT WE LOOK FOR",
+      "title": "The Drivers We Most Commonly Find",
+      "subtitle": "Cognitive symptoms have causes, and most of the common ones show up on a comprehensive panel.",
+      "list": {
+        "d1": {
+          "name": "Metabolic",
+          "category": "Fuel & Glucose Handling",
+          "description": "Insulin resistance impairs the brain’s ability to use glucose. The relationship between glycemic dysfunction and cognitive decline is well documented, and it is frequently present years before a diabetes diagnosis."
+        },
+        "d2": {
+          "name": "Vascular",
+          "category": "Circulation & Perfusion",
+          "description": "The brain depends on dense small-vessel circulation. Blood pressure, lipids, and endothelial function determine how well that circulation delivers."
+        },
+        "d3": {
+          "name": "Hormonal",
+          "category": "Endocrine Signaling",
+          "description": "Thyroid hormone directly regulates neuronal metabolism. Estrogen, progesterone, and testosterone all have receptors in the brain, and cognitive complaints appearing during perimenopause or andropause are frequently hormonal rather than psychological."
+        },
+        "d4": {
+          "name": "Inflammatory",
+          "category": "Immune Activity",
+          "description": "Systemic inflammation crosses into the central nervous system. Autoimmune activity, chronic infection, and gut permeability all contribute."
+        },
+        "d5": {
+          "name": "Nutritional",
+          "category": "Micronutrient Status",
+          "description": "B12, folate, vitamin D, omega-3s, magnesium, and iron are each required for neurological function, and deficiency is common and correctable."
+        },
+        "d6": {
+          "name": "Sleep",
+          "category": "Overnight Clearance",
+          "description": "Clearance of metabolic waste from the brain occurs predominantly during sleep. Untreated sleep apnea is one of the most consequential and most missed contributors to cognitive decline."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METHODOLOGY",
+      "title": "Our Approach",
+      "subtitle": "We treat cognitive symptoms as a finding to be worked up, not a phase to be waited out.",
+      "list": {
+        "p1": {
+          "title": "We Treat Cognitive Symptoms As A Finding, Not A Phase",
+          "description": "Brain fog in a 45-year-old is frequently waved off. It should be worked up, because the causes underneath it are largely correctable and because the same drivers left running for two decades are the ones associated with long-term cognitive decline."
+        },
+        "p2": {
+          "title": "We Test Broadly",
+          "description": "Your panel may include fasting glucose, insulin and HbA1c, a complete lipid panel, inflammatory markers including hs-CRP and homocysteine, complete thyroid function, sex and adrenal hormones, B12, folate, vitamin D, magnesium, iron and ferritin, autoimmune antibodies, heavy metals, and chronic infection markers."
+        },
+        "p3": {
+          "title": "We Take Sleep Seriously",
+          "description": "If your history suggests obstructive sleep apnea — snoring, witnessed pauses, unrefreshing sleep, morning headache — we pursue that before anything else. It is common, treatable, and one of the highest-yield findings in cognitive medicine."
+        },
+        "p4": {
+          "title": "We Refer When Referral Is Right",
+          "description": "Rapidly progressing memory loss, personality change, difficulty with familiar tasks, disorientation to time or place, or new neurological symptoms require neurological evaluation and imaging. We will say so directly rather than starting a supplement protocol."
+        },
+        "p5": {
+          "title": "We Work On The Long Horizon Too",
+          "description": "The metabolic, vascular, and inflammatory factors that produce brain fog now are the same ones associated with cognitive decline decades later. Correcting them addresses both."
+        }
+      }
+    },
+    "signs": {
+      "tag": "SYMPTOM CHECK",
+      "title": "Signs This Could Help You",
+      "subtitle": "Cognitive symptoms rarely travel alone. These are the patterns we see most.",
+      "list": {
+        "s1": "Brain fog, or a sense that thinking takes more effort than it used to",
+        "s2": "Word-finding difficulty",
+        "s3": "Forgetting names, appointments, or why you came into a room",
+        "s4": "Reduced ability to concentrate or sustain focus",
+        "s5": "Reading the same paragraph repeatedly",
+        "s6": "Mental fatigue by early afternoon",
+        "s7": "Slower processing, or feeling a step behind in conversation",
+        "s8": "Cognitive symptoms that started around perimenopause or menopause",
+        "s9": "Fog that tracks with meals or with specific foods",
+        "s10": "Memory or focus changes alongside fatigue, weight gain, or mood changes",
+        "s11": "Family history of dementia and a desire to act on it now",
+        "s12": "Snoring, unrefreshing sleep, or waking with a headache",
+        "s13": "Cognitive symptoms following illness, infection, or a period of high stress"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUATION",
+      "title": "Who This Is For — And Who It Is Not For",
+      "subtitle": "Some cognitive presentations need neurological evaluation first, and we will say so directly.",
+      "fitTitle": "This is a strong fit if you:",
+      "unfitTitle": "It is not the right fit if you:",
+      "scopeNote": "We do not treat, cure, or reverse Alzheimer’s disease or any other dementia. What we address are the modifiable metabolic, hormonal, inflammatory, and nutritional contributors to cognitive function.",
+      "fit": {
+        "c1": "Have brain fog or cognitive changes without a clear explanation",
+        "c2": "Have been told it is stress or age and do not accept that",
+        "c3": "Have cognitive symptoms alongside fatigue, weight, mood, or hormone changes",
+        "c4": "Have noticed changes during perimenopause or andropause",
+        "c5": "Have family history of dementia and want to address modifiable risk now",
+        "c6": "Are prepared to make dietary, sleep, and exercise changes"
+      },
+      "unfit": {
+        "n1": "Have rapidly progressing memory loss, disorientation, personality change, or difficulty with familiar tasks. This requires neurological evaluation and imaging, and we will refer.",
+        "n2": "Have new focal neurological symptoms — weakness, numbness, vision or speech changes. Seek immediate medical care.",
+        "n3": "Have a diagnosed dementia requiring neurological management. We may support metabolic health alongside that care, but we do not replace it.",
+        "n4": "Have had a recent head injury with ongoing symptoms. That needs appropriate neurological assessment.",
+        "n5": "Want a nootropic prescription without a workup"
+      }
+    },
+    "steps": {
+      "tag": "THE PROCESS",
+      "title": "How Treatment Works",
+      "subtitle": "From first consultation to confirmed follow-up testing, here is what your care looks like.",
+      "list": {
+        "s1": {
+          "title": "Consultation",
+          "description": "What changed, when, and whether it is stable or progressing. Progression pattern is the most important thing you can tell us."
+        },
+        "s2": {
+          "title": "Testing",
+          "description": "Broad metabolic, hormonal, inflammatory, and nutritional panel. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "s3": {
+          "title": "Interpretation",
+          "description": "Dr. Adonis identifies which contributors are present and which is dominant."
+        },
+        "s4": {
+          "title": "Results Consultation",
+          "description": "Findings explained and a plan built in priority order, starting with the highest-yield correction."
+        },
+        "s5": {
+          "title": "Treatment Begins",
+          "description": "Typically metabolic and nutritional correction first, since those move fastest, with hormonal and inflammatory work alongside."
+        },
+        "s6": {
+          "title": "Follow-Up Testing Every Six Months",
+          "description": "Markers rechecked and the protocol adjusted."
+        }
+      },
+      "note": "Most patients report meaningful change within 90 days. Nutrient corrections often show earlier; metabolic and hormonal changes take longer to register cognitively."
+    },
+    "included": {
+      "tag": "YOUR PROGRAM",
+      "title": "What’s Included in Your Care",
+      "subtitle": "A comprehensive, transparent cash-pay model with zero surprise bills.",
+      "list": {
+        "i1": {
+          "title": "Initial Comprehensive Consultation",
+          "description": "Cognitive symptom history and timeline, sleep, medical and family history, medications, mood, stress, diet, and prior evaluation."
+        },
+        "i2": {
+          "title": "Comprehensive Cognitive & Metabolic Panel",
+          "description": "Metabolic and insulin markers, lipids, inflammatory markers, homocysteine, full thyroid function, hormones, B vitamins, vitamin D, minerals, autoimmune markers, heavy metals, and chronic infection markers."
+        },
+        "i3": {
+          "title": "Sleep Assessment",
+          "description": "Screening for sleep apnea and referral for a study where indicated."
+        },
+        "i4": {
+          "title": "Results Consultation with Dr. Adonis",
+          "description": "Which systems are contributing to your cognitive symptoms, and the plan for each."
+        },
+        "i5": {
+          "title": "Your Treatment Protocol",
+          "description": "Metabolic correction, hormone optimization where indicated, targeted nutrient repletion, anti-inflammatory intervention, cardiovascular risk reduction, and nutrition and exercise direction built for cognitive support."
+        },
+        "i6": {
+          "title": "Follow-Up Lab Testing Every Six Months",
+          "description": "With the protocol adjusted as markers move."
+        },
+        "i7": {
+          "title": "Direct Access To The Practice",
+          "description": "Call or text the clinic at (305) 290-4691 at any time and message directly with our staff."
+        },
+        "i8": {
+          "title": "Labs And Consultations Included",
+          "description": "This is a cash-pay practice. Superbills are not provided."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "POTENTIAL OUTCOMES",
+      "title": "Benefits of Cognitive Care",
+      "subtitle": "Response varies by cause, severity, and how long symptoms have been present.",
+      "list": {
+        "b1": {
+          "title": "Clearer Thinking",
+          "description": "The fog lifting is the change patients describe most."
+        },
+        "b2": {
+          "title": "Better Recall",
+          "description": "Names, words, and details becoming available again."
+        },
+        "b3": {
+          "title": "Sustained Focus",
+          "description": "Longer stretches of real concentration, less rereading."
+        },
+        "b4": {
+          "title": "Reduced Mental Fatigue",
+          "description": "More cognitive stamina through the day."
+        },
+        "b5": {
+          "title": "Mood Improvement",
+          "description": "Frequently accompanies cognitive change, particularly when thyroid, B12, vitamin D, or hormones were involved."
+        },
+        "b6": {
+          "title": "Better Sleep",
+          "description": "Both a cause and a beneficiary of this work."
+        },
+        "b7": {
+          "title": "Improved Metabolic & Vascular Markers",
+          "description": "Which benefit the brain and everything else."
+        },
+        "b8": {
+          "title": "Long-Term Risk Reduction",
+          "description": "Addressing insulin resistance, vascular risk, inflammation, and sleep apnea is among the most evidence-supported approaches to protecting cognition over time."
+        }
+      }
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "Why A Neurosurgical Background Matters in Cognitive Care",
+      "p1": "Dr. Adonis is a <strong>neurosurgeon by training</strong>. He completed postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida and performed hundreds of pituitary procedures before moving into functional and regenerative medicine.",
+      "p2": "Few physicians working on cognitive health came to it by way of operating inside the skull, and that background shapes how he evaluates the brain: as an organ with a blood supply, a hormonal environment, and a metabolic budget, all of which can be measured. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Functional &amp; Regenerative Medicine",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "USF Neurosurgery Fellowship",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "A4M Board Certified",
+        "campus": "UM Medical Campus &amp; Florida Telehealth"
+      }
+    },
+    "testimonial": {
+      "quote": "Excellent experience in this clinic. The staff is very professional and friendly, and the medical team provides first-class care. Without a doubt, a quality medical service that I totally recommend.",
+      "author": "— Ana G.",
+      "role": "Verified Clinic Patient",
+      "disclaimer": "*Individual results vary. Patient experiences described here are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about cognitive testing, treatment, and what to expect.",
+      "list": {
+        "f1": {
+          "q": "Is brain fog a real medical problem?",
+          "a": "It is not a diagnosis, but it is a real symptom with identifiable causes. Thyroid dysfunction, B12 deficiency, insulin resistance, hormone decline, sleep apnea, and systemic inflammation all produce it, and all are measurable."
+        },
+        "f2": {
+          "q": "How do I know if this is normal aging or something else?",
+          "a": "Normal aging involves gradual, mild change that does not interfere with independent function. Symptoms that are progressing noticeably, affecting your work or daily tasks, or accompanied by disorientation warrant neurological evaluation. Tell us what you have noticed and we will help determine which situation you are in."
+        },
+        "f3": {
+          "q": "Can you prevent Alzheimer’s disease?",
+          "a": "No. What is well supported is that a substantial share of dementia risk is attributable to modifiable factors — vascular health, metabolic health, sleep, hearing, activity, and others. We address the ones we can measure and influence. That is risk reduction, not prevention, and we will not describe it as more than it is."
+        },
+        "f4": {
+          "q": "My memory got worse during menopause. Is that connected?",
+          "a": "Very likely. Estrogen has receptors throughout the brain and influences cognition directly. Cognitive symptoms appearing during perimenopause are common, frequently dismissed, and often responsive to hormone evaluation."
+        },
+        "f5": {
+          "q": "What if my labs come back fine?",
+          "a": "Then we look at sleep, vascular imaging, and other contributors, and we consider neurological referral. Normal labs narrow the question rather than ending it."
+        },
+        "f6": {
+          "q": "How long until I notice a difference?",
+          "a": "Most patients report meaningful change within 90 days. Correcting a significant B12 or thyroid deficiency can register sooner."
+        },
+        "f7": {
+          "q": "Do you take insurance?",
+          "a": "No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program."
+        },
+        "f8": {
+          "q": "Can this be managed by telehealth?",
+          "a": "Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "Get It Looked At",
+      "lead": "Cognitive symptoms have causes, and most of the common ones show up on a comprehensive panel. Being told it is stress is not a workup.",
+      "primary": "Request A Consultation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Cognitive care requires medical evaluation and is not appropriate for every patient. Rapidly progressing memory loss, disorientation, or new neurological symptoms require prompt neurological evaluation. We do not treat or reverse dementia."
+    },
+    "seo": {
+      "title": "Brain Health & Cognitive Care Miami | Root-Cause Brain Fog Treatment — Dr. Adonis Maiquez, MD",
+      "description": "Functional medicine for brain fog, memory, and cognitive concerns in Miami. We test the metabolic, hormonal, and inflammatory drivers of cognition. Florida telehealth available."
+    }
   }
 }

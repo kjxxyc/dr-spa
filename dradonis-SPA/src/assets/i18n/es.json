@@ -1023,5 +1023,328 @@
       "title": "Salud Intestinal en Miami | Atención Digestiva de Causa Raíz — Dr. Adonis Maiquez, MD",
       "description": "Medicina funcional para la salud intestinal en Miami. Pruebas completas de disbiosis, permeabilidad y sensibilidad alimentaria, con un protocolo que repara en lugar de suprimir. Telemedicina en Florida."
     }
+  },
+  "brainHealthPage": {
+    "badge": "MEDICINA COGNITIVA Y FUNCIONAL",
+    "title": "Salud Cerebral en Miami, FL",
+    "lead": "Entra a una habitación y no recuerda por qué. Una palabra que ha usado toda su vida queda fuera de alcance. Esto se atribuye a la edad, al estrés o a tener demasiado encima. A menudo no es así, y las explicaciones alternativas se pueden medir.",
+    "ctaConsult": "Solicite una Consulta",
+    "ctaCall": "Llame al (305) 290-4691",
+    "pills": {
+      "panel": "Panel Diagnóstico Amplio",
+      "sleep": "El Sueño se Evalúa Primero",
+      "telehealth": "Telemedicina en Florida Disponible"
+    },
+    "intro": {
+      "tag": "LA CIENCIA",
+      "title": "Qué Significa Aquí la Salud Cerebral",
+      "lead": "Su cerebro es metabólicamente costoso. Representa aproximadamente el dos por ciento del peso corporal y consume cerca del veinte por ciento de su energía.",
+      "p2": "Esa demanda lo hace inusualmente sensible a cualquier cosa que afecte el suministro de combustible, la inflamación o la señalización hormonal. Por eso los síntomas cognitivos llegan con tanta frecuencia como la primera señal visible de un problema en otro lugar.",
+      "callout": "Que le digan que es estrés no es un estudio.",
+      "p4": "Leer toma el doble de tiempo porque vuelve atrás una y otra vez. Los nombres quedan fuera de alcance. A veces la edad y el estrés son la explicación correcta, y a menudo no lo son, que es justamente por qué vale la pena evaluar la pregunta en lugar de suponerla.",
+      "features": {
+        "energy": {
+          "title": "20% de su Energía",
+          "desc": "Dos por ciento del peso corporal, una quinta parte de su combustible. Cualquier cosa que limite ese suministro se manifiesta primero en la cognición."
+        },
+        "vessels": {
+          "title": "Densa Red de Pequeños Vasos",
+          "desc": "La presión arterial, los lípidos y la función endotelial determinan qué tan bien entrega realmente la circulación."
+        },
+        "clearance": {
+          "title": "Limpieza Nocturna",
+          "desc": "Los desechos metabólicos se eliminan del cerebro predominantemente durante el sueño, lo que hace que la apnea no tratada sea importante."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "LO QUE BUSCAMOS",
+      "title": "Los Factores que Encontramos con Más Frecuencia",
+      "subtitle": "Los síntomas cognitivos tienen causas, y la mayoría de las comunes aparecen en un panel completo.",
+      "list": {
+        "d1": {
+          "name": "Metabólico",
+          "category": "Combustible y Manejo de la Glucosa",
+          "description": "La resistencia a la insulina afecta la capacidad del cerebro para usar glucosa. La relación entre la disfunción glucémica y el deterioro cognitivo está bien documentada, y con frecuencia está presente años antes de un diagnóstico de diabetes."
+        },
+        "d2": {
+          "name": "Vascular",
+          "category": "Circulación y Perfusión",
+          "description": "El cerebro depende de una densa circulación de pequeños vasos. La presión arterial, los lípidos y la función endotelial determinan qué tan bien entrega esa circulación."
+        },
+        "d3": {
+          "name": "Hormonal",
+          "category": "Señalización Endocrina",
+          "description": "La hormona tiroidea regula directamente el metabolismo neuronal. El estrógeno, la progesterona y la testosterona tienen receptores en el cerebro, y las quejas cognitivas que aparecen durante la perimenopausia o la andropausia son con frecuencia hormonales y no psicológicas."
+        },
+        "d4": {
+          "name": "Inflamatorio",
+          "category": "Actividad Inmunitaria",
+          "description": "La inflamación sistémica cruza al sistema nervioso central. La actividad autoinmune, la infección crónica y la permeabilidad intestinal contribuyen todas."
+        },
+        "d5": {
+          "name": "Nutricional",
+          "category": "Estado de Micronutrientes",
+          "description": "La B12, el folato, la vitamina D, los omega-3, el magnesio y el hierro son necesarios para la función neurológica, y su deficiencia es común y corregible."
+        },
+        "d6": {
+          "name": "Sueño",
+          "category": "Limpieza Nocturna",
+          "description": "La eliminación de desechos metabólicos del cerebro ocurre predominantemente durante el sueño. La apnea del sueño no tratada es uno de los contribuyentes más importantes y más pasados por alto en el deterioro cognitivo."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "Tratamos los síntomas cognitivos como un hallazgo que debe estudiarse, no como una etapa que hay que esperar.",
+      "list": {
+        "p1": {
+          "title": "Tratamos los Síntomas Cognitivos como un Hallazgo, No como una Etapa",
+          "description": "La niebla mental en una persona de 45 años suele desestimarse. Debería estudiarse, porque las causas que hay debajo son en gran medida corregibles y porque esos mismos factores, dejados actuar durante dos décadas, son los que se asocian con el deterioro cognitivo a largo plazo."
+        },
+        "p2": {
+          "title": "Evaluamos de Forma Amplia",
+          "description": "Su panel puede incluir glucosa en ayunas, insulina y HbA1c, un perfil lipídico completo, marcadores inflamatorios incluidos hs-CRP y homocisteína, función tiroidea completa, hormonas sexuales y suprarrenales, B12, folato, vitamina D, magnesio, hierro y ferritina, anticuerpos autoinmunes, metales pesados y marcadores de infección crónica."
+        },
+        "p3": {
+          "title": "Nos Tomamos el Sueño en Serio",
+          "description": "Si su historia sugiere apnea obstructiva del sueño (ronquidos, pausas presenciadas, sueño no reparador, dolor de cabeza matutino) lo investigamos antes que cualquier otra cosa. Es común, tratable y uno de los hallazgos de mayor rendimiento en medicina cognitiva."
+        },
+        "p4": {
+          "title": "Derivamos Cuando Corresponde Derivar",
+          "description": "La pérdida de memoria rápidamente progresiva, los cambios de personalidad, la dificultad con tareas familiares, la desorientación en tiempo o lugar o los síntomas neurológicos nuevos requieren evaluación neurológica e imágenes. Lo diremos directamente en lugar de iniciar un protocolo de suplementos."
+        },
+        "p5": {
+          "title": "También Trabajamos a Largo Plazo",
+          "description": "Los factores metabólicos, vasculares e inflamatorios que producen niebla mental hoy son los mismos que se asocian con el deterioro cognitivo décadas después. Corregirlos aborda ambos."
+        }
+      }
+    },
+    "signs": {
+      "tag": "REVISIÓN DE SÍNTOMAS",
+      "title": "Señales de que Esto Podría Ayudarle",
+      "subtitle": "Los síntomas cognitivos rara vez viajan solos. Estos son los patrones que más vemos.",
+      "list": {
+        "s1": "Niebla mental, o la sensación de que pensar cuesta más que antes",
+        "s2": "Dificultad para encontrar palabras",
+        "s3": "Olvidar nombres, citas o por qué entró a una habitación",
+        "s4": "Menor capacidad de concentrarse o sostener la atención",
+        "s5": "Leer el mismo párrafo una y otra vez",
+        "s6": "Fatiga mental a primera hora de la tarde",
+        "s7": "Procesamiento más lento, o sentirse un paso atrás en las conversaciones",
+        "s8": "Síntomas cognitivos que comenzaron alrededor de la perimenopausia o la menopausia",
+        "s9": "Niebla mental que coincide con las comidas o con alimentos específicos",
+        "s10": "Cambios de memoria o concentración junto con fatiga, aumento de peso o cambios de ánimo",
+        "s11": "Antecedentes familiares de demencia y deseo de actuar ahora",
+        "s12": "Ronquidos, sueño no reparador o despertarse con dolor de cabeza",
+        "s13": "Síntomas cognitivos tras una enfermedad, una infección o un período de mucho estrés"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — y para Quién No",
+      "subtitle": "Algunas presentaciones cognitivas necesitan evaluación neurológica primero, y se lo diremos con claridad.",
+      "fitTitle": "Encaja bien si usted:",
+      "unfitTitle": "No es lo indicado si usted:",
+      "scopeNote": "No tratamos, curamos ni revertimos la enfermedad de Alzheimer ni ninguna otra demencia. Lo que abordamos son los factores metabólicos, hormonales, inflamatorios y nutricionales modificables que contribuyen a la función cognitiva.",
+      "fit": {
+        "c1": "Tiene niebla mental o cambios cognitivos sin una explicación clara",
+        "c2": "Le han dicho que es estrés o edad y no lo acepta",
+        "c3": "Tiene síntomas cognitivos junto con fatiga, peso, ánimo o cambios hormonales",
+        "c4": "Ha notado cambios durante la perimenopausia o la andropausia",
+        "c5": "Tiene antecedentes familiares de demencia y quiere abordar ahora el riesgo modificable",
+        "c6": "Está dispuesto a hacer cambios en dieta, sueño y ejercicio"
+      },
+      "unfit": {
+        "n1": "Tiene pérdida de memoria rápidamente progresiva, desorientación, cambios de personalidad o dificultad con tareas familiares. Esto requiere evaluación neurológica e imágenes, y lo derivaremos.",
+        "n2": "Tiene síntomas neurológicos focales nuevos: debilidad, entumecimiento, cambios en la visión o el habla. Busque atención médica inmediata.",
+        "n3": "Tiene una demencia diagnosticada que requiere manejo neurológico. Podemos apoyar la salud metabólica junto a esa atención, pero no la reemplazamos.",
+        "n4": "Ha tenido una lesión en la cabeza reciente con síntomas persistentes. Eso necesita una valoración neurológica adecuada.",
+        "n5": "Quiere una receta de nootrópicos sin un estudio previo"
+      }
+    },
+    "steps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde la primera consulta hasta las pruebas de seguimiento confirmadas, así es su atención.",
+      "list": {
+        "s1": {
+          "title": "Consulta",
+          "description": "Qué cambió, cuándo, y si es estable o está progresando. El patrón de progresión es lo más importante que puede contarnos."
+        },
+        "s2": {
+          "title": "Pruebas",
+          "description": "Panel amplio metabólico, hormonal, inflamatorio y nutricional. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "s3": {
+          "title": "Interpretación",
+          "description": "El Dr. Adonis identifica qué factores están presentes y cuál es el dominante."
+        },
+        "s4": {
+          "title": "Consulta de Resultados",
+          "description": "Hallazgos explicados y un plan construido por orden de prioridad, empezando por la corrección de mayor rendimiento."
+        },
+        "s5": {
+          "title": "Comienza el Tratamiento",
+          "description": "Normalmente primero la corrección metabólica y nutricional, porque son las que se mueven más rápido, con el trabajo hormonal e inflamatorio en paralelo."
+        },
+        "s6": {
+          "title": "Pruebas de Seguimiento Cada Seis Meses",
+          "description": "Marcadores revisados y protocolo ajustado."
+        }
+      },
+      "note": "La mayoría de los pacientes reporta un cambio significativo en 90 días. Las correcciones nutricionales suelen notarse antes; los cambios metabólicos y hormonales tardan más en registrarse a nivel cognitivo."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención",
+      "subtitle": "Un modelo de pago directo, completo y transparente, sin facturas sorpresa.",
+      "list": {
+        "i1": {
+          "title": "Consulta Inicial Completa",
+          "description": "Historia y cronología de los síntomas cognitivos, sueño, antecedentes médicos y familiares, medicamentos, ánimo, estrés, dieta y evaluaciones previas."
+        },
+        "i2": {
+          "title": "Panel Cognitivo y Metabólico Completo",
+          "description": "Marcadores metabólicos y de insulina, lípidos, marcadores inflamatorios, homocisteína, función tiroidea completa, hormonas, vitaminas B, vitamina D, minerales, marcadores autoinmunes, metales pesados y marcadores de infección crónica."
+        },
+        "i3": {
+          "title": "Evaluación del Sueño",
+          "description": "Cribado de apnea del sueño y derivación para un estudio cuando esté indicado."
+        },
+        "i4": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "description": "Qué sistemas están contribuyendo a sus síntomas cognitivos y el plan para cada uno."
+        },
+        "i5": {
+          "title": "Su Protocolo de Tratamiento",
+          "description": "Corrección metabólica, optimización hormonal cuando esté indicada, reposición dirigida de nutrientes, intervención antiinflamatoria, reducción del riesgo cardiovascular y pautas de nutrición y ejercicio orientadas al apoyo cognitivo."
+        },
+        "i6": {
+          "title": "Pruebas de Laboratorio de Seguimiento Cada Seis Meses",
+          "description": "Con el protocolo ajustado a medida que los marcadores cambian."
+        },
+        "i7": {
+          "title": "Acceso Directo a la Consulta",
+          "description": "Llame o envíe un mensaje de texto a la clínica al (305) 290-4691 en cualquier momento y comuníquese directamente con nuestro personal."
+        },
+        "i8": {
+          "title": "Laboratorios y Consultas Incluidos",
+          "description": "Esta es una consulta de pago directo. No se proporcionan superbills."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POSIBLES",
+      "title": "Beneficios de la Atención Cognitiva",
+      "subtitle": "La respuesta varía según la causa, la gravedad y cuánto tiempo han estado presentes los síntomas.",
+      "list": {
+        "b1": {
+          "title": "Pensamiento Más Claro",
+          "description": "Que la niebla se levante es el cambio que más describen los pacientes."
+        },
+        "b2": {
+          "title": "Mejor Memoria",
+          "description": "Nombres, palabras y detalles vuelven a estar disponibles."
+        },
+        "b3": {
+          "title": "Concentración Sostenida",
+          "description": "Períodos más largos de concentración real y menos relectura."
+        },
+        "b4": {
+          "title": "Menos Fatiga Mental",
+          "description": "Más resistencia cognitiva a lo largo del día."
+        },
+        "b5": {
+          "title": "Mejoría del Ánimo",
+          "description": "Acompaña con frecuencia al cambio cognitivo, sobre todo cuando estaban implicados la tiroides, la B12, la vitamina D o las hormonas."
+        },
+        "b6": {
+          "title": "Mejor Sueño",
+          "description": "A la vez causa y beneficiario de este trabajo."
+        },
+        "b7": {
+          "title": "Mejores Marcadores Metabólicos y Vasculares",
+          "description": "Que benefician al cerebro y a todo lo demás."
+        },
+        "b8": {
+          "title": "Reducción del Riesgo a Largo Plazo",
+          "description": "Abordar la resistencia a la insulina, el riesgo vascular, la inflamación y la apnea del sueño es uno de los enfoques con más respaldo para proteger la cognición con el tiempo."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Por Qué una Formación Neuroquirúrgica Importa en la Atención Cognitiva",
+      "p1": "El Dr. Adonis es <strong>neurocirujano de formación</strong>. Completó su formación de posgrado y su fellowship en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida y realizó cientos de procedimientos hipofisarios antes de dedicarse a la medicina funcional y regenerativa.",
+      "p2": "Pocos médicos que trabajan en salud cognitiva llegaron a ella operando dentro del cráneo, y ese trasfondo determina cómo evalúa el cerebro: como un órgano con un suministro sanguíneo, un entorno hormonal y un presupuesto metabólico, todos ellos medibles. Está certificado por el Institute for Functional Medicine y por la American Academy of Anti-Aging Medicine, ejerce en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Medicina Funcional y Regenerativa",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "Fellowship en Neurocirugía, USF",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "Certificado por A4M",
+        "campus": "Campus Médico UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "Excelente experiencia en esta clínica. El personal es muy profesional y amable, y el equipo médico brinda una atención de primera clase. Sin duda, un servicio médico de calidad que recomiendo totalmente.",
+      "author": "— Ana G.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no son garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre las pruebas cognitivas, el tratamiento y qué esperar.",
+      "list": {
+        "f1": {
+          "q": "¿Es la niebla mental un problema médico real?",
+          "a": "No es un diagnóstico, pero sí es un síntoma real con causas identificables. La disfunción tiroidea, la deficiencia de B12, la resistencia a la insulina, el descenso hormonal, la apnea del sueño y la inflamación sistémica la producen, y todas son medibles."
+        },
+        "f2": {
+          "q": "¿Cómo sé si esto es envejecimiento normal u otra cosa?",
+          "a": "El envejecimiento normal implica un cambio gradual y leve que no interfiere con la vida independiente. Los síntomas que progresan de forma notable, que afectan su trabajo o sus tareas diarias, o que se acompañan de desorientación, justifican una evaluación neurológica. Cuéntenos lo que ha notado y le ayudaremos a determinar en cuál de las dos situaciones está."
+        },
+        "f3": {
+          "q": "¿Pueden prevenir la enfermedad de Alzheimer?",
+          "a": "No. Lo que sí está bien respaldado es que una parte sustancial del riesgo de demencia es atribuible a factores modificables: salud vascular, salud metabólica, sueño, audición, actividad y otros. Abordamos los que podemos medir e influir. Eso es reducción de riesgo, no prevención, y no lo describiremos como más de lo que es."
+        },
+        "f4": {
+          "q": "Mi memoria empeoró durante la menopausia. ¿Está relacionado?",
+          "a": "Muy probablemente. El estrógeno tiene receptores en todo el cerebro e influye directamente en la cognición. Los síntomas cognitivos que aparecen durante la perimenopausia son comunes, con frecuencia desestimados y a menudo responden a una evaluación hormonal."
+        },
+        "f5": {
+          "q": "¿Y si mis análisis salen bien?",
+          "a": "Entonces miramos el sueño, las imágenes vasculares y otros factores, y consideramos la derivación neurológica. Unos análisis normales acotan la pregunta en lugar de cerrarla."
+        },
+        "f6": {
+          "q": "¿Cuánto tardaré en notar una diferencia?",
+          "a": "La mayoría de los pacientes reporta un cambio significativo en 90 días. Corregir una deficiencia importante de B12 o de tiroides puede notarse antes."
+        },
+        "f7": {
+          "q": "¿Aceptan seguro?",
+          "a": "No. Esta es una consulta de pago directo y no proporcionamos superbills. Sus laboratorios y consultas están incluidos en su programa."
+        },
+        "f8": {
+          "q": "¿Se puede manejar por telemedicina?",
+          "a": "Sí, para pacientes ubicados en Florida. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Hágalo Revisar",
+      "lead": "Los síntomas cognitivos tienen causas, y la mayoría de las comunes aparecen en un panel completo. Que le digan que es estrés no es un estudio.",
+      "primary": "Solicite una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*La atención cognitiva requiere evaluación médica y no es apropiada para todos los pacientes. La pérdida de memoria rápidamente progresiva, la desorientación o los síntomas neurológicos nuevos requieren evaluación neurológica pronta. No tratamos ni revertimos la demencia."
+    },
+    "seo": {
+      "title": "Salud Cerebral y Cognitiva en Miami | Tratamiento de Causa Raíz para la Niebla Mental — Dr. Adonis Maiquez, MD",
+      "description": "Medicina funcional para la niebla mental, la memoria y las preocupaciones cognitivas en Miami. Evaluamos los factores metabólicos, hormonales e inflamatorios de la cognición. Telemedicina en Florida."
+    }
   }
 }
