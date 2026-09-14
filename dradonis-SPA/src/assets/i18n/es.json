@@ -9,7 +9,7 @@
       "bmi": "CALCULADORA DE IMC",
       "bmr": "CALCULADORA DE TMB",
       "water": "CALCULADORA DE AGUA",
-      "videos": "VIDEOS Y MÁS",
+      "videos": "VIDEOS",
       "articles": "ARTÍCULOS",
       "contact": "CONTACTO",
       "meetDoctor": "CONOCE A TU DOCTOR",
@@ -421,7 +421,7 @@
   },
   "videos": {
     "eyebrow": "Dr. Adonis Maiquez, MD",
-    "heroTitle": "Videos y Más",
+    "heroTitle": "Videos",
     "heroSubtitle": "Contenido educativo sobre Medicina Funcional, hormonas, pérdida de peso y bienestar del Dr. Adonis.",
     "subscribeCta": "SUSCRÍBETE EN YOUTUBE",
     "gridTitle": "Videos Más Populares",

@@ -9,7 +9,7 @@
       "bmi": "BMI CALCULATOR",
       "bmr": "BMR CALCULATOR",
       "water": "WATER CALCULATOR",
-      "videos": "VIDEOS & MORE",
+      "videos": "VIDEOS",
       "articles": "ARTICLES",
       "contact": "CONTACT",
       "meetDoctor": "KNOW YOUR DOCTOR",
@@ -421,7 +421,7 @@
   },
   "videos": {
     "eyebrow": "Dr. Adonis Maiquez, MD",
-    "heroTitle": "Videos & More",
+    "heroTitle": "Videos",
     "heroSubtitle": "Educational content on Functional Medicine, hormones, weight loss, and wellness from Dr. Adonis.",
     "subscribeCta": "SUBSCRIBE ON YOUTUBE",
     "gridTitle": "Most Popular Videos",
