@@ -3108,5 +3108,308 @@
       "title": "Pérdida de Peso Médica en Miami | Atención Metabólica Dirigida por un Médico — Dr. Adonis Maiquez, MD",
       "description": "Pérdida de peso médica dirigida por un médico en Miami. Evaluamos las razones metabólicas, tiroideas y hormonales por las que el peso no baja, y las tratamos. Telemedicina en Florida."
     }
+  },
+  "enclomiphenePage": {
+    "badge": "OPTIMIZACIÓN HORMONAL MASCULINA",
+    "title": "Terapia con Enclomifeno en Miami, FL",
+    "lead": "Existe una versión del tratamiento de la testosterona baja que no apaga su propia producción. El enclomifeno restaura la señal en lugar de reemplazar el producto.",
+    "ctaConsult": "Solicite una Consulta",
+    "ctaCall": "Llame al (305) 290-4691",
+    "pills": {
+      "fertility": "Fertilidad Preservada",
+      "labs": "LH y FSH Evaluadas Primero",
+      "telehealth": "Telemedicina en Florida Disponible"
+    },
+    "intro": {
+      "tag": "EL MECANISMO",
+      "title": "Qué Es el Enclomifeno",
+      "lead": "El enclomifeno es un modulador selectivo de los receptores de estrógeno que aumenta la producción propia de testosterona de su cuerpo.",
+      "p2": "El mecanismo actúa aguas arriba. Su hipotálamo y su hipófisis vigilan el estrógeno circulante como indicador indirecto de cuánta testosterona hay. Cuando detectan suficiente, reducen la salida de LH y FSH, y los testículos producen menos. El enclomifeno bloquea los receptores de estrógeno en el hipotálamo, de modo que el cerebro interpreta el nivel como bajo y aumenta la LH y la FSH.",
+      "callout": "El resultado es un nivel de testosterona más alto generado por su propia fisiología, con el eje hipófiso-testicular intacto y la producción de espermatozoides preservada.",
+      "p4": "El enclomifeno es el isómero del citrato de clomifeno responsable del efecto de elevar la testosterona, separado del isómero asociado con una mayor parte de los efectos secundarios estrogénicos.",
+      "scopeNote": "<strong>Contexto importante:</strong> el enclomifeno se receta <strong>fuera de indicación (off-label)</strong> para el hipogonadismo masculino y se dispensa como <strong>medicamento compuesto</strong>. Lo decimos con claridad porque usted debe saber qué está tomando. La prescripción off-label es legal, habitual y dirigida por un médico, y significa que la FDA no ha aprobado esta indicación específica.",
+      "features": {
+        "hypo": {
+          "title": "Actúa en el Hipotálamo",
+          "desc": "Bloquea los receptores de estrógeno aguas arriba, de modo que el cerebro aumenta la señal de LH y FSH en lugar de reducirla."
+        },
+        "own": {
+          "title": "Sus Testículos Hacen el Trabajo",
+          "desc": "Testosterona producida en su propio ritmo natural, con el eje activo y sin atrofia testicular."
+        },
+        "rev": {
+          "title": "Reversible",
+          "desc": "Suspenderlo generalmente lo devuelve a su punto de partida, sin el período de recuperación que la testosterona exógena puede requerir."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "LA ELECCIÓN",
+      "title": "Dos Caminos para Elevar la Testosterona",
+      "subtitle": "La TRT estándar suministra testosterona desde fuera. El enclomifeno toma el otro camino.",
+      "tradeOffLabel": "Contrapartida:",
+      "list": {
+        "o1": {
+          "name": "TRT Estándar",
+          "category": "Reemplaza el Producto",
+          "description": "Suministra testosterona desde fuera. Funciona bien, y su cuerpo interpreta ese suministro entrante como suficiente, deja de enviar la señal para producir, y la producción de espermatozoides cae con ella.",
+          "tradeOff": "Un techo más alto, a costa de su propia producción y de su fertilidad."
+        },
+        "o2": {
+          "name": "Enclomifeno",
+          "category": "Restaura la Señal",
+          "description": "Bloquea los receptores de estrógeno en el hipotálamo, de modo que el cerebro interpreta el nivel como bajo y aumenta la LH y la FSH. Sus testículos reciben una señal más fuerte y producen más testosterona por sí mismos.",
+          "tradeOff": "Fertilidad y producción propia preservadas, con un techo más bajo, y requiere unos testículos capaces de responder."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "La respuesta se reduce a dos números que la mayoría de las clínicas nunca solicita.",
+      "list": {
+        "p1": {
+          "title": "El Enclomifeno Solo Funciona Si la Maquinaria Funciona",
+          "description": "El enclomifeno amplifica una señal. Si los testículos no pueden responder a esa señal (hipogonadismo primario) no hay nada que amplificar y el medicamento no funcionará. Distinguir el hipogonadismo primario del secundario requiere LH y FSH. Una clínica que receta basándose solo en un número de testosterona total está adivinando. Nosotros medimos LH y FSH antes de recetar. Siempre."
+        },
+        "p2": {
+          "title": "Empezamos por la Opción Menos Supresora que Encaje con su Objetivo",
+          "description": "Si tiene 34 años, hipogonadismo secundario y quiere hijos en los próximos años, empezar testosterona exógena de por vida es una decisión importante para tomarla a la ligera. El enclomifeno suele ser el primer paso más apropiado. Si no produce una respuesta adecuada, la TRT sigue disponible."
+        },
+        "p3": {
+          "title": "El Estradiol se Monitoriza",
+          "description": "Elevar la testosterona eleva el estradiol en el que se convierte, y el mecanismo del enclomifeno además implica directamente a los receptores de estrógeno. Seguimos el estradiol y los síntomas en lugar de suponer que se resolverá solo."
+        },
+        "p4": {
+          "title": "La Causa de Fondo Igualmente se Investiga",
+          "description": "El hipogonadismo secundario tiene causas: falta de sueño, grasa visceral, resistencia a la insulina, estrés crónico, disfunción tiroidea, prolactina elevada. El enclomifeno puede subir su número mientras la causa sigue haciendo daño. Nosotros la buscamos."
+        }
+      }
+    },
+    "signs": {
+      "tag": "REVISIÓN DE CANDIDATURA",
+      "title": "Señales de que el Enclomifeno Podría Ser Adecuado para Usted",
+      "subtitle": "Los síntomas son los mismos que en cualquier presentación de testosterona baja. Lo que cambia es qué quiere proteger.",
+      "note": "Los síntomas son los mismos que en cualquier presentación de testosterona baja: fatiga, menos impulso, cambios en la fuerza y la composición corporal, libido baja, ánimo plano y mala concentración.",
+      "list": {
+        "s1": "Tiene síntomas de testosterona baja y quiere preservar la fertilidad",
+        "s2": "Está intentando concebir ahora, o espera hacerlo en unos años",
+        "s3": "Sus análisis sugieren hipogonadismo secundario y no primario",
+        "s4": "Duda en comprometerse con testosterona exógena de por vida",
+        "s5": "Está en TRT y quiere hacer la transición fuera de ella manteniendo sus niveles",
+        "s6": "Quiere evitar la atrofia testicular",
+        "s7": "Prefiere que sea su propia fisiología la que haga el trabajo si puede",
+        "s8": "Quiere probar la opción reversible antes que la más permanente"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — y para Quién No",
+      "subtitle": "La candidatura se establece con LH y FSH, no con un número de testosterona total.",
+      "fitTitle": "El enclomifeno encaja bien si usted:",
+      "unfitTitle": "No es lo indicado si usted:",
+      "fit": {
+        "c1": "Tiene hipogonadismo secundario confirmado por LH y FSH",
+        "c2": "Quiere preservar la fertilidad, ahora o en el futuro",
+        "c3": "Prefiere un medicamento oral a las inyecciones",
+        "c4": "Quiere una opción reversible antes de comprometerse con la TRT",
+        "c5": "Está en TRT y quiere intentar la transición fuera de ella",
+        "c6": "Está dispuesto a completar los análisis de seguimiento"
+      },
+      "unfit": {
+        "n1": "Tiene hipogonadismo primario. Los testículos no pueden responder, así que el medicamento no tiene sobre qué actuar.",
+        "n2": "Tiene un tumor hipofisario o una causa estructural que requiere un tratamiento distinto",
+        "n3": "Tiene antecedentes de coágulos sanguíneos o ciertos trastornos visuales",
+        "n4": "Tiene una prolactina significativamente elevada sin tratar, que necesita su propio estudio primero",
+        "n5": "No está dispuesto a completar los análisis iniciales de LH y FSH",
+        "n6": "Necesita el techo que proporciona la testosterona exógena. El enclomifeno eleva su propia producción, que tiene un límite."
+      }
+    },
+    "steps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde el panel de partida hasta la monitorización continua, así es su atención.",
+      "list": {
+        "s1": {
+          "title": "Consulta",
+          "description": "Incluida una conversación directa sobre si los hijos están en sus planes."
+        },
+        "s2": {
+          "title": "Panel de Partida",
+          "description": "Extracción por la mañana. La LH y la FSH son los valores que determinan si este medicamento puede funcionar para usted."
+        },
+        "s3": {
+          "title": "Interpretación",
+          "description": "El Dr. Adonis establece si el hipogonadismo es primario o secundario y busca causas de fondo."
+        },
+        "s4": {
+          "title": "Visita de Resultados",
+          "description": "Si es candidato, recibe el protocolo. Si no lo es, recibe la razón honesta y la alternativa en lugar de una receta que le va a decepcionar."
+        },
+        "s5": {
+          "title": "Comienza la Terapia",
+          "description": "Dosificación oral, con una pauta individualizada según sus análisis y su respuesta."
+        },
+        "s6": {
+          "title": "Panel de Seguimiento",
+          "description": "Testosterona, LH, FSH y estradiol revisados para confirmar que respondió. Se ajusta la dosis, o se cambia el plan si la respuesta es insuficiente. Las pruebas de laboratorio continuas se hacen cada seis meses."
+        },
+        "s7": {
+          "title": "Monitorización Continua",
+          "description": "Análisis periódicos y revisión durante toda la duración de la terapia."
+        }
+      },
+      "note": "Quienes responden suelen ver aumentos de testosterona en las primeras semanas, y la mayoría de los pacientes reporta un cambio significativo de síntomas en 90 días."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención",
+      "subtitle": "Un modelo de pago directo, completo y transparente, sin facturas sorpresa.",
+      "list": {
+        "i1": {
+          "title": "Consulta Inicial",
+          "description": "Historia de síntomas, planes y calendario de fertilidad, tratamiento hormonal previo, historia médica y objetivos. La intención de tener hijos determina todo el protocolo y se pregunta directamente."
+        },
+        "i2": {
+          "title": "Panel Hormonal Completo",
+          "description": "Su panel debe incluir LH y FSH para establecer la candidatura, y puede incluir testosterona total y libre, SHBG, estradiol, prolactina, función tiroidea, hemograma, PSA y marcadores metabólicos."
+        },
+        "i3": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "description": "Si usted es candidato, por qué, y cuál es la alternativa si no lo es."
+        },
+        "i4": {
+          "title": "Enclomifeno Recetado",
+          "description": "Dosificación individualizada según sus análisis y su respuesta."
+        },
+        "i5": {
+          "title": "Correcciones de Apoyo",
+          "description": "Cualquier hallazgo tiroideo, metabólico, de sueño o nutricional que esté contribuyendo a una producción suprimida."
+        },
+        "i6": {
+          "title": "Pruebas de Laboratorio de Seguimiento Cada Seis Meses",
+          "description": "Revisando testosterona, LH, FSH y estradiol para confirmar la respuesta y ajustar la dosis."
+        },
+        "i7": {
+          "title": "Acceso Directo a la Consulta",
+          "description": "Llame o envíe un mensaje de texto a la clínica al (305) 290-4691 en cualquier momento y comuníquese directamente con nuestro personal."
+        },
+        "i8": {
+          "title": "Laboratorios y Consultas Incluidos",
+          "description": "Esta es una consulta de pago directo. No se proporcionan superbills."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POSIBLES",
+      "title": "Beneficios del Enclomifeno",
+      "subtitle": "La respuesta varía y depende en gran medida de si su hipogonadismo es secundario.",
+      "list": {
+        "b1": {
+          "title": "Fertilidad Preservada",
+          "description": "La ventaja central. La LH y la FSH suben en lugar de bajar, de modo que la producción de espermatozoides se mantiene en lugar de suprimirse."
+        },
+        "b2": {
+          "title": "Su Propia Producción Restaurada",
+          "description": "Testosterona producida por sus testículos, liberada en su ritmo natural, en lugar de administrada según un calendario de inyecciones."
+        },
+        "b3": {
+          "title": "Sin Atrofia Testicular",
+          "description": "La estimulación continua significa que los testículos siguen trabajando."
+        },
+        "b4": {
+          "title": "Administración Oral",
+          "description": "Sin inyecciones, sin zonas de aplicación, sin procedimientos con pellets."
+        },
+        "b5": {
+          "title": "Reversible",
+          "description": "Suspender el enclomifeno generalmente lo devuelve a su punto de partida, sin el período de recuperación que la testosterona exógena puede requerir."
+        },
+        "b6": {
+          "title": "Mejoría Típica de los Síntomas",
+          "description": "Energía, libido, ánimo, concentración y composición corporal, en línea con lo que produce cualquier corrección exitosa de la testosterona."
+        },
+        "b7": {
+          "title": "Un Primer Paso, No un Compromiso",
+          "description": "Si funciona, bien. Si no, la TRT sigue disponible y no se ha cerrado ninguna puerta."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Trabajando en un Territorio en el que Pasó Años",
+      "p1": "El enclomifeno actúa en el hipotálamo y la hipófisis, que es donde el Dr. Adonis comenzó su carrera. Se formó como <strong>neurocirujano en cirugía hipofisaria</strong>, completando su formación de posgrado y su fellowship en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida, y realizó cientos de procedimientos sobre la glándula que gobierna todo este eje.",
+      "p2": "Los medicamentos que actúan sobre la señal hipotálamo-hipófiso-gonadal están, en un sentido muy directo, trabajando en un territorio en el que él pasó años. Está certificado por el Institute for Functional Medicine y por la American Academy of Anti-Aging Medicine, ejerce medicina hormonal y funcional en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Medicina Funcional y Regenerativa",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "Fellowship en Neurocirugía, USF",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "Certificado por A4M",
+        "campus": "Campus Médico UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "Excelente experiencia en esta clínica. El personal es muy profesional y amable, y el equipo médico brinda una atención de primera clase. Sin duda, un servicio médico de calidad que recomiendo totalmente.",
+      "author": "— Ana G.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no son garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre la candidatura, la fertilidad, los efectos secundarios y cómo se compara con la TRT.",
+      "list": {
+        "f1": {
+          "q": "¿Está el enclomifeno aprobado por la FDA?",
+          "a": "El enclomifeno se receta fuera de indicación (off-label) para el hipogonadismo masculino y se dispensa como medicamento compuesto. La prescripción off-label es legal y habitual en medicina, y significa que la FDA no ha aprobado este uso específico. Lo recetamos con base en la evidencia clínica y en una evaluación individual, y le diremos exactamente qué está tomando y por qué."
+        },
+        "f2": {
+          "q": "¿En qué se diferencia esto de la TRT?",
+          "a": "La TRT suministra testosterona desde fuera, lo que suprime su propia producción y su fertilidad. El enclomifeno estimula a su cuerpo para que produzca más de la suya, de modo que el eje sigue activo. La contrapartida es un techo más bajo y el requisito de que sus testículos puedan responder."
+        },
+        "f3": {
+          "q": "¿Seguro que me subirá la testosterona?",
+          "a": "Si su hipogonadismo es secundario, la mayoría de los hombres responde. Si es primario, no funcionará. Por eso medimos LH y FSH antes de recetar y no después."
+        },
+        "f4": {
+          "q": "¿Puedo usarlo mientras intento concebir?",
+          "a": "Esa es la razón principal por la que los hombres lo eligen. El enclomifeno mantiene y puede mejorar las señales que impulsan la producción de espermatozoides. Si está intentándolo activamente, díganoslo para que podamos coordinarlo adecuadamente."
+        },
+        "f5": {
+          "q": "¿Cuáles son los efectos secundarios?",
+          "a": "Los efectos reportados incluyen dolor de cabeza, alteraciones visuales, cambios de ánimo, náuseas y sofocos. Los síntomas visuales requieren que nos contacte con prontitud. La mayoría de los hombres lo tolera bien, y monitorizamos el estradiol junto con la testosterona."
+        },
+        "f6": {
+          "q": "¿Cuánto tarda en funcionar?",
+          "a": "La testosterona suele subir en las primeras semanas. La mejoría de los síntomas normalmente va por detrás del cambio en los análisis."
+        },
+        "f7": {
+          "q": "¿Puedo cambiar de TRT a enclomifeno?",
+          "a": "A menudo sí, aunque requiere una transición supervisada y hay un período durante el cual puede no sentirse en su mejor momento mientras su eje se reactiva. Esto nunca debe intentarse sin supervisión médica."
+        },
+        "f8": {
+          "q": "¿Necesito análisis si me siento bien?",
+          "a": "Sí. La testosterona, el estradiol y el hematocrito se monitorizan durante todo el tratamiento. Sentirse bien no es lo mismo que estar en rango."
+        },
+        "f9": {
+          "q": "¿Se puede manejar por telemedicina?",
+          "a": "Sí, para pacientes ubicados en Florida. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Averigüe Si Es Candidato",
+      "lead": "La respuesta se reduce a dos números que la mayoría de las clínicas nunca solicita. La LH y la FSH nos dirán si el enclomifeno puede funcionar para usted antes de que gaste nada en el medicamento.",
+      "primary": "Solicite una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*El enclomifeno se receta fuera de indicación y requiere evaluación médica. No es apropiado para todos los pacientes y se receta solo después de que el médico revise su historia y sus resultados de laboratorio."
+    },
+    "seo": {
+      "title": "Terapia con Enclomifeno en Miami | Aumente la Testosterona Sin Suprimir la Fertilidad",
+      "description": "Enclomifeno recetado por un médico en Miami. Aumenta su propia producción de testosterona preservando la fertilidad. Panel hormonal completo y seguimiento con el Dr. Adonis Maiquez, MD."
+    }
   }
 }
