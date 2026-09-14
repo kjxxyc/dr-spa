@@ -1346,5 +1346,315 @@
       "title": "Salud Cerebral y Cognitiva en Miami | Tratamiento de Causa Raíz para la Niebla Mental — Dr. Adonis Maiquez, MD",
       "description": "Medicina funcional para la niebla mental, la memoria y las preocupaciones cognitivas en Miami. Evaluamos los factores metabólicos, hormonales e inflamatorios de la cognición. Telemedicina en Florida."
     }
+  },
+  "autoimmunePage": {
+    "badge": "MEDICINA AUTOINMUNE Y FUNCIONAL",
+    "title": "Atención Autoinmune en Miami, FL",
+    "lead": "Un diagnóstico autoinmune suele venir con un medicamento y un especialista, y muy rara vez con una explicación. El sistema inmunitario está atacando su propio tejido. Algo puso eso en marcha, y nosotros también hacemos esa pregunta.",
+    "ctaConsult": "Solicite una Consulta",
+    "ctaCall": "Llame al (305) 290-4691",
+    "pills": {
+      "workup": "Estudio Amplio de Desencadenantes",
+      "alongside": "Junto a sus Especialistas",
+      "telehealth": "Telemedicina en Florida Disponible"
+    },
+    "intro": {
+      "tag": "EL MECANISMO",
+      "title": "Qué Son las Condiciones Autoinmunes",
+      "lead": "Una condición autoinmune es aquella en la que el sistema inmunitario no logra distinguir su tejido de una amenaza y lo ataca. Hay más de ochenta condiciones reconocidas, y cuál de ellas tiene usted depende sobre todo de qué tejido resulta atacado.",
+      "p2": "Tiroides, y tiene Hashimoto o Graves. Articulaciones, artritis reumatoide. Revestimiento intestinal, celiaquía o Crohn. Piel, psoriasis. Sistema nervioso, esclerosis múltiple. Tejido conectivo, lupus.",
+      "callout": "Se tratan como enfermedades separadas por especialistas separados. El mecanismo de fondo es el mismo.",
+      "p4": "Las condiciones autoinmunes además se agrupan. Una vez que tiene una, su riesgo de una segunda aumenta de forma considerable. Los pacientes a menudo acumulan diagnósticos a lo largo de una década, cada uno tratado de forma aislada por un especialista distinto, cuando lo que ocurre en realidad es un solo sistema inmunitario comportándose de una sola manera.",
+      "gutPre": "La reparación intestinal forma parte de casi todos los protocolos que construimos aquí. Consulte nuestra",
+      "gutLink": "página de Salud Intestinal",
+      "features": {
+        "one": {
+          "title": "Un Solo Sistema Inmunitario",
+          "desc": "Más de ochenta condiciones, un mecanismo: un sistema inmunitario que ha perdido la tolerancia y está atacando lo propio."
+        },
+        "gut": {
+          "title": "La Mayor Parte del Tejido Inmunitario Está en el Intestino",
+          "desc": "Por eso evaluamos la integridad de la barrera incluso cuando sus síntomas están en las articulaciones o en la piel."
+        },
+        "coord": {
+          "title": "Coordinados, No en Competencia",
+          "desc": "Trabajamos junto a su reumatólogo o gastroenterólogo. No manejamos biológicos."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "LO QUE DESCRIBE LA INVESTIGACIÓN",
+      "title": "Los Tres Componentes",
+      "subtitle": "Dos de estos tres se pueden abordar. Esa es toda la base de este enfoque.",
+      "list": {
+        "d1": {
+          "name": "Susceptibilidad Genética",
+          "category": "Carga el Arma",
+          "description": "Su riesgo heredado determina qué tejido es vulnerable y con qué facilidad se pierde la tolerancia. Es el único de los tres componentes que no se puede cambiar, y precisamente por eso los otros dos importan tanto."
+        },
+        "d2": {
+          "name": "Un Desencadenante Ambiental",
+          "category": "Aprieta el Gatillo",
+          "description": "Infección, toxina, estrés crónico o antígeno alimentario. Algo puso en marcha la actividad inmunitaria, e identificarlo es la pregunta que la medicina convencional más a menudo deja de lado a favor de suprimir el ataque."
+        },
+        "d3": {
+          "name": "Aumento de la Permeabilidad Intestinal",
+          "category": "Un Rasgo Común",
+          "description": "Una barrera intestinal aflojada aparece en una amplia variedad de condiciones autoinmunes. Proteínas que deberían permanecer dentro del intestino llegan al torrente sanguíneo y provocan respuestas inmunitarias, que es una de las vías propuestas hacia la pérdida de tolerancia."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "Suprimir el ataque suele ser necesario y rara vez suficiente. Hacemos la otra pregunta al mismo tiempo.",
+      "list": {
+        "p1": {
+          "title": "Tratamos el Sistema Inmunitario, No Solo el Órgano Diana",
+          "description": "Su reumatólogo maneja sus articulaciones. Su gastroenterólogo maneja su intestino. Alguien debería estar mirando por qué su sistema inmunitario está haciendo esto en primer lugar, y coordinando todo el conjunto."
+        },
+        "p2": {
+          "title": "Investigamos los Desencadenantes",
+          "description": "Infecciones virales crónicas o reactivadas, sobrecrecimiento bacteriano y disbiosis, metales pesados y toxinas ambientales, antígenos alimentarios, estrés crónico y elevación sostenida del cortisol, deficiencias nutricionales en particular de vitamina D, y desequilibrio hormonal. Cuáles de estos importan varía según el paciente, y por eso el estudio es amplio."
+        },
+        "p3": {
+          "title": "La Integridad Intestinal Es Central",
+          "description": "La mayor parte de su tejido inmunitario se encuentra en el revestimiento intestinal. Cuando esa barrera se vuelve permeable, proteínas que deberían permanecer dentro del intestino llegan al torrente sanguíneo y provocan respuestas inmunitarias. La reparación intestinal forma parte de casi todos los protocolos que construimos aquí."
+        },
+        "p4": {
+          "title": "Trabajamos Junto a sus Especialistas",
+          "description": "Esto no sustituye a la reumatología, la gastroenterología ni la neurología, y no le pedimos que suspenda la terapia inmunosupresora prescrita. Los cambios de medicación se hacen con el médico que la recetó."
+        },
+        "p5": {
+          "title": "Vigilamos lo que Viene",
+          "description": "Dado que las condiciones autoinmunes se agrupan, buscamos marcadores tempranos de actividad autoinmune adicional en lugar de esperar a que los síntomas la declaren."
+        }
+      }
+    },
+    "signs": {
+      "tag": "REVISIÓN DE SÍNTOMAS",
+      "title": "Señales de que Esto Podría Ayudarle",
+      "subtitle": "Estos son los patrones que con más frecuencia llevan a los pacientes a la atención autoinmune de causa raíz.",
+      "list": {
+        "s1": "Un diagnóstico autoinmune manejado con medicación y sin investigación de la causa",
+        "s2": "Síntomas que continúan a pesar del tratamiento",
+        "s3": "Más de un diagnóstico autoinmune",
+        "s4": "ANA positivo u otros marcadores autoinmunes sin un diagnóstico específico",
+        "s5": "Le han dicho que tiene «algo autoinmune» que nadie ha nombrado",
+        "s6": "Brotes sin un patrón identificable",
+        "s7": "Síntomas digestivos junto con su condición principal",
+        "s8": "Fatiga persistente que su especialista considera no relacionada",
+        "s9": "Dolor articular, niebla mental o problemas de piel además de su diagnóstico",
+        "s10": "Antecedentes familiares marcados de enfermedad autoinmune",
+        "s11": "Síntomas que comenzaron después de una infección, un embarazo o un estrés importante",
+        "s12": "Querer reducir con el tiempo la dependencia de la medicación inmunosupresora",
+        "s13": "Marcadores inflamatorios elevados sin una fuente clara"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — y para Quién No",
+      "subtitle": "Algunas situaciones necesitan atención especializada urgente primero, y se lo diremos con claridad.",
+      "fitTitle": "Encaja bien si usted:",
+      "unfitTitle": "No es lo indicado si usted:",
+      "scopeNote": "Las condiciones autoinmunes son crónicas y se manejan en lugar de curarse. Trabajamos junto a sus especialistas actuales y no manejamos terapia inmunosupresora ni biológica. Cualquier cambio en la medicación prescrita lo hace el médico que la recetó.",
+      "fit": {
+        "c1": "Tiene un diagnóstico autoinmune y quiere que se investiguen los factores que lo impulsan",
+        "c2": "Tiene múltiples condiciones autoinmunes",
+        "c3": "Tiene marcadores positivos sin un diagnóstico definitivo",
+        "c4": "Sigue con síntomas a pesar de un tratamiento especializado adecuado",
+        "c5": "Quiere trabajar junto a su reumatólogo o gastroenterólogo",
+        "c6": "Está dispuesto a hacer cambios sustanciales de dieta y estilo de vida"
+      },
+      "unfit": {
+        "n1": "Está en un brote grave agudo o en una crisis de órgano. Eso necesita atención especializada urgente primero.",
+        "n2": "Quiere suspender su terapia inmunosupresora prescrita. No lo aconsejamos, y cualquier cambio lo hace su médico prescriptor.",
+        "n3": "Busca una cura. Las condiciones autoinmunes se manejan. A veces muy bien, pero se manejan.",
+        "n4": "No está dispuesto a cambiar su dieta. En la atención autoinmune esto no es una recomendación secundaria.",
+        "n5": "Necesita manejo de terapia biológica. Eso corresponde a reumatología, y coordinamos en lugar de sustituir."
+      }
+    },
+    "steps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde la primera consulta hasta las pruebas de seguimiento confirmadas, así es su atención.",
+      "list": {
+        "s1": {
+          "title": "Consulta",
+          "description": "Su diagnóstico, su tratamiento y qué estaba ocurriendo en su vida en el año o dos antes de que empezaran los síntomas. Ese período con frecuencia contiene el desencadenante."
+        },
+        "s2": {
+          "title": "Pruebas",
+          "description": "Amplias, porque los desencadenantes autoinmunes son variados y no podemos estrechar la búsqueda antes de mirar. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "s3": {
+          "title": "Interpretación",
+          "description": "El Dr. Adonis evalúa la actividad inmunitaria, la carga inflamatoria y cuáles de los probables desencadenantes respaldan sus análisis."
+        },
+        "s4": {
+          "title": "Consulta de Resultados",
+          "description": "Hallazgos explicados, desencadenantes identificados y un plan secuenciado. El orden importa en la atención autoinmune y le diremos por qué empezamos donde empezamos."
+        },
+        "s5": {
+          "title": "Comienza el Tratamiento",
+          "description": "Normalmente con reparación intestinal y eliminación de desencadenantes, junto con nutrición antiinflamatoria y suplementación dirigida."
+        },
+        "s6": {
+          "title": "Pruebas de Seguimiento Cada Seis Meses",
+          "description": "Marcadores inflamatorios y autoinmunes revisados para confirmar la dirección del cambio."
+        }
+      },
+      "note": "La mayoría de los pacientes reporta un cambio significativo en 90 días. Los anticuerpos y los marcadores inflamatorios suelen moverse más lentamente que los síntomas, y la atención autoinmune se mide en años y no en semanas."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención",
+      "subtitle": "Un modelo de pago directo, completo y transparente, sin facturas sorpresa.",
+      "list": {
+        "i1": {
+          "title": "Consulta Inicial Completa",
+          "description": "Visita extendida que cubre su diagnóstico e historia, cronología de síntomas, qué precedió al inicio, infecciones, estrés, exposiciones, dieta, digestión y antecedentes familiares."
+        },
+        "i2": {
+          "title": "Pruebas de Laboratorio Completas",
+          "description": "Marcadores autoinmunes y de anticuerpos, marcadores inflamatorios, función tiroidea completa, hormonas, vitamina D y estado nutricional, sensibilidades alimentarias, permeabilidad intestinal, evaluación del intestino y el microbioma, marcadores de infección crónica y cribado de metales pesados y toxinas."
+        },
+        "i3": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "description": "Qué muestran las pruebas sobre su actividad inmunitaria, qué desencadenantes parecen estar operando y en qué orden los abordaremos."
+        },
+        "i4": {
+          "title": "Su Protocolo de Tratamiento",
+          "description": "Eliminación de desencadenantes, reparación intestinal, modulación inmunitaria y apoyo antiinflamatorio, corrección nutricional dirigida, corrección hormonal cuando sea relevante y un plan de nutrición construido para sus hallazgos específicos."
+        },
+        "i5": {
+          "title": "Coordinación con sus Especialistas",
+          "description": "Trabajamos junto a su atención actual en lugar de rodearla."
+        },
+        "i6": {
+          "title": "Pruebas de Laboratorio de Seguimiento Cada Seis Meses",
+          "description": "Siguiendo los marcadores inflamatorios y autoinmunes junto con los síntomas."
+        },
+        "i7": {
+          "title": "Acceso Directo a la Consulta",
+          "description": "Llame o envíe un mensaje de texto a la clínica al (305) 290-4691 en cualquier momento y comuníquese directamente con nuestro personal."
+        },
+        "i8": {
+          "title": "Laboratorios y Consultas Incluidos",
+          "description": "Esta es una consulta de pago directo. No se proporcionan superbills."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POSIBLES",
+      "title": "Beneficios de la Atención Autoinmune de Causa Raíz",
+      "subtitle": "La respuesta varía considerablemente según la condición, la gravedad, la duración y la adherencia.",
+      "list": {
+        "b1": {
+          "title": "Marcadores Inflamatorios Reducidos",
+          "description": "Evidencia objetiva de que la actividad inmunitaria se está calmando."
+        },
+        "b2": {
+          "title": "Brotes Menos Frecuentes y Menos Graves",
+          "description": "Reportado con frecuencia una vez que los desencadenantes se identifican y se eliminan."
+        },
+        "b3": {
+          "title": "Mejoría de la Fatiga",
+          "description": "El síntoma que más afecta la vida diaria y el que los especialistas más a menudo consideran fuera de su ámbito."
+        },
+        "b4": {
+          "title": "Mejoría Digestiva",
+          "description": "Casi universal, ya que la reparación intestinal forma parte de casi todos los protocolos."
+        },
+        "b5": {
+          "title": "Menos Dolor y Rigidez Articular",
+          "description": "A medida que baja la inflamación sistémica."
+        },
+        "b6": {
+          "title": "Claridad Mental",
+          "description": "La niebla mental autoinmune es real y con frecuencia mejora con el control de la inflamación."
+        },
+        "b7": {
+          "title": "Mejor Respuesta a su Medicación Actual",
+          "description": "Reducir la carga inflamatoria general suele mejorar qué tan bien funciona su tratamiento actual."
+        },
+        "b8": {
+          "title": "Una Posible Vía a Menos Medicación",
+          "description": "Para algunos pacientes, con el tiempo y en coordinación con el especialista que prescribe. Nunca por cuenta propia."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Por Qué un Cirujano Busca el Origen",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano</strong>, completando su formación de posgrado y su fellowship en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida, y realizó cientos de procedimientos hipofisarios antes de pasar a la medicina funcional y regenerativa.",
+      "p2": "La cirugía enseña a identificar el origen de un problema en lugar de manejar sus consecuencias, y ese instinto es el que lo llevó hacia la enfermedad crónica y las causas que hay debajo. Está certificado por el Institute for Functional Medicine y por la American Academy of Anti-Aging Medicine, ejerce en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Medicina Funcional y Regenerativa",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "Fellowship en Neurocirugía, USF",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "Certificado por A4M",
+        "campus": "Campus Médico UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "Encontrar médicos locales con experiencia que realmente tomaran en serio mis síntomas fue difícil. Tuve que entrevistar a varios antes de que me refirieran al Dr. Adonis. Estoy muy contenta de haber encontrado a alguien que escucha.",
+      "author": "— Alexia A.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no son garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre cómo funciona aquí la atención autoinmune de causa raíz.",
+      "list": {
+        "f1": {
+          "q": "¿Se puede curar la enfermedad autoinmune?",
+          "a": "No, y quien le diga lo contrario está exagerando. Las condiciones autoinmunes son crónicas. Lo que sí puede cambiar es la actividad de la enfermedad, la carga de síntomas, la frecuencia de los brotes y la calidad de vida, y para muchos pacientes esos aspectos cambian considerablemente."
+        },
+        "f2": {
+          "q": "¿Dejo de ver a mi reumatólogo?",
+          "a": "No. Trabajamos junto a sus especialistas, y no manejamos biológicos ni hacemos cambios en la terapia inmunosupresora. Esas decisiones corresponden al médico que las recetó."
+        },
+        "f3": {
+          "q": "¿Por qué evalúan mi intestino para una condición articular?",
+          "a": "Porque la mayor parte del tejido inmunitario se ubica en el revestimiento intestinal, y el aumento de la permeabilidad intestinal está implicado repetidamente en una variedad de condiciones autoinmunes. Dónde aparecen los síntomas y dónde se origina el problema son con frecuencia lugares distintos."
+        },
+        "f4": {
+          "q": "Tengo un ANA positivo pero ningún diagnóstico. ¿Pueden ayudarme?",
+          "a": "Es una situación común y frustrante. Hay actividad autoinmune presente pero no se ha organizado en una enfermedad con nombre. Es posiblemente el mejor momento para intervenir, y es un grupo al que la medicina convencional tiene dificultades para ofrecer algo."
+        },
+        "f5": {
+          "q": "¿Podré reducir mi medicación?",
+          "a": "A veces, con el tiempo, y solo en coordinación con el especialista que la prescribe. Nunca lo presentamos como un resultado esperado, y nunca aconsejamos suspender la medicación por cuenta propia."
+        },
+        "f6": {
+          "q": "¿Cuánto tiempo lleva esto?",
+          "a": "La mayoría de los pacientes reporta un cambio significativo en 90 días, pero la atención autoinmune se mide en años. Los marcadores se mueven lentamente y el trabajo es continuo."
+        },
+        "f7": {
+          "q": "¿Aceptan seguro?",
+          "a": "No. Esta es una consulta de pago directo y no proporcionamos superbills. Sus laboratorios y consultas están incluidos en su programa."
+        },
+        "f8": {
+          "q": "¿Se puede manejar por telemedicina?",
+          "a": "Sí, para pacientes ubicados en Florida. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Pregunte Por Qué, No Solo Qué",
+      "lead": "Usted tiene un diagnóstico. Lo que probablemente no tiene es una explicación de qué lo desencadenó y qué lo mantiene activo. Ese es el trabajo que hacemos.",
+      "primary": "Solicite una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*La atención autoinmune requiere evaluación médica y no es apropiada para todos los pacientes. Trabajamos junto a sus especialistas actuales y no manejamos terapia inmunosupresora ni biológica."
+    },
+    "seo": {
+      "title": "Tratamiento de Enfermedades Autoinmunes en Miami | Atención de Causa Raíz — Dr. Adonis Maiquez, MD",
+      "description": "Medicina funcional para enfermedades autoinmunes en Miami. Investigamos los desencadenantes que impulsan la actividad inmunitaria en lugar de solo suprimir los síntomas. Telemedicina en Florida."
+    }
   }
 }

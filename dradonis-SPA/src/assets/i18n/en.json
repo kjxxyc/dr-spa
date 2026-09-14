@@ -1346,5 +1346,315 @@
       "title": "Brain Health & Cognitive Care Miami | Root-Cause Brain Fog Treatment — Dr. Adonis Maiquez, MD",
       "description": "Functional medicine for brain fog, memory, and cognitive concerns in Miami. We test the metabolic, hormonal, and inflammatory drivers of cognition. Florida telehealth available."
     }
+  },
+  "autoimmunePage": {
+    "badge": "AUTOIMMUNE & FUNCTIONAL MEDICINE",
+    "title": "Autoimmune Care in Miami, FL",
+    "lead": "An autoimmune diagnosis usually comes with a medication and a specialist, and very rarely with an explanation. The immune system is attacking your own tissue. Something set that in motion — we ask that question too.",
+    "ctaConsult": "Request A Consultation",
+    "ctaCall": "Call (305) 290-4691",
+    "pills": {
+      "workup": "Broad Trigger Workup",
+      "alongside": "Alongside Your Specialists",
+      "telehealth": "Florida Telehealth Available"
+    },
+    "intro": {
+      "tag": "THE MECHANISM",
+      "title": "What Autoimmune Conditions Are",
+      "lead": "An autoimmune condition is one in which the immune system fails to distinguish your tissue from a threat, and attacks it. There are more than eighty recognized conditions, and which one you have depends mostly on which tissue is targeted.",
+      "p2": "Thyroid, and you have Hashimoto’s or Graves’. Joints, rheumatoid arthritis. Intestinal lining, celiac or Crohn’s. Skin, psoriasis. Nervous system, multiple sclerosis. Connective tissue, lupus.",
+      "callout": "They are treated as separate diseases by separate specialists. The underlying mechanism is the same.",
+      "p4": "Autoimmune conditions also cluster. Once you have one, your risk of a second is meaningfully elevated. Patients often accumulate diagnoses over a decade, each treated in isolation by a different specialist, when what is actually happening is one immune system behaving one way.",
+      "gutPre": "Gut repair is a component of nearly every protocol we build here. See our",
+      "gutLink": "Gut Health page",
+      "features": {
+        "one": {
+          "title": "One Immune System",
+          "desc": "Eighty-plus conditions, one mechanism: an immune system that has lost tolerance and is attacking self."
+        },
+        "gut": {
+          "title": "Most Immune Tissue Is In The Gut",
+          "desc": "Which is why we assess barrier integrity even when your symptoms are in your joints or your skin."
+        },
+        "coord": {
+          "title": "Coordinated, Not Competing",
+          "desc": "We work alongside your rheumatologist or gastroenterologist. We do not manage biologics."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "WHAT THE RESEARCH DESCRIBES",
+      "title": "The Three Components",
+      "subtitle": "Two of these three can be addressed. That is the entire basis of this approach.",
+      "list": {
+        "d1": {
+          "name": "Genetic Susceptibility",
+          "category": "Loads The Gun",
+          "description": "Your inherited risk determines which tissue is vulnerable and how readily tolerance is lost. This is the one component of the three that cannot be changed, which is precisely why the other two matter so much."
+        },
+        "d2": {
+          "name": "An Environmental Trigger",
+          "category": "Pulls It",
+          "description": "Infection, toxin, chronic stress, or dietary antigen. Something set the immune activity in motion, and identifying it is the question conventional care most often sets aside in favor of suppressing the attack."
+        },
+        "d3": {
+          "name": "Increased Intestinal Permeability",
+          "category": "A Common Feature",
+          "description": "A loosened intestinal barrier appears across a wide range of autoimmune conditions. Proteins that should stay inside the gut reach the bloodstream and provoke immune responses, which is one proposed route to loss of tolerance."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METHODOLOGY",
+      "title": "Our Approach",
+      "subtitle": "Suppressing the attack is often necessary and rarely sufficient. We ask the other question at the same time.",
+      "list": {
+        "p1": {
+          "title": "We Treat The Immune System, Not Only The Target Organ",
+          "description": "Your rheumatologist manages your joints. Your gastroenterologist manages your gut. Someone should be looking at why your immune system is doing this in the first place, and coordinating across all of it."
+        },
+        "p2": {
+          "title": "We Investigate Triggers",
+          "description": "Chronic or reactivated viral infections, bacterial overgrowth and dysbiosis, heavy metals and environmental toxins, food antigens, chronic stress and sustained cortisol elevation, nutrient deficiencies particularly vitamin D, and hormone imbalance. Which of these matter differs by patient, which is why the workup is broad."
+        },
+        "p3": {
+          "title": "Gut Integrity Is Central",
+          "description": "The majority of your immune tissue sits in the intestinal lining. When that barrier becomes permeable, proteins that should stay inside the gut reach the bloodstream and provoke immune responses. Gut repair is a component of nearly every protocol we build here."
+        },
+        "p4": {
+          "title": "We Work Alongside Your Specialists",
+          "description": "This is not a replacement for rheumatology, gastroenterology, or neurology, and we do not ask you to stop prescribed immunosuppressive therapy. Medication changes are made with the physician who prescribed them."
+        },
+        "p5": {
+          "title": "We Screen For What Is Coming",
+          "description": "Given how autoimmune conditions cluster, we look for early markers of additional autoimmune activity rather than waiting for symptoms to declare it."
+        }
+      }
+    },
+    "signs": {
+      "tag": "SYMPTOM CHECK",
+      "title": "Signs This Could Help You",
+      "subtitle": "These are the patterns that most often bring patients to root-cause autoimmune care.",
+      "list": {
+        "s1": "An autoimmune diagnosis managed with medication and no investigation of cause",
+        "s2": "Symptoms continuing despite treatment",
+        "s3": "More than one autoimmune diagnosis",
+        "s4": "Positive ANA or other autoimmune markers without a specific diagnosis",
+        "s5": "Told you have “something autoimmune” that nobody has named",
+        "s6": "Flares with no identifiable pattern",
+        "s7": "Digestive symptoms alongside your primary condition",
+        "s8": "Persistent fatigue that your specialist considers unrelated",
+        "s9": "Joint pain, brain fog, or skin problems on top of your diagnosis",
+        "s10": "Strong family history of autoimmune disease",
+        "s11": "Symptoms that began after an infection, pregnancy, or major stress",
+        "s12": "Wanting to reduce reliance on immunosuppressive medication over time",
+        "s13": "Elevated inflammatory markers with no clear source"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUATION",
+      "title": "Who This Is For — And Who It Is Not For",
+      "subtitle": "Some situations need urgent specialist care first, and we will say so directly.",
+      "fitTitle": "This is a strong fit if you:",
+      "unfitTitle": "It is not the right fit if you:",
+      "scopeNote": "Autoimmune conditions are chronic and are managed rather than cured. We work alongside your existing specialists and do not manage immunosuppressive or biologic therapy. Any change to prescribed medication is made by the physician who prescribed it.",
+      "fit": {
+        "c1": "Have an autoimmune diagnosis and want the drivers investigated",
+        "c2": "Have multiple autoimmune conditions",
+        "c3": "Have positive markers without a definitive diagnosis",
+        "c4": "Continue to have symptoms despite appropriate specialist treatment",
+        "c5": "Want to work alongside your rheumatologist or gastroenterologist",
+        "c6": "Are prepared to make substantial dietary and lifestyle changes"
+      },
+      "unfit": {
+        "n1": "Are in an acute severe flare or organ crisis. That needs urgent specialist care first.",
+        "n2": "Want to stop your prescribed immunosuppressive therapy. We do not advise that, and any change is made by your prescribing physician.",
+        "n3": "Are looking for a cure. Autoimmune conditions are managed. Sometimes very well, but managed.",
+        "n4": "Are unwilling to change your diet. In autoimmune care this is not a peripheral recommendation.",
+        "n5": "Need biologic therapy management. That belongs with rheumatology, and we will coordinate rather than substitute."
+      }
+    },
+    "steps": {
+      "tag": "THE PROCESS",
+      "title": "How Treatment Works",
+      "subtitle": "From first consultation to confirmed follow-up testing, here is what your care looks like.",
+      "list": {
+        "s1": {
+          "title": "Consultation",
+          "description": "Your diagnosis, your treatment, and what was happening in your life in the year or two before symptoms started. That period frequently contains the trigger."
+        },
+        "s2": {
+          "title": "Testing",
+          "description": "Broad, because autoimmune triggers are varied and we cannot narrow the search before we look. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "s3": {
+          "title": "Interpretation",
+          "description": "Dr. Adonis assesses immune activity, inflammatory load, and which of the likely triggers your testing supports."
+        },
+        "s4": {
+          "title": "Results Consultation",
+          "description": "Findings explained, triggers identified, and a sequenced plan. Order matters in autoimmune care and we will tell you why we are starting where we are."
+        },
+        "s5": {
+          "title": "Treatment Begins",
+          "description": "Usually with gut repair and trigger removal, alongside anti-inflammatory nutrition and targeted supplementation."
+        },
+        "s6": {
+          "title": "Follow-Up Testing Every Six Months",
+          "description": "Inflammatory and autoimmune markers rechecked to confirm the direction of travel."
+        }
+      },
+      "note": "Most patients report meaningful change within 90 days. Antibody and inflammatory markers generally move more slowly than symptoms, and autoimmune care is measured over years rather than weeks."
+    },
+    "included": {
+      "tag": "YOUR PROGRAM",
+      "title": "What’s Included in Your Care",
+      "subtitle": "A comprehensive, transparent cash-pay model with zero surprise bills.",
+      "list": {
+        "i1": {
+          "title": "Initial Comprehensive Consultation",
+          "description": "Extended visit covering your diagnosis and history, symptom timeline, what preceded onset, infections, stress, exposures, diet, digestion, and family history."
+        },
+        "i2": {
+          "title": "Comprehensive Laboratory Testing",
+          "description": "Autoimmune and antibody markers, inflammatory markers, complete thyroid function, hormones, vitamin D and nutrient status, food sensitivities, intestinal permeability, gut and microbiome assessment, chronic infection markers, and heavy metal and toxin screening."
+        },
+        "i3": {
+          "title": "Results Consultation with Dr. Adonis",
+          "description": "What the testing shows about your immune activity, which triggers appear to be operating, and the order in which we address them."
+        },
+        "i4": {
+          "title": "Your Treatment Protocol",
+          "description": "Trigger removal, gut repair, immune modulation and anti-inflammatory support, targeted nutrient correction, hormone correction where relevant, and a nutrition plan built for your specific findings."
+        },
+        "i5": {
+          "title": "Coordination With Your Specialists",
+          "description": "We work alongside your existing care rather than around it."
+        },
+        "i6": {
+          "title": "Follow-Up Lab Testing Every Six Months",
+          "description": "Tracking inflammatory and autoimmune markers alongside symptoms."
+        },
+        "i7": {
+          "title": "Direct Access To The Practice",
+          "description": "Call or text the clinic at (305) 290-4691 at any time and message directly with our staff."
+        },
+        "i8": {
+          "title": "Labs And Consultations Included",
+          "description": "This is a cash-pay practice. Superbills are not provided."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "POTENTIAL OUTCOMES",
+      "title": "Benefits of Root-Cause Autoimmune Care",
+      "subtitle": "Response varies substantially by condition, severity, duration, and adherence.",
+      "list": {
+        "b1": {
+          "title": "Reduced Inflammatory Markers",
+          "description": "Objective evidence that immune activity is calming."
+        },
+        "b2": {
+          "title": "Fewer And Less Severe Flares",
+          "description": "Frequently reported once triggers are identified and removed."
+        },
+        "b3": {
+          "title": "Fatigue Improvement",
+          "description": "The symptom that affects daily life most and that specialists most often consider outside their remit."
+        },
+        "b4": {
+          "title": "Digestive Improvement",
+          "description": "Almost universal, since gut repair is part of nearly every protocol."
+        },
+        "b5": {
+          "title": "Joint Pain And Stiffness Reduction",
+          "description": "As systemic inflammation falls."
+        },
+        "b6": {
+          "title": "Cognitive Clarity",
+          "description": "Autoimmune brain fog is real and frequently improves with inflammatory control."
+        },
+        "b7": {
+          "title": "Better Response To Existing Medication",
+          "description": "Reducing overall inflammatory load often improves how well your current treatment works."
+        },
+        "b8": {
+          "title": "A Possible Path To Lower Medication Needs",
+          "description": "For some patients, over time, in coordination with the prescribing specialist. Never independently."
+        }
+      }
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "Why A Surgeon Looks For The Source",
+      "p1": "Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures before moving into functional and regenerative medicine.",
+      "p2": "Surgery teaches you to identify the source of a problem rather than manage its consequences, and that instinct is what carried him toward chronic disease and the causes underneath it. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Functional &amp; Regenerative Medicine",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "USF Neurosurgery Fellowship",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "A4M Board Certified",
+        "campus": "UM Medical Campus &amp; Florida Telehealth"
+      }
+    },
+    "testimonial": {
+      "quote": "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I'm very glad to have found someone who listens.",
+      "author": "— Alexia A.",
+      "role": "Verified Clinic Patient",
+      "disclaimer": "*Individual results vary. Patient experiences described here are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about how root-cause autoimmune care works here.",
+      "list": {
+        "f1": {
+          "q": "Can autoimmune disease be cured?",
+          "a": "No, and anyone telling you otherwise is overselling. Autoimmune conditions are chronic. What can change is disease activity, symptom burden, flare frequency, and quality of life, and for many patients those change considerably."
+        },
+        "f2": {
+          "q": "Do I stop seeing my rheumatologist?",
+          "a": "No. We work alongside your specialists, and we do not manage biologics or make changes to immunosuppressive therapy. Those decisions belong with the physician who prescribed them."
+        },
+        "f3": {
+          "q": "Why do you test my gut for a joint condition?",
+          "a": "Because most immune tissue is located in the intestinal lining, and increased intestinal permeability is repeatedly implicated across a range of autoimmune conditions. Where the symptoms appear and where the problem originates are frequently different places."
+        },
+        "f4": {
+          "q": "I have a positive ANA but no diagnosis. Can you help?",
+          "a": "This is a common and frustrating position. Autoimmune activity is present but has not organized into a nameable disease. It is arguably the best moment to intervene, and it is a group conventional care struggles to do anything for."
+        },
+        "f5": {
+          "q": "Will I be able to reduce my medication?",
+          "a": "Sometimes, over time, and only in coordination with your prescribing specialist. We never present this as an expected outcome, and we never advise stopping medication on your own."
+        },
+        "f6": {
+          "q": "How long does this take?",
+          "a": "Most patients report meaningful change within 90 days, but autoimmune care is measured in years. Markers move slowly and the work is ongoing."
+        },
+        "f7": {
+          "q": "Do you take insurance?",
+          "a": "No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program."
+        },
+        "f8": {
+          "q": "Can this be managed by telehealth?",
+          "a": "Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "Ask Why, Not Just What",
+      "lead": "You have a diagnosis. What you probably do not have is an explanation of what set it off and what keeps it active. That is the work we do.",
+      "primary": "Request A Consultation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Autoimmune care requires medical evaluation and is not appropriate for every patient. We work alongside your existing specialists and do not manage immunosuppressive or biologic therapy."
+    },
+    "seo": {
+      "title": "Autoimmune Disease Treatment Miami | Root-Cause Care — Dr. Adonis Maiquez, MD",
+      "description": "Functional medicine for autoimmune conditions in Miami. We investigate the triggers driving immune activity rather than only suppressing the symptoms. Florida telehealth available."
+    }
   }
 }
