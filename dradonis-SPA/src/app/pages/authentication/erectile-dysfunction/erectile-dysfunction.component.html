@@ -6,38 +6,35 @@
   <section class="service-hero">
     <div class="hero-badge">
       <mat-icon>favorite</mat-icon>
-      <span>MEN’S VASCULAR &amp; HORMONE HEALTH</span>
+      <span [innerHTML]="i18n + '.badge' | translate"></span>
     </div>
 
-    <h1>Erectile Dysfunction Treatment in Miami, FL</h1>
-    <p class="hero-lead">
-      An erection is a vascular event. It requires healthy blood vessels, adequate nitric oxide, functioning nerves, and hormones in range.
-      Handing a man a prescription and sending him home treats the symptom and ignores the message.
-    </p>
+    <h1>{{ i18n + '.title' | translate }}</h1>
+    <p class="hero-lead">{{ i18n + '.lead' | translate }}</p>
 
     <div class="hero-cta-group">
       <button type="button" class="btn-primary-glow" (click)="openAppointment()">
         <mat-icon>calendar_today</mat-icon>
-        <span>Request A Consultation</span>
+        <span>{{ i18n + '.ctaConsult' | translate }}</span>
       </button>
       <a href="tel:+13052904691" class="btn-secondary-phone">
         <mat-icon>phone</mat-icon>
-        <span>Call (305) 290-4691</span>
+        <span>{{ i18n + '.ctaCall' | translate }}</span>
       </a>
     </div>
 
     <div class="hero-pill-bar">
       <div class="pill-item">
         <mat-icon>lock</mat-icon>
-        <span>Confidential &amp; Cash-Pay</span>
+        <span [innerHTML]="i18n + '.pills.confidential' | translate"></span>
       </div>
       <div class="pill-item">
         <mat-icon>biotech</mat-icon>
-        <span>Full Workup, Not A Questionnaire</span>
+        <span>{{ i18n + '.pills.workup' | translate }}</span>
       </div>
       <div class="pill-item">
         <mat-icon>videocam</mat-icon>
-        <span>Florida Telehealth Available</span>
+        <span>{{ i18n + '.pills.telehealth' | translate }}</span>
       </div>
     </div>
   </section>
@@ -49,44 +46,38 @@
     <div class="section-card intro-card">
       <div class="intro-grid">
         <div class="intro-text">
-          <span class="section-tag">THE CLINICAL PICTURE</span>
-          <h2>What Erectile Dysfunction Is</h2>
-          <p class="lead-paragraph">
-            ED is the persistent difficulty achieving or maintaining an erection sufficient for satisfactory sexual activity. Occasional difficulty is normal and universal. A consistent pattern is a clinical finding.
-          </p>
-          <p>
-            Erectile dysfunction is rarely just an inconvenience. It is frequently the first visible sign that one of those systems is under strain, and it often shows up years before anything else does.
-          </p>
+          <span class="section-tag">{{ i18n + '.intro.tag' | translate }}</span>
+          <h2>{{ i18n + '.intro.title' | translate }}</h2>
+          <p class="lead-paragraph">{{ i18n + '.intro.lead' | translate }}</p>
+          <p>{{ i18n + '.intro.p2' | translate }}</p>
           <p class="highlight-callout">
-            <strong>The penile arteries are narrower than the coronary arteries, which is why they show impairment earlier.</strong>
+            <strong>{{ i18n + '.intro.callout' | translate }}</strong>
           </p>
-          <p>
-            The causes fall into several categories, and most men have more than one running at once.
-          </p>
+          <p>{{ i18n + '.intro.p4' | translate }}</p>
         </div>
 
         <div class="intro-features">
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>favorite</mat-icon></div>
             <div class="feat-content">
-              <h3>An Early Warning</h3>
-              <p>In a meaningful number of men, ED precedes a cardiovascular diagnosis by several years.</p>
+              <h3>{{ i18n + '.intro.features.warning.title' | translate }}</h3>
+              <p>{{ i18n + '.intro.features.warning.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>biotech</mat-icon></div>
             <div class="feat-content">
-              <h3>Testable Causes</h3>
-              <p>Vascular, hormonal, metabolic, neurologic, and medication contributors are all identifiable on a proper panel.</p>
+              <h3>{{ i18n + '.intro.features.testable.title' | translate }}</h3>
+              <p>{{ i18n + '.intro.features.testable.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>lock</mat-icon></div>
             <div class="feat-content">
-              <h3>Handled Discreetly</h3>
-              <p>A clinical consultation with a physician. No jokes, no euphemisms, and nothing reported to an insurer.</p>
+              <h3>{{ i18n + '.intro.features.discreet.title' | translate }}</h3>
+              <p>{{ i18n + '.intro.features.discreet.desc' | translate }}</p>
             </div>
           </div>
         </div>
@@ -99,21 +90,19 @@
   <!-- ========================================== -->
   <section class="catalog-section">
     <div class="section-header">
-      <span class="section-tag">WHAT WE TEST FOR</span>
-      <h2>The Causes Behind It</h2>
-      <p class="section-subtitle">
-        Most men have more than one of these running at once, which is why the workup covers all of them.
-      </p>
+      <span class="section-tag">{{ i18n + '.catalog.tag' | translate }}</span>
+      <h2>{{ i18n + '.catalog.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.catalog.subtitle' | translate }}</p>
     </div>
 
     <div class="catalog-grid">
       <div class="catalog-card" *ngFor="let item of causes">
         <div class="catalog-card-header">
-          <span class="catalog-category">{{ item.category }}</span>
+          <span class="catalog-category">{{ i18n + '.catalog.list.' + item.id + '.category' | translate }}</span>
         </div>
 
-        <h3 class="catalog-name">{{ item.name }}</h3>
-        <p class="catalog-desc">{{ item.description }}</p>
+        <h3 class="catalog-name">{{ i18n + '.catalog.list.' + item.id + '.name' | translate }}</h3>
+        <p class="catalog-desc">{{ i18n + '.catalog.list.' + item.id + '.description' | translate }}</p>
       </div>
     </div>
   </section>
@@ -123,11 +112,9 @@
   <!-- ========================================== -->
   <section class="clinical-approach-section">
     <div class="section-header">
-      <span class="section-tag">METHODOLOGY</span>
-      <h2>Our Approach</h2>
-      <p class="section-subtitle">
-        The most consequential thing we do is not the prescription. It is the workup.
-      </p>
+      <span class="section-tag">{{ i18n + '.approach.tag' | translate }}</span>
+      <h2>{{ i18n + '.approach.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.approach.subtitle' | translate }}</p>
     </div>
 
     <div class="pillars-grid">
@@ -136,8 +123,8 @@
         <div class="pillar-icon-wrapper">
           <mat-icon>{{ p.icon }}</mat-icon>
         </div>
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
+        <h3>{{ i18n + '.approach.list.' + p.id + '.title' | translate }}</h3>
+        <p>{{ i18n + '.approach.list.' + p.id + '.description' | translate }}</p>
       </div>
     </div>
   </section>
@@ -147,25 +134,23 @@
   <!-- ========================================== -->
   <section class="signs-section">
     <div class="section-header">
-      <span class="section-tag">SYMPTOM CHECK</span>
-      <h2>Signs This Could Help You</h2>
-      <p class="section-subtitle">
-        The pattern matters diagnostically — how it started, and what happens in the morning.
-      </p>
+      <span class="section-tag">{{ i18n + '.signs.tag' | translate }}</span>
+      <h2>{{ i18n + '.signs.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.signs.subtitle' | translate }}</p>
     </div>
 
     <div class="section-card">
       <ul class="signs-list">
         <li *ngFor="let s of signs">
           <mat-icon>check_circle</mat-icon>
-          <span>{{ s }}</span>
+          <span>{{ i18n + '.signs.list.' + s | translate }}</span>
         </li>
       </ul>
     </div>
 
     <div class="timeline-note">
       <mat-icon>info</mat-icon>
-      <span>If any of these describe you, particularly reduced morning erections or gradual onset, a workup is warranted regardless of whether you also want a prescription.</span>
+      <span>{{ i18n + '.signs.note' | translate }}</span>
     </div>
   </section>
 
@@ -174,11 +159,9 @@
   <!-- ========================================== -->
   <section class="candidacy-section">
     <div class="section-header">
-      <span class="section-tag">EVALUATION</span>
-      <h2>Who This Is For — And Who It Is Not For</h2>
-      <p class="section-subtitle">
-        Some presentations belong with urology or cardiology first, and we will say so.
-      </p>
+      <span class="section-tag">{{ i18n + '.candidacy.tag' | translate }}</span>
+      <h2>{{ i18n + '.candidacy.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.candidacy.subtitle' | translate }}</p>
     </div>
 
     <div class="candidacy-grid">
@@ -186,12 +169,12 @@
       <div class="candidacy-card fit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon positive">check_circle</mat-icon>
-          <h3>This is a strong fit if you:</h3>
+          <h3>{{ i18n + '.candidacy.fitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of candidatePoints">
             <mat-icon>check_circle</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ i18n + '.candidacy.fit.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -200,12 +183,12 @@
       <div class="candidacy-card unfit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon negative">block</mat-icon>
-          <h3>It may not be right if you:</h3>
+          <h3>{{ i18n + '.candidacy.unfitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of nonCandidatePoints">
             <mat-icon>block</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ i18n + '.candidacy.unfit.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -213,9 +196,7 @@
 
     <div class="scope-note">
       <mat-icon>error_outline</mat-icon>
-      <span>
-        <strong>If you take nitrates for a heart condition, PDE5 inhibitors are absolutely contraindicated.</strong> Tell us before anything is prescribed. Unstable cardiovascular disease needs cardiology clearance first, because sexual activity carries cardiac demand. We review your medications and cardiac history before prescribing anything.
-      </span>
+      <span [innerHTML]="i18n + '.candidacy.scopeNote' | translate"></span>
     </div>
   </section>
 
@@ -224,11 +205,9 @@
   <!-- ========================================== -->
   <section class="treatment-steps-section">
     <div class="section-header">
-      <span class="section-tag">THE PROCESS</span>
-      <h2>How Treatment Works</h2>
-      <p class="section-subtitle">
-        Two tracks from the start — immediate function, and the underlying cause.
-      </p>
+      <span class="section-tag">{{ i18n + '.steps.tag' | translate }}</span>
+      <h2>{{ i18n + '.steps.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.steps.subtitle' | translate }}</p>
     </div>
 
     <div class="steps-timeline">
@@ -239,16 +218,16 @@
         <div class="step-card-body">
           <div class="step-title-row">
             <mat-icon>{{ st.icon }}</mat-icon>
-            <h3>{{ st.title }}</h3>
+            <h3>{{ i18n + '.steps.list.' + st.id + '.title' | translate }}</h3>
           </div>
-          <p>{{ st.description }}</p>
+          <p>{{ i18n + '.steps.list.' + st.id + '.description' | translate }}</p>
         </div>
       </div>
     </div>
 
     <div class="timeline-note">
       <mat-icon>schedule</mat-icon>
-      <span>Symptomatic treatment often works immediately. Correcting the hormonal and metabolic causes is slower, and most patients report meaningful change within 90 days. That is the work that changes the trajectory rather than the evening.</span>
+      <span>{{ i18n + '.steps.note' | translate }}</span>
     </div>
   </section>
 
@@ -258,16 +237,16 @@
   <section class="program-included-section">
     <div class="included-card">
       <div class="included-header">
-        <span class="section-tag">YOUR PROGRAM</span>
-        <h2>What’s Included in Your Care</h2>
-        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+        <span class="section-tag">{{ i18n + '.included.tag' | translate }}</span>
+        <h2>{{ i18n + '.included.title' | translate }}</h2>
+        <p>{{ i18n + '.included.subtitle' | translate }}</p>
       </div>
 
       <div class="included-grid">
         <div class="inc-item" *ngFor="let inc of included">
           <mat-icon>{{ inc.icon }}</mat-icon>
-          <h4>{{ inc.title }}</h4>
-          <p>{{ inc.description }}</p>
+          <h4>{{ i18n + '.included.list.' + inc.id + '.title' | translate }}</h4>
+          <p>{{ i18n + '.included.list.' + inc.id + '.description' | translate }}</p>
         </div>
       </div>
     </div>
@@ -278,11 +257,9 @@
   <!-- ========================================== -->
   <section class="benefits-section">
     <div class="section-header">
-      <span class="section-tag">POTENTIAL OUTCOMES</span>
-      <h2>Benefits of Treatment</h2>
-      <p class="section-subtitle">
-        Individual response depends on cause, severity, and adherence.
-      </p>
+      <span class="section-tag">{{ i18n + '.benefits.tag' | translate }}</span>
+      <h2>{{ i18n + '.benefits.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.benefits.subtitle' | translate }}</p>
     </div>
 
     <div class="benefits-grid">
@@ -290,8 +267,8 @@
         <div class="benefit-icon">
           <mat-icon>{{ b.icon }}</mat-icon>
         </div>
-        <h3>{{ b.title }}</h3>
-        <p>{{ b.description }}</p>
+        <h3>{{ i18n + '.benefits.list.' + b.id + '.title' | translate }}</h3>
+        <p>{{ i18n + '.benefits.list.' + b.id + '.description' | translate }}</p>
       </div>
     </div>
   </section>
@@ -304,29 +281,27 @@
       <div class="physician-img-col">
         <picture>
           <source srcset="assets/images/logos/dr-full-img.webp" type="image/webp">
-          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="dr-photo" loading="lazy">
+          <img src="assets/images/logos/dr-full-img.webp"
+               [alt]="i18n + '.physician.photoAlt' | translate"
+               class="dr-photo" loading="lazy">
         </picture>
         <div class="physician-credentials-badge">
-          <strong>Adonis Maiquez, MD</strong>
-          <span>Functional &amp; Regenerative Medicine</span>
+          <strong>{{ i18n + '.physician.name' | translate }}</strong>
+          <span [innerHTML]="i18n + '.physician.role' | translate"></span>
         </div>
       </div>
 
       <div class="physician-bio-col">
-        <span class="section-tag">MEDICAL EXPERTISE</span>
-        <h2>Trained To Evaluate All Three Systems</h2>
-        <p>
-          Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures before moving into functional and regenerative medicine.
-        </p>
-        <p>
-          That background matters here for a specific reason: erectile function depends on vascular, neurologic, and endocrine systems working together, and he was trained to evaluate all three rather than treat the symptom in front of him. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>. Consultations are confidential.
-        </p>
+        <span class="section-tag">{{ i18n + '.physician.tag' | translate }}</span>
+        <h2>{{ i18n + '.physician.title' | translate }}</h2>
+        <p [innerHTML]="i18n + '.physician.p1' | translate"></p>
+        <p [innerHTML]="i18n + '.physician.p2' | translate"></p>
 
         <div class="credentials-pills">
-          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
-          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
-          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
-          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+          <span class="c-pill"><mat-icon>school</mat-icon> {{ i18n + '.physician.pills.fellowship' | translate }}</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> {{ i18n + '.physician.pills.ifm' | translate }}</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> {{ i18n + '.physician.pills.a4m' | translate }}</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> <span [innerHTML]="i18n + '.physician.pills.campus' | translate"></span></span>
         </div>
       </div>
     </div>
@@ -340,21 +315,19 @@
   <!-- unrelated one would cost trust on a page selling discretion.      -->
   <section class="faq-section">
     <div class="section-header">
-      <span class="section-tag">QUESTIONS & ANSWERS</span>
-      <h2>Frequently Asked Questions</h2>
-      <p class="section-subtitle">
-        Everything you need to know about causes, treatment, safety, and confidentiality.
-      </p>
+      <span class="section-tag">{{ i18n + '.faq.tag' | translate }}</span>
+      <h2>{{ i18n + '.faq.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.faq.subtitle' | translate }}</p>
     </div>
 
     <div class="faq-accordion">
       <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
         <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
-          <span>{{ faq.question }}</span>
+          <span>{{ i18n + '.faq.list.' + faq.id + '.q' | translate }}</span>
           <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
         </button>
         <div class="faq-answer-panel" *ngIf="faq.isOpen">
-          <p>{{ faq.answer }}</p>
+          <p>{{ i18n + '.faq.list.' + faq.id + '.a' | translate }}</p>
         </div>
       </div>
     </div>
@@ -365,26 +338,22 @@
   <!-- ========================================== -->
   <section class="final-cta-section" id="consultation">
     <div class="final-cta-card">
-      <span class="cta-tag">GET STARTED</span>
-      <h2>Get The Actual Answer</h2>
-      <p class="cta-lead">
-        ED is treatable. It is also informative. The workup tells you both how to restore function and whether your vascular and metabolic health need attention while there is still time to act.
-      </p>
+      <span class="cta-tag">{{ i18n + '.cta.tag' | translate }}</span>
+      <h2>{{ i18n + '.cta.title' | translate }}</h2>
+      <p class="cta-lead">{{ i18n + '.cta.lead' | translate }}</p>
 
       <div class="final-cta-buttons">
         <button type="button" class="btn-primary-large" (click)="openAppointment()">
           <mat-icon>event</mat-icon>
-          <span>Request A Consultation</span>
+          <span>{{ i18n + '.cta.primary' | translate }}</span>
         </button>
         <a href="tel:+13052904691" class="btn-outline-phone">
           <mat-icon>phone</mat-icon>
-          <span>Call or Text (305) 290-4691</span>
+          <span>{{ i18n + '.cta.phone' | translate }}</span>
         </a>
       </div>
 
-      <p class="compliance-footer-note">
-        *Treatment for erectile dysfunction requires medical evaluation and is not appropriate for every patient. Medications are prescribed only after physician review of your history, medications, and cardiovascular status.
-      </p>
+      <p class="compliance-footer-note">{{ i18n + '.cta.note' | translate }}</p>
     </div>
   </section>
 
