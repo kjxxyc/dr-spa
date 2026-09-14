@@ -2283,5 +2283,342 @@
       "title": "Thyroid Treatment Miami | Full Thyroid Panel & Root-Cause Care — Dr. Adonis Maiquez, MD",
       "description": "Most thyroid care stops at TSH. We run full thyroid function and treat the reasons it stopped working. Physician-led thyroid care in Miami and by telehealth in Florida."
     }
+  },
+  "fibromyalgiaPage": {
+    "badge": "CHRONIC PAIN & FATIGUE CARE",
+    "title": "Fibromyalgia Treatment in Miami, FL",
+    "lead": "Widespread pain and exhaustion are not a personality. They are a presentation, and it deserves a proper investigation.",
+    "ctaConsult": "Request A Consultation",
+    "ctaCall": "Call (305) 290-4691",
+    "pills": {
+      "testing": "Testing For What Gets Missed",
+      "sleep": "Sleep Addressed First",
+      "telehealth": "Florida Telehealth Available"
+    },
+    "intro": {
+      "tag": "THE SCIENCE",
+      "title": "What Fibromyalgia Is",
+      "lead": "You have probably been told the tests were normal. You may have been told it was stress, or depression, or that you should try to relax.",
+      "p2": "Fibromyalgia is a chronic condition characterized by widespread musculoskeletal pain, fatigue, sleep disturbance, and cognitive difficulty. The current understanding centers on <strong>central sensitization</strong>: the nervous system’s pain processing has become amplified, so signals that should register as mild register as severe, and stimuli that should not register as painful do.",
+      "callout": "This is not imagination and it is not a low pain threshold. It is a change in how the central nervous system processes input.",
+      "p4": "The problem is that the standard workup was never designed to find what drives it, so the absence of findings gets interpreted as the absence of a problem.",
+      "features": {
+        "sleep": {
+          "title": "Disrupted Deep Sleep",
+          "desc": "Sleep architecture is consistently altered in fibromyalgia populations, and deep sleep is where muscle repair and pain modulation happen."
+        },
+        "energy": {
+          "title": "Cellular Energy Dysfunction",
+          "desc": "Mitochondrial and cellular energy dysfunction is consistently described, alongside altered stress hormone patterns."
+        },
+        "inflam": {
+          "title": "Low-Grade Inflammation",
+          "desc": "Evidence of ongoing low-grade inflammatory activity, which adds to the total load the nervous system is processing."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "TESTABLE CONTRIBUTORS",
+      "title": "Conditions That Produce A Fibromyalgia-Like Picture",
+      "subtitle": "Each of these is testable. Some patients diagnosed with fibromyalgia have one or more of them, untreated, because a full panel was never run.",
+      "thyroidLink": "See our Thyroid page",
+      "list": {
+        "d1": {
+          "name": "Hypothyroidism",
+          "category": "Particularly Poor T4-to-T3 Conversion",
+          "description": "Hypothyroid symptoms overlap heavily with fibromyalgia, and poor conversion does not appear on a TSH test. One of the most common findings we see in this population."
+        },
+        "d2": {
+          "name": "Vitamin D Deficiency",
+          "category": "Nutrient Status",
+          "description": "Common, correctable, and a recognized contributor to widespread musculoskeletal pain and fatigue."
+        },
+        "d3": {
+          "name": "B12 & Magnesium Deficiency",
+          "category": "Nutrient Status",
+          "description": "Both are required for neurological and muscular function, and deficiency produces pain, fatigue, and cognitive symptoms that mirror the fibromyalgia picture."
+        },
+        "d4": {
+          "name": "Iron Deficiency",
+          "category": "Nutrient Status",
+          "description": "Fatigue, poor exercise tolerance, restless legs, and cognitive difficulty. Ferritin is frequently not checked, or is read against a range too permissive to catch it."
+        },
+        "d5": {
+          "name": "Sleep Apnea",
+          "category": "Sleep Disruption",
+          "description": "Deep sleep is where muscle repair and pain modulation happen. Untreated apnea is a common and correctable finding here, and it holds the pain and fatigue loop in place."
+        },
+        "d6": {
+          "name": "Early Autoimmune Activity",
+          "category": "Immune",
+          "description": "Autoimmune conditions in their early stages produce widespread pain and fatigue well before they organize into a nameable diagnosis."
+        },
+        "d7": {
+          "name": "Chronic Or Reactivated Infection",
+          "category": "Infectious",
+          "description": "A persistent or reactivated infection maintains an inflammatory load that the nervous system continues to process."
+        },
+        "d8": {
+          "name": "Hormone Deficiency",
+          "category": "Endocrine",
+          "description": "Sex and adrenal hormone disruption affects pain sensitivity, sleep quality, energy, and recovery capacity."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METHODOLOGY",
+      "title": "Our Approach",
+      "subtitle": "A fibromyalgia diagnosis is not a reason to stop investigating.",
+      "list": {
+        "p1": {
+          "title": "We Take The Diagnosis Seriously And We Still Test Thoroughly",
+          "description": "Those are not in conflict. A fibromyalgia diagnosis is not a reason to stop investigating, and a comprehensive workup is not a suggestion that you are imagining this."
+        },
+        "p2": {
+          "title": "Sleep Gets Addressed First",
+          "description": "Deep sleep is disrupted in most fibromyalgia patients, and it is where muscle repair and pain modulation happen. Poor sleep worsens pain, pain worsens sleep, and that loop tends to hold the whole picture in place. Untreated sleep apnea is a common and correctable finding here."
+        },
+        "p3": {
+          "title": "We Treat The Whole Load",
+          "description": "Pain amplification is driven up by inflammation, nutrient deficiency, poor sleep, hormonal disruption, and cellular energy failure. Reducing each of those lowers the total burden the nervous system is processing. There is rarely one lever."
+        },
+        "p4": {
+          "title": "We Do Not Tell You It Is In Your Head",
+          "description": "We will say plainly that the nervous system is involved, because it is, and because central sensitization is a physiological process rather than a psychological verdict. Those are different statements and patients here have usually only heard the wrong one."
+        }
+      }
+    },
+    "signs": {
+      "tag": "SYMPTOM CHECK",
+      "title": "Signs This Could Help You",
+      "subtitle": "These are the patterns that most often bring patients here after a string of normal results.",
+      "list": {
+        "s1": "Widespread pain lasting three months or longer",
+        "s2": "Fatigue that rest does not resolve",
+        "s3": "Waking unrefreshed regardless of hours slept",
+        "s4": "Cognitive difficulty — the fog, the word-finding, the lost thread",
+        "s5": "Morning stiffness",
+        "s6": "Sensitivity to pressure, temperature, light, or sound",
+        "s7": "Headaches or migraines",
+        "s8": "Digestive symptoms alongside the pain",
+        "s9": "Symptoms that started after an illness, injury, surgery, or major stress",
+        "s10": "Told your labs are normal more than once",
+        "s11": "Diagnosed with fibromyalgia and offered medication with no investigation",
+        "s12": "Prescribed an antidepressant for pain with limited benefit",
+        "s13": "Numbness, tingling, or restless legs",
+        "s14": "Depression or anxiety that developed after the pain, not before it"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUATION",
+      "title": "Who This Is For — And Who It Is Not For",
+      "subtitle": "Some symptoms need urgent or specialist assessment first, and we will say so directly.",
+      "fitTitle": "This is a strong fit if you:",
+      "unfitTitle": "It may not be right if you:",
+      "moodNote": "If you are struggling with your mood alongside chronic pain, that is common and it deserves support of its own. We will encourage you to have that addressed alongside this work rather than instead of it.",
+      "scopeNote": "Fibromyalgia is not cured, and we will not tell you otherwise. It can improve considerably, particularly when contributing factors are identified and corrected. New or focal neurological symptoms, unexplained weight loss, fever, or night sweats require prompt medical assessment rather than this program.",
+      "fit": {
+        "c1": "Have a fibromyalgia diagnosis and have never had comprehensive testing",
+        "c2": "Have widespread pain and fatigue with normal standard labs",
+        "c3": "Have been offered medication without investigation",
+        "c4": "Have sleep problems alongside the pain",
+        "c5": "Suspect something has been missed",
+        "c6": "Are prepared to work on sleep, nutrition, and graded activity over months"
+      },
+      "unfit": {
+        "n1": "Have new or focal neurological symptoms. These need neurological evaluation.",
+        "n2": "Have unexplained weight loss, fever, or night sweats. These require prompt workup for other causes.",
+        "n3": "Have an active inflammatory arthritis requiring rheumatology management. We can work alongside it.",
+        "n4": "Are looking for pain medication management. That is not what this is.",
+        "n5": "Expect rapid resolution. Improvement here is gradual and requires sustained effort.",
+        "n6": "Are unable to engage with sleep, nutrition, or activity changes right now"
+      }
+    },
+    "steps": {
+      "tag": "THE PROCESS",
+      "title": "How Treatment Works",
+      "subtitle": "From a full history to confirmed follow-up testing, here is what your care looks like.",
+      "list": {
+        "s1": {
+          "title": "Consultation",
+          "description": "Your whole history, without a clock running. Most fibromyalgia patients have never had a physician sit through the full account."
+        },
+        "s2": {
+          "title": "Testing",
+          "description": "Comprehensive, specifically targeting the conditions that mimic or worsen fibromyalgia. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "s3": {
+          "title": "Interpretation",
+          "description": "Dr. Adonis reviews everything and identifies which contributors are present."
+        },
+        "s4": {
+          "title": "Results Consultation",
+          "description": "Findings explained. If something treatable has been missed, you will hear it here. If nothing conventional was missed, we explain what we are targeting and why."
+        },
+        "s5": {
+          "title": "Treatment Begins",
+          "description": "Usually sleep and the most significant deficiencies first, since those tend to produce the earliest change and improve tolerance for everything after."
+        },
+        "s6": {
+          "title": "Gradual Expansion",
+          "description": "Anti-inflammatory nutrition, cellular energy support, and carefully graded activity, added at a pace your current capacity allows."
+        },
+        "s7": {
+          "title": "Follow-Up Testing Every Six Months",
+          "description": "Markers and symptoms reviewed together."
+        }
+      },
+      "note": "Most patients report meaningful change within 90 days. Fibromyalgia improvement is generally gradual and cumulative rather than sudden."
+    },
+    "included": {
+      "tag": "YOUR PROGRAM",
+      "title": "What’s Included in Your Care",
+      "subtitle": "A comprehensive, transparent cash-pay model with zero surprise bills.",
+      "list": {
+        "i1": {
+          "title": "Initial Comprehensive Consultation",
+          "description": "Extended visit covering your full symptom history, when and how it began, what preceded it, sleep, prior workups, current treatment, and what has and has not helped."
+        },
+        "i2": {
+          "title": "Comprehensive Laboratory Testing",
+          "description": "Full thyroid function, autoimmune and inflammatory markers, vitamin D, B12, folate, magnesium, iron studies, cortisol patterns, sex hormones, chronic infection markers, and toxin or heavy metal exposure."
+        },
+        "i3": {
+          "title": "Sleep Assessment",
+          "description": "Screening for sleep apnea and other sleep disruption, with referral for a study where indicated."
+        },
+        "i4": {
+          "title": "Results Consultation with Dr. Adonis",
+          "description": "Everything found, everything ruled out, and what we believe is contributing to your pain and fatigue."
+        },
+        "i5": {
+          "title": "Your Treatment Protocol",
+          "description": "Correction of every identified deficiency and dysfunction, sleep intervention, mitochondrial and cellular energy support, anti-inflammatory nutrition, hormone correction where indicated, and graded activity guidance appropriate to your current capacity."
+        },
+        "i6": {
+          "title": "Follow-Up Lab Testing Every Six Months",
+          "description": "With the protocol adjusted as markers and symptoms change."
+        },
+        "i7": {
+          "title": "Direct Access To The Practice",
+          "description": "Call or text the clinic at (305) 290-4691 at any time and message directly with our staff."
+        },
+        "i8": {
+          "title": "Labs And Consultations Included",
+          "description": "This is a cash-pay practice. Superbills are not provided."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "POTENTIAL OUTCOMES",
+      "title": "Benefits of Comprehensive Fibromyalgia Care",
+      "subtitle": "Response varies considerably. Patients with an identifiable, correctable contributor tend to improve more than those without one.",
+      "list": {
+        "b1": {
+          "title": "Reduced Pain Levels",
+          "description": "Often the most significant change when a deficiency or thyroid problem was contributing."
+        },
+        "b2": {
+          "title": "Better Sleep Quality",
+          "description": "Deeper, more restorative, less waking unrefreshed."
+        },
+        "b3": {
+          "title": "More Usable Energy",
+          "description": "Not unlimited energy. More capacity than you currently have."
+        },
+        "b4": {
+          "title": "Cognitive Clarity",
+          "description": "The fog is a major part of the burden and it frequently improves."
+        },
+        "b5": {
+          "title": "Fewer Flares",
+          "description": "Both frequency and severity, as inflammatory and nutrient status stabilize."
+        },
+        "b6": {
+          "title": "Improved Tolerance For Activity",
+          "description": "Which then supports further improvement, reversing the direction of the loop."
+        },
+        "b7": {
+          "title": "Mood Improvement",
+          "description": "Usually following the physical improvement rather than preceding it."
+        },
+        "b8": {
+          "title": "A Treatable Finding, In Some Cases",
+          "description": "Some patients discover an untreated thyroid problem, significant deficiency, or sleep apnea that changes the picture substantially."
+        }
+      }
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "Not A Diagnosis Of Exclusion To Be Managed And Forgotten",
+      "p1": "Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures before turning to functional and regenerative medicine.",
+      "p2": "Chronic pain and central nervous system function were part of his surgical world long before they were part of his functional medicine practice, which is one reason he does not treat fibromyalgia as a diagnosis of exclusion to be managed and forgotten. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Functional &amp; Regenerative Medicine",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "USF Neurosurgery Fellowship",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "A4M Board Certified",
+        "campus": "UM Medical Campus &amp; Florida Telehealth"
+      }
+    },
+    "testimonial": {
+      "quote": "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I'm very glad to have found someone who listens.",
+      "author": "— Alexia A.",
+      "role": "Verified Clinic Patient",
+      "disclaimer": "*Individual results vary. Patient experiences described here are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about testing, treatment, and what improvement realistically looks like.",
+      "list": {
+        "f1": {
+          "q": "Is fibromyalgia a real condition?",
+          "a": "Yes. It is a recognized diagnosis with consistent findings in pain processing, sleep architecture, and stress physiology. The difficulty is that standard testing does not detect it, and too many patients have had that absence of findings treated as evidence they are exaggerating."
+        },
+        "f2": {
+          "q": "Can fibromyalgia be cured?",
+          "a": "No, and we will not tell you otherwise. It can improve considerably, particularly when contributing factors are identified and corrected. Some patients improve enough that the diagnosis stops governing their life. That is the realistic goal."
+        },
+        "f3": {
+          "q": "My rheumatologist already diagnosed me. What would you add?",
+          "a": "A comprehensive workup for the conditions that mimic and worsen fibromyalgia — thyroid conversion problems, nutrient deficiencies, sleep apnea, early autoimmune activity, hormone deficiency. Rheumatology excludes inflammatory arthritis, which is important and is a narrower question than the one you are living with."
+        },
+        "f4": {
+          "q": "Could my thyroid be causing this?",
+          "a": "It is one of the most common findings we see in this population, particularly poor T4-to-T3 conversion, which does not appear on a TSH test. Hypothyroid symptoms overlap heavily with fibromyalgia."
+        },
+        "f5": {
+          "q": "Will I have to exercise?",
+          "a": "Graded movement is one of the better-supported interventions, and it has to be introduced carefully. Pushing too hard too early causes flares and sets people back. We build it in at a pace your current capacity allows."
+        },
+        "f6": {
+          "q": "How long before I feel better?",
+          "a": "Most patients report meaningful change within 90 days. Improvement tends to be gradual and cumulative rather than a single turning point."
+        },
+        "f7": {
+          "q": "Do you take insurance?",
+          "a": "No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program."
+        },
+        "f8": {
+          "q": "Can this be managed by telehealth?",
+          "a": "Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "A Proper Investigation",
+      "lead": "You have been through enough appointments that ended with nothing. This one starts with a full history and a panel built specifically to find what the standard workup misses.",
+      "primary": "Request A Consultation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Fibromyalgia care requires medical evaluation and is not appropriate for every patient. New neurological symptoms, unexplained weight loss, or fever require prompt medical assessment."
+    },
+    "seo": {
+      "title": "Fibromyalgia Treatment Miami | Root-Cause Care for Chronic Pain & Fatigue — Dr. Adonis Maiquez, MD",
+      "description": "Functional medicine for fibromyalgia in Miami. Comprehensive testing for the thyroid, nutrient, inflammatory, and sleep drivers behind widespread pain and fatigue. Florida telehealth."
+    }
   }
 }

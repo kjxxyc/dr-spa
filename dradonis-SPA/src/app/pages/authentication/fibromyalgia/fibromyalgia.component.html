@@ -6,37 +6,35 @@
   <section class="service-hero">
     <div class="hero-badge">
       <mat-icon>health_and_safety</mat-icon>
-      <span>CHRONIC PAIN & FATIGUE CARE</span>
+      <span>{{ i18n + '.badge' | translate }}</span>
     </div>
 
-    <h1>Fibromyalgia Treatment in Miami, FL</h1>
-    <p class="hero-lead">
-      Widespread pain and exhaustion are not a personality. They are a presentation, and it deserves a proper investigation.
-    </p>
+    <h1>{{ i18n + '.title' | translate }}</h1>
+    <p class="hero-lead">{{ i18n + '.lead' | translate }}</p>
 
     <div class="hero-cta-group">
       <button type="button" class="btn-primary-glow" (click)="openAppointment()">
         <mat-icon>calendar_today</mat-icon>
-        <span>Request A Consultation</span>
+        <span>{{ i18n + '.ctaConsult' | translate }}</span>
       </button>
       <a href="tel:+13052904691" class="btn-secondary-phone">
         <mat-icon>phone</mat-icon>
-        <span>Call (305) 290-4691</span>
+        <span>{{ i18n + '.ctaCall' | translate }}</span>
       </a>
     </div>
 
     <div class="hero-pill-bar">
       <div class="pill-item">
         <mat-icon>biotech</mat-icon>
-        <span>Testing For What Gets Missed</span>
+        <span>{{ i18n + '.pills.testing' | translate }}</span>
       </div>
       <div class="pill-item">
         <mat-icon>schedule</mat-icon>
-        <span>Sleep Addressed First</span>
+        <span>{{ i18n + '.pills.sleep' | translate }}</span>
       </div>
       <div class="pill-item">
         <mat-icon>videocam</mat-icon>
-        <span>Florida Telehealth Available</span>
+        <span>{{ i18n + '.pills.telehealth' | translate }}</span>
       </div>
     </div>
   </section>
@@ -48,44 +46,38 @@
     <div class="section-card intro-card">
       <div class="intro-grid">
         <div class="intro-text">
-          <span class="section-tag">THE SCIENCE</span>
-          <h2>What Fibromyalgia Is</h2>
-          <p class="lead-paragraph">
-            You have probably been told the tests were normal. You may have been told it was stress, or depression, or that you should try to relax.
-          </p>
-          <p>
-            Fibromyalgia is a chronic condition characterized by widespread musculoskeletal pain, fatigue, sleep disturbance, and cognitive difficulty. The current understanding centers on <strong>central sensitization</strong>: the nervous system’s pain processing has become amplified, so signals that should register as mild register as severe, and stimuli that should not register as painful do.
-          </p>
+          <span class="section-tag">{{ i18n + '.intro.tag' | translate }}</span>
+          <h2>{{ i18n + '.intro.title' | translate }}</h2>
+          <p class="lead-paragraph">{{ i18n + '.intro.lead' | translate }}</p>
+          <p [innerHTML]="i18n + '.intro.p2' | translate"></p>
           <p class="highlight-callout">
-            <strong>This is not imagination and it is not a low pain threshold. It is a change in how the central nervous system processes input.</strong>
+            <strong>{{ i18n + '.intro.callout' | translate }}</strong>
           </p>
-          <p>
-            The problem is that the standard workup was never designed to find what drives it, so the absence of findings gets interpreted as the absence of a problem.
-          </p>
+          <p>{{ i18n + '.intro.p4' | translate }}</p>
         </div>
 
         <div class="intro-features">
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>schedule</mat-icon></div>
             <div class="feat-content">
-              <h3>Disrupted Deep Sleep</h3>
-              <p>Sleep architecture is consistently altered in fibromyalgia populations, and deep sleep is where muscle repair and pain modulation happen.</p>
+              <h3>{{ i18n + '.intro.features.sleep.title' | translate }}</h3>
+              <p>{{ i18n + '.intro.features.sleep.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>science</mat-icon></div>
             <div class="feat-content">
-              <h3>Cellular Energy Dysfunction</h3>
-              <p>Mitochondrial and cellular energy dysfunction is consistently described, alongside altered stress hormone patterns.</p>
+              <h3>{{ i18n + '.intro.features.energy.title' | translate }}</h3>
+              <p>{{ i18n + '.intro.features.energy.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>health_and_safety</mat-icon></div>
             <div class="feat-content">
-              <h3>Low-Grade Inflammation</h3>
-              <p>Evidence of ongoing low-grade inflammatory activity, which adds to the total load the nervous system is processing.</p>
+              <h3>{{ i18n + '.intro.features.inflam.title' | translate }}</h3>
+              <p>{{ i18n + '.intro.features.inflam.desc' | translate }}</p>
             </div>
           </div>
         </div>
@@ -98,25 +90,23 @@
   <!-- ========================================== -->
   <section class="catalog-section">
     <div class="section-header">
-      <span class="section-tag">TESTABLE CONTRIBUTORS</span>
-      <h2>Conditions That Produce A Fibromyalgia-Like Picture</h2>
-      <p class="section-subtitle">
-        Each of these is testable. Some patients diagnosed with fibromyalgia have one or more of them, untreated, because a full panel was never run.
-      </p>
+      <span class="section-tag">{{ i18n + '.catalog.tag' | translate }}</span>
+      <h2>{{ i18n + '.catalog.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.catalog.subtitle' | translate }}</p>
     </div>
 
     <div class="catalog-grid">
       <div class="catalog-card" *ngFor="let item of mimics">
         <div class="catalog-card-header">
-          <span class="catalog-category">{{ item.category }}</span>
+          <span class="catalog-category">{{ i18n + '.catalog.list.' + item.id + '.category' | translate }}</span>
         </div>
 
-        <h3 class="catalog-name">{{ item.name }}</h3>
-        <p class="catalog-desc">{{ item.description }}</p>
+        <h3 class="catalog-name">{{ i18n + '.catalog.list.' + item.id + '.name' | translate }}</h3>
+        <p class="catalog-desc">{{ i18n + '.catalog.list.' + item.id + '.description' | translate }}</p>
 
-        <div class="catalog-action" *ngIf="item.name === 'Hypothyroidism'">
-          <a routerLink="/functional-medicine/thyroid" class="card-link">
-            <span>See our Thyroid page</span>
+        <div class="catalog-action" *ngIf="item.link">
+          <a [routerLink]="item.link" class="card-link">
+            <span>{{ i18n + '.catalog.thyroidLink' | translate }}</span>
             <mat-icon>arrow_forward</mat-icon>
           </a>
         </div>
@@ -129,11 +119,9 @@
   <!-- ========================================== -->
   <section class="clinical-approach-section">
     <div class="section-header">
-      <span class="section-tag">METHODOLOGY</span>
-      <h2>Our Approach</h2>
-      <p class="section-subtitle">
-        A fibromyalgia diagnosis is not a reason to stop investigating.
-      </p>
+      <span class="section-tag">{{ i18n + '.approach.tag' | translate }}</span>
+      <h2>{{ i18n + '.approach.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.approach.subtitle' | translate }}</p>
     </div>
 
     <div class="pillars-grid">
@@ -142,8 +130,8 @@
         <div class="pillar-icon-wrapper">
           <mat-icon>{{ p.icon }}</mat-icon>
         </div>
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
+        <h3>{{ i18n + '.approach.list.' + p.id + '.title' | translate }}</h3>
+        <p>{{ i18n + '.approach.list.' + p.id + '.description' | translate }}</p>
       </div>
     </div>
   </section>
@@ -153,18 +141,16 @@
   <!-- ========================================== -->
   <section class="signs-section">
     <div class="section-header">
-      <span class="section-tag">SYMPTOM CHECK</span>
-      <h2>Signs This Could Help You</h2>
-      <p class="section-subtitle">
-        These are the patterns that most often bring patients here after a string of normal results.
-      </p>
+      <span class="section-tag">{{ i18n + '.signs.tag' | translate }}</span>
+      <h2>{{ i18n + '.signs.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.signs.subtitle' | translate }}</p>
     </div>
 
     <div class="section-card">
       <ul class="signs-list">
         <li *ngFor="let s of signs">
           <mat-icon>check_circle</mat-icon>
-          <span>{{ s }}</span>
+          <span>{{ i18n + '.signs.list.' + s | translate }}</span>
         </li>
       </ul>
     </div>
@@ -175,11 +161,9 @@
   <!-- ========================================== -->
   <section class="candidacy-section">
     <div class="section-header">
-      <span class="section-tag">EVALUATION</span>
-      <h2>Who This Is For — And Who It Is Not For</h2>
-      <p class="section-subtitle">
-        Some symptoms need urgent or specialist assessment first, and we will say so directly.
-      </p>
+      <span class="section-tag">{{ i18n + '.candidacy.tag' | translate }}</span>
+      <h2>{{ i18n + '.candidacy.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.candidacy.subtitle' | translate }}</p>
     </div>
 
     <div class="candidacy-grid">
@@ -187,12 +171,12 @@
       <div class="candidacy-card fit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon positive">check_circle</mat-icon>
-          <h3>This is a strong fit if you:</h3>
+          <h3>{{ i18n + '.candidacy.fitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of candidatePoints">
             <mat-icon>check_circle</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ i18n + '.candidacy.fit.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -201,12 +185,12 @@
       <div class="candidacy-card unfit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon negative">block</mat-icon>
-          <h3>It may not be right if you:</h3>
+          <h3>{{ i18n + '.candidacy.unfitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of nonCandidatePoints">
             <mat-icon>block</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ i18n + '.candidacy.unfit.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -214,14 +198,12 @@
 
     <div class="timeline-note">
       <mat-icon>favorite</mat-icon>
-      <span>If you are struggling with your mood alongside chronic pain, that is common and it deserves support of its own. We will encourage you to have that addressed alongside this work rather than instead of it.</span>
+      <span>{{ i18n + '.candidacy.moodNote' | translate }}</span>
     </div>
 
     <div class="scope-note">
       <mat-icon>error_outline</mat-icon>
-      <span>
-        Fibromyalgia is not cured, and we will not tell you otherwise. It can improve considerably, particularly when contributing factors are identified and corrected. New or focal neurological symptoms, unexplained weight loss, fever, or night sweats require prompt medical assessment rather than this program.
-      </span>
+      <span>{{ i18n + '.candidacy.scopeNote' | translate }}</span>
     </div>
   </section>
 
@@ -230,11 +212,9 @@
   <!-- ========================================== -->
   <section class="treatment-steps-section">
     <div class="section-header">
-      <span class="section-tag">THE PROCESS</span>
-      <h2>How Treatment Works</h2>
-      <p class="section-subtitle">
-        From a full history to confirmed follow-up testing, here is what your care looks like.
-      </p>
+      <span class="section-tag">{{ i18n + '.steps.tag' | translate }}</span>
+      <h2>{{ i18n + '.steps.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.steps.subtitle' | translate }}</p>
     </div>
 
     <div class="steps-timeline">
@@ -245,16 +225,16 @@
         <div class="step-card-body">
           <div class="step-title-row">
             <mat-icon>{{ st.icon }}</mat-icon>
-            <h3>{{ st.title }}</h3>
+            <h3>{{ i18n + '.steps.list.' + st.id + '.title' | translate }}</h3>
           </div>
-          <p>{{ st.description }}</p>
+          <p>{{ i18n + '.steps.list.' + st.id + '.description' | translate }}</p>
         </div>
       </div>
     </div>
 
     <div class="timeline-note">
       <mat-icon>schedule</mat-icon>
-      <span>Most patients report meaningful change within 90 days. Fibromyalgia improvement is generally gradual and cumulative rather than sudden.</span>
+      <span>{{ i18n + '.steps.note' | translate }}</span>
     </div>
   </section>
 
@@ -264,16 +244,16 @@
   <section class="program-included-section">
     <div class="included-card">
       <div class="included-header">
-        <span class="section-tag">YOUR PROGRAM</span>
-        <h2>What’s Included in Your Care</h2>
-        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+        <span class="section-tag">{{ i18n + '.included.tag' | translate }}</span>
+        <h2>{{ i18n + '.included.title' | translate }}</h2>
+        <p>{{ i18n + '.included.subtitle' | translate }}</p>
       </div>
 
       <div class="included-grid">
         <div class="inc-item" *ngFor="let inc of included">
           <mat-icon>{{ inc.icon }}</mat-icon>
-          <h4>{{ inc.title }}</h4>
-          <p>{{ inc.description }}</p>
+          <h4>{{ i18n + '.included.list.' + inc.id + '.title' | translate }}</h4>
+          <p>{{ i18n + '.included.list.' + inc.id + '.description' | translate }}</p>
         </div>
       </div>
     </div>
@@ -284,11 +264,9 @@
   <!-- ========================================== -->
   <section class="benefits-section">
     <div class="section-header">
-      <span class="section-tag">POTENTIAL OUTCOMES</span>
-      <h2>Benefits of Comprehensive Fibromyalgia Care</h2>
-      <p class="section-subtitle">
-        Response varies considerably. Patients with an identifiable, correctable contributor tend to improve more than those without one.
-      </p>
+      <span class="section-tag">{{ i18n + '.benefits.tag' | translate }}</span>
+      <h2>{{ i18n + '.benefits.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.benefits.subtitle' | translate }}</p>
     </div>
 
     <div class="benefits-grid">
@@ -296,8 +274,8 @@
         <div class="benefit-icon">
           <mat-icon>{{ b.icon }}</mat-icon>
         </div>
-        <h3>{{ b.title }}</h3>
-        <p>{{ b.description }}</p>
+        <h3>{{ i18n + '.benefits.list.' + b.id + '.title' | translate }}</h3>
+        <p>{{ i18n + '.benefits.list.' + b.id + '.description' | translate }}</p>
       </div>
     </div>
   </section>
@@ -310,29 +288,27 @@
       <div class="physician-img-col">
         <picture>
           <source srcset="assets/images/logos/dr-full-img.webp" type="image/webp">
-          <img src="assets/images/logos/dr-full-img.webp" alt="Dr. Adonis Maiquez, MD" class="dr-photo" loading="lazy">
+          <img src="assets/images/logos/dr-full-img.webp"
+               [alt]="i18n + '.physician.photoAlt' | translate"
+               class="dr-photo" loading="lazy">
         </picture>
         <div class="physician-credentials-badge">
-          <strong>Adonis Maiquez, MD</strong>
-          <span>Functional &amp; Regenerative Medicine</span>
+          <strong>{{ i18n + '.physician.name' | translate }}</strong>
+          <span [innerHTML]="i18n + '.physician.role' | translate"></span>
         </div>
       </div>
 
       <div class="physician-bio-col">
-        <span class="section-tag">MEDICAL EXPERTISE</span>
-        <h2>Not A Diagnosis Of Exclusion To Be Managed And Forgotten</h2>
-        <p>
-          Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures before turning to functional and regenerative medicine.
-        </p>
-        <p>
-          Chronic pain and central nervous system function were part of his surgical world long before they were part of his functional medicine practice, which is one reason he does not treat fibromyalgia as a diagnosis of exclusion to be managed and forgotten. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.
-        </p>
+        <span class="section-tag">{{ i18n + '.physician.tag' | translate }}</span>
+        <h2>{{ i18n + '.physician.title' | translate }}</h2>
+        <p [innerHTML]="i18n + '.physician.p1' | translate"></p>
+        <p [innerHTML]="i18n + '.physician.p2' | translate"></p>
 
         <div class="credentials-pills">
-          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
-          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
-          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
-          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+          <span class="c-pill"><mat-icon>school</mat-icon> {{ i18n + '.physician.pills.fellowship' | translate }}</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> {{ i18n + '.physician.pills.ifm' | translate }}</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> {{ i18n + '.physician.pills.a4m' | translate }}</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> <span [innerHTML]="i18n + '.physician.pills.campus' | translate"></span></span>
         </div>
       </div>
     </div>
@@ -346,16 +322,12 @@
       <div class="quote-stars">
         <mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon>
       </div>
-      <blockquote>
-        "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I'm very glad to have found someone who listens."
-      </blockquote>
+      <blockquote>{{ i18n + '.testimonial.quote' | translate }}</blockquote>
       <div class="testimonial-meta">
-        <strong>— Alexia A.</strong>
-        <span>Verified Clinic Patient</span>
+        <strong>{{ i18n + '.testimonial.author' | translate }}</strong>
+        <span>{{ i18n + '.testimonial.role' | translate }}</span>
       </div>
-      <p class="testimonial-disclaimer">
-        *Individual results vary. Patient experiences described here are not a guarantee of outcome.
-      </p>
+      <p class="testimonial-disclaimer">{{ i18n + '.testimonial.disclaimer' | translate }}</p>
     </div>
   </section>
 
@@ -364,21 +336,19 @@
   <!-- ========================================== -->
   <section class="faq-section">
     <div class="section-header">
-      <span class="section-tag">QUESTIONS & ANSWERS</span>
-      <h2>Frequently Asked Questions</h2>
-      <p class="section-subtitle">
-        Everything you need to know about testing, treatment, and what improvement realistically looks like.
-      </p>
+      <span class="section-tag">{{ i18n + '.faq.tag' | translate }}</span>
+      <h2>{{ i18n + '.faq.title' | translate }}</h2>
+      <p class="section-subtitle">{{ i18n + '.faq.subtitle' | translate }}</p>
     </div>
 
     <div class="faq-accordion">
       <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
         <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
-          <span>{{ faq.question }}</span>
+          <span>{{ i18n + '.faq.list.' + faq.id + '.q' | translate }}</span>
           <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
         </button>
         <div class="faq-answer-panel" *ngIf="faq.isOpen">
-          <p>{{ faq.answer }}</p>
+          <p>{{ i18n + '.faq.list.' + faq.id + '.a' | translate }}</p>
         </div>
       </div>
     </div>
@@ -389,26 +359,22 @@
   <!-- ========================================== -->
   <section class="final-cta-section" id="consultation">
     <div class="final-cta-card">
-      <span class="cta-tag">GET STARTED</span>
-      <h2>A Proper Investigation</h2>
-      <p class="cta-lead">
-        You have been through enough appointments that ended with nothing. This one starts with a full history and a panel built specifically to find what the standard workup misses.
-      </p>
+      <span class="cta-tag">{{ i18n + '.cta.tag' | translate }}</span>
+      <h2>{{ i18n + '.cta.title' | translate }}</h2>
+      <p class="cta-lead">{{ i18n + '.cta.lead' | translate }}</p>
 
       <div class="final-cta-buttons">
         <button type="button" class="btn-primary-large" (click)="openAppointment()">
           <mat-icon>event</mat-icon>
-          <span>Request A Consultation</span>
+          <span>{{ i18n + '.cta.primary' | translate }}</span>
         </button>
         <a href="tel:+13052904691" class="btn-outline-phone">
           <mat-icon>phone</mat-icon>
-          <span>Call or Text (305) 290-4691</span>
+          <span>{{ i18n + '.cta.phone' | translate }}</span>
         </a>
       </div>
 
-      <p class="compliance-footer-note">
-        *Fibromyalgia care requires medical evaluation and is not appropriate for every patient. New neurological symptoms, unexplained weight loss, or fever require prompt medical assessment.
-      </p>
+      <p class="compliance-footer-note">{{ i18n + '.cta.note' | translate }}</p>
     </div>
   </section>
 

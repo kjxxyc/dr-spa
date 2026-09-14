@@ -2283,5 +2283,342 @@
       "title": "Tratamiento de Tiroides en Miami | Panel Tiroideo Completo y Atención de Causa Raíz — Dr. Adonis Maiquez, MD",
       "description": "La mayoría de la atención tiroidea se detiene en la TSH. Evaluamos la función tiroidea completa y tratamos las razones por las que dejó de funcionar. Atención en Miami y telemedicina en Florida."
     }
+  },
+  "fibromyalgiaPage": {
+    "badge": "ATENCIÓN DEL DOLOR CRÓNICO Y LA FATIGA",
+    "title": "Tratamiento de Fibromialgia en Miami, FL",
+    "lead": "El dolor generalizado y el agotamiento no son un rasgo de personalidad. Son una presentación clínica, y merecen una investigación adecuada.",
+    "ctaConsult": "Solicite una Consulta",
+    "ctaCall": "Llame al (305) 290-4691",
+    "pills": {
+      "testing": "Evaluamos lo que Se Pasa por Alto",
+      "sleep": "El Sueño se Aborda Primero",
+      "telehealth": "Telemedicina en Florida Disponible"
+    },
+    "intro": {
+      "tag": "LA CIENCIA",
+      "title": "Qué Es la Fibromialgia",
+      "lead": "Probablemente le han dicho que los análisis salieron normales. Puede que le hayan dicho que era estrés, o depresión, o que debería intentar relajarse.",
+      "p2": "La fibromialgia es una condición crónica caracterizada por dolor musculoesquelético generalizado, fatiga, alteración del sueño y dificultad cognitiva. La comprensión actual se centra en la <strong>sensibilización central</strong>: el procesamiento del dolor del sistema nervioso se ha amplificado, de modo que señales que deberían registrarse como leves se registran como intensas, y estímulos que no deberían registrarse como dolorosos sí lo hacen.",
+      "callout": "Esto no es imaginación y no es un umbral de dolor bajo. Es un cambio en cómo el sistema nervioso central procesa la información.",
+      "p4": "El problema es que el estudio estándar nunca se diseñó para encontrar lo que la impulsa, así que la ausencia de hallazgos se interpreta como la ausencia de un problema.",
+      "features": {
+        "sleep": {
+          "title": "Sueño Profundo Alterado",
+          "desc": "La arquitectura del sueño está alterada de forma consistente en las poblaciones con fibromialgia, y el sueño profundo es donde ocurren la reparación muscular y la modulación del dolor."
+        },
+        "energy": {
+          "title": "Disfunción de la Energía Celular",
+          "desc": "La disfunción mitocondrial y de la energía celular se describe de forma consistente, junto con patrones alterados de las hormonas del estrés."
+        },
+        "inflam": {
+          "title": "Inflamación de Bajo Grado",
+          "desc": "Evidencia de actividad inflamatoria continua de bajo grado, que se suma a la carga total que el sistema nervioso está procesando."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "FACTORES MEDIBLES",
+      "title": "Condiciones que Producen un Cuadro Similar a la Fibromialgia",
+      "subtitle": "Cada una de estas se puede medir. Algunos pacientes diagnosticados con fibromialgia tienen una o más de ellas sin tratar, porque nunca se hizo un panel completo.",
+      "thyroidLink": "Consulte nuestra página de Tiroides",
+      "list": {
+        "d1": {
+          "name": "Hipotiroidismo",
+          "category": "En Particular una Mala Conversión de T4 a T3",
+          "description": "Los síntomas del hipotiroidismo se solapan mucho con los de la fibromialgia, y una mala conversión no aparece en un análisis de TSH. Uno de los hallazgos más comunes que vemos en esta población."
+        },
+        "d2": {
+          "name": "Deficiencia de Vitamina D",
+          "category": "Estado Nutricional",
+          "description": "Común, corregible y un contribuyente reconocido al dolor musculoesquelético generalizado y a la fatiga."
+        },
+        "d3": {
+          "name": "Deficiencia de B12 y Magnesio",
+          "category": "Estado Nutricional",
+          "description": "Ambos son necesarios para la función neurológica y muscular, y su deficiencia produce dolor, fatiga y síntomas cognitivos que reflejan el cuadro de la fibromialgia."
+        },
+        "d4": {
+          "name": "Deficiencia de Hierro",
+          "category": "Estado Nutricional",
+          "description": "Fatiga, mala tolerancia al ejercicio, piernas inquietas y dificultad cognitiva. Con frecuencia no se mide la ferritina, o se interpreta con un rango demasiado permisivo para detectarla."
+        },
+        "d5": {
+          "name": "Apnea del Sueño",
+          "category": "Alteración del Sueño",
+          "description": "El sueño profundo es donde ocurren la reparación muscular y la modulación del dolor. La apnea no tratada es un hallazgo común y corregible aquí, y mantiene en su sitio el círculo de dolor y fatiga."
+        },
+        "d6": {
+          "name": "Actividad Autoinmune Temprana",
+          "category": "Inmunitario",
+          "description": "Las condiciones autoinmunes en sus etapas tempranas producen dolor generalizado y fatiga mucho antes de organizarse en un diagnóstico con nombre."
+        },
+        "d7": {
+          "name": "Infección Crónica o Reactivada",
+          "category": "Infeccioso",
+          "description": "Una infección persistente o reactivada mantiene una carga inflamatoria que el sistema nervioso sigue procesando."
+        },
+        "d8": {
+          "name": "Deficiencia Hormonal",
+          "category": "Endocrino",
+          "description": "La alteración de las hormonas sexuales y suprarrenales afecta la sensibilidad al dolor, la calidad del sueño, la energía y la capacidad de recuperación."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "Un diagnóstico de fibromialgia no es motivo para dejar de investigar.",
+      "list": {
+        "p1": {
+          "title": "Tomamos el Diagnóstico en Serio y Aun Así Evaluamos a Fondo",
+          "description": "No son cosas incompatibles. Un diagnóstico de fibromialgia no es motivo para dejar de investigar, y un estudio completo no sugiere que usted se esté imaginando esto."
+        },
+        "p2": {
+          "title": "El Sueño se Aborda Primero",
+          "description": "El sueño profundo está alterado en la mayoría de los pacientes con fibromialgia, y es donde ocurren la reparación muscular y la modulación del dolor. El mal sueño empeora el dolor, el dolor empeora el sueño, y ese círculo tiende a mantener todo el cuadro en su sitio. La apnea del sueño no tratada es un hallazgo común y corregible aquí."
+        },
+        "p3": {
+          "title": "Tratamos la Carga Completa",
+          "description": "La amplificación del dolor se ve impulsada por la inflamación, la deficiencia nutricional, el mal sueño, la alteración hormonal y el fallo energético celular. Reducir cada uno de esos factores disminuye la carga total que el sistema nervioso está procesando. Rara vez hay una sola palanca."
+        },
+        "p4": {
+          "title": "No Le Decimos que Está en su Cabeza",
+          "description": "Diremos con claridad que el sistema nervioso está implicado, porque lo está, y porque la sensibilización central es un proceso fisiológico y no un veredicto psicológico. Son afirmaciones distintas y los pacientes que llegan aquí normalmente solo han escuchado la equivocada."
+        }
+      }
+    },
+    "signs": {
+      "tag": "REVISIÓN DE SÍNTOMAS",
+      "title": "Señales de que Esto Podría Ayudarle",
+      "subtitle": "Estos son los patrones que con más frecuencia traen pacientes aquí después de una serie de resultados normales.",
+      "list": {
+        "s1": "Dolor generalizado durante tres meses o más",
+        "s2": "Fatiga que el descanso no resuelve",
+        "s3": "Despertarse sin sentirse descansado sin importar cuántas horas duerma",
+        "s4": "Dificultad cognitiva: la niebla, la palabra que no aparece, el hilo perdido",
+        "s5": "Rigidez matutina",
+        "s6": "Sensibilidad a la presión, la temperatura, la luz o el sonido",
+        "s7": "Dolores de cabeza o migrañas",
+        "s8": "Síntomas digestivos junto con el dolor",
+        "s9": "Síntomas que comenzaron tras una enfermedad, una lesión, una cirugía o un estrés importante",
+        "s10": "Le han dicho más de una vez que sus análisis están normales",
+        "s11": "Diagnóstico de fibromialgia y medicación ofrecida sin ninguna investigación",
+        "s12": "Un antidepresivo recetado para el dolor con poco beneficio",
+        "s13": "Entumecimiento, hormigueo o piernas inquietas",
+        "s14": "Depresión o ansiedad que aparecieron después del dolor y no antes"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — y para Quién No",
+      "subtitle": "Algunos síntomas necesitan valoración urgente o especializada primero, y se lo diremos con claridad.",
+      "fitTitle": "Encaja bien si usted:",
+      "unfitTitle": "Puede no ser lo indicado si usted:",
+      "moodNote": "Si está lidiando con su estado de ánimo junto con el dolor crónico, eso es común y merece apoyo propio. Le animaremos a que lo trate junto a este trabajo, no en lugar de él.",
+      "scopeNote": "La fibromialgia no se cura, y no le diremos lo contrario. Puede mejorar considerablemente, en particular cuando se identifican y corrigen los factores contribuyentes. Los síntomas neurológicos nuevos o focales, la pérdida de peso inexplicable, la fiebre o los sudores nocturnos requieren una valoración médica pronta en lugar de este programa.",
+      "fit": {
+        "c1": "Tiene un diagnóstico de fibromialgia y nunca le han hecho pruebas completas",
+        "c2": "Tiene dolor generalizado y fatiga con análisis estándar normales",
+        "c3": "Le han ofrecido medicación sin investigación",
+        "c4": "Tiene problemas de sueño junto con el dolor",
+        "c5": "Sospecha que se ha pasado algo por alto",
+        "c6": "Está dispuesto a trabajar en el sueño, la nutrición y la actividad graduada durante meses"
+      },
+      "unfit": {
+        "n1": "Tiene síntomas neurológicos nuevos o focales. Estos necesitan evaluación neurológica.",
+        "n2": "Tiene pérdida de peso inexplicable, fiebre o sudores nocturnos. Esto requiere un estudio pronto para otras causas.",
+        "n3": "Tiene una artritis inflamatoria activa que requiere manejo por reumatología. Podemos trabajar junto a ese tratamiento.",
+        "n4": "Busca manejo de medicación para el dolor. Eso no es lo que hacemos aquí.",
+        "n5": "Espera una resolución rápida. Aquí la mejoría es gradual y requiere un esfuerzo sostenido.",
+        "n6": "No puede comprometerse ahora mismo con cambios de sueño, nutrición o actividad"
+      }
+    },
+    "steps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde una historia completa hasta las pruebas de seguimiento confirmadas, así es su atención.",
+      "list": {
+        "s1": {
+          "title": "Consulta",
+          "description": "Su historia completa, sin un reloj corriendo. La mayoría de los pacientes con fibromialgia nunca ha tenido un médico que se siente a escuchar el relato entero."
+        },
+        "s2": {
+          "title": "Pruebas",
+          "description": "Completas, dirigidas específicamente a las condiciones que imitan o empeoran la fibromialgia. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "s3": {
+          "title": "Interpretación",
+          "description": "El Dr. Adonis revisa todo e identifica qué factores están presentes."
+        },
+        "s4": {
+          "title": "Consulta de Resultados",
+          "description": "Hallazgos explicados. Si se ha pasado por alto algo tratable, lo escuchará aquí. Si no se pasó nada por alto en lo convencional, le explicamos qué estamos abordando y por qué."
+        },
+        "s5": {
+          "title": "Comienza el Tratamiento",
+          "description": "Normalmente el sueño y las deficiencias más importantes primero, ya que tienden a producir el cambio más temprano y mejoran la tolerancia a todo lo que viene después."
+        },
+        "s6": {
+          "title": "Expansión Gradual",
+          "description": "Nutrición antiinflamatoria, apoyo a la energía celular y actividad cuidadosamente graduada, añadidos al ritmo que su capacidad actual permita."
+        },
+        "s7": {
+          "title": "Pruebas de Seguimiento Cada Seis Meses",
+          "description": "Marcadores y síntomas revisados en conjunto."
+        }
+      },
+      "note": "La mayoría de los pacientes reporta un cambio significativo en 90 días. La mejoría en fibromialgia es por lo general gradual y acumulativa en lugar de repentina."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención",
+      "subtitle": "Un modelo de pago directo, completo y transparente, sin facturas sorpresa.",
+      "list": {
+        "i1": {
+          "title": "Consulta Inicial Completa",
+          "description": "Visita extendida que cubre su historia completa de síntomas, cuándo y cómo empezó, qué la precedió, el sueño, los estudios previos, el tratamiento actual y qué ha ayudado y qué no."
+        },
+        "i2": {
+          "title": "Pruebas de Laboratorio Completas",
+          "description": "Función tiroidea completa, marcadores autoinmunes e inflamatorios, vitamina D, B12, folato, magnesio, estudios de hierro, patrones de cortisol, hormonas sexuales, marcadores de infección crónica y exposición a toxinas o metales pesados."
+        },
+        "i3": {
+          "title": "Evaluación del Sueño",
+          "description": "Cribado de apnea del sueño y otras alteraciones del sueño, con derivación para un estudio cuando esté indicado."
+        },
+        "i4": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "description": "Todo lo encontrado, todo lo descartado y qué creemos que está contribuyendo a su dolor y su fatiga."
+        },
+        "i5": {
+          "title": "Su Protocolo de Tratamiento",
+          "description": "Corrección de cada deficiencia y disfunción identificada, intervención sobre el sueño, apoyo mitocondrial y de energía celular, nutrición antiinflamatoria, corrección hormonal cuando esté indicada y pautas de actividad graduada apropiadas para su capacidad actual."
+        },
+        "i6": {
+          "title": "Pruebas de Laboratorio de Seguimiento Cada Seis Meses",
+          "description": "Con el protocolo ajustado a medida que cambian los marcadores y los síntomas."
+        },
+        "i7": {
+          "title": "Acceso Directo a la Consulta",
+          "description": "Llame o envíe un mensaje de texto a la clínica al (305) 290-4691 en cualquier momento y comuníquese directamente con nuestro personal."
+        },
+        "i8": {
+          "title": "Laboratorios y Consultas Incluidos",
+          "description": "Esta es una consulta de pago directo. No se proporcionan superbills."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POSIBLES",
+      "title": "Beneficios de una Atención Integral de la Fibromialgia",
+      "subtitle": "La respuesta varía considerablemente. Los pacientes con un factor contribuyente identificable y corregible tienden a mejorar más que quienes no lo tienen.",
+      "list": {
+        "b1": {
+          "title": "Menos Dolor",
+          "description": "A menudo el cambio más significativo cuando había una deficiencia o un problema tiroideo contribuyendo."
+        },
+        "b2": {
+          "title": "Mejor Calidad del Sueño",
+          "description": "Más profundo, más reparador, con menos despertares sin descanso."
+        },
+        "b3": {
+          "title": "Más Energía Utilizable",
+          "description": "No energía ilimitada. Más capacidad de la que tiene ahora."
+        },
+        "b4": {
+          "title": "Claridad Mental",
+          "description": "La niebla es una parte importante de la carga y con frecuencia mejora."
+        },
+        "b5": {
+          "title": "Menos Brotes",
+          "description": "Tanto en frecuencia como en gravedad, a medida que se estabiliza el estado inflamatorio y nutricional."
+        },
+        "b6": {
+          "title": "Mejor Tolerancia a la Actividad",
+          "description": "Lo que a su vez favorece más mejoría, invirtiendo la dirección del círculo."
+        },
+        "b7": {
+          "title": "Mejoría del Ánimo",
+          "description": "Normalmente después de la mejoría física y no antes."
+        },
+        "b8": {
+          "title": "Un Hallazgo Tratable, en Algunos Casos",
+          "description": "Algunos pacientes descubren un problema tiroideo no tratado, una deficiencia importante o una apnea del sueño que cambia el panorama de forma sustancial."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "No un Diagnóstico de Exclusión para Manejar y Olvidar",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano</strong>, completando su formación de posgrado y su fellowship en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida, y realizó cientos de procedimientos hipofisarios antes de dedicarse a la medicina funcional y regenerativa.",
+      "p2": "El dolor crónico y la función del sistema nervioso central formaban parte de su mundo quirúrgico mucho antes de formar parte de su práctica de medicina funcional, y esa es una de las razones por las que no trata la fibromialgia como un diagnóstico de exclusión que se maneja y se olvida. Está certificado por el Institute for Functional Medicine y por la American Academy of Anti-Aging Medicine, ejerce en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Medicina Funcional y Regenerativa",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "Fellowship en Neurocirugía, USF",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "Certificado por A4M",
+        "campus": "Campus Médico UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "Encontrar médicos locales con experiencia que realmente tomaran en serio mis síntomas fue difícil. Tuve que entrevistar a varios antes de que me refirieran al Dr. Adonis. Estoy muy contenta de haber encontrado a alguien que escucha.",
+      "author": "— Alexia A.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no son garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre las pruebas, el tratamiento y cómo es realmente la mejoría.",
+      "list": {
+        "f1": {
+          "q": "¿Es la fibromialgia una condición real?",
+          "a": "Sí. Es un diagnóstico reconocido con hallazgos consistentes en el procesamiento del dolor, la arquitectura del sueño y la fisiología del estrés. La dificultad es que las pruebas estándar no la detectan, y demasiados pacientes han visto cómo esa ausencia de hallazgos se trataba como evidencia de que están exagerando."
+        },
+        "f2": {
+          "q": "¿Se puede curar la fibromialgia?",
+          "a": "No, y no le diremos lo contrario. Puede mejorar considerablemente, en particular cuando se identifican y corrigen los factores contribuyentes. Algunos pacientes mejoran lo suficiente como para que el diagnóstico deje de gobernar su vida. Ese es el objetivo realista."
+        },
+        "f3": {
+          "q": "Mi reumatólogo ya me diagnosticó. ¿Qué añadirían ustedes?",
+          "a": "Un estudio completo de las condiciones que imitan y empeoran la fibromialgia: problemas de conversión tiroidea, deficiencias nutricionales, apnea del sueño, actividad autoinmune temprana, deficiencia hormonal. La reumatología excluye la artritis inflamatoria, lo cual es importante y es una pregunta más estrecha que la que usted está viviendo."
+        },
+        "f4": {
+          "q": "¿Podría ser mi tiroides la causa?",
+          "a": "Es uno de los hallazgos más comunes que vemos en esta población, en particular una mala conversión de T4 a T3, que no aparece en un análisis de TSH. Los síntomas del hipotiroidismo se solapan mucho con los de la fibromialgia."
+        },
+        "f5": {
+          "q": "¿Tendré que hacer ejercicio?",
+          "a": "El movimiento graduado es una de las intervenciones con mejor respaldo, y hay que introducirlo con cuidado. Forzar demasiado y demasiado pronto provoca brotes y hace retroceder a las personas. Lo incorporamos al ritmo que su capacidad actual permita."
+        },
+        "f6": {
+          "q": "¿Cuánto tardaré en sentirme mejor?",
+          "a": "La mayoría de los pacientes reporta un cambio significativo en 90 días. La mejoría tiende a ser gradual y acumulativa en lugar de un único punto de inflexión."
+        },
+        "f7": {
+          "q": "¿Aceptan seguro?",
+          "a": "No. Esta es una consulta de pago directo y no proporcionamos superbills. Sus laboratorios y consultas están incluidos en su programa."
+        },
+        "f8": {
+          "q": "¿Se puede manejar por telemedicina?",
+          "a": "Sí, para pacientes ubicados en Florida. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Una Investigación en Condiciones",
+      "lead": "Ha pasado por suficientes citas que terminaron en nada. Esta empieza con una historia completa y un panel construido específicamente para encontrar lo que el estudio estándar pasa por alto.",
+      "primary": "Solicite una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*La atención de la fibromialgia requiere evaluación médica y no es apropiada para todos los pacientes. Los síntomas neurológicos nuevos, la pérdida de peso inexplicable o la fiebre requieren una valoración médica pronta."
+    },
+    "seo": {
+      "title": "Tratamiento de Fibromialgia en Miami | Atención de Causa Raíz para el Dolor Crónico y la Fatiga — Dr. Adonis Maiquez, MD",
+      "description": "Medicina funcional para la fibromialgia en Miami. Pruebas completas de los factores tiroideos, nutricionales, inflamatorios y del sueño detrás del dolor generalizado y la fatiga. Telemedicina en Florida."
+    }
   }
 }
