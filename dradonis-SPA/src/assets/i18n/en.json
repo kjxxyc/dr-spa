@@ -3730,5 +3730,983 @@
       "title": "Erectile Dysfunction Treatment Miami | Root-Cause ED Care with Dr. Adonis Maiquez, MD",
       "description": "Physician-led ED treatment in Miami. We investigate the vascular, hormonal, and metabolic causes behind ED rather than prescribing around them."
     }
+  },
+  "hrtPage": {
+    "badge": "BIOIDENTICAL HORMONE THERAPY",
+    "hero": {
+      "title": "Bioidentical Hormone Replacement Therapy in Miami, FL",
+      "lead": "Hormones do not fail all at once. They drift. Most people absorb the changes one at a time, assume it is age, and never connect them. They are connectable, and they are measurable.",
+      "ctaPrimary": "Request A Consultation",
+      "ctaPhone": "Call (305) 290-4691",
+      "pills": {
+        "panel": "Whole-System Hormone Panel",
+        "physician": "One Physician Throughout",
+        "telehealth": "Florida Telehealth Available"
+      }
+    },
+    "intro": {
+      "tag": "THE SCIENCE",
+      "title": "What Hormone Replacement Therapy Is",
+      "lead": "Hormone replacement therapy restores hormones your body has stopped producing at the levels it needs.",
+      "p1": "We use <strong>bioidentical hormones</strong>, meaning the molecules are structurally identical to the hormones your body makes. Estradiol given as HRT is the same estradiol your ovaries produced.",
+      "callout": "<strong>Identical structure means the hormone binds the same receptors and follows the same metabolic pathways as your own.</strong>",
+      "p2": "That is different from older synthetic formulations, which were structurally altered compounds that behaved differently in the body and carried a different side effect profile.",
+      "features": {
+        "f1": {
+          "title": "Structurally Identical",
+          "desc": "Same molecule, same receptors, same metabolic pathways as the hormones your body produced."
+        },
+        "f2": {
+          "title": "A Network, Not A Number",
+          "desc": "Estradiol, progesterone, testosterone, DHEA, cortisol, and thyroid all influence one another."
+        },
+        "f3": {
+          "title": "Dose Matched To You",
+          "desc": "Compounded preparations allow doses matched to your labs rather than the nearest commercial tablet strength."
+        }
+      }
+    },
+    "transitions": {
+      "tag": "WHO IT IS FOR",
+      "title": "The Transitions HRT Is Used Across",
+      "subtitle": "Hormone decline is not one event with one timeline, and the protocol differs with each.",
+      "list": {
+        "t1": {
+          "category": "The Years Before",
+          "name": "Perimenopause",
+          "desc": "The years before periods stop, often starting in the early to mid-forties. Hormones fluctuate rather than simply decline, which is why symptoms can be erratic and easy to dismiss."
+        },
+        "t2": {
+          "category": "After Periods Stop",
+          "name": "Menopause",
+          "desc": "Estrogen and progesterone drop substantially and stay down. Effects reach well past hot flashes into bone density, cardiovascular health, cognition, and sleep architecture."
+        },
+        "t3": {
+          "category": "The Male Equivalent",
+          "name": "Andropause",
+          "desc": "Slower and less discussed. Testosterone declines gradually from roughly the mid-thirties.",
+          "linkText": "See our TRT page"
+        },
+        "t4": {
+          "category": "Not Age-Dependent",
+          "name": "Clinical Deficiency At Any Age",
+          "desc": "Thyroid, adrenal, and sex hormone deficiencies occur in people nowhere near menopause. They are frequently missed because nobody tested for them."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METHODOLOGY",
+      "title": "Our Approach",
+      "subtitle": "Replacement is a tool inside a plan, not the entire plan.",
+      "pillars": {
+        "p1": {
+          "title": "We Panel The Whole System, Not The One Hormone You Asked About",
+          "desc": "Hormones operate as a network. Estradiol, progesterone, testosterone, DHEA, cortisol, and thyroid all influence one another, and each one is influenced by insulin, inflammation, and nutrient status. Prescribing to a single number produces a patient who feels partially better and cannot say why."
+        },
+        "p2": {
+          "title": "We Ask Why Levels Dropped",
+          "desc": "Sometimes the answer is time, and replacement is the right treatment. Sometimes it is a thyroid nobody looked at properly, chronic stress physiology suppressing production upstream, a nutrient deficiency, or an inflammatory load. Replacement is a tool inside a plan, not the entire plan."
+        },
+        "p3": {
+          "title": "Dosing Follows Your Labs And Your Symptoms, Together",
+          "desc": "Numbers alone are not the target. A level inside range while you still feel poorly is not a finished protocol. We adjust against how you feel and what your follow-up testing shows, in that order of urgency."
+        },
+        "p4": {
+          "title": "Your Physician Manages It",
+          "desc": "Dr. Adonis reviews your history, orders your panel, interprets it, writes your protocol, and manages your adjustments. Not an algorithm, not a rotating prescriber."
+        }
+      },
+      "quote": "“Hormones are not a single number to correct. They are a system that has to be brought back into balance together.”",
+      "quoteAuthor": "— Dr. Adonis"
+    },
+    "signs": {
+      "tag": "SYMPTOM CHECK",
+      "title": "Signs HRT Could Help You",
+      "subtitle": "The presentation differs between women and men, and both are frequently attributed to age instead.",
+      "womenTitle": "For women",
+      "womenList": {
+        "w1": "Hot flashes, night sweats, or temperature you cannot regulate",
+        "w2": "Sleep that breaks in the early morning and will not return",
+        "w3": "Weight gain around the midsection despite unchanged habits",
+        "w4": "Vaginal dryness or discomfort with intimacy",
+        "w5": "Low libido that feels physical rather than emotional",
+        "w6": "Mood swings, anxiety, or irritability that is new for you",
+        "w7": "Brain fog, word-finding trouble, or slipping recall",
+        "w8": "Cycles becoming irregular, heavier, or lighter",
+        "w9": "Skin thinning, hair loss, or joint aches without injury",
+        "w10": "Fatigue that predates a stressful period and outlasted it"
+      },
+      "menTitle": "For men",
+      "menList": {
+        "m1": "Energy and drive that have quietly declined",
+        "m2": "Longer recovery after training, less strength for the same work",
+        "m3": "Increasing body fat, particularly abdominal, with muscle harder to hold",
+        "m4": "Reduced libido or erectile changes",
+        "m5": "Low mood, flat motivation, or shortened patience",
+        "m6": "Poor concentration and mental sharpness",
+        "m7": "Sleep quality dropping without an obvious cause"
+      },
+      "note": "If several of these describe you and nobody has run a full hormone panel, that panel is the next step."
+    },
+    "candidacy": {
+      "tag": "EVALUATION",
+      "title": "Who This Is For — And Who It Is Not For",
+      "subtitle": "Every candidate is evaluated individually. Some of the items below are absolute exclusions and some require additional workup.",
+      "fitTitle": "HRT is a strong fit if you:",
+      "fitList": {
+        "c1": "Are experiencing perimenopause, menopause, or andropause symptoms",
+        "c2": "Have tested low or borderline and have been told to wait",
+        "c3": "Want to address symptoms rather than tolerate them",
+        "c4": "Have had a poor experience with a one-size protocol elsewhere",
+        "c5": "Are willing to complete testing and return for follow-up monitoring"
+      },
+      "unfitTitle": "It may not be right if you:",
+      "unfitList": {
+        "n1": "Have a history of hormone-sensitive cancer. We do not prescribe hormone replacement in these cases, and treat with a natural functional medicine approach instead, in coordination with your oncologist.",
+        "n2": "Have unexplained vaginal bleeding that has not been worked up",
+        "n3": "Have active liver disease, a history of blood clots, stroke, or certain cardiovascular conditions",
+        "n4": "Are pregnant or breastfeeding",
+        "n5": "Are unwilling to complete baseline labs. We do not prescribe hormones without them."
+      },
+      "scopeNote": "<strong>We do not prescribe hormone replacement to patients with a history of hormone-sensitive cancer.</strong> Those patients are treated with a natural functional medicine approach instead — addressing symptoms through nutrition, targeted supplementation, and correction of the metabolic and inflammatory drivers, in coordination with your oncologist."
+    },
+    "treatmentSteps": {
+      "tag": "THE PROCESS",
+      "title": "How Treatment Works",
+      "subtitle": "From the first consultation to ongoing monitoring, here is what your care looks like.",
+      "steps": {
+        "s1": {
+          "title": "Consultation",
+          "desc": "Your history and symptoms, in detail."
+        },
+        "s2": {
+          "title": "Comprehensive Panel",
+          "desc": "Labs can be completed in our office, or locally at any Quest or LabCorp. Timing matters for cycling women, and we will schedule your draw accordingly."
+        },
+        "s3": {
+          "title": "Interpretation",
+          "desc": "Dr. Adonis reviews the full picture, including what may have caused the decline."
+        },
+        "s4": {
+          "title": "Results Visit And Protocol",
+          "desc": "You learn what is low, what is driving it, which hormones we are replacing, at what dose, by what route, and what else is being corrected alongside."
+        },
+        "s5": {
+          "title": "Therapy Begins",
+          "desc": "With clear instruction on administration and what to expect in the first weeks."
+        },
+        "s6": {
+          "title": "Follow-Up Panel",
+          "desc": "Levels rechecked and dose titrated. Almost nobody lands on the final dose first try, and that is expected."
+        },
+        "s7": {
+          "title": "Ongoing Monitoring",
+          "desc": "Periodic testing and review for as long as you are on therapy."
+        }
+      },
+      "timelineNote": "Most patients report meaningful change within 90 days. Sleep and energy often shift earliest, with body composition and libido responding over a longer horizon."
+    },
+    "included": {
+      "tag": "YOUR PROGRAM",
+      "title": "What’s Included in Your Care",
+      "subtitle": "A comprehensive, transparent cash-pay model with zero surprise bills.",
+      "list": {
+        "inc1": {
+          "title": "Initial Consultation",
+          "desc": "Full history, symptom timeline, prior hormone treatment, family history, and goals. Extended visit, not a fifteen-minute slot."
+        },
+        "inc2": {
+          "title": "Comprehensive Hormone Panel",
+          "desc": "Estradiol, progesterone, total and free testosterone, DHEA-S, SHBG, LH, FSH, complete thyroid with antibodies, cortisol, and metabolic and inflammatory markers."
+        },
+        "inc3": {
+          "title": "Results Consultation with Dr. Adonis",
+          "desc": "Every value explained in the context of your symptoms, plus the protocol built from it."
+        },
+        "inc4": {
+          "title": "Your Prescribed Therapy",
+          "desc": "Delivery route selected for your situation, including creams, pellets, injections, oral preparations, and patches."
+        },
+        "inc5": {
+          "title": "Supporting Protocol",
+          "desc": "Targeted supplementation, nutrition direction, and correction of any thyroid, nutrient, or inflammatory findings that affect hormone response."
+        },
+        "inc6": {
+          "title": "Follow-Up Lab Testing Every Six Months",
+          "desc": "Levels rechecked on schedule, with dose adjustment based on results and symptoms."
+        },
+        "inc7": {
+          "title": "Direct Access To The Practice",
+          "desc": "Call or text the clinic at (305) 290-4691 at any time and message directly with our staff."
+        },
+        "inc8": {
+          "title": "Labs And Consultations Included",
+          "desc": "This is a cash-pay practice. Superbills are not provided."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "POTENTIAL OUTCOMES",
+      "title": "Benefits of Bioidentical Hormone Therapy",
+      "subtitle": "Individual response varies with your baseline, your protocol, and how long you have been deficient.",
+      "list": {
+        "b1": {
+          "title": "Symptom Relief",
+          "desc": "Hot flashes, night sweats, and temperature dysregulation typically respond early."
+        },
+        "b2": {
+          "title": "Sleep",
+          "desc": "Deeper and less interrupted, particularly when progesterone is part of the protocol."
+        },
+        "b3": {
+          "title": "Body Composition",
+          "desc": "Better lean mass retention and less resistance to fat loss when hormones are back in range."
+        },
+        "b4": {
+          "title": "Mood And Cognition",
+          "desc": "Many patients describe steadier mood and clearer thinking as levels stabilize."
+        },
+        "b5": {
+          "title": "Libido And Sexual Function",
+          "desc": "Improvement in drive, comfort, and responsiveness."
+        },
+        "b6": {
+          "title": "Bone Density",
+          "desc": "Estrogen is protective against post-menopausal bone loss."
+        },
+        "b7": {
+          "title": "Fewer Side Effects Than Synthetic Formulations",
+          "desc": "Bioidentical structure means the body processes these hormones through its native pathways."
+        },
+        "b8": {
+          "title": "Individualized Dosing",
+          "desc": "Compounded preparations allow doses matched to your labs rather than to the nearest commercial tablet strength."
+        }
+      }
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "He Came To Hormone Medicine From An Unusual Direction",
+      "p1": "Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures. The pituitary is the gland that directs the entire endocrine system.",
+      "p2": "Operating on it repeatedly left him with a specific interest in what that system does to a person when it falls out of range. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced hormone and functional medicine in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.",
+      "credentials": {
+        "c1": "USF Neurosurgery Fellowship",
+        "c2": "Institute for Functional Medicine (IFM)",
+        "c3": "A4M Board Certified",
+        "c4": "UM Medical Campus & Florida Telehealth"
+      }
+    },
+    "testimonials": {
+      "tag": "PATIENT EXPERIENCES",
+      "title": "What Patients Say",
+      "list": {
+        "t1": {
+          "quote": "I was not dealing with menopause well at all, having hot flashes, memory problems, libido issues, absolutely zero energy, and lots of rage inside. Hormone replacement is advertised everywhere, so I thought it would be easy to get HRT, but I found it to be a guessing game with my GYN, my primary physician, as well as 2 different pharmacists and none of them really helped me. So I started looking for a specialist and a nurse referred me to Dr. Adonis. I met with him in a zoom meeting and instantly noticed how he was actually listening to what I was saying and had feedback for every concern I had. He ordered some labs and wrote up a plan for me to include HRT that is super easy to take, several vitamins/supplements, and of course, recommendations for diet and exercise. I am dead serious when I say I feel like I’m 30 years old again. My hot flashes are gone, sex drive is up, my memory is back to normal, and best of all, I have a crazy amount of energy. My mood has also stabilized. I wish I had met Dr. Adonis sooner.",
+          "author": "— M. Carlsen",
+          "role": "Verified Clinic Patient"
+        },
+        "t2": {
+          "quote": "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I’m very glad to have found someone who listens and assists with HRT.",
+          "author": "— Alexia A.",
+          "role": "Verified Clinic Patient"
+        },
+        "t3": {
+          "quote": "Excellent experience in this clinic. The staff is very professional and friendly, and the medical team provides first-class care.",
+          "author": "— Ana G.",
+          "role": "Verified Clinic Patient"
+        }
+      },
+      "disclaimer": "*Individual results vary. Patient experiences described here are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about bioidentical hormones, delivery routes, timing, and monitoring.",
+      "list": {
+        "f1": {
+          "q": "Are bioidentical hormones safer than synthetic hormones?",
+          "a": "Bioidentical hormones are structurally identical to the ones your body produces, so they bind the same receptors and follow the same metabolic pathways. That structural match is associated with a different side effect profile than older synthetic formulations. No hormone therapy is risk-free, and your individual risk depends on your history. We review it with you before prescribing."
+        },
+        "f2": {
+          "q": "Do I have to be menopausal to start?",
+          "a": "No. Perimenopausal symptoms often begin years before periods stop, and hormone deficiencies occur at any age. What determines candidacy is testing plus symptoms, not birthdays."
+        },
+        "f3": {
+          "q": "How long will I be on therapy?",
+          "a": "That is an individual decision made with your physician and revisited at each review. Some patients use HRT through a transition. Others continue longer for ongoing symptom and bone protection. There is no fixed endpoint we impose."
+        },
+        "f4": {
+          "q": "Will I gain weight on hormones?",
+          "a": "Weight gain is more commonly associated with the hormone decline than with correcting it. Many patients find weight becomes more responsive once levels normalize, particularly when thyroid and insulin are addressed alongside."
+        },
+        "f5": {
+          "q": "What delivery methods do you offer?",
+          "a": "We offer creams, pellets, injections, oral preparations, and patches. The route is selected based on your labs, your symptoms, how stable your levels need to be, and what you will realistically stay consistent with."
+        },
+        "f6": {
+          "q": "How soon will I feel different?",
+          "a": "Sleep and vasomotor symptoms often respond first. Mood, body composition, and libido typically take longer. Your results visit will include a timeline specific to your protocol."
+        },
+        "f7": {
+          "q": "Do you treat men?",
+          "a": "Yes. Male hormone care is covered in more depth on our TRT page and our enclomiphene page."
+        },
+        "f8": {
+          "q": "Is this covered by insurance?",
+          "a": "No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program."
+        },
+        "f9": {
+          "q": "Are compounded hormones FDA approved?",
+          "a": "Compounded preparations are made by a licensed compounding pharmacy for an individual patient and are not FDA-approved products in the way commercially manufactured drugs are. We will explain which of your prescriptions are compounded and which are commercially manufactured before you start."
+        },
+        "f10": {
+          "q": "Can this be managed by telehealth?",
+          "a": "Yes, for patients located in Florida. Bloodwork is completed in our office or at a local Quest or LabCorp."
+        }
+      },
+      "menNote": "Male hormone care is covered in more depth on our <a href=\"/testosterone-replacement-therapy\">TRT page</a> and our <a href=\"/enclomiphene\">enclomiphene page</a>."
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "Get Your Levels Tested",
+      "lead": "Most people spend years attributing hormone symptoms to stress, age, or nothing in particular. A comprehensive panel ends the guessing in about three weeks.",
+      "primary": "Request A Consultation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Hormone replacement therapy requires medical evaluation and is not appropriate for every patient. Treatment is prescribed only after physician review of your history and laboratory results."
+    },
+    "seo": {
+      "title": "Bioidentical Hormone Replacement Therapy Miami | Dr. Adonis Maiquez, MD",
+      "description": "Physician-led bioidentical HRT in Miami for menopause, perimenopause, and andropause. Comprehensive hormone panels, protocols built from your labs, in-person or telehealth."
+    }
+  },
+  "trtPage": {
+    "badge": "MALE HORMONE OPTIMIZATION",
+    "hero": {
+      "title": "Testosterone Replacement Therapy in Miami, FL",
+      "lead": "Testosterone does not fall off a cliff. It erodes. Most men are handed a single total testosterone number and told it is within range. That number, on its own, explains almost nothing.",
+      "ctaPrimary": "Request A Consultation",
+      "ctaPhone": "Call (305) 290-4691",
+      "pills": {
+        "panel": "Full Panel, Not One Number",
+        "monitored": "Estradiol &amp; Hematocrit Monitored",
+        "telehealth": "Florida Telehealth Available"
+      }
+    },
+    "intro": {
+      "tag": "THE SCIENCE",
+      "title": "What TRT Is",
+      "lead": "Testosterone replacement therapy restores testosterone to a healthy physiological range in men whose own production has declined.",
+      "p1": "Testosterone regulates far more than libido. It drives muscle protein synthesis, bone density, red blood cell production, fat distribution, insulin sensitivity, mood regulation, and cognition. When it falls, the effects are systemic, which is why the symptom list looks scattered until you understand the mechanism.",
+      "callout": "<strong>Levels decline gradually from roughly the mid-thirties. That decline is normal in the statistical sense. It is not automatically acceptable.</strong>",
+      "p2": "The workout that used to take a day to recover from now takes three. The afternoon you used to push through, you no longer push through. Drive went missing at some point and you cannot name the month it happened.",
+      "features": {
+        "f1": {
+          "title": "Free, Not Just Total",
+          "desc": "Most testosterone in your blood is bound to SHBG and albumin and is not biologically available."
+        },
+        "f2": {
+          "title": "Drawn In The Morning",
+          "desc": "Testosterone peaks early. Afternoon draws are one of the most common reasons men are wrongly told they are fine."
+        },
+        "f3": {
+          "title": "Systemic Effects",
+          "desc": "Muscle, bone, red blood cells, fat distribution, insulin sensitivity, mood, and cognition all depend on it."
+        }
+      }
+    },
+    "types": {
+      "tag": "THE DISTINCTION THAT MATTERS",
+      "title": "Primary or Secondary?",
+      "subtitle": "They look identical from the outside and require different treatment. Distinguishing them requires LH and FSH, which a basic testosterone test does not include.",
+      "list": {
+        "t1": {
+          "category": "The Testicles",
+          "name": "Primary Hypogonadism",
+          "desc": "The testicles are not producing adequately. The signal from above is arriving, but the response to it is inadequate, so raising the signal alone will not fix the problem."
+        },
+        "t2": {
+          "category": "The Signal",
+          "name": "Secondary Hypogonadism",
+          "desc": "The signal from the pituitary and hypothalamus has weakened, so the testicles are not being told to produce. If fertility matters to you, this distinction is the whole conversation, because restoring the signal is an option here.",
+          "linkText": "See our Enclomiphene page"
+        }
+      }
+    },
+    "approach": {
+      "tag": "METHODOLOGY",
+      "title": "Our Approach",
+      "subtitle": "This is the difference between a subscription and a diagnosis.",
+      "pillars": {
+        "p1": {
+          "title": "Full Panel, Not A Single Number",
+          "desc": "Total testosterone is the least informative number in male hormone medicine when read alone. Most testosterone in your blood is bound to SHBG and albumin and is not biologically available. Two men with identical total testosterone can have very different free testosterone, and only one of them feels it."
+        },
+        "p2": {
+          "title": "We Look For Why It Dropped Before We Replace It",
+          "desc": "Low testosterone is frequently downstream of something else. Poor sleep, visceral fat driving aromatization, insulin resistance, chronic stress suppressing the pituitary signal, undiagnosed thyroid dysfunction, or nutrient deficiency. Replacing testosterone without addressing those leaves the cause running. This is the difference between a subscription and a diagnosis."
+        },
+        "p3": {
+          "title": "Estradiol Is Managed, Not Ignored",
+          "desc": "Testosterone aromatizes into estradiol. Men need estradiol — it is protective for bone, cardiovascular health, and libido. Too much causes real problems. Clinics that never check it are managing half the equation, and clinics that reflexively suppress it create a different set of symptoms. We test it and treat what we find."
+        },
+        "p4": {
+          "title": "Monitoring Is Part Of The Treatment, Not An Upsell",
+          "desc": "Hematocrit, PSA, estradiol, and lipids are checked on schedule for as long as you are on therapy. This is standard of care and it is not optional here."
+        }
+      }
+    },
+    "signs": {
+      "tag": "SYMPTOM CHECK",
+      "title": "Signs TRT Could Help You",
+      "subtitle": "The symptom list looks scattered until you understand the mechanism.",
+      "list": {
+        "s1": "Persistent fatigue that sleep does not resolve",
+        "s2": "Strength plateaus or losses despite consistent training",
+        "s3": "Longer recovery, more frequent soreness, more nagging injuries",
+        "s4": "Abdominal fat accumulating while muscle gets harder to hold",
+        "s5": "Reduced libido, or interest that has to be manufactured",
+        "s6": "Erectile changes or reduced morning erections",
+        "s7": "Low mood, flat motivation, shorter fuse",
+        "s8": "Difficulty concentrating, mental fog, slower recall",
+        "s9": "Sleep quality declining without an obvious cause",
+        "s10": "Reduced confidence or competitive drive",
+        "s11": "Hot flashes or night sweats, which occur in men and are routinely missed"
+      },
+      "note": "If several of these apply, a full panel is the diagnostic step. A single total testosterone drawn in the afternoon is not."
+    },
+    "candidacy": {
+      "tag": "EVALUATION",
+      "title": "Who This Is For — And Who It Is Not For",
+      "subtitle": "Some of these are absolute exclusions. Others simply need to be worked up first.",
+      "fitTitle": "TRT is a strong fit if you:",
+      "fitList": {
+        "c1": "Have symptoms of low testosterone confirmed by testing",
+        "c2": "Have been told you are in range but do not feel in range",
+        "c3": "Want a physician managing your case, not a subscription",
+        "c4": "Are prepared to complete follow-up labs on schedule",
+        "c5": "Are training and eating in a way that supports the protocol"
+      },
+      "unfitTitle": "It may not be right if you:",
+      "unfitList": {
+        "n1": "Are trying to conceive now or soon. TRT suppresses sperm production. Enclomiphene or hCG-based approaches exist for exactly this reason.",
+        "n2": "Have prostate cancer or an untreated elevated PSA",
+        "n3": "Have untreated obstructive sleep apnea",
+        "n4": "Have polycythemia or an elevated hematocrit",
+        "n5": "Have uncontrolled heart failure or a recent cardiovascular event",
+        "n6": "Are unwilling to return for monitoring labs. We do not manage TRT without them."
+      },
+      "scopeNote": "<strong>TRT suppresses sperm production.</strong> If you want children now or later, tell us at your first visit — the protocol changes, and <a href=\"/enclomiphene\">enclomiphene</a> or hCG-based approaches exist for exactly this reason. Prostate cancer, untreated elevated PSA, polycythemia, untreated sleep apnea, and recent cardiovascular events all need to be addressed before therapy is considered."
+    },
+    "treatmentSteps": {
+      "tag": "THE PROCESS",
+      "title": "How Treatment Works",
+      "subtitle": "From the morning baseline panel to ongoing monitoring, here is what your care looks like.",
+      "steps": {
+        "s1": {
+          "title": "Consultation",
+          "desc": "Full history, including whether you want children now or later. That answer changes the protocol."
+        },
+        "s2": {
+          "title": "Baseline Panel",
+          "desc": "Drawn in the morning, when testosterone peaks. Afternoon draws produce misleading numbers and are one of the most common reasons men are wrongly told they are fine."
+        },
+        "s3": {
+          "title": "Interpretation",
+          "desc": "Dr. Adonis reads the full panel, identifies primary versus secondary, and looks for contributing causes."
+        },
+        "s4": {
+          "title": "Results Visit",
+          "desc": "Where your levels are, why, what we are prescribing, what we are correcting alongside, and what to expect week by week."
+        },
+        "s5": {
+          "title": "Therapy Begins",
+          "desc": "With administration instruction and a clear picture of the first eight weeks."
+        },
+        "s6": {
+          "title": "Follow-Up Panel",
+          "desc": "Levels, estradiol, and hematocrit rechecked and your dose adjusted. Ongoing lab testing runs every six months."
+        },
+        "s7": {
+          "title": "Ongoing Monitoring",
+          "desc": "Periodic labs and review for the duration of therapy."
+        }
+      },
+      "timelineNote": "Most patients report meaningful change within 90 days. Energy and mood commonly shift earliest, body composition is slower and depends heavily on training and nutrition, and libido varies more than any other marker."
+    },
+    "included": {
+      "tag": "YOUR PROGRAM",
+      "title": "What’s Included in Your Care",
+      "subtitle": "A comprehensive, transparent cash-pay model with zero surprise bills.",
+      "list": {
+        "inc1": {
+          "title": "Initial Consultation",
+          "desc": "Symptom history, training and sleep, prior treatment, fertility plans, medical and family history, and goals."
+        },
+        "inc2": {
+          "title": "Comprehensive Male Hormone Panel",
+          "desc": "Total and free testosterone, SHBG, estradiol, LH, FSH, prolactin, thyroid, CBC with hematocrit, PSA, metabolic and lipid panels, and inflammatory markers."
+        },
+        "inc3": {
+          "title": "Results Consultation with Dr. Adonis",
+          "desc": "Your numbers explained, the likely cause identified, the protocol built."
+        },
+        "inc4": {
+          "title": "Your Prescribed Protocol",
+          "desc": "Route and dosing selected for your case, including injections, creams, and pellets, with ancillary medications where clinically indicated."
+        },
+        "inc5": {
+          "title": "Supporting Corrections",
+          "desc": "Thyroid, nutrient, metabolic, or sleep findings treated alongside, because they determine how well the therapy works."
+        },
+        "inc6": {
+          "title": "Follow-Up Lab Testing Every Six Months",
+          "desc": "Covering testosterone, estradiol, hematocrit, PSA, and metabolic markers."
+        },
+        "inc7": {
+          "title": "Dose Titration",
+          "desc": "Adjusted against results and symptoms until the protocol is right."
+        },
+        "inc8": {
+          "title": "Direct Access To The Practice",
+          "desc": "Call or text the clinic at (305) 290-4691 at any time and message directly with our staff."
+        },
+        "inc9": {
+          "title": "Labs And Consultations Included",
+          "desc": "This is a cash-pay practice. Superbills are not provided."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "POTENTIAL OUTCOMES",
+      "title": "Benefits of Testosterone Therapy",
+      "subtitle": "Response varies by individual, baseline, and adherence.",
+      "list": {
+        "b1": {
+          "title": "Energy And Drive",
+          "desc": "Usually the first thing men report changing."
+        },
+        "b2": {
+          "title": "Lean Muscle And Strength",
+          "desc": "Testosterone increases muscle protein synthesis. Training still does the work — therapy makes the work pay."
+        },
+        "b3": {
+          "title": "Body Composition",
+          "desc": "Improved fat distribution and insulin sensitivity, particularly abdominal."
+        },
+        "b4": {
+          "title": "Libido And Sexual Function",
+          "desc": "Improvement in drive and, for many men, erectile quality."
+        },
+        "b5": {
+          "title": "Mood And Motivation",
+          "desc": "Many men describe steadier mood and a return of drive that had gone flat."
+        },
+        "b6": {
+          "title": "Cognition",
+          "desc": "Improved focus and mental clarity are commonly reported."
+        },
+        "b7": {
+          "title": "Bone Density",
+          "desc": "Testosterone is protective against bone loss in men."
+        },
+        "b8": {
+          "title": "Sleep",
+          "desc": "Often improves, though untreated sleep apnea requires evaluation, since testosterone can worsen it."
+        }
+      },
+      "edNote": "Where erectile dysfunction is primarily vascular, testosterone alone will not resolve it — see our <a href=\"/erectile-dysfunction\">ED page</a>."
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "Male Hormone Physiology From The Top Of The Axis Down",
+      "p1": "Dr. Adonis trained as a <strong>neurosurgeon in pituitary surgery</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida. The pituitary is the gland that sends the signal telling the testicles to produce testosterone.",
+      "p2": "Operating on it for years gave him a working understanding of male hormone physiology from the top of the axis down, which is not the usual background for a testosterone clinic. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced hormone and functional medicine in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.",
+      "credentials": {
+        "c1": "USF Neurosurgery Fellowship",
+        "c2": "Institute for Functional Medicine (IFM)",
+        "c3": "A4M Board Certified",
+        "c4": "UM Medical Campus & Florida Telehealth"
+      }
+    },
+    "testimonial": {
+      "quote": "“Excellent experience in this clinic. The staff is very professional and friendly, and the medical team provides first-class care. Without a doubt, a quality medical service that I totally recommend.”",
+      "author": "— Ana G.",
+      "role": "Verified Clinic Patient",
+      "disclaimer": "*Individual results vary. Patient experiences described here are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about testing, fertility, risks, routes, and monitoring.",
+      "list": {
+        "f1": {
+          "q": "My doctor said my testosterone was normal. Why do I still feel this way?",
+          "a": "Reference ranges are wide, they are age-adjusted downward, and total testosterone does not tell you how much is biologically available. A man at the low end of range with high SHBG can have free testosterone well below functional levels. Timing matters too — a level drawn in the afternoon can read substantially lower than the same man’s morning value."
+        },
+        "f2": {
+          "q": "Will TRT affect my fertility?",
+          "a": "Yes. Exogenous testosterone suppresses the pituitary signal that drives sperm production, and that suppression can persist after stopping. If you want children now or later, tell us at your first visit. Enclomiphene and hCG-based protocols raise testosterone while preserving the signal."
+        },
+        "f3": {
+          "q": "Is TRT for life?",
+          "a": "Often, but not always. If low testosterone is secondary to something correctable — sleep apnea, significant visceral fat, thyroid dysfunction, chronic stress — treating the cause sometimes restores production. That is why we investigate before we prescribe."
+        },
+        "f4": {
+          "q": "What are the risks?",
+          "a": "The main ones are elevated hematocrit, estradiol imbalance, acne, fluid retention, testicular shrinkage, fertility suppression, and worsening of untreated sleep apnea. Every one of them is monitorable, which is why scheduled labs are non-negotiable here."
+        },
+        "f5": {
+          "q": "Injections, cream, or pellets?",
+          "a": "We offer injections, creams, and pellets. Each has trade-offs in level stability, convenience, and cost. The route is selected based on your labs, your schedule, and what you will realistically stay consistent with, and it can be changed if the first choice does not suit you."
+        },
+        "f6": {
+          "q": "How fast will I feel it?",
+          "a": "Energy and mood commonly shift in the first few weeks. Libido varies widely. Body composition takes months and depends on what you do in the gym and kitchen."
+        },
+        "f7": {
+          "q": "Do you use hCG or aromatase inhibitors?",
+          "a": "Ancillary medications are used where clinically indicated, based on your estradiol, your fertility plans, and how you respond to therapy. They are not applied as a default to every patient."
+        },
+        "f8": {
+          "q": "Can I do this by telehealth?",
+          "a": "Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "f9": {
+          "q": "Is this covered by insurance?",
+          "a": "No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program, which is what allows for full panels and unhurried visits."
+        },
+        "f10": {
+          "q": "What if I want to stop?",
+          "a": "We taper and monitor rather than having you stop abruptly. Recovery of natural production varies with how long you were on therapy and your baseline before it."
+        }
+      }
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "Start With A Real Panel",
+      "lead": "If nobody has checked your free testosterone, SHBG, estradiol, and LH, nobody has actually assessed your hormones. A complete panel takes one morning.",
+      "primary": "Request A Consultation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Testosterone replacement therapy requires medical evaluation and is not appropriate for every patient. Therapy is prescribed only after physician review of your history and laboratory results, and requires ongoing monitoring."
+    },
+    "seo": {
+      "title": "TRT in Miami | Physician-Managed Testosterone Therapy — Dr. Adonis Maiquez, MD",
+      "description": "Physician-led testosterone replacement therapy in Miami. Full hormone panel, protocol built from your labs, ongoing monitoring by a neurosurgeon-trained MD."
+    }
+  },
+  "peptideTherapyPage": {
+    "badge": "OPTIMIZATION & REGENERATIVE MEDICINE",
+    "hero": {
+      "title": "Peptide Therapy in Miami, FL",
+      "lead": "Physician-supervised peptide protocols built from comprehensive diagnostic lab testing. Clear evidence, full regulatory transparency, and precision dosing tailored to your biology.",
+      "ctaPrimary": "Request A Consultation",
+      "ctaPhone": "Call (305) 290-4691",
+      "pills": {
+        "labs": "Diagnostic Labs First",
+        "compliant": "FDA-Compliant Protocols",
+        "telehealth": "Florida Telehealth Available"
+      }
+    },
+    "intro": {
+      "tag": "THE SCIENCE",
+      "title": "What Peptides Are & How They Work",
+      "lead": "Peptides are among the most oversold categories in wellness medicine right now, and among the most interesting. Both things are true.",
+      "p1": "There are peptides with meaningful clinical rationale used appropriately under physician supervision, and there is a large market selling them without testing, without oversight, and frequently without a clear account of what is actually being dispensed.",
+      "callout": "<strong>The difference is entirely in how it is done.</strong>",
+      "p2": "Peptides are short chains of amino acids (typically fewer than 50). Your body already synthesizes and uses thousands of them as vital signaling molecules—including insulin, growth hormone releasing hormone (GHRH), and cellular repair messengers. Peptide therapy delivers specific signaling peptides to activate defined cellular receptors, offering highly targeted physiological effects.",
+      "features": {
+        "f1": {
+          "title": "Targeted Signaling",
+          "desc": "Unlike broad systemic interventions, peptides bind to specific cell-surface receptors to trigger precise physiological responses."
+        },
+        "f2": {
+          "title": "Endogenous Support",
+          "desc": "Stimulates your body’s natural production of vital hormones and repair factors rather than relying on synthetic suppression."
+        },
+        "f3": {
+          "title": "Clinical Oversight",
+          "desc": "Monitored via 6-month blood panels to verify tissue response, safety markers, and ongoing cellular optimization."
+        }
+      }
+    },
+    "peptides": {
+      "tag": "CLINICAL SELECTION",
+      "title": "The Peptides We Work With",
+      "subtitle": "Popular uses and the indications formally evaluated by medical authorities are not always the same thing. We tell you exactly which is which.",
+      "list": {
+        "p1": {
+          "category": "GLP-1 Receptor Agonists",
+          "statusLabel": "FDA-Approved Product",
+          "name": "Semaglutide & Tirzepatide",
+          "desc": "GLP-1 receptor medications utilized in targeted medical weight management and metabolic care. These are the only peptides on this page that are FDA-approved products, supported by the largest body of clinical trial evidence.",
+          "linkText": "Learn about Medical Weight Loss"
+        },
+        "p2": {
+          "category": "Synthetic Gastric Peptide",
+          "statusLabel": "Compounded / Unapproved",
+          "name": "BPC-157",
+          "desc": "A synthetic peptide derived from a protective protein found naturally in gastric juice. Extensively investigated in preclinical models for soft tissue, tendon, ligament, and gut mucosal healing."
+        },
+        "p3": {
+          "category": "Thymosin Beta-4 Fragment",
+          "statusLabel": "Compounded / Unapproved",
+          "name": "TB-500",
+          "desc": "A synthetic fragment of thymosin beta-4, an endogenous peptide involved in endothelial cell migration, actin regulation, and tissue repair. Frequently paired alongside BPC-157 in restorative protocols."
+        },
+        "p4": {
+          "category": "GHRH Analog",
+          "statusLabel": "Compounded / Unapproved",
+          "name": "CJC-1295",
+          "desc": "A Growth Hormone Releasing Hormone analog. Rather than supplying exogenous growth hormone, it stimulates your pituitary gland to release endogenous growth hormone in a natural, pulsatile physiological pattern."
+        },
+        "p5": {
+          "category": "Mitochondrial-Derived Peptide",
+          "statusLabel": "Compounded / Unapproved",
+          "name": "MOTS-c",
+          "desc": "A mitochondrial-encoded signaling peptide that acts as an exercise mimetic, supporting cellular energy homeostasis, metabolic regulation, and glucose utilization."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METHODOLOGY",
+      "title": "Our Clinical Approach",
+      "subtitle": "We do not hand out peptide prescriptions on a whim. We follow a rigorous 5-pillar medical standard.",
+      "pillars": {
+        "p1": {
+          "title": "Testing Comes First",
+          "desc": "Peptides are never a blind starting point. If fatigue stems from thyroid dysfunction, insulin resistance, or low testosterone, a peptide is the wrong intervention. We test comprehensive hormones, thyroid, IGF-1, metabolic markers, and organ function before prescribing."
+        },
+        "p2": {
+          "title": "Fix The Foundation First",
+          "desc": "Hormone deficiencies, thyroid dysregulation, nutrient depletion, sleep disruption, and metabolic imbalances get corrected before or alongside peptide therapy. Many patients resolve their symptoms at this stage alone."
+        },
+        "p3": {
+          "title": "Specific About Evidence",
+          "desc": "For any peptide discussed, you receive an honest account of proposed mechanisms, clinical evidence, regulatory status, and what remains unknown. We separate marketing hype from medical reality."
+        },
+        "p4": {
+          "title": "No Public Dosing",
+          "desc": "Peptide protocols and dosages are strictly individualized, requiring direct physician direction and oversight. We never distribute generic dosing schedules publicly."
+        },
+        "p5": {
+          "title": "Continuous Monitoring",
+          "desc": "Follow-up laboratory panels every six months ensure optimal response, safety markers, and ongoing protocol refinement."
+        }
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUATION",
+      "title": "Who This Is For — And Who It Is Not For",
+      "subtitle": "Peptide therapy is an advanced, selective medical tool. Candidacy is determined exclusively through diagnostic testing.",
+      "fitTitle": "Peptide therapy may be appropriate if you:",
+      "fitList": {
+        "c1": "Have completed comprehensive diagnostic testing and addressed foundational health",
+        "c2": "Have a specific, plausible physiological goal that peptide therapy addresses",
+        "c3": "Want an experienced physician determining appropriateness rather than buying online",
+        "c4": "Expect a transparent, honest account of clinical evidence and regulatory status",
+        "c5": "Are committed to mandatory 6-month safety and biomarker monitoring"
+      },
+      "unfitTitle": "It is NOT appropriate if you:",
+      "unfitList": {
+        "n1": "Have not completed comprehensive baseline lab testing",
+        "n2": "Have active malignancy or a recent cancer history (growth-signaling peptides are contraindicated)",
+        "n3": "Are currently pregnant, breastfeeding, or actively attempting to conceive",
+        "n4": "Have significant, unmanaged liver or kidney impairment",
+        "n5": "Want peptides without medical supervision or follow-up bloodwork",
+        "n6": "Are seeking speculative compounds read about online without clinical evaluation",
+        "n7": "Expect unsupported anti-aging or miracle lifespan claims"
+      }
+    },
+    "treatmentSteps": {
+      "tag": "THE PROCESS",
+      "title": "How Treatment Works",
+      "subtitle": "From baseline lab discovery to long-term cellular optimization, here is what your patient journey looks like.",
+      "steps": {
+        "s1": {
+          "title": "Initial Consultation",
+          "desc": "Direct review of your medical history, goals, symptoms, prior therapies, and an honest discussion of realistic outcomes."
+        },
+        "s2": {
+          "title": "Advanced Testing",
+          "desc": "Comprehensive diagnostic panel (hormones, full thyroid, IGF-1, metabolic & inflammatory markers). Completed in-office or at Quest/LabCorp."
+        },
+        "s3": {
+          "title": "Clinical Interpretation",
+          "desc": "Dr. Adonis analyzes your root-cause biomarkers to determine whether peptide therapy is genuinely indicated or if foundational correction comes first."
+        },
+        "s4": {
+          "title": "Results Consultation",
+          "desc": "In-depth review of findings, building your foundational care plan, and presenting prescribed peptide options with full regulatory transparency."
+        },
+        "s5": {
+          "title": "Foundation First",
+          "desc": "Restoring hormone balance, metabolic function, sleep architecture, and key nutrients for optimal cellular responsiveness."
+        },
+        "s6": {
+          "title": "Targeted Protocol",
+          "desc": "Precise, physician-directed compounded peptide protocol with administration guidance, progress markers, and safety protocols."
+        },
+        "s7": {
+          "title": "6-Month Lab Monitoring",
+          "desc": "Follow-up lab re-evaluations every six months to monitor safety markers and objectively assess therapeutic response."
+        }
+      },
+      "timelineNote": "Most patients report meaningful clinical change within 90 days when paired with foundational health optimization."
+    },
+    "included": {
+      "tag": "YOUR PROGRAM",
+      "title": "What’s Included in Your Care",
+      "subtitle": "A comprehensive, transparent cash-pay model with zero surprise bills.",
+      "list": {
+        "inc1": {
+          "title": "Initial Comprehensive Consultation",
+          "desc": "Goals, symptom timeline, prior medical history, and direct outcome expectation setting."
+        },
+        "inc2": {
+          "title": "Comprehensive Diagnostic Labs",
+          "desc": "Hormone panel, thyroid cascade, IGF-1, metabolic markers, and organ function panels."
+        },
+        "inc3": {
+          "title": "Results Review with Dr. Adonis",
+          "desc": "Direct 1-on-1 consultation analyzing lab findings and personalized protocol indications."
+        },
+        "inc4": {
+          "title": "Foundational Correction Protocol",
+          "desc": "Hormone, thyroid, nutrient, and sleep balance addressed before or alongside peptides."
+        },
+        "inc5": {
+          "title": "Prescribed Compounded Peptides",
+          "desc": "Customized dosing protocols with administration instruction and verified sourcing."
+        },
+        "inc6": {
+          "title": "6-Month Lab Monitoring",
+          "desc": "Routine biomarker re-testing to adjust protocols and guarantee patient safety."
+        },
+        "inc7": {
+          "title": "Direct Practice Access",
+          "desc": "Direct messaging and call access to our clinical team at (305) 290-4691."
+        },
+        "inc8": {
+          "title": "All-Inclusive Cash Pricing",
+          "desc": "All consultations and scheduled lab panels are included. No superbills or hidden fees."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "POTENTIAL OUTCOMES",
+      "title": "Targeted Physiological Areas",
+      "subtitle": "Effects depend on the individual peptide, your baseline labs, and foundational health. We make no unrealistic anti-aging claims.",
+      "list": {
+        "b1": {
+          "title": "Recovery & Tissue Repair",
+          "desc": "Supporting musculoskeletal, tendon, and soft tissue healing after injury or surgery."
+        },
+        "b2": {
+          "title": "Body Composition",
+          "desc": "Optimizing lean muscle preservation and fat distribution alongside metabolic correction."
+        },
+        "b3": {
+          "title": "Sleep Quality",
+          "desc": "Enhancing slow-wave sleep depth through natural growth hormone secretagogue signaling."
+        },
+        "b4": {
+          "title": "Metabolic Function",
+          "desc": "Improving insulin sensitivity and metabolic efficiency with GLP-1 receptor pathways."
+        },
+        "b5": {
+          "title": "Immune & Inflammatory Balance",
+          "desc": "Investigated for modulating healthy inflammatory response at the cellular level."
+        },
+        "b6": {
+          "title": "Cognitive & Cellular Energy",
+          "desc": "Supporting mitochondrial bioenergetics and focus through targeted signaling."
+        },
+        "b7": {
+          "title": "Joint & Connective Comfort",
+          "desc": "Promoting localized collagen and soft tissue regeneration in stressed joints."
+        },
+        "b8": {
+          "title": "Overall Vitality",
+          "desc": "Layered after foundational hormone and nutrient optimization for complete wellness."
+        }
+      }
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "Why Neurological & Pituitary Background Matters in Peptide Therapy",
+      "p1": "Dr. Adonis trained as a <strong>neurosurgeon specializing in pituitary surgery</strong>, completing fellowship training at the University of South Florida. He performed hundreds of surgical procedures on the pituitary gland—the master endocrine organ that synthesizes and regulates the body’s endogenous peptide hormones.",
+      "p2": "Because growth hormone secretagogues (like CJC-1295) act directly on pituitary receptors, his surgical and neuroendocrine expertise provides an unmatched clinical foundation for prescribing peptide protocols safely and effectively.",
+      "credentials": {
+        "c1": "USF Neurosurgery Fellowship",
+        "c2": "Institute for Functional Medicine (IFM)",
+        "c3": "A4M Board Certified",
+        "c4": "UM Medical Campus & Florida Telehealth"
+      }
+    },
+    "testimonial": {
+      "quote": "“Excellent experience in this clinic. The staff is very professional and friendly, and the medical team provides first-class care. Without a doubt, a quality medical service that I totally recommend.”",
+      "author": "— Ana G.",
+      "role": "Verified Clinic Patient",
+      "disclaimer": "*Individual results vary. Patient experiences described are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about peptide therapy protocols, safety, and regulation.",
+      "list": {
+        "f1": {
+          "q": "Are peptides FDA approved?",
+          "a": "Semaglutide and tirzepatide are FDA-approved medications with extensive clinical trial data. BPC-157, TB-500, CJC-1295, and MOTS-c are not FDA-approved drugs. In July 2026, an FDA advisory committee voted to recommend three of them for pharmacy compounding eligibility, but that vote is non-binding and formal agency rulemaking remains pending. We review the precise regulatory status of every compound with you."
+        },
+        "f2": {
+          "q": "What does the July 2026 FDA advisory vote actually change?",
+          "a": "On its own, nothing immediately. An advisory committee recommendation is expert counsel to the FDA, not a finalized regulation. The agency must still formally accept the recommendation and complete administrative rulemaking before compounding pharmacies have clear statutory authority. We track this closely to ensure compliance."
+        },
+        "f3": {
+          "q": "Are peptides safe?",
+          "a": "Safety varies significantly depending on the specific peptide, dose, purity, and individual patient biology. Some peptides possess extensive human safety profiles, while others rely primarily on preclinical data. We discuss verified safety profiles, contraindications, and conduct required monitoring labs every 6 months."
+        },
+        "f4": {
+          "q": "Can I buy peptides online instead?",
+          "a": "Products sold online marked \"for research purposes only\" or \"not for human consumption\" are not manufactured under pharmaceutical CGMP standards. Contamination, endotoxins, degraded chains, and inaccurate dosing are widespread risks. We strongly advise against unmonitored online sourcing."
+        },
+        "f5": {
+          "q": "How are peptides administered?",
+          "a": "Most peptides are administered via subcutaneous micro-injections using an ultra-fine insulin needle, while others are available in oral or nasal formulations. Full step-by-step administration instructions and sterile supplies are provided at your visit. We do not publish dosing publicly."
+        },
+        "f6": {
+          "q": "Will peptides replace my hormone replacement therapy?",
+          "a": "No. Peptides and bioidentical hormones operate via different signaling mechanisms. Peptides generally work far more effectively once underlying hormone, thyroid, and nutrient levels are already balanced."
+        },
+        "f7": {
+          "q": "Are these considered performance enhancing drugs?",
+          "a": "Several growth hormone secretagogues and related peptides are prohibited by the World Anti-Doping Agency (WADA) and competitive athletic federations. If you participate in sanctioned competitive sports, please disclose this during your initial consultation."
+        },
+        "f8": {
+          "q": "How much do peptides help and how quickly do they work?",
+          "a": "Results vary based on the specific protocol, baseline health, and accompanying foundational corrections. Most patients report measurable improvements within 90 days when combined with nutrition, sleep, and hormone optimization."
+        },
+        "f9": {
+          "q": "Can peptide therapy be managed through telemedicine?",
+          "a": "Yes! Florida residents can complete their comprehensive consultations, results reviews, and ongoing check-ins via HIPAA-compliant telemedicine. Diagnostic lab testing is completed locally at any authorized Quest Diagnostics or LabCorp facility."
+        },
+        "f10": {
+          "q": "Do you accept insurance?",
+          "a": "Dr. Adonis is a cash-pay medical practice. We do not accept insurance, and superbills are not provided for peptide protocols. All diagnostic labs and physician consultations are included in your clear, upfront program pricing."
+        }
+      }
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "Start with Testing, Not a Peptide",
+      "lead": "The right question is not which peptide you should take. It is what your comprehensive diagnostic blood panels show, and whether peptide therapy has any legitimate clinical role in addressing it.",
+      "primary": "Schedule Your Evaluation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Peptide therapy requires comprehensive medical evaluation and is not appropriate for every individual. Most peptides are prescribed off-label and dispensed as individualized compounded preparations. Treatment is prescribed solely after physician review of your medical history and diagnostic laboratory results."
+    },
+    "seo": {
+      "title": "Peptide Therapy Miami | Physician-Supervised Peptide Protocols — Dr. Adonis Maiquez, MD",
+      "description": "Physician-supervised peptide therapy in Miami. Testing first, clear discussion of regulatory status, and protocols built from your labs. Florida telehealth available."
+    }
   }
 }

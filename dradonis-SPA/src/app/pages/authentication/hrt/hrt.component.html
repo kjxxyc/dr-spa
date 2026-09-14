@@ -6,38 +6,37 @@
   <section class="service-hero">
     <div class="hero-badge">
       <mat-icon>health_and_safety</mat-icon>
-      <span>BIOIDENTICAL HORMONE THERAPY</span>
+      <span>{{ 'hrtPage.badge' | translate }}</span>
     </div>
 
-    <h1>Bioidentical Hormone Replacement Therapy in Miami, FL</h1>
+    <h1>{{ 'hrtPage.hero.title' | translate }}</h1>
     <p class="hero-lead">
-      Hormones do not fail all at once. They drift.
-      Most people absorb the changes one at a time, assume it is age, and never connect them. They are connectable, and they are measurable.
+      {{ 'hrtPage.hero.lead' | translate }}
     </p>
 
     <div class="hero-cta-group">
       <button type="button" class="btn-primary-glow" (click)="openAppointment()">
         <mat-icon>calendar_today</mat-icon>
-        <span>Request A Consultation</span>
+        <span>{{ 'hrtPage.hero.ctaPrimary' | translate }}</span>
       </button>
       <a href="tel:+13052904691" class="btn-secondary-phone">
         <mat-icon>phone</mat-icon>
-        <span>Call (305) 290-4691</span>
+        <span>{{ 'hrtPage.hero.ctaPhone' | translate }}</span>
       </a>
     </div>
 
     <div class="hero-pill-bar">
       <div class="pill-item">
         <mat-icon>biotech</mat-icon>
-        <span>Whole-System Hormone Panel</span>
+        <span>{{ 'hrtPage.hero.pills.panel' | translate }}</span>
       </div>
       <div class="pill-item">
         <mat-icon>person</mat-icon>
-        <span>One Physician Throughout</span>
+        <span>{{ 'hrtPage.hero.pills.physician' | translate }}</span>
       </div>
       <div class="pill-item">
         <mat-icon>videocam</mat-icon>
-        <span>Florida Telehealth Available</span>
+        <span>{{ 'hrtPage.hero.pills.telehealth' | translate }}</span>
       </div>
     </div>
   </section>
@@ -49,44 +48,38 @@
     <div class="section-card intro-card">
       <div class="intro-grid">
         <div class="intro-text">
-          <span class="section-tag">THE SCIENCE</span>
-          <h2>What Hormone Replacement Therapy Is</h2>
+          <span class="section-tag">{{ 'hrtPage.intro.tag' | translate }}</span>
+          <h2>{{ 'hrtPage.intro.title' | translate }}</h2>
           <p class="lead-paragraph">
-            Hormone replacement therapy restores hormones your body has stopped producing at the levels it needs.
+            {{ 'hrtPage.intro.lead' | translate }}
           </p>
-          <p>
-            We use <strong>bioidentical hormones</strong>, meaning the molecules are structurally identical to the hormones your body makes. Estradiol given as HRT is the same estradiol your ovaries produced.
-          </p>
-          <p class="highlight-callout">
-            <strong>Identical structure means the hormone binds the same receptors and follows the same metabolic pathways as your own.</strong>
-          </p>
-          <p>
-            That is different from older synthetic formulations, which were structurally altered compounds that behaved differently in the body and carried a different side effect profile.
-          </p>
+          <p [innerHTML]="'hrtPage.intro.p1' | translate"></p>
+          <p class="highlight-callout" [innerHTML]="'hrtPage.intro.callout' | translate"></p>
+          <p>{{ 'hrtPage.intro.p2' | translate }}</p>
         </div>
 
         <div class="intro-features">
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>science</mat-icon></div>
             <div class="feat-content">
-              <h3>Structurally Identical</h3>
-              <p>Same molecule, same receptors, same metabolic pathways as the hormones your body produced.</p>
+              <h3>{{ 'hrtPage.intro.features.f1.title' | translate }}</h3>
+              <p>{{ 'hrtPage.intro.features.f1.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>swap_horiz</mat-icon></div>
             <div class="feat-content">
-              <h3>A Network, Not A Number</h3>
-              <p>Estradiol, progesterone, testosterone, DHEA, cortisol, and thyroid all influence one another.</p>
+              <h3>{{ 'hrtPage.intro.features.f2.title' | translate }}</h3>
+              <p>{{ 'hrtPage.intro.features.f2.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>medication</mat-icon></div>
             <div class="feat-content">
-              <h3>Dose Matched To You</h3>
-              <p>Compounded preparations allow doses matched to your labs rather than the nearest commercial tablet strength.</p>
+              <h3>{{ 'hrtPage.intro.features.f3.title' | translate }}</h3>
+              <p>{{ 'hrtPage.intro.features.f3.desc' | translate }}</p>
             </div>
           </div>
         </div>
@@ -99,25 +92,25 @@
   <!-- ========================================== -->
   <section class="catalog-section">
     <div class="section-header">
-      <span class="section-tag">WHO IT IS FOR</span>
-      <h2>The Transitions HRT Is Used Across</h2>
+      <span class="section-tag">{{ 'hrtPage.transitions.tag' | translate }}</span>
+      <h2>{{ 'hrtPage.transitions.title' | translate }}</h2>
       <p class="section-subtitle">
-        Hormone decline is not one event with one timeline, and the protocol differs with each.
+        {{ 'hrtPage.transitions.subtitle' | translate }}
       </p>
     </div>
 
     <div class="catalog-grid">
       <div class="catalog-card" *ngFor="let item of transitions">
         <div class="catalog-card-header">
-          <span class="catalog-category">{{ item.category }}</span>
+          <span class="catalog-category">{{ 'hrtPage.transitions.list.' + item.id + '.category' | translate }}</span>
         </div>
 
-        <h3 class="catalog-name">{{ item.name }}</h3>
-        <p class="catalog-desc">{{ item.description }}</p>
+        <h3 class="catalog-name">{{ 'hrtPage.transitions.list.' + item.id + '.name' | translate }}</h3>
+        <p class="catalog-desc">{{ 'hrtPage.transitions.list.' + item.id + '.desc' | translate }}</p>
 
         <div class="catalog-action" *ngIf="item.linkUrl">
           <a [routerLink]="item.linkUrl" class="card-link">
-            <span>{{ item.linkText }}</span>
+            <span>{{ 'hrtPage.transitions.list.' + item.id + '.linkText' | translate }}</span>
             <mat-icon>arrow_forward</mat-icon>
           </a>
         </div>
@@ -130,10 +123,10 @@
   <!-- ========================================== -->
   <section class="clinical-approach-section">
     <div class="section-header">
-      <span class="section-tag">METHODOLOGY</span>
-      <h2>Our Approach</h2>
+      <span class="section-tag">{{ 'hrtPage.approach.tag' | translate }}</span>
+      <h2>{{ 'hrtPage.approach.title' | translate }}</h2>
       <p class="section-subtitle">
-        Replacement is a tool inside a plan, not the entire plan.
+        {{ 'hrtPage.approach.subtitle' | translate }}
       </p>
     </div>
 
@@ -143,16 +136,14 @@
         <div class="pillar-icon-wrapper">
           <mat-icon>{{ p.icon }}</mat-icon>
         </div>
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
+        <h3>{{ 'hrtPage.approach.pillars.' + p.id + '.title' | translate }}</h3>
+        <p>{{ 'hrtPage.approach.pillars.' + p.id + '.desc' | translate }}</p>
       </div>
     </div>
 
     <div class="doctor-quote">
-      <p>
-        “Hormones are not a single number to correct. They are a system that has to be brought back into balance together.”
-      </p>
-      <span class="quote-author">— Dr. Adonis</span>
+      <p>{{ 'hrtPage.approach.quote' | translate }}</p>
+      <span class="quote-author">{{ 'hrtPage.approach.quoteAuthor' | translate }}</span>
     </div>
   </section>
 
@@ -161,10 +152,10 @@
   <!-- ========================================== -->
   <section class="signs-section">
     <div class="section-header">
-      <span class="section-tag">SYMPTOM CHECK</span>
-      <h2>Signs HRT Could Help You</h2>
+      <span class="section-tag">{{ 'hrtPage.signs.tag' | translate }}</span>
+      <h2>{{ 'hrtPage.signs.title' | translate }}</h2>
       <p class="section-subtitle">
-        The presentation differs between women and men, and both are frequently attributed to age instead.
+        {{ 'hrtPage.signs.subtitle' | translate }}
       </p>
     </div>
 
@@ -172,12 +163,12 @@
       <div class="section-card">
         <h3 class="signs-group-title">
           <mat-icon>woman</mat-icon>
-          <span>For women</span>
+          <span>{{ 'hrtPage.signs.womenTitle' | translate }}</span>
         </h3>
         <ul class="signs-list">
           <li *ngFor="let s of womenSigns">
             <mat-icon>check_circle</mat-icon>
-            <span>{{ s }}</span>
+            <span>{{ 'hrtPage.signs.womenList.' + s | translate }}</span>
           </li>
         </ul>
       </div>
@@ -185,12 +176,12 @@
       <div class="section-card">
         <h3 class="signs-group-title">
           <mat-icon>man</mat-icon>
-          <span>For men</span>
+          <span>{{ 'hrtPage.signs.menTitle' | translate }}</span>
         </h3>
         <ul class="signs-list">
           <li *ngFor="let s of menSigns">
             <mat-icon>check_circle</mat-icon>
-            <span>{{ s }}</span>
+            <span>{{ 'hrtPage.signs.menList.' + s | translate }}</span>
           </li>
         </ul>
       </div>
@@ -198,7 +189,7 @@
 
     <div class="timeline-note">
       <mat-icon>info</mat-icon>
-      <span>If several of these describe you and nobody has run a full hormone panel, that panel is the next step.</span>
+      <span>{{ 'hrtPage.signs.note' | translate }}</span>
     </div>
   </section>
 
@@ -207,10 +198,10 @@
   <!-- ========================================== -->
   <section class="candidacy-section">
     <div class="section-header">
-      <span class="section-tag">EVALUATION</span>
-      <h2>Who This Is For — And Who It Is Not For</h2>
+      <span class="section-tag">{{ 'hrtPage.candidacy.tag' | translate }}</span>
+      <h2>{{ 'hrtPage.candidacy.title' | translate }}</h2>
       <p class="section-subtitle">
-        Every candidate is evaluated individually. Some of the items below are absolute exclusions and some require additional workup.
+        {{ 'hrtPage.candidacy.subtitle' | translate }}
       </p>
     </div>
 
@@ -219,12 +210,12 @@
       <div class="candidacy-card fit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon positive">check_circle</mat-icon>
-          <h3>HRT is a strong fit if you:</h3>
+          <h3>{{ 'hrtPage.candidacy.fitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of candidatePoints">
             <mat-icon>check_circle</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ 'hrtPage.candidacy.fitList.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -233,12 +224,12 @@
       <div class="candidacy-card unfit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon negative">block</mat-icon>
-          <h3>It may not be right if you:</h3>
+          <h3>{{ 'hrtPage.candidacy.unfitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of nonCandidatePoints">
             <mat-icon>block</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ 'hrtPage.candidacy.unfitList.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -246,9 +237,7 @@
 
     <div class="scope-note">
       <mat-icon>error_outline</mat-icon>
-      <span>
-        <strong>We do not prescribe hormone replacement to patients with a history of hormone-sensitive cancer.</strong> Those patients are treated with a natural functional medicine approach instead — addressing symptoms through nutrition, targeted supplementation, and correction of the metabolic and inflammatory drivers, in coordination with your oncologist.
-      </span>
+      <span [innerHTML]="'hrtPage.candidacy.scopeNote' | translate"></span>
     </div>
   </section>
 
@@ -257,31 +246,31 @@
   <!-- ========================================== -->
   <section class="treatment-steps-section">
     <div class="section-header">
-      <span class="section-tag">THE PROCESS</span>
-      <h2>How Treatment Works</h2>
+      <span class="section-tag">{{ 'hrtPage.treatmentSteps.tag' | translate }}</span>
+      <h2>{{ 'hrtPage.treatmentSteps.title' | translate }}</h2>
       <p class="section-subtitle">
-        From the first consultation to ongoing monitoring, here is what your care looks like.
+        {{ 'hrtPage.treatmentSteps.subtitle' | translate }}
       </p>
     </div>
 
     <div class="steps-timeline">
       <div class="step-timeline-item" *ngFor="let st of treatmentSteps">
         <div class="step-badge-circle">
-          <span>{{ st.number }}</span>
+          <span>{{ st.step }}</span>
         </div>
         <div class="step-card-body">
           <div class="step-title-row">
             <mat-icon>{{ st.icon }}</mat-icon>
-            <h3>{{ st.title }}</h3>
+            <h3>{{ 'hrtPage.treatmentSteps.steps.' + st.id + '.title' | translate }}</h3>
           </div>
-          <p>{{ st.description }}</p>
+          <p>{{ 'hrtPage.treatmentSteps.steps.' + st.id + '.desc' | translate }}</p>
         </div>
       </div>
     </div>
 
     <div class="timeline-note">
       <mat-icon>schedule</mat-icon>
-      <span>Most patients report meaningful change within 90 days. Sleep and energy often shift earliest, with body composition and libido responding over a longer horizon.</span>
+      <span>{{ 'hrtPage.treatmentSteps.timelineNote' | translate }}</span>
     </div>
   </section>
 
@@ -291,16 +280,16 @@
   <section class="program-included-section">
     <div class="included-card">
       <div class="included-header">
-        <span class="section-tag">YOUR PROGRAM</span>
-        <h2>What’s Included in Your Care</h2>
-        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+        <span class="section-tag">{{ 'hrtPage.included.tag' | translate }}</span>
+        <h2>{{ 'hrtPage.included.title' | translate }}</h2>
+        <p>{{ 'hrtPage.included.subtitle' | translate }}</p>
       </div>
 
       <div class="included-grid">
         <div class="inc-item" *ngFor="let inc of included">
           <mat-icon>{{ inc.icon }}</mat-icon>
-          <h4>{{ inc.title }}</h4>
-          <p>{{ inc.description }}</p>
+          <h4>{{ 'hrtPage.included.list.' + inc.id + '.title' | translate }}</h4>
+          <p>{{ 'hrtPage.included.list.' + inc.id + '.desc' | translate }}</p>
         </div>
       </div>
     </div>
@@ -311,10 +300,10 @@
   <!-- ========================================== -->
   <section class="benefits-section">
     <div class="section-header">
-      <span class="section-tag">POTENTIAL OUTCOMES</span>
-      <h2>Benefits of Bioidentical Hormone Therapy</h2>
+      <span class="section-tag">{{ 'hrtPage.benefits.tag' | translate }}</span>
+      <h2>{{ 'hrtPage.benefits.title' | translate }}</h2>
       <p class="section-subtitle">
-        Individual response varies with your baseline, your protocol, and how long you have been deficient.
+        {{ 'hrtPage.benefits.subtitle' | translate }}
       </p>
     </div>
 
@@ -323,8 +312,8 @@
         <div class="benefit-icon">
           <mat-icon>{{ b.icon }}</mat-icon>
         </div>
-        <h3>{{ b.title }}</h3>
-        <p>{{ b.description }}</p>
+        <h3>{{ 'hrtPage.benefits.list.' + b.id + '.title' | translate }}</h3>
+        <p>{{ 'hrtPage.benefits.list.' + b.id + '.desc' | translate }}</p>
       </div>
     </div>
   </section>
@@ -346,20 +335,16 @@
       </div>
 
       <div class="physician-bio-col">
-        <span class="section-tag">MEDICAL EXPERTISE</span>
-        <h2>He Came To Hormone Medicine From An Unusual Direction</h2>
-        <p>
-          Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures. The pituitary is the gland that directs the entire endocrine system.
-        </p>
-        <p>
-          Operating on it repeatedly left him with a specific interest in what that system does to a person when it falls out of range. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced hormone and functional medicine in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.
-        </p>
+        <span class="section-tag">{{ 'hrtPage.physician.tag' | translate }}</span>
+        <h2>{{ 'hrtPage.physician.title' | translate }}</h2>
+        <p [innerHTML]="'hrtPage.physician.p1' | translate"></p>
+        <p [innerHTML]="'hrtPage.physician.p2' | translate"></p>
 
         <div class="credentials-pills">
-          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
-          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
-          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
-          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+          <span class="c-pill"><mat-icon>school</mat-icon> {{ 'hrtPage.physician.credentials.c1' | translate }}</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> {{ 'hrtPage.physician.credentials.c2' | translate }}</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> {{ 'hrtPage.physician.credentials.c3' | translate }}</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> {{ 'hrtPage.physician.credentials.c4' | translate }}</span>
         </div>
       </div>
     </div>
@@ -370,8 +355,8 @@
   <!-- ========================================== -->
   <section class="testimonial-section">
     <div class="section-header">
-      <span class="section-tag">PATIENT EXPERIENCES</span>
-      <h2>What Patients Say</h2>
+      <span class="section-tag">{{ 'hrtPage.testimonials.tag' | translate }}</span>
+      <h2>{{ 'hrtPage.testimonials.title' | translate }}</h2>
     </div>
 
     <div class="testimonials-stack">
@@ -379,17 +364,17 @@
         <div class="quote-stars">
           <mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon>
         </div>
-        <blockquote>{{ t.quote }}</blockquote>
+        <blockquote>{{ 'hrtPage.testimonials.list.' + t.id + '.quote' | translate }}</blockquote>
         <div class="testimonial-meta">
-          <strong>{{ t.author }}</strong>
-          <span>{{ t.role }}</span>
+          <strong>{{ 'hrtPage.testimonials.list.' + t.id + '.author' | translate }}</strong>
+          <span>{{ 'hrtPage.testimonials.list.' + t.id + '.role' | translate }}</span>
         </div>
       </div>
     </div>
 
     <div class="timeline-note">
       <mat-icon>info</mat-icon>
-      <span>*Individual results vary. Patient experiences described here are not a guarantee of outcome.</span>
+      <span>{{ 'hrtPage.testimonials.disclaimer' | translate }}</span>
     </div>
   </section>
 
@@ -398,28 +383,28 @@
   <!-- ========================================== -->
   <section class="faq-section">
     <div class="section-header">
-      <span class="section-tag">QUESTIONS & ANSWERS</span>
-      <h2>Frequently Asked Questions</h2>
+      <span class="section-tag">{{ 'hrtPage.faq.tag' | translate }}</span>
+      <h2>{{ 'hrtPage.faq.title' | translate }}</h2>
       <p class="section-subtitle">
-        Everything you need to know about bioidentical hormones, delivery routes, timing, and monitoring.
+        {{ 'hrtPage.faq.subtitle' | translate }}
       </p>
     </div>
 
     <div class="faq-accordion">
       <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
         <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
-          <span>{{ faq.question }}</span>
+          <span>{{ 'hrtPage.faq.list.' + faq.id + '.q' | translate }}</span>
           <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
         </button>
         <div class="faq-answer-panel" *ngIf="faq.isOpen">
-          <p>{{ faq.answer }}</p>
+          <p>{{ 'hrtPage.faq.list.' + faq.id + '.a' | translate }}</p>
         </div>
       </div>
     </div>
 
     <div class="timeline-note">
       <mat-icon>man</mat-icon>
-      <span>Male hormone care is covered in more depth on our <a routerLink="/testosterone-replacement-therapy">TRT page</a> and our <a routerLink="/enclomiphene">enclomiphene page</a>.</span>
+      <span [innerHTML]="'hrtPage.faq.menNote' | translate"></span>
     </div>
   </section>
 
@@ -428,25 +413,25 @@
   <!-- ========================================== -->
   <section class="final-cta-section" id="consultation">
     <div class="final-cta-card">
-      <span class="cta-tag">GET STARTED</span>
-      <h2>Get Your Levels Tested</h2>
+      <span class="cta-tag">{{ 'hrtPage.cta.tag' | translate }}</span>
+      <h2>{{ 'hrtPage.cta.title' | translate }}</h2>
       <p class="cta-lead">
-        Most people spend years attributing hormone symptoms to stress, age, or nothing in particular. A comprehensive panel ends the guessing in about three weeks.
+        {{ 'hrtPage.cta.lead' | translate }}
       </p>
 
       <div class="final-cta-buttons">
         <button type="button" class="btn-primary-large" (click)="openAppointment()">
           <mat-icon>event</mat-icon>
-          <span>Request A Consultation</span>
+          <span>{{ 'hrtPage.cta.primary' | translate }}</span>
         </button>
         <a href="tel:+13052904691" class="btn-outline-phone">
           <mat-icon>phone</mat-icon>
-          <span>Call or Text (305) 290-4691</span>
+          <span>{{ 'hrtPage.cta.phone' | translate }}</span>
         </a>
       </div>
 
       <p class="compliance-footer-note">
-        *Hormone replacement therapy requires medical evaluation and is not appropriate for every patient. Treatment is prescribed only after physician review of your history and laboratory results.
+        {{ 'hrtPage.cta.note' | translate }}
       </p>
     </div>
   </section>

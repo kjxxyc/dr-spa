@@ -3730,5 +3730,983 @@
       "title": "Tratamiento de la Disfunción Eréctil en Miami | Atención de Causa Raíz con el Dr. Adonis Maiquez, MD",
       "description": "Tratamiento de la disfunción eréctil dirigido por un médico en Miami. Investigamos las causas vasculares, hormonales y metabólicas de la DE en lugar de recetar a su alrededor."
     }
+  },
+  "hrtPage": {
+    "badge": "TERAPIA HORMONAL BIOIDÉNTICA",
+    "hero": {
+      "title": "Terapia de Reemplazo Hormonal Bioidéntica en Miami, FL",
+      "lead": "Las hormonas no fallan de golpe. Se desvían. La mayoría de las personas asumen los cambios uno a uno, creen que es la edad y nunca los conectan. Se pueden conectar y se pueden medir.",
+      "ctaPrimary": "Solicitar una Consulta",
+      "ctaPhone": "Llamar al (305) 290-4691",
+      "pills": {
+        "panel": "Panel Hormonal del Sistema Completo",
+        "physician": "Un Solo Médico de Principio a Fin",
+        "telehealth": "Telemedicina en Florida Disponible"
+      }
+    },
+    "intro": {
+      "tag": "LA CIENCIA",
+      "title": "Qué es la Terapia de Reemplazo Hormonal",
+      "lead": "La terapia de reemplazo hormonal repone las hormonas que su cuerpo ha dejado de producir en los niveles que necesita.",
+      "p1": "Utilizamos <strong>hormonas bioidénticas</strong>, lo que significa que las moléculas son estructuralmente idénticas a las hormonas que su cuerpo produce. El estradiol administrado como TRH es el mismo estradiol que producían sus ovarios.",
+      "callout": "<strong>Una estructura idéntica significa que la hormona se une a los mismos receptores y sigue las mismas vías metabólicas que las suyas propias.</strong>",
+      "p2": "Eso es diferente de las formulaciones sintéticas más antiguas, que eran compuestos estructuralmente alterados que se comportaban de manera diferente en el cuerpo y conllevaban un perfil de efectos secundarios distinto.",
+      "features": {
+        "f1": {
+          "title": "Estructuralmente Idénticas",
+          "desc": "Misma molécula, mismos receptores, mismas vías metabólicas que las hormonas que su cuerpo producía."
+        },
+        "f2": {
+          "title": "Una Red, No un Número Aislado",
+          "desc": "El estradiol, la progesterona, la testosterona, la DHEA, el cortisol y la tiroides influyen unos en otros."
+        },
+        "f3": {
+          "title": "Dosis Adaptada a Usted",
+          "desc": "Las preparaciones magistrales permiten dosis adaptadas a sus análisis en lugar de ajustarse a la dosis comercial más cercana."
+        }
+      }
+    },
+    "transitions": {
+      "tag": "PARA QUIÉN ES",
+      "title": "Las Etapas en las que se Utiliza la TRH",
+      "subtitle": "La disminución hormonal no es un único evento con una única cronología, y el protocolo varía en cada una.",
+      "list": {
+        "t1": {
+          "category": "Los Años Previos",
+          "name": "Perimenopausia",
+          "desc": "Los años previos al cese de la menstruación, a menudo comenzando entre los cuarenta tempranos y medios. Las hormonas fluctúan en lugar de simplemente descender, por lo que los síntomas pueden ser erráticos y fáciles de pasar por alto."
+        },
+        "t2": {
+          "category": "Tras el Cese de la Menstruación",
+          "name": "Menopausia",
+          "desc": "El estrógeno y la progesterona caen sustancialmente y permanecen bajos. Los efectos van mucho más allá de los sofocos, afectando la densidad ósea, la salud cardiovascular, la cognición y la arquitectura del sueño."
+        },
+        "t3": {
+          "category": "El Equivalente Masculino",
+          "name": "Andropausia",
+          "desc": "Más lenta y menos discutida. La testosterona disminuye gradualmente aproximadamente a partir de mediados de los treinta.",
+          "linkText": "Vea nuestra página de TRT"
+        },
+        "t4": {
+          "category": "No Depende de la Edad",
+          "name": "Deficiencia Clínica a Cualquier Edad",
+          "desc": "Las deficiencias tiroideas, suprarrenales y de hormonas sexuales ocurren en personas lejos de la menopausia. Con frecuencia se pasan por alto porque nadie las analizó."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "El reemplazo es una herramienta dentro de un plan, no el plan completo.",
+      "pillars": {
+        "p1": {
+          "title": "Evaluamos el Sistema Completo, No Solo la Hormona por la que Preguntó",
+          "desc": "Las hormonas operan como una red. El estradiol, la progesterona, la testosterona, la DHEA, el cortisol y la tiroides influyen entre sí, y cada una se ve influenciada por la insulina, la inflamación y el estado nutricional. Recetar en base a un solo número produce un paciente que se siente parcialmente mejor sin saber por qué."
+        },
+        "p2": {
+          "title": "Indagamos por qué Disminuyeron los Niveles",
+          "desc": "A veces la respuesta es el paso del tiempo y el reemplazo es el tratamiento adecuado. Otras veces es una tiroides que nadie evaluó adecuadamente, fisiología de estrés crónico que suprime la producción a nivel superior, una deficiencia nutricional o una carga inflamatoria. El reemplazo es una herramienta dentro de un plan, no el plan completo."
+        },
+        "p3": {
+          "title": "La Dosificación Responde a sus Análisis y a sus Síntomas, en Conjunto",
+          "desc": "Los números por sí solos no son el objetivo. Un nivel dentro del rango mientras usted todavía se siente mal no es un protocolo terminado. Ajustamos según cómo se siente y lo que muestran sus análisis de seguimiento, en ese orden de prioridad."
+        },
+        "p4": {
+          "title": "Su Médico lo Gestiona Directamente",
+          "desc": "El Dr. Adonis revisa su historial, solicita su panel, lo interpreta, elabora su protocolo y gestiona sus ajustes. No un algoritmo, no un prescriptor rotativo."
+        }
+      },
+      "quote": "“Las hormonas no son un número aislado para corregir. Son un sistema que debe equilibrarse en conjunto.”",
+      "quoteAuthor": "— Dr. Adonis"
+    },
+    "signs": {
+      "tag": "REVISIÓN DE SÍNTOMAS",
+      "title": "Señales de que la TRH Podría Ayudarle",
+      "subtitle": "La manifestación difiere entre mujeres y hombres, y en ambos casos suele atribuirse erróneamente a la edad.",
+      "womenTitle": "Para mujeres",
+      "womenList": {
+        "w1": "Sofocos, sudores nocturnos o dificultad para regular la temperatura corporal",
+        "w2": "Sueño que se interrumpe de madrugada y no se recupera",
+        "w3": "Aumento de peso en el abdomen a pesar de mantener los mismos hábitos",
+        "w4": "Sequedad vaginal o molestias en las relaciones íntimas",
+        "w5": "Bajo deseo sexual que se percibe más físico que emocional",
+        "w6": "Cambios de humor, ansiedad o irritabilidad inusuales en usted",
+        "w7": "Neblina mental, dificultad para encontrar palabras o fallos de memoria",
+        "w8": "Ciclos menstruales que se vuelven irregulares, más abundantes o más escasos",
+        "w9": "Piel más fina, caída del cabello o dolores articulares sin causa aparente",
+        "w10": "Fatiga que comenzó antes de una etapa de estrés y persiste tras superarla"
+      },
+      "menTitle": "Para hombres",
+      "menList": {
+        "m1": "Energía y motivación que han decaído progresivamente",
+        "m2": "Mayor tiempo de recuperación tras el ejercicio y menos fuerza para el mismo esfuerzo",
+        "m3": "Aumento de grasa corporal, sobre todo abdominal, con mayor dificultad para mantener masa muscular",
+        "m4": "Disminución de la libido o cambios en la función eréctil",
+        "m5": "Bajo estado de ánimo, falta de entusiasmo o menor paciencia",
+        "m6": "Pérdida de concentración y agudeza mental",
+        "m7": "Deterioro de la calidad del sueño sin causa aparente"
+      },
+      "note": "Si varios de estos síntomas le describen y nadie le ha realizado un panel hormonal completo, ese panel es el siguiente paso."
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — Y Para Quién No Es",
+      "subtitle": "Cada candidato es evaluado individualmente. Algunos de los puntos siguientes son exclusiones absolutas y otros requieren estudios adicionales.",
+      "fitTitle": "La TRH es una excelente opción si usted:",
+      "fitList": {
+        "c1": "Experimenta síntomas de perimenopausia, menopausia o andropausia",
+        "c2": "Ha tenido niveles bajos o límite y le han dicho que solo espere",
+        "c3": "Desea resolver los síntomas en lugar de resignarse a tolerarlos",
+        "c4": "Ha tenido una mala experiencia con protocolos genéricos en otros lugares",
+        "c5": "Está dispuesto a realizarse análisis y asistir al seguimiento médico periódico"
+      },
+      "unfitTitle": "Podría no ser adecuada si usted:",
+      "unfitList": {
+        "n1": "Tiene antecedentes de cáncer sensible a hormonas. No recetamos reemplazo hormonal en estos casos; los abordamos con medicina funcional natural en coordinación con su oncólogo.",
+        "n2": "Tiene sangrado vaginal inexplicable que no ha sido evaluado previamente",
+        "n3": "Padece enfermedad hepática activa, antecedentes de trombos, accidente cerebrovascular o afecciones cardiovasculares específicas",
+        "n4": "Está embarazada o en período de lactancia",
+        "n5": "No está dispuesto a realizar análisis basales. No recetamos hormonas sin ellos."
+      },
+      "scopeNote": "<strong>No recetamos reemplazo hormonal a pacientes con antecedentes de cáncer sensible a hormonas.</strong> Esos pacientes son tratados con un enfoque de medicina funcional natural — abordando los síntomas mediante nutrición, suplementación dirigida y corrección de los factores metabólicos e inflamatorios, en coordinación con su oncólogo."
+    },
+    "treatmentSteps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde la primera consulta hasta el seguimiento continuo, así es su atención médica.",
+      "steps": {
+        "s1": {
+          "title": "Consulta Inicial",
+          "desc": "Su historial y síntomas, en detalle."
+        },
+        "s2": {
+          "title": "Panel Completo de Laboratorio",
+          "desc": "Los análisis se realizan en nuestra clínica o localmente en Quest o LabCorp. El momento del ciclo es clave en mujeres en edad fértil y programamos la extracción acorde a ello."
+        },
+        "s3": {
+          "title": "Interpretación Médica",
+          "desc": "El Dr. Adonis analiza el cuadro completo, incluyendo qué pudo causar la disminución hormonal."
+        },
+        "s4": {
+          "title": "Cita de Resultados y Protocolo",
+          "desc": "Conocerá qué niveles están bajos, cuál es la causa, qué hormonas repondremos, a qué dosis, por qué vía y qué otros factores corregiremos simultáneamente."
+        },
+        "s5": {
+          "title": "Inicio de la Terapia",
+          "desc": "Con instrucciones precisas de administración y lo que cabe esperar durante las primeras semanas."
+        },
+        "s6": {
+          "title": "Panel de Seguimiento",
+          "desc": "Revisión de niveles y ajuste fino de dosis. Es perfectamente normal requerir ajustes antes de alcanzar la dosis ideal."
+        },
+        "s7": {
+          "title": "Monitoreo Continuo",
+          "desc": "Evaluaciones y análisis periódicos durante todo el tiempo que mantenga el tratamiento."
+        }
+      },
+      "timelineNote": "La mayoría de los pacientes notan mejoras significativas en un plazo de 90 días. El descanso y la vitalidad suelen cambiar primero; la composición corporal y la libido responden progresivamente a más largo plazo."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención Médica",
+      "subtitle": "Un modelo integral y transparente de pago directo, sin cobros sorpresa.",
+      "list": {
+        "inc1": {
+          "title": "Consulta Inicial",
+          "desc": "Historial exhaustivo, cronología de síntomas, tratamientos hormonales previos, antecedentes familiares y objetivos. Una visita extensa, sin prisas."
+        },
+        "inc2": {
+          "title": "Panel Hormonal Integral",
+          "desc": "Estradiol, progesterona, testosterona total y libre, DHEA-S, SHBG, LH, FSH, panel tiroideo completo con anticuerpos, cortisol y marcadores metabólicos e inflamatorios."
+        },
+        "inc3": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "desc": "Explicación detallada de cada valor según sus síntomas y el protocolo diseñado a partir de ellos."
+        },
+        "inc4": {
+          "title": "Su Terapia Prescrita",
+          "desc": "Vía de administración adaptada a su caso: cremas, pellets, inyecciones, fórmulas orales o parches."
+        },
+        "inc5": {
+          "title": "Protocolo de Apoyo",
+          "desc": "Suplementación específica, pautas nutricionales y corrección de alteraciones tiroideas, nutricionales o inflamatorias que influyen en la respuesta hormonal."
+        },
+        "inc6": {
+          "title": "Análisis de Control Cada Seis Meses",
+          "desc": "Reevaluación periódica de niveles con ajuste de dosis según analíticas y síntomas."
+        },
+        "inc7": {
+          "title": "Acceso Directo a la Clínica",
+          "desc": "Llame o envíe un mensaje a la clínica al (305) 290-4691 en cualquier momento para comunicarse directamente con nuestro equipo."
+        },
+        "inc8": {
+          "title": "Análisis y Consultas Incluidos",
+          "desc": "Esta es una clínica de pago directo. No se emiten superbills para seguros."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POTENCIALES",
+      "title": "Beneficios de la Terapia Hormonal Bioidéntica",
+      "subtitle": "La respuesta individual varía según su punto de partida, su protocolo y cuánto tiempo haya tenido la deficiencia.",
+      "list": {
+        "b1": {
+          "title": "Alivio de Síntomas",
+          "desc": "Los sofocos, la sudoración nocturna y la desregulación térmica suelen responder con rapidez."
+        },
+        "b2": {
+          "title": "Mejor Calidad del Sueño",
+          "desc": "Descanso más profundo y continuo, en especial cuando la progesterona forma parte del protocolo."
+        },
+        "b3": {
+          "title": "Composición Corporal",
+          "desc": "Mayor retención de masa magra y menor resistencia a la pérdida de grasa cuando las hormonas se normalizan."
+        },
+        "b4": {
+          "title": "Estado de Ánimo y Cognición",
+          "desc": "Muchos pacientes experimentan mayor estabilidad anímica y claridad mental al equilibrarse los niveles."
+        },
+        "b5": {
+          "title": "Deseo y Función Sexual",
+          "desc": "Mejora del deseo, el confort en la intimidad y la respuesta sexual."
+        },
+        "b6": {
+          "title": "Densidad Ósea",
+          "desc": "El estrógeno actúa como factor protector frente a la pérdida de masa ósea en la posmenopausia."
+        },
+        "b7": {
+          "title": "Menos Efectos Secundarios que las Fórmulas Sintéticas",
+          "desc": "Al ser bioidénticas, el organismo metaboliza estas hormonas a través de sus vías fisiológicas naturales."
+        },
+        "b8": {
+          "title": "Dosificación Personalizada",
+          "desc": "Las formulaciones magistrales permiten adaptar la dosis con precisión a sus análisis, sin depender de presentaciones comerciales estándar."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Llegó a la Medicina Hormonal desde una Perspectiva Inusual",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano</strong>, completando su posgrado y especialización en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida (USF), realizando cientos de intervenciones de hipófisis. La hipófisis es la glándula maestra que coordina todo el sistema endocrino.",
+      "p2": "Intervenirla quirúrgicamente de forma constante despertó su fascinación por el impacto que sufre una persona cuando este sistema pierde el equilibrio. Está certificado por el Instituto de Medicina Funcional (IFM) y diplomado por la Academia Americana de Medicina Antienvejecimiento (A4M), practica medicina hormonal y funcional en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "credentials": {
+        "c1": "Especialización en Neurocirugía en USF",
+        "c2": "Instituto de Medicina Funcional (IFM)",
+        "c3": "Certificado por la Junta de A4M",
+        "c4": "Campus Médico de UM y Telemedicina en Florida"
+      }
+    },
+    "testimonials": {
+      "tag": "EXPERIENCIAS DE PACIENTES",
+      "title": "Lo que Dicen los Pacientes",
+      "list": {
+        "t1": {
+          "quote": "No estaba llevando nada bien la menopausia: sofocos, problemas de memoria, falta de libido, cero energía y mucha rabia interior. La terapia hormonal se publicita por todas partes, así que pensé que sería fácil obtener TRH, pero resultó ser una lotería entre mi ginecólogo, mi médico de cabecera y dos farmacéuticos distintos; ninguno me ayudó de verdad. Empecé a buscar un especialista y una enfermera me recomendó al Dr. Adonis. Me reuní con él por videollamada y noté de inmediato cómo escuchaba atentamente cada una de mis inquietudes y me daba respuestas claras. Me indicó análisis y diseñó un plan que incluía TRH muy fácil de tomar, varias vitaminas y suplementos, además de pautas de dieta y ejercicio. Lo digo con total sinceridad: siento que vuelvo a tener 30 años. Mis sofocos desaparecieron, mi deseo sexual aumentó, mi memoria volvió a ser la de siempre y, lo mejor de todo, tengo una energía increíble. Mi estado de ánimo también se estabilizó. Ojalá hubiera conocido al Dr. Adonis mucho antes.",
+          "author": "— M. Carlsen",
+          "role": "Paciente Verificada de la Clínica"
+        },
+        "t2": {
+          "quote": "Encontrar médicos locales experimentados que realmente tomen en serio los síntomas fue todo un reto. Tuve que consultar a varios antes de que me recomendaran al Dr. Adonis. Estoy muy agradecida de haber encontrado a alguien que escucha y brinda una ayuda real con la TRH.",
+          "author": "— Alexia A.",
+          "role": "Paciente Verificada de la Clínica"
+        },
+        "t3": {
+          "quote": "Excelente experiencia en esta clínica. El personal es muy profesional y amable, y el equipo médico brinda una atención de primera clase.",
+          "author": "— Ana G.",
+          "role": "Paciente Verificada de la Clínica"
+        }
+      },
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no garantizan un resultado específico."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre hormonas bioidénticas, vías de administración, tiempos y seguimiento.",
+      "list": {
+        "f1": {
+          "q": "¿Son las hormonas bioidénticas más seguras que las hormonas sintéticas?",
+          "a": "Las hormonas bioidénticas son estructuralmente idénticas a las que su cuerpo produce, por lo que se unen a los mismos receptores y siguen las mismas vías metabólicas. Esa coincidencia estructural se asocia a un perfil de efectos secundarios distinto al de las fórmulas sintéticas convencionales. Ninguna terapia hormonal está libre de riesgos, y su riesgo individual depende de su historial. Lo revisamos con usted antes de prescribir cualquier tratamiento."
+        },
+        "f2": {
+          "q": "¿Tengo que haber alcanzado la menopausia para comenzar?",
+          "a": "No. Los síntomas de la perimenopausia suelen comenzar años antes de que cesen las menstruaciones, y las deficiencias hormonales pueden presentarse a cualquier edad. Lo que determina la idoneidad del tratamiento son los análisis clínicos y los síntomas, no la fecha de nacimiento."
+        },
+        "f3": {
+          "q": "¿Cuánto tiempo tendré que estar en tratamiento?",
+          "a": "Es una decisión personalizada que se toma con su médico y se reevalúa en cada control. Algunos pacientes utilizan la TRH durante una fase de transición, mientras que otros la prolongan para mantener el alivio de síntomas y la protección ósea. No imponemos un límite de tiempo prefijado."
+        },
+        "f4": {
+          "q": "¿Aumentaré de peso con las hormonas?",
+          "a": "El aumento de peso suele estar vinculado a la disminución hormonal más que a su corrección. Muchos pacientes notan que su organismo responde con mayor facilidad a la pérdida de peso una vez normalizados los niveles, especialmente al abordar conjuntamente la función tiroidea y la insulina."
+        },
+        "f5": {
+          "q": "¿Qué vías de administración ofrecen?",
+          "a": "Disponemos de cremas, pellets (implantes subcutáneos), inyecciones, preparaciones orales y parches. La vía se elige según sus análisis, sus síntomas, la estabilidad hormonal necesaria y el método con el que pueda mantener mayor constancia."
+        },
+        "f6": {
+          "q": "¿En cuánto tiempo comenzaré a notar mejoría?",
+          "a": "El sueño y los sofocos suelen responder en primer lugar. El estado de ánimo, la composición corporal y la libido suelen requerir más tiempo. En su consulta de resultados le explicaremos los plazos estimados para su protocolo concreto."
+        },
+        "f7": {
+          "q": "¿Tratan a hombres?",
+          "a": "Sí. La atención hormonal masculina se detalla con mayor profundidad en nuestra página de TRT y en nuestra página de enclomifeno."
+        },
+        "f8": {
+          "q": "¿Cubre el seguro este tratamiento?",
+          "a": "No. Somos una clínica de pago directo y no proporcionamos superbills para aseguradoras. Sus análisis y consultas quedan incluidos dentro de su programa."
+        },
+        "f9": {
+          "q": "¿Están aprobadas por la FDA las hormonas magistrales?",
+          "a": "Las fórmulas magistrales las elabora una farmacia especializada autorizada para un paciente individual y no son fármacos aprobados en masa por la FDA como los medicamentos comerciales. Antes de iniciar, le explicaremos cuáles de sus recetas corresponden a fórmulas magistrales y cuáles a productos comerciales."
+        },
+        "f10": {
+          "q": "¿Puede gestionarse por telemedicina?",
+          "a": "Sí, para pacientes que se encuentren en Florida. Las analíticas se realizan en nuestra clínica o en centros locales de Quest o LabCorp."
+        }
+      },
+      "menNote": "La atención hormonal masculina se detalla con mayor profundidad en nuestra <a href=\"/testosterone-replacement-therapy\">página de TRT</a> y en nuestra <a href=\"/enclomiphene\">página de enclomifeno</a>."
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Evalúe sus Niveles Hormonales",
+      "lead": "La mayoría de las personas pasan años atribuyendo los síntomas hormonales al estrés, a la edad o a nada en particular. Un panel completo acaba con las dudas en aproximadamente tres semanas.",
+      "primary": "Solicitar una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*La terapia de reemplazo hormonal requiere evaluación médica y no es adecuada para todos los pacientes. El tratamiento se prescribe únicamente tras la revisión médica de su historial y resultados de laboratorio."
+    },
+    "seo": {
+      "title": "Terapia de Reemplazo Hormonal Bioidéntica en Miami | Dr. Adonis Maiquez, MD",
+      "description": "Terapia hormonal bioidéntica dirigida por un médico en Miami para la menopausia, la perimenopausia y la andropausia. Paneles hormonales completos, protocolos basados en sus análisis, en persona o por telemedicina."
+    }
+  },
+  "trtPage": {
+    "badge": "OPTIMIZACIÓN HORMONAL MASCULINA",
+    "hero": {
+      "title": "Terapia de Reemplazo de Testosterona en Miami, FL",
+      "lead": "La testosterona no cae por un precipicio. Se erosiona gradualmente. A la mayoría de los hombres les dan un único número de testosterona total y les dicen que está dentro del rango. Ese número, por sí solo, no explica prácticamente nada.",
+      "ctaPrimary": "Solicitar una Consulta",
+      "ctaPhone": "Llamar al (305) 290-4691",
+      "pills": {
+        "panel": "Panel Completo, No Solo un Número",
+        "monitored": "Monitoreo de Estradiol y Hematocrito",
+        "telehealth": "Telemedicina en Florida Disponible"
+      }
+    },
+    "intro": {
+      "tag": "LA CIENCIA",
+      "title": "Qué es la TRT",
+      "lead": "La terapia de reemplazo de testosterona restaura la testosterona a un rango fisiológico saludable en hombres cuya propia producción ha declinado.",
+      "p1": "La testosterona regula mucho más que la libido. Estimula la síntesis de proteína muscular, la densidad ósea, la producción de glóbulos rojos, la distribución de la grasa, la sensibilidad a la insulina, el estado de ánimo y la cognición. Cuando desciende, sus efectos son sistémicos, por lo que la lista de síntomas parece dispersa hasta que se comprende el mecanismo.",
+      "callout": "<strong>Los niveles disminuyen gradualmente aproximadamente a partir de mediados de los treinta. Esa disminución es normal en el sentido estadístico. No es automáticamente aceptable.</strong>",
+      "p2": "El entrenamiento del que antes se recuperaba en un día ahora le toma tres. La tarde en la que antes rendía al máximo, ahora se queda sin energía. La motivación desapareció en algún momento y ni siquiera puede recordar el mes exacto en que ocurrió.",
+      "features": {
+        "f1": {
+          "title": "Libre, No Solo Total",
+          "desc": "La mayor parte de la testosterona en sangre está unida a SHBG y albúmina y no está biológicamente disponible."
+        },
+        "f2": {
+          "title": "Extracción por la Mañana",
+          "desc": "La testosterona alcanza su punto máximo temprano. Las extracciones por la tarde son una de las razones más comunes por las que a muchos hombres se les dice erróneamente que están bien."
+        },
+        "f3": {
+          "title": "Efectos Sistémicos",
+          "desc": "Músculo, hueso, glóbulos rojos, distribución de grasa, sensibilidad a la insulina, estado de ánimo y cognición dependen de ella."
+        }
+      }
+    },
+    "types": {
+      "tag": "LA DISTINCIÓN DETERMINANTE",
+      "title": "¿Primario o Secundario?",
+      "subtitle": "Se ven idénticos desde el exterior y requieren tratamientos diferentes. Distinguirlos exige medir LH y FSH, valores que un análisis básico de testosterona no incluye.",
+      "list": {
+        "t1": {
+          "category": "Los Testículos",
+          "name": "Hipogonadismo Primario",
+          "desc": "Los testículos no están produciendo adecuadamente. La señal hormonal llega desde el cerebro, pero la respuesta es insuficiente, por lo que aumentar la señal por sí sola no resolverá el problema."
+        },
+        "t2": {
+          "category": "La Señal Hormonal",
+          "name": "Hipogonadismo Secundario",
+          "desc": "La señal de la hipófisis y el hipotálamo se ha debilitado, por lo que a los testículos no se les ordena producir. Si la fertilidad es importante para usted, esta distinción es fundamental, porque restaurar la señal es una opción en este caso.",
+          "linkText": "Vea nuestra página de Enclomifeno"
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "Esta es la diferencia entre una suscripción comercial y un diagnóstico médico real.",
+      "pillars": {
+        "p1": {
+          "title": "Panel Completo, No Solo un Número",
+          "desc": "La testosterona total es el dato menos informativo en medicina hormonal masculina cuando se lee de forma aislada. La mayor parte de la testosterona en sangre está ligada a SHBG y albúmina y no está biológicamente activa. Dos hombres con idéntica testosterona total pueden tener niveles de testosterona libre muy dispares, y solo uno de ellos experimentará los síntomas."
+        },
+        "p2": {
+          "title": "Investigamos la Causa Antes de Recetar un Reemplazo",
+          "desc": "La testosterona baja suele ser consecuencia de otro desequilibrio: mala calidad del sueño, grasa visceral que potencia la aromatización, resistencia a la insulina, estrés crónico que inhibe la señal hipofisaria, disfunción tiroidea no diagnosticada o carencias nutricionales. Reemplazar la testosterona sin corregir estos factores deja la causa activa. Esa es la diferencia entre un servicio de suscripción y un diagnóstico médico."
+        },
+        "p3": {
+          "title": "El Estradiol se Monitorea, No se Ignora",
+          "desc": "La testosterona se aromatiza en estradiol. Los hombres necesitan estradiol: es cardioprotector, preserva la masa ósea y sostiene la libido. En exceso provoca problemas serios. Las clínicas que nunca lo controlan gestionan solo la mitad del problema, y las que lo suprimen de forma indiscriminada generan nuevos síntomas. Nosotros lo medimos y actuamos según los resultados."
+        },
+        "p4": {
+          "title": "El Monitoreo es Parte del Tratamiento, No un Extra Opcional",
+          "desc": "El hematocrito, el PSA, el estradiol y el perfil lipídico se evalúan puntualmente durante todo el tratamiento. Es el estándar de oro en atención médica y no es negociable en nuestra clínica."
+        }
+      }
+    },
+    "signs": {
+      "tag": "REVISIÓN DE SÍNTOMAS",
+      "title": "Señales de que la TRT Podría Ayudarle",
+      "subtitle": "La lista de síntomas parece dispersa hasta que se comprende el mecanismo fisiológico.",
+      "list": {
+        "s1": "Fatiga persistente que el descanso no alivia",
+        "s2": "Estancamiento o pérdida de fuerza a pesar del entrenamiento constante",
+        "s3": "Recuperación más lenta, agujetas frecuentes y lesiones molestas recurrentes",
+        "s4": "Acumulación de grasa abdominal mientras mantener la masa muscular se vuelve más difícil",
+        "s5": "Disminución del deseo sexual o interés que debe forzarse",
+        "s6": "Cambios en la firmeza eréctil o reducción de las erecciones matutinas",
+        "s7": "Bajo estado de ánimo, falta de motivación y menor tolerancia al estrés",
+        "s8": "Dificultad de concentración, neblina mental y memoria más lenta",
+        "s9": "Deterioro de la calidad del sueño sin causa aparente",
+        "s10": "Menor seguridad en uno mismo o pérdida del impulso competitivo",
+        "s11": "Sofocos o sudores nocturnos, que también ocurren en hombres y se pasan por alto a menudo"
+      },
+      "note": "Si se identifica con varios de estos puntos, el paso diagnóstico es un panel completo. Una simple prueba de testosterona total por la tarde no lo es."
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — Y Para Quién No Es",
+      "subtitle": "Algunas son exclusiones médicas absolutas. Otras solo requieren una evaluación previa.",
+      "fitTitle": "La TRT es adecuada para usted si:",
+      "fitList": {
+        "c1": "Presenta síntomas de testosterona baja confirmados mediante análisis",
+        "c2": "Le han dicho que está dentro del rango normal pero no se siente bien",
+        "c3": "Busca un médico dedicado a su caso, no una suscripción comercial automática",
+        "c4": "Está dispuesto a realizarse los análisis de seguimiento con puntualidad",
+        "c5": "Entrena y se alimenta de manera coherente con el protocolo"
+      },
+      "unfitTitle": "Podría no ser adecuada si usted:",
+      "unfitList": {
+        "n1": "Busca tener hijos ahora o a corto plazo. La TRT suprime la espermatogénesis. El enclomifeno o protocolos con hCG existen precisamente para estos casos.",
+        "n2": "Padece cáncer de próstata o elevación del PSA no evaluada",
+        "n3": "Padece apnea obstructiva del sueño no tratada",
+        "n4": "Presenta policitemia o hematocrito elevado",
+        "n5": "Padece insuficiencia cardíaca no controlada o ha sufrido un evento cardiovascular reciente",
+        "n6": "No está dispuesto a acudir a las analíticas de control. No gestionamos TRT sin ellas."
+      },
+      "scopeNote": "<strong>La TRT suprime la producción de espermatozoides.</strong> Si desea tener hijos ahora o en el futuro, comuníquenoslo en su primera consulta: el protocolo cambia, y el <a href=\"/enclomiphene\">enclomifeno</a> o enfoques con hCG existen precisamente por este motivo. El cáncer de próstata, un PSA elevado sin tratar, la policitemia, la apnea del sueño no tratada y los eventos cardiovasculares recientes deben evaluarse antes de considerar la terapia."
+    },
+    "treatmentSteps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde el panel basal matutino hasta el monitoreo continuo, así transcurre su tratamiento.",
+      "steps": {
+        "s1": {
+          "title": "Consulta Inicial",
+          "desc": "Historial exhaustivo, definiendo si contempla la paternidad ahora o más adelante. Esta respuesta condiciona todo el protocolo."
+        },
+        "s2": {
+          "title": "Analítica Basal Matutina",
+          "desc": "Extracción en ayunas a primera hora, pico fisiológico de testosterona. Las analíticas vespertinas arrojan lecturas falsamente bajas y son motivo habitual de diagnósticos erróneos."
+        },
+        "s3": {
+          "title": "Interpretación Diagnóstica",
+          "desc": "El Dr. Adonis analiza el panel integral, distingue entre hipogonadismo primario o secundario y detecta factores subyacentes."
+        },
+        "s4": {
+          "title": "Sesión de Resultados",
+          "desc": "Explicación clara de sus marcadores, orígenes del déficit, plan farmacológico asignado, correcciones coadyuvantes y expectativas evolutivas mes a mes."
+        },
+        "s5": {
+          "title": "Inicio del Tratamiento",
+          "desc": "Guía precisa de administración y pautas claras sobre los objetivos terapéuticos durante las primeras ocho semanas."
+        },
+        "s6": {
+          "title": "Analítica de Control",
+          "desc": "Verificación de niveles hormonales, estradiol y hematocrito para reajustar dosis. Las analíticas de seguimiento se programan cada seis meses."
+        },
+        "s7": {
+          "title": "Monitoreo Permanente",
+          "desc": "Revisiones periódicas y analíticas durante toda la duración de la terapia para garantizar máxima eficacia y seguridad."
+        }
+      },
+      "timelineNote": "La mayoría de los pacientes constatan cambios significativos dentro de los primeros 90 días. La vitalidad y el estado anímico suelen transformarse primero; la masa muscular y recomposición corporal toman meses y dependen estrechamente de su entrenamiento y nutrición; y la respuesta en la libido varía según cada organismo."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención Médica",
+      "subtitle": "Un modelo de pago directo, transparente y sin sorpresas de facturación.",
+      "list": {
+        "inc1": {
+          "title": "Consulta Inicial Exhaustiva",
+          "desc": "Historial de síntomas, estilo de vida, sueño, entrenamientos, antecedentes médicos y familiares, y metas clínicas."
+        },
+        "inc2": {
+          "title": "Panel Hormonal Masculino Completo",
+          "desc": "Testosterona total y libre, SHBG, estradiol ultrasensible, LH, FSH, prolactina, tiroides, hemograma completo con hematocrito, PSA, perfiles metabólico y lipídico, y marcadores inflamatorios."
+        },
+        "inc3": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "desc": "Explicación detallada de cada valor, determinación de la causa raíz y diseño personalizado de su protocolo."
+        },
+        "inc4": {
+          "title": "Prescripción de su Protocolo Personalizado",
+          "desc": "Vía de administración y dosificación idónea para su caso (inyecciones, cremas o implantes) con fármacos de soporte si procede."
+        },
+        "inc5": {
+          "title": "Corrección de Factores Coadyuvantes",
+          "desc": "Tratamiento simultáneo de deficiencias tiroideas, metabólicas, nutricionales o de sueño, esenciales para la respuesta clínica."
+        },
+        "inc6": {
+          "title": "Analíticas de Control Cada Seis Meses",
+          "desc": "Seguimiento riguroso de testosterona, estradiol, hematocrito, PSA y marcadores metabólicos clave."
+        },
+        "inc7": {
+          "title": "Ajuste de Dosis y Titulación",
+          "desc": "Modificación progresiva según analíticas periódicas y respuesta clínica para una calibración exacta."
+        },
+        "inc8": {
+          "title": "Comunicación Directa con la Clínica",
+          "desc": "Llamadas o mensajes de texto al (305) 290-4691 en cualquier momento con atención directa de nuestro personal médico."
+        },
+        "inc9": {
+          "title": "Consultas y Analíticas Integradas",
+          "desc": "Somos una práctica de pago directo (cash-pay). No emitimos facturas para reembolso de seguros (superbills)."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POTENCIALES",
+      "title": "Beneficios de la Terapia con Testosterona",
+      "subtitle": "La respuesta es individual y depende del punto de partida basal y la constancia con el tratamiento.",
+      "list": {
+        "b1": {
+          "title": "Energía y Vitalidad",
+          "desc": "Suele ser la primera mejoría perceptible que refieren los hombres."
+        },
+        "b2": {
+          "title": "Masa Muscular Magra y Fuerza",
+          "desc": "La testosterona estimula la síntesis proteica muscular. El entrenamiento crea el estímulo; la terapia asegura el resultado."
+        },
+        "b3": {
+          "title": "Composición Corporal",
+          "desc": "Optimiza la distribución de la grasa corporal y la sensibilidad a la insulina, en especial a nivel abdominal."
+        },
+        "b4": {
+          "title": "Libido y Función Sexual",
+          "desc": "Recuperación del deseo y, en muchos pacientes, notable mejoría en la firmeza eréctil."
+        },
+        "b5": {
+          "title": "Estado de Ánimo y Determinación",
+          "desc": "Muchos pacientes describen mayor estabilidad emocional, menor irritabilidad y recuperación de la motivación habitual."
+        },
+        "b6": {
+          "title": "Claridad Mental y Concentración",
+          "desc": "Agilidad cognitiva, mayor memoria de trabajo y disipación de la lentitud o neblina mental."
+        },
+        "b7": {
+          "title": "Densidad Ósea",
+          "desc": "La testosterona protege eficazmente contra la pérdida de densidad ósea en hombres."
+        },
+        "b8": {
+          "title": "Calidad del Sueño",
+          "desc": "Suele volverse más reparador, si bien la apnea del sueño requiere control médico previo ya que la testosterona podría agravarla."
+        }
+      },
+      "edNote": "Cuando la disfunción eréctil tiene un origen predominantemente vascular, la testosterona por sí sola no la resolverá — consulte nuestra <a href=\"/erectile-dysfunction\">página de DE</a>."
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Fisiología Hormonal Masculina Evaluada desde el Origen del Eje",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano en cirugía de hipófisis</strong>, completando su posgrado y especialización en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida (USF). La hipófisis es la glándula maestra que envía la orden para que los testículos produzcan testosterona.",
+      "p2": "Operarla durante años le proporcionó un conocimiento profundo de la fisiología hormonal masculina desde el origen neurológico del eje, un perfil poco común en clínicas de testosterona convencionales. Está certificado por el Instituto de Medicina Funcional (IFM) y diplomado por la Academia Americana de Medicina Antienvejecimiento (A4M), ejerce medicina hormonal y funcional en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "credentials": {
+        "c1": "Especialización en Neurocirugía en USF",
+        "c2": "Instituto de Medicina Funcional (IFM)",
+        "c3": "Certificado por la Junta de A4M",
+        "c4": "Campus Médico de UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "“Excelente experiencia en esta clínica. El personal es muy profesional y amable, y el equipo médico brinda una atención de primera clase. Sin duda, un servicio médico de calidad que recomiendo totalmente.”",
+      "author": "— Ana G.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no constituyen una garantía de resultados."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre pruebas, fertilidad, riesgos, vías de administración y seguimiento.",
+      "list": {
+        "f1": {
+          "q": "Mi médico dijo que mi testosterona era normal. ¿Por qué sigo sintiéndome mal?",
+          "a": "Los rangos de referencia son excesivamente amplios, se ajustan a la baja con la edad y la testosterona total no indica cuánta hormona está biológicamente activa. Un hombre en el límite inferior con SHBG alta puede tener una testosterona libre muy por debajo del nivel óptimo. La hora de extracción también influye: una muestra vespertina puede marcar cifras sustancialmente menores que la tomada por la mañana."
+        },
+        "f2": {
+          "q": "¿Afectará la TRT a mi fertilidad?",
+          "a": "Sí. La testosterona exógena inhibe la señal de la hipófisis que activa la producción de espermatozoides, y esa supresión puede mantenerse tras suspender el tratamiento. Si desea tener descendencia ahora o en el futuro, comuníquenoslo en su primera visita. Los protocolos con enclomifeno o hCG aumentan la testosterona preservando dicha señal."
+        },
+        "f3": {
+          "q": "¿La TRT es un tratamiento para toda la vida?",
+          "a": "Con frecuencia sí, pero no en todos los casos. Si el déficit es secundario a una causa corregible (apnea del sueño, exceso de grasa visceral, alteración tiroidea o estrés crónico), abordar la causa raíz puede reactivar la producción endógena. Por eso diagnosticamos a fondo antes de medicar."
+        },
+        "f4": {
+          "q": "¿Cuáles son los riesgos asociados?",
+          "a": "Los principales riesgos incluyen aumento del hematocrito, desequilibrio de estradiol, acné, retención hídrica, reducción del volumen testicular, supresión de la fertilidad y empeoramiento de apnea del sueño no tratada. Todos son monitorizables, razón por la cual los análisis programados son indispensables."
+        },
+        "f5": {
+          "q": "¿Inyecciones, crema o pellets subcutáneos?",
+          "a": "Ofrecemos inyecciones, cremas y pellets. Cada opción presenta ventajas en estabilidad de niveles, comodidad y costo. La vía se define según sus analíticas, su estilo de vida y el método que le garantice mayor adherencia, pudiendo modificarse si la primera elección no le convence."
+        },
+        "f6": {
+          "q": "¿Con qué rapidez notaré los efectos?",
+          "a": "La energía y el ánimo suelen repuntar en las primeras semanas. La respuesta de la libido es más variable. Los cambios en la composición corporal toman meses y dependen directamente de su constancia en el entrenamiento y la nutrición."
+        },
+        "f7": {
+          "q": "¿Utilizan hCG o inhibidores de aromatasa?",
+          "a": "Se emplean cuando existe indicación clínica precisa, en función de los niveles de estradiol, los planes de paternidad y su respuesta individual al tratamiento. No se administran por defecto de forma rutinaria."
+        },
+        "f8": {
+          "q": "¿Puedo realizar este tratamiento por telemedicina?",
+          "a": "Sí, para pacientes residentes o localizados en Florida. Las analíticas pueden realizarse en nuestra clínica o en laboratorios concertados como Quest o LabCorp."
+        },
+        "f9": {
+          "q": "¿Cubre el seguro esta terapia?",
+          "a": "No. Esta es una consulta privada de pago directo y no proporcionamos superbills. Las consultas y análisis quedan integrados en su programa, lo que nos permite dedicarle el tiempo necesario y realizar paneles exhaustivos."
+        },
+        "f10": {
+          "q": "¿Qué ocurre si deseo suspender el tratamiento?",
+          "a": "Se realiza una desescalada progresiva y monitoreada, evitando interrupciones bruscas. La recuperación de la producción natural depende del tiempo de tratamiento y de sus niveles basales previos."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Comience con un Panel Exhaustivo",
+      "lead": "Si nadie ha analizado su testosterona libre, SHBG, estradiol y LH, nadie ha evaluado realmente sus hormonas. Un panel completo solo requiere una mañana.",
+      "primary": "Solicitar una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*La terapia de reemplazo de testosterona requiere evaluación médica y no es adecuada para todos los pacientes. Se prescribe únicamente tras la revisión médica de su historial y resultados de laboratorio, y exige un monitoreo continuo."
+    },
+    "seo": {
+      "title": "TRT en Miami | Terapia de Testosterona Supervisada por un Médico — Dr. Adonis Maiquez, MD",
+      "description": "Terapia de reemplazo de testosterona dirigida por un médico en Miami. Panel hormonal completo, protocolo basado en sus análisis y seguimiento continuo por un médico con formación en neurocirugía."
+    }
+  },
+  "peptideTherapyPage": {
+    "badge": "OPTIMIZACIÓN Y MEDICINA REGENERATIVA",
+    "hero": {
+      "title": "Terapia con Péptidos en Miami, FL",
+      "lead": "Protocolos con péptidos supervisados por médicos y elaborados a partir de analíticas diagnósticas integrales. Evidencia clara, máxima transparencia regulatoria y dosificación de precisión adaptada a su biología.",
+      "ctaPrimary": "Solicitar una Consulta",
+      "ctaPhone": "Llamar al (305) 290-4691",
+      "pills": {
+        "labs": "Analíticas Diagnósticas Primero",
+        "compliant": "Protocolos Conformes con la FDA",
+        "telehealth": "Telemedicina en Florida Disponible"
+      }
+    },
+    "intro": {
+      "tag": "LA CIENCIA",
+      "title": "Qué Son los Péptidos y Cómo Funcionan",
+      "lead": "Los péptidos constituyen una de las áreas más sobrevaloradas en el ámbito del bienestar actual, y al mismo tiempo una de las más fascinantes. Ambas realidades conviven.",
+      "p1": "Existen péptidos con un fundamento clínico sólido utilizados con rigor bajo supervisión médica, y existe un amplio mercado que los comercializa sin pruebas diagnósticas, sin control facultativo y, a menudo, sin garantías claras sobre lo que realmente se está suministrando.",
+      "callout": "<strong>La diferencia radica exclusivamente en cómo se aborda el tratamiento.</strong>",
+      "p2": "Los péptidos son cadenas cortas de aminoácidos (habitualmente menos de 50). Su organismo sintetiza y utiliza de forma natural miles de ellos como moléculas de señalización esenciales: entre ellos la insulina, la hormona liberadora de hormona del crecimiento (GHRH) y mediadores de reparación celular. La terapia con péptidos administra señales biológicas específicas para activar receptores celulares definidos, logrando efectos fisiológicos de alta precisión.",
+      "features": {
+        "f1": {
+          "title": "Señalización Dirigida",
+          "desc": "A diferencia de intervenciones sistémicas generales, los péptidos se unen a receptores específicos de la superficie celular para desencadenar respuestas fisiológicas precisas."
+        },
+        "f2": {
+          "title": "Estímulo Endógeno",
+          "desc": "Estimulan la producción natural de hormonas y factores de reparación de su propio cuerpo, evitando la supresión asociada a hormonas exógenas."
+        },
+        "f3": {
+          "title": "Supervisión Clínica Rigurosa",
+          "desc": "Monitorización continua mediante paneles sanguíneos cada seis meses para verificar la respuesta tisular, marcadores de seguridad y optimización celular."
+        }
+      }
+    },
+    "peptides": {
+      "tag": "SELECCIÓN CLÍNICA",
+      "title": "Los Péptidos con los que Trabajamos",
+      "subtitle": "El uso popular y las indicaciones formalmente evaluadas por las autoridades sanitarias no siempre coinciden. Le explicamos con total transparencia la situación de cada uno.",
+      "list": {
+        "p1": {
+          "category": "Agonistas del Receptor GLP-1",
+          "statusLabel": "Producto Aprobado por la FDA",
+          "name": "Semaglutida y Tirzepatida",
+          "desc": "Fármacos agonistas del receptor GLP-1 empleados en el control médico del peso y la optimización metabólica. Son los únicos péptidos de esta página aprobados formalmente por la FDA, respaldados por la evidencia científica más extensa.",
+          "linkText": "Conozca sobre Pérdida de Peso Médica"
+        },
+        "p2": {
+          "category": "Péptido Gástrico Sintético",
+          "statusLabel": "Magistral / No Aprobado",
+          "name": "BPC-157",
+          "desc": "Péptido sintético derivado de una proteína protectora presente de forma natural en los jugos gástricos. Ampliamente investigado en modelos preclínicos para la cicatrización y regeneración de tejidos blandos, tendones, ligamentos y mucosa intestinal."
+        },
+        "p3": {
+          "category": "Fragmento de Timosina Beta-4",
+          "statusLabel": "Magistral / No Aprobado",
+          "name": "TB-500",
+          "desc": "Fragmento sintético de la timosina beta-4, péptido endógeno que interviene en la migración de células endoteliales, la regulación de actina y la reparación celular. Frecuentemente asociado a BPC-157 en protocolos regenerativos."
+        },
+        "p4": {
+          "category": "Análogo de GHRH",
+          "statusLabel": "Magistral / No Aprobado",
+          "name": "CJC-1295",
+          "desc": "Análogo de la hormona liberadora de hormona del crecimiento. En lugar de suministrar hormona sintética externa, estimula a su propia glándula hipófisis para que libere hormona de crecimiento de forma fisiológica y pulsátil."
+        },
+        "p5": {
+          "category": "Péptido Derivado de Mitocondrias",
+          "statusLabel": "Magistral / No Aprobado",
+          "name": "MOTS-c",
+          "desc": "Péptido de señalización codificado en el ADN mitocondrial que actúa como un mimético del ejercicio, favoreciendo la homeostasis energética celular, el equilibrio metabólico y la captación de glucosa."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque Clínico",
+      "subtitle": "No prescribimos péptidos de manera improvisada. Nos regimos por un estándar médico estricto estructurado en 5 pilares.",
+      "pillars": {
+        "p1": {
+          "title": "Las Analíticas Son lo Primero",
+          "desc": "Los péptidos jamás son el punto de partida inicial. Si su cansancio procede de disfunción tiroidea, resistencia a la insulina o testosterona baja, un péptido es la indicación incorrecta. Evaluamos hormonas completas, tiroides, IGF-1, marcadores metabólicos y función orgánica antes de recetar."
+        },
+        "p2": {
+          "title": "Corregir los Fundamentos Biológicos",
+          "desc": "Los desequilibrios hormonales, alteraciones tiroideas, deficiencias de nutrientes, trastornos del sueño y problemas metabólicos se corrigen antes o simultáneamente a los péptidos. Muchos pacientes resuelven sus síntomas ya en esta fase."
+        },
+        "p3": {
+          "title": "Claridad sobre la Evidencia Científica",
+          "desc": "Para cada péptido valorado, recibirá una explicación honesta de sus mecanismos propuestos, respaldo clínico disponible, estado regulatorio y aspectos aún no contrastados. Separamos el marketing de la realidad médica."
+        },
+        "p4": {
+          "title": "Sin Pautas de Dosificación Públicas",
+          "desc": "Los protocolos y dosificaciones con péptidos son estrictamente individualizados y requieren supervisión médica directa. Jamás divulgamos pautas estándar de forma genérica."
+        },
+        "p5": {
+          "title": "Monitoreo Analítico Continuo",
+          "desc": "Paneles analíticos de seguimiento cada seis meses para asegurar una respuesta terapéutica óptima, vigilar marcadores de seguridad y calibrar el protocolo."
+        }
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "A Quién Está Dirigido — Y Quién Debe Evitarlo",
+      "subtitle": "La terapia con péptidos es una herramienta médica avanzada y específica. La indicación se determina exclusivamente mediante evaluación diagnóstica.",
+      "fitTitle": "La terapia con péptidos puede ser adecuada si usted:",
+      "fitList": {
+        "c1": "Ha completado pruebas diagnósticas integrales y ha corregido las bases de su salud",
+        "c2": "Presenta un objetivo fisiológico concreto y plausible que la terapia con péptidos puede abordar",
+        "c3": "Busca que un médico experimentado determine la conveniencia del tratamiento en lugar de adquirir productos por internet",
+        "c4": "Exige total transparencia sobre la evidencia clínica y la situación regulatoria de cada compuesto",
+        "c5": "Se compromete a cumplir las analíticas de control semestrales de seguridad y biomarcadores"
+      },
+      "unfitTitle": "NO es adecuada si usted:",
+      "unfitList": {
+        "n1": "No ha realizado una analítica basal diagnóstica exhaustiva",
+        "n2": "Padece una neoplasia activa o tiene antecedentes oncológicos recientes (los péptidos promotores de crecimiento están contraindicados)",
+        "n3": "Está embarazada, en período de lactancia o buscando activamente concebir",
+        "n4": "Presenta insuficiencia hepática o renal significativa sin control médico",
+        "n5": "Desea utilizar péptidos sin supervisión facultativa ni análisis periódicos de control",
+        "n6": "Busca compuestos experimentales leídos en foros de internet sin valoración clínica",
+        "n7": "Espera promesas milagrosas contra el envejecimiento o fórmulas mágicas de longevidad"
+      }
+    },
+    "treatmentSteps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde el diagnóstico basal inicial hasta la optimización celular sostenida, este es el recorrido de su atención médica.",
+      "steps": {
+        "s1": {
+          "title": "Consulta Inicial Exhaustiva",
+          "desc": "Revisión detallada de antecedentes médicos, metas personales, sintomatología, tratamientos previos y un diálogo realista sobre las expectativas terapéuticas."
+        },
+        "s2": {
+          "title": "Analíticas Avanzadas",
+          "desc": "Panel diagnóstico completo (perfil hormonal, tiroides en profundidad, IGF-1, marcadores metabólicos e inflamatorios). Realizado en clínica o mediante Quest/LabCorp."
+        },
+        "s3": {
+          "title": "Interpretación Diagnóstica",
+          "desc": "El Dr. Adonis analiza sus biomarcadores raíz para determinar si la terapia peptídica está debidamente indicada o si procede primero una corrección fundamental."
+        },
+        "s4": {
+          "title": "Sesión de Resultados",
+          "desc": "Explicación pormenorizada de los hallazgos, diseño del plan terapéutico basal y presentación de opciones de péptidos con absoluta claridad regulatoria."
+        },
+        "s5": {
+          "title": "Restablecimiento Basal Primero",
+          "desc": "Optimización de hormonas, función metabólica, arquitectura del sueño y nutrientes clave para garantizar la receptividad celular."
+        },
+        "s6": {
+          "title": "Protocolo Específico",
+          "desc": "Pauta personalizada de formulación magistral dirigida por el médico, con instrucciones precisas de administración, marcadores de progreso y normas de seguridad."
+        },
+        "s7": {
+          "title": "Monitoreo Analítico Semestral",
+          "desc": "Reevaluación de control cada seis meses para fiscalizar marcadores de seguridad y medir objetivamente la evolución clínica."
+        }
+      },
+      "timelineNote": "La mayoría de los pacientes constatan cambios clínicos significativos en los primeros 90 días cuando se acompaña de una optimización adecuada de la salud basal."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención Médica",
+      "subtitle": "Un modelo integral y transparente de pago directo, sin cobros sorpresa.",
+      "list": {
+        "inc1": {
+          "title": "Consulta Inicial Integral",
+          "desc": "Evaluación de objetivos, evolución de síntomas, historial médico y definición de expectativas clínicas realistas."
+        },
+        "inc2": {
+          "title": "Analíticas Diagnósticas Completas",
+          "desc": "Panel hormonal, estudio tiroideo completo, IGF-1, marcadores metabólicos y pruebas de función orgánica."
+        },
+        "inc3": {
+          "title": "Revisión de Resultados con el Dr. Adonis",
+          "desc": "Consulta médica individualizada para analizar cada hallazgo analítico e indicaciones del protocolo personalizado."
+        },
+        "inc4": {
+          "title": "Protocolo de Corrección Basal",
+          "desc": "Restablecimiento hormonal, tiroideo, nutricional y del sueño abordado antes o de manera conjunta con los péptidos."
+        },
+        "inc5": {
+          "title": "Prescripción Magistral Personalizada",
+          "desc": "Protocolos de dosificación a medida con guía técnica de administración y procedencia farmacéutica verificada."
+        },
+        "inc6": {
+          "title": "Controles Analíticos Cada Seis Meses",
+          "desc": "Reevaluación periódica de biomarcadores para ajustar pautas y garantizar la máxima seguridad del paciente."
+        },
+        "inc7": {
+          "title": "Comunicación Directa con la Clínica",
+          "desc": "Acceso telefónico y mensajería directa con nuestro equipo médico en el (305) 290-4691."
+        },
+        "inc8": {
+          "title": "Tarifa Todo Incluido de Pago Directo",
+          "desc": "Todas las consultas y analíticas programadas están incluidas en el importe. Sin superbills ni cargos ocultos."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POTENCIALES",
+      "title": "Áreas Fisiológicas de Intervención",
+      "subtitle": "Los efectos dependen de cada péptido específico, sus valores basales y su estado de salud general. No realizamos afirmaciones antienvejecimiento infundadas.",
+      "list": {
+        "b1": {
+          "title": "Recuperación y Reparación Tisular",
+          "desc": "Favorece la regeneración osteomuscular, tendinosa y de tejidos blandos tras lesiones o procedimientos quirúrgicos."
+        },
+        "b2": {
+          "title": "Composición Corporal",
+          "desc": "Optimiza la preservación de masa muscular magra y la distribución de la grasa corporal junto con la corrección metabólica."
+        },
+        "b3": {
+          "title": "Calidad del Sueño",
+          "desc": "Mejora la profundidad del sueño de ondas lentas mediante el estímulo fisiológico de secretagogos de hormona de crecimiento."
+        },
+        "b4": {
+          "title": "Función Metabólica",
+          "desc": "Mejora la sensibilidad a la insulina y la eficiencia energética a través de vías vinculadas a los receptores GLP-1."
+        },
+        "b5": {
+          "title": "Equilibrio Inmunitario e Inflamatorio",
+          "desc": "Investigados por modular una respuesta inflamatoria equilibrada a nivel celular."
+        },
+        "b6": {
+          "title": "Energía Celular y Rendimiento Cognitivo",
+          "desc": "Estimula la bioenergética mitocondrial y la agudeza mental mediante vías de señalización específicas."
+        },
+        "b7": {
+          "title": "Confort Articular y Conectivo",
+          "desc": "Promueve la síntesis localizada de colágeno y la recuperación tisular en articulaciones sobrecargadas."
+        },
+        "b8": {
+          "title": "Vitalidad y Bienestar General",
+          "desc": "Integrado tras la optimización hormonal y nutricional basal para potenciar un bienestar integral."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Por Qué la Formación Neuroquirúrgica e Hipofisaria es Clave en Terapia con Péptidos",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano especializado en cirugía de hipófisis</strong>, completando su especialización en la Universidad del Sur de Florida (USF). Llevó a cabo cientos de intervenciones quirúrgicas en la hipófisis: el órgano endocrino maestro que sintetiza y regula las hormonas peptídicas endógenas del organismo.",
+      "p2": "Dado que los secretagogos de hormona de crecimiento (como CJC-1295) actúan directamente sobre los receptores hipofisarios, su pericia quirúrgica y neuroendocrina aporta una base clínica insustituible para prescribir protocolos de péptidos con absoluta seguridad y eficacia.",
+      "credentials": {
+        "c1": "Especialización en Neurocirugía en USF",
+        "c2": "Instituto de Medicina Funcional (IFM)",
+        "c3": "Diplomado por A4M",
+        "c4": "Campus Médico de UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "“Excelente experiencia en esta clínica. El personal es sumamente profesional y cordial, y el equipo médico brinda una atención de primer nivel. Sin duda, un servicio de salud de gran calidad que recomiendo ampliamente.”",
+      "author": "— Ana G.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales pueden variar. Las opiniones descritas no constituyen una garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre los protocolos con péptidos, su seguridad y su marco regulatorio.",
+      "list": {
+        "f1": {
+          "q": "¿Están los péptidos aprobados por la FDA?",
+          "a": "La semaglutida y la tirzepatida son medicamentos formalmente aprobados por la FDA con amplios ensayos clínicos. BPC-157, TB-500, CJC-1295 y MOTS-c no son fármacos aprobados por la FDA. En julio de 2026, un comité asesor de la FDA recomendó tres de ellos para su formulación en farmacias magistrales, pero dicho voto no es vinculante y la reglamentación formal sigue pendiente. Evaluamos con usted el estado regulatorio exacto de cada principio activo."
+        },
+        "f2": {
+          "q": "¿Qué implica en la práctica el voto asesor de la FDA de julio de 2026?",
+          "a": "Por sí mismo, ningún cambio inmediato. El dictamen de un comité consultivo representa una recomendación técnica a la FDA, no una normativa firme. La agencia debe aún ratificar formalmente la recomendación y finalizar el procedimiento regulatorio antes de que las farmacias de formulación dispongan de autorización reglamentaria plena. Realizamos un seguimiento constante para asegurar el cumplimiento normativo."
+        },
+        "f3": {
+          "q": "¿Son seguros los péptidos?",
+          "a": "El perfil de seguridad varía sensiblemente según el péptido concreto, la dosis, la pureza química y la fisiología de cada paciente. Determinados péptidos cuentan con estudios de seguridad clínica en humanos muy consolidados, mientras que otros se fundamentan en datos preclínicos. Analizamos contraindicaciones, evaluamos perfiles comprobados y efectuamos analíticas periódicas de control obligatorias cada seis meses."
+        },
+        "f4": {
+          "q": "¿Puedo comprar péptidos por internet por mi cuenta?",
+          "a": "Los productos vendidos en línea bajo leyendas como \"exclusivamente para fines de investigación\" o \"no apto para consumo humano\" carecen de estándares farmacéuticos de fabricación cGMP. Los peligros de contaminación, endotoxinas, cadenas de aminoácidos degradadas y dosificaciones incorrectas son frecuentes. Desaconsejamos tajantemente la adquisición no supervisada por internet."
+        },
+        "f5": {
+          "q": "¿Cómo se administran los péptidos?",
+          "a": "La mayoría de los péptidos se aplican mediante microinyecciones subcutáneas con agujas ultrafinas de insulina, si bien algunos disponen de presentaciones orales o nasales. En su consulta se proporcionan instrucciones detalladas paso a paso y material estéril para su aplicación. No publicamos pautas de dosificación en internet."
+        },
+        "f6": {
+          "q": "¿Reemplazan los péptidos a la terapia de reemplazo hormonal?",
+          "a": "No. Los péptidos y las hormonas bioidénticas actúan mediante mecanismos de señalización celular diferentes. Por lo general, los péptidos exhiben una eficacia muy superior cuando las hormonas basales, la función tiroidea y los nutrientes esenciales se encuentran previamente equilibrados."
+        },
+        "f7": {
+          "q": "¿Se consideran sustancias para mejorar el rendimiento deportivo (dopaje)?",
+          "a": "Diversos secretagogos de hormona de crecimiento y péptidos afines están prohibidos por la Agencia Mundial Antidopaje (WADA) y por federaciones deportivas de competición. Si compite en disciplinas reglamentadas, debe comunicárselo al médico durante su consulta inicial."
+        },
+        "f8": {
+          "q": "¿Cuánto ayudan los péptidos y en cuánto tiempo se aprecian resultados?",
+          "a": "Los resultados varían según el protocolo prescrito, el punto de partida biológico y las correcciones de salud basal asociadas. La mayoría de los pacientes refieren mejoras evaluables dentro de los primeros 90 días al complementarlo con nutrición, descanso y equilibrio hormonal."
+        },
+        "f9": {
+          "q": "¿Puede gestionarse la terapia con péptidos mediante telemedicina?",
+          "a": "¡Sí! Los residentes en Florida pueden realizar sus consultas iniciales, revisión de resultados y seguimientos periódicos mediante telemedicina conforme a HIPAA. Las analíticas diagnósticas se completan en centros autorizados de Quest Diagnostics o LabCorp próximos a su domicilio."
+        },
+        "f10": {
+          "q": "¿Aceptan seguros médicos?",
+          "a": "La clínica del Dr. Adonis opera bajo un modelo médico de pago directo (cash-pay). No aceptamos seguros de salud ni proporcionamos superbills para protocolos de péptidos. Todas las analíticas diagnósticas y consultas médicas están comprendidas en una tarifa transparente y establecida de antemano."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Comience con Analíticas, No con un Péptido",
+      "lead": "La pregunta acertada no es qué péptido debería tomar, sino qué revelan sus paneles analíticos diagnósticos y si la terapia peptídica tiene una indicación clínica justificada para su caso.",
+      "primary": "Programar su Evaluación",
+      "phone": "Llamar o Escribir al (305) 290-4691",
+      "note": "*La terapia con péptidos requiere una evaluación médica exhaustiva y no es adecuada para todas las personas. La mayoría de los péptidos se prescriben fuera de indicación oficial (off-label) y se dispensan mediante preparaciones magistrales individualizadas. El tratamiento se prescribe exclusivamente tras la revisión médica de su historial y sus analíticas diagnósticas."
+    },
+    "seo": {
+      "title": "Terapia con Péptidos en Miami | Protocolos Médicos Supervisados — Dr. Adonis Maiquez, MD",
+      "description": "Terapia de péptidos supervisada por médicos en Miami. Análisis primero, estado regulatorio claro y protocolos basados en sus análisis. Telemedicina en Florida."
+    }
   }
 }

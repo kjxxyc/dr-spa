@@ -6,38 +6,37 @@
   <section class="service-hero">
     <div class="hero-badge">
       <mat-icon>man</mat-icon>
-      <span>MALE HORMONE OPTIMIZATION</span>
+      <span>{{ 'trtPage.badge' | translate }}</span>
     </div>
 
-    <h1>Testosterone Replacement Therapy in Miami, FL</h1>
+    <h1>{{ 'trtPage.hero.title' | translate }}</h1>
     <p class="hero-lead">
-      Testosterone does not fall off a cliff. It erodes.
-      Most men are handed a single total testosterone number and told it is within range. That number, on its own, explains almost nothing.
+      {{ 'trtPage.hero.lead' | translate }}
     </p>
 
     <div class="hero-cta-group">
       <button type="button" class="btn-primary-glow" (click)="openAppointment()">
         <mat-icon>calendar_today</mat-icon>
-        <span>Request A Consultation</span>
+        <span>{{ 'trtPage.hero.ctaPrimary' | translate }}</span>
       </button>
       <a href="tel:+13052904691" class="btn-secondary-phone">
         <mat-icon>phone</mat-icon>
-        <span>Call (305) 290-4691</span>
+        <span>{{ 'trtPage.hero.ctaPhone' | translate }}</span>
       </a>
     </div>
 
     <div class="hero-pill-bar">
       <div class="pill-item">
         <mat-icon>biotech</mat-icon>
-        <span>Full Panel, Not One Number</span>
+        <span [innerHTML]="'trtPage.hero.pills.panel' | translate"></span>
       </div>
       <div class="pill-item">
         <mat-icon>monitor_weight</mat-icon>
-        <span>Estradiol &amp; Hematocrit Monitored</span>
+        <span [innerHTML]="'trtPage.hero.pills.monitored' | translate"></span>
       </div>
       <div class="pill-item">
         <mat-icon>videocam</mat-icon>
-        <span>Florida Telehealth Available</span>
+        <span [innerHTML]="'trtPage.hero.pills.telehealth' | translate"></span>
       </div>
     </div>
   </section>
@@ -49,19 +48,17 @@
     <div class="section-card intro-card">
       <div class="intro-grid">
         <div class="intro-text">
-          <span class="section-tag">THE SCIENCE</span>
-          <h2>What TRT Is</h2>
+          <span class="section-tag">{{ 'trtPage.intro.tag' | translate }}</span>
+          <h2>{{ 'trtPage.intro.title' | translate }}</h2>
           <p class="lead-paragraph">
-            Testosterone replacement therapy restores testosterone to a healthy physiological range in men whose own production has declined.
+            {{ 'trtPage.intro.lead' | translate }}
           </p>
           <p>
-            Testosterone regulates far more than libido. It drives muscle protein synthesis, bone density, red blood cell production, fat distribution, insulin sensitivity, mood regulation, and cognition. When it falls, the effects are systemic, which is why the symptom list looks scattered until you understand the mechanism.
+            {{ 'trtPage.intro.p1' | translate }}
           </p>
-          <p class="highlight-callout">
-            <strong>Levels decline gradually from roughly the mid-thirties. That decline is normal in the statistical sense. It is not automatically acceptable.</strong>
-          </p>
+          <p class="highlight-callout" [innerHTML]="'trtPage.intro.callout' | translate"></p>
           <p>
-            The workout that used to take a day to recover from now takes three. The afternoon you used to push through, you no longer push through. Drive went missing at some point and you cannot name the month it happened.
+            {{ 'trtPage.intro.p2' | translate }}
           </p>
         </div>
 
@@ -69,24 +66,24 @@
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>biotech</mat-icon></div>
             <div class="feat-content">
-              <h3>Free, Not Just Total</h3>
-              <p>Most testosterone in your blood is bound to SHBG and albumin and is not biologically available.</p>
+              <h3>{{ 'trtPage.intro.features.f1.title' | translate }}</h3>
+              <p>{{ 'trtPage.intro.features.f1.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>schedule</mat-icon></div>
             <div class="feat-content">
-              <h3>Drawn In The Morning</h3>
-              <p>Testosterone peaks early. Afternoon draws are one of the most common reasons men are wrongly told they are fine.</p>
+              <h3>{{ 'trtPage.intro.features.f2.title' | translate }}</h3>
+              <p>{{ 'trtPage.intro.features.f2.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>man</mat-icon></div>
             <div class="feat-content">
-              <h3>Systemic Effects</h3>
-              <p>Muscle, bone, red blood cells, fat distribution, insulin sensitivity, mood, and cognition all depend on it.</p>
+              <h3>{{ 'trtPage.intro.features.f3.title' | translate }}</h3>
+              <p>{{ 'trtPage.intro.features.f3.desc' | translate }}</p>
             </div>
           </div>
         </div>
@@ -99,25 +96,25 @@
   <!-- ========================================== -->
   <section class="catalog-section">
     <div class="section-header">
-      <span class="section-tag">THE DISTINCTION THAT MATTERS</span>
-      <h2>Primary or Secondary?</h2>
+      <span class="section-tag">{{ 'trtPage.types.tag' | translate }}</span>
+      <h2>{{ 'trtPage.types.title' | translate }}</h2>
       <p class="section-subtitle">
-        They look identical from the outside and require different treatment. Distinguishing them requires LH and FSH, which a basic testosterone test does not include.
+        {{ 'trtPage.types.subtitle' | translate }}
       </p>
     </div>
 
     <div class="catalog-grid">
       <div class="catalog-card" *ngFor="let item of hypogonadismTypes">
         <div class="catalog-card-header">
-          <span class="catalog-category">{{ item.category }}</span>
+          <span class="catalog-category">{{ 'trtPage.types.list.' + item.id + '.category' | translate }}</span>
         </div>
 
-        <h3 class="catalog-name">{{ item.name }}</h3>
-        <p class="catalog-desc">{{ item.description }}</p>
+        <h3 class="catalog-name">{{ 'trtPage.types.list.' + item.id + '.name' | translate }}</h3>
+        <p class="catalog-desc">{{ 'trtPage.types.list.' + item.id + '.desc' | translate }}</p>
 
         <div class="catalog-action" *ngIf="item.linkUrl">
           <a [routerLink]="item.linkUrl" class="card-link">
-            <span>{{ item.linkText }}</span>
+            <span>{{ 'trtPage.types.list.' + item.id + '.linkText' | translate }}</span>
             <mat-icon>arrow_forward</mat-icon>
           </a>
         </div>
@@ -130,10 +127,10 @@
   <!-- ========================================== -->
   <section class="clinical-approach-section">
     <div class="section-header">
-      <span class="section-tag">METHODOLOGY</span>
-      <h2>Our Approach</h2>
+      <span class="section-tag">{{ 'trtPage.approach.tag' | translate }}</span>
+      <h2>{{ 'trtPage.approach.title' | translate }}</h2>
       <p class="section-subtitle">
-        This is the difference between a subscription and a diagnosis.
+        {{ 'trtPage.approach.subtitle' | translate }}
       </p>
     </div>
 
@@ -143,8 +140,8 @@
         <div class="pillar-icon-wrapper">
           <mat-icon>{{ p.icon }}</mat-icon>
         </div>
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
+        <h3>{{ 'trtPage.approach.pillars.' + p.id + '.title' | translate }}</h3>
+        <p>{{ 'trtPage.approach.pillars.' + p.id + '.desc' | translate }}</p>
       </div>
     </div>
   </section>
@@ -154,10 +151,10 @@
   <!-- ========================================== -->
   <section class="signs-section">
     <div class="section-header">
-      <span class="section-tag">SYMPTOM CHECK</span>
-      <h2>Signs TRT Could Help You</h2>
+      <span class="section-tag">{{ 'trtPage.signs.tag' | translate }}</span>
+      <h2>{{ 'trtPage.signs.title' | translate }}</h2>
       <p class="section-subtitle">
-        The symptom list looks scattered until you understand the mechanism.
+        {{ 'trtPage.signs.subtitle' | translate }}
       </p>
     </div>
 
@@ -165,14 +162,14 @@
       <ul class="signs-list">
         <li *ngFor="let s of signs">
           <mat-icon>check_circle</mat-icon>
-          <span>{{ s }}</span>
+          <span>{{ 'trtPage.signs.list.' + s | translate }}</span>
         </li>
       </ul>
     </div>
 
     <div class="timeline-note">
       <mat-icon>info</mat-icon>
-      <span>If several of these apply, a full panel is the diagnostic step. A single total testosterone drawn in the afternoon is not.</span>
+      <span>{{ 'trtPage.signs.note' | translate }}</span>
     </div>
   </section>
 
@@ -181,10 +178,10 @@
   <!-- ========================================== -->
   <section class="candidacy-section">
     <div class="section-header">
-      <span class="section-tag">EVALUATION</span>
-      <h2>Who This Is For — And Who It Is Not For</h2>
+      <span class="section-tag">{{ 'trtPage.candidacy.tag' | translate }}</span>
+      <h2>{{ 'trtPage.candidacy.title' | translate }}</h2>
       <p class="section-subtitle">
-        Some of these are absolute exclusions. Others simply need to be worked up first.
+        {{ 'trtPage.candidacy.subtitle' | translate }}
       </p>
     </div>
 
@@ -193,12 +190,12 @@
       <div class="candidacy-card fit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon positive">check_circle</mat-icon>
-          <h3>TRT is a strong fit if you:</h3>
+          <h3>{{ 'trtPage.candidacy.fitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of candidatePoints">
             <mat-icon>check_circle</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ 'trtPage.candidacy.fitList.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -207,12 +204,12 @@
       <div class="candidacy-card unfit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon negative">block</mat-icon>
-          <h3>It may not be right if you:</h3>
+          <h3>{{ 'trtPage.candidacy.unfitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of nonCandidatePoints">
             <mat-icon>block</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ 'trtPage.candidacy.unfitList.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -220,10 +217,7 @@
 
     <div class="scope-note">
       <mat-icon>error_outline</mat-icon>
-      <span>
-        <strong>TRT suppresses sperm production.</strong> If you want children now or later, tell us at your first visit — the protocol changes, and
-        <a routerLink="/enclomiphene">enclomiphene</a> or hCG-based approaches exist for exactly this reason. Prostate cancer, untreated elevated PSA, polycythemia, untreated sleep apnea, and recent cardiovascular events all need to be addressed before therapy is considered.
-      </span>
+      <span [innerHTML]="'trtPage.candidacy.scopeNote' | translate"></span>
     </div>
   </section>
 
@@ -232,31 +226,31 @@
   <!-- ========================================== -->
   <section class="treatment-steps-section">
     <div class="section-header">
-      <span class="section-tag">THE PROCESS</span>
-      <h2>How Treatment Works</h2>
+      <span class="section-tag">{{ 'trtPage.treatmentSteps.tag' | translate }}</span>
+      <h2>{{ 'trtPage.treatmentSteps.title' | translate }}</h2>
       <p class="section-subtitle">
-        From the morning baseline panel to ongoing monitoring, here is what your care looks like.
+        {{ 'trtPage.treatmentSteps.subtitle' | translate }}
       </p>
     </div>
 
     <div class="steps-timeline">
       <div class="step-timeline-item" *ngFor="let st of treatmentSteps">
         <div class="step-badge-circle">
-          <span>{{ st.number }}</span>
+          <span>{{ st.step }}</span>
         </div>
         <div class="step-card-body">
           <div class="step-title-row">
             <mat-icon>{{ st.icon }}</mat-icon>
-            <h3>{{ st.title }}</h3>
+            <h3>{{ 'trtPage.treatmentSteps.steps.' + st.id + '.title' | translate }}</h3>
           </div>
-          <p>{{ st.description }}</p>
+          <p>{{ 'trtPage.treatmentSteps.steps.' + st.id + '.desc' | translate }}</p>
         </div>
       </div>
     </div>
 
     <div class="timeline-note">
       <mat-icon>schedule</mat-icon>
-      <span>Most patients report meaningful change within 90 days. Energy and mood commonly shift earliest, body composition is slower and depends heavily on training and nutrition, and libido varies more than any other marker.</span>
+      <span>{{ 'trtPage.treatmentSteps.timelineNote' | translate }}</span>
     </div>
   </section>
 
@@ -266,16 +260,16 @@
   <section class="program-included-section">
     <div class="included-card">
       <div class="included-header">
-        <span class="section-tag">YOUR PROGRAM</span>
-        <h2>What’s Included in Your Care</h2>
-        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+        <span class="section-tag">{{ 'trtPage.included.tag' | translate }}</span>
+        <h2>{{ 'trtPage.included.title' | translate }}</h2>
+        <p>{{ 'trtPage.included.subtitle' | translate }}</p>
       </div>
 
       <div class="included-grid">
         <div class="inc-item" *ngFor="let inc of included">
           <mat-icon>{{ inc.icon }}</mat-icon>
-          <h4>{{ inc.title }}</h4>
-          <p>{{ inc.description }}</p>
+          <h4>{{ 'trtPage.included.list.' + inc.id + '.title' | translate }}</h4>
+          <p>{{ 'trtPage.included.list.' + inc.id + '.desc' | translate }}</p>
         </div>
       </div>
     </div>
@@ -286,10 +280,10 @@
   <!-- ========================================== -->
   <section class="benefits-section">
     <div class="section-header">
-      <span class="section-tag">POTENTIAL OUTCOMES</span>
-      <h2>Benefits of Testosterone Therapy</h2>
+      <span class="section-tag">{{ 'trtPage.benefits.tag' | translate }}</span>
+      <h2>{{ 'trtPage.benefits.title' | translate }}</h2>
       <p class="section-subtitle">
-        Response varies by individual, baseline, and adherence.
+        {{ 'trtPage.benefits.subtitle' | translate }}
       </p>
     </div>
 
@@ -298,14 +292,14 @@
         <div class="benefit-icon">
           <mat-icon>{{ b.icon }}</mat-icon>
         </div>
-        <h3>{{ b.title }}</h3>
-        <p>{{ b.description }}</p>
+        <h3>{{ 'trtPage.benefits.list.' + b.id + '.title' | translate }}</h3>
+        <p>{{ 'trtPage.benefits.list.' + b.id + '.desc' | translate }}</p>
       </div>
     </div>
 
     <div class="timeline-note">
       <mat-icon>favorite</mat-icon>
-      <span>Where erectile dysfunction is primarily vascular, testosterone alone will not resolve it — see our <a routerLink="/erectile-dysfunction">ED page</a>.</span>
+      <span [innerHTML]="'trtPage.benefits.edNote' | translate"></span>
     </div>
   </section>
 
@@ -326,20 +320,16 @@
       </div>
 
       <div class="physician-bio-col">
-        <span class="section-tag">MEDICAL EXPERTISE</span>
-        <h2>Male Hormone Physiology From The Top Of The Axis Down</h2>
-        <p>
-          Dr. Adonis trained as a <strong>neurosurgeon in pituitary surgery</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida. The pituitary is the gland that sends the signal telling the testicles to produce testosterone.
-        </p>
-        <p>
-          Operating on it for years gave him a working understanding of male hormone physiology from the top of the axis down, which is not the usual background for a testosterone clinic. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced hormone and functional medicine in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.
-        </p>
+        <span class="section-tag">{{ 'trtPage.physician.tag' | translate }}</span>
+        <h2>{{ 'trtPage.physician.title' | translate }}</h2>
+        <p [innerHTML]="'trtPage.physician.p1' | translate"></p>
+        <p [innerHTML]="'trtPage.physician.p2' | translate"></p>
 
         <div class="credentials-pills">
-          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
-          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
-          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
-          <span class="c-pill"><mat-icon>videocam</mat-icon> UM Medical Campus &amp; Florida Telehealth</span>
+          <span class="c-pill"><mat-icon>school</mat-icon> {{ 'trtPage.physician.credentials.c1' | translate }}</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> {{ 'trtPage.physician.credentials.c2' | translate }}</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> {{ 'trtPage.physician.credentials.c3' | translate }}</span>
+          <span class="c-pill"><mat-icon>videocam</mat-icon> {{ 'trtPage.physician.credentials.c4' | translate }}</span>
         </div>
       </div>
     </div>
@@ -354,14 +344,14 @@
         <mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon><mat-icon>favorite</mat-icon>
       </div>
       <blockquote>
-        "Excellent experience in this clinic. The staff is very professional and friendly, and the medical team provides first-class care. Without a doubt, a quality medical service that I totally recommend."
+        {{ 'trtPage.testimonial.quote' | translate }}
       </blockquote>
       <div class="testimonial-meta">
-        <strong>— Ana G.</strong>
-        <span>Verified Clinic Patient</span>
+        <strong>{{ 'trtPage.testimonial.author' | translate }}</strong>
+        <span>{{ 'trtPage.testimonial.role' | translate }}</span>
       </div>
       <p class="testimonial-disclaimer">
-        *Individual results vary. Patient experiences described here are not a guarantee of outcome.
+        {{ 'trtPage.testimonial.disclaimer' | translate }}
       </p>
     </div>
   </section>
@@ -371,21 +361,21 @@
   <!-- ========================================== -->
   <section class="faq-section">
     <div class="section-header">
-      <span class="section-tag">QUESTIONS & ANSWERS</span>
-      <h2>Frequently Asked Questions</h2>
+      <span class="section-tag">{{ 'trtPage.faq.tag' | translate }}</span>
+      <h2>{{ 'trtPage.faq.title' | translate }}</h2>
       <p class="section-subtitle">
-        Everything you need to know about testing, fertility, risks, routes, and monitoring.
+        {{ 'trtPage.faq.subtitle' | translate }}
       </p>
     </div>
 
     <div class="faq-accordion">
       <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
         <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
-          <span>{{ faq.question }}</span>
+          <span>{{ 'trtPage.faq.list.' + faq.id + '.q' | translate }}</span>
           <mat-icon class="faq-arrow">arrow_drop_down</mat-icon>
         </button>
         <div class="faq-answer-panel" *ngIf="faq.isOpen">
-          <p>{{ faq.answer }}</p>
+          <p>{{ 'trtPage.faq.list.' + faq.id + '.a' | translate }}</p>
         </div>
       </div>
     </div>
@@ -396,25 +386,25 @@
   <!-- ========================================== -->
   <section class="final-cta-section" id="consultation">
     <div class="final-cta-card">
-      <span class="cta-tag">GET STARTED</span>
-      <h2>Start With A Real Panel</h2>
+      <span class="cta-tag">{{ 'trtPage.cta.tag' | translate }}</span>
+      <h2>{{ 'trtPage.cta.title' | translate }}</h2>
       <p class="cta-lead">
-        If nobody has checked your free testosterone, SHBG, estradiol, and LH, nobody has actually assessed your hormones. A complete panel takes one morning.
+        {{ 'trtPage.cta.lead' | translate }}
       </p>
 
       <div class="final-cta-buttons">
         <button type="button" class="btn-primary-large" (click)="openAppointment()">
           <mat-icon>event</mat-icon>
-          <span>Request A Consultation</span>
+          <span>{{ 'trtPage.cta.primary' | translate }}</span>
         </button>
         <a href="tel:+13052904691" class="btn-outline-phone">
           <mat-icon>phone</mat-icon>
-          <span>Call or Text (305) 290-4691</span>
+          <span>{{ 'trtPage.cta.phone' | translate }}</span>
         </a>
       </div>
 
       <p class="compliance-footer-note">
-        *Testosterone replacement therapy requires medical evaluation and is not appropriate for every patient. Therapy is prescribed only after physician review of your history and laboratory results, and requires ongoing monitoring.
+        {{ 'trtPage.cta.note' | translate }}
       </p>
     </div>
   </section>

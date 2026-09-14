@@ -6,23 +6,22 @@
   <section class="peptide-hero">
     <div class="hero-badge">
       <mat-icon>science</mat-icon>
-      <span>OPTIMIZATION & REGENERATIVE MEDICINE</span>
+      <span>{{ 'peptideTherapyPage.badge' | translate }}</span>
     </div>
     
-    <h1>Peptide Therapy in Miami, FL</h1>
+    <h1>{{ 'peptideTherapyPage.hero.title' | translate }}</h1>
     <p class="hero-lead">
-      Physician-supervised peptide protocols built from comprehensive diagnostic lab testing. 
-      Clear evidence, full regulatory transparency, and precision dosing tailored to your biology.
+      {{ 'peptideTherapyPage.hero.lead' | translate }}
     </p>
 
     <div class="hero-cta-group">
       <button type="button" class="btn-primary-glow" (click)="openAppointment()">
         <mat-icon>calendar_today</mat-icon>
-        <span>Request A Consultation</span>
+        <span>{{ 'peptideTherapyPage.hero.ctaPrimary' | translate }}</span>
       </button>
       <a href="tel:+13052904691" class="btn-secondary-phone">
         <mat-icon>phone</mat-icon>
-        <span>Call (305) 290-4691</span>
+        <span>{{ 'peptideTherapyPage.hero.ctaPhone' | translate }}</span>
       </a>
     </div>
 
@@ -30,15 +29,15 @@
     <div class="hero-pill-bar">
       <div class="pill-item">
         <mat-icon>biotech</mat-icon>
-        <span>Diagnostic Labs First</span>
+        <span>{{ 'peptideTherapyPage.hero.pills.labs' | translate }}</span>
       </div>
       <div class="pill-item">
         <mat-icon>verified</mat-icon>
-        <span>FDA-Compliant Protocols</span>
+        <span>{{ 'peptideTherapyPage.hero.pills.compliant' | translate }}</span>
       </div>
       <div class="pill-item">
         <mat-icon>videocam</mat-icon>
-        <span>Florida Telehealth Available</span>
+        <span>{{ 'peptideTherapyPage.hero.pills.telehealth' | translate }}</span>
       </div>
     </div>
   </section>
@@ -50,19 +49,17 @@
     <div class="section-card intro-card">
       <div class="intro-grid">
         <div class="intro-text">
-          <span class="section-tag">THE SCIENCE</span>
-          <h2>What Peptides Are & How They Work</h2>
+          <span class="section-tag">{{ 'peptideTherapyPage.intro.tag' | translate }}</span>
+          <h2>{{ 'peptideTherapyPage.intro.title' | translate }}</h2>
           <p class="lead-paragraph">
-            Peptides are among the most oversold categories in wellness medicine right now, and among the most interesting. Both things are true.
+            {{ 'peptideTherapyPage.intro.lead' | translate }}
           </p>
           <p>
-            There are peptides with meaningful clinical rationale used appropriately under physician supervision, and there is a large market selling them without testing, without oversight, and frequently without a clear account of what is actually being dispensed.
+            {{ 'peptideTherapyPage.intro.p1' | translate }}
           </p>
-          <p class="highlight-callout">
-            <strong>The difference is entirely in how it is done.</strong>
-          </p>
+          <p class="highlight-callout" [innerHTML]="'peptideTherapyPage.intro.callout' | translate"></p>
           <p>
-            Peptides are short chains of amino acids (typically fewer than 50). Your body already synthesizes and uses thousands of them as vital signaling molecules—including insulin, growth hormone releasing hormone (GHRH), and cellular repair messengers. Peptide therapy delivers specific signaling peptides to activate defined cellular receptors, offering highly targeted physiological effects.
+            {{ 'peptideTherapyPage.intro.p2' | translate }}
           </p>
         </div>
 
@@ -70,24 +67,24 @@
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>biotech</mat-icon></div>
             <div class="feat-content">
-              <h3>Targeted Signaling</h3>
-              <p>Unlike broad systemic interventions, peptides bind to specific cell-surface receptors to trigger precise physiological responses.</p>
+              <h3>{{ 'peptideTherapyPage.intro.features.f1.title' | translate }}</h3>
+              <p>{{ 'peptideTherapyPage.intro.features.f1.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>self_improvement</mat-icon></div>
             <div class="feat-content">
-              <h3>Endogenous Support</h3>
-              <p>Stimulates your body’s natural production of vital hormones and repair factors rather than relying on synthetic suppression.</p>
+              <h3>{{ 'peptideTherapyPage.intro.features.f2.title' | translate }}</h3>
+              <p>{{ 'peptideTherapyPage.intro.features.f2.desc' | translate }}</p>
             </div>
           </div>
 
           <div class="feature-box">
             <div class="feat-icon"><mat-icon>verified</mat-icon></div>
             <div class="feat-content">
-              <h3>Clinical Oversight</h3>
-              <p>Monitored via 6-month blood panels to verify tissue response, safety markers, and ongoing cellular optimization.</p>
+              <h3>{{ 'peptideTherapyPage.intro.features.f3.title' | translate }}</h3>
+              <p>{{ 'peptideTherapyPage.intro.features.f3.desc' | translate }}</p>
             </div>
           </div>
         </div>
@@ -100,29 +97,29 @@
   <!-- ========================================== -->
   <section class="peptides-catalog-section">
     <div class="section-header">
-      <span class="section-tag">CLINICAL SELECTION</span>
-      <h2>The Peptides We Work With</h2>
+      <span class="section-tag">{{ 'peptideTherapyPage.peptides.tag' | translate }}</span>
+      <h2>{{ 'peptideTherapyPage.peptides.title' | translate }}</h2>
       <p class="section-subtitle">
-        Popular uses and the indications formally evaluated by medical authorities are not always the same thing. We tell you exactly which is which.
+        {{ 'peptideTherapyPage.peptides.subtitle' | translate }}
       </p>
     </div>
 
     <div class="peptides-grid">
       <div class="peptide-card" *ngFor="let item of peptides" [class.is-approved]="item.fdaStatus === 'approved'">
         <div class="peptide-card-header">
-          <span class="peptide-category">{{ item.category }}</span>
+          <span class="peptide-category">{{ 'peptideTherapyPage.peptides.list.' + item.id + '.category' | translate }}</span>
           <span class="status-badge approved" *ngIf="item.fdaStatus === 'approved'">
             <mat-icon>check_circle</mat-icon>
-            {{ item.fdaStatusLabel }}
+            {{ 'peptideTherapyPage.peptides.list.' + item.id + '.statusLabel' | translate }}
           </span>
         </div>
 
-        <h3 class="peptide-name">{{ item.name }}</h3>
-        <p class="peptide-desc">{{ item.description }}</p>
+        <h3 class="peptide-name">{{ 'peptideTherapyPage.peptides.list.' + item.id + '.name' | translate }}</h3>
+        <p class="peptide-desc">{{ 'peptideTherapyPage.peptides.list.' + item.id + '.desc' | translate }}</p>
 
         <div class="peptide-action" *ngIf="item.linkUrl">
           <a [routerLink]="item.linkUrl" class="card-link">
-            <span>{{ item.linkText }}</span>
+            <span>{{ 'peptideTherapyPage.peptides.list.' + item.id + '.linkText' | translate }}</span>
             <mat-icon>arrow_forward</mat-icon>
           </a>
         </div>
@@ -135,10 +132,10 @@
   <!-- ========================================== -->
   <section class="clinical-approach-section">
     <div class="section-header">
-      <span class="section-tag">METHODOLOGY</span>
-      <h2>Our Clinical Approach</h2>
+      <span class="section-tag">{{ 'peptideTherapyPage.approach.tag' | translate }}</span>
+      <h2>{{ 'peptideTherapyPage.approach.title' | translate }}</h2>
       <p class="section-subtitle">
-        We do not hand out peptide prescriptions on a whim. We follow a rigorous 5-pillar medical standard.
+        {{ 'peptideTherapyPage.approach.subtitle' | translate }}
       </p>
     </div>
 
@@ -148,8 +145,8 @@
         <div class="pillar-icon-wrapper">
           <mat-icon>{{ p.icon }}</mat-icon>
         </div>
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
+        <h3>{{ 'peptideTherapyPage.approach.pillars.' + p.id + '.title' | translate }}</h3>
+        <p>{{ 'peptideTherapyPage.approach.pillars.' + p.id + '.desc' | translate }}</p>
       </div>
     </div>
   </section>
@@ -159,10 +156,10 @@
   <!-- ========================================== -->
   <section class="candidacy-section">
     <div class="section-header">
-      <span class="section-tag">EVALUATION</span>
-      <h2>Who This Is For — And Who It Is Not For</h2>
+      <span class="section-tag">{{ 'peptideTherapyPage.candidacy.tag' | translate }}</span>
+      <h2>{{ 'peptideTherapyPage.candidacy.title' | translate }}</h2>
       <p class="section-subtitle">
-        Peptide therapy is an advanced, selective medical tool. Candidacy is determined exclusively through diagnostic testing.
+        {{ 'peptideTherapyPage.candidacy.subtitle' | translate }}
       </p>
     </div>
 
@@ -171,12 +168,12 @@
       <div class="candidacy-card fit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon positive">check_circle</mat-icon>
-          <h3>Peptide therapy may be appropriate if you:</h3>
+          <h3>{{ 'peptideTherapyPage.candidacy.fitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of candidatePoints">
             <mat-icon>check_circle</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ 'peptideTherapyPage.candidacy.fitList.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -185,12 +182,12 @@
       <div class="candidacy-card unfit-card">
         <div class="cand-header">
           <mat-icon class="cand-icon negative">block</mat-icon>
-          <h3>It is NOT appropriate if you:</h3>
+          <h3>{{ 'peptideTherapyPage.candidacy.unfitTitle' | translate }}</h3>
         </div>
         <ul class="cand-list">
           <li *ngFor="let pt of nonCandidatePoints">
             <mat-icon>block</mat-icon>
-            <span>{{ pt }}</span>
+            <span>{{ 'peptideTherapyPage.candidacy.unfitList.' + pt | translate }}</span>
           </li>
         </ul>
       </div>
@@ -202,31 +199,31 @@
   <!-- ========================================== -->
   <section class="treatment-steps-section">
     <div class="section-header">
-      <span class="section-tag">THE PROCESS</span>
-      <h2>How Treatment Works</h2>
+      <span class="section-tag">{{ 'peptideTherapyPage.treatmentSteps.tag' | translate }}</span>
+      <h2>{{ 'peptideTherapyPage.treatmentSteps.title' | translate }}</h2>
       <p class="section-subtitle">
-        From baseline lab discovery to long-term cellular optimization, here is what your patient journey looks like.
+        {{ 'peptideTherapyPage.treatmentSteps.subtitle' | translate }}
       </p>
     </div>
 
     <div class="steps-timeline">
       <div class="step-timeline-item" *ngFor="let st of treatmentSteps">
         <div class="step-badge-circle">
-          <span>{{ st.number }}</span>
+          <span>{{ st.step }}</span>
         </div>
         <div class="step-card-body">
           <div class="step-title-row">
             <mat-icon>{{ st.icon }}</mat-icon>
-            <h3>{{ st.title }}</h3>
+            <h3>{{ 'peptideTherapyPage.treatmentSteps.steps.' + st.id + '.title' | translate }}</h3>
           </div>
-          <p>{{ st.description }}</p>
+          <p>{{ 'peptideTherapyPage.treatmentSteps.steps.' + st.id + '.desc' | translate }}</p>
         </div>
       </div>
     </div>
     
     <div class="timeline-note">
       <mat-icon>schedule</mat-icon>
-      <span>Most patients report meaningful clinical change within 90 days when paired with foundational health optimization.</span>
+      <span>{{ 'peptideTherapyPage.treatmentSteps.timelineNote' | translate }}</span>
     </div>
   </section>
 
@@ -236,58 +233,16 @@
   <section class="program-included-section">
     <div class="included-card">
       <div class="included-header">
-        <span class="section-tag">YOUR PROGRAM</span>
-        <h2>What’s Included in Your Care</h2>
-        <p>A comprehensive, transparent cash-pay model with zero surprise bills.</p>
+        <span class="section-tag">{{ 'peptideTherapyPage.included.tag' | translate }}</span>
+        <h2>{{ 'peptideTherapyPage.included.title' | translate }}</h2>
+        <p>{{ 'peptideTherapyPage.included.subtitle' | translate }}</p>
       </div>
 
       <div class="included-grid">
-        <div class="inc-item">
-          <mat-icon>person</mat-icon>
-          <h4>Initial Comprehensive Consultation</h4>
-          <p>Goals, symptom timeline, prior medical history, and direct outcome expectation setting.</p>
-        </div>
-
-        <div class="inc-item">
-          <mat-icon>biotech</mat-icon>
-          <h4>Comprehensive Diagnostic Labs</h4>
-          <p>Hormone panel, thyroid cascade, IGF-1, metabolic markers, and organ function panels.</p>
-        </div>
-
-        <div class="inc-item">
-          <mat-icon>medical_services</mat-icon>
-          <h4>Results Review with Dr. Adonis</h4>
-          <p>Direct 1-on-1 consultation analyzing lab findings and personalized protocol indications.</p>
-        </div>
-
-        <div class="inc-item">
-          <mat-icon>self_improvement</mat-icon>
-          <h4>Foundational Correction Protocol</h4>
-          <p>Hormone, thyroid, nutrient, and sleep balance addressed before or alongside peptides.</p>
-        </div>
-
-        <div class="inc-item">
-          <mat-icon>local_pharmacy</mat-icon>
-          <h4>Prescribed Compounded Peptides</h4>
-          <p>Customized dosing protocols with administration instruction and verified sourcing.</p>
-        </div>
-
-        <div class="inc-item">
-          <mat-icon>schedule</mat-icon>
-          <h4>6-Month Lab Monitoring</h4>
-          <p>Routine biomarker re-testing to adjust protocols and guarantee patient safety.</p>
-        </div>
-
-        <div class="inc-item">
-          <mat-icon>phone</mat-icon>
-          <h4>Direct Practice Access</h4>
-          <p>Direct messaging and call access to our clinical team at (305) 290-4691.</p>
-        </div>
-
-        <div class="inc-item">
-          <mat-icon>verified</mat-icon>
-          <h4>All-Inclusive Cash Pricing</h4>
-          <p>All consultations and scheduled lab panels are included. No superbills or hidden fees.</p>
+        <div class="inc-item" *ngFor="let inc of included">
+          <mat-icon>{{ inc.icon }}</mat-icon>
+          <h4>{{ 'peptideTherapyPage.included.list.' + inc.id + '.title' | translate }}</h4>
+          <p>{{ 'peptideTherapyPage.included.list.' + inc.id + '.desc' | translate }}</p>
         </div>
       </div>
     </div>
@@ -298,10 +253,10 @@
   <!-- ========================================== -->
   <section class="benefits-section">
     <div class="section-header">
-      <span class="section-tag">POTENTIAL OUTCOMES</span>
-      <h2>Targeted Physiological Areas</h2>
+      <span class="section-tag">{{ 'peptideTherapyPage.benefits.tag' | translate }}</span>
+      <h2>{{ 'peptideTherapyPage.benefits.title' | translate }}</h2>
       <p class="section-subtitle">
-        Effects depend on the individual peptide, your baseline labs, and foundational health. We make no unrealistic anti-aging claims.
+        {{ 'peptideTherapyPage.benefits.subtitle' | translate }}
       </p>
     </div>
 
@@ -310,8 +265,8 @@
         <div class="benefit-icon">
           <mat-icon>{{ b.icon }}</mat-icon>
         </div>
-        <h3>{{ b.title }}</h3>
-        <p>{{ b.description }}</p>
+        <h3>{{ 'peptideTherapyPage.benefits.list.' + b.id + '.title' | translate }}</h3>
+        <p>{{ 'peptideTherapyPage.benefits.list.' + b.id + '.desc' | translate }}</p>
       </div>
     </div>
   </section>
@@ -328,25 +283,21 @@
         </picture>
         <div class="physician-credentials-badge">
           <strong>Adonis Maiquez, MD</strong>
-          <span>Functional & Regenerative Medicine</span>
+          <span>Functional &amp; Regenerative Medicine</span>
         </div>
       </div>
 
       <div class="physician-bio-col">
-        <span class="section-tag">MEDICAL EXPERTISE</span>
-        <h2>Why Neurological & Pituitary Background Matters in Peptide Therapy</h2>
-        <p>
-          Dr. Adonis trained as a <strong>neurosurgeon specializing in pituitary surgery</strong>, completing fellowship training at the University of South Florida. He performed hundreds of surgical procedures on the pituitary gland—the master endocrine organ that synthesizes and regulates the body’s endogenous peptide hormones.
-        </p>
-        <p>
-          Because growth hormone secretagogues (like CJC-1295) act directly on pituitary receptors, his surgical and neuroendocrine expertise provides an unmatched clinical foundation for prescribing peptide protocols safely and effectively.
-        </p>
+        <span class="section-tag">{{ 'peptideTherapyPage.physician.tag' | translate }}</span>
+        <h2>{{ 'peptideTherapyPage.physician.title' | translate }}</h2>
+        <p [innerHTML]="'peptideTherapyPage.physician.p1' | translate"></p>
+        <p>{{ 'peptideTherapyPage.physician.p2' | translate }}</p>
 
         <div class="credentials-pills">
-          <span class="c-pill"><mat-icon>school</mat-icon> USF Neurosurgery Fellowship</span>
-          <span class="c-pill"><mat-icon>verified</mat-icon> Institute for Functional Medicine (IFM)</span>
-          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> A4M Board Certified</span>
-          <span class="c-pill"><mat-icon>location_on</mat-icon> UM Medical Campus & Florida Telehealth</span>
+          <span class="c-pill"><mat-icon>school</mat-icon> {{ 'peptideTherapyPage.physician.credentials.c1' | translate }}</span>
+          <span class="c-pill"><mat-icon>verified</mat-icon> {{ 'peptideTherapyPage.physician.credentials.c2' | translate }}</span>
+          <span class="c-pill"><mat-icon>workspace_premium</mat-icon> {{ 'peptideTherapyPage.physician.credentials.c3' | translate }}</span>
+          <span class="c-pill"><mat-icon>location_on</mat-icon> {{ 'peptideTherapyPage.physician.credentials.c4' | translate }}</span>
         </div>
       </div>
     </div>
@@ -361,14 +312,14 @@
         <mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
       </div>
       <blockquote>
-        "Excellent experience in this clinic. The staff is very professional and friendly, and the medical team provides first-class care. Without a doubt, a quality medical service that I totally recommend."
+        {{ 'peptideTherapyPage.testimonial.quote' | translate }}
       </blockquote>
       <div class="testimonial-meta">
-        <strong>— Ana G.</strong>
-        <span>Verified Clinic Patient</span>
+        <strong>{{ 'peptideTherapyPage.testimonial.author' | translate }}</strong>
+        <span>{{ 'peptideTherapyPage.testimonial.role' | translate }}</span>
       </div>
       <p class="testimonial-disclaimer">
-        *Individual results vary. Patient experiences described are not a guarantee of outcome.
+        {{ 'peptideTherapyPage.testimonial.disclaimer' | translate }}
       </p>
     </div>
   </section>
@@ -378,21 +329,21 @@
   <!-- ========================================== -->
   <section class="faq-section">
     <div class="section-header">
-      <span class="section-tag">QUESTIONS & ANSWERS</span>
-      <h2>Frequently Asked Questions</h2>
+      <span class="section-tag">{{ 'peptideTherapyPage.faq.tag' | translate }}</span>
+      <h2>{{ 'peptideTherapyPage.faq.title' | translate }}</h2>
       <p class="section-subtitle">
-        Everything you need to know about peptide therapy protocols, safety, and regulation.
+        {{ 'peptideTherapyPage.faq.subtitle' | translate }}
       </p>
     </div>
 
     <div class="faq-accordion">
       <div class="faq-item" *ngFor="let faq of faqs" [class.open]="faq.isOpen">
         <button class="faq-question-btn" type="button" (click)="toggleFaq(faq)" [attr.aria-expanded]="faq.isOpen">
-          <span>{{ faq.question }}</span>
+          <span>{{ 'peptideTherapyPage.faq.list.' + faq.id + '.q' | translate }}</span>
           <mat-icon class="faq-arrow">{{ faq.isOpen ? 'expand_less' : 'expand_more' }}</mat-icon>
         </button>
         <div class="faq-answer-panel" *ngIf="faq.isOpen">
-          <p>{{ faq.answer }}</p>
+          <p>{{ 'peptideTherapyPage.faq.list.' + faq.id + '.a' | translate }}</p>
         </div>
       </div>
     </div>
@@ -403,25 +354,25 @@
   <!-- ========================================== -->
   <section class="final-cta-section" id="consultation">
     <div class="final-cta-card">
-      <span class="cta-tag">GET STARTED</span>
-      <h2>Start with Testing, Not a Peptide</h2>
+      <span class="cta-tag">{{ 'peptideTherapyPage.cta.tag' | translate }}</span>
+      <h2>{{ 'peptideTherapyPage.cta.title' | translate }}</h2>
       <p class="cta-lead">
-        The right question is not which peptide you should take. It is what your comprehensive diagnostic blood panels show, and whether peptide therapy has any legitimate clinical role in addressing it.
+        {{ 'peptideTherapyPage.cta.lead' | translate }}
       </p>
 
       <div class="final-cta-buttons">
         <button type="button" class="btn-primary-large" (click)="openAppointment()">
           <mat-icon>event</mat-icon>
-          <span>Schedule Your Evaluation</span>
+          <span>{{ 'peptideTherapyPage.cta.primary' | translate }}</span>
         </button>
         <a href="tel:+13052904691" class="btn-outline-phone">
           <mat-icon>phone</mat-icon>
-          <span>Call or Text (305) 290-4691</span>
+          <span>{{ 'peptideTherapyPage.cta.phone' | translate }}</span>
         </a>
       </div>
 
       <p class="compliance-footer-note">
-        *Peptide therapy requires comprehensive medical evaluation and is not appropriate for every individual. Most peptides are prescribed off-label and dispensed as individualized compounded preparations. Treatment is prescribed solely after physician review of your medical history and diagnostic laboratory results.
+        {{ 'peptideTherapyPage.cta.note' | translate }}
       </p>
     </div>
   </section>
