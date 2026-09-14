@@ -65,7 +65,7 @@ export class PeptideTherapyComponent implements OnInit, OnDestroy {
     {
       id: 'p1',
       fdaStatus: 'approved',
-      linkUrl: '/services'
+      linkUrl: '/medical-weight-loss'
     },
     {
       id: 'p2',
