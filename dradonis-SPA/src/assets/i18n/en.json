@@ -704,5 +704,324 @@
       "tools": "Calculators"
     },
     "ctaText": "Can't find it? We'll help you personally — schedule an appointment or call us."
+  },
+  "gutHealthPage": {
+    "badge": "FUNCTIONAL & DIGESTIVE MEDICINE",
+    "title": "Gut Health Treatment in Miami, FL",
+    "lead": "Bloating is not a personality trait. Neither is knowing where every bathroom is. There is usually a mechanism, and it is usually findable.",
+    "ctaConsult": "Request A Consultation",
+    "ctaCall": "Call (305) 290-4691",
+    "pills": {
+      "testing": "Comprehensive Testing First",
+      "repair": "Repair, Not Suppress",
+      "telehealth": "Florida Telehealth Available"
+    },
+    "intro": {
+      "tag": "THE SCIENCE",
+      "title": "What Gut Health Means",
+      "lead": "Most digestive complaints get one of two responses: a medication that reduces the symptom, or a workup that finds nothing structural and concludes the problem is stress. Both leave the patient managing something indefinitely.",
+      "p2": "Your digestive tract does considerably more than digest. It houses the majority of your immune tissue, manufactures neurotransmitters including a large share of your body’s serotonin, absorbs every nutrient you depend on, and maintains a barrier separating your bloodstream from everything you swallow.",
+      "callout": "There is usually a mechanism, and it is usually findable.",
+      "p4": "When that system falters, the effects reach well past digestion. Fatigue, brain fog, mood changes, skin problems, joint pain, hormone symptoms, and autoimmune activity all trace back to the gut in a meaningful number of patients.",
+      "features": {
+        "immune": {
+          "title": "Immune Headquarters",
+          "desc": "The majority of your immune tissue lives in the digestive tract, which is why gut dysfunction shows up as inflammation elsewhere."
+        },
+        "neuro": {
+          "title": "Neurotransmitter Production",
+          "desc": "A large share of your body’s serotonin is manufactured in the gut, which is why mood and brain fog so often track with digestion."
+        },
+        "nutrients": {
+          "title": "Nutrient Absorption",
+          "desc": "Every nutrient you depend on is absorbed here. Malabsorption creates deficiencies no amount of diet quality can correct."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "WHAT WE LOOK FOR",
+      "title": "The Dysfunctions We Most Often Find",
+      "subtitle": "Comprehensive testing usually explains in one round what years of elimination diets could not.",
+      "list": {
+        "d1": {
+          "name": "Dysbiosis",
+          "category": "Microbiome Imbalance",
+          "description": "The bacterial population has shifted. Beneficial species are reduced, less helpful ones have expanded. This affects digestion, immune signaling, and inflammation."
+        },
+        "d2": {
+          "name": "SIBO",
+          "category": "Small Intestinal Overgrowth",
+          "description": "Bacteria that belong in the large intestine have colonized the small intestine, where they ferment food before you absorb it. Classic presentation is bloating that worsens through the day and reacts to fiber and healthy foods."
+        },
+        "d3": {
+          "name": "Increased Intestinal Permeability",
+          "category": "Barrier Dysfunction",
+          "description": "The barrier has loosened, allowing partially digested proteins and bacterial components into circulation, where they provoke immune responses. Implicated across autoimmune and inflammatory conditions."
+        },
+        "d4": {
+          "name": "Low Stomach Acid or Enzyme Insufficiency",
+          "category": "Digestive Capacity",
+          "description": "Food is not being broken down adequately, which causes reflux more often than people expect and leaves nutrients unabsorbed."
+        },
+        "d5": {
+          "name": "Food Sensitivities",
+          "category": "Immune Reactivity",
+          "description": "Immune reactivity to specific foods, distinct from allergy, often delayed by hours or days and therefore difficult to identify without testing."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METHODOLOGY",
+      "title": "Our Approach",
+      "subtitle": "Order matters in gut work. We test first, then correct in sequence.",
+      "list": {
+        "p1": {
+          "title": "We Test Rather Than Guess",
+          "description": "Elimination diets by trial and error can take months and often end with a patient eating fifteen foods and still feeling unwell. Comprehensive stool analysis, permeability markers, SIBO breath testing where indicated, and food sensitivity panels shorten that enormously."
+        },
+        "p2": {
+          "title": "We Follow A Sequence",
+          "description": "Order matters in gut work. Remove what should not be there, replace what digestion requires, restore the bacterial population, and repair the lining. Introducing probiotics into an untreated overgrowth frequently makes patients feel worse, which is why sequence is not a detail."
+        },
+        "p3": {
+          "title": "We Connect The Gut To Your Other Symptoms",
+          "description": "Patients frequently arrive for bloating and mention almost as an afterthought that they are exhausted, foggy, and their skin has been bad for two years. Those are often the same problem. Malabsorption produces nutrient deficiency. Permeability produces systemic inflammation. Dysbiosis affects neurotransmitter production."
+        },
+        "p4": {
+          "title": "We Rule Out What Needs Ruling Out",
+          "description": "Blood in the stool, unintentional weight loss, difficulty swallowing, persistent vomiting, or a family history of colon cancer means gastroenterology and appropriate imaging or endoscopy. We refer rather than work around it."
+        }
+      }
+    },
+    "signs": {
+      "tag": "SYMPTOM CHECK",
+      "title": "Signs This Could Help You",
+      "subtitle": "Digestive symptoms rarely travel alone. These are the patterns we see most.",
+      "list": {
+        "s1": "Bloating, particularly worsening through the day",
+        "s2": "Gas, cramping, or abdominal discomfort after eating",
+        "s3": "Constipation, diarrhea, or alternating between them",
+        "s4": "Reflux or heartburn, whether or not medication helps",
+        "s5": "A list of trigger foods that keeps getting longer",
+        "s6": "Feeling worse after eating vegetables, fiber, or fermented foods",
+        "s7": "Fatigue after meals",
+        "s8": "Brain fog that tracks with what you ate",
+        "s9": "Skin problems — acne, eczema, rosacea",
+        "s10": "Joint pain without an injury",
+        "s11": "Nutrient deficiencies despite a reasonable diet",
+        "s12": "Anxiety or mood changes alongside digestive symptoms",
+        "s13": "Diagnosed with IBS and given no explanation of cause",
+        "s14": "Digestive symptoms that began after antibiotics, food poisoning, or a stressful period"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUATION",
+      "title": "Who This Is For — And Who It Is Not For",
+      "subtitle": "Gut work suits some presentations and not others. Some symptoms need gastroenterology first, and we will say so.",
+      "fitTitle": "This is a strong fit if you:",
+      "unfitTitle": "It is not the right fit if you:",
+      "fit": {
+        "c1": "Have chronic digestive symptoms without a satisfying explanation",
+        "c2": "Were diagnosed with IBS and given no cause",
+        "c3": "Have an expanding list of foods you cannot eat",
+        "c4": "Have digestive symptoms alongside fatigue, skin, or joint problems",
+        "c5": "Have an autoimmune condition — gut work is central to autoimmune care",
+        "c6": "Have had a normal endoscopy or colonoscopy and still have symptoms",
+        "c7": "Are prepared to follow dietary changes for a defined period"
+      },
+      "unfit": {
+        "n1": "Have blood in your stool, unexplained weight loss, difficulty swallowing, or persistent vomiting. These require gastroenterology evaluation first, and we will refer.",
+        "n2": "Have inflammatory bowel disease in an active flare. That needs gastroenterology management, though we can work alongside it once stable.",
+        "n3": "Have a family history of colon cancer and are overdue for screening. Get screened first.",
+        "n4": "Want a supplement protocol without testing",
+        "n5": "Are unwilling to change your diet at all"
+      }
+    },
+    "steps": {
+      "tag": "THE PROCESS",
+      "title": "How Treatment Works",
+      "subtitle": "From first consultation to confirmed follow-up testing, here is what your care looks like.",
+      "list": {
+        "s1": {
+          "title": "Consultation",
+          "description": "Your symptoms, your diet, and what changed before this started. Antibiotics, a bout of food poisoning, a period of intense stress — those details frequently identify the origin."
+        },
+        "s2": {
+          "title": "Testing",
+          "description": "Comprehensive stool analysis and the additional testing your presentation calls for. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        },
+        "s3": {
+          "title": "Interpretation",
+          "description": "Dr. Adonis identifies which dysfunctions are present and which is driving the others."
+        },
+        "s4": {
+          "title": "Results Consultation",
+          "description": "Findings explained plainly, with a sequenced protocol and an explanation of why we start where we start."
+        },
+        "s5": {
+          "title": "Treatment Begins",
+          "description": "Typically clearing overgrowth and supporting digestion first, then restoring bacterial balance, then repairing the lining."
+        },
+        "s6": {
+          "title": "Follow-Up Testing Every Six Months",
+          "description": "Confirming the changes held."
+        }
+      },
+      "note": "Most patients report meaningful change within 90 days. Some symptoms respond within weeks; lining repair and microbiome restoration take longer."
+    },
+    "included": {
+      "tag": "YOUR PROGRAM",
+      "title": "What’s Included in Your Care",
+      "subtitle": "A comprehensive, transparent cash-pay model with zero surprise bills.",
+      "list": {
+        "i1": {
+          "title": "Initial Comprehensive Consultation",
+          "description": "Symptom history and timeline, diet, what preceded onset, antibiotic and medication history, travel and infection history, stress, and every prior workup."
+        },
+        "i2": {
+          "title": "Comprehensive Digestive Testing",
+          "description": "Microbiome composition, pathogenic bacteria, yeast and parasites, digestive enzyme markers, intestinal inflammation, permeability, food sensitivities, and nutrient status. SIBO breath testing where indicated."
+        },
+        "i3": {
+          "title": "Results Consultation with Dr. Adonis",
+          "description": "What is actually happening in your gut, what caused it, and the sequence in which we will correct it."
+        },
+        "i4": {
+          "title": "Your Treatment Protocol",
+          "description": "Antimicrobial or antifungal treatment where indicated, enzyme and acid support, targeted probiotic and prebiotic therapy at the appropriate stage, gut lining repair nutrients, and a nutrition plan built for your findings."
+        },
+        "i5": {
+          "title": "Nutrient Correction",
+          "description": "Malabsorption creates deficiencies, and correcting them is part of the treatment rather than an afterthought."
+        },
+        "i6": {
+          "title": "Follow-Up Lab Testing Every Six Months",
+          "description": "Confirming that the microbiome and inflammatory markers have moved."
+        },
+        "i7": {
+          "title": "Direct Access To The Practice",
+          "description": "Call or text the clinic at (305) 290-4691 at any time and message directly with our staff."
+        },
+        "i8": {
+          "title": "Labs And Consultations Included",
+          "description": "This is a cash-pay practice. Superbills are not provided."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "POTENTIAL OUTCOMES",
+      "title": "Benefits of Gut Treatment",
+      "subtitle": "Response varies by finding, duration, and adherence to dietary change.",
+      "list": {
+        "b1": {
+          "title": "Digestive Comfort",
+          "description": "Reduced bloating, gas, cramping, and urgency."
+        },
+        "b2": {
+          "title": "Regularity",
+          "description": "Predictable, comfortable bowel function."
+        },
+        "b3": {
+          "title": "A Wider Diet",
+          "description": "Many patients get foods back as reactivity settles, which is often the change they value most."
+        },
+        "b4": {
+          "title": "Energy",
+          "description": "Improved absorption and reduced inflammatory load."
+        },
+        "b5": {
+          "title": "Mental Clarity",
+          "description": "Brain fog frequently improves alongside gut inflammation."
+        },
+        "b6": {
+          "title": "Skin",
+          "description": "Acne, eczema, and rosacea often track with gut status."
+        },
+        "b7": {
+          "title": "Mood",
+          "description": "The gut manufactures neurotransmitters and signals directly to the brain."
+        },
+        "b8": {
+          "title": "Reduced Systemic Inflammation",
+          "description": "Which matters for joint pain, autoimmune activity, and long-term risk."
+        },
+        "b9": {
+          "title": "Nutrient Status Restored",
+          "description": "Deficiencies caused by malabsorption resolve once absorption improves."
+        }
+      }
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "Why Root-Cause Training Matters in Digestive Care",
+      "p1": "Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures before turning to functional and regenerative medicine.",
+      "p2": "What moved him was the recognition that so much of what he saw arriving at the operating room began years earlier, in systems nobody had examined. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Functional &amp; Regenerative Medicine",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "USF Neurosurgery Fellowship",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "A4M Board Certified",
+        "campus": "UM Medical Campus &amp; Florida Telehealth"
+      }
+    },
+    "testimonial": {
+      "quote": "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I'm very glad to have found someone who listens.",
+      "author": "— Alexia A.",
+      "role": "Verified Clinic Patient",
+      "disclaimer": "*Individual results vary. Patient experiences described here are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about digestive testing, treatment, and what to expect.",
+      "list": {
+        "f1": {
+          "q": "My colonoscopy was normal. Why do I still have symptoms?",
+          "a": "A colonoscopy looks for structural disease — inflammation, ulceration, growths. It is excellent at that and it does not assess your microbiome, enzyme output, barrier integrity, or food reactivity. A normal result rules out serious pathology. It does not explain your symptoms."
+        },
+        "f2": {
+          "q": "Is IBS a real diagnosis?",
+          "a": "IBS describes a pattern of symptoms after other causes are excluded. It names what you are experiencing rather than why. In our experience a meaningful proportion of IBS patients have identifiable dysbiosis, SIBO, or food sensitivity underneath the label."
+        },
+        "f3": {
+          "q": "Should I just take a probiotic?",
+          "a": "Not before testing. Probiotics help in some situations and worsen others, particularly with untreated small intestinal overgrowth. Sequence and strain selection matter more than most people are told."
+        },
+        "f4": {
+          "q": "How long do I need to avoid foods?",
+          "a": "Elimination is usually a defined phase, not a permanent state. The aim is to reduce reactivity, repair the lining, and reintroduce systematically. Many patients get most of their diet back."
+        },
+        "f5": {
+          "q": "Is leaky gut a real thing?",
+          "a": "Increased intestinal permeability is a measurable, well-documented physiological phenomenon studied across a range of inflammatory and autoimmune conditions. The popular term is loose. The mechanism is real and testable."
+        },
+        "f6": {
+          "q": "How long until I feel better?",
+          "a": "Most patients report meaningful change within 90 days. Some symptoms move within weeks; microbiome and lining restoration take longer."
+        },
+        "f7": {
+          "q": "Do you take insurance?",
+          "a": "No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program."
+        },
+        "f8": {
+          "q": "Can this be managed by telehealth?",
+          "a": "Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "Find Out What’s Actually Happening",
+      "lead": "Comprehensive testing usually explains in one round what years of elimination diets could not.",
+      "primary": "Request A Consultation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Digestive care requires medical evaluation and is not appropriate for every patient. Symptoms including rectal bleeding, unintentional weight loss, or difficulty swallowing require prompt gastroenterology evaluation."
+    },
+    "seo": {
+      "title": "Gut Health Treatment Miami | Root-Cause Digestive Care — Dr. Adonis Maiquez, MD",
+      "description": "Functional medicine gut care in Miami. Comprehensive testing for dysbiosis, permeability, and food sensitivity, with a protocol that repairs rather than suppresses. Florida telehealth."
+    }
   }
 }

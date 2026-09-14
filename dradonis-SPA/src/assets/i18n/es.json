@@ -704,5 +704,324 @@
       "tools": "Calculadoras"
     },
     "ctaText": "¿No lo encuentras? Te ayudamos en persona — agenda una cita o llámanos."
+  },
+  "gutHealthPage": {
+    "badge": "MEDICINA FUNCIONAL Y DIGESTIVA",
+    "title": "Tratamiento de Salud Intestinal en Miami, FL",
+    "lead": "La hinchazón no es un rasgo de personalidad. Tampoco lo es saber dónde está cada baño. Casi siempre hay un mecanismo, y casi siempre se puede encontrar.",
+    "ctaConsult": "Solicite una Consulta",
+    "ctaCall": "Llame al (305) 290-4691",
+    "pills": {
+      "testing": "Primero Pruebas Completas",
+      "repair": "Reparar, No Suprimir",
+      "telehealth": "Telemedicina en Florida Disponible"
+    },
+    "intro": {
+      "tag": "LA CIENCIA",
+      "title": "Qué Significa la Salud Intestinal",
+      "lead": "La mayoría de las molestias digestivas recibe una de dos respuestas: un medicamento que reduce el síntoma, o un estudio que no encuentra nada estructural y concluye que el problema es el estrés. Ambas dejan al paciente gestionando algo indefinidamente.",
+      "p2": "Su tracto digestivo hace mucho más que digerir. Alberga la mayor parte de su tejido inmunitario, fabrica neurotransmisores, incluida una gran parte de la serotonina de su cuerpo, absorbe todos los nutrientes de los que depende y mantiene una barrera que separa su torrente sanguíneo de todo lo que traga.",
+      "callout": "Casi siempre hay un mecanismo, y casi siempre se puede encontrar.",
+      "p4": "Cuando ese sistema falla, los efectos van mucho más allá de la digestión. La fatiga, la niebla mental, los cambios de ánimo, los problemas de piel, el dolor articular, los síntomas hormonales y la actividad autoinmune se relacionan con el intestino en un número considerable de pacientes.",
+      "features": {
+        "immune": {
+          "title": "Centro del Sistema Inmunitario",
+          "desc": "La mayor parte de su tejido inmunitario vive en el tracto digestivo, y por eso la disfunción intestinal se manifiesta como inflamación en otras partes."
+        },
+        "neuro": {
+          "title": "Producción de Neurotransmisores",
+          "desc": "Una gran parte de la serotonina de su cuerpo se fabrica en el intestino, y por eso el ánimo y la niebla mental acompañan tan a menudo a la digestión."
+        },
+        "nutrients": {
+          "title": "Absorción de Nutrientes",
+          "desc": "Todos los nutrientes de los que depende se absorben aquí. La malabsorción genera deficiencias que ninguna calidad de dieta puede corregir."
+        }
+      }
+    },
+    "catalog": {
+      "tag": "LO QUE BUSCAMOS",
+      "title": "Las Disfunciones que Encontramos con Más Frecuencia",
+      "subtitle": "Las pruebas completas suelen explicar en una sola ronda lo que años de dietas de eliminación no lograron.",
+      "list": {
+        "d1": {
+          "name": "Disbiosis",
+          "category": "Desequilibrio del Microbioma",
+          "description": "La población bacteriana se ha desplazado. Las especies beneficiosas están reducidas y las menos útiles se han expandido. Esto afecta la digestión, la señalización inmunitaria y la inflamación."
+        },
+        "d2": {
+          "name": "SIBO",
+          "category": "Sobrecrecimiento del Intestino Delgado",
+          "description": "Bacterias que pertenecen al intestino grueso han colonizado el intestino delgado, donde fermentan los alimentos antes de que usted los absorba. La presentación clásica es hinchazón que empeora a lo largo del día y que reacciona a la fibra y a los alimentos saludables."
+        },
+        "d3": {
+          "name": "Aumento de la Permeabilidad Intestinal",
+          "category": "Disfunción de la Barrera",
+          "description": "La barrera se ha aflojado, permitiendo que proteínas parcialmente digeridas y componentes bacterianos pasen a la circulación, donde provocan respuestas inmunitarias. Está implicada en numerosas condiciones autoinmunes e inflamatorias."
+        },
+        "d4": {
+          "name": "Ácido Estomacal Bajo o Insuficiencia Enzimática",
+          "category": "Capacidad Digestiva",
+          "description": "Los alimentos no se descomponen adecuadamente, lo que causa reflujo con más frecuencia de lo que la gente supone y deja nutrientes sin absorber."
+        },
+        "d5": {
+          "name": "Sensibilidades Alimentarias",
+          "category": "Reactividad Inmunitaria",
+          "description": "Reactividad inmunitaria a alimentos específicos, distinta de la alergia, a menudo retrasada horas o días y por lo tanto difícil de identificar sin pruebas."
+        }
+      }
+    },
+    "approach": {
+      "tag": "METODOLOGÍA",
+      "title": "Nuestro Enfoque",
+      "subtitle": "El orden importa en el trabajo intestinal. Primero evaluamos, luego corregimos en secuencia.",
+      "list": {
+        "p1": {
+          "title": "Evaluamos en Lugar de Adivinar",
+          "description": "Las dietas de eliminación por ensayo y error pueden tardar meses y a menudo terminan con un paciente comiendo quince alimentos y sintiéndose igual de mal. El análisis completo de heces, los marcadores de permeabilidad, la prueba de aliento para SIBO cuando está indicada y los paneles de sensibilidad alimentaria acortan ese camino enormemente."
+        },
+        "p2": {
+          "title": "Seguimos una Secuencia",
+          "description": "El orden importa en el trabajo intestinal. Eliminar lo que no debería estar, reponer lo que la digestión requiere, restaurar la población bacteriana y reparar el revestimiento. Introducir probióticos en un sobrecrecimiento no tratado con frecuencia hace que los pacientes se sientan peor, y por eso la secuencia no es un detalle."
+        },
+        "p3": {
+          "title": "Conectamos el Intestino con el Resto de sus Síntomas",
+          "description": "Los pacientes llegan por hinchazón y mencionan casi de pasada que están agotados, con niebla mental y con la piel mal desde hace dos años. A menudo es el mismo problema. La malabsorción produce deficiencias nutricionales. La permeabilidad produce inflamación sistémica. La disbiosis afecta la producción de neurotransmisores."
+        },
+        "p4": {
+          "title": "Descartamos lo que Hay que Descartar",
+          "description": "Sangre en las heces, pérdida de peso involuntaria, dificultad para tragar, vómitos persistentes o antecedentes familiares de cáncer de colon requieren gastroenterología y los estudios de imagen o endoscopia correspondientes. Derivamos en lugar de rodear el problema."
+        }
+      }
+    },
+    "signs": {
+      "tag": "REVISIÓN DE SÍNTOMAS",
+      "title": "Señales de que Esto Podría Ayudarle",
+      "subtitle": "Los síntomas digestivos rara vez viajan solos. Estos son los patrones que más vemos.",
+      "list": {
+        "s1": "Hinchazón, especialmente si empeora a lo largo del día",
+        "s2": "Gases, calambres o molestia abdominal después de comer",
+        "s3": "Estreñimiento, diarrea o alternancia entre ambos",
+        "s4": "Reflujo o acidez, responda o no a la medicación",
+        "s5": "Una lista de alimentos desencadenantes que no deja de crecer",
+        "s6": "Sentirse peor después de comer verduras, fibra o alimentos fermentados",
+        "s7": "Fatiga después de las comidas",
+        "s8": "Niebla mental que coincide con lo que comió",
+        "s9": "Problemas de piel: acné, eccema, rosácea",
+        "s10": "Dolor articular sin lesión",
+        "s11": "Deficiencias nutricionales a pesar de una dieta razonable",
+        "s12": "Ansiedad o cambios de ánimo junto con síntomas digestivos",
+        "s13": "Diagnóstico de SII sin ninguna explicación de la causa",
+        "s14": "Síntomas digestivos que comenzaron después de antibióticos, una intoxicación alimentaria o un período de estrés"
+      }
+    },
+    "candidacy": {
+      "tag": "EVALUACIÓN",
+      "title": "Para Quién Es — y para Quién No",
+      "subtitle": "El trabajo intestinal se adapta a algunas presentaciones y a otras no. Algunos síntomas necesitan gastroenterología primero, y se lo diremos con claridad.",
+      "fitTitle": "Encaja bien si usted:",
+      "unfitTitle": "No es lo indicado si usted:",
+      "fit": {
+        "c1": "Tiene síntomas digestivos crónicos sin una explicación satisfactoria",
+        "c2": "Fue diagnosticado con SII sin que le dieran una causa",
+        "c3": "Tiene una lista creciente de alimentos que no puede comer",
+        "c4": "Tiene síntomas digestivos junto con fatiga o problemas de piel o articulares",
+        "c5": "Tiene una condición autoinmune: el trabajo intestinal es central en la atención autoinmune",
+        "c6": "Se ha hecho una endoscopia o colonoscopia normal y sigue con síntomas",
+        "c7": "Está dispuesto a seguir cambios dietéticos durante un período definido"
+      },
+      "unfit": {
+        "n1": "Tiene sangre en las heces, pérdida de peso inexplicable, dificultad para tragar o vómitos persistentes. Esto requiere evaluación gastroenterológica primero, y lo derivaremos.",
+        "n2": "Tiene enfermedad inflamatoria intestinal en brote activo. Eso necesita manejo por gastroenterología, aunque podemos trabajar junto a ese tratamiento una vez estabilizado.",
+        "n3": "Tiene antecedentes familiares de cáncer de colon y tiene pendiente el cribado. Hágase el cribado primero.",
+        "n4": "Quiere un protocolo de suplementos sin pruebas",
+        "n5": "No está dispuesto a cambiar su dieta en absoluto"
+      }
+    },
+    "steps": {
+      "tag": "EL PROCESO",
+      "title": "Cómo Funciona el Tratamiento",
+      "subtitle": "Desde la primera consulta hasta las pruebas de seguimiento confirmadas, así es su atención.",
+      "list": {
+        "s1": {
+          "title": "Consulta",
+          "description": "Sus síntomas, su dieta y qué cambió antes de que esto empezara. Antibióticos, una intoxicación alimentaria, un período de estrés intenso: esos detalles con frecuencia identifican el origen."
+        },
+        "s2": {
+          "title": "Pruebas",
+          "description": "Análisis completo de heces y las pruebas adicionales que su presentación requiera. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        },
+        "s3": {
+          "title": "Interpretación",
+          "description": "El Dr. Adonis identifica qué disfunciones están presentes y cuál está impulsando a las demás."
+        },
+        "s4": {
+          "title": "Consulta de Resultados",
+          "description": "Hallazgos explicados con claridad, con un protocolo secuenciado y una explicación de por qué empezamos donde empezamos."
+        },
+        "s5": {
+          "title": "Comienza el Tratamiento",
+          "description": "Normalmente eliminando el sobrecrecimiento y apoyando la digestión primero, luego restaurando el equilibrio bacteriano y después reparando el revestimiento."
+        },
+        "s6": {
+          "title": "Pruebas de Seguimiento Cada Seis Meses",
+          "description": "Confirmando que los cambios se mantuvieron."
+        }
+      },
+      "note": "La mayoría de los pacientes reporta un cambio significativo en 90 días. Algunos síntomas responden en semanas; la reparación del revestimiento y la restauración del microbioma tardan más."
+    },
+    "included": {
+      "tag": "SU PROGRAMA",
+      "title": "Qué Incluye su Atención",
+      "subtitle": "Un modelo de pago directo, completo y transparente, sin facturas sorpresa.",
+      "list": {
+        "i1": {
+          "title": "Consulta Inicial Completa",
+          "description": "Historia y cronología de síntomas, dieta, qué precedió al inicio, antecedentes de antibióticos y medicamentos, viajes e infecciones, estrés y todos los estudios previos."
+        },
+        "i2": {
+          "title": "Pruebas Digestivas Completas",
+          "description": "Composición del microbioma, bacterias patógenas, levaduras y parásitos, marcadores de enzimas digestivas, inflamación intestinal, permeabilidad, sensibilidades alimentarias y estado nutricional. Prueba de aliento para SIBO cuando esté indicada."
+        },
+        "i3": {
+          "title": "Consulta de Resultados con el Dr. Adonis",
+          "description": "Qué está ocurriendo realmente en su intestino, qué lo causó y en qué secuencia lo corregiremos."
+        },
+        "i4": {
+          "title": "Su Protocolo de Tratamiento",
+          "description": "Tratamiento antimicrobiano o antifúngico cuando esté indicado, apoyo con enzimas y ácido, terapia dirigida con probióticos y prebióticos en la etapa adecuada, nutrientes para reparar el revestimiento intestinal y un plan de nutrición construido a partir de sus hallazgos."
+        },
+        "i5": {
+          "title": "Corrección Nutricional",
+          "description": "La malabsorción crea deficiencias, y corregirlas forma parte del tratamiento en lugar de ser un añadido."
+        },
+        "i6": {
+          "title": "Pruebas de Laboratorio de Seguimiento Cada Seis Meses",
+          "description": "Confirmando que el microbioma y los marcadores inflamatorios se han movido."
+        },
+        "i7": {
+          "title": "Acceso Directo a la Consulta",
+          "description": "Llame o envíe un mensaje de texto a la clínica al (305) 290-4691 en cualquier momento y comuníquese directamente con nuestro personal."
+        },
+        "i8": {
+          "title": "Laboratorios y Consultas Incluidos",
+          "description": "Esta es una consulta de pago directo. No se proporcionan superbills."
+        }
+      }
+    },
+    "benefits": {
+      "tag": "RESULTADOS POSIBLES",
+      "title": "Beneficios del Tratamiento Intestinal",
+      "subtitle": "La respuesta varía según el hallazgo, la duración y la adherencia a los cambios dietéticos.",
+      "list": {
+        "b1": {
+          "title": "Comodidad Digestiva",
+          "description": "Menos hinchazón, gases, calambres y urgencia."
+        },
+        "b2": {
+          "title": "Regularidad",
+          "description": "Función intestinal predecible y cómoda."
+        },
+        "b3": {
+          "title": "Una Dieta Más Amplia",
+          "description": "Muchos pacientes recuperan alimentos a medida que baja la reactividad, y suele ser el cambio que más valoran."
+        },
+        "b4": {
+          "title": "Energía",
+          "description": "Mejor absorción y menor carga inflamatoria."
+        },
+        "b5": {
+          "title": "Claridad Mental",
+          "description": "La niebla mental con frecuencia mejora junto con la inflamación intestinal."
+        },
+        "b6": {
+          "title": "Piel",
+          "description": "El acné, el eccema y la rosácea a menudo siguen el estado del intestino."
+        },
+        "b7": {
+          "title": "Ánimo",
+          "description": "El intestino fabrica neurotransmisores y se comunica directamente con el cerebro."
+        },
+        "b8": {
+          "title": "Menos Inflamación Sistémica",
+          "description": "Lo que importa para el dolor articular, la actividad autoinmune y el riesgo a largo plazo."
+        },
+        "b9": {
+          "title": "Estado Nutricional Restaurado",
+          "description": "Las deficiencias causadas por la malabsorción se resuelven una vez que mejora la absorción."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Por Qué la Formación en Causa Raíz Importa en la Atención Digestiva",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano</strong>, completando su formación de posgrado y su fellowship en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida, y realizó cientos de procedimientos hipofisarios antes de dedicarse a la medicina funcional y regenerativa.",
+      "p2": "Lo que lo impulsó fue reconocer que gran parte de lo que veía llegar al quirófano había comenzado años antes, en sistemas que nadie había examinado. Está certificado por el Institute for Functional Medicine y por la American Academy of Anti-Aging Medicine, ejerce en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Medicina Funcional y Regenerativa",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "Fellowship en Neurocirugía, USF",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "Certificado por A4M",
+        "campus": "Campus Médico UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "Encontrar médicos locales con experiencia que realmente tomaran en serio mis síntomas fue difícil. Tuve que entrevistar a varios antes de que me refirieran al Dr. Adonis. Estoy muy contenta de haber encontrado a alguien que escucha.",
+      "author": "— Alexia A.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no son garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre las pruebas digestivas, el tratamiento y qué esperar.",
+      "list": {
+        "f1": {
+          "q": "Mi colonoscopia salió normal. ¿Por qué sigo con síntomas?",
+          "a": "Una colonoscopia busca enfermedad estructural: inflamación, ulceración, crecimientos. Es excelente para eso y no evalúa su microbioma, su producción enzimática, la integridad de la barrera ni la reactividad alimentaria. Un resultado normal descarta patología grave. No explica sus síntomas."
+        },
+        "f2": {
+          "q": "¿Es el SII un diagnóstico real?",
+          "a": "El SII describe un patrón de síntomas una vez excluidas otras causas. Nombra lo que usted experimenta, no por qué ocurre. En nuestra experiencia, una proporción considerable de pacientes con SII tiene disbiosis, SIBO o sensibilidad alimentaria identificables por debajo de la etiqueta."
+        },
+        "f3": {
+          "q": "¿Debería simplemente tomar un probiótico?",
+          "a": "No antes de hacer pruebas. Los probióticos ayudan en algunas situaciones y empeoran otras, en particular con un sobrecrecimiento del intestino delgado no tratado. La secuencia y la selección de cepas importan más de lo que suele decirse."
+        },
+        "f4": {
+          "q": "¿Cuánto tiempo debo evitar ciertos alimentos?",
+          "a": "La eliminación suele ser una fase definida, no un estado permanente. El objetivo es reducir la reactividad, reparar el revestimiento y reintroducir de forma sistemática. Muchos pacientes recuperan la mayor parte de su dieta."
+        },
+        "f5": {
+          "q": "¿Es real el intestino permeable?",
+          "a": "El aumento de la permeabilidad intestinal es un fenómeno fisiológico medible y bien documentado, estudiado en una variedad de condiciones inflamatorias y autoinmunes. El término popular es impreciso. El mecanismo es real y se puede medir."
+        },
+        "f6": {
+          "q": "¿Cuánto tardaré en sentirme mejor?",
+          "a": "La mayoría de los pacientes reporta un cambio significativo en 90 días. Algunos síntomas se mueven en semanas; el microbioma y la restauración del revestimiento tardan más."
+        },
+        "f7": {
+          "q": "¿Aceptan seguro?",
+          "a": "No. Esta es una consulta de pago directo y no proporcionamos superbills. Sus laboratorios y consultas están incluidos en su programa."
+        },
+        "f8": {
+          "q": "¿Se puede manejar por telemedicina?",
+          "a": "Sí, para pacientes ubicados en Florida. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Descubra Qué Está Ocurriendo Realmente",
+      "lead": "Las pruebas completas suelen explicar en una sola ronda lo que años de dietas de eliminación no lograron.",
+      "primary": "Solicite una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*La atención digestiva requiere evaluación médica y no es apropiada para todos los pacientes. Síntomas como sangrado rectal, pérdida de peso involuntaria o dificultad para tragar requieren evaluación gastroenterológica pronta."
+    },
+    "seo": {
+      "title": "Salud Intestinal en Miami | Atención Digestiva de Causa Raíz — Dr. Adonis Maiquez, MD",
+      "description": "Medicina funcional para la salud intestinal en Miami. Pruebas completas de disbiosis, permeabilidad y sensibilidad alimentaria, con un protocolo que repara en lugar de suprimir. Telemedicina en Florida."
+    }
   }
 }
