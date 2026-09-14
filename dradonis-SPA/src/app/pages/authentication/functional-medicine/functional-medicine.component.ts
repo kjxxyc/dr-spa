@@ -8,20 +8,26 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../../shared/seo/seo.service';
 
+/**
+ * All copy for this page lives in assets/i18n/{en,es}.json under
+ * `functionalMedicinePage`. The arrays below hold only ids and the
+ * route each card links to; the template resolves the text through the
+ * translate pipe, so the language switcher works.
+ */
+export interface ServiceAreaItem {
+  /** Key suffix under functionalMedicinePage.areas.list, e.g. 'a1'. */
+  id: string;
+  /** Route for the card's Learn More link. Not translated. */
+  linkUrl: string;
+}
+
 export interface FaqItem {
-  question: string;
-  answer: string;
+  id: string;
   isOpen?: boolean;
 }
 
-/** A child service page surfaced as a card on this hub page. */
-export interface ServiceAreaItem {
-  name: string;
-  category: string;
-  description: string;
-  linkText: string;
-  linkUrl: string;
-}
+/** Base key for every string on this page. */
+const I18N = 'functionalMedicinePage';
 
 @Component({
   selector: 'app-functional-medicine',
@@ -41,92 +47,32 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
   private langSub?: Subscription;
   currentLang = 'en';
 
+  /** Exposed so the template can build keys without repeating the prefix. */
+  readonly i18n = I18N;
+
   /**
    * Child pages of functional medicine. Adding a new service page means
-   * adding an entry here and a child route in authentication.routes.ts.
+   * adding an entry here, its text under functionalMedicinePage.areas.list
+   * in both language files, and a child route in authentication.routes.ts.
    */
   serviceAreas: ServiceAreaItem[] = [
-    {
-      name: 'Gut Health',
-      category: 'Digestive & Microbiome Care',
-      description: 'Comprehensive testing for dysbiosis, SIBO, intestinal permeability, and food sensitivity, with a sequenced protocol that repairs rather than suppresses. For bloating, reflux, irregularity, and the fatigue, skin, and brain fog that travel with them.',
-      linkText: 'Learn More',
-      linkUrl: '/functional-medicine/gut-health'
-    },
-    {
-      name: 'Brain Health',
-      category: 'Cognitive & Metabolic Care',
-      description: 'Root-cause evaluation of brain fog, memory, and focus. We test the metabolic, vascular, hormonal, inflammatory, nutritional, and sleep drivers of cognition rather than attributing symptoms to age or stress.',
-      linkText: 'Learn More',
-      linkUrl: '/functional-medicine/brain-health'
-    },
-    {
-      name: 'Autoimmune Conditions',
-      category: 'Immune & Inflammatory Care',
-      description: 'Root-cause investigation of the triggers driving immune activity — infections, toxins, food antigens, stress, nutrient status, and gut barrier integrity — worked alongside your rheumatologist or gastroenterologist rather than around them.',
-      linkText: 'Learn More',
-      linkUrl: '/functional-medicine/autoimmune'
-    },
-    {
-      name: 'Hashimoto’s Thyroiditis',
-      category: 'Autoimmune Thyroid Care',
-      description: 'Hashimoto’s is an immune condition, not just a thyroid one. We test antibodies rather than hormone alone, investigate what triggered the immune activity, and treat the gut alongside the gland instead of adjusting your dose and stopping there.',
-      linkText: 'Learn More',
-      linkUrl: '/functional-medicine/hashimotos'
-    },
-    {
-      name: 'Thyroid Dysfunction',
-      category: 'Full Thyroid Panel & Care',
-      description: 'Most thyroid care stops at TSH, which measures the signal rather than the hormone your cells receive. We run free T3, reverse T3 and antibodies, find where the chain is breaking, and treat the reasons it stopped working.',
-      linkText: 'Learn More',
-      linkUrl: '/functional-medicine/thyroid'
-    },
-    {
-      name: 'Fibromyalgia',
-      category: 'Chronic Pain & Fatigue Care',
-      description: 'Widespread pain and exhaustion deserve a proper investigation. We test for the thyroid, nutrient, inflammatory, hormonal, and sleep drivers that the standard workup was never designed to find, and address sleep first.',
-      linkText: 'Learn More',
-      linkUrl: '/functional-medicine/fibromyalgia'
-    }
+    { id: 'a1', linkUrl: '/functional-medicine/gut-health' },
+    { id: 'a2', linkUrl: '/functional-medicine/brain-health' },
+    { id: 'a3', linkUrl: '/functional-medicine/autoimmune' },
+    { id: 'a4', linkUrl: '/functional-medicine/hashimotos' },
+    { id: 'a5', linkUrl: '/functional-medicine/thyroid' },
+    { id: 'a6', linkUrl: '/functional-medicine/fibromyalgia' }
   ];
 
-  // Frequently asked questions
+  // Frequently asked questions -> functionalMedicinePage.faq.list.*
   faqs: FaqItem[] = [
-    {
-      question: 'What is functional medicine?',
-      answer: 'Functional medicine investigates why a symptom is happening rather than only naming it. It uses comprehensive laboratory testing to identify the metabolic, hormonal, inflammatory, digestive, and nutritional contributors to a presentation, then corrects those contributors in sequence.',
-      isOpen: false
-    },
-    {
-      question: 'Is this a replacement for my regular doctor or specialist?',
-      answer: 'No. It works alongside conventional care. Red-flag symptoms, structural disease, and conditions requiring specialist management need conventional evaluation, and we refer for those directly.',
-      isOpen: false
-    },
-    {
-      question: 'My labs came back normal. Is there any point?',
-      answer: 'Frequently, yes. Standard panels are narrow by design. A comprehensive panel looks at markers that a routine workup does not order, and normal results on a limited panel narrow the question rather than answering it.',
-      isOpen: false
-    },
-    {
-      question: 'Which service should I start with?',
-      answer: 'If your symptoms are primarily digestive, start with gut health. If they are primarily cognitive, start with brain health. If both apply, the initial consultation determines which is driving the other, and the testing is arranged accordingly.',
-      isOpen: false
-    },
-    {
-      question: 'How long until I feel better?',
-      answer: 'Most patients report meaningful change within 90 days. Nutrient corrections often register sooner; metabolic, hormonal, and microbiome changes take longer.',
-      isOpen: false
-    },
-    {
-      question: 'Do you take insurance?',
-      answer: 'No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program.',
-      isOpen: false
-    },
-    {
-      question: 'Can this be managed by telehealth?',
-      answer: 'Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp.',
-      isOpen: false
-    }
+    { id: 'f1', isOpen: false },
+    { id: 'f2', isOpen: false },
+    { id: 'f3', isOpen: false },
+    { id: 'f4', isOpen: false },
+    { id: 'f5', isOpen: false },
+    { id: 'f6', isOpen: false },
+    { id: 'f7', isOpen: false }
   ];
 
   constructor(
@@ -137,11 +83,11 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.currentLang = this.translate.currentLang || 'en';
-    this.applySeo();
+    this.refreshSeo();
 
     this.langSub = this.translate.onLangChange.subscribe((event) => {
       this.currentLang = event.lang;
-      this.applySeo();
+      this.refreshSeo();
     });
   }
 
@@ -165,18 +111,22 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
     });
   }
 
+  /**
+   * Waits for the active language file to load before building the tags,
+   * so the meta description and the hasPart child declarations contain
+   * resolved text rather than raw translation keys.
+   */
+  private refreshSeo(): void {
+    this.translate.get(`${I18N}.seo.title`).subscribe(() => this.applySeo());
+  }
+
   private applySeo(): void {
     const origin = this.seo.origin;
     const url = `${origin}/functional-medicine`;
     const isEs = this.currentLang === 'es';
 
-    const title = isEs
-      ? 'Medicina Funcional en Miami | Atención de Causa Raíz — Dr. Adonis Maiquez, MD'
-      : 'Functional Medicine Miami | Root-Cause Medical Care — Dr. Adonis Maiquez, MD';
-
-    const description = isEs
-      ? 'Medicina funcional en Miami con el Dr. Adonis Maiquez. Pruebas completas para identificar la causa de sus síntomas, con programas de salud intestinal y salud cerebral. Telemedicina en Florida.'
-      : 'Functional medicine in Miami with Dr. Adonis Maiquez. Comprehensive testing to find the cause of your symptoms, with gut health and brain health programs. Florida telehealth.';
+    const title = this.translate.instant(`${I18N}.seo.title`);
+    const description = this.translate.instant(`${I18N}.seo.description`);
 
     const medicalWebPageSchema: Record<string, unknown> = {
       '@context': 'https://schema.org',
@@ -193,8 +143,8 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
       // Declares the child pages beneath this hub.
       hasPart: this.serviceAreas.map((area) => ({
         '@type': 'MedicalWebPage',
-        name: area.name,
-        description: area.description,
+        name: this.translate.instant(`${I18N}.areas.list.${area.id}.name`),
+        description: this.translate.instant(`${I18N}.areas.list.${area.id}.description`),
         url: `${origin}${area.linkUrl}`
       })),
       author: {
@@ -216,10 +166,10 @@ export class FunctionalMedicineComponent implements OnInit, OnDestroy {
       '@type': 'FAQPage',
       mainEntity: this.faqs.map((faq) => ({
         '@type': 'Question',
-        name: faq.question,
+        name: this.translate.instant(`${I18N}.faq.list.${faq.id}.q`),
         acceptedAnswer: {
           '@type': 'Answer',
-          text: faq.answer
+          text: this.translate.instant(`${I18N}.faq.list.${faq.id}.a`)
         }
       }))
     };

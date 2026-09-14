@@ -2620,5 +2620,123 @@
       "title": "Tratamiento de Fibromialgia en Miami | Atención de Causa Raíz para el Dolor Crónico y la Fatiga — Dr. Adonis Maiquez, MD",
       "description": "Medicina funcional para la fibromialgia en Miami. Pruebas completas de los factores tiroideos, nutricionales, inflamatorios y del sueño detrás del dolor generalizado y la fatiga. Telemedicina en Florida."
     }
+  },
+  "functionalMedicinePage": {
+    "badge": "ATENCIÓN MÉDICA DE CAUSA RAÍZ",
+    "title": "Medicina Funcional en Miami, FL",
+    "lead": "Un diagnóstico nombra lo que usted está experimentando. No siempre explica por qué está ocurriendo. Evaluamos a fondo, encontramos el mecanismo y lo corregimos en el orden que importa.",
+    "ctaConsult": "Solicite una Consulta",
+    "ctaCall": "Llame al (305) 290-4691",
+    "pills": {
+      "testing": "Primero Pruebas Completas",
+      "physician": "Atención Dirigida por un Médico",
+      "telehealth": "Telemedicina en Florida Disponible"
+    },
+    "areas": {
+      "tag": "ÁREAS DE ATENCIÓN",
+      "title": "Nuestros Programas de Medicina Funcional",
+      "subtitle": "Cada programa comienza con las mismas pruebas completas y se construye en torno a de dónde vienen realmente sus síntomas.",
+      "linkText": "Más Información",
+      "list": {
+        "a1": {
+          "name": "Salud Intestinal",
+          "category": "Atención Digestiva y del Microbioma",
+          "description": "Pruebas completas de disbiosis, SIBO, permeabilidad intestinal y sensibilidad alimentaria, con un protocolo secuenciado que repara en lugar de suprimir. Para la hinchazón, el reflujo, la irregularidad y la fatiga, los problemas de piel y la niebla mental que los acompañan."
+        },
+        "a2": {
+          "name": "Salud Cerebral",
+          "category": "Atención Cognitiva y Metabólica",
+          "description": "Evaluación de causa raíz de la niebla mental, la memoria y la concentración. Evaluamos los factores metabólicos, vasculares, hormonales, inflamatorios, nutricionales y del sueño de la cognición en lugar de atribuir los síntomas a la edad o al estrés."
+        },
+        "a3": {
+          "name": "Condiciones Autoinmunes",
+          "category": "Atención Inmunitaria e Inflamatoria",
+          "description": "Investigación de causa raíz de los desencadenantes que impulsan la actividad inmunitaria (infecciones, toxinas, antígenos alimentarios, estrés, estado nutricional e integridad de la barrera intestinal) trabajando junto a su reumatólogo o gastroenterólogo en lugar de rodearlos."
+        },
+        "a4": {
+          "name": "Tiroiditis de Hashimoto",
+          "category": "Atención Tiroidea Autoinmune",
+          "description": "El Hashimoto es una condición inmunitaria, no solo tiroidea. Evaluamos anticuerpos y no solo hormona, investigamos qué desencadenó la actividad inmunitaria y tratamos el intestino junto con la glándula en lugar de ajustar su dosis y detenernos ahí."
+        },
+        "a5": {
+          "name": "Disfunción Tiroidea",
+          "category": "Panel Tiroideo Completo y Atención",
+          "description": "La mayoría de la atención tiroidea se detiene en la TSH, que mide la señal y no la hormona que reciben sus células. Evaluamos T3 libre, T3 reversa y anticuerpos, encontramos dónde se rompe la cadena y tratamos las razones por las que dejó de funcionar."
+        },
+        "a6": {
+          "name": "Fibromialgia",
+          "category": "Atención del Dolor Crónico y la Fatiga",
+          "description": "El dolor generalizado y el agotamiento merecen una investigación adecuada. Evaluamos los factores tiroideos, nutricionales, inflamatorios, hormonales y del sueño que el estudio estándar nunca se diseñó para encontrar, y abordamos el sueño primero."
+        }
+      }
+    },
+    "physician": {
+      "tag": "EXPERIENCIA MÉDICA",
+      "title": "Por Qué un Cirujano Practica Medicina de Causa Raíz",
+      "p1": "El Dr. Adonis se formó como <strong>neurocirujano</strong>, completando su formación de posgrado y su fellowship en el Departamento de Cirugía y Neurocirugía de la Universidad del Sur de Florida, y realizó cientos de procedimientos hipofisarios antes de dedicarse a la medicina funcional y regenerativa.",
+      "p2": "Lo que lo impulsó fue reconocer que gran parte de lo que veía llegar al quirófano había comenzado años antes, en sistemas que nadie había examinado. Está certificado por el Institute for Functional Medicine y por la American Academy of Anti-Aging Medicine, ejerce en Miami desde 2004 y es autor de <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Medicina Funcional y Regenerativa",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "Fellowship en Neurocirugía, USF",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "Certificado por A4M",
+        "campus": "Campus Médico UM y Telemedicina en Florida"
+      }
+    },
+    "testimonial": {
+      "quote": "Encontrar médicos locales con experiencia que realmente tomaran en serio mis síntomas fue difícil. Tuve que entrevistar a varios antes de que me refirieran al Dr. Adonis. Estoy muy contenta de haber encontrado a alguien que escucha.",
+      "author": "— Alexia A.",
+      "role": "Paciente Verificada de la Clínica",
+      "disclaimer": "*Los resultados individuales varían. Las experiencias de pacientes descritas aquí no son garantía de resultado."
+    },
+    "faq": {
+      "tag": "PREGUNTAS Y RESPUESTAS",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesita saber sobre cómo funciona aquí la medicina funcional.",
+      "list": {
+        "f1": {
+          "q": "¿Qué es la medicina funcional?",
+          "a": "La medicina funcional investiga por qué está ocurriendo un síntoma en lugar de limitarse a nombrarlo. Utiliza pruebas de laboratorio completas para identificar los factores metabólicos, hormonales, inflamatorios, digestivos y nutricionales que contribuyen a una presentación clínica, y luego corrige esos factores en secuencia."
+        },
+        "f2": {
+          "q": "¿Esto sustituye a mi médico de cabecera o a mi especialista?",
+          "a": "No. Funciona junto a la atención convencional. Los síntomas de alarma, la enfermedad estructural y las condiciones que requieren manejo especializado necesitan evaluación convencional, y derivamos para ello directamente."
+        },
+        "f3": {
+          "q": "Mis análisis salieron normales. ¿Tiene sentido?",
+          "a": "Con frecuencia, sí. Los paneles estándar son estrechos por diseño. Un panel completo mira marcadores que un estudio de rutina no solicita, y unos resultados normales en un panel limitado acotan la pregunta en lugar de responderla."
+        },
+        "f4": {
+          "q": "¿Con qué servicio debería empezar?",
+          "a": "Si sus síntomas son principalmente digestivos, empiece por salud intestinal. Si son principalmente cognitivos, empiece por salud cerebral. Si aplican ambos, la consulta inicial determina cuál está impulsando al otro, y las pruebas se organizan en consecuencia."
+        },
+        "f5": {
+          "q": "¿Cuánto tardaré en sentirme mejor?",
+          "a": "La mayoría de los pacientes reporta un cambio significativo en 90 días. Las correcciones nutricionales suelen notarse antes; los cambios metabólicos, hormonales y del microbioma tardan más."
+        },
+        "f6": {
+          "q": "¿Aceptan seguro?",
+          "a": "No. Esta es una consulta de pago directo y no proporcionamos superbills. Sus laboratorios y consultas están incluidos en su programa."
+        },
+        "f7": {
+          "q": "¿Se puede manejar por telemedicina?",
+          "a": "Sí, para pacientes ubicados en Florida. Los laboratorios pueden realizarse en nuestra oficina o localmente en cualquier Quest o LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "COMENCEMOS",
+      "title": "Descubra Qué Está Ocurriendo Realmente",
+      "lead": "Las pruebas completas suelen explicar en una sola ronda lo que años de gestionar síntomas no lograron.",
+      "primary": "Solicite una Consulta",
+      "phone": "Llame o Escriba al (305) 290-4691",
+      "note": "*La atención de medicina funcional requiere evaluación médica y no es apropiada para todos los pacientes. Los síntomas que requieren valoración urgente o especializada se derivan para evaluación convencional."
+    },
+    "seo": {
+      "title": "Medicina Funcional en Miami | Atención de Causa Raíz — Dr. Adonis Maiquez, MD",
+      "description": "Medicina funcional en Miami con el Dr. Adonis Maiquez. Pruebas completas para identificar la causa de sus síntomas, con programas de salud intestinal y salud cerebral. Telemedicina en Florida."
+    }
   }
 }

@@ -2620,5 +2620,123 @@
       "title": "Fibromyalgia Treatment Miami | Root-Cause Care for Chronic Pain & Fatigue — Dr. Adonis Maiquez, MD",
       "description": "Functional medicine for fibromyalgia in Miami. Comprehensive testing for the thyroid, nutrient, inflammatory, and sleep drivers behind widespread pain and fatigue. Florida telehealth."
     }
+  },
+  "functionalMedicinePage": {
+    "badge": "ROOT-CAUSE MEDICAL CARE",
+    "title": "Functional Medicine in Miami, FL",
+    "lead": "A diagnosis names what you are experiencing. It does not always explain why it is happening. We test comprehensively, find the mechanism, and correct it in the order that matters.",
+    "ctaConsult": "Request A Consultation",
+    "ctaCall": "Call (305) 290-4691",
+    "pills": {
+      "testing": "Comprehensive Testing First",
+      "physician": "Physician-Led Care",
+      "telehealth": "Florida Telehealth Available"
+    },
+    "areas": {
+      "tag": "AREAS OF CARE",
+      "title": "Our Functional Medicine Programs",
+      "subtitle": "Each program begins with the same comprehensive testing and is built around where your symptoms are actually coming from.",
+      "linkText": "Learn More",
+      "list": {
+        "a1": {
+          "name": "Gut Health",
+          "category": "Digestive & Microbiome Care",
+          "description": "Comprehensive testing for dysbiosis, SIBO, intestinal permeability, and food sensitivity, with a sequenced protocol that repairs rather than suppresses. For bloating, reflux, irregularity, and the fatigue, skin, and brain fog that travel with them."
+        },
+        "a2": {
+          "name": "Brain Health",
+          "category": "Cognitive & Metabolic Care",
+          "description": "Root-cause evaluation of brain fog, memory, and focus. We test the metabolic, vascular, hormonal, inflammatory, nutritional, and sleep drivers of cognition rather than attributing symptoms to age or stress."
+        },
+        "a3": {
+          "name": "Autoimmune Conditions",
+          "category": "Immune & Inflammatory Care",
+          "description": "Root-cause investigation of the triggers driving immune activity — infections, toxins, food antigens, stress, nutrient status, and gut barrier integrity — worked alongside your rheumatologist or gastroenterologist rather than around them."
+        },
+        "a4": {
+          "name": "Hashimoto’s Thyroiditis",
+          "category": "Autoimmune Thyroid Care",
+          "description": "Hashimoto’s is an immune condition, not just a thyroid one. We test antibodies rather than hormone alone, investigate what triggered the immune activity, and treat the gut alongside the gland instead of adjusting your dose and stopping there."
+        },
+        "a5": {
+          "name": "Thyroid Dysfunction",
+          "category": "Full Thyroid Panel & Care",
+          "description": "Most thyroid care stops at TSH, which measures the signal rather than the hormone your cells receive. We run free T3, reverse T3 and antibodies, find where the chain is breaking, and treat the reasons it stopped working."
+        },
+        "a6": {
+          "name": "Fibromyalgia",
+          "category": "Chronic Pain & Fatigue Care",
+          "description": "Widespread pain and exhaustion deserve a proper investigation. We test for the thyroid, nutrient, inflammatory, hormonal, and sleep drivers that the standard workup was never designed to find, and address sleep first."
+        }
+      }
+    },
+    "physician": {
+      "tag": "MEDICAL EXPERTISE",
+      "title": "Why A Surgeon Practices Root-Cause Medicine",
+      "p1": "Dr. Adonis trained as a <strong>neurosurgeon</strong>, completing postgraduate and fellowship training in the Department of Surgery and Neurosurgery at the University of South Florida, and performed hundreds of pituitary procedures before turning to functional and regenerative medicine.",
+      "p2": "What moved him was the recognition that so much of what he saw arriving at the operating room began years earlier, in systems nobody had examined. He is certified by the Institute for Functional Medicine and board certified by the American Academy of Anti-Aging Medicine, has practiced in Miami since 2004, and is the author of <em>Modern Medicine for Modern Times</em>.",
+      "name": "Adonis Maiquez, MD",
+      "role": "Functional &amp; Regenerative Medicine",
+      "photoAlt": "Dr. Adonis Maiquez, MD",
+      "pills": {
+        "fellowship": "USF Neurosurgery Fellowship",
+        "ifm": "Institute for Functional Medicine (IFM)",
+        "a4m": "A4M Board Certified",
+        "campus": "UM Medical Campus &amp; Florida Telehealth"
+      }
+    },
+    "testimonial": {
+      "quote": "Finding experienced local doctors who genuinely take symptoms seriously was challenging. I had to interview several before being referred to Dr. Adonis. I'm very glad to have found someone who listens.",
+      "author": "— Alexia A.",
+      "role": "Verified Clinic Patient",
+      "disclaimer": "*Individual results vary. Patient experiences described here are not a guarantee of outcome."
+    },
+    "faq": {
+      "tag": "QUESTIONS & ANSWERS",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about how functional medicine works here.",
+      "list": {
+        "f1": {
+          "q": "What is functional medicine?",
+          "a": "Functional medicine investigates why a symptom is happening rather than only naming it. It uses comprehensive laboratory testing to identify the metabolic, hormonal, inflammatory, digestive, and nutritional contributors to a presentation, then corrects those contributors in sequence."
+        },
+        "f2": {
+          "q": "Is this a replacement for my regular doctor or specialist?",
+          "a": "No. It works alongside conventional care. Red-flag symptoms, structural disease, and conditions requiring specialist management need conventional evaluation, and we refer for those directly."
+        },
+        "f3": {
+          "q": "My labs came back normal. Is there any point?",
+          "a": "Frequently, yes. Standard panels are narrow by design. A comprehensive panel looks at markers that a routine workup does not order, and normal results on a limited panel narrow the question rather than answering it."
+        },
+        "f4": {
+          "q": "Which service should I start with?",
+          "a": "If your symptoms are primarily digestive, start with gut health. If they are primarily cognitive, start with brain health. If both apply, the initial consultation determines which is driving the other, and the testing is arranged accordingly."
+        },
+        "f5": {
+          "q": "How long until I feel better?",
+          "a": "Most patients report meaningful change within 90 days. Nutrient corrections often register sooner; metabolic, hormonal, and microbiome changes take longer."
+        },
+        "f6": {
+          "q": "Do you take insurance?",
+          "a": "No. This is a cash-pay practice and we do not provide superbills. Your labs and consultations are included in your program."
+        },
+        "f7": {
+          "q": "Can this be managed by telehealth?",
+          "a": "Yes, for patients located in Florida. Labs can be completed in our office, or locally at any Quest or LabCorp."
+        }
+      }
+    },
+    "cta": {
+      "tag": "GET STARTED",
+      "title": "Find Out What’s Actually Happening",
+      "lead": "Comprehensive testing usually explains in one round what years of managing symptoms could not.",
+      "primary": "Request A Consultation",
+      "phone": "Call or Text (305) 290-4691",
+      "note": "*Functional medicine care requires medical evaluation and is not appropriate for every patient. Symptoms requiring urgent or specialist assessment are referred for conventional evaluation."
+    },
+    "seo": {
+      "title": "Functional Medicine Miami | Root-Cause Medical Care — Dr. Adonis Maiquez, MD",
+      "description": "Functional medicine in Miami with Dr. Adonis Maiquez. Comprehensive testing to find the cause of your symptoms, with gut health and brain health programs. Florida telehealth."
+    }
   }
 }
