@@ -51,8 +51,11 @@ $breakpoint-xs: 480px;
     z-index: 1000;
     padding: 0.5rem 2rem;
 
+    // Phones: padding, gaps, phone number and logo scale with the viewport so
+    // phone + logo + CTA + language switch + menu fit on one row down to 350px
+    // (at 360px the fixed sizes left only 5px free before the language switch).
     @media (max-width: $breakpoint-sm) {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem clamp(10px, 3vw, 16px);
     }
 
     .header-content {
@@ -64,7 +67,7 @@ $breakpoint-xs: 480px;
         gap: 1rem;
 
         @media (max-width: $breakpoint-sm) {
-            gap: 0.5rem;
+            gap: clamp(4px, 1.5vw, 8px);
         }
     }
 
@@ -74,7 +77,13 @@ $breakpoint-xs: 480px;
         white-space: nowrap;
 
         @media (max-width: $breakpoint-sm) {
-            font-size: 13px;
+            font-size: clamp(11px, 3.3vw, 13px);
+        }
+
+        // Very narrow devices (e.g. 320px): no room for the number — the
+        // footer and the appointment flows still carry it.
+        @media (max-width: 350px) {
+            display: none;
         }
 
         a {
@@ -102,7 +111,7 @@ $breakpoint-xs: 480px;
 
             @media (max-width: $breakpoint-sm) {
                 height: 36px;
-                max-width: 120px;
+                max-width: clamp(88px, 28vw, 120px);
             }
         }
     }
@@ -206,6 +215,67 @@ $breakpoint-xs: 480px;
         }
     }
 
+    // Mobile/tablet header actions: [CTA][language switch]. The CTA keeps its
+    // own wrapper so the attention bubble stays centered on the CTA alone.
+    .mobile-actions {
+        display: none;
+
+        @media (max-width: $breakpoint-md) {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    // Compact language switch: flag + 2-letter code in a 36px circle —
+    // one step smaller than the 40px CTA so the appointment stays primary.
+    .mobile-lang-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        border-radius: 50%;
+        border: 1.5px solid rgba($primary-green, 0.35);
+        background: $white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+        font-family: inherit;
+        -webkit-tap-highlight-color: transparent;
+        transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+        img {
+            display: block;
+            width: 18px;
+            height: 13px;
+            border-radius: 2px;
+            object-fit: cover;
+        }
+
+        span {
+            font-size: 9.5px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 0.4px;
+            color: $primary-green;
+        }
+
+        &:hover,
+        &:active {
+            border-color: $primary-green;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba($primary-green, 0.2);
+        }
+
+        &:focus-visible {
+            outline: 2px solid $primary-green;
+            outline-offset: 2px;
+        }
+    }
+
     // Compact CTA wrapper (button + attention bubble) — only shown on mobile/tablet
     .mobile-cta-wrapper {
         display: none;
@@ -261,6 +331,9 @@ $breakpoint-xs: 480px;
             display: inline-block;
             position: absolute;
             top: calc(100% + 8px);
+            // Centered under the CTA. Fits only while the language switch and
+            // menu keep the CTA ~70px from the screen edge: with the CTA last in
+            // the row, the centered bubble overflowed on 360–390px phones.
             left: 50%;
             transform: translateX(-50%);
             background: $bubble-bg;
@@ -327,8 +400,14 @@ $breakpoint-xs: 480px;
         display: block;
     }
 
+    // Cap at the viewport (not a fixed px value) and scroll inside: a fixed
+    // 500px silently clipped whatever sat at the bottom once the link list
+    // grew. 72px = tallest header row (tablet); dvh follows mobile toolbars.
     &.open {
-        max-height: 500px;
+        max-height: calc(100vh - 72px);
+        max-height: calc(100dvh - 72px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
         padding: 1rem 0;
     }
 
@@ -378,17 +457,6 @@ $breakpoint-xs: 480px;
         font-size: 13px;
         letter-spacing: 0.5px;
         text-align: center;
-    }
-
-    .mobile-language-toggle {
-        display: block;
-        width: calc(100% - 3rem);
-        margin: 0 1.5rem 0.5rem;
-        text-align: center;
-        color: $text-medium;
-        font-size: 12px;
-        font-weight: 600;
-        text-transform: uppercase;
     }
 }
 

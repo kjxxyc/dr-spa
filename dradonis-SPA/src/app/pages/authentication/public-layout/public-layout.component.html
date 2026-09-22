@@ -73,26 +73,38 @@
       <!-- Language Toggle (desktop only) -->
       <button mat-button class="language-toggle desktop-only" (click)="toggleLanguage()">
         <div style="display: flex; align-items: center; gap: 6px;">
-          <img
-            [src]="currentLang === 'en' ? '/assets/images/flag/icon-flag-es.svg' : '/assets/images/flag/icon-flag-en.svg'"
-            width="22" height="16" alt="flag" style="border-radius: 2px;" />
+          <img [src]="otherLangFlag" width="22" height="16" alt="flag" style="border-radius: 2px;" />
           {{ 'header.language' | translate }}
         </div>
       </button>
 
-      <!-- CTA Button (mobile/tablet only) — compact icon variant + attention bubble -->
-      <div class="mobile-cta-wrapper">
+      <!-- Mobile/tablet header actions: appointment CTA + language switch -->
+      <div class="mobile-actions">
+        <!-- CTA Button — compact icon variant + attention bubble -->
+        <div class="mobile-cta-wrapper">
+          <button
+            mat-icon-button
+            class="mobile-cta-header"
+            (click)="openAppointment()"
+            [attr.aria-label]="'header.cta' | translate"
+            [attr.title]="'header.cta' | translate">
+            <mat-icon>event</mat-icon>
+          </button>
+          <span class="mobile-cta-bubble" aria-hidden="true">
+            {{ 'header.ctaBubble' | translate }}
+          </span>
+        </div>
+
         <button
-          mat-icon-button
-          class="mobile-cta-header"
-          (click)="openAppointment()"
-          [attr.aria-label]="'header.cta' | translate"
-          [attr.title]="'header.cta' | translate">
-          <mat-icon>event</mat-icon>
+          type="button"
+          class="mobile-lang-toggle"
+          (click)="toggleLanguage()"
+          [attr.lang]="otherLang"
+          [attr.aria-label]="'header.language' | translate"
+          [attr.title]="'header.language' | translate">
+          <img [src]="otherLangFlag" width="18" height="13" alt="" aria-hidden="true" />
+          <span aria-hidden="true">{{ 'header.languageShort' | translate }}</span>
         </button>
-        <span class="mobile-cta-bubble" aria-hidden="true">
-          {{ 'header.ctaBubble' | translate }}
-        </span>
       </div>
 
       <!-- Hamburger Menu Button (mobile/tablet only) -->
@@ -151,15 +163,6 @@
 
       <button mat-raised-button color="primary" class="mobile-cta-button" (click)="openAppointment()">
         {{ 'header.cta' | translate }}
-      </button>
-
-      <button mat-button class="mobile-language-toggle" (click)="toggleLanguage()">
-        <div style="display: flex; align-items: center; gap: 6px;">
-          <img
-            [src]="currentLang === 'en' ? '/assets/images/flag/icon-flag-es.svg' : '/assets/images/flag/icon-flag-en.svg'"
-            width="22" height="16" alt="flag" style="border-radius: 2px;" />
-          {{ 'header.language' | translate }}
-        </div>
       </button>
     </div>
   </header>

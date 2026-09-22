@@ -17,7 +17,8 @@
     },
     "cta": "HAGA UNA CITA",
     "ctaBubble": "Haga su cita aquí",
-    "language": "ENGLISH"
+    "language": "ENGLISH",
+    "languageShort": "EN"
   },
   "hero": {
     "eyebrow": "Adonis Maiquez, MD",
@@ -494,7 +495,9 @@
       "v63": "El Dr. Adonis te da la bienvenida a su nueva oficina",
       "v64": "Libro 'Medicina Moderna para los Tiempos Modernos' del Dr. Adonis Maiquez",
       "v65": "GLP-1 natural vs. medicamentos GLP-1: ¿por qué duran más en tu cuerpo?",
-      "v66": "¿Por qué los medicamentos GLP-1 duran más que el GLP-1 natural?"
+      "v66": "¿Por qué los medicamentos GLP-1 duran más que el GLP-1 natural?",
+      "v67": "Semaglutida vs. Tirzepatida: ¿Todos los GLP-1 son iguales?",
+      "v68": "Semaglutida vs. Tirzepatida: ¿Son iguales todos los medicamentos GLP-1?"
     },
     "protocolsTitle": "Protocolos Especializados",
     "protocolsSubtitle": "Programas premium respaldados por la ciencia, diseñados para abordar la causa raíz — desde el estrés hasta la salud intestinal.",

@@ -56,6 +56,15 @@ export class PublicLayoutComponent implements OnDestroy {
         this.menuOpen = !this.menuOpen;
     }
 
+    /** Language the toggle switches TO — its flag is what the button shows. */
+    get otherLang(): 'en' | 'es' {
+        return this.currentLang === 'en' ? 'es' : 'en';
+    }
+
+    get otherLangFlag(): string {
+        return `/assets/images/flag/icon-flag-${this.otherLang}.svg`;
+    }
+
     toggleLanguage() {
         this.currentLang = this.currentLang === 'en' ? 'es' : 'en';
         this.translate.use(this.currentLang);
