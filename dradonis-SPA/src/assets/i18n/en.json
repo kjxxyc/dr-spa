@@ -571,6 +571,41 @@
         "title": "Telemedicine (Video Consultation)",
         "summary": "Convenient and private medical consultations with Dr. Adonis from the comfort of your home.",
         "btn": "Make a consultation"
+      },
+      "enclomiphene": {
+        "title": "Enclomiphene",
+        "summary": "Restore natural testosterone production and vitality while fully preserving fertility.",
+        "btn": "More information"
+      },
+      "gutHealth": {
+        "title": "Gut Health",
+        "summary": "Root-cause digestive and microbiome restoration for lasting relief and whole-body wellness.",
+        "btn": "More information"
+      },
+      "brainHealth": {
+        "title": "Brain Health",
+        "summary": "Comprehensive evaluation and therapy for cognitive clarity, memory, and sustained focus.",
+        "btn": "More information"
+      },
+      "autoimmune": {
+        "title": "Autoimmune",
+        "summary": "Root-cause investigation and functional care to calm inflammatory and immune overactivity.",
+        "btn": "More information"
+      },
+      "hashimotos": {
+        "title": "Hashimoto's",
+        "summary": "Specialized immune and endocrine therapy to target the root triggers of thyroiditis.",
+        "btn": "More information"
+      },
+      "thyroid": {
+        "title": "Thyroid",
+        "summary": "Complete thyroid panel diagnostics and personalized hormonal optimization protocols.",
+        "btn": "More information"
+      },
+      "fibromyalgia": {
+        "title": "Fibromyalgia",
+        "summary": "Multifactorial investigation and therapy for chronic widespread pain, fatigue, and unrefreshing sleep.",
+        "btn": "More information"
       }
     }
   },

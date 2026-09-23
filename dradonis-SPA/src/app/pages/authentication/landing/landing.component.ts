@@ -32,15 +32,22 @@ export class LandingComponent implements OnInit, OnDestroy {
     // `link` overrides the default /services destination (telemedicine chips
     // deep-link to the dedicated /telemedicine page for internal SEO linking).
     services = [
-        { id: 'functional',   icon: 'health_and_safety',   color: '#6B9080', link: '/services' },     // sage green
-        { id: 'hormone',      icon: 'science',             color: '#8B7EA8', link: '/services' },     // muted lavender
-        { id: 'testosterone', icon: 'fitness_center',      color: '#D4A574', link: '/services' },     // warm tan
-        { id: 'menopause',    icon: 'spa',                 color: '#C490A0', link: '/services' },     // dusty rose
-        { id: 'peptides',     icon: 'biotech',             color: '#7FA8B0', link: '/services' },     // muted teal
-        { id: 'weight',       icon: 'monitor_weight',      color: '#9CAF7E', link: '/services' },     // olive
-        { id: 'glp1',         icon: 'medical_information', color: '#7B9BC1', link: '/services' },     // powder blue
-        { id: 'ed',           icon: 'favorite',            color: '#C28080', link: '/services' },     // muted coral
-        { id: 'video',        icon: 'videocam',            color: '#9B8AB0', link: '/telemedicine' }, // mauve
+        { id: 'functional',   icon: 'health_and_safety',   color: '#6B9080', link: '/functional-medicine' },               // sage green
+        { id: 'hormone',      icon: 'science',             color: '#8B7EA8', link: '/hormone-replacement-therapy' },       // muted lavender
+        { id: 'testosterone', icon: 'fitness_center',      color: '#D4A574', link: '/testosterone-replacement-therapy' },  // warm tan
+        { id: 'gutHealth',    icon: 'restaurant',          color: '#6B9E78', link: '/functional-medicine/gut-health' },    // moss green
+        { id: 'menopause',    icon: 'spa',                 color: '#C490A0', link: '/hormone-replacement-therapy' },       // dusty rose
+        { id: 'peptides',     icon: 'biotech',             color: '#7FA8B0', link: '/peptide-therapy' },                    // muted teal
+        { id: 'enclomiphene', icon: 'man',                 color: '#C9976D', link: '/enclomiphene' },                       // warm copper
+        { id: 'weight',       icon: 'monitor_weight',      color: '#9CAF7E', link: '/medical-weight-loss' },                // olive
+        { id: 'brainHealth',  icon: 'school',              color: '#5C82A6', link: '/functional-medicine/brain-health' },  // slate blue
+        { id: 'glp1',         icon: 'medical_information', color: '#7B9BC1', link: '/medical-weight-loss' },                // powder blue
+        { id: 'autoimmune',   icon: 'block',               color: '#A66E85', link: '/functional-medicine/autoimmune' },    // dusty plum
+        { id: 'ed',           icon: 'favorite',            color: '#C28080', link: '/erectile-dysfunction' },                // muted coral
+        { id: 'thyroid',      icon: 'science',             color: '#5B9B9B', link: '/functional-medicine/thyroid' },       // cadet blue
+        { id: 'hashimotos',   icon: 'medical_services',    color: '#B5836C', link: '/functional-medicine/hashimotos' },     // warm terracotta
+        { id: 'fibromyalgia', icon: 'self_improvement',   color: '#9478A6', link: '/functional-medicine/fibromyalgia' },   // soft amethyst
+        { id: 'video',        icon: 'videocam',            color: '#9B8AB0', link: '/telemedicine' },                       // mauve
     ];
 
     // Second row uses the same list reversed for a brick-stacked offset effect
