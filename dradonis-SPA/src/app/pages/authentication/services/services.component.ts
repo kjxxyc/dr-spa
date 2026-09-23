@@ -15,6 +15,7 @@ interface ServiceItem {
     gradient: string;   // CSS gradient for the icon box
     featured?: boolean; // Highlights the card with a "FEATURED" badge
     offer?: string | number; // Highlights the card with an offer badge
+    link?: string;      // Deep link to dedicated condition page
 }
 
 @Component({
@@ -44,22 +45,27 @@ export class ServicesComponent implements OnInit, OnDestroy {
     // NOTE: icons are restricted to the project's material-icons-subset.woff2
     // Adding new icons requires regenerating the subset font.
     services: ServiceItem[] = [
-        { id: 'telemedicine',        icon: 'verified',           gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', featured: true },
+        { id: 'telemedicine',        icon: 'verified',           gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', featured: true, link: '/telemedicine' },
         { id: 'brainProtocol',       icon: 'workspace_premium',  gradient: 'linear-gradient(135deg, #6366F1 0%, #4338CA 100%)', featured: true },
-        { id: 'brainHealth',         icon: 'school',             gradient: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', featured: true },
-        { id: 'weightLoss',          icon: 'monitor_weight',     gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)' },
+        { id: 'brainHealth',         icon: 'school',             gradient: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', featured: true, link: '/functional-medicine/brain-health' },
+        { id: 'weightLoss',          icon: 'monitor_weight',     gradient: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)', link: '/medical-weight-loss' },
+        { id: 'peptideTherapy',      icon: 'biotech',            gradient: 'linear-gradient(135deg, #0D9488 0%, #115E59 100%)', featured: true, link: '/peptide-therapy' },
         { id: 'painManagement',      icon: 'medical_services',   gradient: 'linear-gradient(135deg, #EF4444 0%, #B91C1C 100%)' },
-        { id: 'functionalMedicine',  icon: 'science',            gradient: 'linear-gradient(135deg, #14B8A6 0%, #0F766E 100%)' },
+        { id: 'functionalMedicine',  icon: 'science',            gradient: 'linear-gradient(135deg, #14B8A6 0%, #0F766E 100%)', link: '/functional-medicine' },
         { id: 'executivePhysical',   icon: 'verified',           gradient: 'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)' },
-        { id: 'hormoneTherapy',      icon: 'biotech',            gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)' },
+        { id: 'hormoneTherapy',      icon: 'biotech',            gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)', link: '/hormone-replacement-therapy' },
+        { id: 'trt',                 icon: 'fitness_center',      gradient: 'linear-gradient(135deg, #D97706 0%, #B45309 100%)', link: '/testosterone-replacement-therapy' },
+        { id: 'enclomiphene',        icon: 'man',                 gradient: 'linear-gradient(135deg, #EA580C 0%, #C2410C 100%)', link: '/enclomiphene' },
         { id: 'menopauseAndropause', icon: 'spa',                gradient: 'linear-gradient(135deg, #EC4899 0%, #BE185D 100%)' },
         { id: 'agingBiomarkers',     icon: 'calculate',          gradient: 'linear-gradient(135deg, #D97706 0%, #92400E 100%)' },
-        { id: 'autoimmune',          icon: 'block',              gradient: 'linear-gradient(135deg, #4F46E5 0%, #312E81 100%)' },
-        { id: 'fibromyalgia',        icon: 'self_improvement',   gradient: 'linear-gradient(135deg, #A855F7 0%, #7E22CE 100%)' },
+        { id: 'autoimmune',          icon: 'block',              gradient: 'linear-gradient(135deg, #4F46E5 0%, #312E81 100%)', link: '/functional-medicine/autoimmune' },
+        { id: 'hashimotos',          icon: 'medical_services',    gradient: 'linear-gradient(135deg, #C026D3 0%, #9333EA 100%)', link: '/functional-medicine/hashimotos' },
+        { id: 'thyroid',             icon: 'science',             gradient: 'linear-gradient(135deg, #0284C7 0%, #0369A1 100%)', link: '/functional-medicine/thyroid' },
+        { id: 'fibromyalgia',        icon: 'self_improvement',   gradient: 'linear-gradient(135deg, #A855F7 0%, #7E22CE 100%)', link: '/functional-medicine/fibromyalgia' },
         { id: 'neurotransmitters',   icon: 'swap_horiz',         gradient: 'linear-gradient(135deg, #D946EF 0%, #A21CAF 100%)' },
-        { id: 'intestinalHealth',    icon: 'restaurant',         gradient: 'linear-gradient(135deg, #84CC16 0%, #4D7C0F 100%)' },
+        { id: 'intestinalHealth',    icon: 'restaurant',         gradient: 'linear-gradient(135deg, #84CC16 0%, #4D7C0F 100%)', link: '/functional-medicine/gut-health' },
         { id: 'telomeres',           icon: 'auto_stories',       gradient: 'linear-gradient(135deg, #0EA5E9 0%, #0369A1 100%)' },
-        { id: 'sexualHealth',        icon: 'favorite',           gradient: 'linear-gradient(135deg, #F43F5E 0%, #BE123C 100%)' },
+        { id: 'sexualHealth',        icon: 'favorite',           gradient: 'linear-gradient(135deg, #F43F5E 0%, #BE123C 100%)', link: '/erectile-dysfunction' },
         { id: 'regenerativeExosomes',icon: 'biotech',            gradient: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', featured: true }
     ];
 

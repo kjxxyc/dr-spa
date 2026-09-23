@@ -502,6 +502,23 @@ $breakpoint-xs: 480px;
 // ===========================
 // SERVICE BUTTONS
 // ===========================
+.service-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+
+    @media (max-width: $breakpoint-xs) {
+        flex-direction: column;
+        width: 100%;
+
+        .service-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
 .service-btn {
     display: inline-flex;
     align-items: center;
@@ -551,7 +568,6 @@ $breakpoint-xs: 480px;
         background: linear-gradient(135deg, #10B981 0%, #059669 100%);
         color: $white;
         box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
-        margin-right: 0.75rem;
 
         &:hover {
             transform: translateY(-2px);

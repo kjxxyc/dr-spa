@@ -339,6 +339,7 @@
     "heroSubtitle": "Soluciones de salud integrales y personalizadas diseñadas para tratar la causa raíz — no solo los síntomas.",
     "btnAppointment": "HAGA UNA CITA",
     "btnTelemedicine": "VEA CÓMO FUNCIONA LA TELECONSULTA",
+    "btnLearnMore": "MÁS INFORMACIÓN",
     "btnSeeMore": "Ver más",
     "btnSeeLess": "Ver menos",
     "badgeFeatured": "Destacado",
@@ -412,6 +413,26 @@
       "regenerativeExosomes": {
         "title": "Exosomas de celulas madres",
         "description": "<p><strong>El futuro de la curación sin cirugía</strong></p><p>La medicina regenerativa ha dado un salto cuántico en 2026. Ya no se trata solo de aliviar síntomas, sino de dar instrucciones precisas a nuestras células para que se reparen a sí mismas. En este escenario, los exosomas se han convertido en los protagonistas.</p><p><strong>¿Qué son y cómo funcionan?</strong><br>Los exosomas son pequeñas vesículas que actúan como \"mensajeros\" inteligentes. Transportan proteínas, lípidos y material genético de una célula a otra. En la medicina regenerativa, se estudian y utilizan de forma investigacional para:</p><ul><li><strong>Reducir la inflamación sistémica:</strong> Envían señales que calman la respuesta inflamatoria exagerada.</li><li><strong>Acelerar la recuperación de tejidos:</strong> Ideales para pacientes con lesiones articulares o desgaste muscular.</li><li><strong>Rejuvenecimiento biológico:</strong> Activan las vías de regeneración que se vuelven lentas con la edad.</li></ul><p><strong>El papel de la suplementación en la regeneración</strong><br>Para que las terapias regenerativas funcionen, el cuerpo debe tener la \"materia prima\" necesaria. Por eso, en este proceso es vital:</p><ul><li><strong>Péptidos Bioactivos:</strong> Actúan como bloques de construcción para nuevos tejidos.</li><li><strong>Inductores de Colágeno y Elastina:</strong> Fundamentales para mantener la arquitectura de la matriz extracelular.</li><li><strong>Antioxidantes de Red:</strong> Como el glutatión, que protegen a las células nuevas del estrés oxidativo durante su formación.</li></ul><p><strong>Estatus regulatorio:</strong> Los productos de exosomas no están aprobados por la FDA para tratar, curar o prevenir ninguna enfermedad, y su uso clínico sigue siendo investigacional. El médico tratante determina, tras una evaluación médica, si alguna opción regenerativa es apropiada para el paciente.</p>"
+      },
+      "peptideTherapy": {
+        "title": "Protocolos de Terapia de Péptidos",
+        "description": "Optimización celular guiada por médicos, secretagogos de GH, regeneración de tejidos y péptidos de longevidad adaptados a su biología.\n\nLos péptidos son cadenas de aminoácidos que funcionan como moléculas de señalización celular en todo el cuerpo. Nuestros protocolos combinan análisis de laboratorio diagnósticos completos y formulaciones conformes a las regulaciones para apoyar la recuperación de lesiones, la inmunidad, la vitalidad y el rendimiento cognitivo.\n\nCada tratamiento es personalizado bajo estricta supervisión médica con seguimiento continuo de resultados."
+      },
+      "trt": {
+        "title": "Terapia de Reemplazo de Testosterona (TRT)",
+        "description": "Evaluación hormonal masculina completa y protocolos de optimización de testosterona supervisados por médicos para tratar la fatiga, pérdida de masa muscular, disminución del deseo sexual y falta de concentración.\n\nEn lugar de basarse en un único número de testosterona total, el Dr. Adonis analiza paneles de biomarcadores completos que incluyen testosterona libre, SHBG, estradiol y hematocrito. Diseñamos protocolos personalizados con dosificación de precisión y seguimiento constante para restaurar su vitalidad y bienestar a largo plazo."
+      },
+      "enclomiphene": {
+        "title": "Terapia con Enclomifeno",
+        "description": "Un protocolo oral avanzado con modulador selectivo de receptores de estrógeno (SERM) que estimula la producción natural de testosterona del organismo mientras preserva intacta la fertilidad y la función testicular.\n\nAl bloquear selectivamente los receptores de estrógeno en el hipotálamo, el enclomifeno estimula la liberación de LH y FSH, indicando a los testículos producir testosterona endógena sin suprimir su eje natural. Incluye pruebas hormonales completas y seguimiento médico individualizado."
+      },
+      "thyroid": {
+        "title": "Optimización Tiroidea Integral",
+        "description": "Evaluaciones tiroideas funcionales que van mucho más allá de la prueba tradicional de TSH para descubrir el origen del aumento de peso persistente, fatiga crónica, lentitud mental y sensibilidad al frío.\n\nEl Dr. Adonis analiza perfiles tiroideos completos: T3 libre, T4 libre, T3 reversa y anticuerpos tiroideos (TPO y TgAb), junto con factores nutricionales e inflamatorios. El tratamiento se enfoca en la conversión celular y el soporte metabólico personalizado."
+      },
+      "hashimotos": {
+        "title": "Tiroiditis Autoinmune de Hashimoto",
+        "description": "Atención especializada de medicina funcional e inmunomodulación para la tiroiditis de Hashimoto, la causa principal del hipotiroidismo.\n\nDado que es el propio sistema inmunitario el que agrede la glándula tiroides, el tratamiento adecuado requiere modular la respuesta inmunitaria, sanar la permeabilidad intestinal, corregir deficiencias nutricionales y eliminar factores desencadenantes. El Dr. Adonis diseña protocolos dirigidos para calmar la autoinmunidad y proteger su tejido tiroideo."
       }
     },
     "bottomCta": {

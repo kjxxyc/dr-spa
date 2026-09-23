@@ -339,6 +339,7 @@
     "heroSubtitle": "Comprehensive, personalized healthcare solutions designed to treat the root cause — not just the symptoms.",
     "btnAppointment": "MAKE AN APPOINTMENT",
     "btnTelemedicine": "SEE HOW TELEMEDICINE WORKS",
+    "btnLearnMore": "LEARN MORE",
     "btnSeeMore": "See more",
     "btnSeeLess": "See less",
     "badgeFeatured": "Featured",
@@ -412,6 +413,26 @@
       "regenerativeExosomes": {
         "title": "Exosomes from stem cells",
         "description": "<p><strong>The Future of Healing Without Surgery</strong></p><p>Regenerative medicine has taken a quantum leap in 2026. It's no longer just about alleviating symptoms, but about giving precise instructions to our cells so they can repair themselves. In this scenario, exosomes have become key players.</p><p><strong>What are they and how do they work?</strong><br>Exosomes are small vesicles that act as intelligent \"messengers.\" They transport proteins, lipids, and genetic material from one cell to another. In regenerative medicine, they are being studied and used investigationally to:</p><ul><li><strong>Reduce systemic inflammation:</strong> They send signals that calm the exaggerated inflammatory response.</li><li><strong>Accelerate tissue recovery:</strong> Ideal for patients with joint injuries or muscle atrophy.</li><li><strong>Biological rejuvenation:</strong> They activate regeneration pathways that slow down with age.</li></ul><p><strong>The Role of Supplementation in Regeneration</strong><br>For regenerative therapies to work, the body must have the necessary \"raw materials.\" Therefore, the following are vital in this process:</p><ul><li><strong>Bioactive Peptides:</strong> These act as building blocks for new tissues.</li><li><strong>Collagen and Elastin Inducers:</strong> These are essential for maintaining the architecture of the extracellular matrix.</li><li><strong>Network Antioxidants:</strong> Such as glutathione, which protect new cells from oxidative stress during their formation.</li></ul><p><strong>Regulatory status:</strong> Exosome products are not FDA-approved to treat, cure, or prevent any disease, and their clinical use remains investigational. Whether any regenerative option is appropriate for a patient is determined by the treating clinician following medical evaluation.</p>"
+      },
+      "peptideTherapy": {
+        "title": "Peptide Therapy Protocols",
+        "description": "Physician-supervised cellular optimization, GH secretagogues, tissue repair, and longevity peptides tailored to your biological needs.\n\nPeptides are short chains of amino acids that serve as vital signaling molecules throughout your body. Our protocols utilize comprehensive diagnostic laboratory panels and FDA-compliant clinical sourcing to deliver targeted therapies for injury recovery, immune support, cognitive performance, and vitality.\n\nEvery protocol is individualized under medical supervision, with continuous monitoring and outcome tracking."
+      },
+      "trt": {
+        "title": "Testosterone Replacement Therapy (TRT)",
+        "description": "Comprehensive male hormonal evaluation and physician-supervised testosterone optimization protocols designed to address the root causes of fatigue, loss of muscle mass, decreased libido, and brain fog.\n\nRather than relying on a single total testosterone number, Dr. Adonis evaluates full biomarker panels including Free Testosterone, SHBG, Estradiol, and Hematocrit. We create individualized, precision-dosed protocols with regular follow-up and monitoring to restore peak vitality and long-term health."
+      },
+      "enclomiphene": {
+        "title": "Enclomiphene Therapy",
+        "description": "An advanced oral selective estrogen receptor modulator (SERM) protocol that stimulates your body's natural testosterone production while fully preserving testicular function and fertility.\n\nBy targeting estrogen receptors at the hypothalamus, enclomiphene prompts the pituitary to increase LH and FSH output, signaling your testes to produce endogenous testosterone naturally without exogenous suppression. Comprehensive hormone testing and ongoing monitoring ensure optimal physiological balance."
+      },
+      "thyroid": {
+        "title": "Comprehensive Thyroid Optimization",
+        "description": "In-depth functional thyroid evaluations that look far beyond standard TSH tests to uncover root causes of stubborn weight gain, chronic fatigue, brain fog, and temperature dysregulation.\n\nDr. Adonis tests complete thyroid panels—including Free T3, Free T4, Reverse T3, and thyroid antibodies (TPO and TgAb)—alongside gut health and nutritional cofactors. Treatment focuses on cellular conversion and customized endocrine support to restore metabolic vitality."
+      },
+      "hashimotos": {
+        "title": "Hashimoto’s Autoimmune Thyroiditis",
+        "description": "Targeted functional medicine and immune-modulating care for Hashimoto’s thyroiditis, the leading cause of hypothyroidism in the United States.\n\nBecause the immune system is attacking the thyroid gland, optimal care requires addressing the immune dysfunction, intestinal permeability (leaky gut), nutrient deficiencies, and environmental triggers—not just prescribing standard synthetic hormone. Dr. Adonis designs comprehensive protocols to calm autoimmunity and protect thyroid tissue."
       }
     },
     "bottomCta": {
