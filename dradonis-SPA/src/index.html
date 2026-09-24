@@ -65,6 +65,13 @@
   <link rel="preload" href="/assets/fonts/material-icons/material-icons-subset.woff2" as="font"
     type="font/woff2" crossorigin>
 
+  <!-- The GHL appointment form (iframe on /contact, /makeanappointment and the
+       appointment dialog) and its asset CDN: resolve DNS early. The form's
+       embed script is loaded on demand by those components, not here, and
+       AppointmentPrefetchService pre-warms the form when a CTA is hovered. -->
+  <link rel="dns-prefetch" href="https://brand.dradonis.com">
+  <link rel="dns-prefetch" href="https://stcdn.leadconnectorhq.com">
+
   <!-- NOTE: no <link rel="preload"> for /assets/i18n/*.json — the translate
        loader requests them with a ?v=<build> cache-buster, so a static preload
        URL would never match and would only double-download the file. -->
@@ -112,7 +119,6 @@
     setTimeout(loadPixel,10000);
   })();
   </script>
-  <script src="https://brand.dradonis.com/js/form_embed.js" defer></script>
   <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a9af20e39356933b84751b9" defer></script>
 </body>
 

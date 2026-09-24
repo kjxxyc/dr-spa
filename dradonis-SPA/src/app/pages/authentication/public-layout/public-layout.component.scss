@@ -375,7 +375,7 @@ $breakpoint-xs: 480px;
         }
 
         // Inline SVG hamburger / close (Material Icons font subset omits
-        // `menu` and `close` glyphs, so we render them as SVG).
+        // the `menu` glyph, so both states are rendered as SVG).
         .menu-svg {
             width: 26px;
             height: 26px;

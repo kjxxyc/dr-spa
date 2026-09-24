@@ -4,14 +4,27 @@
       <mat-icon>event</mat-icon>
       <span>{{ 'appointmentModal.title' | translate }}</span>
     </h2>
-    <button type="button" class="close-dialog-btn" (click)="close()" aria-label="Close modal">
-      <mat-icon>close</mat-icon>
+    <!-- Inline SVG close (same pattern as the header's menu button): visible
+         immediately, without waiting for the icon font to load. -->
+    <button type="button" class="close-dialog-btn" (click)="close()"
+      [attr.aria-label]="'appointmentModal.close' | translate"
+      [attr.title]="'appointmentModal.close' | translate">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
     </button>
   </div>
 
   <div class="iframe-container">
+    <!-- Shown until the GHL form reports it is rendered (see onFormMessage). -->
+    <div class="form-loading" *ngIf="!formReady" role="status" aria-live="polite">
+      <span class="form-loading__spinner" aria-hidden="true"></span>
+      <span>{{ 'appointmentModal.loading' | translate }}</span>
+    </div>
     <iframe
+      #formFrame
       [src]="formUrl"
+      (load)="onFrameLoad()"
       style="width:100%;height:100%;min-height:680px;border:none;border-radius:4px"
       id="inline-ISdbjfvFOOPm2YQArfiL"
       data-layout="{'id':'INLINE'}"

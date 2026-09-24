@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../../shared/seo/seo.service';
+import { GHL_EMBED_SCRIPT_ID, GHL_EMBED_SCRIPT_URL, GHL_FORM_URL } from '../../../shared/appointment-dialog/ghl-form.constants';
 
 @Component({
   selector: 'app-contact',
@@ -25,7 +26,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   private langSub?: Subscription;
 
   formUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-    'https://brand.dradonis.com/widget/form/ISdbjfvFOOPm2YQArfiL'
+    GHL_FORM_URL
   );
 
   ngOnInit(): void {
@@ -36,11 +37,11 @@ export class ContactComponent implements OnInit, OnDestroy {
 
     if (isPlatformBrowser(this.platformId)) {
       if (typeof window !== 'undefined') {
-        const existingScript = document.getElementById('ghl-form-embed-script');
+        const existingScript = document.getElementById(GHL_EMBED_SCRIPT_ID);
         if (!existingScript) {
           const script = document.createElement('script');
-          script.id = 'ghl-form-embed-script';
-          script.src = 'https://brand.dradonis.com/js/form_embed.js';
+          script.id = GHL_EMBED_SCRIPT_ID;
+          script.src = GHL_EMBED_SCRIPT_URL;
           script.async = true;
           document.body.appendChild(script);
         }

@@ -1,42 +1,65 @@
+// Layout tuned to reach the (tall, ~1,400 px) GHL form with as little
+// scrolling as possible: compact hero, form first on mobile, sticky info
+// card on desktop. The form itself is rendered by GHL inside the iframe.
 .contact-page {
   width: 100%;
   min-height: 80vh;
   background-color: #f8fafc;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .contact-header-section {
   background: linear-gradient(135deg, #112240 0%, #1e3a8a 100%);
   color: #ffffff;
-  padding: 48px 16px;
+  padding: 28px 16px 46px;
   text-align: center;
 
+  @media (max-width: 900px) {
+    // Top padding clears the header's "Make an appointment here!" bubble.
+    padding: 36px 16px 24px;
+  }
+
   .contact-main-title {
-    margin: 0 0 12px;
-    font-size: 2.25rem;
+    margin: 0 0 8px;
+    font-size: 1.75rem;
     font-weight: 800;
     font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 
     mat-icon {
-      font-size: 36px;
-      width: 36px;
-      height: 36px;
+      font-size: 30px;
+      width: 30px;
+      height: 30px;
       color: #ea580c;
+    }
+
+    @media (max-width: 900px) {
+      font-size: 1.4rem;
+      gap: 8px;
+
+      mat-icon {
+        font-size: 26px;
+        width: 26px;
+        height: 26px;
+      }
     }
   }
 
   .contact-main-subtitle {
     margin: 0 auto;
-    max-width: 680px;
-    font-size: 1.05rem;
+    max-width: 640px;
+    font-size: 0.95rem;
     color: #cbd5e1;
-    line-height: 1.6;
+    line-height: 1.5;
+
+    @media (max-width: 900px) {
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -49,34 +72,53 @@
 .contact-content-grid {
   margin-top: -30px;
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 24px;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
   align-items: start;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    margin-top: 24px;
+    margin-top: 12px;
+    gap: 16px;
   }
 }
 
 .contact-info-card {
   background: #ffffff;
   border-radius: 12px;
-  padding: 24px;
+  padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid #e2e8f0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
+  // Desktop: stays in view while the long form scrolls (header is ~70 px).
+  position: sticky;
+  top: 86px;
+
+  @media (max-width: 900px) {
+    // Mobile: the form comes first; the info card follows as a compact grid.
+    position: static;
+    order: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 16px;
+    padding: 16px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
   .info-item {
     display: flex;
     align-items: flex-start;
-    gap: 14px;
+    gap: 12px;
 
     .info-icon {
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
       background: #eff6ff;
       color: #005eb8;
@@ -94,7 +136,7 @@
 
     .info-text {
       h3 {
-        margin: 0 0 4px;
+        margin: 0 0 2px;
         font-size: 0.95rem;
         font-weight: 700;
         color: #1e293b;
@@ -124,10 +166,15 @@
 .contact-form-wrapper {
   background: #ffffff;
   border-radius: 12px;
-  padding: 20px;
+  padding: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid #e2e8f0;
   min-height: 700px;
+
+  @media (max-width: 900px) {
+    order: 1;
+    padding: 8px;
+  }
 
   iframe {
     display: block;

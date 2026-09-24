@@ -632,6 +632,8 @@
   },
   "appointmentModal": {
     "title": "MAKE AN APPOINTMENT",
+    "close": "Close",
+    "loading": "Loading the form…",
     "subtitle": "To schedule an appointment, call our office at <strong style='color: #ea580c;'>305-290-4691</strong>. You can also fill the form below, and we'll contact you to book your appointment.",
     "appointmentType": "Appointment Type",
     "inPerson": "In-Person",

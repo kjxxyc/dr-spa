@@ -12,7 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  gap: 12px;
+  padding: 14px 16px 14px 24px;
   border-bottom: 1px solid #e2e8f0;
   background-color: #f8fafc;
 
@@ -21,7 +22,8 @@
     font-size: 1.15rem;
     font-weight: 700;
     color: #112240;
-    font-family: 'Montserrat', sans-serif;
+    // Site font (inherited from body); Montserrat is not loaded in the SPA.
+    font-family: inherit;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -32,32 +34,44 @@
     }
   }
 
+  // Always-visible round button so the close affordance never depends on
+  // hover — the previous version rendered as an empty circle.
   .close-dialog-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 6px;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #64748b;
-    transition: background-color 0.2s, color 0.2s;
+    color: #334155;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
 
     &:hover {
       background-color: #e2e8f0;
+      border-color: #94a3b8;
       color: #0f172a;
     }
 
-    mat-icon {
-      font-size: 22px;
-      width: 22px;
-      height: 22px;
+    &:focus-visible {
+      outline: 2px solid #4d7a1f;
+      outline-offset: 2px;
     }
   }
 }
 
 .iframe-container {
+  position: relative;
   flex: 1;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -70,5 +84,42 @@
     width: 100%;
     min-height: 650px;
     border: none;
+  }
+}
+
+// Covers the iframe area while the GHL form downloads and boots.
+.form-loading {
+  position: absolute;
+  inset: 8px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: #ffffff;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  &__spinner {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 3px solid #e2e8f0;
+    border-top-color: #4d7a1f;
+    animation: appointment-form-spin 0.8s linear infinite;
+  }
+}
+
+@keyframes appointment-form-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-loading__spinner {
+    animation-duration: 2s;
   }
 }

@@ -33,8 +33,12 @@
 }
 
 /* ========================================================================== */
-/* Self-hosted Material Icons (subset: only 40 icons used)                     */
-/* From 126 KB to 3.2 KB. font-display: block prevents icon text flash         */
+/* Self-hosted Material Icons (subset: only the 47 icons the app uses)         */
+/* From 126 KB to ~3.8 KB. font-display: block prevents icon text flash        */
+/* Adding an icon = regenerate the subset (ligatures live in the `rlig`        */
+/* feature): pyftsubset MaterialIcons-Regular.ttf --unicodes=<icon codepoints> */
+/*   --text=abcdefghijklmnopqrstuvwxyz_ --layout-features=rlig                 */
+/*   --no-layout-closure --flavor=woff2 --no-hinting --desubroutinize          */
 /* ========================================================================== */
 @font-face {
     font-family: 'Material Icons';

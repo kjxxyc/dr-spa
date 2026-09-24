@@ -8,6 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { SiteFooterComponent } from '../../../shared/site-footer/site-footer.component';
+import { AppointmentPrefetchService } from '../../../core/services/appointment-prefetch.service';
 
 @Component({
     selector: 'app-public-layout',
@@ -30,7 +31,11 @@ export class PublicLayoutComponent implements OnDestroy {
     menuOpen: boolean = false;
     private langSub: Subscription;
 
-    constructor(private translate: TranslateService, private dialog: MatDialog) {
+    constructor(
+        private translate: TranslateService,
+        private dialog: MatDialog,
+        private appointmentPrefetch: AppointmentPrefetchService,
+    ) {
         this.translate.setDefaultLang('en');
         this.currentLang = this.translate.currentLang || 'en';
         this.translate.use(this.currentLang);
@@ -52,8 +57,19 @@ export class PublicLayoutComponent implements OnDestroy {
         });
     }
 
+    /**
+     * Hover/focus on an appointment CTA, or opening the mobile menu, is a
+     * strong hint the form is next: pre-warm it so the dialog opens ready.
+     */
+    warmAppointment(): void {
+        this.appointmentPrefetch.warm();
+    }
+
     toggleMenu() {
         this.menuOpen = !this.menuOpen;
+        if (this.menuOpen) {
+            this.warmAppointment();
+        }
     }
 
     /** Language the toggle switches TO — its flag is what the button shows. */

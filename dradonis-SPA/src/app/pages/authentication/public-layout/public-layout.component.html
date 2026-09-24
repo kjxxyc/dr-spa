@@ -59,14 +59,14 @@
           <mat-icon>auto_stories</mat-icon>
           {{ 'header.nav.articles' | translate }}
         </a>
-        <a routerLink="/contact" class="nav-link" routerLinkActive="active-link">
+        <a routerLink="/contact" class="nav-link" routerLinkActive="active-link" (pointerenter)="warmAppointment()" (focus)="warmAppointment()">
           <mat-icon>mail_outline</mat-icon>
           {{ 'header.nav.contact' | translate }}
         </a>
       </nav>
 
       <!-- CTA Button (desktop only) -->
-      <button mat-raised-button color="primary" class="cta-button desktop-only" (click)="openAppointment()">
+      <button mat-raised-button color="primary" class="cta-button desktop-only" (click)="openAppointment()" (pointerenter)="warmAppointment()" (focus)="warmAppointment()">
         {{ 'header.cta' | translate }}
       </button>
 
@@ -86,6 +86,8 @@
             mat-icon-button
             class="mobile-cta-header"
             (click)="openAppointment()"
+            (pointerenter)="warmAppointment()"
+            (focus)="warmAppointment()"
             [attr.aria-label]="'header.cta' | translate"
             [attr.title]="'header.cta' | translate">
             <mat-icon>event</mat-icon>
@@ -108,8 +110,8 @@
       </div>
 
       <!-- Hamburger Menu Button (mobile/tablet only) -->
-      <!-- Inline SVGs because `menu` and `close` glyphs are not included in
-           the subsetted Material Icons font shipped at /assets/fonts/. -->
+      <!-- Inline SVGs because the `menu` glyph is not included in the
+           subsetted Material Icons font shipped at /assets/fonts/. -->
       <button mat-icon-button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
         <svg *ngIf="!menuOpen" class="menu-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -155,13 +157,13 @@
           <mat-icon>auto_stories</mat-icon>
           {{ 'header.nav.articles' | translate }}
         </a>
-        <a routerLink="/contact" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()">
+        <a routerLink="/contact" class="mobile-nav-link" routerLinkActive="active-link" (click)="toggleMenu()" (pointerenter)="warmAppointment()" (focus)="warmAppointment()">
           <mat-icon>mail_outline</mat-icon>
           {{ 'header.nav.contact' | translate }}
         </a>
       </nav>
 
-      <button mat-raised-button color="primary" class="mobile-cta-button" (click)="openAppointment()">
+      <button mat-raised-button color="primary" class="mobile-cta-button" (click)="openAppointment()" (pointerenter)="warmAppointment()" (focus)="warmAppointment()">
         {{ 'header.cta' | translate }}
       </button>
     </div>

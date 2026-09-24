@@ -632,6 +632,8 @@
   },
   "appointmentModal": {
     "title": "HAGA UNA CITA",
+    "close": "Cerrar",
+    "loading": "Cargando el formulario…",
     "subtitle": "Para programar una cita, llame a nuestra oficina al <strong style='color: #ea580c;'>305-290-4691</strong>. También puede completar el formulario a continuación y lo contactaremos para reservar su cita.",
     "appointmentType": "Tipo de Cita",
     "inPerson": "Presencial",

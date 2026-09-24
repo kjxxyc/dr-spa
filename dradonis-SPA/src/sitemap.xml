@@ -1930,49 +1930,4 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/salud-hormonal-es-solo-un-tema-de-mujeres"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/hormonal-health-is-it-only-a-womens-issue"/>
   </url>
-  <url>
-    <loc>https://dradonis.com/privacy-policy</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/privacy-policy"/>
-  </url>
-  <url>
-    <loc>https://dradonis.com/notice-of-privacy-practices</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/notice-of-privacy-practices"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/notice-of-privacy-practices"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/notice-of-privacy-practices"/>
-  </url>
-  <url>
-    <loc>https://dradonis.com/terms-of-service</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/terms-of-service"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/terms-of-service"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/terms-of-service"/>
-  </url>
-  <url>
-    <loc>https://dradonis.com/telehealth-consent</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/telehealth-consent"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/telehealth-consent"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/telehealth-consent"/>
-  </url>
-  <url>
-    <loc>https://dradonis.com/refund-policy</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/refund-policy"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/refund-policy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/refund-policy"/>
-  </url>
 </urlset>
