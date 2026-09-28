@@ -32,6 +32,8 @@ export const VIDEOS: VideoCatalogItem[] = [
   { id: 'SyF9dvOCCKI', titleKey: 'videos.list.v58', category: 'about', slug: 'book-modern-medicine-for-modern-times', altSlug: 'libro-medicina-moderna-para-tiempos-modernos' },
   { id: 'jk-zlZYrBfM', titleKey: 'videos.list.v64', category: 'about', slug: 'libro-medicina-moderna-para-tiempos-modernos', lang: 'es', altSlug: 'book-modern-medicine-for-modern-times' },
   // ── Latest uploads (English + Spanish recordings) ──
+  { id: 'dKBy0LISwE8', titleKey: 'videos.list.v70', category: 'weight', slug: 'semaglutide-vs-tirzepatide-which-to-choose', altSlug: 'semaglutida-vs-tirzepatida-cual-elegir' },
+  { id: 'CWIjQ0hqaHk', titleKey: 'videos.list.v69', category: 'weight', slug: 'semaglutida-vs-tirzepatida-cual-elegir', lang: 'es', altSlug: 'semaglutide-vs-tirzepatide-which-to-choose' },
   { id: '8BFr5-Q-nUA', titleKey: 'videos.list.v68', category: 'weight', slug: 'semaglutide-vs-tirzepatide', altSlug: 'semaglutida-vs-tirzepatida' },
   { id: 'GBWURAcPaZs', titleKey: 'videos.list.v67', category: 'weight', slug: 'semaglutida-vs-tirzepatida', lang: 'es', altSlug: 'semaglutide-vs-tirzepatide' },
   { id: '3CsLbOThutw', titleKey: 'videos.list.v66', category: 'weight', slug: 'why-glp1-medications-last-longer', altSlug: 'glp1-natural-vs-medicamentos-glp1' },
