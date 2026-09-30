@@ -23,3 +23,5 @@ For the Azure Functions backend, see [`../api/`](../api/).
 
 - **Standalone Pages:** Any standalone landing pages (e.g. `make-appointment`, `cardecal`, `men-wellness-contact`, `vitamins-prescription`, `tadalafil-evaluation`) that do not use the `PublicLayoutComponent` must explicitly include the developer footer (`.developer-footer`) at the very bottom of the HTML template. The CSS for this footer is globally available in `styles.scss`.
 - **Styling:** Standalone pages must follow the main site's clean styling (usually a `#f1f6f1` background, white cards, standard `#005eb8` primary buttons). Avoid using heavy dark mode or gradients unless specifically requested.
+
+By Kevin Icabalzeta v2
