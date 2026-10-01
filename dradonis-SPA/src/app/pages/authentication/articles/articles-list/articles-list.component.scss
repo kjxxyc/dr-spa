@@ -197,6 +197,17 @@ $bg-light: #F7FAFC;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+
+  // The clamp only applies to inline content, so an excerpt made of several
+  // paragraphs would otherwise spill past the three-line box.
+  p {
+    display: inline;
+    margin: 0;
+
+    + p::before {
+      content: ' ';
+    }
+  }
 }
 
 .article-read-more {
