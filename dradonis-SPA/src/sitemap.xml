@@ -1932,6 +1932,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/symptoms-of-low-estrogen"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/sintomas-de-estrogeno-bajo"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/symptoms-of-low-estrogen"/>
   </url>
   <url>
@@ -1940,6 +1941,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/can-you-take-hrt-for-the-rest-of-your-life"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/puedes-tomar-trh-de-por-vida"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/can-you-take-hrt-for-the-rest-of-your-life"/>
   </url>
   <url>
@@ -1959,5 +1961,59 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/hormonal-health-is-it-only-a-womens-issue"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/salud-hormonal-es-solo-un-tema-de-mujeres"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/hormonal-health-is-it-only-a-womens-issue"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/articles/sintomas-de-estrogeno-bajo</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/symptoms-of-low-estrogen"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/sintomas-de-estrogeno-bajo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/sintomas-de-estrogeno-bajo"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/articles/puedes-tomar-trh-de-por-vida</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/can-you-take-hrt-for-the-rest-of-your-life"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/puedes-tomar-trh-de-por-vida"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/puedes-tomar-trh-de-por-vida"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/articles/how-long-does-hrt-take-to-work</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/how-long-does-hrt-take-to-work"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/cuanto-tarda-en-hacer-efecto-la-trh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/how-long-does-hrt-take-to-work"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/articles/cuanto-tarda-en-hacer-efecto-la-trh</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/how-long-does-hrt-take-to-work"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/cuanto-tarda-en-hacer-efecto-la-trh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/cuanto-tarda-en-hacer-efecto-la-trh"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/articles/hrt-and-hair-growth</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/hrt-and-hair-growth"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/trh-y-crecimiento-del-cabello"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/hrt-and-hair-growth"/>
+  </url>
+  <url>
+    <loc>https://dradonis.com/articles/trh-y-crecimiento-del-cabello</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://dradonis.com/articles/hrt-and-hair-growth"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dradonis.com/articles/trh-y-crecimiento-del-cabello"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dradonis.com/articles/trh-y-crecimiento-del-cabello"/>
   </url>
 </urlset>
