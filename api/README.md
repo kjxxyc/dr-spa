@@ -1,4 +1,4 @@
-# dradonis API — Azure Static Web Apps Managed Functions
+# API — Azure Static Web Apps Managed Functions
 
 Azure Functions (Node 18+) deployed as part of the SWA. Currently hosts one
 endpoint: **`/api/clover-create-checkout`** — server-side Clover Hosted
@@ -24,7 +24,7 @@ Settings, NOT in git.
 ### Steps to configure
 
 1. Sign in to <https://portal.azure.com>
-2. Open your Static Web App resource (`delightful-sea-01938fb10`)
+2. Open your Static Web App resource
 3. Left sidebar → **Configuration** → **Application settings** tab
 4. Click **+ Add** for each of the variables below
 5. Save (the Function restarts automatically)

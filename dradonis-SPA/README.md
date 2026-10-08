@@ -1,8 +1,8 @@
-# dradonis-SPA
+# Web app (Angular 20)
 
-Angular 20 SSR frontend for the Dr. Adonis website.
+Angular 20 frontend for the DR website — bilingual (EN/ES), SEO-first.
 
-📖 **Full project docs** — architecture, stack, performance notes, SEO setup, deployment, and contributor checklist — live in the root [`README.md`](../README.md).
+📖 **Full project docs** — architecture, stack, performance notes, SEO setup, deployment and engineering notes — live in the root [`README.md`](../README.md).
 
 ## Quick commands (run from this directory)
 
@@ -13,15 +13,15 @@ npm run dev:ssr        # dev server with SSR
 npm run build          # production browser bundle
 npm run build:ssr      # production browser + SSR server bundle
 npm run serve:ssr      # serve the built SSR bundle → http://localhost:4000
-npm run prerender      # prerender / and /landing to static HTML
+npm run prerender      # prerender the routes listed in angular.json
 npm test               # unit tests
 ```
 
 For the Azure Functions backend, see [`../api/`](../api/).
 
-## UI Standards & Guidelines
+## UI standards
 
-- **Standalone Pages:** Any standalone landing pages (e.g. `make-appointment`, `cardecal`, `men-wellness-contact`, `vitamins-prescription`, `tadalafil-evaluation`) that do not use the `PublicLayoutComponent` must explicitly include the developer footer (`.developer-footer`) at the very bottom of the HTML template. The CSS for this footer is globally available in `styles.scss`.
-- **Styling:** Standalone pages must follow the main site's clean styling (usually a `#f1f6f1` background, white cards, standard `#005eb8` primary buttons). Avoid using heavy dark mode or gradients unless specifically requested.
+- **Standalone pages:** pages that do not use `PublicLayoutComponent` (`make-appointment`, `cardecal`, `vitamins-prescription`) must include the developer footer (`.developer-footer`) at the very bottom of the template. Its CSS is global in `styles.scss`.
+- **Styling:** standalone pages follow the main site's clean styling (`#f1f6f1` background, white cards, `#005eb8` primary buttons). Avoid heavy dark themes or gradients unless specifically requested.
 
-By Kevin Icabalzeta v2
+By Kevin Icabalzeta

@@ -1,293 +1,160 @@
-# Dr. Adonis — Functional & Regenerative Medicine
+# DR — Bilingual Medical Practice Website (Angular 20)
 
-Customer-facing website for **Dr. Adonis Maiquez, MD**, a functional and regenerative medicine practice in Miami, FL. Built as an Angular SSR application with bilingual (English / Spanish) content, aggressive performance tuning for SEO, and a serverless payment backend on Azure.
+Production website built for **DR**, a functional & regenerative medicine practice in the US. A single Angular 20 codebase serves the whole site in **English and Spanish**, with an **SEO-first architecture** (per-route metadata, 44 types of JSON-LD structured data, hreflang, a 184-URL sitemap, `llms.txt`), a **content system** for 87 articles and 60 videos, and a **serverless API** on Azure.
 
-**Current deployment:** [my.dradonis.com](https://my.dradonis.com) (production; migrating to `dradonis.com`)
+Built and maintained between February and October 2026 (180 commits) by [Kevin Icabalzeta](https://github.com/kjxxyc).
 
-> ⚠️ **Compliance positioning**: This site is **not** an online pharmacy or e-commerce store. Dr. Adonis is a licensed physician who issues prescriptions after a medical evaluation. Medications are picked up at the clinic or delivered locally in South Florida. Keep all copy, meta tags, and structured data aligned with "physician-prescribed", "medical evaluation", "Miami / Florida", "in-clinic pickup / local delivery", and "telemedicine".
-
----
-
-## 🎯 Project goals
-
-1. **Rank #1 organically on Google** for local Miami / South Florida functional medicine searches — no paid ads. Drives every architectural decision toward `100/100` PageSpeed and rich SEO signals.
-2. **Convert tadalafil-cialis / vitamins / supplements** funnels via tracked channels (Meta + TikTok pixels) without polluting the rest of the site with tracker overhead.
-3. **Bilingual** (en / es) experience from a single URL, with hreflang and per-route SEO that Google can crawl.
+> **About this repository.** The client is referred to as "DR" throughout. The code is published for portfolio purposes; branding, copy, images and videos belong to the practice. GitHub Actions are disabled in this copy — production deploys from the practice's own repository.
 
 ---
 
-## ✨ Pages
+## Highlights
 
-| Path | Component | Purpose |
-| --- | --- | --- |
-| `/` | `landing` | Homepage — hero, services marquee, Tadalafil/Vitamins promo cards, book section, deferred Google Maps |
-| `/landing/services` | `services` | 18 clinical services with expandable details |
-| `/landing/meet-doctor` | `meet-doctor` | Bio / credentials (E-A-T signal) |
-| `/landing/videos` | `videos` | YouTube embeds (lazy-loaded) + Google Reviews |
-| `/landing/shop` | `shop` | 10 Fullscript supplement product cards (oEmbed, lazy via IntersectionObserver) |
-| `/landing/tools/bmi-calculator` | `bmi-calculator` | Free BMI tool with medical context |
-| `/tools/tmb-calculator` | `bmr-calculator` | Free BMR (TMB) and TDEE calculator tool |
-| `/makeanappointment` | `make-appointment` | Standalone appointment booking page for social media campaigns |
-| `/men-wellness` | `men-wellness-contact` | ED consultation entry — bilingual landing for the **tadalafil-cialis campaign** |
-| `/men-wellness/evaluation` | `tadalafil-evaluation` | Multi-step medical evaluation + PayPal/Clover payment |
-| `/vitamins-prescription` | `vitamins-prescription` | Personalized vitamin protocol intake form |
-
-Legacy `/landing/men-wellness*` and `/landing/vitamins-prescription` paths **301-redirect** to the canonical versions above (configured both server-side in `staticwebapp.config.json` and client-side in `authentication.routes.ts`).
+| Area | What was built |
+| --- | --- |
+| **Architecture** | Angular 20 standalone components, every route lazy-loaded (`loadComponent`), Angular Material 20, SCSS. SSR tooling in place (`@angular/ssr`, Express server, prerender target). |
+| **Internationalization** | `ngx-translate` with **3,812 keys per language** (EN/ES). Articles and videos are language-aware: each English article/video is paired with its Spanish counterpart and the site switches both together. First-visit language selector. |
+| **SEO** | A `SeoService` applies title, meta description, canonical, hreflang, Open Graph and Twitter tags per route. **44 JSON-LD schema types** (`Physician`, `MedicalWebPage`, `MedicalCondition`, `MedicalTherapy`, `FAQPage`, `Product`/`Offer`, `VideoObject`, `BreadcrumbList`, `HowTo`…). `sitemap.xml` with 184 URLs and 60 video entries, `robots.txt`, `llms.txt`, **44 legacy 301 redirects** from the previous WordPress site, and a smart 404 page that suggests the closest pages from the broken URL. |
+| **Content system** | 87 articles (41 EN / 46 ES) in a JSON store with meta title/description and FAQ schema; 60-video catalog with slug deep links (`/videos/<slug>`), EN/ES pairs and topic filters; 10-product supplement catalog with detail pages and `Product`/`Offer` schema; three health calculators (BMI, BMR/TDEE, water intake). |
+| **Performance** | Self-hosted variable font and a **3.6 KB icon subset**, `font-display: optional` + `size-adjust` fallback to avoid layout shift, 26 lazy-loaded iframes/images, Angular `@defer` for the maps embed, Meta Pixel deferred until the first user interaction, intent-based `preconnect` for the booking form, immutable cache headers for hashed assets, build-version cache busting for runtime JSON, WebP image pipeline (`sharp`). |
+| **Integrations** | GoHighLevel/LeadConnector booking form and chat launcher, Mailchimp newsletter, EmailJS intake form, YouTube (privacy-enhanced) embeds, Google Reviews carousel, Meta Pixel. |
+| **Backend** | Azure Functions (Node) endpoint that creates Clover Hosted Checkout sessions server-side, so the merchant token never reaches the browser. |
+| **Hosting & CI/CD** | Azure Static Web Apps deployed by GitHub Actions. `staticwebapp.config.json` owns routing, 301 redirects, cache control and global security headers. |
+| **Compliance** | Medical-claims copy review against healthcare advertising standards, prescription and regulatory disclaimers, SMS opt-in (A2P 10DLC) consent on the appointment form. |
 
 ---
 
-## 🚀 Tech stack
+## Pages
 
-### Frontend (`dradonis-SPA/`)
-- **Angular 20** with SSR (`@angular/ssr`) + Express server (`src/server.ts`)
-- **Angular Material 20** (lazy-loaded modules per route)
-- **ngx-translate** for i18n (`en`, `es`, `fr`, `de` JSON files in `src/assets/i18n/`)
-- **SCSS** with self-hosted **Plus Jakarta Sans** (variable font, latin + latin-ext) and **Material Icons** (43-icon subset, 3.4 KB)
-- **Beasties** for automatic critical CSS inlining at build time
-- **`@emailjs/browser`** for client-side email (newsletter, vitamin intake)
+| Route | Purpose |
+| --- | --- |
+| `/` | Homepage: hero, services, reviews, book, deferred maps embed |
+| `/services` | Clinical services overview |
+| `/functional-medicine` | Hub page with six child pages: `gut-health`, `brain-health`, `autoimmune`, `hashimotos`, `thyroid`, `fibromyalgia` |
+| `/hormone-replacement-therapy`, `/testosterone-replacement-therapy` | Hormone therapy service pages |
+| `/erectile-dysfunction`, `/enclomiphene`, `/peptide-therapy`, `/medical-weight-loss` | Treatment pages with `MedicalCondition` / `MedicalTherapy` schema |
+| `/telemedicine` | Remote consultation flow |
+| `/meet-doctor` | Credentials page (E-E-A-T signal) |
+| `/book` | The practice's published book |
+| `/shop`, `/shop/:slug` | Supplement catalog and product detail pages |
+| `/articles`, `/articles/:slug` | Bilingual article list and detail pages |
+| `/videos`, `/videos/:slug` | Video gallery with deep links; one route matcher keeps the component instance alive between videos |
+| `/tools/bmi-calculator`, `/tools/tmb-calculator`, `/tools/water-calculator` | Free health calculators (`WebApplication` schema) |
+| `/contact`, `/makeanappointment` | Contact page and standalone appointment page for campaigns |
+| `/vitamins-prescription` | Personalized vitamin protocol intake form |
+| `/cardecal` | First-visit language selector |
+| `/sitemap` | HTML sitemap |
+| `**` | Smart 404 with page suggestions |
 
-### Backend (`api/`)
-- **Azure Functions** (Node.js v4 programming model)
-- `clover-create-checkout/` — payment session creation for the tadalafil evaluation flow
-
-### Hosting
-- **Azure Static Web Apps** (with prerendering for `/` and `/landing` + SSR for everything else)
-- `staticwebapp.config.json` controls routing, cache headers (`immutable` on hashed assets), 301 redirects, and global security headers
-- Azure SWA's edge handles Brotli/gzip; `compression` middleware in Express is defense-in-depth for non-SWA hosts
-
-### Analytics & widgets
-- **Meta Pixel** (Facebook) — loaded on first user interaction (scroll/click/touch/keydown) so Lighthouse never triggers it; route-scoped (excluded from `/men-wellness` and `/vitamins-prescription` where component-level pixels take over)
-- **TikTok Pixel** — only loaded inside `men-wellness-contact.component` for the tadalafil-cialis campaign (not global)
-- **Fullscript oEmbed** — 10 product cards on `/shop`, injected via `IntersectionObserver` when each card nears the viewport
-- **Google Maps embed** on the homepage testimonials — wrapped in Angular 20 `@defer (on viewport; prefetch on idle)` so its ~350 KiB of JS never touches the critical path
-- **WhatsApp floating button** — load-bearing conversion path (`https://api.whatsapp.com/send/?phone=13053355424...`). **Must not break** under any refactor. Automatically shifts to the left side and uses custom pre-filled messages on specific landing routes (`/men-wellness*`, `/vitamins-prescription*`, `/makeanappointment`) via `whatsapp-btn.component.ts → LEFT_ROUTES`.
+Spanish and legacy aliases (`/tiroides`, `/services/thyroid`, `/thyroid` → `/functional-medicine/thyroid`, etc.) redirect client-side in the router and server-side as 301s in `staticwebapp.config.json`.
 
 ---
 
-## 📂 Project structure
+## Tech stack
+
+| Layer | Technology |
+| --- | --- |
+| Frontend | Angular 20, Angular Material 20, RxJS, SCSS, TypeScript 5.8 |
+| i18n | `@ngx-translate/core` with JSON dictionaries (`en`, `es`) |
+| SSR / prerender | `@angular/ssr`, Express 5 with Brotli/gzip `compression`, Angular prerender builder |
+| Content | JSON content store (`articles.json`), typed catalogs for products and videos |
+| Backend | Azure Functions (Node 18+), Clover Hosted Checkout API |
+| Hosting | Azure Static Web Apps (edge CDN, managed Functions) |
+| CI/CD | GitHub Actions (`Azure/static-web-apps-deploy`) |
+| Tooling | Angular CLI, `sharp` image optimization script, build-version script, Karma/Jasmine |
+
+**Rendering note.** Production currently ships the browser build with hydration configured (`provideClientHydration(withEventReplay())`). The SSR server and the prerender target are wired in `angular.json`; moving every route to static prerender is the next planned step.
+
+---
+
+## Project structure
 
 ```
-dradonis/
-├── api/                                # Azure Functions (Node.js)
-│   └── clover-create-checkout/         # Clover payment session endpoint
+.
+├── api/                                  # Azure Functions (Node)
+│   ├── clover-create-checkout/           # Server-side Clover Hosted Checkout session
+│   ├── host.json
+│   └── local.settings.json.example       # Secrets template (real values live in Azure App Settings)
 │
-├── dradonis-SPA/                       # Angular 20 SSR app
-│   ├── .browserslistrc                 # Modern-browser target (drops legacy polyfills)
-│   ├── angular.json                    # sourceMap: false in production
-│   ├── src/
-│   │   ├── index.html                  # Shell — preloads, deferred Meta Pixel
-│   │   ├── server.ts                   # Express SSR + Brotli compression + cache headers
-│   │   ├── sitemap.xml                 # 9 URLs with hreflang
-│   │   ├── robots.txt
-│   │   ├── staticwebapp.config.json    # Azure SWA routing + 301 redirects + cache headers
-│   │   ├── styles.scss                 # Global @font-face + size-adjust fallback
-│   │   ├── assets/
-│   │   │   ├── fonts/
-│   │   │   │   ├── plus-jakarta-sans/  # Self-hosted variable font (latin + latin-ext)
-│   │   │   │   └── material-icons/     # 43-icon subset (3.4 KB)
-│   │   │   ├── i18n/                   # en/es/fr/de.json
-│   │   │   ├── images/                 # WebP-first, no oversized PNG/JPG
-│   │   │   └── icons/                  # Custom SVGs (flags, socials)
-│   │   └── app/
-│   │       ├── app.config.ts           # Hydration with event replay, no zone-coalescing issues
-│   │       ├── app.routes.ts           # Top-level routing
-│   │       ├── pages/authentication/
-│   │       │   ├── authentication.routes.ts        # Nested routes + legacy 301 redirects
-│   │       │   ├── public-layout/                  # Shared header for /landing/*
-│   │       │   ├── landing/
-│   │       │   ├── services/
-│   │       │   ├── meet-doctor/
-│   │       │   ├── videos/
-│   │       │   ├── shop/
-│   │       │   ├── tools/bmi-calculator/
-│   │       │   ├── men-wellness-contact/
-│   │       │   ├── tadalafil-evaluation/
-│   │       │   ├── vitamins-prescription/
-│   │       │   └── cardecal/                       # First-visit language selector
-│   │       └── shared/
-│   │           ├── seo/seo.service.ts              # Per-route title / canonical / OG / JSON-LD
-│   │           ├── whatsapp-btn/                   # Floating WhatsApp button (load-bearing)
-│   │           ├── appointment-dialog/
-│   │           └── language-selector-dialog/
-│   └── package.json
+├── dradonis-SPA/                         # Angular 20 app
+│   ├── angular.json                      # build / server / prerender targets
+│   ├── scripts/
+│   │   ├── generate-build-version.js     # Cache-busting version for runtime JSON
+│   │   └── optimize-images.js            # WebP pipeline (sharp)
+│   └── src/
+│       ├── server.ts                     # Express SSR server (+ compression, cache headers)
+│       ├── sitemap.xml                   # 184 URLs, hreflang, 60 video entries
+│       ├── robots.txt · llms.txt
+│       ├── staticwebapp.config.json      # Routing, 301s, cache control, security headers
+│       ├── assets/
+│       │   ├── data/articles.json        # 87 bilingual articles
+│       │   ├── i18n/                     # en.json / es.json (3,812 keys each)
+│       │   ├── fonts/                    # Self-hosted variable font + icon subset
+│       │   └── images/                   # WebP-first assets
+│       └── app/
+│           ├── app.routes.ts             # Top-level routes
+│           ├── core/services/            # articles, products, videos, booking prefetch, chat launcher
+│           ├── pages/authentication/     # One folder per page (lazy-loaded)
+│           │   └── authentication.routes.ts   # Nested routes + alias redirects + video matcher
+│           └── shared/
+│               ├── seo/seo.service.ts    # Per-route metadata + JSON-LD
+│               ├── appointment-dialog/   # Booking form embed
+│               ├── site-footer/ · language-selector-dialog/ · whatsapp-btn/
+│               └── styles/
 │
-├── .github/                            # CI/CD workflows
-├── MailChimp.html                      # Standalone email template
-└── README.md
+└── .github/workflows/                    # Azure Static Web Apps CI/CD (disabled in this copy)
 ```
 
 ---
 
-## ⚙️ Local development
+## Local development
 
-### Prerequisites
-- **Node.js 18+** and **npm 9+**
-- Optional: **Azure Functions Core Tools** if you want to run the `api/` locally
-
-### Setup
+Requirements: Node.js 18+ and npm 9+. Optional: Azure Functions Core Tools for the API.
 
 ```bash
-git clone <repo-url>
-cd dradonis/dradonis-SPA
+cd dradonis-SPA
 npm install
+
+npm start              # dev server → http://localhost:4200
+npm run dev:ssr        # dev server with server-side rendering
+npm run build          # production browser bundle
+npm run build:ssr      # browser + SSR server bundle
+npm run serve:ssr      # serve the SSR bundle → http://localhost:4000
+npm run prerender      # prerender the routes listed in angular.json
+npm test               # unit tests
 ```
 
-### Run
-
-```bash
-# Dev server (hot reload, no SSR — fastest iteration)
-npm start
-# → http://localhost:4200
-
-# Dev server with SSR (closer to production behavior)
-npm run dev:ssr
-# → http://localhost:4200 with server-side rendering
-
-# Production build (browser bundle only)
-npm run build
-
-# Production build + SSR server bundle
-npm run build:ssr
-# Then:
-node dist/Spike/server/main.js
-# → http://localhost:4000
-
-# Prerender / for /landing (static HTML)
-npm run prerender
-
-# Unit tests
-npm test
-```
-
-### Running the API locally
+API:
 
 ```bash
 cd api
-# Install Azure Functions Core Tools if not already: brew tap azure/functions && brew install azure-functions-core-tools@4
-func start
-# → http://localhost:7071/api/clover-create-checkout
+cp local.settings.json.example local.settings.json   # fill in sandbox credentials
+func start                                           # → http://localhost:7071/api/clover-create-checkout
 ```
 
-Set up `api/local.settings.json` (copy from `local.settings.json.example`) with your Clover sandbox credentials.
+---
+
+## Deployment
+
+1. A push to the deployment branch triggers the Azure Static Web Apps GitHub Action.
+2. The action builds the Angular app and the `api/` Functions and uploads both to the Static Web App.
+3. Secrets (Clover merchant ID and API token) are configured as Azure Application Settings, never in the repository. See [`api/README.md`](api/README.md).
 
 ---
 
-## 🎨 Performance optimizations
+## Engineering notes
 
-This site is tuned aggressively for `100/100` PageSpeed. Anything that touches the critical path needs to preserve these wins:
-
-| Optimization | Impact | Where |
-| --- | --- | --- |
-| Self-hosted Plus Jakarta Sans (variable font) | Eliminates `fonts.gstatic.com` round-trip (~1.3 s on slow 4G) | `styles.scss` `@font-face`, `index.html` preload |
-| Self-hosted Material Icons subset (43 icons → 3.4 KB) | From 126 KB → 3.4 KB; zero external font request | `assets/fonts/material-icons/` |
-| `font-display: optional` + `size-adjust` fallback | **CLS = 0** (was 0.213) | `styles.scss` |
-| Brotli compression in Express + Azure SWA edge | ~68 % reduction on main bundle wire size | `server.ts` |
-| Long-lived immutable cache for hashed assets | Repeat visits cost nothing | `staticwebapp.config.json` + `server.ts` |
-| `loading="lazy"` on all below-fold iframes (YouTube, Maps) | Defers ~350 KiB of third-party JS | `videos`, `services`, `landing` |
-| Angular 20 `@defer (on viewport)` for Google Maps testimonials | Removes Maps from critical path entirely | `landing.component.html` |
-| `IntersectionObserver` lazy-load of Fullscript oEmbed scripts | 10 product scripts only load when in viewport | `shop.component.ts` |
-| Meta Pixel deferred to first user interaction (`scroll`/`click`/`touchstart`) | Lighthouse never triggers it; real users do | `index.html` |
-| TikTok Pixel scoped to `/men-wellness` only | Saves ~120 KiB on every other page | `men-wellness-contact.component.ts` |
-| Source maps disabled in production | ~30-50 % bundle shrink | `angular.json` |
-| Modern `.browserslistrc` (no IE11, no opera-mini) | Drops legacy polyfills | `.browserslistrc` |
-| Critical CSS inlined via **Beasties** (built into Angular CLI) | First paint without waiting for full stylesheet | Automatic |
-| Image cleanup: removed 17.4 MB of unused JPG/PNG | Smaller build, faster CDN sync | `assets/images/` |
+- **SSR-safe code.** Browser-only APIs are accessed behind `isPlatformBrowser` guards so the same components render on the server.
+- **One source of truth per catalog.** Products, videos and articles live in typed services or JSON, and the sitemap, the detail pages and the JSON-LD are derived from them.
+- **Per-route SEO contract.** Every page calls `seo.apply({...})` on init and `seo.reset()` on destroy; adding a public route means adding it to `sitemap.xml`.
+- **Bilingual by key.** Every UI string is a translation key added to `en.json` first and mirrored in `es.json`.
+- **Conversion paths are load-bearing.** The booking form and the chat launcher are covered by a change checklist so refactors cannot break lead capture.
+- **Icon subset.** Only the icons used in the app are shipped; adding a new `<mat-icon>` means regenerating the subset.
 
 ---
 
-## 🔍 SEO architecture
+## Author
 
-Every public route applies its own metadata via `SeoService` (`src/app/shared/seo/seo.service.ts`):
+**Kevin Icabalzeta** — architecture, build, SEO, performance, integrations, CI/CD and compliance work. Content and SEO copy contributions came from a marketing collaborator (see commit history).
 
-- **`<title>`** — keyword-focused, ≤ 60 chars
-- **`<meta name="description">`** — ≤ 155 chars, hooks search intent
-- **`<link rel="canonical" id="route-canonical">`** — per-route canonical URL
-- **Open Graph + Twitter cards** — `og:title`, `og:description`, `og:url`, `og:image`, `og:type`, `og:locale`
-- **`<html lang>`** — flips between `en` / `es` when the user toggles language
-- **JSON-LD schema** — per-route structured data:
-  - Homepage: `Physician` + `WebSite` + `FAQPage` + `Product` (Vagustim) + `Book`
-  - `services`: `MedicalBusiness` with `availableService` list
-  - `meet-doctor`: `Physician` with `sameAs` social profiles
-  - `videos`: `ItemList` of `VideoObject` per YouTube embed
-  - `shop`: `Store` + `OfferCatalog` of supplements
-  - `bmi-calculator`: `WebApplication` (`HealthApplication`)
-  - `men-wellness*`: `MedicalProcedure` (tadalafil)
-  - `vitamins-prescription`: `MedicalProcedure`
-
-### Sitemap & hreflang
-
-`src/sitemap.xml` lists **9 URLs** with `xhtml:link rel="alternate" hreflang="en-US|es|x-default"` per URL. Because `ngx-translate` doesn't change URLs per language, all hreflang alternates point to the same URL (correct signal for "this URL serves both languages").
-
-### Pre-submission validation
-
-After deploying, validate with:
-
-- **Google Search Console** — re-submit `sitemap.xml`
-- **[Rich Results Test](https://search.google.com/test/rich-results)** — paste each URL
-- **[Schema Validator](https://validator.schema.org)** — paste each URL
-- **[PageSpeed Insights](https://pagespeed.web.dev/)** — measure mobile + desktop
-
----
-
-## 🌐 Internationalization
-
-- **Translation files**: `src/assets/i18n/en.json`, `es.json`, `fr.json`, `de.json` (primary languages: en + es)
-- **Language selector**: opens on first visit via `cardecal.component` (writes `dradonis.cardecal.langSelected` to `localStorage`)
-- **Per-component override**: `/men-wellness*` and `/vitamins-prescription` reopen the language selector to ensure correct language for medical/legal copy
-
-When adding a new translation key:
-
-1. Add it to `en.json` first (source of truth)
-2. Add localized strings to `es.json` (and `fr.json` / `de.json` if relevant)
-3. Reference with `{{ 'key.path' | translate }}`
-
----
-
-## 🔒 Security & compliance
-
-- **HTTPS enforced** via Azure SWA (automatic)
-- **Security headers** (`X-Content-Type-Options: nosniff`) in `staticwebapp.config.json` `globalHeaders`
-- **No e-commerce framing** — copy and JSON-LD positioned as `MedicalBusiness` / `Physician` issuing prescriptions, never "buy online" / "online pharmacy"
-- **Patient data**: forms submit directly to EmailJS or Clover — no PHI is stored on Azure SWA
-- **Pixel consent**: Meta and TikTok pixels respect OneTrust `data-ot-ignore` attributes on Fullscript scripts; users can be excluded from tracking on specific routes via the route-allowlist in `index.html`
-- **WhatsApp link integrity** — `whatsapp-btn.component.ts` has a `FALLBACK_WHATSAPP_URL` constant so the button always works even if `TranslateService` hasn't loaded yet
-
----
-
-## 📦 Deployment
-
-This site is wired for **Azure Static Web Apps** with the Angular SSR adapter.
-
-1. Push to the configured branch (see `.github/workflows/`)
-2. Azure SWA's GitHub Action builds `dradonis-SPA/` and the `api/` Functions
-3. Static assets serve from the edge CDN with Brotli + long-lived immutable cache
-4. SSR routes (everything beyond `/` and `/landing` prerender) run on Azure Functions
-
-When migrating from `my.dradonis.com` → `dradonis.com`:
-
-1. Replace `my.dradonis.com` with `dradonis.com` in `sitemap.xml`
-2. Update the `Sitemap:` line in `robots.txt`
-3. Update `SITE_ORIGIN_FALLBACK` in `src/app/shared/seo/seo.service.ts`
-4. Update `<link rel="canonical">` defaults if any are hardcoded
-5. Re-submit the new sitemap in Google Search Console and request reindexing of the top URLs
-
----
-
-## 🤝 Contributing / safe-change checklist
-
-Before merging any change, confirm:
-
-- [ ] **WhatsApp button** still renders on the homepage and links to `api.whatsapp.com/send/?phone=13053355424` — this is load-bearing for lead capture.
-- [ ] **No new `window.X` access** outside `if (isPlatformBrowser(this.platformId))` — breaks SSR.
-- [ ] **No new `<mat-icon>name</mat-icon>`** with a name that's not in the 43-icon subset, unless you regenerate `material-icons-subset.woff2`.
-- [ ] **Per-route SEO** still applied — every route component calls `this.seo.apply({...})` in `ngOnInit` and `this.seo.reset()` in `ngOnDestroy`.
-- [ ] **Sitemap** updated if you added a new public route.
-- [ ] **PageSpeed** re-measured on `my.dradonis.com` after deploy — no regressions on LCP / CLS / TBT.
-
----
-
-## 📞 Contact
-
-- **Practice**: Dr. Adonis Maiquez, MD — (305) 204-7816
-- **Clinic location**: Miami, FL (see Google Maps embed in homepage testimonials)
-- **Issues**: open a GitHub issue on this repository
+GitHub: [@kjxxyc](https://github.com/kjxxyc)
